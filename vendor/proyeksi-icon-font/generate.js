@@ -8,8 +8,8 @@ const glob = require("glob")
 webfontsGenerator({
   files: glob.sync("src/*.svg"),
   "fontName": "proyeksi-icon-font",
-  "cssFontsUrl": "../../frontend/src/assets/fonts/openproject_icon/",
-  "dest": path.resolve(__dirname, '..', '..', 'frontend', 'src', 'assets', 'fonts', 'openproject_icon'),
+  "cssFontsUrl": "../../frontend/src/assets/fonts/proyeksi_icon/",
+  "dest": path.resolve(__dirname, '..', '..', 'frontend', 'src', 'assets', 'fonts', 'proyeksi_icon'),
   "cssDest": path.join(path.resolve(__dirname, '..', '..', 'frontend', 'src', 'global_styles', 'fonts'), '_proyeksi_icon_definitions.scss'),
   "cssTemplate": "proyeksi-icon-font.template.scss",
   "classPrefix": "icon-",
