@@ -1,0 +1,12 @@
+
+bg:
+  js:
+    work_packages:
+      property_groups:
+        costs: "Разходи"
+      properties:
+        overallCosts: "Общи разходи"
+        spentUnits: "Изразходвани единици"
+    button_log_costs: "Разходи за единична регистрация"
+    label_hour: "час"
+    label_hours: "hours"

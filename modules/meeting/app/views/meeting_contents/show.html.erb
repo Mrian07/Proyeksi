@@ -1,0 +1,9 @@
+
+
+<%= render partial: "meeting_contents/show",
+           locals: {
+             content: @content,
+             journaled_version: @journaled_version,
+             content_type: @content_type,
+             title: "#{t(:"label_#{@content_type}")}: #{link_to @meeting, @meeting}"
+           } %>

@@ -1,0 +1,20 @@
+
+
+<% html_title t(:label_administration), "#{t(:label_edit)} #{t(:label_work_package_types)} #{h @type.name}" %>
+
+
+<% local_assigns[:additional_breadcrumb] = @type.name %>
+
+<div class="grid-content">
+  <%= breadcrumb_toolbar @type.name %>
+</div>
+
+<%= form_for @type,
+             url: update_type_tab_path(id: @type.id, tab: @tab),
+             builder: TabularFormBuilder,
+             lang: current_language do |f| %>
+
+  <%= render_tabs types_tabs, f %>
+<% end %>
+
+<%= error_messages_for 'type' %>

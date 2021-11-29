@@ -1,0 +1,26 @@
+
+
+<%= labelled_tabular_form_for content, :url => {:controller => '/' + content_type.pluralize, :action => 'update', :meeting_id => content.meeting}, :html => {:id => "#{content_type}_form", :method => :put} do |f| %>
+  <%= error_messages_for content_type %>
+
+  <% resource = ::API::V3::MeetingContents::MeetingContentRepresenter.new(content, current_user: current_user, embed_links: true) %>
+
+  <div class="form--field -no-label -visible-overflow">
+      <%=
+        f.text_area(
+            :text,
+            class: 'wiki-edit wiki-toolbar',
+            no_label: true,
+            resource: resource,
+            label_options: { class: 'hidden-for-sighted' },
+            with_text_formatting: true
+        )
+      %>
+  </div>
+  <%= f.hidden_field :lock_version %>
+  <% path = send("preview_#{content_type}_path", content.meeting) %>
+
+  <p><%= f.text_field :journal_notes, label: :comments %></p>
+  <p><%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark button--save-agenda' %>
+  <%= link_to t(:button_cancel), "#", data: { 'content-type': content_type }, class: 'button -with-icon icon-cancel button--cancel-agenda' %>
+<% end %>

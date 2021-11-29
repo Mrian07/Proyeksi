@@ -1,0 +1,24 @@
+
+
+
+<div class='contextual'></div>
+<%= toolbar title: t(:label_backlogs_export_card_config_select) %>
+<% html_title t(:label_backlogs_export_card_config_select) %>
+<ul>
+<% @configs.each do |config| %>
+  <li>
+    <p>
+    <%= link_to(config.name,
+      :controller => '/rb_export_card_configurations',
+      :action => 'show',
+      :project_id => @project.id,
+      :sprint_id => @sprint.id,
+      :id => config.id,
+      :format => :pdf) %>
+    <% if !!config.description && !config.description.empty? %>
+      <%= " - #{config.description}" %>
+    <% end %>
+    </p>
+  </li>
+<% end %>
+</ul>

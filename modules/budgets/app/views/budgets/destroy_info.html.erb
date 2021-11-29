@@ -1,0 +1,36 @@
+
+
+<% html_title "#{t(:button_delete)} #{t(:label_budget_id, id: @budget.id)}: #{@budget.subject}" %>
+<%= toolbar title: "#{t(:button_delete)} #{t(:label_budget_id, id: @budget.id)}: #{@budget.subject}" %>
+
+<%= styled_form_tag(budget_path(@budget), method: :delete) do %>
+  <section class="form--section">
+    <p><strong><%= t(:text_budget_destroy_assigned_wp, count: @budget.work_packages.count) %></strong></p>
+
+    <div class="form--field">
+      <label class="form--label" for="todo_delete"><%= t(:text_budget_delete) %></label>
+      <div class="form--field-container">
+        <%= styled_radio_button_tag 'todo', 'delete', false %>
+      </div>
+    </div>
+
+    <% if @possible_other_budgets.any? %>
+      <div class="form--field">
+        <label class="form--label" for="todo_reassign"><%= t(:text_budget_reassign_to) %></label>
+        <div class="form--field-container">
+          <%= styled_radio_button_tag 'todo', 'reassign', true %>
+        </div>
+
+        <%= label_tag "reassign_to_id", t(:text_budget_reassign_to), class: "hidden-for-sighted" %>
+        <%= styled_select_tag 'reassign_to_id', options_from_collection_for_select(@possible_other_budgets, 'id', 'name'), container_class: '-middle' %>
+
+        <% csp_onclick("document.getElementById('todo_reassign').checked = true", '#reassign_to_id') %>
+      </div>
+    <% end %>
+  </section>
+
+  <%= styled_submit_tag t(:button_apply), class: '-highlight' %>
+  <%= link_to t(:button_cancel),
+              budget_path(@budget),
+              class: 'button' %>
+<% end %>

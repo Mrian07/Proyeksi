@@ -1,0 +1,18 @@
+
+
+import {NgModule} from "@angular/core";
+<%- frontend_plugins.each do |actual_name, module_name|-%>
+import {PluginModule as <%= module_name %>} from './linked/<%= actual_name %>/main';
+<%- end -%>
+
+@NgModule({
+    imports: [
+        <%- frontend_plugins.each do |_, module_name|-%>
+        <%= module_name %>,
+        <%- end -%>
+    ],
+})
+export class LinkedPluginsModule { }
+
+
+

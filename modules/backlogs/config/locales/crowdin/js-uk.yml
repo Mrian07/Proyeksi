@@ -1,0 +1,7 @@
+
+uk:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Точки історії"
+        remainingTime: "Залишилися години"

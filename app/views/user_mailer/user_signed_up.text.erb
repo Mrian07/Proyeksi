@@ -1,0 +1,16 @@
+
+<%= t(:mail_body_register_user, name: @user.name) %>
+
+<%= t(:mail_body_register) %>
+<%= @activation_url %>
+
+<%= strip_tags t(:mail_body_register_links_html,
+      webinar_link: OpenProject::Static::Links.links[:webinar_videos][:href],
+      youtube_link: OpenProject::Configuration.youtube_channel,
+      get_started_link: OpenProject::Static::Links.links[:get_started_videos][:href],
+      documentation_link: OpenProject::Static::Links.links[:openproject_docs][:href]
+    )
+%>
+
+<%= t(:mail_body_register_ending) %>
+<%= t(:mail_body_register_closing) %>

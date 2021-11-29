@@ -1,0 +1,21 @@
+
+lt:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Įtraukimo užklausos"
+        copy_menu:
+          label: Git fragmentai
+          description: Kopijuoti git fragmentus į iškarpinę
+        git_actions:
+          branch_name: Šakos pavadinimas
+          commit_message: Commit pranešimas
+          cmd: Sukurti šaką su tuščiu commit pranešimu
+          title: Greiti Git fragmentai
+          copy_success: '✅ Nukopijuota!'
+          copy_error: '❌ Kopijavimas nepavyko!'
+      tab_prs:
+        empty: 'Dar nėra susietų įtraukimo užklausų (PR). Susiekite esamą PR naudojant kodą <code>OP#%{wp_id}</code> PR aprašyme arba sukurkite naują PR.'
+      github_actions: Veiksmai

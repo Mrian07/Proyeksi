@@ -1,0 +1,31 @@
+
+
+<div class="modal-delivery-element">
+  <div class="op-modal--header">
+    <h1 class="op-modal--title">
+      <%= I18n.t('js.label_export') %>
+    </h1>
+    <button
+      type="button"
+      class="op-modal--close-button"
+      aria-label="<%= t('js.close_popup_title') %>"
+    >
+      <%= op_icon('icon-close') %>
+    </button>
+  </div>
+
+  <div class="op-modal--body">
+    <ul class="op-export-options">
+      <% supported_export_formats.each do |key| %>
+        <li class="op-export-options--option">
+          <% filter_params = safe_query_params ['filters', 'sortBy'] %>
+          <%= link_to url_for(action: 'index', format: key, **filter_params),
+                      class: 'op-export-options--option-link' do %>
+            <%= op_icon("icon-big icon-export-#{key}") %>
+            <span class="op-export-options--option-label"><%= t("export.format.#{key}") %></span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

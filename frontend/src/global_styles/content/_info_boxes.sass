@@ -1,0 +1,36 @@
+
+
+.info-boxes
+  width: 100%
+  max-width: 1140px
+
+  .info-boxes--title,
+  .info-boxes--item-title
+    margin: 20px auto
+    font-weight: bold
+
+  &.-centered
+    margin: auto
+    padding: 0 15px
+    .info-boxes--title
+      text-align: center
+
+  .info-boxes--container
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
+
+    .info-boxes--item
+      .info-boxes--teaser-image
+        display: block
+        margin: auto
+        max-width: 150px
+
+      .info-boxes--item-title
+        white-space: nowrap
+        border-bottom: none
+
+      .info-boxes--item-content
+        .widget-box--arrow-links
+          text-transform: uppercase
+          font-size: .875rem

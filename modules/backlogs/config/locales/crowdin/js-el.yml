@@ -1,0 +1,7 @@
+
+el:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Πόντοι Ιστορίας"
+        remainingTime: "Υπολειπόμενες ώρες"

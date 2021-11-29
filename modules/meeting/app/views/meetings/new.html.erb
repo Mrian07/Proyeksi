@@ -1,0 +1,10 @@
+
+
+<% html_title t(:label_meeting_new) %>
+<%= toolbar title: t(:label_meeting_new) %>
+<%= labelled_tabular_form_for @meeting, :url => {:controller => '/meetings', :action => 'create', :project_id => @project}, :html => {:id => 'meeting-form'} do |f| -%>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= styled_button_tag t(:button_create), class: '-highlight' %>
+  <%= link_to t(:button_cancel), { :action => 'index', :project_id => @project },
+        class: 'button' %>
+<% end if @project %>

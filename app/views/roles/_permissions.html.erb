@@ -1,0 +1,34 @@
+
+
+<% permissions.each do |mod, mod_permissions| %>
+  <% global_prefix = showGlobalRole ? 'fieldset--global--' : 'fieldset--' %>
+  <% module_name = mod.blank? ? 'fieldset--global--' + Project.model_name.human.downcase.gsub(' ', '_') : global_prefix + l_or_humanize(mod, prefix: 'project_module_').downcase.gsub(' ', '_') %>
+  <fieldset class="form--fieldset -collapsible" id="<%= module_name %>">
+    <legend class="form--fieldset-legend">
+      <% if mod.blank? %>
+        <%= showGlobalRole ? t(:label_global) : Project.model_name.human %>
+      <% else %>
+        <%= l_or_humanize(mod, prefix: 'project_module_') %>
+      <% end %>
+    </legend>
+    <div class="form--toolbar">
+      <span class="form--toolbar-item">
+        (<%= check_all_links module_name %>)
+      </span>
+    </div>
+    <div class="-columns-2">
+      <% Array(mod_permissions).each do |permission| %>
+        <div class="form--field">
+          <div class="form--field-container">
+            <label class="form--label-with-check-box">
+              <%= styled_check_box_tag 'role[permissions][]', permission.name, (role.permissions && role.permissions.include?(permission.name)) %>
+              <%= l_or_humanize(permission.name, prefix: 'permission_') %>
+            </label>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </fieldset>
+<% end %>
+<%= hidden_field_tag 'role[permissions][]', '' %>

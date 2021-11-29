@@ -1,0 +1,12 @@
+
+el:
+  js:
+    work_packages:
+      property_groups:
+        costs: "Κόστος"
+      properties:
+        overallCosts: "Συνολικό κόστος"
+        spentUnits: "Δαπανημένες μονάδες"
+    button_log_costs: "Καταγραφή κόστους μονάδας"
+    label_hour: "ώρα"
+    label_hours: "ώρες"

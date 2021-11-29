@@ -1,0 +1,7 @@
+
+bg:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Точки на история"
+        remainingTime: "Remaining hours"

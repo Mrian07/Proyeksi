@@ -1,0 +1,6 @@
+
+vi:
+  js:
+    work_packages:
+      properties:
+        costObject: "Ngân sách"

@@ -1,0 +1,15 @@
+
+
+.user-mention
+  color: var(--content-link-color)
+
+  &:hover
+    text-decoration: underline
+
+  &:before
+    content: '@'
+    color: var(--gray-dark)
+
+span.user-mention
+  // Remove text selection cursor for group
+  cursor: default

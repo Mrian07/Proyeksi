@@ -1,0 +1,6 @@
+
+hr:
+  js:
+    reporting_engine:
+      label_remove: "Obriši"
+      label_response_error: "Dogodila se pogreška prilikom obrade upita."

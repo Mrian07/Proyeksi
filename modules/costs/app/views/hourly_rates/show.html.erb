@@ -1,0 +1,16 @@
+
+
+<% html_title t(:label_administration), t(:caption_rate_history_for, user: @user.name) %>
+
+<%= toolbar title: t(:caption_rate_history_for, :user => @user.name) %>
+
+<% if @project %>
+  <% html_title t(:caption_rate_history_for, user: @user.name) %>
+
+  <%= render :partial => 'list_project' %>
+<% else %>
+  <% html_title t(:label_administration), t(:caption_rate_history_for, user: @user.name) %>
+
+  <%= render :partial => 'list_default' %>
+  <%= render :partial => 'list' %>
+<% end %>

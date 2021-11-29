@@ -1,0 +1,66 @@
+
+<% html_title t(:label_administration), t(:label_plugins) %>
+<%= toolbar title: t(:label_modules_and_plugins) %>
+<% if @plugins.any? %>
+  <div class="generic-table--container">
+    <div class="generic-table--results-container">
+      <table class="generic-table plugins">
+        <colgroup>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
+                <span>
+                  <%= I18n.t('label_name') %>
+                </span>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
+                <span>
+                  <%= I18n.t('attributes.author') %>
+                </span>
+              </div>
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
+                <span>
+                  <%= I18n.t('attributes.version') %>
+                </span>
+              </div>
+            </div>
+          </th>
+        </thead>
+        <tbody>
+          <% @plugins.each do |plugin| %>
+            <tr>
+              <td><span class="name"><%=h plugin.name %></span>
+                <%= content_tag('span', h(plugin.description), class: 'description') unless plugin.description.blank? %>
+                <%= content_tag('span', link_to(h(plugin.url), plugin.url), class: 'url') unless plugin.url.blank? %>
+              </td>
+              <td class="author"><%= plugin.author_url.blank? ? h(plugin.author) : link_to(h(plugin.author), plugin.author_url) %></td>
+              <td class="version">
+                <% if plugin.bundled %>
+                  <%= t(:label_bundled) %>
+                <% else %>
+                  <%= h plugin.version %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+<% else %>
+  <%= no_results_box %>
+<% end %>

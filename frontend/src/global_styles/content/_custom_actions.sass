@@ -1,0 +1,24 @@
+
+
+.custom-actions
+  display: flex
+  flex-wrap: wrap
+  // Cancel out the margin of the buttons
+  margin-right: -10px
+
+  .custom-action
+    display: flex
+    justify-content: flex-end
+    flex: 0 1 auto
+    margin-bottom: 0.5rem
+    max-width: calc(100vw - 20px)
+    @include text-shortener
+
+    .button
+      @include text-shortener
+      width: 100%
+      // The margin is necessary for all buttons so that the alignment is correct on small screens
+      margin-right: 10px
+
+wp-custom-actions-admin-date-action
+  display: flex

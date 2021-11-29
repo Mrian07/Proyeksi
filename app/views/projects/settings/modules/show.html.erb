@@ -1,0 +1,16 @@
+
+
+<%= toolbar title: t(:label_module_plural), html: { class: '-minimum-title' } do -%>
+  <%= render partial: 'projects/settings/form_toolbar', locals: { form_name: "edit_project_#{@project.id}" } %>
+<% end %>
+
+<%= error_messages_for_contract(@project, @errors) %>
+
+<%= labelled_tabular_form_for @project,
+                              url: project_settings_modules_path(@project) do |form| %>
+
+  <%= render partial: "form",
+             locals: { form: form } %>
+
+  <p><%= form.button t(:button_save), class: 'button -highlight -with-icon icon-checkmark' %></p>
+<% end %>

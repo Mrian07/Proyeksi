@@ -1,0 +1,31 @@
+
+
+<% html_title t(:label_administration), t("timelines.admin_menu.colors") %>
+
+<%= toolbar title: t('timelines.admin_menu.colors') do %>
+  <li class="toolbar-item">
+    <%= link_to new_color_path,
+          { class: 'button -alt-highlight',
+            aria: {label: t('timelines.new_color')},
+            title: t('timelines.new_color')} do %>
+      <%= op_icon('button--icon icon-add') %>
+      <span class="button--text"><%= t('activerecord.attributes.type.color') %></span>
+    <% end %>
+  </li>
+<% end %>
+
+<% if @colors.any? %>
+  <div class="color--preview-patch-field">
+    <% @colors.each do |color| %>
+      <%= content_tag :div,
+          class: 'color--preview-patch',
+          style: "background-color: #{color.hexcode}" do %>
+        <%= link_to color.name,
+                    edit_color_path(color),
+                    class: color.bright? ? '-bright' : '-dark' %>
+      <% end %>
+    <% end %>
+  </div>
+<% else %>
+  <%= no_results_box(action_url: new_color_path, display_action: true) unless @colors.any? %>
+<% end %>

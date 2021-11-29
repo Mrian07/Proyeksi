@@ -1,0 +1,42 @@
+
+
+<tr <%= "id=\"#{row_css_id}\"" if row_css_id %> class="<%= row_css_class %>">
+  <% columns.each do |column| %>
+    <td class="<%= column_css_class(column) %>"
+        <%= title = column_title(column); "title=\"#{title}\"" if title %>
+    >
+      <%= column_value(column) %>
+    </td>
+  <% end %>
+  <td class="buttons">
+    <% items = project_more_menu_items(project) %>
+    <% if items.any?  %>
+      <ul class="project-actions">
+        <li aria-haspopup="true" title="<%= I18n.t(:label_open_menu) %>" class="drop-down">
+          <a class="icon icon-show-more-horizontal context-menu--icon" title="<%= t(:label_open_menu) %>" href></a>
+          <ul style="display:none;" class="menu-drop-down-container">
+            <% items.each do |item| %>
+              <li>
+                <%= link_to(*item) %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+    <% unless project.description.blank? %>
+      <a class="icon collapse icon-arrow-up1 projects-table--description-toggle" href title="<%= t('label_project_hide_details') %>"></a>
+      <a class="icon expand icon-arrow-down1 projects-table--description-toggle" href title="<%= t('label_project_show_details') %>"></a>
+    <% end %>
+  </td>
+</tr>
+<% if project.description.present? %>
+  <tr class="project-description <%= project_css_classes %> <%= row_css_level_classes %> <%= params[:expand] == 'all' ? '-expanded' : '' %>">
+    <td></td>
+    <td colspan="<%= columns.length%>" class="project--hierarchy">
+      <div class="description-container wiki">
+        <%= format_text(short_project_description(project), project: project) %>
+      </div>
+    </td>
+  </tr>
+<% end %>

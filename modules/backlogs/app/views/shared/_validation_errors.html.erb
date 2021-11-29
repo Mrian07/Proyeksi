@@ -1,0 +1,9 @@
+
+
+<%= validation_errors.length > 1 ? t(:error_intro_plural) : t(:error_intro_singular) %>
+<ul>
+  <%- validation_errors.each_full do |msg| %>
+  <li><%= msg %></li>
+  <%- end %>
+</ul>
+<%= t(:error_outro ) %>

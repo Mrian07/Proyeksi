@@ -1,0 +1,6 @@
+
+es:
+  js:
+    work_packages:
+      properties:
+        costObject: "Presupuesto"

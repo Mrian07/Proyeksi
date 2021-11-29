@@ -1,0 +1,6 @@
+
+el:
+  js:
+    reporting_engine:
+      label_remove: "Διαγραφή"
+      label_response_error: "Παρουσιάστηκε σφάλμα κατά το χειρισμό του ερωτήματος."

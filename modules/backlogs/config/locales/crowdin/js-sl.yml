@@ -1,0 +1,7 @@
+
+sl:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Točke v zgodbi"
+        remainingTime: "Preostale ure"

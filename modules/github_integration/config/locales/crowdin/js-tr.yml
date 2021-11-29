@@ -1,0 +1,21 @@
+
+tr:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Pull requests"
+        copy_menu:
+          label: Git snippets
+          description: Copy git snippets to clipboard
+        git_actions:
+          branch_name: Branch name
+          commit_message: Commit message
+          cmd: Create branch with empty commit
+          title: Quick snippets for Git
+          copy_success: '✅ Kopyalandı!'
+          copy_error: '❌ Kopyalanamadı!'
+      tab_prs:
+        empty: 'Henüz bağlanan herhangi bir çekme isteği yok. PR açıklamasında <code>OP#%{wp_id}</code> kodunu kullanarak mevcut bir PR''yi bağlayın veya yeni bir PR oluşturun.'
+      github_actions: Eylemler

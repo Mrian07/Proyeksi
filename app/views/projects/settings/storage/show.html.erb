@@ -1,0 +1,19 @@
+
+<% html_title t(:label_required_disk_storage) %>
+<%= toolbar title: t(:label_required_disk_storage) %>
+
+<section class="form--section">
+  <% if storage['modules'].empty? %>
+    <%= no_results_box custom_title: t('projects.settings.storage.no_results_title_text') %>
+  <% end %>
+
+  <% storage['modules'].each do |label, value| %>
+    <%= render partial: 'storage_field',
+               locals: { label: I18n.t(label), value: value } %>
+  <% end %>
+  <%# Hide total when there's only one module %>
+  <% if storage['modules'].length > 1 %>
+    <%= render partial: 'storage_field',
+               locals: { label: t(:label_total), value: storage['total'] } %>
+  <% end %>
+</section>

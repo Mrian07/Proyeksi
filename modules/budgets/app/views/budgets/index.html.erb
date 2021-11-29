@@ -1,0 +1,31 @@
+
+
+<% html_title(t(:label_budget_plural)) %>
+<%= toolbar title: t(:label_budget_plural) do %>
+  <% if authorize_for(:budgets, :new) %>
+    <li class="toolbar-item">
+      <a href="<%= new_projects_budget_path(@project) %>" aria-label="<%= I18n.t(:button_add_budget) %>" id="add-budget-button" title="<%= I18n.t(:button_add_budget) %>" class="button -alt-highlight">
+        <%= op_icon('button--icon icon-add') %>
+        <span class="button--text"><%= t(:label_budget) %></span>
+      </a>
+    </li>
+  <% end %>
+<% end %>
+
+<% if @budgets.empty? %>
+  <%= no_results_box %>
+<% else %>
+<%= render :partial => 'list', :locals => {:budgets => @budgets} %>
+<%= pagination_links_full @budgets %>
+<% end %>
+
+<p class="other-formats">
+<%= t(:label_export_to) %>
+<!--
+<span><%= link_to 'Atom', {:query_id => @query, :format => 'atom', :key => User.current.rss_key}, :class => 'feed' %></span>
+-->
+<span><%= link_to 'CSV', {:format => 'csv'}, :class => 'csv' %></span>
+<!--
+<span><%= link_to 'PDF', {:format => 'pdf'}, :class => 'pdf' %></span>
+-->
+</p>

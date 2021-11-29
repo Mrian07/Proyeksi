@@ -1,0 +1,14 @@
+
+
+<% html_title(t(:label_budget_new)) %>
+<%= toolbar title: t(:label_budget_new) %>
+
+<%= labelled_tabular_form_for @budget,
+                              :url => projects_budgets_path(@project),
+                              :as => :budget,
+                              :html => {:multipart => true, :id => 'budget_form'} do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+    <%= styled_button_tag t(:button_create), class: '-with-icon icon-checkmark' %>
+    <%= styled_button_tag t(:button_create_and_continue), :name => 'continue',
+          class: 'button -highlight'%>
+<% end %>

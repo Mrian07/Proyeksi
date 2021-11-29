@@ -1,0 +1,29 @@
+
+
+---
+roles_001:
+  name: Manager
+  id: 1
+  builtin: 0
+  position: 1
+roles_002:
+  name: Developer
+  id: 2
+  builtin: 0
+  position: 2
+roles_003:
+  name: Reporter
+  id: 3
+  builtin: 0
+  position: 3
+roles_004:
+  name: Non member
+  id: 4
+  builtin: 1
+  position: 4
+roles_005:
+  name: Anonymous
+  id: 5
+  builtin: 2
+  position: 5
+

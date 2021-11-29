@@ -1,0 +1,21 @@
+
+hu:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Pull request-ek"
+        copy_menu:
+          label: Git snippets
+          description: "Git snippetek másolása a vágólapra\n"
+        git_actions:
+          branch_name: Branch neve
+          commit_message: Üzenet közzététele
+          cmd: Branch létrehozása üres commit-al
+          title: "Gyors snippetek a Git-hez\n"
+          copy_success: '✅ Másolva!'
+          copy_error: '❌ Másolás sikertelen!'
+      tab_prs:
+        empty: "Még nincsenek összekapcsolt pull-kérelmek. Linkelj egy meglévő PR-t a PR leírásában található <code>OP#%{wp_id}</code> kód használatával, vagy hozz létre egy új PR-t.\n"
+      github_actions: Műveletek

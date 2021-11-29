@@ -1,0 +1,26 @@
+
+
+.icon-control
+  display:        inline-block
+  height:         rem-calc(19px)
+  width:          rem-calc(19px)
+  margin-left:    -1px
+  padding:        1px
+  vertical-align: middle
+  text-align:     center
+  cursor:         pointer
+  border-radius:  50%
+  color:          var(--gray-dark)
+
+  &:hover, &.-active
+    text-decoration:  none
+    color:            white
+    background:       var(--button--highlight-background-color)
+
+  &.-active:hover
+    color:            var(--gray-dark)
+    background:       white
+
+.icon-control--icon
+  @include icon-common
+  font-size: rem-calc(17px)

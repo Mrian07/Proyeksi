@@ -1,0 +1,135 @@
+
+
+if (window.RB === null || window.RB === undefined) {
+  window.RB = {};
+}
+
+
+(function ($) {
+  var object, Factory, Dialog, UserPreferences,
+      ajax;
+
+  object = {
+    // Douglas Crockford's technique for object extension
+    // http://javascript.crockford.com/prototypal.html
+    create: function () {
+      var obj, i, methods, methodName;
+
+      function F() {
+      }
+
+      F.prototype = arguments[0];
+      obj = new F();
+
+      // Add all the other arguments as mixins that
+      // 'write over' any existing methods
+      for (i = 1; i < arguments.length; i += 1) {
+        methods = arguments[i];
+        if (typeof methods === 'object') {
+          for (methodName in methods) {
+            if (methods.hasOwnProperty(methodName)) {
+              obj[methodName] = methods[methodName];
+            }
+          }
+        }
+      }
+      return obj;
+    }
+  };
+
+
+  // Object factory for chiliproject_backlogs
+  Factory = object.create({
+
+    initialize: function (objType, el) {
+      var obj;
+
+      obj = object.create(objType);
+      obj.initialize(el);
+      return obj;
+    }
+
+  });
+
+  // Utilities
+  Dialog = object.create({
+    msg: function (msg) {
+      var dialog, baseClasses;
+
+      baseClasses = 'ui-button ui-widget ui-state-default ui-corner-all';
+
+      if ($('#msgBox').length === 0) {
+        dialog = $('<div id="msgBox"></div>').appendTo('body');
+      }
+      else {
+        dialog = $('#msgBox');
+      }
+
+      dialog.html(msg);
+      dialog.dialog({
+        title: 'Backlogs Plugin',
+        buttons: [
+        {
+          text: 'OK',
+          class: 'button -highlight',
+          click: function () {
+            $(this).dialog("close");
+          }
+        }],
+        modal: true
+      });
+      $('.button').removeClass(baseClasses);
+      $('.ui-icon-closethick').prop('title', 'close');
+    }
+  });
+
+  ajax = (function () {
+    var ajaxQueue, ajaxOngoing,
+        processAjaxQueue;
+
+    ajaxQueue = [];
+    ajaxOngoing = false;
+
+    processAjaxQueue = function () {
+      var options = ajaxQueue.shift();
+
+      if (options !== null && options !== undefined) {
+        ajaxOngoing = true;
+        $.ajax(options);
+      }
+    };
+
+    // Process outstanding entries in the ajax queue whenever a ajax request
+    // finishes.
+    $(document).ajaxComplete(function (event, xhr, settings) {
+      ajaxOngoing = false;
+      processAjaxQueue();
+    });
+
+    return function (options) {
+      ajaxQueue.push(options);
+      if (!ajaxOngoing) {
+        processAjaxQueue();
+      }
+    };
+  }());
+
+  // Abstract the user preference from the rest of the RB objects
+  // so that we can change the underlying implementation as needed
+  UserPreferences = object.create({
+    get: function (key) {
+      return $.cookie(key);
+    },
+
+    set: function (key, value) {
+      $.cookie(key, value, { expires: 365 * 10 });
+    }
+  });
+
+  RB.Object = object;
+  RB.Factory = Factory;
+  RB.Dialog = Dialog;
+  RB.UserPreferences = UserPreferences;
+  RB.ajax = ajax;
+
+}(jQuery));

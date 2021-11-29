@@ -1,0 +1,9 @@
+
+
+@import "../vendor/foundation-apps/scss/helpers/functions"
+
+@function rem-concat-list($list-of-pixels)
+  $result: ''
+  @each $pixel-val in $list-of-pixels
+    $result: $result + rem-calc($pixel-val) + ' '
+  @return #{$result}

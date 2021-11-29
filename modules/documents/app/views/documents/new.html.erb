@@ -1,0 +1,9 @@
+
+<%= toolbar title: t(:label_document_new) %>
+
+<%= labelled_tabular_form_for @document, url: project_documents_path(@project), html: { multipart: true } do |f| -%>
+  <%= render :partial => 'documents/form', locals: { f: f } %>
+  <%= styled_button_tag t(:button_create), class: "-highlight -with-icon icon-checkmark" %>
+<% end %>
+
+

@@ -1,0 +1,12 @@
+
+ro:
+  js:
+    work_packages:
+      property_groups:
+        costs: "Costuri"
+      properties:
+        overallCosts: "Costuri totale"
+        spentUnits: "Unități consumate"
+    button_log_costs: "Costurile unitare ale buștenilor"
+    label_hour: "oră"
+    label_hours: "ore"

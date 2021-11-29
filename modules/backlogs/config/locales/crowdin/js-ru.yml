@@ -1,0 +1,7 @@
+
+ru:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Исторические точки"
+        remainingTime: "Оставшиеся часы"

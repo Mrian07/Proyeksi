@@ -1,0 +1,38 @@
+
+
+<% if @custom_errors.present? %>
+  <% @custom_errors.each do |err| %>
+    <div class="flash error"><%= err %></div>
+  <% end %>
+<% end %>
+
+<% html_title (@query.persisted? ? "#{t(:label_cost_report)}: #{@query.name}" : t(:label_new_report)) %>
+
+<div class="toolbar-container">
+  <div class="toolbar">
+    <div class="title-container">
+      <h2 id="ur_caption">
+        <%= render_widget Widget::Controls::QueryName, @query, :can_rename => allowed_to?(:rename, @query, current_user) %>
+      </h2>
+    </div>
+    <ul class="toolbar-items">
+      <%= call_hook(:view_cost_report_toolbar) %>
+    </ul>
+  </div>
+</div>
+
+<%= render_widget Widget::Settings, @query, :cost_types => @cost_types, :selected_type_id => @unit_id %>
+
+<div id="result-table">
+  <%= render_widget Widget::Table, @query %>
+</div>
+<p class="footnote">
+  <%= t(:text_costs_are_rounded_note) %>
+  <%= "<br />#{t(:information_restricted_depending_on_permission)}".html_safe unless User.current.admin?%>
+</p>
+
+<% if @project.blank? %>
+  <% content_for :sidebar do %>
+    <%= render :partial => "report_menu" %>
+  <% end -%>
+<% end %>

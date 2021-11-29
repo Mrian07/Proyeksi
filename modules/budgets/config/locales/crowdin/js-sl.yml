@@ -1,0 +1,6 @@
+
+sl:
+  js:
+    work_packages:
+      properties:
+        costObject: "Proračun"

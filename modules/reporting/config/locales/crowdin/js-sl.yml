@@ -1,0 +1,6 @@
+
+sl:
+  js:
+    reporting_engine:
+      label_remove: "Izbriši"
+      label_response_error: "Pri obdelavi poizvedbe je prišlo do napake."

@@ -1,0 +1,7 @@
+
+cs:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Body příběhu"
+        remainingTime: "Zbývající hodiny"

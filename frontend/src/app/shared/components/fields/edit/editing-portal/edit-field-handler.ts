@@ -1,0 +1,131 @@
+
+
+import { Subject } from 'rxjs';
+import { HalResource } from 'core-app/features/hal/resources/hal-resource';
+import { UntilDestroyedMixin } from 'core-app/shared/helpers/angular/until-destroyed.mixin';
+
+export abstract class EditFieldHandler extends UntilDestroyedMixin {
+  /**
+   * Whether the handler belongs to a larger edit mode form
+   * e.g., WP-create
+   */
+  abstract get inEditMode():boolean;
+
+  /** Whether the field is being saved */
+  abstract get inFlight():boolean;
+
+  /**
+   * Return a unique ID for this edit field
+   */
+  htmlId:string;
+
+  /**
+   * The name of the attribute
+   */
+  fieldName:string;
+
+  /**
+   * Activation handler firing upon user requesting activation.
+   */
+  $onUserActivate:Subject<void>;
+
+  /**
+   * Accessibility label for the field
+   */
+  fieldLabel:string;
+
+  /**
+   * Error messages on the field, if any.
+   */
+  public errorMessageOnLabel():string|undefined {
+    return undefined;
+  }
+
+  /**
+   * On destroy observable
+   */
+  public onDestroy = new Subject<void>();
+
+  // OnSubmit callbacks that may register from fields
+  protected _onSubmitHandlers:Array<() => Promise<void>> = [];
+
+  // OnPreSubmit callbacks that may register from fields
+  protected _onBeforeSubmitHandlers:Array<() => void> = [];
+
+  /**
+   * Call field submission callback handlers
+   */
+  public onSubmit():Promise<any> {
+    return Promise.all(this._onSubmitHandlers.map((cb) => cb()));
+  }
+
+  public registerOnSubmit(callback:() => Promise<void>) {
+    this._onSubmitHandlers.push(callback);
+  }
+
+  /**
+   * Call field before-submission callback handlers
+   */
+  public onBeforeSubmit():any {
+    return this._onBeforeSubmitHandlers.map((cb) => cb());
+  }
+
+  public registerOnBeforeSubmit(callback:() => void) {
+    this._onBeforeSubmitHandlers.push(callback);
+  }
+
+  /**
+   * Stop event propagation
+   */
+  public abstract stopPropagation(evt:JQuery.TriggeredEvent):boolean;
+
+  /**
+   * Focus on the active field.
+   * Optionally, try to set the click position to the given offset if the field is an input element.
+   */
+  public abstract focus(setClickOffset?:number):void;
+
+  /**
+   * Handle a user submitting the field (e.g, ng-change)
+   */
+  public abstract handleUserSubmit():Promise<any>;
+
+  /**
+   * Handle users pressing enter inside an edit mode.
+   * Outside an edit mode, the regular save event is captured by handleUserSubmit (submit event).
+   * In an edit mode, we can't derive from a submit event wheteher the user pressed enter
+   * (and on what field he did that).
+   */
+  public abstract handleUserKeydown(event:JQuery.TriggeredEvent, onlyCancel?:boolean):void;
+
+  /**
+   * Cancel edit
+   */
+  public abstract handleUserCancel():void;
+
+  /**
+   * Cancel any pending changes
+   */
+  public abstract reset():void;
+
+  /**
+   * Close the field, resetting it with its display value.
+   */
+  public abstract deactivate(focus:boolean):void;
+
+  /**
+   * Returns whether the field has been changed
+   */
+  public abstract isChanged():boolean;
+
+  /**
+   * Handle focus loss
+   */
+  public abstract onFocusOut():void;
+
+  public abstract setErrors(newErrors:string[]):void;
+
+  public previewContext(resource:HalResource):string|undefined {
+    return undefined;
+  }
+}

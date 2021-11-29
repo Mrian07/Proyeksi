@@ -1,0 +1,109 @@
+
+
+#login-form
+  margin: 50px auto 0
+  padding-top: 20px
+  width: 511px
+  word-break: break-word
+
+  .login-options-container
+    margin-bottom: 10px
+    .login-links
+      float: right
+      text-align: right
+      margin-top: -3rem
+
+#content .login-auth-providers.wide
+  width: auto
+  text-align: center
+
+  a.auth-provider
+    float: none
+    display: inline-block
+
+#nav-login-content
+  padding: 1rem
+
+#login-pulldown
+  margin-right: 0
+
+// use id selectors to be specific enough to override general content and top-menu definitions
+#content .login-auth-providers,
+#nav-login-content .login-auth-providers
+  width: 471px
+  margin-top: 25px
+
+  h3
+    border: none
+    margin-top: 20px
+    font-weight: normal
+    font-size: 1rem
+    text-decoration: none
+    text-align: center
+
+    position: relative
+    z-index: 1
+
+    // line behind title
+    // from http://codepen.io/ericrasch/pen/Irlpm
+    &:before
+      border-top: 2px solid var(--content-form-separator-color)
+      content: ""
+      // this centers the line to the full width specified
+      margin: 0 auto
+      // positioning must be absolute here, and relative positioning
+      //  must be applied to the parent
+      position: absolute
+      top: 50%
+      left: 0
+      right: 0
+      bottom: 0
+      width: 95%
+      z-index: -1
+
+    // also line behind title
+    span
+      // to hide the lines from behind the text, you have to set the
+      // background color the same as the container
+      background: var(--content-form-bg-color)
+      padding: 0 15px
+
+  .login-auth-provider-list
+    @include prevent-float-collapse
+
+  a.auth-provider
+    float: left
+    margin-left: 10px
+    background-color: light-grey
+    font-weight: normal
+    color: var(--body-font-color)
+
+    &:hover
+      text-decoration: none
+
+    .auth-provider-name
+      line-height: normal
+      white-space: normal
+
+#nav-login-content .login-auth-providers
+  h3
+    &:before
+      width: 100%
+    span
+      background: var(--header-drop-down-bg-color)
+  .login-auth-provider-list
+    margin-top: -15px
+    margin-bottom: 10px
+
+#nav-login-content .login-auth-providers.no-pwd
+  margin-top: 0
+
+.registration-footer
+  display: block
+  margin-top: 2em
+
+.op-user-consent-form
+  font-size: 1rem
+
+  &--agreement
+    font-size: inherit

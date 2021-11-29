@@ -1,0 +1,12 @@
+
+
+// The intend for this file is to become the place where all drag&drop styles are placed.
+// As there will hopefully also be a shared style for resizing, and as those two will hopefully also share some styles
+// there is also the 'modifying' grouping, which could serve as the basis for the two.
+
+// There does not seem to be a way to add a class to the preview element
+// added by cdk drag.
+.cdk-drag-preview
+  @include d_n_d--preview
+  // Allow dragged items to appear before modals
+  z-index: 10000 !important

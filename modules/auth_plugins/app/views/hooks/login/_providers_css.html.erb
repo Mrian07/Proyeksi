@@ -1,0 +1,17 @@
+
+
+<% OpenProject::Plugins::AuthPlugin.providers.each do |pro| %>
+  <% if pro[:icon] %>
+    <style type="text/css">
+      #content .login-auth-providers a.auth-provider.auth-provider-<%= pro[:name] %> {
+        background-image: url('<%= asset_path(pro[:icon]) %>');
+      }
+      .op-app-header #nav-login-content .login-auth-providers a.auth-provider.auth-provider-<%= pro[:name] %> {
+        background-image:  url('<%= asset_path(pro[:icon]) %>') ;
+      }
+      .op-modal .login-auth-providers a.auth-provider.auth-provider-<%= pro[:name] %> {
+        background-image: url('<%= asset_path(pro[:icon]) %>') ;
+      }
+    </style>
+  <% end -%>
+<% end %>

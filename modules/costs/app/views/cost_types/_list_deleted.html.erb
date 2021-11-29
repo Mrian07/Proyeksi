@@ -1,0 +1,71 @@
+
+
+<% cost_types = @cost_types.select(&:deleted_at) -%>
+
+<% if cost_types.empty? %>
+  <%= no_results_box %>
+<% else %>
+  <div class="generic-table--container">
+    <div class="generic-table--results-container">
+      <table class="generic-table locked_cost_types">
+        <colgroup>
+          <col opHighlightCol>
+          <col opHighlightCol>
+          <col opHighlightCol>
+          <col opHighlightCol>
+          <col opHighlightCol>
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <%= sort_header_tag("name", :caption => CostType.model_name.human) %>
+            <%= sort_header_tag("unit", :caption => CostType.human_attribute_name(:unit)) %>
+            <%= sort_header_tag("unit_plural", :caption => CostType.human_attribute_name(:unit_plural)) %>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= CostType.human_attribute_name(:current_rate) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t(:caption_locked_on) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th><div class="generic-table--empty-header"></div></th>
+          </tr>
+          </thead>
+          <tbody>
+            <% cost_types.each do |cost_type| %>
+              <tr>
+                <%= content_tag :td, cost_type.name %>
+                <%= content_tag :td, cost_type.unit %>
+                <%= content_tag :td, cost_type.unit_plural %>
+                <%= content_tag :td, to_currency_with_empty(cost_type.rate_at(@fixed_date)), :class => "currency" %>
+                <%= content_tag :td, cost_type.deleted_at.to_date %>
+                <td class="buttons">
+                  <%= form_for cost_type, url: restore_cost_type_path(cost_type),
+                                          method: :patch,
+                                          html: { id: "restore_cost_type_#{cost_type.id}",
+                                                  class: 'restore_cost_type' } do |f| %>
+                    <button type="submit"
+                            class="button--link submit_cost_type">
+                      <%= icon_wrapper('icon icon-unlocked', I18n.t(:button_unlock)) %>
+                    </button>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+<% end %>

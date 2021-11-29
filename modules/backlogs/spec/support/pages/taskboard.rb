@@ -1,0 +1,116 @@
+
+
+require 'support/pages/page'
+
+module Pages
+  class Taskboard < Page
+    attr_reader :project, :sprint
+
+    def initialize(project, sprint)
+      super()
+      @project = project
+      @sprint = sprint
+    end
+
+    def expect_story(story)
+      expect(page)
+        .to have_selector(story_selector(story))
+    end
+
+    def expect_task(task)
+      expect(page)
+        .to have_selector("#work_package_#{task.id}")
+    end
+
+    def expect_task_in_story_column(task, story, column)
+      within ".story_#{story.id} td:nth-of-type(#{column + 2})" do
+        expect(page)
+          .to have_selector("#work_package_#{task.id}")
+      end
+    end
+
+    def expect_work_package_not_visible(work_package)
+      expect(page)
+        .to have_no_content(work_package.subject)
+    end
+
+    def expect_color_for_task(hex_color, task)
+      expect(page)
+        .to have_selector("#work_package_#{task.id}[style='background-color:#{hex_color};']")
+    end
+
+    def add_task(story, attributes)
+      find(".story_#{story.id} td.add_new").click
+
+      change_attributes_in_modal(attributes)
+
+      expect(page).to have_no_selector('.ui-dialog')
+      expect(page).to have_no_selector('#work_package_')
+    end
+
+    def update_task(task, attributes)
+      find("#work_package_#{task.id}").click
+
+      change_attributes_in_modal(attributes)
+
+      expect(page).to have_no_selector('.ui-dialog')
+
+      sleep(0.5)
+    end
+
+    def drag_to_task(dragged_task, target, before_or_after = :before)
+      moved_element = find("#work_package_#{dragged_task.id}")
+      target_element = find("#work_package_#{target.id}")
+
+      page
+        .driver
+        .browser
+        .action
+        .move_to(moved_element.native)
+        .click_and_hold(moved_element.native)
+        .perform
+
+      page
+        .driver
+        .browser
+        .action
+        .move_to(target_element.native, before_or_after == :before ? 0 : +50, +40)
+        .release
+        .perform
+    end
+
+    def drag_to_column(dragged_task, story, col_number)
+      moved_element = find("#work_package_#{dragged_task.id}")
+      target_element = find(".story_#{story.id} td:nth-of-type(#{col_number + 2})")
+
+      moved_element.drag_to(target_element)
+    end
+
+    def path
+      backlogs_project_sprint_taskboard_path(project, sprint)
+    end
+
+    private
+
+    def story_selector(story)
+      "#story_#{story.id}"
+    end
+
+    def change_attributes_in_modal(attributes)
+      within '.ui-dialog' do
+        attributes.each do |key, value|
+          case key
+          when :subject
+            fill_in 'subject', with: value
+          when :assignee
+            select value, from: 'assigned to'
+          when :remaining_hours
+            fill_in 'remaining hours', with: value
+          end
+        end
+
+        click_button 'OK'
+      end
+    end
+  end
+end

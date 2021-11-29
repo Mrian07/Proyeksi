@@ -1,0 +1,10 @@
+
+
+<% html_title t(:label_administration), "#{t(:label_edit)} #{t(:label_auth_source)} #{@auth_source.name}" %>
+<% local_assigns[:additional_breadcrumb] = @auth_source.name %>
+<%= toolbar title: "#{t(:label_auth_source)} (#{@auth_source.auth_method_name})" %>
+
+<%= labelled_tabular_form_for @auth_source, as: :auth_source do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+  <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>
+<% end %>

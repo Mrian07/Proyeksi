@@ -1,0 +1,12 @@
+
+sl:
+  js:
+    work_packages:
+      property_groups:
+        costs: "Stroški"
+      properties:
+        overallCosts: "Celotni stroški"
+        spentUnits: "Porabljene enote"
+    button_log_costs: "Stroški enote dnevnika"
+    label_hour: "ura"
+    label_hours: "Ur"

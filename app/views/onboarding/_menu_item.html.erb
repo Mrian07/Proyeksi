@@ -1,0 +1,13 @@
+
+<li
+  class="op-menu--item"
+  data-augmented-model-wrapper
+  data-modal-iframe-url="<%= OpenProject::Configuration.onboarding_video_url %>"
+  data-modal-class-name="onboarding-modal op-modal_autoheight -highlight"
+>
+  <%= link_to t(:label_introduction_video),
+              '',
+              title: t(:label_introduction_video),
+              class: 'op-menu--item-action modal-delivery-element--activation-link' %>
+  <%= render partial: '/onboarding/onboarding_video_modal' %>
+</li>

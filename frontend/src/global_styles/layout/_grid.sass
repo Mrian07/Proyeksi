@@ -1,0 +1,13 @@
+
+
+// Cancel Foundation overflow defaults (overflow: auto, overflow-y: auto)
+@mixin grid-visible-overflow
+  overflow:   visible
+  overflow-y: visible
+
+// Allow to show overflow for drop-downs
+.grid-content,
+.grid-block
+
+  &.-visible-overflow
+    overflow: visible

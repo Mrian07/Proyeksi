@@ -1,0 +1,75 @@
+
+
+$filters--background-color: $gray-light !default
+$filters--border-color: $gray !default
+
+%filters--container
+  background-color: $filters--background-color
+  border: 1px solid $filters--border-color
+
+  legend
+    @extend .hidden-for-sighted
+
+%filters-grid
+  display:          grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-gap:         10px 40px
+  list-style-type:  none
+  margin:           10px 0 0 0
+
+.simple-filters--container
+  @extend %filters--container
+  padding: 1rem 1rem 1rem 1rem
+  margin: 0.6em 0
+  position: relative
+
+  .simple-filter--trailing-labels
+    @extend %filters-grid
+    grid-column: 1 / -1
+
+    > .-trailing-label.form--field
+      grid-column: 1 / -1
+      margin-bottom: 0
+
+  &.collapsed
+    display: none
+
+  .simple-filters--close
+    position: absolute
+    top: 5px
+    right: 5px
+    width: 1rem
+    z-index: 2
+
+.simple-filters--filters
+  @extend %filters-grid
+
+  > li:not(.simple-filters--controls)
+    display: grid
+    grid-template-columns: repeat(auto-fill, 50%)
+    align-items: center
+
+    button,
+    .button
+      margin: 0 10px 10px 0
+
+  .simple-filters--filter.-with-radio-buttons
+    grid-template-columns: 10% repeat(auto-fit, minmax(45%, 1fr))
+    grid-template-rows: repeat(auto-fill, 35px)
+    grid-gap: 10px 0
+
+    .simple-filters--filter-name.form--label
+      grid-column: 2
+
+  .simple-filters--controls
+    grid-column: 1 / -1
+    margin-top: 1rem
+
+  .simple-filters--filter-name
+    @include text-shortener
+    margin: auto 0
+
+@include breakpoint(680px down)
+  .simple-filters--filter:not(.-with-radio-buttons)
+    .simple-filters--filter-value
+      grid-column: 1 / -1

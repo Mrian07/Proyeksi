@@ -1,0 +1,16 @@
+
+
+$badge-diameter: 1.25rem
+
+.badge
+  @include badge
+
+  &.-secondary
+    @include badge-style($secondary-color, auto)
+
+  &.-border-only
+    border-color: var(--button--border-color)
+    color: var(--body-font-color)
+    background: transparent
+    border-width: 1px
+    border-style: solid

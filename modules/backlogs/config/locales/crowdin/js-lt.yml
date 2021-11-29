@@ -1,0 +1,7 @@
+
+lt:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Istorijos taškai"
+        remainingTime: "Liko valandų"

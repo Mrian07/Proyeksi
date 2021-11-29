@@ -1,0 +1,52 @@
+
+
+.my-page--container
+  #right,
+  #left
+    flex: 0 0 50%
+    max-width: 50%
+
+  .widget-boxes
+    margin: 0 -10px
+
+    .widget-box
+      margin-bottom: 20px
+      overflow: auto
+
+      &:last-child
+        margin-bottom: 10px
+
+@include breakpoint(680px down)
+  .my-page--container .grid-block.widget-boxes
+    flex-wrap: wrap
+
+    #right,
+    #left
+      flex: 0 0 100%
+      max-width: 100%
+
+    #left
+      margin-bottom: 0
+
+div.box-actions
+  float: right
+  z-index: 500
+
+#my_project_blocks .handle
+  cursor: move
+
+#visible-grid
+  .handle
+    cursor: move
+  &.my-page--container .widget-boxes
+    margin: 0
+
+.block-receiver
+  border-width: 1px
+  border-style: dashed
+  border-color: var(--my-page-edit-box-border-color)
+  margin-bottom: 20px
+  padding: 8px
+
+  #visible-grid &
+    min-height: 32px

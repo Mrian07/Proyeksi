@@ -1,0 +1,15 @@
+
+
+<% html_title t(:label_administration), t(:label_export_card_configuration_new) %>
+
+<%= error_messages_for 'config' %>
+
+<% local_assigns[:additional_breadcrumb] = t(:label_export_card_configuration_new) %>
+
+<%= breadcrumb_toolbar t(:label_export_card_configuration_new) %>
+
+<%= labelled_tabular_form_for @config, url: pdf_export_export_card_configurations_path do |f| -%>
+  <%= render partial: 'form', locals: { f: f } %>
+  <hr class="form--separator">
+  <%= styled_button_tag t(:button_create), class: "-highlight -with-icon icon-checkmark" %>
+<% end %>

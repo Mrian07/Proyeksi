@@ -1,0 +1,13 @@
+
+<% html_title t("label_version_new") %>
+
+<%= toolbar title: t(:label_version_new) %>
+
+<%= labelled_tabular_form_for [@project, @version] do |f| %>
+
+  <%= render partial: 'versions/form', locals: { f: f,
+                                                 project: @project,
+                                                 errors: @errors } %>
+
+  <%= styled_button_tag t(:button_create), class: '-highlight -with-icon icon-checkmark' %>
+<% end %>

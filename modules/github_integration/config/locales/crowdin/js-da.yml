@@ -1,0 +1,21 @@
+
+da:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Pull requests"
+        copy_menu:
+          label: Git snippets
+          description: Copy git snippets to clipboard
+        git_actions:
+          branch_name: Branch name
+          commit_message: Commit message
+          cmd: Create branch with empty commit
+          title: Quick snippets for Git
+          copy_success: '✅ Kopieret!'
+          copy_error: '❌ Kopiering mislykkedes!'
+      tab_prs:
+        empty: 'Der er endnu ingen pull requests linket. Link en eksisterende PR ved at bruge koden <code>OP#%{wp_id}</code> i PR-beskrivelsen eller opret en ny PR.'
+      github_actions: Handlinger

@@ -1,0 +1,7 @@
+
+<% html_title t(:label_administration), t(:label_enumerations) %>
+<%= toolbar title: t(:label_enumerations) %>
+<% Enumeration.subclasses.each do |klass| %>
+  <h3 class="-no-border"><%= t(klass::OptionName) %></h3>
+  <%= rails_cell ::Enumerations::TableCell, klass.shared %>
+<% end %>

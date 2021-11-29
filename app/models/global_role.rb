@@ -1,0 +1,3 @@
+
+
+class GlobalRole < Role; end

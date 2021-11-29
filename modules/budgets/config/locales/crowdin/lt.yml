@@ -1,0 +1,53 @@
+
+lt:
+  activerecord:
+    attributes:
+      budget:
+        author: "Autorius"
+        available: "Laisvas"
+        budget: "Suplanuotas"
+        budget_ratio: "Panaudotas (santykis)"
+        description: "Aprašymas"
+        spent: "Praleista"
+        status: "Būsena"
+        subject: "Tema"
+        type: "Kaštų tipas"
+        labor_budget: "Suplanuoti darbo kaštai"
+        material_budget: "Suplanuoti vienetų kaštai"
+      work_package:
+        budget_subject: "Biudžeto pavadinimas"
+    models:
+      budget: "Biudžetas"
+      material_budget_item: "Vienetas"
+  attributes:
+    budget: "Biudžetas"
+  button_add_budget_item: "Pridėti suplanuotus kaštus"
+  button_add_budget: "Pridėti biudžetą"
+  button_add_cost_type: "Pridėti kaštų tipą"
+  button_cancel_edit_budget: "Atšaukti biudžeto redagavimą"
+  button_cancel_edit_costs: "Atšaukti kaštų redagavimą"
+  caption_labor: "Darbas"
+  caption_labor_costs: "Faktiniai darbo kaštai"
+  caption_material_costs: "Faktiniai vieneto kaštai"
+  budgets_title: "Biudžetai"
+  events:
+    budget: "Biudžetas redaguotas"
+  help_click_to_edit: "Spauskite čia norėdami redaguoti."
+  help_currency_format: "Rodomos valiutos formatas. %n yra pakeičiamas valiutos reikšme, %u yra pakeičiamas valiutos vienetu."
+  help_override_rate: "Įveskite reikšmę, kad pakeistumėte numatytąjį koeficientą."
+  label_budget: "Biudžetas"
+  label_budget_new: "Naujas biudžetas"
+  label_budget_plural: "Biudžetai"
+  label_budget_id: "Biudžetas #%{id}"
+  label_deliverable: "Biudžetas"
+  label_example_placeholder: 't.y., %{decimal}'
+  label_view_all_budgets: "Peržiūrėti visus biudžetus"
+  label_yes: "Taip"
+  notice_budget_conflict: "Darbų paketai turi būti tame pačiame projekte."
+  notice_no_budgets_available: "Nėra biudžetų."
+  permission_edit_budgets: "Redaguoti biudžetus"
+  permission_view_budgets: "Peržiūrėti biudžetus"
+  project_module_budgets: "Biudžetai"
+  text_budget_reassign_to: "Pakeisti priskyrimą į tokį biudžetą:"
+  text_budget_delete: "Pašalinti biudžetą iš visų darbo paketų"
+  text_budget_destroy_assigned_wp: "Yra %{count} darbo paketai, priskirti šiam biudžetui. Ką norite su jais daryti?"

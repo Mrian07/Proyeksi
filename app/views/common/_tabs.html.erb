@@ -1,0 +1,12 @@
+
+<% gon.contentTabs = { tabs: tabs.to_json.html_safe, selected: selected_tab.to_json.html_safe } %>
+<%= nonced_javascript_tag do %>
+  <%= include_gon(need_tag: false) -%>
+<% end %>
+
+<content-tabs></content-tabs>
+
+<%= content_tag 'div',
+                render(partial: selected_tab[:partial], locals: { f: f, tab: selected_tab } ),
+                id: "tab-content-#{selected_tab[:name]}",
+                class: 'tab-content' %>

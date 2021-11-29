@@ -1,0 +1,38 @@
+
+
+<% available_roles = GlobalRole.all - (global_member&.roles || []) %>
+
+<div class="grid-content" id="available_principal_roles">
+  <fieldset class="form--fieldset">
+    <legend class="form--fieldset-legend"><%= Role.model_name.human(:count => 2) %></legend>
+    <% if available_roles.empty? %>
+      <span id="no_additional_principal_roles">
+        <%= no_results_box %>
+      </span>
+    <% else %>
+      <span id="additional_principal_roles">
+        <% args =
+             if global_member
+               { url: user_membership_path(id: global_member.id, user_id: user.id), method: :patch }
+             else
+               { url: user_memberships_path(user_id: user.id), method: :post }
+             end
+         %>
+        <%= form_for(:principal_roles, **args) do %>
+          <% if global_member %>
+            <%= hidden_field_tag('membership[id]', global_member.id ) %>
+
+            <% global_member.roles.each do |role| %>
+              <%= hidden_field_tag('membership[role_ids][]', role.id ) %>
+            <% end %>
+          <% end %>
+
+          <% available_roles.each do |role| %>
+            <%= render :partial => 'users/available_global_role', :locals => {:role => role} %>
+          <% end %>
+          <p><br/><%= styled_button_tag t(:button_add), class: '-with-icon icon-checkmark' %></p>
+        <% end %>
+      </span>
+    <% end %>
+  </fieldset>
+</div>

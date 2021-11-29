@@ -1,0 +1,62 @@
+
+<%= toolbar title: t(:label_repository) %>
+<%= simple_format(t(:text_repository_usernames_mapping)) %>
+<% if @committers.empty? %>
+  <% no_results_box %>
+<% else %>
+  <%= form_tag({}) do %>
+    <div class="generic-table--container">
+      <div class="generic-table--results-container">
+        <table class="generic-table">
+          <colgroup>
+            <col opHighlightCol>
+            <col opHighlightCol>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>
+                <div class="generic-table--sort-header-outer">
+                  <div class="generic-table--sort-header">
+                    <span>
+                      <%= User.human_attribute_name(:login) %>
+                    </span>
+                  </div>
+                </div>
+              </th>
+              <th>
+                <div class="generic-table--sort-header-outer">
+                  <div class="generic-table--sort-header">
+                    <span>
+                      <%= User.model_name.human %>
+                    </span>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% i = 0 -%>
+            <% @committers.each do |committer, user_id| -%>
+              <tr>
+                <td><%=h committer %></td>
+                <td>
+                  <%= hidden_field_tag "committers[#{i}][]", committer %>
+                  <%= select_tag "committers[#{i}][]", content_tag('option', "-- #{t(:actionview_instancetag_blank_option)} --", value: '') + options_from_collection_for_select(@users, 'id', 'name', user_id.to_i) %>
+                </td>
+              </tr>
+              <% i += 1 -%>
+            <% end -%>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+    <hr class="form--separator" />
+    <p>
+      <%= submit_tag t(:button_update), class: 'button -highlight' %>
+      <%= link_to project_settings_repository_path(@project.id), class: 'button' do %>
+        <span class="button--text"><%= t(:button_cancel) %></span>
+      <% end %>
+    </p>
+  <% end %>
+<% end %>

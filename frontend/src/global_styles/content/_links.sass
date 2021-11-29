@@ -1,0 +1,63 @@
+
+
+a
+  color: var(--content-link-color)
+  text-decoration: none
+
+a:hover, a:active
+  color: var(--content-link-hover-active-color)
+  text-decoration: underline
+
+a:focus
+  color: var(--content-link-hover-active-color)
+
+a
+  img
+    border: 0
+  &.sort
+    padding-right: 16px
+    background-position: 100% 50%
+    background-repeat: no-repeat
+    &.asc:after
+      @include icon-font-common
+      @include icon-mixin-sort-ascending
+      margin-left: 5px
+      font-size: 1.2em
+      vertical-align: text-bottom
+
+    &.desc:after
+      @include icon-font-common
+      @include icon-mixin-sort-descending
+      margin-left: 5px
+      font-size: 1.2em
+      vertical-align: text-bottom
+
+  &.issue.closed, &.issue.closed:hover,
+  &.work_package.closed, &.work_package.closed:hover
+    text-decoration: line-through
+
+  &.-no-decoration
+    color: inherit
+
+    &:hover
+      text-decoration: none
+
+a.icon, a.icon-context
+  color: var(--content-icon-link-color)
+  font-weight: normal
+  &.external
+    color: var(--content-link-color)
+
+a.icon:hover, a.icon-context:hover
+  text-decoration: none
+
+#content table th a.no-decoration-on-hover:hover, a.no-decoration-on-hover:hover
+  text-decoration: none
+
+.skip-navigation-link
+  &:focus
+    position: absolute
+    width: auto
+    height: auto
+    overflow: visible
+    margin-top: -1.25rem

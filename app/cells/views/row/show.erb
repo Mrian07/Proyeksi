@@ -1,0 +1,16 @@
+
+
+<tr <%= "id=\"#{row_css_id}\"" if row_css_id %> class="<%= row_css_class %>">
+  <% columns.each do |column| %>
+    <td class="<%= column_css_class(column) %>"
+        <%= title = column_title(column); "title=\"#{title}\"" if title %>
+    >
+      <%= column_value(column) %>
+    </td>
+  <% end %>
+  <td class="buttons">
+    <% button_links.each do |link| %>
+      <%= link %>
+    <% end %>
+  </td>
+</tr>

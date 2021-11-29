@@ -1,0 +1,7 @@
+
+ro:
+  js:
+    work_packages:
+      properties:
+        storyPoints: "Puncte"
+        remainingTime: "Ore"

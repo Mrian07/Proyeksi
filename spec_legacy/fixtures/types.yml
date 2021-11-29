@@ -1,0 +1,24 @@
+
+
+---
+types_001:
+  name: Bug
+  id: 1
+  position: 1
+  is_default: true
+types_002:
+  name: Feature request
+  id: 2
+  position: 2
+  is_default: true
+types_003:
+  name: Support request
+  id: 3
+  position: 3
+  is_default: true
+types_999:
+  name: None
+  id: 999
+  is_standard: true
+  position: 0
+  is_default: true

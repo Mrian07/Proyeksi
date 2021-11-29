@@ -1,0 +1,16 @@
+
+
+class Widget::Filters::Base < Widget::Base
+  attr_reader :filter, :filter_class
+
+  def initialize(filter)
+    if filter.instance_of?(Class)
+      @filter_class = filter
+      @filter = filter.new
+    else
+      @filter = filter
+      @filter_class = filter.class
+    end
+    @engine = filter.engine
+  end
+end

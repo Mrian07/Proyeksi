@@ -1,0 +1,21 @@
+
+pt:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Solicitações de pull"
+        copy_menu:
+          label: Trechos de código Git
+          description: Copiar trechos de código git para área de transferência
+        git_actions:
+          branch_name: Nome da ramificação
+          commit_message: Mensagem de confirmação
+          cmd: Criar ramificação com a confirmação vazia
+          title: Trechos de código rápido para Git
+          copy_success: '✅ Copiado!'
+          copy_error: '❌ Falha ao copiar!'
+      tab_prs:
+        empty: 'Ainda não há solicitações de pull vinculadas. Vincule uma PR existente usando código <code>OP#%{wp_id}</code> na descrição de PR ou crie uma nova PR.'
+      github_actions: Ações

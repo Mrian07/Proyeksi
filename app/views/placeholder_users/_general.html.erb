@@ -1,0 +1,13 @@
+
+
+<%= labelled_tabular_form_for @placeholder_user,
+                              url: { controller: '/placeholder_users',
+                                     action: "update",
+                                     tab: nil },
+                              html: { method: :put,
+                                      autocomplete: 'off' },
+                              as: :placeholder_user do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+
+  <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>
+<% end %>

@@ -1,0 +1,7 @@
+
+
+<%= error_messages_for 'version' %>
+
+<% if @project.enabled_modules.map(&:name).include?("backlogs") %>
+  <%= version_settings_fields @version, @project %>
+<% end %>

@@ -1,0 +1,17 @@
+
+<%= toolbar title: t(:enumeration_activities), html: { class: '-minimum-title' } do -%>
+  <%= render partial: 'projects/settings/form_toolbar', locals: { form_name: "edit_project_#{@project.id}" } %>
+<% end %>
+
+<% if TimeEntryActivity.any? %>
+  <%= labelled_tabular_form_for @project,
+                                url: project_settings_time_entry_activities_path(@project) do %>
+
+    <%= render partial: '/projects/settings/time_entry_activities/activities',
+               locals: { project: @project } %>
+  <% end %>
+
+  <br/>
+<% else %>
+  <%= no_results_box custom_title: t('projects.settings.activities.no_results_title_text') %>
+<% end %>

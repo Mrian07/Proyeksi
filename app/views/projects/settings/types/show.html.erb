@@ -1,0 +1,20 @@
+
+
+<%= toolbar title: t(:label_work_package_types), html: { class: '-minimum-title' } do -%>
+  <%= render partial: 'projects/settings/form_toolbar', locals: { form_name: "types-form" } %>
+<% end %>
+
+<% if Type.any? %>
+  <%= form_for @project,
+               url: project_settings_types_path(@project),
+               method: :patch,
+               html: { id: 'types-form' } do |f| %>
+    <%= render partial: 'form',
+               locals: { f: f, project: @project } %>
+
+  <% end %>
+
+  <br/>
+<% else %>
+  <%= no_results_box custom_title: t('projects.settings.types.no_results_title_text') %>
+<% end %>
