@@ -1,7 +1,7 @@
 begin
-  data = File.read(Rails.root.join(".openproject-token.pub"))
+  data = File.read(Rails.root.join(".proyeksi-token.pub"))
   key = OpenSSL::PKey::RSA.new(data)
   OpenProject::Token.key = key
 rescue StandardError
-  warn "WARNING: Missing .openproject-token.pub key"
+  warn "WARNING: Missing .proyeksi-token.pub key"
 end
