@@ -19,7 +19,7 @@ module Accounts::RedirectAfterLogin
   #    * * *
 
   def default_redirect
-    if url = OpenProject::Configuration.after_login_default_redirect_url
+    if url = ProyeksiApp::Configuration.after_login_default_redirect_url
       redirect_to url
     else
       redirect_back_or_default my_page_path
@@ -27,7 +27,7 @@ module Accounts::RedirectAfterLogin
   end
 
   def first_login_redirect
-    if url = OpenProject::Configuration.after_first_login_redirect_url
+    if url = ProyeksiApp::Configuration.after_first_login_redirect_url
       redirect_to url
     else
       redirect_to home_url(first_time_user: true)

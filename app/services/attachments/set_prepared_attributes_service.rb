@@ -21,12 +21,12 @@ module Attachments
       # as the provided file is not actually uploaded
       model.filesize = params[:filesize]
 
-      model.extend(OpenProject::ChangedBySystem)
+      model.extend(ProyeksiApp::ChangedBySystem)
       model.change_by_system do
         model.downloads = -1
         # Set a preliminary content type as the file is not present
         # The content type will be updated by the FinishDirectUploadJob if necessary.
-        model.content_type = params[:content_type].presence || OpenProject::ContentTypeDetector::SENSIBLE_DEFAULT
+        model.content_type = params[:content_type].presence || ProyeksiApp::ContentTypeDetector::SENSIBLE_DEFAULT
       end
     end
 

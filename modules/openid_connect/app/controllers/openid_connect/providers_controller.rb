@@ -77,7 +77,7 @@ module OpenIDConnect
     end
 
     def providers
-      @providers ||= OpenProject::OpenIDConnect.providers
+      @providers ||= ProyeksiApp::OpenIDConnect.providers
     end
     helper_method :providers
 

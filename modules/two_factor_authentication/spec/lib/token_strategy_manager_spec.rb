@@ -1,8 +1,8 @@
 require_relative '../spec_helper'
 
-describe ::OpenProject::TwoFactorAuthentication::TokenStrategyManager do
-  let(:dev_strategy) { ::OpenProject::TwoFactorAuthentication::TokenStrategy::Developer }
-  let(:totp_strategy) { ::OpenProject::TwoFactorAuthentication::TokenStrategy::Totp }
+describe ::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager do
+  let(:dev_strategy) { ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Developer }
+  let(:totp_strategy) { ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Totp }
   let(:configuration) do
     {
       active_strategies: active_strategies,
@@ -13,7 +13,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategyManager do
 
   context 'without EE' do
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
           .to receive(:[]).with('2fa')
                   .and_return(active_strategies: [:developer])
     end
@@ -25,7 +25,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategyManager do
 
   context 'with EE', with_2fa_ee: true do
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
       .to receive(:[]).with('2fa')
       .and_return(configuration)
     end
@@ -76,7 +76,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategyManager do
       let(:enforced) { false }
 
       before do
-        allow(Setting).to receive(:plugin_openproject_two_factor_authentication).and_return(settings)
+        allow(Setting).to receive(:plugin_proyeksiapp_two_factor_authentication).and_return(settings)
       end
 
       context 'when nothing given' do
@@ -123,7 +123,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategyManager do
       context 'when no strategy is set' do
         let(:active_strategies) { [] }
         before do
-          allow(OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+          allow(ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
             .to receive(:add_default_strategy?)
             .and_return false
         end

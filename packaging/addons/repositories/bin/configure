@@ -14,7 +14,7 @@ input_start() {
 }
 
 input_params() {
-	# API key for OpenProject
+	# API key for ProyeksiApp
 	local random_key=$(< /dev/urandom tr -dc A-Za-z0-9 | head -c32;echo;)
 	if ! wiz_get "repositories/api-key" &>/dev/null ; then
 		wiz_set "repositories/api-key" "${random_key}"

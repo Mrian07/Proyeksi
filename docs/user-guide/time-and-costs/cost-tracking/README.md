@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Cost tracking
   priority: 798
-description: Time and cost tracking in OpenProject
+description: Time and cost tracking in ProyeksiApp
 robots: index, follow
 keywords: cost tracking, log costs, unit costs
 ---

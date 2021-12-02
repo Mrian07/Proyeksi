@@ -1,6 +1,6 @@
-# Migrating your packaged OpenProject database to PostgreSQL
+# Migrating your packaged ProyeksiApp database to PostgreSQL
 
-**Note:** this guide only applies if you've installed OpenProject using our DEB/RPM packages.
+**Note:** this guide only applies if you've installed ProyeksiApp using our DEB/RPM packages.
 
 This guide will migrate your packaged MySQL installation to a PostgreSQL installation using [pgloader](https://github.com/dimitri/pgloader). 
 
@@ -70,7 +70,7 @@ sudo zypper install pgloader-ccl
 
 If you have not yet installed and set up a PostgreSQL installation database, please set up a PostgreSQL database now. 
 
-OpenProject requires at least PostgreSQL 9.5 installed. Please check <https://www.postgresql.org/download/> if your distributed package is too old.
+ProyeksiApp requires at least PostgreSQL 9.5 installed. Please check <https://www.postgresql.org/download/> if your distributed package is too old.
 
 ```bash
 [root@host] apt-get install postgresql postgresql-contrib libpq-dev
@@ -82,7 +82,7 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the system user for OpenProject. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
 [postgres@host] createuser -P -d openproject
@@ -103,7 +103,7 @@ Lastly, exit the system user
 
 ## Set the MYSQL_DATABASE_URL to migrate from
 
-The following command saves the current MySQL `DATABASE_URL` as `MYSQL_DATABASE_URL` in the OpenProject configuration:
+The following command saves the current MySQL `DATABASE_URL` as `MYSQL_DATABASE_URL` in the ProyeksiApp configuration:
 
 ```bash
 openproject config:set MYSQL_DATABASE_URL="$(openproject config:get DATABASE_URL)"
@@ -115,7 +115,7 @@ openproject config:get MYSQL_DATABASE_URL
 
 This will be used later by the migration script.
 
-## Configuring OpenProject to use the PostgreSQL database
+## Configuring ProyeksiApp to use the PostgreSQL database
 
 Form the `DATABASE_URL` string to match your selected password and add it to the openproject configuration:
 
@@ -135,7 +135,7 @@ openproject run ruby -r cgi -e "puts CGI.escape('your-password-here');"
 
 ## Migrating the database
 
-You are now ready to migrate from MySQL to PostgreSQL. The OpenProject packages embed a migration script that can be launched as follows:
+You are now ready to migrate from MySQL to PostgreSQL. The ProyeksiApp packages embed a migration script that can be launched as follows:
 
 ```
 sudo openproject run ./docker/mysql-to-postgres/bin/migrate-mysql-to-postgres
@@ -145,7 +145,7 @@ This might take a while depending on current installation size.
 
 ## Optional: Uninstall MySQL
 
-If the packaged installation auto-installed MySQL before and you no longer need it (i.e. only OpenProject used a MySQL database on your server), you can remove the MySQL packages. 
+If the packaged installation auto-installed MySQL before and you no longer need it (i.e. only ProyeksiApp used a MySQL database on your server), you can remove the MySQL packages. 
 
 You can check the output of `dpkg -l | grep mysql` to check for packages to be removed. Only keep `libmysqlclient-dev`  for Ruby dependencies on the mysql adapter.
 
@@ -156,7 +156,7 @@ The following is an exemplary removal of an installed version MySQL 5.7.
 [root@host] openproject config:unset MYSQL_DATABASE_URL
 ```
 
-**Note:** OpenProject still depends on `mysql-common` and other dev libraries of MySQL to build the `mysql2` gem for talking to MySQL databases. Depending on what packages you try to uninstall, `openproject` will be listed as a dependent package to be uninstalled if trying to uninstall `mysql-common`. Be careful here with the confirmation of removal, because it might just remove openproject itself due to the apt dependency management.
+**Note:** ProyeksiApp still depends on `mysql-common` and other dev libraries of MySQL to build the `mysql2` gem for talking to MySQL databases. Depending on what packages you try to uninstall, `openproject` will be listed as a dependent package to be uninstalled if trying to uninstall `mysql-common`. Be careful here with the confirmation of removal, because it might just remove openproject itself due to the apt dependency management.
 
 
 ## Running openproject reconfigure
@@ -172,4 +172,4 @@ In the database installation screen, make sure to select `skip`.
 Keep all other values the same by simply confirming them by pressing `enter` .
 
 
-After the configuration process has run through, your OpenProject installation will be running on PostgreSQL!
+After the configuration process has run through, your ProyeksiApp installation will be running on PostgreSQL!

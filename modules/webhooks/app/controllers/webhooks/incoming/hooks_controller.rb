@@ -17,7 +17,7 @@ module Webhooks
       wrap_parameters :payload
 
       def api_request?
-        # OpenProject only allows API requests based on an Accept request header.
+        # ProyeksiApp only allows API requests based on an Accept request header.
         # Webhooks (at least GitHub) don't send an Accept header as they're not interested
         # in any part of the response except the HTTP status code.
         # Also handling requests with a application/json Content-Type as API requests
@@ -26,7 +26,7 @@ module Webhooks
       end
 
       def handle_hook
-        hook = OpenProject::Webhooks.find(params.require('hook_name'))
+        hook = ProyeksiApp::Webhooks.find(params.require('hook_name'))
 
         if hook
           code = hook.handle(request, params, find_current_user)

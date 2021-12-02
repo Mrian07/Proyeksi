@@ -62,7 +62,7 @@ describe WorkPackage, type: :model do
 
       # Enable and configure backlogs
       project.enabled_module_names = project.enabled_module_names + ['backlogs']
-      allow(Setting).to receive(:plugin_openproject_backlogs).and_return({ 'story_types' => [story_type.id, epic_type.id],
+      allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return({ 'story_types' => [story_type.id, epic_type.id],
                                                                            'task_type' => task_type.id })
 
       # Otherwise the type id's from the previous test are still active
@@ -219,7 +219,7 @@ describe WorkPackage, type: :model do
 
     describe '- Moving work_packages between projects' do
       # N.B.: You cannot move a ticket to another project and change the
-      # 'version' at the same time. On the other hand, OpenProject tries
+      # 'version' at the same time. On the other hand, ProyeksiApp tries
       # to keep the 'version' if possible (e.g. within project
       # hierarchies with shared versions)
 

@@ -82,7 +82,7 @@ module Tasks
       # legacy name. Instead one will be generated. Not with a timestamp, however, but with a
       # random hex string as a prefix.
       #
-      # This way new attachments won't be lost when rolling back to an old version of OpenProject.
+      # This way new attachments won't be lost when rolling back to an old version of ProyeksiApp.
       def rolled_back_file_name(attachment)
         if attachment.disk_filename.blank?
           uuid = SecureRandom.hex 4
@@ -94,7 +94,7 @@ module Tasks
       end
 
       def legacy_file_name(file_name)
-        Pathname(OpenProject::Configuration.attachments_storage_path).join file_name
+        Pathname(ProyeksiApp::Configuration.attachments_storage_path).join file_name
       end
 
       ##

@@ -24,7 +24,7 @@ pl:
     label_synchronize: 'Synchronizuj'
     settings:
       name_attribute: 'Atrybut nazwy grupy LDAP'
-      name_attribute_text: 'Atrybut LDAP stosowany w celu nazwania grupy OpenProject po utworzeniu przez filtr'
+      name_attribute_text: 'Atrybut LDAP stosowany w celu nazwania grupy ProyeksiApp po utworzeniu przez filtr'
     synchronized_filters:
       add_new: 'Dodaj synchronizowany filtr LDAP'
       singular: 'Filtr synchronizacji grupy LDAP'
@@ -36,11 +36,11 @@ pl:
       destroy:
         title: 'Usuń synchronizowany filtr %{name}'
         confirmation: "W razie kontynuacji usunięty zostanie synchronizowany filtr %{name} i wszystkie grupy (%{groups_count}) utworzone przy jego użyciu."
-        removed_groups: "Ostrzeżenie: w ten sposób usuniesz następujące grupy z OpenProject i ze wszystkich projektów!"
+        removed_groups: "Ostrzeżenie: w ten sposób usuniesz następujące grupy z ProyeksiApp i ze wszystkich projektów!"
         verification: "Wprowadź nazwę filtru %{name}, aby potwierdzić usunięcie."
       form:
-        group_name_attribute_text: 'Wprowadź atrybut grupy LDAP używany do ustawiania nazwy grupy OpenProject.'
-        filter_string_text: 'Wprowadź filtr LDAP RFC4515, który zwraca grupy z LDAP w celu ich zsynchronizowania z OpenProject.'
+        group_name_attribute_text: 'Wprowadź atrybut grupy LDAP używany do ustawiania nazwy grupy ProyeksiApp.'
+        filter_string_text: 'Wprowadź filtr LDAP RFC4515, który zwraca grupy z LDAP w celu ich zsynchronizowania z ProyeksiApp.'
         base_dn_text: >
           Wprowadź bazową nazwę wyróżniającą wyszukiwania do użycia w tym filtrze. Musi znajdować się poniżej bazowej nazwy wyróżniającej wybranego połączenia LDAP.
           Pozostaw tę opcję pustą, aby ponownie użyć bazowej nazwy wyróżniającej połączenia
@@ -49,14 +49,14 @@ pl:
       destroy:
         title: 'Usuń synchronizowaną grupę %{name}'
         confirmation: "W przypadku kontynuacji usunięta zostanie synchronizowana grupa %{name} i wszyscy użytkownicy (%{users_count}) synchronizowani za jej pośrednictwem."
-        info: "Uwaga: nie zostanie usunięta sama grupa OpenProject ani członkowie dodani poza tą synchronizacją LDAP."
+        info: "Uwaga: nie zostanie usunięta sama grupa ProyeksiApp ani członkowie dodani poza tą synchronizacją LDAP."
         verification: "Wprowadź nazwę grupy %{name}, aby potwierdzić usunięcie."
       help_text_html: |
-        Ten moduł umożliwia skonfigurowanie synchronizacji między grupami LDAP i OpenProject.
-        Zależy to od tego, czy grupy LDAP muszą do pracy z OpenProject używać ustawionego atrybutu <em>groupOfNames / memberOf</em>.
+        Ten moduł umożliwia skonfigurowanie synchronizacji między grupami LDAP i ProyeksiApp.
+        Zależy to od tego, czy grupy LDAP muszą do pracy z ProyeksiApp używać ustawionego atrybutu <em>groupOfNames / memberOf</em>.
         <br/>
         Grupy są synchronizowane co godzinę przy użyciu zadania cron.
-        <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Zapoznaj się z naszą dokumentacją na ten temat</a>.
+        <a href="https://www.proyeksiapp.org/help/administration/manage-ldap-authentication/">Zapoznaj się z naszą dokumentacją na ten temat</a>.
       no_results: 'Nie znaleziono żadnych synchronizowanych grup.'
       no_members: 'Ta grupa nie ma jeszcze synchronizowanych członków.'
       plural: 'Synchronizowane grupy LDAP'
@@ -64,7 +64,7 @@ pl:
       form:
         auth_source_text: 'Wybierz połączenie LDAP, którego chcesz użyć.'
         sync_users_text: >
-          Jeśli włączysz tę opcję, znalezieni użytkownicy będą również automatycznie tworzeni w OpenProject. Bez niej do grup będą dodawane tylko konta istniejące w OpenProject.
+          Jeśli włączysz tę opcję, znalezieni użytkownicy będą również automatycznie tworzeni w ProyeksiApp. Bez niej do grup będą dodawane tylko konta istniejące w ProyeksiApp.
         dn_text: 'Wprowadź pełną nazwę wyróżniającą grupy w LDAP'
-        group_text: 'Wybierz istniejącą grupę OpenProject, z którą będą synchronizowani członkowie grupy LDAP'
+        group_text: 'Wybierz istniejącą grupę ProyeksiApp, z którą będą synchronizowani członkowie grupy LDAP'
 

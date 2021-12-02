@@ -5,7 +5,7 @@
 module API
   module V3
     module Render
-      class RenderAPI < ::API::OpenProjectAPI
+      class RenderAPI < ::API::ProyeksiAppAPI
         format :txt
         parser :txt, ::API::V3::Formatter::TxtCharset
 
@@ -32,7 +32,7 @@ module API
             end
 
             def check_format(format)
-              unless ::OpenProject::TextFormatting::Formats.supported?(format)
+              unless ::ProyeksiApp::TextFormatting::Formats.supported?(format)
                 fail ::API::Errors::NotFound, I18n.t('api_v3.errors.code_404')
               end
             end

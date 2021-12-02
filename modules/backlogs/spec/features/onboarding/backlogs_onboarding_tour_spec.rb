@@ -53,7 +53,7 @@ describe 'backlogs onboarding tour', js: true do
 
   before do
     allow(Setting).to receive(:demo_projects_available).and_return(true)
-    allow(Setting).to receive(:plugin_openproject_backlogs).and_return('story_types' => [story_type.id.to_s],
+    allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return('story_types' => [story_type.id.to_s],
                                                                        'task_type' => task_type.id.to_s)
   end
 

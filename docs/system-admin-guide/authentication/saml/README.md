@@ -2,16 +2,16 @@
 sidebar_navigation:
   title: SAML single sign-on
   priority: 800
-description: How to set up SAML integration for SSO with OpenProject.
+description: How to set up SAML integration for SSO with ProyeksiApp.
 robots: index, follow
 keywords: SAML, SSO, single sign-on, authentication
 ---
 # SAML
 
 <div class="alert alert-info" role="alert">
-**Note**: This documentation is valid for the OpenProject Enterprise Edition only.
+**Note**: This documentation is valid for the ProyeksiApp Enterprise Edition only.
 </div>
-You can integrate your active directory or other SAML compliant identity provider in your OpenProject Enterprise Edition.
+You can integrate your active directory or other SAML compliant identity provider in your ProyeksiApp Enterprise Edition.
 
 
 
@@ -34,7 +34,7 @@ The three options are mutually exclusive. I.e. if settings are already provided 
 
 #### 1.1 configuration.yml file
 
-In your OpenProject packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contains the complete OpenProject configuration and can be extended to also contain metadata settings and connection details for your SSO identity provider.
+In your ProyeksiApp packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contains the complete ProyeksiApp configuration and can be extended to also contain metadata settings and connection details for your SSO identity provider.
 
 Everything belonging to the `saml` key will be made available to the plugin. The first key below `saml` can be freely chosen (`my_saml` in the example).
 
@@ -85,7 +85,7 @@ Be sure to choose the correct indentation and base key. The `saml` key should be
 
 #### 1.2 Environment variables
 
-As with [all the rest of the OpenProject configuration settings](../../../installation-and-operations/configuration/environment/), the SAML configuration can be provided via environment variables.
+As with [all the rest of the ProyeksiApp configuration settings](../../../installation-and-operations/configuration/environment/), the SAML configuration can be provided via environment variables.
 
 E.g.
 
@@ -101,7 +101,7 @@ Please note that every underscore (`_`) in the original configuration key has to
 
 #### 1.3 Settings in database
 
-The SAML settings can also be changed at runtime in the database through the OpenProject settings.
+The SAML settings can also be changed at runtime in the database through the ProyeksiApp settings.
 As opposed to other settings there is no user interface for this.
 That means it's best to set them using the console.
 
@@ -145,7 +145,7 @@ SAML responses by identity providers are required to be signed. You can configur
 
 **Mandatory: Attribute mapping**
 
-Use the key `attribute_statements` to provide mappings for attributes returned by the SAML identity provider's response to OpenProject internal attributes. 
+Use the key `attribute_statements` to provide mappings for attributes returned by the SAML identity provider's response to ProyeksiApp internal attributes. 
 
 ```yaml
 # <-- other configuration -->
@@ -163,7 +163,7 @@ attribute_statements:
 
 You may provide attribute names or namespace URIs as follows: `email: ['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress']`. 
 
-The OpenProject username is taken by default from the `email` attribute if no explicit login attribute is present.
+The ProyeksiApp username is taken by default from the `email` attribute if no explicit login attribute is present.
 
 **Optional: Setting the attribute format**
 
@@ -198,7 +198,7 @@ attribute_statements:
 
 **Optional: Request signature and Assertion Encryption**
 
-Your identity provider may optionally encrypt the assertion response, however note that with the required use of TLS transport security, in many cases this is not necessary. You may wish to use Assertion Encryption if TLS is terminated before the OpenProject application server (e.g., on the load balancer level).
+Your identity provider may optionally encrypt the assertion response, however note that with the required use of TLS transport security, in many cases this is not necessary. You may wish to use Assertion Encryption if TLS is terminated before the ProyeksiApp application server (e.g., on the load balancer level).
 
 To configure assertion encryption, you need to provide the certificate to send in the request and private key to decrypt the response:
 
@@ -207,7 +207,7 @@ To configure assertion encryption, you need to provide the certificate to send i
   private_key: "-----BEGIN PRIVATE KEY-----\n .... private key contents ....\n-----END PRIVATE KEY-----"
 ```
 
-Request signing means that the service provider (OpenProject in this case) uses the certificate specified to sign the request to the identity provider. They reuse the same `certificate` and `private_key` settings as for assertion encryption.
+Request signing means that the service provider (ProyeksiApp in this case) uses the certificate specified to sign the request to the identity provider. They reuse the same `certificate` and `private_key` settings as for assertion encryption.
 
 To enable request signing, enable the following flag:
 
@@ -229,7 +229,7 @@ With request signing enabled, the certificate will be added to the identity prov
 
 ### 3: Restarting the server
 
-Once the configuration is completed, restart your OpenProject server with `service openproject restart`. 
+Once the configuration is completed, restart your ProyeksiApp server with `service openproject restart`. 
 
 #### XML Metadata exchange
 
@@ -248,9 +248,9 @@ From there on, you will see a button dedicated to logging in via SAML, e.g named
 
 Q: After clicking on a provider badge, I am redirected to a signup form that says a user already exists with that login.
 
-A: This can happen if you previously created user accounts in OpenProject with the same email than what is stored in the identity provider. In this case, if you want to allow existing users to be automatically remapped to the SAML identity provider, you should do the following:
+A: This can happen if you previously created user accounts in ProyeksiApp with the same email than what is stored in the identity provider. In this case, if you want to allow existing users to be automatically remapped to the SAML identity provider, you should do the following:
 
-Spawn an interactive console in OpenProject. The following example shows the command for the packaged installation.
+Spawn an interactive console in ProyeksiApp. The following example shows the command for the packaged installation.
 See [our process control guide](../../../installation-and-operations/operation/control/) for information on other installation types.
 
 ```

@@ -322,7 +322,7 @@ module API
                           represented.type,
                           represented.available_custom_fields.sort_by(&:id)]
 
-            OpenProject::Cache.fetch(OpenProject::Cache::CacheKey.expand(cache_keys.flatten.compact)) do
+            ProyeksiApp::Cache.fetch(ProyeksiApp::Cache::CacheKey.expand(cache_keys.flatten.compact)) do
               ::JSON::parse(::API::V3::WorkPackages::Schema::FormConfigurations::AttributeRepresenter
                               .new(group, current_user: current_user, project: represented.project, embed_links: true)
                               .to_json)

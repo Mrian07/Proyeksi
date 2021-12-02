@@ -5,8 +5,8 @@
 module Queries::Filters::Shared::BooleanFilter
   def allowed_values
     [
-      [I18n.t(:general_text_yes), OpenProject::Database::DB_VALUE_TRUE],
-      [I18n.t(:general_text_no), OpenProject::Database::DB_VALUE_FALSE]
+      [I18n.t(:general_text_yes), ProyeksiApp::Database::DB_VALUE_TRUE],
+      [I18n.t(:general_text_no), ProyeksiApp::Database::DB_VALUE_FALSE]
     ]
   end
 

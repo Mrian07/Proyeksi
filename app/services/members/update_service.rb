@@ -24,7 +24,7 @@ class Members::UpdateService < ::BaseServices::Update
   end
 
   def send_notification(member)
-    OpenProject::Notifications.send(OpenProject::Events::MEMBER_UPDATED,
+    ProyeksiApp::Notifications.send(ProyeksiApp::Events::MEMBER_UPDATED,
                                     member: member,
                                     message: notification_message)
   end

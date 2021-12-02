@@ -93,7 +93,7 @@ module TwoFactorAuthentication
     private
 
     def self.manager
-      ::OpenProject::TwoFactorAuthentication::TokenStrategyManager
+      ::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager
     end
 
     def cannot_set_default_if_exists

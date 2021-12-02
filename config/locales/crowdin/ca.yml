@@ -28,8 +28,8 @@ ca:
         main-menu-hover-font-color: "Font del menú principal en passar el ratolí"
         main-menu-border-color: "Vora del menú principal"
       custom_colors: "Colors personalitzats"
-      customize: "Adapteu la vostra instal·lació d'OpenProject amb el vostre logo. Nota: aquest logo serà accessible públicament."
-      enterprise_notice: "Com 'Gràcies!' especial per la contribució financera al desenvolupament d'OpenProject, aquesta minúscula característica sols és disponible pels subscriptors a l'edició Enterprise ."
+      customize: "Adapteu la vostra instal·lació d'ProyeksiApp amb el vostre logo. Nota: aquest logo serà accessible públicament."
+      enterprise_notice: "Com 'Gràcies!' especial per la contribució financera al desenvolupament d'ProyeksiApp, aquesta minúscula característica sols és disponible pels subscriptors a l'edició Enterprise ."
       manage_colors: "Edita les opcions de selecció de colors"
       instructions:
         alternative-color: "Color d'accent fort, típicament utilitzat per al botó més important de la pantalla."
@@ -81,35 +81,35 @@ ca:
       name: Nom arbitrari de la connexió LDAP
       host: Nom d'amfitrió o adreça IP de LDAP
       login_map: La clau d'atribut en LDAP que es fa servir per a identificar un inici de sessió d'usuari únic. Normalment, aquesta serà `uid` o `samAccountName`.
-      generic_map: La clau d'atribut en LDAP que és assignada a l'atribut `%{attribute}` d'OpenProject
-      admin_map_html: "Opcional: La clau d'atribut en LDAP que <strong>si hi és</strong> marca l'usuari d'OpenProject com a administrador. Deixeu-ho buit en cas de dubte."
+      generic_map: La clau d'atribut en LDAP que és assignada a l'atribut `%{attribute}` d'ProyeksiApp
+      admin_map_html: "Opcional: La clau d'atribut en LDAP que <strong>si hi és</strong> marca l'usuari d'ProyeksiApp com a administrador. Deixeu-ho buit en cas de dubte."
       system_user_dn_html: |
         Introduïu el DN de l'usuari de sistema fet servir per a accés de sols lectura.
         </br>
         Exemple: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Introduïu la contrasenya associada de l'usuari del sistema
       base_dn: |
-        Introduïu el DN Base del sub-arbre en LDAP que vulgueu que OpenProject faci servir per a buscar usuaris i grups.
-        OpenProject filtrarà els noms d'usuaris proporcionats sols en aquest sub-arbre.
+        Introduïu el DN Base del sub-arbre en LDAP que vulgueu que ProyeksiApp faci servir per a buscar usuaris i grups.
+        ProyeksiApp filtrarà els noms d'usuaris proporcionats sols en aquest sub-arbre.
         Exemple: ou=usuaris,dc=exemple,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        Si activeu aquesta casella, OpenProject automàticament crearà nous usuaris a partir de les seves entrades LDAP durant la seva primera autentificació a OpenProject.
-        Deixeu-ho desactivat si sols voleu permetre a comptes existents a OpenProject que s'autentifiquin via LDAP!
+        Si activeu aquesta casella, ProyeksiApp automàticament crearà nous usuaris a partir de les seves entrades LDAP durant la seva primera autentificació a ProyeksiApp.
+        Deixeu-ho desactivat si sols voleu permetre a comptes existents a ProyeksiApp que s'autentifiquin via LDAP!
     connection_encryption: 'Encriptació de Connexió'
     system_account: 'Compte de Sistema'
     system_account_legend: |
-      OpenProject requereix accés de sols lectura mitjançant un compte de sistema per a buscar usuaris i grups al vostre arbre LDAP.
+      ProyeksiApp requereix accés de sols lectura mitjançant un compte de sistema per a buscar usuaris i grups al vostre arbre LDAP.
       Si us plau, especifiqueu les credencials associades a aquest usuari de sistema en al secció següent.
     ldap_details: 'Detalls LDAP'
     user_settings: 'Associació d''atributs'
     user_settings_legend: |
-      Els camps següents són relacionats amb la manera com els usuaris són creats a OpenProject a partir d'entrades LDAP i quins atributs LDAP són fets servir per a definir els atributs d'un usuari d'OpenProject (associació d'atributs).
+      Els camps següents són relacionats amb la manera com els usuaris són creats a ProyeksiApp a partir d'entrades LDAP i quins atributs LDAP són fets servir per a definir els atributs d'un usuari d'ProyeksiApp (associació d'atributs).
     tls_mode:
       plain: 'cap'
       simple_tls: 'simple_tls'
@@ -519,7 +519,7 @@ ca:
         confirmation: "no coincideix amb el %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "no existeix."
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "may not be accessed."
         error_readonly: "was attempted to be written but is not writable."
         email: "is not a valid email address."
@@ -866,7 +866,7 @@ ca:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1186,7 +1186,7 @@ ca:
   error_can_not_unarchive_project: "This project cannot be unarchived: %{errors}"
   error_check_user_and_role: "Trieu un usuari i un rol."
   error_code: "Error %{code}"
-  error_cookie_missing: 'La cookie d''OpenProject no s''ha trobat. Assegureu-vos que les cookies estan habilitades, ja que aquesta aplicació no pot funcionar correctament sense.'
+  error_cookie_missing: 'La cookie d''ProyeksiApp no s''ha trobat. Assegureu-vos que les cookies estan habilitades, ja que aquesta aplicació no pot funcionar correctament sense.'
   error_custom_option_not_found: "Option does not exist."
   error_enterprise_activation_user_limit: "Your account could not be activated (user limit reached). Please contact your administrator to gain access."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1200,7 +1200,7 @@ ca:
   error_work_package_done_ratios_not_updated: "Ratios d'execució de paquets de treball no actualitzats."
   error_work_package_not_found_in_project: "El paquet de treball no s'ha trobat o no pertany a aquest projecte"
   error_must_be_project_member: "ha de ser membre del projecte"
-  error_migrations_are_pending: "Your OpenProject installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
+  error_migrations_are_pending: "Your ProyeksiApp installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
   error_migrations_visit_upgrade_guides: "Please visit our upgrade guide documentation"
   error_no_default_work_package_status: "No hi ha cap estat de paquet de treball definit per defecte. Comproveu la configuració (\"Administració-> Estats dels paquets de treball\")."
   error_no_type_in_project: "Aquest projecte no té cap tipus associat. Comproveu els paràmetres del projecte."
@@ -1274,7 +1274,7 @@ ca:
       no_visible_projects: "There are no visible projects in this instance."
       users: "Els usuaris més nous registrats en aquesta instància."
     blocks:
-      community: "Comunitat OpenProject"
+      community: "Comunitat ProyeksiApp"
       upsale:
         title: "Actualitza a l'Enterprise Edition"
         more_info: "More information"
@@ -1285,7 +1285,7 @@ ca:
       faq: "Preguntes Més Freqüents"
       glossary: "Glossari"
       shortcuts: "Dreceres"
-      blog: "Blog OpenProject"
+      blog: "Blog ProyeksiApp"
       forums: "Fòrum de la comunitat"
       newsletter: "Security alerts / Newsletter"
   image_conversion:
@@ -1326,9 +1326,9 @@ ca:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1337,7 +1337,7 @@ ca:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Notícies'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1650,7 +1650,7 @@ ca:
   label_open_menu: "Obrir menú"
   label_open_work_packages: "obrir"
   label_open_work_packages_plural: "obrir"
-  label_openproject_website: "OpenProject website"
+  label_openproject_website: "ProyeksiApp website"
   label_optional_description: "Descripció"
   label_options: "Opcions"
   label_other: "Altres"
@@ -1950,17 +1950,17 @@ ca:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "Per a canviar la contrasenya, feu clic en l'enllaç següent:"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} paquet(s) de treball que teniu assignats venceran en els propers %{days} dies:"
   mail_body_group_reminder: "%{count} work package(s) that are assigned to group \"%{group}\" are due in the next %{days} days:"
@@ -1999,14 +1999,14 @@ ca:
   mail_user_activation_limit_reached:
     subject: User activation limit reached
     message: |
-      A new user (%{email}) tried to create an account on an OpenProject environment that you manage (%{host}).
+      A new user (%{email}) tried to create an account on an ProyeksiApp environment that you manage (%{host}).
       The user cannot activate their account since the user limit has been reached.
     steps:
       label: "To allow the user to sign in you can either: "
       a: "Upgrade your payment plan ([here](upgrade_url))" #here turned into a link
       b: "Lock or delete an existing user ([here](users_url))" #here turned into a link
   more_actions: "Més funcions"
-  noscript_description: "Cal activar JavaScript per utilitzar OpenProject!"
+  noscript_description: "Cal activar JavaScript per utilitzar ProyeksiApp!"
   noscript_heading: "JavaScript desactivat"
   noscript_learn_more: "Saber-ne més"
   notice_accessibility_mode: El mode d'accessibilitat pot ser activat a la configuració del seu compte [configuració del compte](url).
@@ -2070,7 +2070,7 @@ ca:
   notice_wont_delete_auth_source: El mode d'autenticació no es pot suprimir mentre encara hi ha usuaris utilitzant-lo.
   notice_project_cannot_update_custom_fields: "No pot actualitzar els camps personalitzats disponibles del projecte. El projecte no és vàlid: %{errors}"
   notice_attachment_migration_wiki_page: >
-    This page was generated automatically during the update of OpenProject. It contains all attachments previously associated with the %{container_type} "%{container_name}".
+    This page was generated automatically during the update of ProyeksiApp. It contains all attachments previously associated with the %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2093,9 +2093,9 @@ ca:
           tb: "TB"
   onboarding:
     heading_getting_started: "Get an overview"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with ProyeksiApp."
     text_show_again: "Pot reprendre aquest vídeo des del menú d'ajuda"
-    welcome: "Welcome to OpenProject"
+    welcome: "Welcome to ProyeksiApp"
     select_language: "Please select your language"
   permission_add_work_package_notes: "Afegir notes"
   permission_add_work_packages: "Afegir paquets de treball"
@@ -2154,7 +2154,7 @@ ca:
   permission_select_project_modules: "Selecciona els mòduls del projecte"
   permission_manage_types: "Seleccioneu tipus"
   permission_view_calendar: "Visualitzar calendari"
-  permission_view_changesets: "Veure les revisions del repositori a OpenProject"
+  permission_view_changesets: "Veure les revisions del repositori a ProyeksiApp"
   permission_view_commit_author_statistics: "Veure les estadístiques de commits de l'autor"
   permission_view_work_package_watchers: "Veure la llista d'observadors"
   permission_view_work_packages: "Veure els paquets de treball"
@@ -2234,7 +2234,7 @@ ca:
     destroy:
       confirmation: "Si continueu, s'eliminarà permanentment el repositori administrat."
       info: "Eliminar el repositori és una acció irreversible."
-      info_not_managed: "Nota: Això no suprimirà el contingut d'aquest repositori perquè no és administrat per OpenProject."
+      info_not_managed: "Nota: Això no suprimirà el contingut d'aquest repositori perquè no és administrat per ProyeksiApp."
       managed_path_note: "S'esborrarà el directori següent: %{path}"
       repository_verification: "Introduir l'identificador del projecte %{identifier} per verificar la supressió del seu repositori."
       subtitle: "Esteu segur de voler suprimir el %{repository_type} del %{project_name} projecte?"
@@ -2248,8 +2248,8 @@ ca:
       empty_repository: "El repositori existeix, però és buit. No conté cap revisió encara."
       exists_on_filesystem: "El directori del repositori ja existeix en el sistema de fitxers."
       filesystem_access_failed: "S'ha produït un error a l'accedir al repositori al sistema de fitxers: %{message}"
-      not_manageable: "Aquest tipus de repositori no pot ser gestionat per OpenProject."
-      path_permission_failed: "S'ha produït un error en intentar crear la ruta següent: %{path}. Si us plau, assegureu-vos que OpenProject pot escriure en aquesta carpeta."
+      not_manageable: "Aquest tipus de repositori no pot ser gestionat per ProyeksiApp."
+      path_permission_failed: "S'ha produït un error en intentar crear la ruta següent: %{path}. Si us plau, assegureu-vos que ProyeksiApp pot escriure en aquesta carpeta."
       unauthorized: "Vostè no està autoritzat a accedir al repositori o les credencials no són vàlides."
       unavailable: "El repositori no està disponible."
       exception_title: "No es pot accedir al repositori: %{message}"
@@ -2266,9 +2266,9 @@ ca:
         path_encoding: "Modificar la codificació de la ruta d'accés GIT (per defecte: UTF-8)"
       local_title: "Enllaç al repositori existent Git existent"
       local_url: "URL local"
-      local_introduction: "Si ja teniu un repositori de Git, podeu enllaçar-lo amb OpenProject per accedir-hi des de l'aplicació."
-      managed_introduction: "Permetre a OpenProject crear i integrar un repositori Git local automàticament."
-      managed_title: "Repositori Git integrat en OpenProject"
+      local_introduction: "Si ja teniu un repositori de Git, podeu enllaçar-lo amb ProyeksiApp per accedir-hi des de l'aplicació."
+      managed_introduction: "Permetre a ProyeksiApp crear i integrar un repositori Git local automàticament."
+      managed_title: "Repositori Git integrat en ProyeksiApp"
       managed_url: "URL gestionada"
       path: "Camí d'accés al Repositori Git"
       path_encoding: "Codificació de les rutes"
@@ -2285,19 +2285,19 @@ ca:
     scm_types:
       local: "Enllaçar a repositori local existent"
       existing: "Enllaçar a repositori existent"
-      managed: "Crear nou repositori a OpenProject"
+      managed: "Crear nou repositori a ProyeksiApp"
     storage:
       not_available: "El consum d'emmagatzematge de disc no està disponible per a aquest repositori."
       update_timeout: "Mantenir la darrera informació d'espai de disc necessari per a un dipòsit durant N minuts. Ja que comptar l'espai de disc necessari per un repostori pot ser costós, augmenteu aquest valor per reduir l'impacte en el rendiment."
     subversion:
       existing_title: "Repositori de Subversion existent"
-      existing_introduction: "Si ja teniu un repositori de Subversion, podeu enllaçar-lo amb OpenProject per accedir-hi des de l'aplicació."
+      existing_introduction: "Si ja teniu un repositori de Subversion, podeu enllaçar-lo amb ProyeksiApp per accedir-hi des de l'aplicació."
       existing_url: "URL existent"
       instructions:
         managed_url: "Aquesta és l'URL del repositori (local) de Subversion administrat."
         url: "Introduïu l'URL del repositori. Això pot apuntar a un repositori local (començant amb %{local_proto}), o a un dipòsit remot. Es suporten els següents esquemes d'URL:"
-      managed_title: "Repositori Subversion integrat a OpenProject"
-      managed_introduction: "Permetre OpenProject crear i integrar automàticament un repositori Subversion local."
+      managed_title: "Repositori Subversion integrat a ProyeksiApp"
+      managed_introduction: "Permetre ProyeksiApp crear i integrar automàticament un repositori Subversion local."
       managed_url: "URL gestionada"
       password: "Contrasenya del repositori"
       username: "Nom d'usuari del repositori"
@@ -2314,7 +2314,7 @@ ca:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Documentació"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2474,7 +2474,7 @@ ca:
       sentence_connector: "i"
       skip_last_comma: "fals"
   text_accessibility_hint: "The accessibility mode is designed for users who are blind, motorically handicaped or have a bad eyesight. For the latter focused elements are specially highlighted. Please notice, that the Backlogs module is not available in this mode."
-  text_access_token_hint: "Els token d'accés permeten que aplicacions externes accedeixin als recursos d'OpenProject."
+  text_access_token_hint: "Els token d'accés permeten que aplicacions externes accedeixin als recursos d'ProyeksiApp."
   text_analyze: "Analitzar més en profunditat: %{subject}"
   text_are_you_sure: "N'esteu segur?"
   text_are_you_sure_with_children: "Voleu suprimir el paquet de treball i tots els paquets de treball fills?"
@@ -2543,7 +2543,7 @@ ca:
   text_no_notes: "No hi ha cap comentari disponible per a aquest paquet de treball."
   text_notice_too_many_values_are_inperformant: "Nota: Mostrar més de 100 articles per pàgina pot augmentar el temps de càrrega de la pàgina."
   text_notice_security_badge_displayed_html: >
-    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current OpenProject version against the official OpenProject release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
+    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current ProyeksiApp version against the official ProyeksiApp release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
   text_own_membership_delete_confirmation: "Esteu a punt de suprimir algun o tots els vostres permisos i potser no podreu editar més aquest projecte.\nSegur que voleu continuar?"
   text_plugin_assets_writable: "Es pot escriure als complements actius"
   text_powered_by: "Desenvolupat per %{link}"
@@ -2551,7 +2551,7 @@ ca:
   text_reassign: "Reassigna al paquet de treball:"
   text_regexp_info: "ex. ^[A-Z0-9]+$"
   text_regexp_multiline: 'S''aplica l''expressió regular en mode de múltilínia. Per exemple, ^---\s+'
-  text_repository_usernames_mapping: "Seleccioneu l'assignació entre els usuaris del OpenProject i cada nom d'usuari trobat al repositori.\nEls usuaris amb el mateix nom d'usuari o correu del OpenProject i del repositori s'assignaran automàticament."
+  text_repository_usernames_mapping: "Seleccioneu l'assignació entre els usuaris del ProyeksiApp i cada nom d'usuari trobat al repositori.\nEls usuaris amb el mateix nom d'usuari o correu del ProyeksiApp i del repositori s'assignaran automàticament."
   text_status_changed_by_changeset: "Aplicat en el conjunt de canvis %{value}."
   text_table_difference_description: "In this table the single %{entries} are shown. You can view the difference between any two entries by first selecting the according checkboxes in the table. When clicking on the button below the table the differences are shown."
   text_time_logged_by_changeset: "Aplicat en el conjunt de canvis %{value}."
@@ -2756,7 +2756,7 @@ ca:
     activate_and_reset_failed_logins: "Activar i restaurar inicis de sessió erronis"
     authentication_provider: "Proveïdor d'autenticació"
     authentication_settings_disabled_due_to_external_authentication: >
-      Aquest usuari s'autentica mitjançant un proveïdor d'autenticació externa i no hi ha cap contrasenya a OpenProject per canviar.
+      Aquest usuari s'autentica mitjançant un proveïdor d'autenticació externa i no hi ha cap contrasenya a ProyeksiApp per canviar.
     authorization_rejected: "No podeu iniciar la sessió."
     assign_random_password: "Assignar contrasenya aleatòria (enviada a usuari mitjançant e-mail)"
     blocked: "bloquejat temporalment"
@@ -2787,7 +2787,7 @@ ca:
   warning: Alerta
   warning_attachments_not_saved: "No s'han pogut desar %{count} fitxer(s)."
   warning_imminent_user_limit: >
-    You invited more users than are supported by your current plan. Invited users may not be able to join your OpenProject environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
+    You invited more users than are supported by your current plan. Invited users may not be able to join your ProyeksiApp environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
   warning_registration_token_expired: |
     The activation email has expired. We sent you a new one to %{email}.
     Please click the link inside of it to activate your account.
@@ -2921,21 +2921,21 @@ ca:
         confidential: "Check if the application will be used where the client secret can be kept confidential. Native mobile apps and Single Page Apps are assumed non-confidential."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "Optional user ID to impersonate when clients use this application. Leave empty to allow public access only"
-        register_intro: "If you are developing an OAuth API client application for OpenProject, you can register it using this form for all users to use."
+        register_intro: "If you are developing an OAuth API client application for ProyeksiApp, you can register it using this form for all users to use."
         default_scopes: ""
     client_id: "Client ID"
     client_secret_notice: >
-      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by OpenProject at a later time.
+      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by ProyeksiApp at a later time.
     authorization_dialog:
       authorize: "Authorize"
       cancel: "Cancel and deny authorization."
       prompt_html: "Authorize <strong>%{application_name}</strong> to use your account <em>%{login}</em>?"
       title: "Authorize %{application_name}"
       wants_to_access_html: >
-        This application requests access to your OpenProject account. <br/> <strong>It has requested the following permissions:</strong>
+        This application requests access to your ProyeksiApp account. <br/> <strong>It has requested the following permissions:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the ProyeksiApp API v3 to perform actions on your behalf."
     grants:
       created_date: "Approved on"
       scopes: "Permisos"
@@ -2951,7 +2951,7 @@ ca:
     client_credentials_impersonation_set_to: "Client credentials user set to"
     client_credentials_impersonation_warning: "Note: Clients using the 'Client credentials' flow in this application will have the rights of this user"
     client_credentials_impersonation_html: >
-      By default, OpenProject provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
+      By default, ProyeksiApp provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
     authorization_error: "An authorization error has occurred."
     revoke_my_application_confirmation: "Do you really want to remove this application? This will revoke %{token_count} active for it."
     my_registered_applications: "Registered OAuth applications"

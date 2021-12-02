@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.3
+  title: ProyeksiApp 5.0.3
   sidebar_navigation:
       title: 5.0.3
   release_version: 5.0.3
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.3
+# ProyeksiApp 5.0.3
 
-OpenProject 5.0.3 contains a bug fix for creating versions:
+ProyeksiApp 5.0.3 contains a bug fix for creating versions:
 
   - It was not possible to create a version in the project settings if
     there were no other version in a project

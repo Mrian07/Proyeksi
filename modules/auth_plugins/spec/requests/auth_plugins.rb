@@ -1,11 +1,11 @@
 
 
 require 'spec_helper'
-require 'open_project/auth_plugins'
+require 'proyeksi_app/auth_plugins'
 
-describe OpenProject::Plugins::AuthPlugin do
+describe ProyeksiApp::Plugins::AuthPlugin do
   class MockEngine
-    extend OpenProject::Plugins::AuthPlugin
+    extend ProyeksiApp::Plugins::AuthPlugin
   end
 
   let(:strategies) { {} }
@@ -33,7 +33,7 @@ describe OpenProject::Plugins::AuthPlugin do
       omniauth_builder.instance_eval(&block)
     }
 
-    allow(OpenProject::Plugins::AuthPlugin).to receive(:strategies).and_return(strategies)
+    allow(ProyeksiApp::Plugins::AuthPlugin).to receive(:strategies).and_return(strategies)
     allow(MockEngine).to receive(:engine_name).and_return('foobar')
     allow(MockEngine).to receive(:initializer) { |_, &block| app.instance_eval(&block) }
   end
@@ -68,8 +68,8 @@ describe OpenProject::Plugins::AuthPlugin do
     end
 
     it 'should associate the correct providers with their respective strategies' do
-      expect(OpenProject::Plugins::AuthPlugin.providers_for(:strategy_a)).to eq [providers_a.call, providers_c.call].flatten
-      expect(OpenProject::Plugins::AuthPlugin.providers_for(:strategy_b)).to eq providers_b.call
+      expect(ProyeksiApp::Plugins::AuthPlugin.providers_for(:strategy_a)).to eq [providers_a.call, providers_c.call].flatten
+      expect(ProyeksiApp::Plugins::AuthPlugin.providers_for(:strategy_b)).to eq providers_b.call
     end
   end
 end

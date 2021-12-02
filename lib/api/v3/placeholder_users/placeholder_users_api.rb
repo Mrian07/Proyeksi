@@ -3,7 +3,7 @@
 module API
   module V3
     module PlaceholderUsers
-      class PlaceholderUsersAPI < ::API::OpenProjectAPI
+      class PlaceholderUsersAPI < ::API::ProyeksiAppAPI
         resources :placeholder_users do
           get &::API::V3::Utilities::Endpoints::Index
             .new(model: PlaceholderUser, scope: -> { PlaceholderUser.visible(current_user) })

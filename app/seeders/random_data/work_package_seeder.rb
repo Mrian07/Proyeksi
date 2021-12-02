@@ -106,7 +106,7 @@ module RandomData
 
     def add_attachments(work_package)
       3.times do |_attachment_count|
-        file = OpenProject::Files.create_uploaded_file(name: Faker::Lorem.words(8).join(' '))
+        file = ProyeksiApp::Files.create_uploaded_file(name: Faker::Lorem.words(8).join(' '))
         attachment = Attachment.new(
           container: work_package,
           author: user,

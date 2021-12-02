@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-module OpenProject::TwoFactorAuthentication::Patches
+module ProyeksiApp::TwoFactorAuthentication::Patches
   module UserSpec
     describe User, with_2fa_ee: true do
       def create_user(auth_source_id = nil)

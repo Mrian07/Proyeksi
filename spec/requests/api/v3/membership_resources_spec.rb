@@ -53,7 +53,7 @@ describe 'API v3 memberships resource', type: :request, content_type: :json do
 
       if defined?(custom_message)
         expect(ActionMailer::Base.deliveries.map { |mail| mail.body.encoded })
-          .to all include(OpenProject::TextFormatting::Renderer.format_text(custom_message))
+          .to all include(ProyeksiApp::TextFormatting::Renderer.format_text(custom_message))
       end
     end
   end
@@ -329,7 +329,7 @@ describe 'API v3 memberships resource', type: :request, content_type: :json do
         expect(subject.status).to eq(400)
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end

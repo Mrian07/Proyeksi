@@ -25,7 +25,7 @@ describe 'OAuth applications management', type: :feature, js: true do
 
     expect(page).to have_selector('.errorExplanation', text: 'Redirect URI must be an absolute URI.')
 
-    # Can create localhost without https (https://community.openproject.com/wp/34025)
+    # Can create localhost without https (https://community.proyeksiapp.com/wp/34025)
     SeleniumHubWaiter.wait
     fill_in 'application_redirect_uri', with: "urn:ietf:wg:oauth:2.0:oob\nhttp://localhost/my/callback"
     click_on 'Create'

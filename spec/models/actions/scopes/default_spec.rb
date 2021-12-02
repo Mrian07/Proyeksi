@@ -15,7 +15,7 @@ describe Actions::Scopes::Default, type: :model do
          module_name&.to_s]
       }
 
-      OpenProject::AccessControl
+      ProyeksiApp::AccessControl
         .contract_actions_map
         .map do |permission, v|
           v[:actions].map { |vk, vv| vv.map { |vvv| item.call(permission, vk, vvv, v[:global], v[:module]) } }

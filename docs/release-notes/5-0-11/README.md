@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.11
+  title: ProyeksiApp 5.0.11
   sidebar_navigation:
       title: 5.0.11
   release_version: 5.0.11
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.11
+# ProyeksiApp 5.0.11
 
-OpenProject 5.0.11 contains an update to the new Rails version 4.2.5.1
+ProyeksiApp 5.0.11 contains an update to the new Rails version 4.2.5.1
 which fixes several security vulnerabilities
 ([\#22574](https://community.openproject.org/work_packages/22574)).
 

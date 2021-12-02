@@ -17,7 +17,7 @@ module Bim::Bcf
       error_representer ::Bim::Bcf::API::V2_1::Errors::ErrorRepresenter, :json
       error_formatter :json, ::Bim::Bcf::API::ErrorFormatter::Json
 
-      authentication_scope OpenProject::Authentication::Scope::BCF_V2_1
+      authentication_scope ProyeksiApp::Authentication::Scope::BCF_V2_1
 
       version '2.1', using: :path do
         # /auth

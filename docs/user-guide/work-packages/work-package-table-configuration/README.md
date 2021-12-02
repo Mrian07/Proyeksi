@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Configure work package table
   priority: 700
-description: How to configure the work package list in OpenProject?
+description: How to configure the work package list in ProyeksiApp?
 robots: index, follow
 keywords: work packages table configuration, work package list, columns, filter, group
 ---
@@ -18,7 +18,7 @@ keywords: work packages table configuration, work package list, columns, filter,
 | [Attribute highlighting (Premium Feature)](#attribute-highlighting-premium-feature) | How to highlight certain attributes in the work package list? |
 | [Save work package views](#save-work-package-views)          | How to save a new work package view and how to change existing ones? |
 
-You can configure the work package table view in OpenProject to display the information that you need in the list.
+You can configure the work package table view in ProyeksiApp to display the information that you need in the list.
 
 You can change the header in the table and add or remove columns, filter and group work packages or sort them according to specific criteria. Also, you can change between a flat list view, a hierarchy view and a grouped view.
 
@@ -128,7 +128,7 @@ There are several options to filter for the assignee of a work package. You can 
 By default, the work package list will be sorted by work package ID. 
 
 <div class="glossary">
-The **ID** is unique for a work package within OpenProject. It will be set automatically from the system. With the ID you can reference a specific work package in OpenProject. 
+The **ID** is unique for a work package within ProyeksiApp. It will be set automatically from the system. With the ID you can reference a specific work package in ProyeksiApp. 
 </div>
 
 

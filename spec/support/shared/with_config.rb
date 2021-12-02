@@ -24,7 +24,7 @@ class WithConfig
   #
   # @config [Hash] Hash containing the configurations with keys as seen in `configuration.rb`.
   def before(example, config)
-    allow(OpenProject::Configuration).to receive(:[]).and_call_original
+    allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
 
     aggregate_mocked_configuration(example, config)
       .with_indifferent_access
@@ -32,12 +32,12 @@ class WithConfig
   end
 
   def stub_key(key, value)
-    allow(OpenProject::Configuration)
+    allow(ProyeksiApp::Configuration)
       .to receive(:[])
       .with(key.to_s)
       .and_return(value)
 
-    allow(OpenProject::Configuration)
+    allow(ProyeksiApp::Configuration)
       .to receive(:[])
       .with(key.to_sym)
       .and_return(value)

@@ -15,8 +15,8 @@ import { WorkPackageCreateService } from 'core-app/features/work-packages/compon
 import { WorkPackageNotificationService } from 'core-app/features/work-packages/services/notifications/work-package-notification.service';
 import { WorkPackagesActivityService } from 'core-app/features/work-packages/components/wp-single-view-tabs/activity-panel/wp-activity.service';
 import { APIV3Service } from 'core-app/core/apiv3/api-v3.service';
-import { OpenProjectFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
-import { OpenProjectDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
+import { ProyeksiAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiAppDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
 import { TimezoneService } from 'core-app/core/datetime/timezone.service';
 import { AttachmentCollectionResource } from 'core-app/features/hal/resources/attachment-collection-resource';
 import { OpenprojectHalModule } from 'core-app/features/hal/openproject-hal.module';
@@ -48,8 +48,8 @@ describe('WorkPackage', () => {
         TimezoneService,
         WorkPackagesActivityService,
         ConfigurationService,
-        OpenProjectFileUploadService,
-        OpenProjectDirectFileUploadService,
+        ProyeksiAppFileUploadService,
+        ProyeksiAppDirectFileUploadService,
         LoadingIndicatorService,
         PathHelperService,
         I18nService,

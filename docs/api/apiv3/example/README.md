@@ -20,11 +20,11 @@ In its simplest form, fetching work packages looks like this:
 
 The GET request returns a `WorkPackageCollection`, which is a list of `WorkPackage` resources. Although not explicitly required by the HAL standard, every embedded `WorkPackage` is complete, meaning it will contain every property. 
 
-Please notice that no headers and no credentials need to be provided. Because the community instance of OpenProject is configured to be available to the public, no authentication is required. 
+Please notice that no headers and no credentials need to be provided. Because the community instance of ProyeksiApp is configured to be available to the public, no authentication is required. 
 
 ## Authentication
 
-In a default OpenProject installation however, credentials are necessary to even access the instance, so this guide will assume this
+In a default ProyeksiApp installation however, credentials are necessary to even access the instance, so this guide will assume this
 default behaviour to apply further on. Only in very limited use cases should an unauthenticated access ever be allowed.
 
 Without authentication, a client will be informed of the missing credentials as demonstrated below when issuing a  request
@@ -34,13 +34,13 @@ identical to the one above against a locally run installation:
 
 In case such an error is returned, the client has a couple of possibilities to authenticate. Of the available possibilities, the guide will demonstrate two: Basic Auth because it is the most commonly used mechanism and OAuth 2 because it should be the most commonly used mechanism.
 
-Regardless of the authentication mechanism used, a client will always authenticate as a user within OpenProject. Even for the OAuth2 [Client credentials](https://oauth.net/2/grant-types/client-credentials/) flow, which is aimed to not involve user interaction, every interaction on the server will be carried out in the name of a specific user to regulate authorization as you will see below. 
+Regardless of the authentication mechanism used, a client will always authenticate as a user within ProyeksiApp. Even for the OAuth2 [Client credentials](https://oauth.net/2/grant-types/client-credentials/) flow, which is aimed to not involve user interaction, every interaction on the server will be carried out in the name of a specific user to regulate authorization as you will see below. 
 
 ### Basic auth
 
 Basic auth is simple to setup and understand but should be avoided in the long run due to security reasons but also because it limits a client and is harder to manage within an organization.
 
-In order to authenticate with basic auth, a user first has to login into OpenProject, generate an api key, and then use the key to authenticate on API calls. A user cannot use the credentials used to login into the UI to also authenticate when communicating with the API.
+In order to authenticate with basic auth, a user first has to login into ProyeksiApp, generate an api key, and then use the key to authenticate on API calls. A user cannot use the credentials used to login into the UI to also authenticate when communicating with the API.
 
 An API key can be generated on the "Access token" page within the "My account" section by clicking on the "Generate" or "Reset" (depending on whether a key already exists) link within the "API" row. 
 
@@ -62,9 +62,9 @@ We could just as well have generated the header ourselves by Base64 encoding the
 
 The OAuth2 based authentication requires an administrator to set up but offers significant advantages compared to authentication based on Basic auth. 
 
-OpenProject supports two OAuth flows: "Authorization code" and "Client credentials". In OpenProject terms, the main difference is whether a client wants to impersonate different users or wants to always access OpenProject with the same user account. An example for the former would be an application for logging time. Via the "Authorization code" flow, the logged time would be booked in the name of each user separately. The user would be the user creating the logged time. If the calling user is less important or if that user can always be the same, the "Client credentials" flow is sufficient.
+ProyeksiApp supports two OAuth flows: "Authorization code" and "Client credentials". In ProyeksiApp terms, the main difference is whether a client wants to impersonate different users or wants to always access ProyeksiApp with the same user account. An example for the former would be an application for logging time. Via the "Authorization code" flow, the logged time would be booked in the name of each user separately. The user would be the user creating the logged time. If the calling user is less important or if that user can always be the same, the "Client credentials" flow is sufficient.
 
-Before the client can authenticate, an administrator sets up the OAuth application within the OpenProject instance. Go to the Administration and select "OAuth applications" within the "Authentication" menu.
+Before the client can authenticate, an administrator sets up the OAuth application within the ProyeksiApp instance. Go to the Administration and select "OAuth applications" within the "Authentication" menu.
 
 ![OAuth2 index](./oauth2-index.png)
 
@@ -74,9 +74,9 @@ Click the "+ Add" button to add an application:
 
 The "Name" attribute can be freely chosen. But naming reveals a difference between the way the two flows are used. While "Authorization code" flow is less focused on one use case per OAuth2 application, the "Client credentials" flow is more client application specific. This is because the user, and by that the permissions granted, can change for "Authorization code" but is fixed for "Client credentials" as a specific user has to be chosen when configuring the later.
 
-For the guide, we will focus on the "Authorization code" flow. After having selected a name, specify the callback url that the browser is redirected to, after the user has authenticated successfully. It is the end point that the credentials will be send to via POST from the OpenProject instance to the client so it is dependent on the client application. To stress the point, this is an end point within the client application, not within OpenProject.
+For the guide, we will focus on the "Authorization code" flow. After having selected a name, specify the callback url that the browser is redirected to, after the user has authenticated successfully. It is the end point that the credentials will be send to via POST from the ProyeksiApp instance to the client so it is dependent on the client application. To stress the point, this is an end point within the client application, not within ProyeksiApp.
 
-Next we chose "api_v3" to be the scope of the application. This means, that clients can only access the API v3 and cannot use the same OAuth application to also authenticate for the [BCF api which OpenProject also offers](../bcf-rest-api).
+Next we chose "api_v3" to be the scope of the application. This means, that clients can only access the API v3 and cannot use the same OAuth application to also authenticate for the [BCF api which ProyeksiApp also offers](../bcf-rest-api).
 
 If we can ensure, that the application can secure the api key, we can check the "Confidential" checkbox. This is typically the case for client applications running on a server or on desktop but requires the client application to ensure it.
 
@@ -94,12 +94,12 @@ There are a couple of fields in that form but most of the information can simply
 
 * Token Name: Freely choosable field
 * Grant Type: Choose "Authorization Code"
-* Callback URL: Copy from OpenProject
-* Auth URL: Copy from OpenProject
-* Access Token URL: Copy from OpenProject
-* Client ID: Copy from OpenProject
-* Client Secret: Copy from OpenProject
-* Scope: Type in "api_v3" as we chose that in OpenProject
+* Callback URL: Copy from ProyeksiApp
+* Auth URL: Copy from ProyeksiApp
+* Access Token URL: Copy from ProyeksiApp
+* Client ID: Copy from ProyeksiApp
+* Client Secret: Copy from ProyeksiApp
+* Scope: Type in "api_v3" as we chose that in ProyeksiApp
 * State: You can leave this blank
 
 After having provided the necessary information, you can press the "Request Token" button which will result in a browser being shown in which the user, not the client as it will impersonate the user, can log in:
@@ -118,14 +118,14 @@ which we chose to use by pressing "Use token". Please note that an OAuth token e
 
 ### Being authenticated
 
-Once we gain authenticated access to the OpenProject application, the error, informing the client of a missing `Authorization` header will disappear. But the collection of work packages returned might still not contain the work packages the client is looking for. This might be, because the user in whose name the client accesses the application is lacking permissions. 
+Once we gain authenticated access to the ProyeksiApp application, the error, informing the client of a missing `Authorization` header will disappear. But the collection of work packages returned might still not contain the work packages the client is looking for. This might be, because the user in whose name the client accesses the application is lacking permissions. 
 We need to ensure that the user also has the necessary authorization.
 
 ## Authorization
 
-As the client accesses OpenProject on behalf of a user, that user needs to have authorization to do the desired actions. So while the user might be authenticated, she/he might lack the necessary permissions to do anything.
+As the client accesses ProyeksiApp on behalf of a user, that user needs to have authorization to do the desired actions. So while the user might be authenticated, she/he might lack the necessary permissions to do anything.
 
-In OpenProject, permissions are mostly granted by creating a connection between a user, a project and a role in the form of a membership. So for every project the user is supposed to have access, a role needs to be assigned to him/her.
+In ProyeksiApp, permissions are mostly granted by creating a connection between a user, a project and a role in the form of a membership. So for every project the user is supposed to have access, a role needs to be assigned to him/her.
 
 This can be done in the members administration of each project:
 
@@ -171,7 +171,7 @@ For `project`, a link is provided which clients can call to get the projects ava
 ![work package empty create schema project](./wp-create-form-schema-project.png)
 
 Whether the available values for a project are embedded directly within the schema or available only after having called an additional endpoints depends on the amount of values that are expected to be returned for each.
-While there can be hundreds, even thousands, of projects, there typically are only a few types in an OpenProject instance. And for non resource referencing properties like `subject` no `availableValues` are provided at all so a client needs to handle all those cases.
+While there can be hundreds, even thousands, of projects, there typically are only a few types in an ProyeksiApp instance. And for non resource referencing properties like `subject` no `availableValues` are provided at all so a client needs to handle all those cases.
 
 Using the various available values, the client can now construct a body that will not return any validation errors:
 
@@ -214,7 +214,7 @@ Now the client has created a work package with the properties provided. The serv
 ### Custom fields
 
 Especially setting values for custom field properties is helped by the work package form prior to creation. 
-As the existence of custom field and their available values by their very nature is different between OpenProject instances, a client that is build to be of used in combination with multiple OpenProject instances cannot have a hard coded set of custom fields and custom field values. 
+As the existence of custom field and their available values by their very nature is different between ProyeksiApp instances, a client that is build to be of used in combination with multiple ProyeksiApp instances cannot have a hard coded set of custom fields and custom field values. 
 Additionally, the availability of custom fields depend on the `project` and the `type` of a work package resource. Custom fields can be configured to be available only for certain types and certain projects.
 
 The schema will list all available custom fields in the schema, with their name being provided in a human readable form and the available values being listed same as for `project`:
@@ -273,9 +273,9 @@ the number of work packages included in the response can be adapted (e.g. `pageS
 starts from can be specified (e.g. `offset=5`). 
 
 In total, this provides a lot of capabilities for retrieving the set of work packages the client needs. Because those capabilities
-might be overwhelming at first, it is a good idea to use the OpenProject UI to configure the filters, order, etc. desired and
-take a look at the request the UI sends to the backend (e.g. via the developer tool's network tab). As the OpenProject UI is an API client as well, 
-it can guide other potential clients to correctly communicate with the OpenProject backend.
+might be overwhelming at first, it is a good idea to use the ProyeksiApp UI to configure the filters, order, etc. desired and
+take a look at the request the UI sends to the backend (e.g. via the developer tool's network tab). As the ProyeksiApp UI is an API client as well, 
+it can guide other potential clients to correctly communicate with the ProyeksiApp backend.
 
 ## Updating a work package 
 

@@ -59,7 +59,7 @@
 ```
 <div class="op-modal -highlight">
   <div class="op-modal--header">
-    <h2>Welcome to OpenProject</h2>
+    <h2>Welcome to ProyeksiApp</h2>
     <a class="op-modal--close-button" title="Close popup">
       <i class="icon-close"></i>
     </a>

@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Submit a feature idea
   priority: 990
-description: How to submit an idea for a feature for OpenProject
+description: How to submit an idea for a feature for ProyeksiApp
 robots: index, follow
 keywords: feature requests, ideas, open feature request
 ---
@@ -10,7 +10,7 @@ keywords: feature requests, ideas, open feature request
 
 ## How to submit a feature idea or request?
 
-1. Login to or register at the [OpenProject community platform](https://community.openproject.org/login). It's fast and free.
+1. Login to or register at the [ProyeksiApp community platform](https://community.openproject.org/login). It's fast and free.
 2. Use the search bar in the header navigation on top to look for similar feature requests. If there's one, please leave a comment or add additional information. Otherwise:
 3. Open the [feature create form](https://community.openproject.org/projects/openproject/work_packages/new?type=6).
 4. Add a subject and detailed description using the template.
@@ -37,7 +37,7 @@ keywords: feature requests, ideas, open feature request
 
 **Example:**
 
->     AS an OpenProject user
+>     AS an ProyeksiApp user
 >     I WANT to only show the allowed status fields as active for which a status transition is allowed based on the workflow
 >     SO THAT I am clearly aware which status transitions are allowed before doing them.
 

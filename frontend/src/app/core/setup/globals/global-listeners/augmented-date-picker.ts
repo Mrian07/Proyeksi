@@ -12,7 +12,7 @@ export function augmentedDatePicker(evt:JQuery.TriggeredEvent, target:JQuery) {
     target
       .attr('autocomplete', 'off'); // Disable autocomplete for those fields
 
-    window.OpenProject.getPluginContext()
+    window.ProyeksiApp.getPluginContext()
       .then((context) => {
         const datePicker = new DatePicker(
           '.-augmented-datepicker',

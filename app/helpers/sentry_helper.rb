@@ -1,6 +1,6 @@
 module SentryHelper
   def sentry_frontend_tags
-    return '' unless OpenProject::Configuration.sentry_frontend_dsn
+    return '' unless ProyeksiApp::Configuration.sentry_frontend_dsn
 
     sentry_frontend_dsn_tag + sentry_tracing_meta_tag
   end
@@ -10,11 +10,11 @@ module SentryHelper
   # if this instance has enabled JavaScript tracing
   def sentry_frontend_dsn_tag
     tag :meta,
-        name: 'openproject_sentry',
+        name: 'proyeksiapp_sentry',
         data: {
-          dsn: OpenProject::Configuration.sentry_frontend_dsn,
-          version: OpenProject::VERSION.to_s,
-          tracing_factor: OpenProject::Configuration.sentry_frontend_trace_factor
+          dsn: ProyeksiApp::Configuration.sentry_frontend_dsn,
+          version: ProyeksiApp::VERSION.to_s,
+          tracing_factor: ProyeksiApp::Configuration.sentry_frontend_trace_factor
         }
   end
 

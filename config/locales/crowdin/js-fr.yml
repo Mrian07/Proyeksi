@@ -21,7 +21,7 @@ fr:
         Une nouvelle sauvegarde remplacera toute sauvegarde précédente. Il n'est possible de demander qu'un nombre limité de sauvegardes par jour.
       last_backup: Dernière sauvegarde
       last_backup_from: Dernière sauvegarde du
-      title: Sauvegarder OpenProject
+      title: Sauvegarder ProyeksiApp
       options: Options
       include_attachments: Inclure les pièces jointes
       download_backup: Télécharger la sauvegarde
@@ -184,7 +184,7 @@ fr:
             label_maximum_users: "Nombre maximal d’utilisateurs actif"
             label_starts_at: "Commence à"
             label_expires_at: "Expire le"
-            receive_newsletter: Je veux recevoir la <a target="_blank" href="%{link}">newsletter OpenProject</a>.
+            receive_newsletter: Je veux recevoir la <a target="_blank" href="%{link}">newsletter ProyeksiApp</a>.
             taken_domain: Il ne peut y avoir qu'un seul essai actif par domaine.
             taken_email: Chaque utilisateur ne peut créer qu'un essai.
           email_not_received: "Vous n'avez pas reçu d'e-mail ? Vous pouvez renvoyer l'e-mail avec le lien à droite."
@@ -198,7 +198,7 @@ fr:
           status_confirmed: "confirmé"
           status_waiting: "e-mail envoyé - en attente de confirmation"
           test_ee: "Essayez gratuitement la version Entreprise pendant 14 jours"
-          quick_overview: "Obtenez un aperçu rapide de la gestion de projets et de la collaboration en équipe avec OpenProject Enterprise Edition."
+          quick_overview: "Obtenez un aperçu rapide de la gestion de projets et de la collaboration en équipe avec ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Devenez un héros !"
           benefits:
@@ -210,14 +210,14 @@ fr:
             premium_features: "Fonctionnalités premium"
             premium_features_text: "Tableaux agiles, thème et logo personnalisés, graphiques, flux de travail intelligents avec actions personnalisées, recherche en plein texte des pièces jointes de lots de travaux et champs personnalisés à choix multiples"
             professional_support: "Support professionnel"
-            professional_support_text: "Obtenez une assitance fiable et à haut contact de la part d'ingénieurs d'assistance expérimentés qui ont une connaissance approfondie de la mise en œuvre d'OpenProject dans des environnements critiques pour l'entreprise."
+            professional_support_text: "Obtenez une assitance fiable et à haut contact de la part d'ingénieurs d'assistance expérimentés qui ont une connaissance approfondie de la mise en œuvre d'ProyeksiApp dans des environnements critiques pour l'entreprise."
           button_start_trial: "Commencer l'essai gratuit"
           button_book_now: "Réserver maintenant"
           confidence: >
             Nous fournissons la confiance d'un logiciel de gestion de projet de classe entreprise testé et supporté - en Open Source et un avec esprit ouvert.
           link_quote: "Obtenir un devis"
           text: >
-            L'Entreprise Edition d'OpenProject s'appuie sur la Community Edition. Elle comprend des fonctionnalités premium et un support professionnel principalement destiné aux organisations comptant plus de 10 utilisateurs gérant des projets critiques avec OpenProject.
+            L'Entreprise Edition d'ProyeksiApp s'appuie sur la Community Edition. Elle comprend des fonctionnalités premium et un support professionnel principalement destiné aux organisations comptant plus de 10 utilisateurs gérant des projets critiques avec ProyeksiApp.
           unlimited: "Illimité"
           you_contribute: "Les développeurs ont aussi besoin payer leurs factures. Avec la version Entreprise, vous contribuez significativement à cet effort de la communauté Open Source."
     custom_actions:
@@ -275,7 +275,7 @@ fr:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                Cette version contient diverses nouvelles fonctionnalités et améliorations : <br> <ul class="%{list_styling_class}"> <li>Centre de notifications : réduisez le nombre de mails que vous recevez. Au lieu de cela, trouvez et agissez sur toutes les notifications pertinentes dans un endroit central.</li> <li>Tous les fichiers IFC téléversés peuvent maintenant également être téléchargés.</li> <li>Le téléversement et le traitement des fichiers IFC sont devenus plus rapides et ont reçu de meilleurs messages d'erreur.</li> <li>Le <a href="https://github.com/opf/openproject-revit-add-in">L'add-in OpenProject Revit</a> a reçu de nombreuses corrections de bugs.</li> </ul>.
+                Cette version contient diverses nouvelles fonctionnalités et améliorations : <br> <ul class="%{list_styling_class}"> <li>Centre de notifications : réduisez le nombre de mails que vous recevez. Au lieu de cela, trouvez et agissez sur toutes les notifications pertinentes dans un endroit central.</li> <li>Tous les fichiers IFC téléversés peuvent maintenant également être téléchargés.</li> <li>Le téléversement et le traitement des fichiers IFC sont devenus plus rapides et ont reçu de meilleurs messages d'erreur.</li> <li>Le <a href="https://github.com/opf/openproject-revit-add-in">L'add-in ProyeksiApp Revit</a> a reçu de nombreuses corrections de bugs.</li> </ul>.
     label_activate: "Activer"
     label_add_column_after: "Ajouter une colonne après"
     label_add_column_before: "Ajouter une colonne avant"
@@ -464,7 +464,7 @@ fr:
         next: 'Suivante'
         got_it: 'J''ai compris'
       steps:
-        help_menu: 'Le menu Aide (?) fournit des <b>ressources d''aide supplémentaires</b>. Vous y trouverez un guide utilisateur et des vidéos pratiques et plus encore. <br> Profitez de votre travail avec OpenProject !'
+        help_menu: 'Le menu Aide (?) fournit des <b>ressources d''aide supplémentaires</b>. Vous y trouverez un guide utilisateur et des vidéos pratiques et plus encore. <br> Profitez de votre travail avec ProyeksiApp !'
         members: 'Invitez de nouveaux <b>membres</b> à rejoindre votre projet.'
         project_selection: 'Veuillez cliquer sur l''un des projets de démonstration que nous avons préparés. Les données de démonstration ne sont actuellement disponibles qu''en anglais. <br> Le <b>projet démo général</b> convient le mieux pour la gestion de projet classique, tandis que le <b>projet Scrum</b> est meilleur pour la gestion de projet agile.'
         quick_add_button: 'Cliquez sur l''icône plus (+) dans l''en-tête de navigation pour <b>créer un nouveau projet</b> ou <b>inviter des collègues</b>.'

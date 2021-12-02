@@ -7,7 +7,7 @@ import { share, switchMap } from 'rxjs/operators';
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 import { getType } from 'mime';
 import {
-  OpenProjectFileUploadService, UploadBlob, UploadFile, UploadInProgress,
+  ProyeksiAppFileUploadService, UploadBlob, UploadFile, UploadInProgress,
 } from './op-file-upload.service';
 
 interface PrepareUploadResult {
@@ -23,7 +23,7 @@ interface PrepareUploadResult {
 }
 
 @Injectable()
-export class OpenProjectDirectFileUploadService extends OpenProjectFileUploadService {
+export class ProyeksiAppDirectFileUploadService extends ProyeksiAppFileUploadService {
   /**
    * Upload a single file, get an UploadResult observable
    * @param {string} url

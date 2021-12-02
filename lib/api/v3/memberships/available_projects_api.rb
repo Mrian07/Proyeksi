@@ -3,7 +3,7 @@
 module API
   module V3
     module Memberships
-      class AvailableProjectsAPI < ::API::OpenProjectAPI
+      class AvailableProjectsAPI < ::API::ProyeksiAppAPI
         after_validation do
           authorize :manage_members, global: true
         end

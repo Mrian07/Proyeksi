@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.6
+  title: ProyeksiApp 4.2.6
   sidebar_navigation:
       title: 4.2.6
   release_version: 4.2.6
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.6
+# ProyeksiApp 4.2.6
 
-OpenProject 4.2.6 contains a bug fixes and updated translations.
+ProyeksiApp 4.2.6 contains a bug fixes and updated translations.
 
 The following bugs have been fixed:
 
@@ -28,7 +28,7 @@ The following bugs have been fixed:
     [\#21248](https://community.openproject.org/work_packages/21248),
     [\#21253](https://community.openproject.org/work_packages/21253)).
 
-Additionally, OpenProject 4.2.6 contains new translations.
+Additionally, ProyeksiApp 4.2.6 contains new translations.
 
 For further information on the release, please refer to the [Changelog
 v.4.2.6](https://community.openproject.org/versions/762) or take a look

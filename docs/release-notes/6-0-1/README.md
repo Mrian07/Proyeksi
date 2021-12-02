@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.0.1
+  title: ProyeksiApp 6.0.1
   sidebar_navigation:
       title: 6.0.1
   release_version: 6.0.1
@@ -7,13 +7,13 @@
 ---
 
 
-# OpenProject 6.0.1
+# ProyeksiApp 6.0.1
 
-**OpenProject 6.0.1 contains the following changes for the
+**ProyeksiApp 6.0.1 contains the following changes for the
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-8">Wiki</span>
 module:**
 
-In OpenProject versions prior to 6.0.0., specific characters of
+In ProyeksiApp versions prior to 6.0.0., specific characters of
 [wiki](../../user-guide/wiki/) titles were removed
 upon saving – especially dots and spaces. Spaces were replaced with an
 underscore, while other characters were removed.  
@@ -21,12 +21,12 @@ Still, linking to these pages was possible with either the original
 title (e.g., ‘\[\[Title with spaces\]\]’), or the processed title (e.g.,
 ‘\[\[title\_with\_spaces\]\]’).  
 Starting
-with [OpenProject 6.0.0](https://www.openproject.org/blog/openproject-6-0-released/), titles
+with [ProyeksiApp 6.0.0](https://www.openproject.org/blog/openproject-6-0-released/), titles
 were allowed to contain arbitrary characters and were linked to using
 escaped links.
 ([\#20151](https://community.openproject.com/work_packages/20151/activity)).  
 That change caused those links with spaces to wiki pages to break after
-the migration to OpenProject 6.0.0, since they now linked to a new page
+the migration to ProyeksiApp 6.0.0, since they now linked to a new page
 (with actual spaces in its title, since that was allowed now).
 
 This bug was fixed in
@@ -36,10 +36,10 @@ still contain arbitrary characters now, but are processed into a
 permalink (URL slug) upon saving.  
 This causes the identifiers of wiki pages with non-ascii characters to
 be more visually pleasing and easier to link to. When upgrading to
-OpenProject 6.0.1., permalinks for all your pages will be generated
+ProyeksiApp 6.0.1., permalinks for all your pages will be generated
 automatically.
 
-**Additionally, the following errors have been fixed in OpenProject
+**Additionally, the following errors have been fixed in ProyeksiApp
 6.0.1:**
 
   - <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-99">Activity</span>
@@ -90,7 +90,7 @@ For further information on the release, please refer to the [Changelog
 v.6.0.1](https://community.openproject.com/versions/807) or take a look
 at [GitHub](https://github.com/opf/openproject/tree/v6.0.1).
 
-For a free 30 day trial create your own OpenProject instance on
-[OpenProject.org](https://openproject.org/).
+For a free 30 day trial create your own ProyeksiApp instance on
+[ProyeksiApp.org](https://openproject.org/).
 
 

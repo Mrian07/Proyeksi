@@ -143,7 +143,7 @@ describe ::Type, type: :model do
 
     it 'can be put into attribute groups' do
       # Enforce fresh lookup of groups
-      OpenProject::Cache.clear
+      ProyeksiApp::Cache.clear
 
       # Can be enabled
       type.attribute_groups = [['foo', [cf_identifier.to_s]]]
@@ -164,7 +164,7 @@ describe ::Type, type: :model do
 
       it 'they are kept in their respective positions in the group (Regression test #27940)' do
         # Enforce fresh lookup of groups
-        OpenProject::Cache.clear
+        ProyeksiApp::Cache.clear
 
         # Can be enabled
         type.attribute_groups = [['foo', [cf_identifier2.to_s, cf_identifier.to_s]]]
@@ -188,7 +188,7 @@ describe ::Type, type: :model do
     let!(:type) { FactoryBot.create(:type, custom_fields: [custom_field]) }
 
     it 'has the custom field in the default group' do
-      OpenProject::Cache.clear
+      ProyeksiApp::Cache.clear
       type.reload
 
       expect(type.custom_field_ids).to eq([custom_field.id])

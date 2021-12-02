@@ -44,9 +44,9 @@ module Accounts::CurrentUser
     if session[:user_id]
       # existing session
       User.active.find_by(id: session[:user_id])
-    elsif cookies[OpenProject::Configuration['autologin_cookie_name']] && Setting.autologin?
+    elsif cookies[ProyeksiApp::Configuration['autologin_cookie_name']] && Setting.autologin?
       # auto-login feature starts a new session
-      user = User.try_to_autologin(cookies[OpenProject::Configuration['autologin_cookie_name']])
+      user = User.try_to_autologin(cookies[ProyeksiApp::Configuration['autologin_cookie_name']])
       session[:user_id] = user.id if user
       user
     elsif params[:format] == 'atom' && params[:key] && accept_key_auth_actions.include?(params[:action])
@@ -80,7 +80,7 @@ module Accounts::CurrentUser
   def perform_post_logout(prev_session, prev_user)
     # First, check if there is an SLO callback for a given
     # omniauth provider of the user
-    provider = ::OpenProject::Plugins::AuthPlugin.login_provider_for(prev_user)
+    provider = ::ProyeksiApp::Plugins::AuthPlugin.login_provider_for(prev_user)
     if provider && (callback = provider[:single_sign_out_callback])
       instance_exec prev_session, prev_user, &callback
       return if performed?
@@ -117,7 +117,7 @@ module Accounts::CurrentUser
           redirect_to main_app.signin_path(back_url: login_back_url)
         end
 
-        auth_header = OpenProject::Authentication::WWWAuthenticate.response_header(request_headers: request.headers)
+        auth_header = ProyeksiApp::Authentication::WWWAuthenticate.response_header(request_headers: request.headers)
 
         format.any(:xml, :js, :json) do
           head :unauthorized,

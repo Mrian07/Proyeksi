@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   scope '', as: 'backlogs' do
     scope 'projects/:project_id', as: 'project' do
       resources :backlogs,         controller: :rb_master_backlogs,  only: :index

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.6
+  title: ProyeksiApp 5.0.6
   sidebar_navigation:
       title: 5.0.6
   release_version: 5.0.6
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.6
+# ProyeksiApp 5.0.6
 
-OpenProject 5.0.6 contains several bug fixes:
+ProyeksiApp 5.0.6 contains several bug fixes:
 
   - It was not possible to duplicate work packages. This has been
     resolved
@@ -34,7 +34,7 @@ OpenProject 5.0.6 contains several bug fixes:
     [\#22270](https://community.openproject.org/work_packages/22270/activity)).
   - The accessibility has been improved in several places.
 
-OpenProject 5.0.6 also includes a new icon set
+ProyeksiApp 5.0.6 also includes a new icon set
 ([\#21603](https://community.openproject.org/work_packages/21603/activity)).
 
 Changing a work packages assignee and responsible works significantly

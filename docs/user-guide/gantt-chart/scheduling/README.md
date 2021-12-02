@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Automatic and manual scheduling
   priority: 999
-description: Use manual or automatic scheduling mode in OpenProject
+description: Use manual or automatic scheduling mode in ProyeksiApp
 robots: index, follow
 keywords: Gantt chart, automatic scheduling, manual scheduling, start date, finish date, relations
 
@@ -46,7 +46,7 @@ Changing to the **manual scheduling mode makes sense if**
 
 Moving a child work package in the manual scheduling mode will not move the dates of the parent work package. The scheduling differences will be indicated by a black or red bracket underneath (e.g. when a child is shorter or longer than the parent phase). See [this explanation](../#understanding-the-colors-and-lines-in-the-gantt-chart) to find out more about the lines and colors in the Gantt chart.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Top-down-Scheduling.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Top-down-Scheduling.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 
 ## Changing mode

@@ -6,7 +6,7 @@ require 'securerandom'
 
 module SettingsHelper
   extend self
-  include OpenProject::FormTagHelper
+  include ProyeksiApp::FormTagHelper
 
   def system_settings_tabs
     [

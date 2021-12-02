@@ -7,7 +7,7 @@ module API
     module RepresenterToJsonCache
       def to_json(*)
         if json_cacheable?
-          OpenProject::Cache.fetch(*json_representer_name_cache_key, *json_cache_key) do
+          ProyeksiApp::Cache.fetch(*json_representer_name_cache_key, *json_cache_key) do
             super
           end
         else

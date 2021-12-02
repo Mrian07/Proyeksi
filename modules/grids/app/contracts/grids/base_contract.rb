@@ -4,7 +4,7 @@
 
 module Grids
   class BaseContract < ::ModelContract
-    include OpenProject::StaticRouting::UrlHelpers
+    include ProyeksiApp::StaticRouting::UrlHelpers
     include AssignableValuesContract
     include ::Attachments::ValidateReplacements
 

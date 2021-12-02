@@ -18,7 +18,7 @@ describe DeprecatedAlias do
 
   let(:deprecation_warning) do
     <<~MSG
-      special_key is deprecated and will be removed in a future OpenProject version.
+      special_key is deprecated and will be removed in a future ProyeksiApp version.
 
       Please use secret_key instead.
 

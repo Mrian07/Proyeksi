@@ -8,7 +8,7 @@ robots: index, follow
 
 # Release Notes
 
-We never stop improving OpenProject. Every year there are several stable releases offering new OpenProject features.
+We never stop improving ProyeksiApp. Every year there are several stable releases offering new ProyeksiApp features.
 
 Stay up to date and get an overview of the new features included in the releases.
 
@@ -397,7 +397,7 @@ Release date: 2019-06-13
 - Fixed: Cannot create new boards in installations with relative_url_root set [[#30370](https://community.openproject.com/wp/30370)]
 - Fixed: Sass compilation fails on packaged installations with relative_url_root set [[#30372](https://community.openproject.com/wp/30372)]
 - Fixed: Chrome is logged out when accessing pages with images on S3 storage [[#28652](https://community.openproject.com/wp/28652)]
-- Fixed: OpenProject logo on My page does not redirect to landing page [[#30376](https://community.openproject.com/wp/30376)]
+- Fixed: ProyeksiApp logo on My page does not redirect to landing page [[#30376](https://community.openproject.com/wp/30376)]
 - Fixed: The PDF export is cut off after the first page [[#29929](https://community.openproject.com/wp/29929)]
 
 [Release Notes](9-0-2/)
@@ -442,7 +442,7 @@ Release date: 2019-06-06
 
 ## Older versions
 
-The following list contains all older releases including OpenProject 3.0, sorted by their release date
+The following list contains all older releases including ProyeksiApp 3.0, sorted by their release date
 
   - [8.3.2](8-3-2/)
   - [8.3.1](8-3-1/)

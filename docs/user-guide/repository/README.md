@@ -4,7 +4,7 @@
 sidebar_navigation:
   title: Repository
   priority: 700
-description: Manage repositories with SVN or GIT in OpenProject.
+description: Manage repositories with SVN or GIT in ProyeksiApp.
 robots: index, follow
 keywords: svn, git, repository management
 ---
@@ -19,11 +19,11 @@ keywords: svn, git, repository management
 
 ## Repository browser view
 
-An important part of working on a project as a team is sharing files and source code. Keeping track of the latest versions can sometimes be a challenge. Therefore, OpenProject provides two types of version control systems (Git and Subversion) which – after being properly configured – can be used to store relevant data in the different projects.
+An important part of working on a project as a team is sharing files and source code. Keeping track of the latest versions can sometimes be a challenge. Therefore, ProyeksiApp provides two types of version control systems (Git and Subversion) which – after being properly configured – can be used to store relevant data in the different projects.
 
-In OpenProject you can view the files under *Repository*. Please keep in mind that from your OpenProject website you can only view or download the files. For committing new files you need an SVN- or Git-client.
+In ProyeksiApp you can view the files under *Repository*. Please keep in mind that from your ProyeksiApp website you can only view or download the files. For committing new files you need an SVN- or Git-client.
 
-In order to be able to edit files and to upload the updated versions to repository, you need to check out your repository. The following steps assume you have configured your OpenProject repository to work with subversion (but many of the options are very similar or identical when using Git). Please check out the repository and save it locally through an SVN client of your choice.
+In order to be able to edit files and to upload the updated versions to repository, you need to check out your repository. The following steps assume you have configured your ProyeksiApp repository to work with subversion (but many of the options are very similar or identical when using Git). Please check out the repository and save it locally through an SVN client of your choice.
 
 ![User-guide_repository](User-guide_repository.png)
 
@@ -52,9 +52,9 @@ In the commit message you can reference a workpackage ID (e.g. #1234). In the re
 In any textile field you can reference revisions by putting an "r" in front of the revision number (e.g. r123).
 
 
-## Configure Repositories in OpenProject
+## Configure Repositories in ProyeksiApp
 
-Please see our system admin guide [how to configure repositories in OpenProject](../../system-admin-guide/system-settings/repositories/).
+Please see our system admin guide [how to configure repositories in ProyeksiApp](../../system-admin-guide/system-settings/repositories/).
 
 
 

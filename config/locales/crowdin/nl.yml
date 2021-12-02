@@ -28,8 +28,8 @@ nl:
         main-menu-hover-font-color: "Lettertype hoofdmenu bij zweven"
         main-menu-border-color: "Hoofd menu rand"
       custom_colors: "Aangepaste kleuren"
-      customize: "Aanpassen van uw OpenProject installatie met uw eigen logo. Opmerking: Dit logo zal toegankelijk worden voor het publiek."
-      enterprise_notice: "Als een speciale 'Bedankt!' voor hun financiële bijdrage aan het ontwikkelen van OpenProject, is deze kleine functie alleen beschikbaar voor Enterprise Edition ondersteuning abonnees."
+      customize: "Aanpassen van uw ProyeksiApp installatie met uw eigen logo. Opmerking: Dit logo zal toegankelijk worden voor het publiek."
+      enterprise_notice: "Als een speciale 'Bedankt!' voor hun financiële bijdrage aan het ontwikkelen van ProyeksiApp, is deze kleine functie alleen beschikbaar voor Enterprise Edition ondersteuning abonnees."
       manage_colors: "Bewerk de kleur selectie opties"
       instructions:
         alternative-color: "Sterke accentkleur, meestal gebruikt voor de belangrijkste knop op een scherm."
@@ -81,34 +81,34 @@ nl:
       name: Willekeurige naam van de LDAP-verbinding
       host: LDAP hostnaam of IP-adres
       login_map: De attribuut sleutel in LDAP, gebruikt om de unieke gebruiker inlog te identificeren. Meestal zal dit `uid` of `samAccountName` zijn.
-      generic_map: De attribuut sleutel in LDAP die is toegewezen aan het OpenProject `%{attribute}` attribuut
-      admin_map_html: "Optioneel: De attribuut sleutel in LDAP dat <strong>indien aanwezig</strong> de OpenProject gebruiker markeert als een beheerder. Laat leeg bij twijfel."
+      generic_map: De attribuut sleutel in LDAP die is toegewezen aan het ProyeksiApp `%{attribute}` attribuut
+      admin_map_html: "Optioneel: De attribuut sleutel in LDAP dat <strong>indien aanwezig</strong> de ProyeksiApp gebruiker markeert als een beheerder. Laat leeg bij twijfel."
       system_user_dn_html: |
         Vul de DN van de systeemgebruiker in gebruikt voor alleen-lezen toegang.
         <br/>
         Voorbeeld: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Voer het bindwachtwoord van de systeemgebruiker in
       base_dn: |
-        Voer de Basis DN in van de subboom in LDAP waar u wilt dat OpenProject zoekt naar gebruikers en groepen. OpenProject zal filteren op opgegeven gebruikersnamen in deze subboom alleen.
+        Voer de Basis DN in van de subboom in LDAP waar u wilt dat ProyeksiApp zoekt naar gebruikers en groepen. ProyeksiApp zal filteren op opgegeven gebruikersnamen in deze subboom alleen.
         Voorbeeld: ou=users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        Als u dit selectievakje aanvinkt, zal OpenProject automatisch nieuwe gebruikers aanmaken van hun LDAP-items wanneer ze eerst verifiëren met OpenProject.
-        Laat dit uitgevinkt om alleen bestaande accounts in OpenProject te laten verifiëren via LDAP!
+        Als u dit selectievakje aanvinkt, zal ProyeksiApp automatisch nieuwe gebruikers aanmaken van hun LDAP-items wanneer ze eerst verifiëren met ProyeksiApp.
+        Laat dit uitgevinkt om alleen bestaande accounts in ProyeksiApp te laten verifiëren via LDAP!
     connection_encryption: 'Verbinding encryptie'
     system_account: 'Systeem account'
     system_account_legend: |
-      OpenProject vereist alleen-lezen toegang via een systeemaccount om gebruikers en groepen in uw LDAP-boomstructuur op te zoeken.
+      ProyeksiApp vereist alleen-lezen toegang via een systeemaccount om gebruikers en groepen in uw LDAP-boomstructuur op te zoeken.
       Specificeer a.u.b. de bindgegevens voor deze systeemgebruiker in de volgende sectie.
     ldap_details: 'LDAP details'
     user_settings: 'Attribuut toewijzen'
     user_settings_legend: |
-      De volgende velden zijn gerelateerd aan hoe gebruikers worden aangemaakt in OpenProject van LDAP items en welke LDAP attributen worden gebruikt om de attributen van een OpenProject gebruiker te definiëren (attribuut toewijzing).
+      De volgende velden zijn gerelateerd aan hoe gebruikers worden aangemaakt in ProyeksiApp van LDAP items en welke LDAP attributen worden gebruikt om de attributen van een ProyeksiApp gebruiker te definiëren (attribuut toewijzing).
     tls_mode:
       plain: 'geen'
       simple_tls: 'eenvoudige_tls'
@@ -519,7 +519,7 @@ nl:
         confirmation: "komt niet overeen met %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "bestaat niet."
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "geen toegang."
         error_readonly: "werd geprobeerd te schrijven maar is niet schrijfbaar."
         email: "is geen geldig e-mailadres."
@@ -866,7 +866,7 @@ nl:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1186,7 +1186,7 @@ nl:
   error_can_not_unarchive_project: "Dit project kan niet worden gedearchiveerd: %{errors}"
   error_check_user_and_role: "Kies een gebruiker en een rol."
   error_code: "Fout %{code}"
-  error_cookie_missing: 'De cookie voor OpenProject ontbreekt. Zorg ervoor dat cookies zijn ingeschakeld aangezien deze toepassing anders niet goed zal functioneren.'
+  error_cookie_missing: 'De cookie voor ProyeksiApp ontbreekt. Zorg ervoor dat cookies zijn ingeschakeld aangezien deze toepassing anders niet goed zal functioneren.'
   error_custom_option_not_found: "Optie bestaat niet."
   error_enterprise_activation_user_limit: "Uw account kon niet worden geactiveerd (gebruikerslimiet bereikt). Neem contact op met uw beheerder om toegang te krijgen."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1200,7 +1200,7 @@ nl:
   error_work_package_done_ratios_not_updated: "Werkpakket gedaan ratio's niet bijgewerkt."
   error_work_package_not_found_in_project: "Het werkpakket werd niet gevonden of maakt geen deel uit van dit project"
   error_must_be_project_member: "moet een project lid zijn"
-  error_migrations_are_pending: "Uw OpenProject installatie heeft database migraties in afwachting. U heeft waarschijnlijk de migraties gemist tijdens uw laatste upgrade. Controleer a.u.b. de upgrade gids om uw installatie goed bij te werken."
+  error_migrations_are_pending: "Uw ProyeksiApp installatie heeft database migraties in afwachting. U heeft waarschijnlijk de migraties gemist tijdens uw laatste upgrade. Controleer a.u.b. de upgrade gids om uw installatie goed bij te werken."
   error_migrations_visit_upgrade_guides: "Bezoek onze upgrade gids a.u.b."
   error_no_default_work_package_status: "Geen standaard werkpakket status is gedefinieerd. Controleer uw configuratie (Ga naar 'Administratie-> werkpakket statussen')."
   error_no_type_in_project: "Er is geen type gekoppeld aan dit project. Controleer de projectinstellingen."
@@ -1274,7 +1274,7 @@ nl:
       no_visible_projects: "Er zijn geen zichtbare projecten binnen deze instantie."
       users: "Nieuwste geregistreerde gebruikers in deze instantie."
     blocks:
-      community: "OpenProject gemeenschap"
+      community: "ProyeksiApp gemeenschap"
       upsale:
         title: "Upgrade naar Enterprise Edition"
         more_info: "Meer informatie"
@@ -1285,7 +1285,7 @@ nl:
       faq: "Veelgestelde vragen (FAQ)"
       glossary: "Woordenlijst"
       shortcuts: "Snelkoppelingen"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Gemeenschapsforum"
       newsletter: "Beveiligingswaarschuwingen / nieuwsbrief"
   image_conversion:
@@ -1326,9 +1326,9 @@ nl:
         watched: "Je volgt %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1337,7 +1337,7 @@ nl:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Nieuws'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1650,7 +1650,7 @@ nl:
   label_open_menu: "Menu openen"
   label_open_work_packages: "Open"
   label_open_work_packages_plural: "Open"
-  label_openproject_website: "OpenProject website"
+  label_openproject_website: "ProyeksiApp website"
   label_optional_description: "Omschrijving"
   label_options: "Opties"
   label_other: "Overige"
@@ -1950,17 +1950,17 @@ nl:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "Om uw wachtwoord te wijzigen, klikt u op op de volgende link:"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Blader gerust door ons youtube kanaal (%{youtube_link}) waar we een webinar (%{webinar_link})
-    en "Aan de slag gaan" video's (%{get_started_link}) voorzien om uw eerste stappen in OpenProject zo eenvoudig mogelijk te maken.
+    en "Aan de slag gaan" video's (%{get_started_link}) voorzien om uw eerste stappen in ProyeksiApp zo eenvoudig mogelijk te maken.
     <br />
     Als u nog vragen heeft, raadpleeg dan onze documentatie (%{documentation_link}) of neem contact op met uw beheerder.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} werkpakket(ten) die aan u zijn toegewezen bereiken in de volgende %{days} dagen hun uiterste datum:"
   mail_body_group_reminder: "%{count} werkpakket(ten) die zijn toegewezen aan groep \"%{group}\" zullen in de komende %{days} dagen klaar zijn:"
@@ -1999,13 +1999,13 @@ nl:
   mail_user_activation_limit_reached:
     subject: Activering gebruikerslimiet bereikt
     message: |
-      Een nieuwe gebruiker (%{email}) heeft geprobeerd om een account in een OpenProject omgeving dat u beheerd (%{host}) te maken. De gebruiker kan het account niet activeren omdat het maximum aantal gebruikers is bereikt.
+      Een nieuwe gebruiker (%{email}) heeft geprobeerd om een account in een ProyeksiApp omgeving dat u beheerd (%{host}) te maken. De gebruiker kan het account niet activeren omdat het maximum aantal gebruikers is bereikt.
     steps:
       label: "Als u wilt dat de gebruiker ja inloggen kunt in u: "
       a: "Upgrade uw abbonement ([here](upgrade_url))" #here turned into a link
       b: "Vergrendelen of verwijderen van een bestaande gebruiker ([here](users_url))" #here turned into a link
   more_actions: "Meer functies"
-  noscript_description: "U moet JavaScript activeren om OpenProject te kunnen gebruiken!"
+  noscript_description: "U moet JavaScript activeren om ProyeksiApp te kunnen gebruiken!"
   noscript_heading: "JavaScript uitgeschakeld"
   noscript_learn_more: "Meer informatie"
   notice_accessibility_mode: De toegankelijkheidsmodus kan worden ingeschakeld in de [settings](url) van uw account.
@@ -2069,7 +2069,7 @@ nl:
   notice_wont_delete_auth_source: De verificatiemodus kan niet worden verwijderd, zolang gebruikers het nog steeds gebruiken.
   notice_project_cannot_update_custom_fields: "U kunt de beschikbare aangepaste projectvelden niet bijwerken. Het project is ongeldig: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Deze pagina is automatisch gegenereerd tijdens het bijwerken van OpenProject. Het bevat alle bijlagen die eerder gekoppeld waren aan de %{container_type} "%{container_name}".
+    Deze pagina is automatisch gegenereerd tijdens het bijwerken van ProyeksiApp. Het bevat alle bijlagen die eerder gekoppeld waren aan de %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2092,9 +2092,9 @@ nl:
           tb: "TB"
   onboarding:
     heading_getting_started: "Krijg een overzicht"
-    text_getting_started_description: "Krijg een overzicht van project management en team samenwerking met OpenProject."
+    text_getting_started_description: "Krijg een overzicht van project management en team samenwerking met ProyeksiApp."
     text_show_again: "U kunt deze video van het helpmenu opnieuw starten"
-    welcome: "Welkom bij OpenProject"
+    welcome: "Welkom bij ProyeksiApp"
     select_language: "Gelieve uw taal te kiezen"
   permission_add_work_package_notes: "Notities toevoegen"
   permission_add_work_packages: "Werkpakketten toevoegen"
@@ -2153,7 +2153,7 @@ nl:
   permission_select_project_modules: "Selecteer project modules"
   permission_manage_types: "Selecteer typen"
   permission_view_calendar: "Weergave agenda"
-  permission_view_changesets: "Bekijk opslagplaats wijzigingen in OpenProject"
+  permission_view_changesets: "Bekijk opslagplaats wijzigingen in ProyeksiApp"
   permission_view_commit_author_statistics: "Bekijk de commit auteur statistieken"
   permission_view_work_package_watchers: "Lijst van de watchers weergave"
   permission_view_work_packages: "Bekijk werkpakketten"
@@ -2235,7 +2235,7 @@ nl:
     destroy:
       confirmation: "Als u doorgaat, wordt de beheerde opslagplaats permanent verwijderd."
       info: "Het verwijderen van de opslagplaats is een onomkeerbare actie."
-      info_not_managed: "Opmerking: Dit zal niet de inhoud verwijderen van deze opslagplaats, aangezien het niet wordt beheerd door OpenProject."
+      info_not_managed: "Opmerking: Dit zal niet de inhoud verwijderen van deze opslagplaats, aangezien het niet wordt beheerd door ProyeksiApp."
       managed_path_note: "De volgende doelmap wordt gewist: %{path}"
       repository_verification: "Voer het project identificatienummer %{identifier} in om de verwijdering van de opslagplaats te verifiëren."
       subtitle: "Wil je echt de %{repository_type} van het project %{project_name} verwijderen?"
@@ -2249,8 +2249,8 @@ nl:
       empty_repository: "De opslagplaats bestaat, maar is leeg. Het bevat nog niet alle revisies."
       exists_on_filesystem: "De opslagplaats doelmap bestaat al in het bestandssysteem."
       filesystem_access_failed: "Er is een fout opgetreden tijdens het toegang verkrijgen tot de opslagplaats in het bestandssysteem: %{message}"
-      not_manageable: "Deze opslagplaats leverancier kan niet worden beheerd door OpenProject."
-      path_permission_failed: "Er is een fout opgetreden tijdens het maken van het volgende pad: %{path}. Zorg ervoor dat OpenProject naar die map kan schrijven."
+      not_manageable: "Deze opslagplaats leverancier kan niet worden beheerd door ProyeksiApp."
+      path_permission_failed: "Er is een fout opgetreden tijdens het maken van het volgende pad: %{path}. Zorg ervoor dat ProyeksiApp naar die map kan schrijven."
       unauthorized: "U bent niet gemachtigd voor toegang tot de opslagplaats of de gebruikersnaam en wachtwoordcombinatie is ongeldig."
       unavailable: "De opslagplaats is niet beschikbaar."
       exception_title: "Geen toegang tot de opslagplaats: %{message}"
@@ -2267,9 +2267,9 @@ nl:
         path_encoding: "Overschrijven Git pad codering (standaard: UTF-8)"
       local_title: "Koppeling van de bestaande lokale Git repository"
       local_url: "Lokale URL"
-      local_introduction: "Als u een bestaande lokale Git repository hebt, kunt u deze koppelen met OpenProject om deze te openen van binnen de toepassing."
-      managed_introduction: "Laat OpenProject een lokaal Git repository automatisch aanmaken en integreren."
-      managed_title: "Git repository geïntegreerd in OpenProject"
+      local_introduction: "Als u een bestaande lokale Git repository hebt, kunt u deze koppelen met ProyeksiApp om deze te openen van binnen de toepassing."
+      managed_introduction: "Laat ProyeksiApp een lokaal Git repository automatisch aanmaken en integreren."
+      managed_title: "Git repository geïntegreerd in ProyeksiApp"
       managed_url: "Beheerde URL"
       path: "Pad naar Git repository"
       path_encoding: "Pad codering"
@@ -2286,19 +2286,19 @@ nl:
     scm_types:
       local: "Koppel een bestaand lokaal repository"
       existing: "Koppel een bestaand repository"
-      managed: "Maak nieuwe repository aan in OpenProject"
+      managed: "Maak nieuwe repository aan in ProyeksiApp"
     storage:
       not_available: "Schijf opslag consumptie is niet beschikbaar voor deze repository."
       update_timeout: "Houd de laatste vereiste vrije schijfruimte voor een repository voor N minuten. Als het tellen van de vereiste schijfruimte van een repository kostbaar is, verhoog dit getal om invloed op de prestaties verminderen."
     subversion:
       existing_title: "Bestaande Subversion-repository"
-      existing_introduction: "Als u een bestaand Subversion repository hebt, kunt u deze koppelen met OpenProject om deze te openen van binnen de toepassing."
+      existing_introduction: "Als u een bestaand Subversion repository hebt, kunt u deze koppelen met ProyeksiApp om deze te openen van binnen de toepassing."
       existing_url: "Bestaande URL"
       instructions:
         managed_url: "Dit is de URL van de beheerde (lokale) Subversion-repository."
         url: "Voer de URL in van de repository. Dit kan ook gericht zijn op een lokaal repository (beginnend met %{local_proto}), of een remote repository. De volgende URL-schema's worden ondersteund:"
-      managed_title: "Geïntegreerd Subversion-repository in OpenProject"
-      managed_introduction: "Laat OpenProject een lokale Subversion repository automatisch aanmaken en integreren."
+      managed_title: "Geïntegreerd Subversion-repository in ProyeksiApp"
+      managed_introduction: "Laat ProyeksiApp een lokale Subversion repository automatisch aanmaken en integreren."
       managed_url: "Beheerde URL"
       password: "Repository wachtwoord"
       username: "Repository-gebruikersnaam"
@@ -2315,7 +2315,7 @@ nl:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Documentation"
   setting_apiv3_docs_enabled: "Documentenpagina inschakelen"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2475,7 +2475,7 @@ nl:
       sentence_connector: "en"
       skip_last_comma: "onwaar"
   text_accessibility_hint: "De toegankelijkheid-modus is ontworpen voor gebruikers die blind, motorisch gehandicapte of een slecht gezichtsvermogen hebben. Voor de laatste gericht zijn elementen speciaal gemarkeerd. Let op, dat de backlog-module is niet beschikbaar in deze modus."
-  text_access_token_hint: "Toegangstokens kunnen u externe toepassingen toegang verlenen tot bronnen in OpenProject."
+  text_access_token_hint: "Toegangstokens kunnen u externe toepassingen toegang verlenen tot bronnen in ProyeksiApp."
   text_analyze: "Verdere analyse: %{subject}"
   text_are_you_sure: "Weet u het zeker?"
   text_are_you_sure_with_children: "Verwijder werk pakket en alle kinderen daarvan?"
@@ -2544,7 +2544,7 @@ nl:
   text_no_notes: "Er is geen commentaar beschikbaar voor dit werkpakket."
   text_notice_too_many_values_are_inperformant: "Opmerking: Meer dan 100 items per pagina weergeven kan de laadtijd van de pagina verhogen."
   text_notice_security_badge_displayed_html: >
-    Opmerking: indien ingeschakeld zal dit een badge weergeven met uw installatiestatus in de <a href="%{information_panel_path}">%{information_panel_label}</a> administratie paneel, en op de homepage. Deze wordt alleen getoond aan beheerders. <br/> De badge zal uw huidige OpenProject versie controleren tegen de officiële OpenProject-database om u te waarschuwen voor updates of bekende kwetsbaarheden. Voor meer informatie over wat de controle biedt, welke gegevens nodig zijn om beschikbare updates te verstrekken en hoe deze controle kan worden uitgeschakeld, bezoek <a href="%{more_info_url}">de configuratiedocumentatie</a>.
+    Opmerking: indien ingeschakeld zal dit een badge weergeven met uw installatiestatus in de <a href="%{information_panel_path}">%{information_panel_label}</a> administratie paneel, en op de homepage. Deze wordt alleen getoond aan beheerders. <br/> De badge zal uw huidige ProyeksiApp versie controleren tegen de officiële ProyeksiApp-database om u te waarschuwen voor updates of bekende kwetsbaarheden. Voor meer informatie over wat de controle biedt, welke gegevens nodig zijn om beschikbare updates te verstrekken en hoe deze controle kan worden uitgeschakeld, bezoek <a href="%{more_info_url}">de configuratiedocumentatie</a>.
   text_own_membership_delete_confirmation: "U staat op het punt om enkele of alle van uw machtigingen te verwijderen en kan dit project daarna mogelijk niet meer bewerken.\nWeet u zeker dat u wilt doorgaan?"
   text_plugin_assets_writable: "Plugin directory schrijfbaar"
   text_powered_by: "Powered by %{link}"
@@ -2552,7 +2552,7 @@ nl:
   text_reassign: "Opnieuw toewijzen aan werkpakket:"
   text_regexp_info: "bijv. ^[A-Z0-9]+$"
   text_regexp_multiline: 'De regex wordt toegepast in een modus met meerdere regels. bijvoorbeeld, ^---\s+'
-  text_repository_usernames_mapping: "Selecteer of update de gebruiker van de OpenProject gelinkt aan elke gebruikersnaam gevonden in het repository log. Gebruikers met de zelfde OpenProject en repository gebruikersnaam of e-mail worden automatisch gelinkt."
+  text_repository_usernames_mapping: "Selecteer of update de gebruiker van de ProyeksiApp gelinkt aan elke gebruikersnaam gevonden in het repository log. Gebruikers met de zelfde ProyeksiApp en repository gebruikersnaam of e-mail worden automatisch gelinkt."
   text_status_changed_by_changeset: "Toegepast in changeset %{value}."
   text_table_difference_description: "In deze tabel worden de enkele %{entries} weergegeven. U kunt het verschil tussen twee vermeldingen bekijken door eerst de bijhorende selectievakjes te selecteren in de tabel. Bij het klikken op de knop onder de tabel worden de verschillen weergegeven."
   text_time_logged_by_changeset: "Toegepast in changeset %{value}."
@@ -2757,7 +2757,7 @@ nl:
     activate_and_reset_failed_logins: "Activeren en opnieuw instellen van mislukte aanmeldingen"
     authentication_provider: "Verificatieprovider"
     authentication_settings_disabled_due_to_external_authentication: >
-      Deze gebruiker wordt geverifieerd via een externe-verificatieprovider, dus er is geen wachtwoord in OpenProject wat moet worden veranderd.
+      Deze gebruiker wordt geverifieerd via een externe-verificatieprovider, dus er is geen wachtwoord in ProyeksiApp wat moet worden veranderd.
     authorization_rejected: "U bent niet toegestaan aan te melden."
     assign_random_password: "Toewijzen van willekeurig wachtwoord (verzonden naar de gebruiker via e-mail)"
     blocked: "tijdelijk geblokkeerd"
@@ -2788,7 +2788,7 @@ nl:
   warning: Waarschuwing
   warning_attachments_not_saved: "%{count} bestanden kunnen niet worden opgeslagen."
   warning_imminent_user_limit: >
-    U heeft meer gebruikers uitgenodigd dan wordt ondersteund in uw huidig abbonement. Uitgenodigde gebruikers kunnen mogelijk niet kunnen inloggen in uw OpenProject omgeving. Voer een <a href="%{upgrade_url}">verhoging van het abbonement uit</a> of blokkeer bestaande gebruikers zodat nieuwe gebruikers kunnen inloggen.
+    U heeft meer gebruikers uitgenodigd dan wordt ondersteund in uw huidig abbonement. Uitgenodigde gebruikers kunnen mogelijk niet kunnen inloggen in uw ProyeksiApp omgeving. Voer een <a href="%{upgrade_url}">verhoging van het abbonement uit</a> of blokkeer bestaande gebruikers zodat nieuwe gebruikers kunnen inloggen.
   warning_registration_token_expired: |
     De activatie e-mail is verlopen. Wij sturen u een nieuwe activatie e-mail naar %{email} gestuurd. Klik op de link in de activatie e-mail om uw account te activeren.
   warning_user_limit_reached: >
@@ -2921,21 +2921,21 @@ nl:
         confidential: "Controleer of de toepassing zal worden gebruikt waar het cliëntgeheim vertrouwelijk kan worden gehouden. Native mobiele apps en Single Page Apps worden verondersteld niet-vertrouwelijk."
         scopes: "Controleer de toepassingsgebieden waartoe u toegang wilt geven. Als geen bereik is geselecteerd, wordt api_v3 aangenomen."
         client_credential_user_id: "Optionele gebruikersID om te impersoneren wanneer klanten deze applicatie gebruiken. Laat leeg om alleen openbare toegang toe te staan"
-        register_intro: "Als u een OAuth API client applicatie voor OpenProject ontwikkelt, kunt u het registreren met dit formulier voor alle gebruikers om te gebruiken."
+        register_intro: "Als u een OAuth API client applicatie voor ProyeksiApp ontwikkelt, kunt u het registreren met dit formulier voor alle gebruikers om te gebruiken."
         default_scopes: ""
     client_id: "Client-ID"
     client_secret_notice: >
-      Dit is de enige keer dat we het cliënt geheim kunnen drukken, let het op en houd het veilig. Het moet als wachtwoord worden behandeld en kan niet later door OpenProject worden opgehaald.
+      Dit is de enige keer dat we het cliënt geheim kunnen drukken, let het op en houd het veilig. Het moet als wachtwoord worden behandeld en kan niet later door ProyeksiApp worden opgehaald.
     authorization_dialog:
       authorize: "Autoriseer"
       cancel: "Annuleren en weigeren van de authorisatie."
       prompt_html: "Autoriseer <strong>%{application_name}</strong> om uw account <em>%{login}</em> te gebruiken?"
       title: "Autoriseer %{application_name}"
       wants_to_access_html: >
-        Deze applicatie vraagt toegang tot uw OpenProject account. <br/> <strong>heeft de volgende machtigingen aangevraagd:</strong>
+        Deze applicatie vraagt toegang tot uw ProyeksiApp account. <br/> <strong>heeft de volgende machtigingen aangevraagd:</strong>
     scopes:
       api_v3: "Volledige API v3 toegang"
-      api_v3_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de OpenProject API v3 om namens u acties uit te voeren."
+      api_v3_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de ProyeksiApp API v3 om namens u acties uit te voeren."
     grants:
       created_date: "Goedgekeurd op"
       scopes: "Machtigingen"
@@ -2951,7 +2951,7 @@ nl:
     client_credentials_impersonation_set_to: "Klant referentiegebruiker ingesteld op"
     client_credentials_impersonation_warning: "Opmerking: Clienten die gebruik maken van de 'Client referenties' stroom in deze applicatie zullen de rechten van deze gebruiker hebben"
     client_credentials_impersonation_html: >
-      Standaard biedt OpenProject OAuth 2.0 autorisatie via %{authorization_code_flow_link}. U kunt optioneel %{client_credentials_flow_link} inschakelen, maar u moet een gebruiker geven wier verzoeken namens zullen worden uitgevoerd.
+      Standaard biedt ProyeksiApp OAuth 2.0 autorisatie via %{authorization_code_flow_link}. U kunt optioneel %{client_credentials_flow_link} inschakelen, maar u moet een gebruiker geven wier verzoeken namens zullen worden uitgevoerd.
     authorization_error: "Er is een autorisatiefout opgetreden."
     revoke_my_application_confirmation: "Weet u zeker dat u deze applicatie wilt verwijderen? Dit zal %{token_count} actief voor deze verwijderen."
     my_registered_applications: "Geregistreerde OAuth toepassingen"

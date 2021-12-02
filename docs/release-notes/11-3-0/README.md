@@ -1,16 +1,16 @@
 ---
-title: OpenProject 11.3.0
+title: ProyeksiApp 11.3.0
 sidebar_navigation:
     title: 11.3.0
 release_version: 11.3.0
 release_date: 2021-06-03
 ---
 
-# OpenProject 11.3.0
+# ProyeksiApp 11.3.0
 
 Release date: 2021-06-03
 
-We released [OpenProject 11.3.0](https://community.openproject.com/versions/1468).
+We released [ProyeksiApp 11.3.0](https://community.openproject.com/versions/1468).
 This new release will bring many new features and bug fixes that will improve classical as well as agile project management. 
 
 <!--more-->
@@ -39,7 +39,7 @@ The **new invite modal for users, groups, and placeholder users** can now be ope
 
 ## GitHub integration
 
-With OpenProject 11.3 we released a new **integration between GitHub and OpenProject**. This integration facilitates the collaboration of developers by connecting the two applications. The new GitHub integration in OpenProject is an individual module that, once activated, will be displayed to you as a tab in the work package details view. All activities taking place on GitHub that are related to the work package, are listed on this new GitHub tab. [Find out more about the OpenProject GitHub integration](../../system-admin-guide/github-integration/).
+With ProyeksiApp 11.3 we released a new **integration between GitHub and ProyeksiApp**. This integration facilitates the collaboration of developers by connecting the two applications. The new GitHub integration in ProyeksiApp is an individual module that, once activated, will be displayed to you as a tab in the work package details view. All activities taking place on GitHub that are related to the work package, are listed on this new GitHub tab. [Find out more about the ProyeksiApp GitHub integration](../../system-admin-guide/github-integration/).
 
 ![github-integration](github-integration.PNG)
 
@@ -80,7 +80,7 @@ For work packages, fields can already be configured as multiple selections for a
 
 ## Create backup from web interface
 
-Users now have the option to **create backups of their OpenProject installation** directly via the web interface. the backup can be triggered via Administration -> Backup. They will receive an email notification with the link to download the backup files with an additional authentication (username/password + 2FA).
+Users now have the option to **create backups of their ProyeksiApp installation** directly via the web interface. the backup can be triggered via Administration -> Backup. They will receive an email notification with the link to download the backup files with an additional authentication (username/password + 2FA).
 
 
 
@@ -182,7 +182,7 @@ Users now have the option to **create backups of their OpenProject installation*
 - Fixed: Shortcut "p" (to open project dropdown list) not working \[[#37305](https://community.openproject.com/wp/37305)\]
 - Fixed: "(None)" option missing for parent project drop down select \[[#37398](https://community.openproject.com/wp/37398)\]
 - Fixed: Multi-select fields do not adjust height (cannot see values) \[[#37404](https://community.openproject.com/wp/37404)\]
-- Fixed: OpenProject backup completes partially with file permission errors \[[#37440](https://community.openproject.com/wp/37440)\]
+- Fixed: ProyeksiApp backup completes partially with file permission errors \[[#37440](https://community.openproject.com/wp/37440)\]
 - Fixed: Github user avatar not rendered correctly \[[#37444](https://community.openproject.com/wp/37444)\]
 - Fixed: Password confirmation during backup token reset not working \[[#37445](https://community.openproject.com/wp/37445)\]
 - Fixed: Several problem with the header in mobile view \[[#37452](https://community.openproject.com/wp/37452)\]
@@ -198,22 +198,22 @@ Users now have the option to **create backups of their OpenProject installation*
 
 ## Installation and Updates
 
-To use OpenProject 11.3 right away, create a free trial instance for our [OpenProject Enterprise cloud.](https://start.openproject.com/)
+To use ProyeksiApp 11.3 right away, create a free trial instance for our [ProyeksiApp Enterprise cloud.](https://start.openproject.com/)
 
-Prefer to run OpenProject 11.3 in your own infrastructure?
- Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 11.3 in your own infrastructure?
+ Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from a Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/enterprise-edition/)
 
-## Migrating to OpenProject 11.3
+## Migrating to ProyeksiApp 11.3
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 11.3.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 11.3.
 
-We update hosted OpenProject environments (Enterprise cloud) automatically.
+We update hosted ProyeksiApp environments (Enterprise cloud) automatically.
 
 ## Support
 
-You will find useful information in the OpenProject [Documentation](../../../) or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
+You will find useful information in the ProyeksiApp [Documentation](../../../) or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
 
 ## Credits
 

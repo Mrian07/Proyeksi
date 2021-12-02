@@ -34,7 +34,7 @@ class Users::ProjectAuthorizationCache
   private
 
   def normalized_permission_name(action)
-    OpenProject::AccessControl.permission(action)
+    ProyeksiApp::AccessControl.permission(action)
   end
 
   def projects_by_actions

@@ -15,7 +15,7 @@ declare global {
   interface Window {
     RevitBridge:{
       sendMessageToRevit:(messageType:string, trackingId:string, payload:string) => void,
-      sendMessageToOpenProject:(message:string) => void
+      sendMessageToProyeksiApp:(message:string) => void
     };
   }
 }
@@ -106,7 +106,7 @@ export class RevitBridgeService extends ViewerBridgeService {
   }
 
   private hookUpRevitListener() {
-    window.RevitBridge.sendMessageToOpenProject = (messageString:string) => {
+    window.RevitBridge.sendMessageToProyeksiApp = (messageString:string) => {
       const { messageType, trackingId, messagePayload } = JSON.parse(messageString) as {
         messageType:string,
         trackingId:string,

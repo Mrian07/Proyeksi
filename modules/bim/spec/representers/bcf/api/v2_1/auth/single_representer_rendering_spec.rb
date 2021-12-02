@@ -6,13 +6,13 @@ require_relative '../shared_examples'
 
 describe Bim::Bcf::API::V2_1::Auth::SingleRepresenter, 'rendering' do
   let(:instance) { described_class.new(nil) }
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 
   subject { instance.to_json }
 
   describe 'attributes' do
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:rails_relative_url_root)
         .and_return('/blubs')
     end

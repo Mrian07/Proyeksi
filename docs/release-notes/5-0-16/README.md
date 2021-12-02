@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.16
+  title: ProyeksiApp 5.0.16
   sidebar_navigation:
       title: 5.0.16
   release_version: 5.0.16
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.16
+# ProyeksiApp 5.0.16
 
-OpenProject 5.0.16 contains several bug
+ProyeksiApp 5.0.16 contains several bug
     fixes:
 
   - <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-7">Work

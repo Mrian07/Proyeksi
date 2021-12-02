@@ -34,7 +34,7 @@ module TwoFactorAuthentication
     end
 
     def self.manager
-      OpenProject::TwoFactorAuthentication::TokenStrategyManager
+      ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager
     end
   end
 end

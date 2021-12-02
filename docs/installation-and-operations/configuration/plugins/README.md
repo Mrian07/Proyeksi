@@ -7,10 +7,10 @@ sidebar_navigation:
 # Adding plugins (DEB/RPM packages)
 
 <div class="alert alert-info" role="alert">
-**Note**: this guide only applies if you've installed OpenProject using our DEB/RPM packages.
+**Note**: this guide only applies if you've installed ProyeksiApp using our DEB/RPM packages.
 </div>
 
-A number of plugins exist for use with OpenProject. Most plugins that are maintained by us are shipping with OpenProject, however there are several plugins contributed by the community.
+A number of plugins exist for use with ProyeksiApp. Most plugins that are maintained by us are shipping with ProyeksiApp, however there are several plugins contributed by the community.
 
 Previously, using them in a packaged installation was not possible without losing your changes on every upgrade. With the following steps, you can now use third party plugins.
 
@@ -20,7 +20,7 @@ Previously, using them in a packaged installation was not possible without losin
 
 ## Add a custom Gemfile
 
-If you have a plugin you wish to add to your packaged OpenProject installation, create a separate Gemfile with the Gem dependencies, such as the following:
+If you have a plugin you wish to add to your packaged ProyeksiApp installation, create a separate Gemfile with the Gem dependencies, such as the following:
 
 ```
 group :opf_plugins do

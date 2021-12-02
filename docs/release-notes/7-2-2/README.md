@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.2.2
+  title: ProyeksiApp 7.2.2
   sidebar_navigation:
       title: 7.2.2
   release_version: 7.2.2
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 7.2.2
+# ProyeksiApp 7.2.2
 
 ## Bug fixes (6)
 
@@ -49,7 +49,7 @@ at [GitHub](https://github.com/opf/openproject/tree/v7.2.2).
 
 ## A note on CentOS 7 packages
 
-If you’re using CentOS 7 and want to upgrade to OpenProject 7.2 or later
+If you’re using CentOS 7 and want to upgrade to ProyeksiApp 7.2 or later
 versions, please also upgrade your package source according to
 the [Download and
 Installation](https://www.openproject.org/download-and-installation/) page.  

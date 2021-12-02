@@ -9,10 +9,10 @@ describe Setting, type: :model do
     described_class.destroy_all
   end
 
-  # OpenProject specific defaults that are set in settings.yml
-  describe "OpenProject's default settings" do
-    it 'has OpenProject as application title' do
-      expect(described_class.app_title).to eq 'OpenProject'
+  # ProyeksiApp specific defaults that are set in settings.yml
+  describe "ProyeksiApp's default settings" do
+    it 'has ProyeksiApp as application title' do
+      expect(described_class.app_title).to eq 'ProyeksiApp'
     end
 
     it 'allows users to register themselves' do
@@ -175,7 +175,7 @@ describe Setting, type: :model do
 
         # Falls back to default values, but hitting cache
         value = described_class.app_title
-        expect(described_class.app_title).to eq 'OpenProject'
+        expect(described_class.app_title).to eq 'ProyeksiApp'
         expect(value).to eq(described_class.app_title)
 
         # Settings are empty by default
@@ -184,10 +184,10 @@ describe Setting, type: :model do
       end
 
       it 'clears the cache when writing a setting' do
-        expect(described_class.app_title).to eq 'OpenProject'
+        expect(described_class.app_title).to eq 'ProyeksiApp'
         expect(RequestStore.read(:cached_settings)).to eq({})
 
-        new_title = 'OpenProject with changed title'
+        new_title = 'ProyeksiApp with changed title'
         described_class.app_title = new_title
         expect(RequestStore.read(:cached_settings)).to be_nil
         expect(Rails.cache.read(cache_key)).to be_nil

@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Wiki
   priority: 800
-description: Create and manage a wiki in OpenProject.
+description: Create and manage a wiki in ProyeksiApp.
 robots: index, follow
 keywords: wiki, documentation
 ---
@@ -18,17 +18,17 @@ In a project wiki you can collaboratively create and document information with y
 | [General wiki information](#general-wiki-information)        | How to format a wiki page.                                   |
 | [Image handling](#image-handling)                            | How in insert images in the wiki.                            |
 | [Macros](#macros)                                            | How to add more information to a wiki page, e.g. work package create button or work package list. |
-| [Links to OpenProject resources](#links-to-openproject-resources) | How to link to OpenProject resources, e.g. work packages, members or projects. |
+| [Links to ProyeksiApp resources](#links-to-openproject-resources) | How to link to ProyeksiApp resources, e.g. work packages, members or projects. |
 
 ## General wiki information
 
-OpenProject's wiki and all other text input fields include a WYSIWYG editor, powered by [CKSource CKEditor5](https://ckeditor.com/ckeditor-5/). The underlying format is GitHub-flavored CommonMark (GFM).
+ProyeksiApp's wiki and all other text input fields include a WYSIWYG editor, powered by [CKSource CKEditor5](https://ckeditor.com/ckeditor-5/). The underlying format is GitHub-flavored CommonMark (GFM).
 
-All previous textile-based content will be migrated when upgrading to OpenProject 8.0.
+All previous textile-based content will be migrated when upgrading to ProyeksiApp 8.0.
 
 ### Basic formatting
 
-The text editor in OpenProject supports basic text styles, such as bold and italic formatting, headings, strikethrough, inline code, and quotes as well as inline image handling. Pasting content such as images or rich text is also supported, while unsupported styling will be stripped by the editor.
+The text editor in ProyeksiApp supports basic text styles, such as bold and italic formatting, headings, strikethrough, inline code, and quotes as well as inline image handling. Pasting content such as images or rich text is also supported, while unsupported styling will be stripped by the editor.
 
 Simply type in your text in the input field, highlight a text and select the formatting via the toolbar on top.
 
@@ -50,11 +50,11 @@ When you have a widget selected, you can remove or cut it. You can create a newl
 
 ### Code Blocks
 
-As CKEditor5 currently does not provide support for code blocks, OpenProject can display, but not edit code blocks within the CKEditor instance. A code block can be edited through a modal window within a CodeMirror editor instance. This has the advantage of providing syntax highlighting and code sensing (for supported languages).
+As CKEditor5 currently does not provide support for code blocks, ProyeksiApp can display, but not edit code blocks within the CKEditor instance. A code block can be edited through a modal window within a CodeMirror editor instance. This has the advantage of providing syntax highlighting and code sensing (for supported languages).
 
 ### Tables
 
-The GFM extension of the CommonMark specs adds a definition for table syntax which the CKEditor build of OpenProject supports. This definition requires all tables to have a heading row. For tables created with CKEditor without heading rows, a HTML table is output instead. This matches the behavior of, e.g., GitHub.
+The GFM extension of the CommonMark specs adds a definition for table syntax which the CKEditor build of ProyeksiApp supports. This definition requires all tables to have a heading row. For tables created with CKEditor without heading rows, a HTML table is output instead. This matches the behavior of, e.g., GitHub.
 
 ### Autoformatting
 
@@ -67,7 +67,7 @@ CKEditor5 allows certain CommonMark-like autoformatting keyboard strokes:
 
 ## Image handling
 
-In supported resources of OpenProject where attachments are allowed, you can add images to the page by either
+In supported resources of ProyeksiApp where attachments are allowed, you can add images to the page by either
 
 - using the toolbar button,
 - pasting an image from your clipboard,
@@ -77,7 +77,7 @@ The attachment will be automatically uploaded and stored as an attachment.
 
 ## Macros
 
-OpenProject has supported macros on textile formatted pages and continues to do so with the WYSIWYG editor. Note that macros are not expanded while editing the page, instead a placeholder is shown.
+ProyeksiApp has supported macros on textile formatted pages and continues to do so with the WYSIWYG editor. Note that macros are not expanded while editing the page, instead a placeholder is shown.
 
 ### Table of contents
 
@@ -105,9 +105,9 @@ Use it to embed views in other pages, create reporting of multiple results, or t
 
 In some resources such as work packages or comments, the editor does not exhibit all functionality such as macros or image upload.
 
-## Links to OpenProject resources
+## Links to ProyeksiApp resources
 
-As with the textile formatting syntax, you can link to other resources within OpenProject using the same shortcuts as before. Create links to a:
+As with the textile formatting syntax, you can link to other resources within ProyeksiApp using the same shortcuts as before. Create links to a:
 
     wiki page: [[Wiki page]]
     wiki page with separate link name: [[Wiki page|The text of the link]]

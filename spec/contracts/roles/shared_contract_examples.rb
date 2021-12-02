@@ -53,13 +53,13 @@ shared_examples_for 'roles contract' do
       let(:global_permissions) { [:perm3] }
 
       before do
-        allow(OpenProject::AccessControl)
+        allow(ProyeksiApp::AccessControl)
           .to receive(:permissions)
           .and_return(all_permissions)
-        allow(OpenProject::AccessControl)
+        allow(ProyeksiApp::AccessControl)
           .to receive(:global_permissions)
           .and_return(global_permissions)
-        allow(OpenProject::AccessControl)
+        allow(ProyeksiApp::AccessControl)
           .to receive(:public_permissions)
           .and_return(public_permissions)
       end
@@ -74,7 +74,7 @@ shared_examples_for 'roles contract' do
       let(:role) { global_role }
 
       before do
-        allow(OpenProject::AccessControl)
+        allow(ProyeksiApp::AccessControl)
           .to receive(:global_permissions)
           .and_return(all_permissions)
       end

@@ -19,7 +19,7 @@ module AuthenticationHelpers
       allow(EnterpriseToken).to receive(:show_banners?).and_return(true)
     end
 
-    allow(OpenProject::Configuration).to receive(:ee_manager_visible?).and_return(false)
+    allow(ProyeksiApp::Configuration).to receive(:ee_manager_visible?).and_return(false)
   end
 
   def without_enterprise_token

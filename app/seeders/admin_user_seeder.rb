@@ -25,7 +25,7 @@ class AdminUserSeeder < Seeder
       user.admin = true
       user.login = 'admin'
       user.password = 'admin'
-      user.firstname = 'OpenProject'
+      user.firstname = 'ProyeksiApp'
       user.lastname = 'Admin'
       user.mail = ENV['ADMIN_EMAIL'].presence || 'admin@example.net'
       user.language = I18n.locale.to_s

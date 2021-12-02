@@ -21,7 +21,7 @@ module API
         end
 
         link :prepareAttachment do
-          next unless OpenProject::Configuration.direct_uploads?
+          next unless ProyeksiApp::Configuration.direct_uploads?
 
           {
             href: api_v3_paths.prepare_new_attachment_upload,

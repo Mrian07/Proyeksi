@@ -6,7 +6,7 @@ sidebar_navigation:
 
 # Changing to BIM Edition
 
-An existing OpenProject on-premises (self hosted) installation can easily be switched to the BIM Edition. The BIM Edition extends the capabilities of a normal OpenProject installation with special features for the construction industry.
+An existing ProyeksiApp on-premises (self hosted) installation can easily be switched to the BIM Edition. The BIM Edition extends the capabilities of a normal ProyeksiApp installation with special features for the construction industry.
 
 Switching to the BIM Edition will not affect your existing data. Your team will be able to continue working just as before. By switching to the BIM edition additional features will become available  when you activate the "BCF" module in the [project's settings](../../user-guide/projects/project-settings/modules).
 
@@ -16,12 +16,12 @@ To choose the BIM edition during installation use [this instruction](../installa
 
 ### Backup and upgrade
 
-First, backup your data and update your installation to the latest OpenProject version as described in [Upgrading](../operation/upgrading).
+First, backup your data and update your installation to the latest ProyeksiApp version as described in [Upgrading](../operation/upgrading).
 Make sure that you not only install the new package but also run `sudo openproject configure` as described before proceeding.
 
 ### Switching to BIM Edition
 
-Now that your OpenProject instance is up to date, you can _reconfigure_ it to be a BIM Edition.
+Now that your ProyeksiApp instance is up to date, you can _reconfigure_ it to be a BIM Edition.
 
 On the command line of your server run the following command. It will open a wizard that
 guides you through through the most important installation settings of your instance.
@@ -52,8 +52,8 @@ _Settings for new projects_ activate the checkbox for _BCF_.
 For BCF management process you might want to add special work package types to your
 installation.
 
-In freshly created OpenProject BIM instances those types are already present. However,
-as you have just switched from a normal OpenProject installation you will need to create
+In freshly created ProyeksiApp BIM instances those types are already present. However,
+as you have just switched from a normal ProyeksiApp installation you will need to create
 those work package types by hand. Please find detailed instructions on how to add work 
 package types in [Manage Work Package Types](../../system-admin-guide/manage-work-packages/work-package-types/).
 
@@ -71,9 +71,9 @@ We recommend that each type has the following status options:
 - Resolved (color `'green-3`)
 - Closed (color `'gray-3`)
 
-### Activating the "OpenProject BIM" theme (optional)
+### Activating the "ProyeksiApp BIM" theme (optional)
 
-OpenProject installations with a valid Enterprise Edition token can switch to the BIM 
+ProyeksiApp installations with a valid Enterprise Edition token can switch to the BIM 
 theme.
 
-Go to _-> Administration -> Design_ and from the _Themes_ drop down menu choose _OpenProject BIM_.
+Go to _-> Administration -> Design_ and from the _Themes_ drop down menu choose _ProyeksiApp BIM_.

@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class AvailableWorkPackagesOnCreateAPI < ::API::OpenProjectAPI
+      class AvailableWorkPackagesOnCreateAPI < ::API::ProyeksiAppAPI
         after_validation do
           authorize_any %i[log_time],
                         global: true

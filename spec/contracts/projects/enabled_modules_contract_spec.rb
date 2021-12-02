@@ -23,7 +23,7 @@ describe Projects::EnabledModulesContract do
   let(:permissions) { %i[select_project_modules] }
 
   before do
-    allow(OpenProject::AccessControl)
+    allow(ProyeksiApp::AccessControl)
       .to receive(:modules)
       .and_return(ac_modules)
   end

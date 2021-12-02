@@ -239,7 +239,7 @@ describe 'API v3 Grids resource for Board Grids', type: :request, content_type: 
 
       it 'does not persist the changes to widgets' do
         expect(manage_board_views_grid.reload.widgets.count)
-          .to eql OpenProject::Boards::GridRegistration.defaults[:widgets].size
+          .to eql ProyeksiApp::Boards::GridRegistration.defaults[:widgets].size
       end
     end
 

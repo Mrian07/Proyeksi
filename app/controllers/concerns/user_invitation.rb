@@ -67,7 +67,7 @@ module UserInvitation
       reset_login user_id
 
       Token::Invitation.create!(user_id: user_id).tap do |token|
-        OpenProject::Notifications.send Events.user_reinvited, token
+        ProyeksiApp::Notifications.send Events.user_reinvited, token
       end
     end
   end
@@ -92,7 +92,7 @@ module UserInvitation
     user, token = user_invitation user
 
     if token
-      OpenProject::Notifications.send(Events.user_invited, token)
+      ProyeksiApp::Notifications.send(Events.user_invited, token)
 
       user
     end
@@ -100,7 +100,7 @@ module UserInvitation
 
   ##
   # Creates an invited user with the given email address.
-  # If no first and last is given it will default to 'OpenProject User'
+  # If no first and last is given it will default to 'ProyeksiApp User'
   # for the first name and 'To-be' for the last name.
   # The default login is the email address.
   #

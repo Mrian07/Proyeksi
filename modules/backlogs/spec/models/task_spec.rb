@@ -15,7 +15,7 @@ describe Task, type: :model do
 
   before(:each) do
     allow(Setting)
-      .to receive(:plugin_openproject_backlogs)
+      .to receive(:plugin_proyeksiapp_backlogs)
       .and_return({ 'task_type' => task_type.id.to_s })
   end
 

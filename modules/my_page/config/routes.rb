@@ -2,6 +2,6 @@
 
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   get '/my/page', to: 'angular#empty_layout'
 end

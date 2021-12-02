@@ -21,7 +21,7 @@ sl:
         Nova varnostna kopija bo povozila prejšnjo. Samo omejeno število var. kopij lahko v enem dnevu zahtevate.
       last_backup: Zadnja varnostna kopija
       last_backup_from: Zadnja varnostna kopija od
-      title: Varnostno kopiranje OpenProject-a
+      title: Varnostno kopiranje ProyeksiApp-a
       options: Možnosti
       include_attachments: Vključite priloge
       download_backup: Prenos varnostne kopije
@@ -183,7 +183,7 @@ sl:
             label_maximum_users: "Največje število aktivnih uporabnikov"
             label_starts_at: "Se začne z"
             label_expires_at: "Izteče ob"
-            receive_newsletter: Želim prejemati OpenProject  <a target="_blank" href="%{link}">novice</a>.
+            receive_newsletter: Želim prejemati ProyeksiApp  <a target="_blank" href="%{link}">novice</a>.
             taken_domain: Možen je le en aktivni preizkus na domeno.
             taken_email: Vsak uporabnik ima na voljo le en preizkus.
           email_not_received: "Niste prejeli e-pošte? E-pošto lahko ponovno pošljete s povezavo na desni."
@@ -197,7 +197,7 @@ sl:
           status_confirmed: "Potrjeno"
           status_waiting: "e-pošta poslana - čakanje na potrditev"
           test_ee: "Preizkusite Enterprise Edition 14 dni zastonj"
-          quick_overview: "Pridobite hiter pregled nad projektnim managementom in skupinskim odločanjem z OpenProject Enterprise Edition."
+          quick_overview: "Pridobite hiter pregled nad projektnim managementom in skupinskim odločanjem z ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Bodite heroj!"
           benefits:
@@ -209,14 +209,14 @@ sl:
             premium_features: "Premium funkcije"
             premium_features_text: "Kanban deske, teme in logotip po meri, grafikoni, inteligentni delovni tokovi z dejanji po meri, iskanje po celotnem besedilu prilog v delovnem paketu in izbira polj po meri."
             professional_support: "Strokovna podpora"
-            professional_support_text: "Pridobite zanesljivo in visoko dotično podporo starejših podpornih inženirjev s strokovnim znanjem o izvajanju OpenProject-a v poslovnih kritičnih okoljih."
+            professional_support_text: "Pridobite zanesljivo in visoko dotično podporo starejših podpornih inženirjev s strokovnim znanjem o izvajanju ProyeksiApp-a v poslovnih kritičnih okoljih."
           button_start_trial: "Začnite z brezplačno preizkusno dobo"
           button_book_now: "Rezerviraj"
           confidence: >
             Zagotavljamo zaupanje preizkušene in podprte programske opreme za upravljanje projektov v podjetniškem razredu - z odprto kodo in odprto miselnostjo.
           link_quote: "Pridobite ponudbo"
           text: >
-            Izdaja OpenProject Enterprise temelji na različici Community Edition. Vključuje vrhunske funkcije in strokovno podporo, namenjeno predvsem organizacijam z več kot 10 uporabniki, ki z OpenProjectom upravljajo poslovno pomembne projekte.
+            Izdaja ProyeksiApp Enterprise temelji na različici Community Edition. Vključuje vrhunske funkcije in strokovno podporo, namenjeno predvsem organizacijam z več kot 10 uporabniki, ki z ProyeksiAppom upravljajo poslovno pomembne projekte.
           unlimited: "Neomejeno"
           you_contribute: "Razvijalci morajo plačati tudi svoje račune. Z Enterprise Edition znatno prispevate k temu prizadevanju za odprtokodno skupnost."
     custom_actions:
@@ -274,7 +274,7 @@ sl:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "Aktiviraj"
     label_add_column_after: "Dodaj stolpec za"
     label_add_column_before: "Dodaj stolpec pred"
@@ -463,7 +463,7 @@ sl:
         next: 'Naprej'
         got_it: 'Razumem'
       steps:
-        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with OpenProject!'
+        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with ProyeksiApp!'
         members: 'Invite new <b>members</b> to join your project.'
         project_selection: 'Please click on one of the demo projects that we have prepared. Demo data is currently only available in English. <br> The general <b>demo project</b> suits best for classical project management, while the <b>Scrum project</b> is better for agile project management.'
         quick_add_button: 'Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.'

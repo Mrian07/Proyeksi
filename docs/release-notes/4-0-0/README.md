@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.0
+  title: ProyeksiApp 4.0.0
   sidebar_navigation:
       title: 4.0.0
   release_version: 4.0.0
@@ -7,25 +7,25 @@
 ---
 
 
-# OpenProject 4.0.0
+# ProyeksiApp 4.0.0
 
-## OmniAuth integration for OpenProject
+## OmniAuth integration for ProyeksiApp
 
-It is possible to extend OpenProject by using Omni-Auth providers. Users
-can for example use the [OpenProject Auth
+It is possible to extend ProyeksiApp by using Omni-Auth providers. Users
+can for example use the [ProyeksiApp Auth
 plugin](https://community.openproject.org/projects/auth-plugins) for an
 easy integration with OmniAuth strategy providers such as Google.
 
-  - Authentication in OpenProject via OmniAuth provider
+  - Authentication in ProyeksiApp via OmniAuth provider
   - Easier integration with OmniAuth providers (such as Google) via
-    OpenProject Auth plugin
+    ProyeksiApp Auth plugin
   - Easier implementation of OmniAuth strategies
   - Multiple authentication provider can be integrated and are shown in
     the login screen
 
 ## Integrated toolbar on work package page
 
-OpenProject 4.0 replaces the old filter and options section on the work
+ProyeksiApp 4.0 replaces the old filter and options section on the work
 package page with a convenient integrated toolbar.  
 Now users no longer need to leave the work package list in order to use
 many features that were previously only available on a separate
@@ -82,7 +82,7 @@ allowing users to see the most important information at a glance.
 ## Improved design
 
 Several design changes have been made to improve the readability and
-overall usability of OpenProject.
+overall usability of ProyeksiApp.
 
   - Bigger line spacing in work package table
   - Table background single color white
@@ -104,16 +104,16 @@ page.
 
 ## New plugins released
 
-  - OpenProject Auth plugin
+  - ProyeksiApp Auth plugin
     ([News](https://community.openproject.org/news/66-plugin-providing-an-api-for-authentication-plugins-released),
     [GitHub](https://github.com/opf/openproject-auth_plugins),
     [Project](https://community.openproject.org/projects/auth-plugins))
-  - OpenProject GitHub integration plugin
+  - ProyeksiApp GitHub integration plugin
     ([News](https://community.openproject.org/news/57-openproject-github-integration-plugin-released),
     [GitHub](https://github.com/finnlabs/openproject-github_integration),
     [Project](https://community.openproject.org/projects/github-integration?jump=news))
 
 ## Substantial Number of Bug Fixes
 
-A large number of bugs have been fixed with the release of OpenProject
+A large number of bugs have been fixed with the release of ProyeksiApp
 4.0.

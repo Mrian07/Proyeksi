@@ -61,7 +61,7 @@ Please note: The Configuration is a HashWithIndifferentAccess and thus it should
 
 # Supported environment variables
 
-Below is the full list of supported environment variables that can be used to override the default configuration of your OpenProject installation:
+Below is the full list of supported environment variables that can be used to override the default configuration of your ProyeksiApp installation:
 
 ```
 OPENPROJECT_EDITION (default="standard")                                                                                                         
@@ -118,7 +118,7 @@ OPENPROJECT_BLACKLISTED__ROUTES (default=[])
 OPENPROJECT_APIV3__ENABLE__BASIC__AUTH (default=true)
 OPENPROJECT_ONBOARDING__VIDEO__URL (default="https://player.vimeo.com/video/163426858?autoplay=1")
 OPENPROJECT_ONBOARDING__ENABLED (default=true)    
-OPENPROJECT_YOUTUBE__CHANNEL (default="https://www.youtube.com/c/OpenProjectCommunity")
+OPENPROJECT_YOUTUBE__CHANNEL (default="https://www.youtube.com/c/ProyeksiAppCommunity")
 OPENPROJECT_EE__MANAGER__VISIBLE (default=true)      
 OPENPROJECT_HEALTH__CHECKS__AUTHENTICATION__PASSWORD (default=nil)                              
 OPENPROJECT_HEALTH__CHECKS__JOBS__QUEUE__COUNT__THRESHOLD (default=50)

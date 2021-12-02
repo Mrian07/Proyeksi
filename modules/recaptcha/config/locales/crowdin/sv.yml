@@ -15,4 +15,4 @@ sv:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA är en gratis tjänst från Google som kan aktiveras för din OpenProject instans. Om aktiverad, kommer ett captcha-formulär att renderas vid inloggning för alla användare som inte har verifierat en captcha ännu. <br/> Se följande länk för mer information om reCAPTCHA och deras versioner, och hur man skapar webbplatsen och hemliga nycklar: %{recaptcha_link}
+        reCAPTCHA är en gratis tjänst från Google som kan aktiveras för din ProyeksiApp instans. Om aktiverad, kommer ett captcha-formulär att renderas vid inloggning för alla användare som inte har verifierat en captcha ännu. <br/> Se följande länk för mer information om reCAPTCHA och deras versioner, och hur man skapar webbplatsen och hemliga nycklar: %{recaptcha_link}

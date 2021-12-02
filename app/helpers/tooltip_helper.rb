@@ -3,7 +3,7 @@
 
 
 module TooltipHelper
-  include OpenProject::FormTagHelper
+  include ProyeksiApp::FormTagHelper
 
   ##
   # Render a tooltip span

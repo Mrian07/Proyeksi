@@ -48,4 +48,4 @@ import { PauseRemindersComponent } from './reminder-settings/pause-reminders/pau
     }),
   ],
 })
-export class OpenProjectMyAccountModule { }
+export class ProyeksiAppMyAccountModule { }

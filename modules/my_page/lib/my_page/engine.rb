@@ -1,6 +1,6 @@
 module MyPage
   class Engine < ::Rails::Engine
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     config.to_prepare do
       MyPage::GridRegistration.register!

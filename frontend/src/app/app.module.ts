@@ -1,5 +1,3 @@
-
-
 import {
   APP_INITIALIZER,
   ApplicationRef,
@@ -35,7 +33,7 @@ import { OpenprojectInviteUserModalModule } from 'core-app/features/invite-user-
 import { OpenprojectModalModule } from 'core-app/shared/components/modal/modal.module';
 import { RevitAddInSettingsButtonService } from 'core-app/features/bim/revit_add_in/revit-add-in-settings-button.service';
 import { OpenprojectAutocompleterModule } from 'core-app/shared/components/autocompleter/openproject-autocompleter.module';
-import { OpenProjectFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
 import { OpenprojectEnterpriseModule } from 'core-app/features/enterprise/openproject-enterprise.module';
 import { MainMenuToggleComponent } from 'core-app/core/main-menu/main-menu-toggle.component';
 import { MainMenuNavigationService } from 'core-app/core/main-menu/main-menu-navigation.service';
@@ -56,10 +54,10 @@ import { globalDynamicComponents } from 'core-app/core/setup/global-dynamic-comp
 import { HookService } from 'core-app/features/plugins/hook-service';
 import { OpenprojectPluginsModule } from 'core-app/features/plugins/openproject-plugins.module';
 import { LinkedPluginsModule } from 'core-app/features/plugins/linked-plugins.module';
-import { OpenProjectInAppNotificationsModule } from 'core-app/features/in-app-notifications/in-app-notifications.module';
-import { OpenProjectBackupService } from './core/backup/op-backup.service';
-import { OpenProjectDirectFileUploadService } from './core/file-upload/op-direct-file-upload.service';
-import { OpenProjectStateModule } from 'core-app/core/state/openproject-state.module';
+import { ProyeksiAppInAppNotificationsModule } from 'core-app/features/in-app-notifications/in-app-notifications.module';
+import { ProyeksiAppBackupService } from './core/backup/op-backup.service';
+import { ProyeksiAppDirectFileUploadService } from './core/file-upload/op-direct-file-upload.service';
+import { ProyeksiAppStateModule } from 'core-app/core/state/openproject-state.module';
 
 export function initializeServices(injector:Injector) {
   return () => {
@@ -84,7 +82,7 @@ export function initializeServices(injector:Injector) {
     // Commons
     OPSharedModule,
     // State module
-    OpenProjectStateModule,
+    ProyeksiAppStateModule,
     // Router module
     OpenprojectRouterModule,
     // Hal Module
@@ -153,7 +151,7 @@ export function initializeServices(injector:Injector) {
     OpenprojectTabsModule,
 
     // Notifications
-    OpenProjectInAppNotificationsModule,
+    ProyeksiAppInAppNotificationsModule,
   ],
   providers: [
     { provide: States, useValue: new States() },
@@ -161,9 +159,9 @@ export function initializeServices(injector:Injector) {
       provide: APP_INITIALIZER, useFactory: initializeServices, deps: [Injector], multi: true,
     },
     PaginationService,
-    OpenProjectBackupService,
-    OpenProjectFileUploadService,
-    OpenProjectDirectFileUploadService,
+    ProyeksiAppBackupService,
+    ProyeksiAppFileUploadService,
+    ProyeksiAppDirectFileUploadService,
     // Split view
     CommentService,
     ConfirmDialogService,
@@ -190,7 +188,7 @@ export function initializeServices(injector:Injector) {
     ConfirmFormSubmitController,
   ],
 })
-export class OpenProjectModule {
+export class ProyeksiAppModule {
   // noinspection JSUnusedGlobalSymbols
   ngDoBootstrap(appRef:ApplicationRef) {
     // Register global dynamic components

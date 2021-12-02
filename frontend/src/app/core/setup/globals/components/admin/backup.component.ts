@@ -10,7 +10,7 @@ import { ToastService } from 'core-app/shared/components/toaster/toast.service';
 import { JobStatusModalComponent } from 'core-app/features/job-status/job-status-modal/job-status.modal';
 import { PathHelperService } from 'core-app/core/path-helper/path-helper.service';
 import { OpModalService } from 'core-app/shared/components/modal/modal.service';
-import { OpenProjectBackupService } from 'core-app/core/backup/op-backup.service';
+import { ProyeksiAppBackupService } from 'core-app/core/backup/op-backup.service';
 
 export const backupSelector = 'backup';
 
@@ -46,7 +46,7 @@ export class BackupComponent implements AfterViewInit {
 
   public backupToken = '';
 
-  @InjectField() opBackup:OpenProjectBackupService;
+  @InjectField() opBackup:ProyeksiAppBackupService;
 
   @ViewChild('backupTokenInput') backupTokenInput:ElementRef;
 

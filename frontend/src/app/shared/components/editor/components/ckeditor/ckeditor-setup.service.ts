@@ -120,7 +120,7 @@ export class CKEditorSetupService {
     return {
       context,
       helpURL: this.PathHelper.textFormattingHelp(),
-      pluginContext: window.OpenProject.pluginContext.value,
+      pluginContext: window.ProyeksiApp.pluginContext.value,
     };
   }
 }

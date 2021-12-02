@@ -44,7 +44,7 @@ export class PaginationService {
   }
 
   private get localStoragePerPage() {
-    const value = window.OpenProject.guardedLocalStorage('pagination.perPage') as string;
+    const value = window.ProyeksiApp.guardedLocalStorage('pagination.perPage') as string;
 
     if (value !== undefined) {
       return parseInt(value, 10);
@@ -73,7 +73,7 @@ export class PaginationService {
   }
 
   public setPerPage(perPage:number) {
-    window.OpenProject.guardedLocalStorage('pagination.perPage', perPage.toString());
+    window.ProyeksiApp.guardedLocalStorage('pagination.perPage', perPage.toString());
     this.paginationOptions.perPage = perPage;
   }
 

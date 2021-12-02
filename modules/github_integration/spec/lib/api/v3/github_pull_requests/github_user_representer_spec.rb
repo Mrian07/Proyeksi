@@ -39,13 +39,13 @@ describe ::API::V3::GithubPullRequests::GithubUserRepresenter do
 
   describe 'caching' do
     before do
-      allow(OpenProject::Cache).to receive(:fetch).and_call_original
+      allow(ProyeksiApp::Cache).to receive(:fetch).and_call_original
     end
 
     it "is based on the representer's cache_key" do
       representer.to_json
 
-      expect(OpenProject::Cache)
+      expect(ProyeksiApp::Cache)
         .to have_received(:fetch)
         .with(representer.json_cache_key)
     end

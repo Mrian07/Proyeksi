@@ -7,7 +7,7 @@ robots: index, follow
 keywords: cloud edition, subscription, address, payment method, invoices
 ---
 
-# Manage your OpenProject Enterprise cloud subscription
+# Manage your ProyeksiApp Enterprise cloud subscription
 
 If you want to make changes to your subscription (Up- or downgrade, cancel, change your address or payment method), navigate to -> *Administration* -> *Billing* within your system's Administration.
 
@@ -51,7 +51,7 @@ Click the blue **Update your subscription now button** to save the changes.
 
 To cancel your subscription, open the [Manage subscription](#manage-your-openproject-enterprise-cloud-subscription) form and click to [update the subscription](#update-existing-subscriptions) you want to cancel.
 
-Click on the **Cancel Subscription link** if you want to terminate your OpenProject Enterprise cloud edition subscription.
+Click on the **Cancel Subscription link** if you want to terminate your ProyeksiApp Enterprise cloud edition subscription.
 
 ![cloud-cancel-subscription](cloud-cancel-subscription-0584229.png)
 

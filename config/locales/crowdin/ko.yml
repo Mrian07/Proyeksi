@@ -28,8 +28,8 @@ ko:
         main-menu-hover-font-color: "가리킬 때 기본 메뉴 글꼴"
         main-menu-border-color: "기본 메뉴 테두리"
       custom_colors: "사용자 정의 색상"
-      customize: "당신만의 로고로 당신의 OpenProject 설치를 커스텀하세요. 참고: 이 로고는 공개적으로 접근 가능합니다."
-      enterprise_notice: "OpenProject 개발에의 재정적인 후원에 대한 특별한 감사로 이 작은 기능은 Enterprise Edition 후원자에게만 지원됩니다."
+      customize: "당신만의 로고로 당신의 ProyeksiApp 설치를 커스텀하세요. 참고: 이 로고는 공개적으로 접근 가능합니다."
+      enterprise_notice: "ProyeksiApp 개발에의 재정적인 후원에 대한 특별한 감사로 이 작은 기능은 Enterprise Edition 후원자에게만 지원됩니다."
       manage_colors: "색상 선택 옵션 편집"
       instructions:
         alternative-color: "강한 강조 색은 일반적으로 화면의 가장 중요한 버튼에 사용됩니다."
@@ -81,37 +81,37 @@ ko:
       name: LDAP 연결의 임의 이름
       host: LDAP 호스트 이름 또는 IP 주소
       login_map: 고유한 사용자 로그인을 식별하는 데 사용되는 LDAP의 특성 키입니다. 일반적으로 `uid` 또는 `samAccountName`입니다.
-      generic_map: OpenProject `%{attribute}` 특성에 매핑되는 LDAP의 특성 키
-      admin_map_html: "선택 사항: <strong>있는 경우</strong> LDAP의 속성 키는 OpenProject 사용자를 관리자로 표시합니다. 확실하지 않은 경우 비워 두세요."
+      generic_map: ProyeksiApp `%{attribute}` 특성에 매핑되는 LDAP의 특성 키
+      admin_map_html: "선택 사항: <strong>있는 경우</strong> LDAP의 속성 키는 ProyeksiApp 사용자를 관리자로 표시합니다. 확실하지 않은 경우 비워 두세요."
       system_user_dn_html: |
         읽기 전용 액세스에 사용되는 시스템 사용자의 DN을 입력하세요.
         <br/>
         예: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: 시스템 사용자의 바인딩 암호 입력
       base_dn: |
-        OpenProject가 사용자 및 그룹을 검색할 LDAP 하위 트리의 기본 DN을 입력하세요.
-        OpenProject는 이 하위 트리에서 제공된 사용자 이름만 필터링합니다.
+        ProyeksiApp가 사용자 및 그룹을 검색할 LDAP 하위 트리의 기본 DN을 입력하세요.
+        ProyeksiApp는 이 하위 트리에서 제공된 사용자 이름만 필터링합니다.
         예: ou=users,dc=example,dc=com
       filter_string: |
         LDAP에서 필터링된 사용자에 대해 반환된 결과에 적용할 선택적 RFC4515 필터를 추가하세요.
-        이 필터는 인증 및 그룹 동기화를 위해 OpenProject에서 찾는 일련의 사용자를 제한하는 데 사용할 수 있습니다.
+        이 필터는 인증 및 그룹 동기화를 위해 ProyeksiApp에서 찾는 일련의 사용자를 제한하는 데 사용할 수 있습니다.
       filter_string_concat: |
-        OpenProject는 레코드를 식별하기 위해 사용자가 제공한 로그인 특성에 대해 항상 필터링합니다. 여기서 필터를 제공하는 경우,
+        ProyeksiApp는 레코드를 식별하기 위해 사용자가 제공한 로그인 특성에 대해 항상 필터링합니다. 여기서 필터를 제공하는 경우,
         AND로 연결됩니다. 기본적으로, catch-all(objectClass=*)이 필터로 사용됩니다.
       onthefly_register: |
-        이 확인란을 선택하면 OpenProject로 처음 인증할 때 OpenProject가 LDAP 항목에서
+        이 확인란을 선택하면 ProyeksiApp로 처음 인증할 때 ProyeksiApp가 LDAP 항목에서
         자동으로 새 사용자를 만듭니다.
-        OpenProject의 기존 계정만 LDAP를 통해 인증할 수 있게 하려면 이 확인란을 선택하지 마세요!
+        ProyeksiApp의 기존 계정만 LDAP를 통해 인증할 수 있게 하려면 이 확인란을 선택하지 마세요!
     connection_encryption: '연결 암호화'
     system_account: '시스템 계정'
     system_account_legend: |
-      OpenProject는 LDAP 트리에서 사용자 및 그룹을 찾기 위해 시스템 계정을 통한 읽기 전용 액세스 권한을 필요로 합니다.
+      ProyeksiApp는 LDAP 트리에서 사용자 및 그룹을 찾기 위해 시스템 계정을 통한 읽기 전용 액세스 권한을 필요로 합니다.
       다음 섹션에서 해당 시스템 사용자의 바인딩 자격 증명을 지정하세요.
     ldap_details: 'LDAP 세부 정보'
     user_settings: '특성 매핑'
     user_settings_legend: |
-      다음 필드는 LDAP 항목에서 OpenProject에 사용자를 생성하는 방법 및
-      OpenProject 사용자의 특성을 정의하기 위해 사용되는 LDAP 특성(특성 매핑)과 관련이 있습니다.
+      다음 필드는 LDAP 항목에서 ProyeksiApp에 사용자를 생성하는 방법 및
+      ProyeksiApp 사용자의 특성을 정의하기 위해 사용되는 LDAP 특성(특성 매핑)과 관련이 있습니다.
     tls_mode:
       plain: '없음'
       simple_tls: '단순 TLS'
@@ -520,7 +520,7 @@ ko:
         confirmation: "%{attribute} 속성에 부합하지 않습니다."
         could_not_be_copied: "%{dependency}을(를) (완전히) 복사할 수 없습니다."
         does_not_exist: "존재하지 않음"
-        error_enterprise_only: "- OpenProject Enterprise Edition에서만 사용할 수 있습니다"
+        error_enterprise_only: "- ProyeksiApp Enterprise Edition에서만 사용할 수 있습니다"
         error_unauthorized: "액세스하지 못할 수 있습니다."
         error_readonly: "- 쓰려고 했지만 쓸 수 없습니다."
         email: "- 유효한 이메일 주소가 아닙니다."
@@ -863,7 +863,7 @@ ko:
       heading_reset: "백업 토큰 초기화"
       heading_create: "백업 토큰 생성"
       implications: >
-        백업을 활성화하면 필요한 권한과 이 백업 토큰이 있는 모든 사용자가 이 OpenProject 프로젝트의 모든 데이터가 포함된 백업을 다운로드할 수 있습니다. 여기에는 다른 모든 사용자의 데이터도 포함됩니다.
+        백업을 활성화하면 필요한 권한과 이 백업 토큰이 있는 모든 사용자가 이 ProyeksiApp 프로젝트의 모든 데이터가 포함된 백업을 다운로드할 수 있습니다. 여기에는 다른 모든 사용자의 데이터도 포함됩니다.
       info: >
         백업을 생성하려면 백업 토큰을 생성해야 합니다. 백업을 요청할 때마다 토큰을 입력해야 합니다. 백업 토큰을 삭제하면 해당 사용자의 백업을 비활성화할 수 있습니다.
       verification: >
@@ -1171,7 +1171,7 @@ ko:
   error_can_not_unarchive_project: "이 프로젝트를 보관 취소할 수 없습니다: %{errors}"
   error_check_user_and_role: "사용자 및 역할을 선택하세요."
   error_code: "오류 %{code}"
-  error_cookie_missing: 'OpenProject 쿠키가 없습니다. 이 응용 프로그램은 쿠키 없이 제대로 작동하지 않으므로, 쿠키를 활성화해야 합니다.'
+  error_cookie_missing: 'ProyeksiApp 쿠키가 없습니다. 이 응용 프로그램은 쿠키 없이 제대로 작동하지 않으므로, 쿠키를 활성화해야 합니다.'
   error_custom_option_not_found: "존재하지 않는 옵션입니다."
   error_enterprise_activation_user_limit: "사용자 계정을 활성화할 수 없습니다(사용자 제한에 도달함). 액세스하려면 관리자에게 문의하세요."
   error_enterprise_token_invalid_domain: "Enterprise Edition이 활성화되지 않았습니다. 해당 Enterprise 토큰의 도메인(%{actual})이 시스템의 호스트 이름(%{expected})과 일치하지 않습니다."
@@ -1185,7 +1185,7 @@ ko:
   error_work_package_done_ratios_not_updated: "작업 패키지 완료 비율이 업데이트되지 않았습니다."
   error_work_package_not_found_in_project: "작업 패키지가 없거나 이 프로젝트에 속하지 않습니다."
   error_must_be_project_member: "은(는) 프로젝트 멤버여야 합니다."
-  error_migrations_are_pending: "OpenProject 설치에 보류 중인 데이터베이스 마이그레이션이 있습니다. 지난 업그레이드에서 마이그레이션을 실행하지 않았을 가능성이 있습니다. 업그레이드 가이드를 확인하여 제대로 설치를 업그레이드하세요."
+  error_migrations_are_pending: "ProyeksiApp 설치에 보류 중인 데이터베이스 마이그레이션이 있습니다. 지난 업그레이드에서 마이그레이션을 실행하지 않았을 가능성이 있습니다. 업그레이드 가이드를 확인하여 제대로 설치를 업그레이드하세요."
   error_migrations_visit_upgrade_guides: "업그레이드 가이드 문서를 참조하십시오."
   error_no_default_work_package_status: "기본 작업 패키지 상태가 정의되지 않았습니다. 구성을 확인하세요(\"관리 -> 작업 패키지 상태\"로 이동)."
   error_no_type_in_project: "이 프로젝트에 유형이 연결되어 있지 않습니다. 프로젝트 설정을 확인하세요."
@@ -1259,7 +1259,7 @@ ko:
       no_visible_projects: "이 경우 표시되는 프로젝트가 없습니다."
       users: "이 경우 최신 등록 된 사용자입니다."
     blocks:
-      community: "OpenProject 커뮤니티"
+      community: "ProyeksiApp 커뮤니티"
       upsale:
         title: "Enterprise Edition으로 업그레이드 하세요."
         more_info: "더보기"
@@ -1270,7 +1270,7 @@ ko:
       faq: "FAQ"
       glossary: "용어집"
       shortcuts: "바로가기 "
-      blog: "OpenProject 블로그"
+      blog: "ProyeksiApp 블로그"
       forums: "커뮤니티 포럼"
       newsletter: "보안 알림/뉴스레터"
   image_conversion:
@@ -1311,9 +1311,9 @@ ko:
         watched: "%{work_package}을(를) 지켜 보는 중입니다."
     update_info_mail:
       body: >
-        OpenProject 12.0 릴리스를 발표하게 되어 기쁩니다. 이 메이저 릴리스는 OpenProject를 사용하는 방식을 크게 개선할 것으로 예상됩니다.
+        ProyeksiApp 12.0 릴리스를 발표하게 되어 기쁩니다. 이 메이저 릴리스는 ProyeksiApp를 사용하는 방식을 크게 개선할 것으로 예상됩니다.
 
-        이 릴리스부터 인앱 알림을 도입합니다. 이제부터 OpenProject에서 작업 패키지 업데이트에 대한 알림을 직접 받게 됩니다. 이러한 알림을 읽음으로 표시하거나, 코멘트에 답하거나, 알림 센터를 나가지 않고도 작업 패키지 특성을 직접 수정할 수도 있습니다.
+        이 릴리스부터 인앱 알림을 도입합니다. 이제부터 ProyeksiApp에서 작업 패키지 업데이트에 대한 알림을 직접 받게 됩니다. 이러한 알림을 읽음으로 표시하거나, 코멘트에 답하거나, 알림 센터를 나가지 않고도 작업 패키지 특성을 직접 수정할 수도 있습니다.
 
         즉, 더 이상 알림용으로 이메일을 사용하지 않을 것입니다. 알림 센터가 이러한 업데이트를 확인하고 조치를 취하기에 더 좋은 공간이라고 생각합니다. 그러나 이메일로 업데이트를 계속 받으려면 선택한 특정 시간에 매일 이메일 미리 알림을 받도록 선택할 수 있습니다.
 
@@ -1322,7 +1322,7 @@ ko:
         인앱 알림이 유용하고 생산성을 더욱 개선하는 데 도움이 되기를 바랍니다.
 
         감사합니다.
-        OpenProject 팀
+        ProyeksiApp 팀
       body_header: '버전 12.0, 알림 센터 포함'
       body_subheader: '뉴스'
       subject: '12.0 릴리스의 알림에 대한 중요 변경 사항'
@@ -1635,7 +1635,7 @@ ko:
   label_open_menu: "메뉴 열기"
   label_open_work_packages: "열기"
   label_open_work_packages_plural: "열기"
-  label_openproject_website: "OpenProject 웹사이트"
+  label_openproject_website: "ProyeksiApp 웹사이트"
   label_optional_description: "설명"
   label_options: "옵션"
   label_other: "기타"
@@ -1934,17 +1934,17 @@ ko:
   mail_body_backup_token_reset_user_info: 백업 토큰이 초기화되었습니다.
   mail_body_backup_token_info: 이전 토큰은 더 이상 유효하지 않습니다.
   mail_body_backup_waiting_period: '%{hours}시간 후 새 토큰이 활성화됩니다.'
-  mail_body_backup_token_warning: 만약 본인이 한 것이 아니라면, OpenProject에 즉시 로그인하고 다시 초기화하십시오.
+  mail_body_backup_token_warning: 만약 본인이 한 것이 아니라면, ProyeksiApp에 즉시 로그인하고 다시 초기화하십시오.
   mail_body_lost_password: "암호를 변경하려면 다음 링크를 클릭하세요."
-  mail_body_register: "OpenProject입니다. 다음 링크를 클릭하여 계정을 활성화하세요:"
+  mail_body_register: "ProyeksiApp입니다. 다음 링크를 클릭하여 계정을 활성화하세요:"
   mail_body_register_header_title: "프로젝트 멤버 초대 이메일"
   mail_body_register_user: "%{name}님께, "
   mail_body_register_links_html: |
     웨비나(%{webinar_link})가 제공되는 Youtube 채널(%{youtube_link})을 찾아보고 
-    “시작하기” 동영상(%{get_started_link})을 보고 OpenProject에서의 첫 단계를 최대한 수월하게 진행하세요.
+    “시작하기” 동영상(%{get_started_link})을 보고 ProyeksiApp에서의 첫 단계를 최대한 수월하게 진행하세요.
     <br />
     추가 질문이 있으시면 설명서(%{documentation_link})를 참조하거나 관리자에게 문의하세요.
-  mail_body_register_closing: "OpenProject 팀"
+  mail_body_register_closing: "ProyeksiApp 팀"
   mail_body_register_ending: "계속 지켜봐 주세요! 감사합니다."
   mail_body_reminder: "사용자에게 할당된 %{count} 작업 패키지가 다음 %{days}일 후 만료됩니다."
   mail_body_group_reminder: "\"%{group}\" 그룹에 할당된 %{count}개 작업 패키지가 향후 %{days}일 후 만료됩니다."
@@ -1983,14 +1983,14 @@ ko:
   mail_user_activation_limit_reached:
     subject: 사용자 활성화 제한에 도달함
     message: |
-      회원님이 관리하는 OpenProject 환경(%{host})에서 새로운 사용자(%{email})가 계정을 만들려고 시도했습니다.
+      회원님이 관리하는 ProyeksiApp 환경(%{host})에서 새로운 사용자(%{email})가 계정을 만들려고 시도했습니다.
       사용자 제한에 도달한 후에는 해당 사용자가 계정을 활성화할 수 없습니다.
     steps:
       label: "사용자가 로그인하게 허용하려면 다음 중 하나를 수행할 수 있습니다. "
       a: "결제 플랜([here](upgrade_url)) 업그레이드" #here turned into a link
       b: "기존 사용자([here](users_url)) 잠금 또는 삭제" #here turned into a link
   more_actions: "추가 기능"
-  noscript_description: "OpenProject를 사용하려면 JavaScript를 활성화해야 합니다!"
+  noscript_description: "ProyeksiApp를 사용하려면 JavaScript를 활성화해야 합니다!"
   noscript_heading: "JavaScript 사용 안 함"
   noscript_learn_more: "자세히 알아보기"
   notice_accessibility_mode: 접근성 모드는 해당 [계정 설정](url)에서 활성화할 수 있습니다.
@@ -2054,7 +2054,7 @@ ko:
   notice_wont_delete_auth_source: 사용자가 사용 중인 인증 모드는 삭제할 수 없습니다.
   notice_project_cannot_update_custom_fields: "프로젝트의 사용 가능한 사용자 지정 필드를 업데이트할 수 없습니다. 프로젝트가 유효하지 않습니다: %{errors}"
   notice_attachment_migration_wiki_page: >
-    이 페이지는 OpenProject 업데이트 중에 자동으로 생성되었습니다. 이 페이지에는 %{container_type} "%{container_name}"과(와) 이전에 연결된 모든 첨부 파일이 포함되어 있습니다.
+    이 페이지는 ProyeksiApp 업데이트 중에 자동으로 생성되었습니다. 이 페이지에는 %{container_type} "%{container_name}"과(와) 이전에 연결된 모든 첨부 파일이 포함되어 있습니다.
   #Default format for numbers
   number:
     format:
@@ -2076,9 +2076,9 @@ ko:
           tb: "TB"
   onboarding:
     heading_getting_started: "개요 가져오기"
-    text_getting_started_description: "OpenProject로 프로젝트 관리 및 팀 공동 작업에 대한 간략한 개요를 가져올 수 있습니다."
+    text_getting_started_description: "ProyeksiApp로 프로젝트 관리 및 팀 공동 작업에 대한 간략한 개요를 가져올 수 있습니다."
     text_show_again: "도움말 메뉴에서 이 비디오를 다시 시작할 수 있습니다."
-    welcome: "OpenProject에 오신 것을 환영합니다."
+    welcome: "ProyeksiApp에 오신 것을 환영합니다."
     select_language: "언어를 선택하세요."
   permission_add_work_package_notes: "메모 추가"
   permission_add_work_packages: "작업 패키지 추가"
@@ -2125,7 +2125,7 @@ ko:
   permission_manage_project_activities: "프로젝트 작업 관리"
   permission_manage_public_queries: "공용 보기 관리"
   permission_manage_repository: "리포지토리 관리"
-  permission_manage_subtasks: "OpenProject aims to connect distributed teams and organizations and make project management intuitive and fun. The open source software supports classical project management and team collaboration as well as agile project management methodologies. OpenProject is continuously developed and maintained by an active international community to provide a powerful feature set and yet intuitive user interface. The overall purpose is to create customer benefit. To achieve this, OpenProject follows a requirements and product development process that empathizes identifying and building the functionality which most aligns with OpenProject’s product vision and delivers customer value.\n\nThis guide is an evolving description of the steps taken from collecting requirements all the way to implementation and release. The goal is to provide a single source of truth and provide a guideline for team members, community contributors and interested customers. As such this document will continuously be updated."
+  permission_manage_subtasks: "ProyeksiApp aims to connect distributed teams and organizations and make project management intuitive and fun. The open source software supports classical project management and team collaboration as well as agile project management methodologies. ProyeksiApp is continuously developed and maintained by an active international community to provide a powerful feature set and yet intuitive user interface. The overall purpose is to create customer benefit. To achieve this, ProyeksiApp follows a requirements and product development process that empathizes identifying and building the functionality which most aligns with ProyeksiApp’s product vision and delivers customer value.\n\nThis guide is an evolving description of the steps taken from collecting requirements all the way to implementation and release. The goal is to provide a single source of truth and provide a guideline for team members, community contributors and interested customers. As such this document will continuously be updated."
   permission_manage_versions: "버전 관리"
   permission_manage_wiki: "위키 관리"
   permission_manage_wiki_menu: "위키 메뉴 관리"
@@ -2137,7 +2137,7 @@ ko:
   permission_select_project_modules: "프로젝트 모듈 선택"
   permission_manage_types: "유형 선택"
   permission_view_calendar: "달력 보기"
-  permission_view_changesets: "OpenProject에서 리포지토리 수정 사항 보기"
+  permission_view_changesets: "ProyeksiApp에서 리포지토리 수정 사항 보기"
   permission_view_commit_author_statistics: "커밋 작성자 통계 보기"
   permission_view_work_package_watchers: "주시자 목록 보기"
   permission_view_work_packages: "작업 패키지 보기"
@@ -2217,7 +2217,7 @@ ko:
     destroy:
       confirmation: "계속하는 경우, 관리되는 리포지토리가 영구적으로 삭제됩니다."
       info: "리포지토리 삭제는 취소할 수 없는 작업입니다."
-      info_not_managed: "참고: 이렇게 해도 이 리포지토리의 콘텐츠는 삭제되지 않습니다. OpenProject에 의해 관리되지 않기 때문입니다."
+      info_not_managed: "참고: 이렇게 해도 이 리포지토리의 콘텐츠는 삭제되지 않습니다. ProyeksiApp에 의해 관리되지 않기 때문입니다."
       managed_path_note: "다음 디렉터리가 지워집니다. %{path}"
       repository_verification: "해당 리포지토리의 삭제를 확인하려면 프로젝트의 식별자 %{identifier}을(를) 입력하세요."
       subtitle: "프로젝트 %{project_name}의 %{repository_type}을(를) 삭제하시겠습니까?"
@@ -2231,8 +2231,8 @@ ko:
       empty_repository: "리포지토리가 존재하지만 비어 있습니다. 여기에는 아직 수정 사항이 포함되어 있지 않습니다."
       exists_on_filesystem: "리포지토리 디렉터리가 파일 시스템에 이미 있습니다."
       filesystem_access_failed: "파일 시스템의 리포지토리에 액세스하는 중에 오류가 발생했습니다. %{message}"
-      not_manageable: "이 리포지토리 공급업체는 OpenProject가 관리할 수 없습니다."
-      path_permission_failed: "다음 경로를 만드는 중에 오류가 발생했습니다. %{path}. OpenProject가 해당 폴더에 쓸 수 있는지 확인하세요."
+      not_manageable: "이 리포지토리 공급업체는 ProyeksiApp가 관리할 수 없습니다."
+      path_permission_failed: "다음 경로를 만드는 중에 오류가 발생했습니다. %{path}. ProyeksiApp가 해당 폴더에 쓸 수 있는지 확인하세요."
       unauthorized: "리포지토리에 액세스할 수 있는 권한이 없거나 자격 증명이 올바르지 않습니다."
       unavailable: "리포지토리를 사용할 수 없습니다"
       exception_title: "리포지토리에 액세스할 수 없습니다. %{message}"
@@ -2249,9 +2249,9 @@ ko:
         path_encoding: "Git 경로 인코딩 재정의(기본: UTF-8)"
       local_title: "기존 로컬 Git 리포지토리 연결"
       local_url: "로컬 URL"
-      local_introduction: "기존 로컬 Git 리포지토리가 있는 경우 응용 프로그램 내에서 액세스하기 위해 OpenProject와 이 리포지토리를 연결할 수 있습니다."
-      managed_introduction: "OpenProject가 생성되고 자동으로 로컬 Git 리포지토리를 통합하게 합니다."
-      managed_title: "OpenProject에 통합된 Git 리포지토리"
+      local_introduction: "기존 로컬 Git 리포지토리가 있는 경우 응용 프로그램 내에서 액세스하기 위해 ProyeksiApp와 이 리포지토리를 연결할 수 있습니다."
+      managed_introduction: "ProyeksiApp가 생성되고 자동으로 로컬 Git 리포지토리를 통합하게 합니다."
+      managed_title: "ProyeksiApp에 통합된 Git 리포지토리"
       managed_url: "관리되는 URL"
       path: "Git 리포지토리의 경로"
       path_encoding: "경로 인코딩"
@@ -2268,19 +2268,19 @@ ko:
     scm_types:
       local: "기존 로컬 리포지토리 연결"
       existing: "기존 리포지토리 연결"
-      managed: "OpenProject에서 새로운 리포지토리 만들기"
+      managed: "ProyeksiApp에서 새로운 리포지토리 만들기"
     storage:
       not_available: "이 리포지토리에 대한 디스크 저장소 사용량이 사용 가능하지 않습니다."
       update_timeout: "N분 동안 리포지토리의 마지막 필요한 디스크 공간 정보를 유지하세요.\n리포지토리의 필요한 디스크 저장소 공간 계산에는 비용이 많이 소요될 수 있으므로, 이 값을 늘려 성능 영향을 줄이세요."
     subversion:
       existing_title: "기존 Subversion 리포지토리"
-      existing_introduction: "기존 Subversion 리포지토리가 있는 경우 응용 프로그램 내에서 액세스하기 위해 OpenProject와 이 리포지토리를 연결할 수 있습니다."
+      existing_introduction: "기존 Subversion 리포지토리가 있는 경우 응용 프로그램 내에서 액세스하기 위해 ProyeksiApp와 이 리포지토리를 연결할 수 있습니다."
       existing_url: "기존 URL"
       instructions:
         managed_url: "관리되는 (로컬) Subversion 리포지토리의 URL입니다."
         url: "리포지토리 URL을 입력하세요. 이는 로컬 리포지토리(%{local_proto}(으)로 시작) 또는 원격 리포지토리를 대상으로 할 수 있습니다.\n다음 URL 구성표가 지원됩니다."
-      managed_title: "OpenProject에 통합된 Subversion 리포지토리"
-      managed_introduction: "OpenProject가 생성되고 자동으로 로컬 Subversion 리포지토리를 통합하게 합니다."
+      managed_title: "ProyeksiApp에 통합된 Subversion 리포지토리"
+      managed_introduction: "ProyeksiApp가 생성되고 자동으로 로컬 Subversion 리포지토리를 통합하게 합니다."
       managed_url: "관리되는 URL"
       password: "리포지토리 암호"
       username: "리포지토리 사용자 이름"
@@ -2297,7 +2297,7 @@ ko:
   setting_apiv3_cors_enabled: "CORS 사용"
   setting_apiv3_cors_origins: "API V3 CORS(크로스-원본 리소스 공유) 허용 원본"
   setting_apiv3_cors_origins_text_html: >
-    CORS가 활성화된 경우, OpenProject API에 액세스하도록 허용된 원본이 있습니다. <br/> <a href="%{origin_link}" target="_blank">원본 헤더의 설명서</a>에서 예상 값 지정 방법을 확인하세요.
+    CORS가 활성화된 경우, ProyeksiApp API에 액세스하도록 허용된 원본이 있습니다. <br/> <a href="%{origin_link}" target="_blank">원본 헤더의 설명서</a>에서 예상 값 지정 방법을 확인하세요.
   setting_apiv3_docs: "설명서"
   setting_apiv3_docs_enabled: "문서 페이지 활성화"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2457,7 +2457,7 @@ ko:
       sentence_connector: "그리고"
       skip_last_comma: "false"
   text_accessibility_hint: "접근성 모드는 시각장애인, 신체장애인, 혹은 시력이 나쁜 사람들을 위해 디자인 되었습니다. 후자를 위해서 중심이 되는 요소는 특별히 하이라이트 됩니다. 이 모드에서는 Backlogs 모듈 사용이 불가능합니다."
-  text_access_token_hint: "액세스 토큰을 사용하여 OpenProject의 리소스에 대한 외부 응용 프로그램 액세스 권한을 부여할 수 있습니다."
+  text_access_token_hint: "액세스 토큰을 사용하여 ProyeksiApp의 리소스에 대한 외부 응용 프로그램 액세스 권한을 부여할 수 있습니다."
   text_analyze: "추가 분석: %{subject}"
   text_are_you_sure: "계속하시겠습니까?"
   text_are_you_sure_with_children: "작업 패키지 및 모든 자식 작업 패키지를 삭제하시겠습니까?"
@@ -2526,7 +2526,7 @@ ko:
   text_no_notes: "이 작업 패키지에 사용할 수 있는 코멘트가 없습니다."
   text_notice_too_many_values_are_inperformant: "참고: 페이지당 100개가 넘는 항목을 표시하면 페이지 로드 시간이 늘어날 수 있습니다."
   text_notice_security_badge_displayed_html: >
-    참고: 활성화하는 경우, <a href="%{information_panel_path}">%{information_panel_label}</a> 관리 패널 및 홈페이지에서 설치 상태가 나오는 배지가 표시됩니다. 배지는 관리자에게만 표시됩니다. <br/> 배지는 공식 OpenProject 릴리스 데이터베이스와 비교하여 현재 OpenProject 버전을 확인하고 업데이트 또는 알려진 취약성에 대해 알려줍니다. 이 검사에서 제공하는 사항, 사용 가능한 업데이트를 제공하기 위해 필요한 데이터 및 이 검사를 비활성화하는 방법에 대한 자세한 내용은 <a href="%{more_info_url}">구성 문서</a>를 참조하십시오.
+    참고: 활성화하는 경우, <a href="%{information_panel_path}">%{information_panel_label}</a> 관리 패널 및 홈페이지에서 설치 상태가 나오는 배지가 표시됩니다. 배지는 관리자에게만 표시됩니다. <br/> 배지는 공식 ProyeksiApp 릴리스 데이터베이스와 비교하여 현재 ProyeksiApp 버전을 확인하고 업데이트 또는 알려진 취약성에 대해 알려줍니다. 이 검사에서 제공하는 사항, 사용 가능한 업데이트를 제공하기 위해 필요한 데이터 및 이 검사를 비활성화하는 방법에 대한 자세한 내용은 <a href="%{more_info_url}">구성 문서</a>를 참조하십시오.
   text_own_membership_delete_confirmation: "권한의 일부 또는 전부를 삭제하려고 합니다. 이렇게 한 후에는 이 프로젝트를 더 이상 편집하지 못할 수 있습니다.\n계속하시겠습니까?"
   text_plugin_assets_writable: "플러그인 자산 디렉터리 쓰기 가능"
   text_powered_by: "%{link} 제공"
@@ -2534,7 +2534,7 @@ ko:
   text_reassign: "작업 패키지에 다시 할당:"
   text_regexp_info: "예: ^[A-Z0-9]+$"
   text_regexp_multiline: '멀티라인 모드에서 정규식이 적용됩니다. 예, e.g., ^---\s+'
-  text_repository_usernames_mapping: "리포지토리 로그에 있는 각 사용자 이름에 매핑된 OpenProject 사용자를 선택하거나 업데이트하세요.\n동일한 OpenProject 및 리포지토리 사용자 이름이나 이메일을 가진 사용자가 자동으로 매핑됩니다."
+  text_repository_usernames_mapping: "리포지토리 로그에 있는 각 사용자 이름에 매핑된 ProyeksiApp 사용자를 선택하거나 업데이트하세요.\n동일한 ProyeksiApp 및 리포지토리 사용자 이름이나 이메일을 가진 사용자가 자동으로 매핑됩니다."
   text_status_changed_by_changeset: "변경 집합 %{value}에 적용되었습니다."
   text_table_difference_description: "이 테이블에서 단일 %{entries}이(가) 표시됩니다. 먼저 테이블의 해당 확인란을 선택하여 두 항목 사이의 차이를 볼 수 있습니다. 테이블 아래 버튼을 클릭하면 차이가 표시됩니다."
   text_time_logged_by_changeset: "변경 집합 %{value}에 적용되었습니다."
@@ -2738,7 +2738,7 @@ ko:
     activate_and_reset_failed_logins: "실패한 로그인 활성화 및 재설정"
     authentication_provider: "인증 공급자"
     authentication_settings_disabled_due_to_external_authentication: >
-      이 사용자는 외부 인증 공급자를 통해 인증하므로, 변경할 OpenProject의 암호가 없습니다.
+      이 사용자는 외부 인증 공급자를 통해 인증하므로, 변경할 ProyeksiApp의 암호가 없습니다.
     authorization_rejected: "로그인할 수 없습니다."
     assign_random_password: "무작위 암호 할당(이메일로 사용자에게 전송됨)"
     blocked: "일시적으로 잠김"
@@ -2768,7 +2768,7 @@ ko:
   warning: 경고
   warning_attachments_not_saved: "%{count}개 파일을 저장할 수 없습니다."
   warning_imminent_user_limit: >
-    현재 플랜으로 지원되는 사용자보다 많은 사용자를 초대했습니다. 초대된 사용자가 OpenProject 환경에 참여하지 못할 수 있습니다. 초대된 사용자와 등록된 사용자가 참여할 수 있도록 하려면 <a href="%{upgrade_url}">플랜을 업그레이드</a>하세요.
+    현재 플랜으로 지원되는 사용자보다 많은 사용자를 초대했습니다. 초대된 사용자가 ProyeksiApp 환경에 참여하지 못할 수 있습니다. 초대된 사용자와 등록된 사용자가 참여할 수 있도록 하려면 <a href="%{upgrade_url}">플랜을 업그레이드</a>하세요.
   warning_registration_token_expired: |
     활성화 이메일이 만료되었습니다. %{email}(으)로 새로운 이메일이 전송되었습니다.
     이메일 내 링크를 클릭하여 계정을 활성화하세요.
@@ -2902,21 +2902,21 @@ ko:
         confidential: "클라이언트 비밀번호를 기밀로 유지할 수 있는 위치에서 애플리케이션이 사용되는지 여부를 확인합니다. 네이티브 모바일 앱과 싱글 페이지 앱은 기밀로 간주되지 않습니다."
         scopes: "애플리케이션이 액세스 권한을 부여할 범위를 확인하세요. 범위를 확인하지 않으면 api_v3로 가정됩니다."
         client_credential_user_id: "클라이언트가 이 애플리케이션을 사용할 때 가장하기 위한 선택적 사용자 ID입니다. 공용 액세스만 허용하려면 비워두세요."
-        register_intro: "OpenProject용 OAuth API 클라이언트 애플리케이션을 개발할 경우 이 양식을 사용하여 모든 사용자가 사용할 수 있도록 등록할 수 있습니다."
+        register_intro: "ProyeksiApp용 OAuth API 클라이언트 애플리케이션을 개발할 경우 이 양식을 사용하여 모든 사용자가 사용할 수 있도록 등록할 수 있습니다."
         default_scopes: ""
     client_id: "고객 ID"
     client_secret_notice: >
-      클라이언트 비밀번호를 인쇄할 수 있는 유일한 순간입니다. 이 비밀번호를 기록하고 안전하게 보관하십시오. 이 비밀번호는 암호로 취급해야 하며 나중에 OpenProject로 검색할 수 없습니다.
+      클라이언트 비밀번호를 인쇄할 수 있는 유일한 순간입니다. 이 비밀번호를 기록하고 안전하게 보관하십시오. 이 비밀번호는 암호로 취급해야 하며 나중에 ProyeksiApp로 검색할 수 없습니다.
     authorization_dialog:
       authorize: "권한 부여"
       cancel: "취소하고 권한 부여를 거부합니다."
       prompt_html: "계정 <em>%{login}</em>을(를) 사용하도록 <strong>%{application_name}</strong>에 권한을 부여하시겠습니까?"
       title: "%{application_name} 권한 부여"
       wants_to_access_html: >
-        이 애플리케이션은 사용자의 OpenProject 계정에 대한 액세스 권한을 요청합니다. <br/> <strong>다음과 같은 사용 권한을 요청했습니다:</strong>
+        이 애플리케이션은 사용자의 ProyeksiApp 계정에 대한 액세스 권한을 요청합니다. <br/> <strong>다음과 같은 사용 권한을 요청했습니다:</strong>
     scopes:
       api_v3: "전체 API v3 액세스"
-      api_v3_text: "애플리케이션은 사용자를 대신하여 작업을 수행하기 위해 OpenProject API v3에 대한 전체 읽기 및 쓰기 액세스 권한을 받습니다."
+      api_v3_text: "애플리케이션은 사용자를 대신하여 작업을 수행하기 위해 ProyeksiApp API v3에 대한 전체 읽기 및 쓰기 액세스 권한을 받습니다."
     grants:
       created_date: "승인:"
       scopes: "권한"
@@ -2931,7 +2931,7 @@ ko:
     client_credentials_impersonation_set_to: "클라이언트 자격 증명 사용자 설정:"
     client_credentials_impersonation_warning: "참고: 이 애플리케이션에서 '클라이언트 자격 증명' 흐름을 사용하는 클라이언트는 이 사용자의 권한을 갖게 됩니다."
     client_credentials_impersonation_html: >
-      기본적으로, OpenProject는 %{authorization_code_flow_link}에서 OAuth 2.0 인증을 제공합니다. 선택적으로 %{client_credentials_flow_link}을(를) 활성화할 수 있지만, 대신하여 요청을 수행할 대상 사용자를 제공해야 합니다.
+      기본적으로, ProyeksiApp는 %{authorization_code_flow_link}에서 OAuth 2.0 인증을 제공합니다. 선택적으로 %{client_credentials_flow_link}을(를) 활성화할 수 있지만, 대신하여 요청을 수행할 대상 사용자를 제공해야 합니다.
     authorization_error: "권한 부여 오류가 발생했습니다."
     revoke_my_application_confirmation: "이 애플리케이션을 제거하시겠습니까? 그러면 이 애플리케이션에 대해 활성화된 %{token_count}개가 취소됩니다."
     my_registered_applications: "등록된 OAuth 애플리케이션"

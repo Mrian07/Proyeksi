@@ -33,7 +33,7 @@ begin
       # we exit with positive message
       if t.pattern.empty?
         puts
-        puts '##### There are no specs for OpenProject plugins to be run.'
+        puts '##### There are no specs for ProyeksiApp plugins to be run.'
         puts
         exit(0)
       end

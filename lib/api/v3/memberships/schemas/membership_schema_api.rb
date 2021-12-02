@@ -4,7 +4,7 @@ module API
   module V3
     module Memberships
       module Schemas
-        class MembershipSchemaAPI < ::API::OpenProjectAPI
+        class MembershipSchemaAPI < ::API::ProyeksiAppAPI
           resources :schema do
             after_validation do
               authorize_any %i[manage_members view_members],

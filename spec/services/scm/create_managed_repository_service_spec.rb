@@ -12,8 +12,8 @@ describe SCM::CreateManagedRepositoryService do
   let(:config) { {} }
 
   before do
-    allow(OpenProject::Configuration).to receive(:[]).and_call_original
-    allow(OpenProject::Configuration).to receive(:[]).with('scm').and_return(config)
+    allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
+    allow(ProyeksiApp::Configuration).to receive(:[]).with('scm').and_return(config)
   end
 
   shared_examples 'does not create a filesystem repository' do

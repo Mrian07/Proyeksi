@@ -117,7 +117,7 @@ class RedirectPolicy
   ##
   # Requires the redirect URL to reside inside the relative root, when given.
   def matches_relative_root
-    relative_root = OpenProject::Configuration['rails_relative_url_root']
+    relative_root = ProyeksiApp::Configuration['rails_relative_url_root']
     relative_root.blank? || @requested_url.path.starts_with?(relative_root)
   end
 end

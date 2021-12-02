@@ -25,7 +25,7 @@ module ::Avatars
     end
 
     def ensure_enabled
-      unless ::OpenProject::Avatars::AvatarManager.local_avatars_enabled?
+      unless ::ProyeksiApp::Avatars::AvatarManager.local_avatars_enabled?
         head :not_found
         false
       end

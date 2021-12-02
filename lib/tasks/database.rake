@@ -33,8 +33,8 @@ namespace 'openproject' do
     task ensure_database_compatibility: %w[openproject:db:check_connection] do
       ##
       # Ensure database server version is compatible
-      OpenProject::Database::check!
-    rescue OpenProject::Database::UnsupportedDatabaseError => e
+      ProyeksiApp::Database::check!
+    rescue ProyeksiApp::Database::UnsupportedDatabaseError => e
       warn <<~MESSAGE
 
         ---------------------------------------------------
@@ -47,7 +47,7 @@ namespace 'openproject' do
         ---------------------------------------------------
       MESSAGE
       Kernel.exit(1)
-    rescue OpenProject::Database::InsufficientVersionError => e
+    rescue ProyeksiApp::Database::InsufficientVersionError => e
       warn <<~MESSAGE
 
         ---------------------------------------------------
@@ -60,7 +60,7 @@ namespace 'openproject' do
         ---------------------------------------------------
       MESSAGE
       Kernel.exit(1)
-    rescue OpenProject::Database::DeprecatedVersionWarning => e
+    rescue ProyeksiApp::Database::DeprecatedVersionWarning => e
       warn <<~MESSAGE
 
         ---------------------------------------------------

@@ -2,17 +2,17 @@
 sidebar_navigation:
   title: Manage users
   priority: 990
-description: Manage users in OpenProject.
+description: Manage users in ProyeksiApp.
 robots: index, follow
 keywords: manage users, lock, unlock, invite, default language
 ---
 
 # Manage users
 
-The user list provides an overview of all users in OpenProject. You can create new users, make changes to existing user accounts and block or delete users from the system. 
+The user list provides an overview of all users in ProyeksiApp. You can create new users, make changes to existing user accounts and block or delete users from the system. 
 
 <div class="glossary">
-**User** is defined as a person (described by an identifier) who uses OpenProject. Users can become project members by assigning them a role and adding them via the project settings.
+**User** is defined as a person (described by an identifier) who uses ProyeksiApp. Users can become project members by assigning them a role and adding them via the project settings.
 </div>
 To manage users click on your avatar (top right corner) and select *Administration*. Select *Users & Permissions -> Users*. The list of current users is shown.
 
@@ -20,7 +20,7 @@ In the Community Edition there is no limit to the number of users. In Enterprise
 
 | Topic                                           | Content                                                  |
 | ----------------------------------------------- | -------------------------------------------------------- |
-| [User list](#user-list)                         | Manage all users in OpenProject.                         |
+| [User list](#user-list)                         | Manage all users in ProyeksiApp.                         |
 | [Filter users](#filter-users)                   | Filter users in the list.                                |
 | [Lock and unlock users](#lock-and-unlock-users) | Block a user permanently in the system or unlock a user. |
 | [Create users](#create-users)                   | Invite or create new users. Resend or delete user invitations                              |
@@ -34,7 +34,7 @@ The User list is where users are managed. They can be added, edited or deleted f
 
 ![user list](image-20200211141841492.png)
 
-Column headers can be clicked to toggle sort direction. Arrows indicate sort order, up for ascending (a-z/0-9) and down for descending (z-a/9-0). Paging controls are shown at the bottom of the list. You will also see whether a user is a system administrator in OpenProject.
+Column headers can be clicked to toggle sort direction. Arrows indicate sort order, up for ascending (a-z/0-9) and down for descending (z-a/9-0). Paging controls are shown at the bottom of the list. You will also see whether a user is a system administrator in ProyeksiApp.
 
 ## Filter users
 
@@ -148,7 +148,7 @@ On the **Groups** tab you can see the groups the user belongs to. If a group is 
 
 ![add-users-to-a-group](image-20210215185753826.png)
 
-**Please note**: The Groups tab is only shown if at least one user group exists in OpenProject.
+**Please note**: The Groups tab is only shown if at least one user group exists in ProyeksiApp.
 
 ### Global roles
 
@@ -195,12 +195,12 @@ Use the **self-registration** field to give the following controls over a new us
 The user details Authentication section has fields **Assign random password**, **Password**, **Confirmation** and **Enforce password change**.
 
 * If you are near the new user, you can enter a password and confirmation then tell the user what it is. They can then sign in. It is recommended that you also tick the enforce password change tickbox, so that the user is prompted to change their password after they sign in.
-* You can phone the new user or send them an email, not using OpenProject, to give them the password. In this case it is more important to tick the enforce password change tickbox.
-* Tick the Assign random password, and probably the enforce password change tickbox. When the details are saved OpenProject will send an email to the new user with their password.
+* You can phone the new user or send them an email, not using ProyeksiApp, to give them the password. In this case it is more important to tick the enforce password change tickbox.
+* Tick the Assign random password, and probably the enforce password change tickbox. When the details are saved ProyeksiApp will send an email to the new user with their password.
 
 ### Account activation by email
 
-Leave all fields blank. When the details are saved OpenProject will send an email to the new user with a link inviting the user to OpenProject. They click the link to get the registration page to complete creating their account.
+Leave all fields blank. When the details are saved ProyeksiApp will send an email to the new user with a link inviting the user to ProyeksiApp. They click the link to get the registration page to complete creating their account.
 
 ## Delete users
 

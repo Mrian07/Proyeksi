@@ -71,7 +71,7 @@ nl:
   oauth:
     scopes:
       bcf_v2_1: "Volledige toegang tot de BCF v2.1 API"
-      bcf_v2_1_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de OpenProject BCF API v2.1 om namens u acties uit te voeren."
+      bcf_v2_1_text: "Toepassing zal volledige lees- en schrijftoegang krijgen tot de ProyeksiApp BCF API v2.1 om namens u acties uit te voeren."
   activerecord:
     models:
       bim/ifc_models/ifc_model: "IFC model"

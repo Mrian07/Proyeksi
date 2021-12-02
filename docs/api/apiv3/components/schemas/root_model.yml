@@ -4,12 +4,12 @@ type: object
 properties:
   instanceName:
     type: string
-    description: The name of the OpenProject instance
+    description: The name of the ProyeksiApp instance
     readOnly: true
   coreVersion:
     type: string
     description: |-
-      The OpenProject core version number for the instance
+      The ProyeksiApp core version number for the instance
 
       # Conditions
 
@@ -35,5 +35,5 @@ example:
       href: "/api/v3/work_packages"
     users:
       href: "/api/v3/users"
-  instanceName: My own OpenProject
+  instanceName: My own ProyeksiApp
   coreVersion: 10.3.0

@@ -321,9 +321,9 @@ module API
 
           def self.render_markup(link: nil, plain: false)
             format = if plain
-                       OpenProject::TextFormatting::Formats.plain_format
+                       ProyeksiApp::TextFormatting::Formats.plain_format
                      else
-                       OpenProject::TextFormatting::Formats.rich_format
+                       ProyeksiApp::TextFormatting::Formats.rich_format
                      end
 
             path = "#{root}/render/#{format}"
@@ -480,13 +480,13 @@ module API
           end
 
           def self.url_for(path, arguments = nil)
-            duplicate_regexp = if OpenProject::Configuration.rails_relative_url_root
-                                 Regexp.new("#{OpenProject::Configuration.rails_relative_url_root}/$")
+            duplicate_regexp = if ProyeksiApp::Configuration.rails_relative_url_root
+                                 Regexp.new("#{ProyeksiApp::Configuration.rails_relative_url_root}/$")
                                else
                                  Regexp.new("/$")
                                end
 
-            root_url = OpenProject::StaticRouting::StaticUrlHelpers.new.root_url
+            root_url = ProyeksiApp::StaticRouting::StaticUrlHelpers.new.root_url
 
             root_url.gsub(duplicate_regexp, '') + send(path, arguments)
           end

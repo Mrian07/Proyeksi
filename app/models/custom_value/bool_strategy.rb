@@ -29,9 +29,9 @@ class CustomValue::BoolStrategy < CustomValue::FormatStrategy
     parsed_val = if !present?(val)
                    nil
                  elsif ActiveRecord::Type::Boolean::FALSE_VALUES.include?(val)
-                   OpenProject::Database::DB_VALUE_FALSE
+                   ProyeksiApp::Database::DB_VALUE_FALSE
                  else
-                   OpenProject::Database::DB_VALUE_TRUE
+                   ProyeksiApp::Database::DB_VALUE_TRUE
                  end
 
     super(parsed_val)

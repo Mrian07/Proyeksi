@@ -216,7 +216,7 @@ class MembersController < ApplicationController
   end
 
   def enterprise_allow_new_users?
-    !OpenProject::Enterprise.user_limit_reached? || !OpenProject::Enterprise.fail_fast?
+    !ProyeksiApp::Enterprise.user_limit_reached? || !ProyeksiApp::Enterprise.fail_fast?
   end
 
   def each_comma_separated(array, &block)

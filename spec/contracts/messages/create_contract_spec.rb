@@ -16,7 +16,7 @@ describe Messages::CreateContract do
                   last_reply: message_last_reply,
                   locked: message_locked,
                   sticky: message_sticky).tap do |m|
-        m.extend(OpenProject::ChangedBySystem)
+        m.extend(ProyeksiApp::ChangedBySystem)
         m.changed_by_system("author_id" => [nil, message_author.id])
       end
     end

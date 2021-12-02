@@ -28,8 +28,8 @@ de:
         main-menu-hover-font-color: "Schriftfarbe des Hauptmenüs bei Hover"
         main-menu-border-color: "Rahmenfarbe des Hauptmenüs"
       custom_colors: "Benutzerdefinierte Farben"
-      customize: "Verpassen Sie Ihrer OpenProject Installation ein eigenes Logo. Hinweis: Das Logo ist ohne Authentifizierung einsehbar."
-      enterprise_notice: "Als ein besonderes Dankeschön für Ihre finanzielle Unterstützung in der Entwicklung von OpenProject ist diese Funktionalität nur in Verknüpfung mit einem Enterprise-Edition Abonnement verfügbar."
+      customize: "Verpassen Sie Ihrer ProyeksiApp Installation ein eigenes Logo. Hinweis: Das Logo ist ohne Authentifizierung einsehbar."
+      enterprise_notice: "Als ein besonderes Dankeschön für Ihre finanzielle Unterstützung in der Entwicklung von ProyeksiApp ist diese Funktionalität nur in Verknüpfung mit einem Enterprise-Edition Abonnement verfügbar."
       manage_colors: "Farbauswahloptionen bearbeiten"
       instructions:
         alternative-color: "Starke Akzentfarbe, wird normalerweise für die wichtigste Schaltfläche auf dem Bildschirm verwendet."
@@ -81,34 +81,34 @@ de:
       name: Beliebiger Name der LDAP-Verbindung
       host: LDAP-Hostname oder IP-Adresse
       login_map: Der Attributschlüssel in LDAP, der benutzt wird, um die eindeutige Benutzeranmeldung zu identifizieren. Normalerweise ist das `uid` oder `samAccountName`.
-      generic_map: Der Attributschlüssel in LDAP, der dem OpenProject `%{attribute}` Attribut zugeordnet ist
-      admin_map_html: "Optional: Der Attributschlüssel in LDAP der, <strong>falls vorhanden</strong>, den OpenProject-Nutzer als einen Administrator markiert. \nIm Zweifel leer lassen."
+      generic_map: Der Attributschlüssel in LDAP, der dem ProyeksiApp `%{attribute}` Attribut zugeordnet ist
+      admin_map_html: "Optional: Der Attributschlüssel in LDAP der, <strong>falls vorhanden</strong>, den ProyeksiApp-Nutzer als einen Administrator markiert. \nIm Zweifel leer lassen."
       system_user_dn_html: |
         Geben Sie den DN des Systembenutzers ein, der für schreibgeschützten Zugriff verwendet wird.
         <br/>
         Beispiel: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Geben Sie das Bind-Passwort des Systembenutzers ein
       base_dn: |
-        Geben Sie den Basis-DN des Unterbaums in LDAP ein, in dem OpenProject nach Benutzern und Gruppen suchen soll.
-        OpenProject filtert nur nach angegebenen Benutzernamen in diesem Unterbaum.
+        Geben Sie den Basis-DN des Unterbaums in LDAP ein, in dem ProyeksiApp nach Benutzern und Gruppen suchen soll.
+        ProyeksiApp filtert nur nach angegebenen Benutzernamen in diesem Unterbaum.
         Beispiel: ou=users,dc=example,dc=com
       filter_string: |
         Fügen Sie einen optionalen RFC4515 Filter hinzu, um die zu findenden Benutzer im LDAP weiter einschränken zu können. Dieser Fillter wird für die Authentifizierung und Gruppensynchronisierung verwendet.
       filter_string_concat: |
-        OpenProject filtert immer nach dem Login-Attribut des Benutzers, um einen LDAP-Eintrag zu identifizieren. Wenn Sie hier einen Filter angeben, wird
+        ProyeksiApp filtert immer nach dem Login-Attribut des Benutzers, um einen LDAP-Eintrag zu identifizieren. Wenn Sie hier einen Filter angeben, wird
         mit einem 'UND' verbunden. Standardmäßig wird ein Catch-All-Filter (objectClass=*) verwendet.
       onthefly_register: |
-        Wenn Sie dieses Häkchen setzen, erstellt OpenProject automatisch neue Benutzer aus ihren zugehörigen LDAP-Einträgen, wenn sie sich zuerst mit OpenProject anmelden.
-        Lassen Sie sie deaktiviert, um nur existierenden Konten in OpenProject die Authentifizierung über LDAP zu ermöglichen!
+        Wenn Sie dieses Häkchen setzen, erstellt ProyeksiApp automatisch neue Benutzer aus ihren zugehörigen LDAP-Einträgen, wenn sie sich zuerst mit ProyeksiApp anmelden.
+        Lassen Sie sie deaktiviert, um nur existierenden Konten in ProyeksiApp die Authentifizierung über LDAP zu ermöglichen!
     connection_encryption: 'Verbindungsverschlüsselung'
     system_account: 'Systemkonto'
     system_account_legend: |
-      OpenProject benötigt lesenden Zugriff über ein LDAP-Systemkonto, um Benutzer und Gruppen in Ihrem LDAP-Baum zu suchen.
+      ProyeksiApp benötigt lesenden Zugriff über ein LDAP-Systemkonto, um Benutzer und Gruppen in Ihrem LDAP-Baum zu suchen.
       Bitte geben Sie die Anmeldedaten für den Systembenutzer im folgenden Abschnitt an.
     ldap_details: 'LDAP-Details'
     user_settings: 'Zuordnen von Attributen'
     user_settings_legend: |
-      Die folgenden Felder beziehen sich darauf, wie Benutzer in OpenProject aus LDAP-Einträgen erstellt werden und welche LDAP-Attribute verwendet werden, um die Attribute eines OpenProject-Benutzers (Attributzuordnung) zu definieren.
+      Die folgenden Felder beziehen sich darauf, wie Benutzer in ProyeksiApp aus LDAP-Einträgen erstellt werden und welche LDAP-Attribute verwendet werden, um die Attribute eines ProyeksiApp-Benutzers (Attributzuordnung) zu definieren.
     tls_mode:
       plain: 'keine'
       simple_tls: 'simple_tls'
@@ -517,7 +517,7 @@ de:
         confirmation: "stimmt nicht mit %{attribute} überein."
         could_not_be_copied: "%{dependency} konnte nicht (vollständig) kopiert werden."
         does_not_exist: "existiert nicht."
-        error_enterprise_only: "ist nur in OpenProject Enterprise on-premises verfügbar"
+        error_enterprise_only: "ist nur in ProyeksiApp Enterprise on-premises verfügbar"
         error_unauthorized: "kann nicht zugegriffen werden."
         error_readonly: "wurde versucht zu beschreiben, ist aber nicht beschreibbar."
         email: "ist keine gültige E-Mail-Adresse."
@@ -864,7 +864,7 @@ de:
       heading_reset: "Backup-Token zurücksetzen"
       heading_create: "Backup-Token erstellen"
       implications: >
-        Das Aktivieren von Backups erlaubt jedem Benutzer mit den erforderlichen Berechtigungen und diesem Backup-Token ein Backup herunterzuladen, das alle Daten dieser OpenProject-Installation enthält. Dies schließt die Daten aller anderen Benutzer ein.
+        Das Aktivieren von Backups erlaubt jedem Benutzer mit den erforderlichen Berechtigungen und diesem Backup-Token ein Backup herunterzuladen, das alle Daten dieser ProyeksiApp-Installation enthält. Dies schließt die Daten aller anderen Benutzer ein.
       info: >
         Sie müssen einen Backup-Token generieren, um ein Backup erstellen zu können. Jedes Mal, wenn Sie ein Backup anfordern möchten, müssen Sie diesen Token zur Verfügung stellen. Sie können den Backup-Token löschen, um Backups für diesen Benutzer zu deaktivieren.
       verification: >
@@ -1184,7 +1184,7 @@ de:
   error_can_not_unarchive_project: "Dieses Projekt kann nicht ent-archiviert werden: %{errors}"
   error_check_user_and_role: "Bitte wählen Sie einen Nutzer und eine Rolle."
   error_code: "Fehler %{code}"
-  error_cookie_missing: 'Das OpenProject Cookie fehlt. Bitte stellen Sie sicher, dass Cookies aktiviert sind, da diese Applikation ohne aktivierte Cookies nicht korrekt funktioniert.'
+  error_cookie_missing: 'Das ProyeksiApp Cookie fehlt. Bitte stellen Sie sicher, dass Cookies aktiviert sind, da diese Applikation ohne aktivierte Cookies nicht korrekt funktioniert.'
   error_custom_option_not_found: "Option ist nicht vorhanden."
   error_enterprise_activation_user_limit: "Ihr Konto konnte nicht aktiviert werden (Nutzerlimit erreicht). Bitte kontaktieren Sie Ihren Administrator um Zugriff zu erhalten."
   error_enterprise_token_invalid_domain: "Die Enterprise-Edition ist nicht aktiv. Die aktuelle Domain (%{actual}) entspricht nicht dem erwarteten Hostnamen (%{expected})."
@@ -1198,8 +1198,8 @@ de:
   error_work_package_done_ratios_not_updated: "Der Arbeitspaket-Fortschritt wurde nicht aktualisiert."
   error_work_package_not_found_in_project: "Das Arbeitspaket wurde nicht gefunden oder gehört nicht zu diesem Projekt."
   error_must_be_project_member: "muss Mitglied des Projekts sein"
-  error_migrations_are_pending: "Ihre OpenProject-Installation hat noch ausstehende Datenbankmigrationen. Sie haben wahrscheinlich die Migration für Ihr letztes Upgrade nicht durchgeführt. Bitte überprüfen Sie die Upgrade-Anleitung, um Ihre Installation korrekt zu aktualisieren."
-  error_migrations_visit_upgrade_guides: "Bitte besuchen Sie unsere Dokumentation zur Aktualisierung von OpenProject"
+  error_migrations_are_pending: "Ihre ProyeksiApp-Installation hat noch ausstehende Datenbankmigrationen. Sie haben wahrscheinlich die Migration für Ihr letztes Upgrade nicht durchgeführt. Bitte überprüfen Sie die Upgrade-Anleitung, um Ihre Installation korrekt zu aktualisieren."
+  error_migrations_visit_upgrade_guides: "Bitte besuchen Sie unsere Dokumentation zur Aktualisierung von ProyeksiApp"
   error_no_default_work_package_status: "Es ist kein Status als Standard definiert. Bitte überprüfen Sie Ihre Konfiguration (unter \"Administration -> Arbeitspaket-Status\")."
   error_no_type_in_project: "Diesem Projekt ist kein Typ zugeordnet. Bitte überprüfen Sie die Projekteinstellungen."
   error_omniauth_registration_timed_out: "Die Registrierung über einen externen Authentifizierungsprovider ist fehlgeschlagen. Bitte versuchen Sie es erneut."
@@ -1269,10 +1269,10 @@ de:
   homescreen:
     additional:
       projects: "Neueste sichtbare Projekte in dieser Instanz."
-      no_visible_projects: "Es gibt keine sichtbaren Projekte in dieser OpenProject-Umgebung."
+      no_visible_projects: "Es gibt keine sichtbaren Projekte in dieser ProyeksiApp-Umgebung."
       users: "Neueste registrierte Benutzer in dieser Instanz."
     blocks:
-      community: "OpenProject Community"
+      community: "ProyeksiApp Community"
       upsale:
         title: "Auf Enterprise-Edition upgraden"
         more_info: "Weitere Informationen"
@@ -1283,7 +1283,7 @@ de:
       faq: "Häufig gestellte Fragen"
       glossary: "Glossar"
       shortcuts: "Tastenkürzel"
-      blog: "OpenProject Blog"
+      blog: "ProyeksiApp Blog"
       forums: "Community Forum"
       newsletter: "Sicherheitswarnungen / Newsletter"
   image_conversion:
@@ -1324,18 +1324,18 @@ de:
         watched: "Du beobachtest %{work_package}"
     update_info_mail:
       body: >
-        Mit Spannung kündigen wir die Veröffentlichung von OpenProject 12.0 an. Es ist eine wichtige Aktualisierung, die Ihre Arbeit mit OpenProject erheblich verbessern wird.
+        Mit Spannung kündigen wir die Veröffentlichung von ProyeksiApp 12.0 an. Es ist eine wichtige Aktualisierung, die Ihre Arbeit mit ProyeksiApp erheblich verbessern wird.
 
-        In dieser Version führen wir eine Benachrichtigungszentrale ein. Von nun an erhalten Sie Benachrichtigungen für Aktualisierungen zu Arbeitspaketen direkt in OpenProject. Sie können diese Benachrichtigungen als gelesen markieren, auf einen Kommentar antworten und direkt die Attribute des Arbeitspakets ändern, ohne das Benachrichtigungszentrum zu verlassen.
+        In dieser Version führen wir eine Benachrichtigungszentrale ein. Von nun an erhalten Sie Benachrichtigungen für Aktualisierungen zu Arbeitspaketen direkt in ProyeksiApp. Sie können diese Benachrichtigungen als gelesen markieren, auf einen Kommentar antworten und direkt die Attribute des Arbeitspakets ändern, ohne das Benachrichtigungszentrum zu verlassen.
 
         Das bedeutet auch, dass wir weniger E-Mails für Benachrichtigungen verwenden. Das Benachrichtigungszentrum wird ein besserer Ort werden, um diese Updates anzusehen und zu bearbeiten. Wenn Sie dennoch weiterhin Updates per E-Mail erhalten möchten, können Sie zu wählbaren Zeiten E-Mail-Erinnerungen erhalten.
 
         Sie können Ihre Einstellungen für Benachrichtigungen und E-Mail-Erinnerungen über Ihre Kontoeinstellungen festlegen oder diese unverändert lassen, um die Standardeinstellungen beizubehalten. Sie können dies über die Schaltfläche „E-Mail-Einstellungen ändern“ unten tun.
 
-        Wir hoffen, dass Sie das Benachrichtigungszentrum nützlich finden und dass es Ihre Arbeit mit OpenProject produktiver macht.
+        Wir hoffen, dass Sie das Benachrichtigungszentrum nützlich finden und dass es Ihre Arbeit mit ProyeksiApp produktiver macht.
 
         Mit freundlichen Grüßen
-        Das OpenProject Team
+        Das ProyeksiApp Team
       body_header: 'Version 12.0 mit Benachrichtigungszentrum'
       body_subheader: 'Nachrichten'
       subject: 'Wichtige Änderungen an Benachrichtigungen mit der Veröffentlichung von 12.0'
@@ -1648,7 +1648,7 @@ de:
   label_open_menu: "Menü öffnen"
   label_open_work_packages: "Offen"
   label_open_work_packages_plural: "Offen"
-  label_openproject_website: "OpenProject Webseite"
+  label_openproject_website: "ProyeksiApp Webseite"
   label_optional_description: "Beschreibung"
   label_options: "Optionen"
   label_other: "Andere"
@@ -1948,17 +1948,17 @@ de:
   mail_body_backup_token_reset_user_info: Ihr Backup-Token wurde zurückgesetzt.
   mail_body_backup_token_info: Der vorherige Token ist nicht mehr gültig.
   mail_body_backup_waiting_period: Der neue Token wird in %{hours} Stunden aktiviert.
-  mail_body_backup_token_warning: Wenn Sie dies nicht waren, melden Sie sich sofort bei OpenProject an und setzen Sie es erneut zurück.
+  mail_body_backup_token_warning: Wenn Sie dies nicht waren, melden Sie sich sofort bei ProyeksiApp an und setzen Sie es erneut zurück.
   mail_body_lost_password: "Benutzen Sie den folgenden Link, um Ihr Kennwort zu ändern:"
-  mail_body_register: "Willkommen bei OpenProject. Bitte aktivieren Sie Ihr Konto, indem Sie auf diesen Link klicken:"
+  mail_body_register: "Willkommen bei ProyeksiApp. Bitte aktivieren Sie Ihr Konto, indem Sie auf diesen Link klicken:"
   mail_body_register_header_title: "Einladung als Projektmitglied"
   mail_body_register_user: "Hallo %{name},"
   mail_body_register_links_html: |
     Bitte besuchen Sie unseren YouTube-Kanal (%{youtube_link}), in dem wir Webinare (%{webinar_link})
-    und "Erste-Schritte"-Videos (%{get_started_link}) bereitstellen, um Ihre ersten Schritte in OpenProject so einfach wie möglich zu machen.
+    und "Erste-Schritte"-Videos (%{get_started_link}) bereitstellen, um Ihre ersten Schritte in ProyeksiApp so einfach wie möglich zu machen.
     <br />
     Wenn Sie weitere Fragen haben, finden Sie Hilfe in unserer Dokumentation (%{documentation_link}) oder kontaktieren Sie Ihren Administrator.
-  mail_body_register_closing: "Ihr OpenProject Team"
+  mail_body_register_closing: "Ihr ProyeksiApp Team"
   mail_body_register_ending: "Wir freuen uns auf Ihre Rückmeldung! Herzlichen Dank,"
   mail_body_reminder: "%{count} Arbeitspakete, die Ihnen zugewiesen sind, müssen in den nächsten %{days} Tagen abgegeben werden:"
   mail_body_group_reminder: "%{count} Arbeitspaket(e), die der Gruppe \"%{group}\" zugewiesen sind, müssen in den nächsten %{days} Tagen abgegeben werden:"
@@ -1997,14 +1997,14 @@ de:
   mail_user_activation_limit_reached:
     subject: Nutzer aktivierungs Limit erreicht
     message: |
-      Ein neuer Nutzer (%{email}) versuchte einen Account auf dem von ihnen Verwalteten OpenProject System (%{host}) zu erstellen.
+      Ein neuer Nutzer (%{email}) versuchte einen Account auf dem von ihnen Verwalteten ProyeksiApp System (%{host}) zu erstellen.
       Der Nutzer kann seinen Account aufgrund des Nutzer Limits nicht aktivieren.
     steps:
       label: "Folgendes kannst du tuen um dem Nutzer das einloggen zu ermöglichen: "
       a: "Upgraden Sie Ihren Zahlungsplan ([here](upgrade_url))" #here turned into a link
       b: "Sprerren oder löschen eines bestehenden Nutzers ([here](users_url))" #here turned into a link
   more_actions: "Weitere Funktionen"
-  noscript_description: "Sie müssen JavaScript aktiveren, um OpenProject nutzen zu können!"
+  noscript_description: "Sie müssen JavaScript aktiveren, um ProyeksiApp nutzen zu können!"
   noscript_heading: "JavaScript deaktiviert"
   noscript_learn_more: "Weitere Informationen"
   notice_accessibility_mode: Die für die barrierefreie Nutzung optimierte Oberfläche kann in Ihren [Kontoeinstellungen](url) aktiviert werden.
@@ -2068,7 +2068,7 @@ de:
   notice_wont_delete_auth_source: Die Authentifizierungsmethode kann nicht gelöscht werden, solange es noch Benutzer gibt, die diese verwenden.
   notice_project_cannot_update_custom_fields: "Sie können die benutzerdefinierten Felder dieses Projekts nicht aktualisieren. Das Projekt ist ungültig: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Diese Seite wurde automatisch während der Aktualisierung von OpenProject generiert. Es enthält alle Anhänge, die zuvor innerhalb %{container_type} "%{container_name}" zugeordnet waren.
+    Diese Seite wurde automatisch während der Aktualisierung von ProyeksiApp generiert. Es enthält alle Anhänge, die zuvor innerhalb %{container_type} "%{container_name}" zugeordnet waren.
   #Default format for numbers
   number:
     format:
@@ -2091,9 +2091,9 @@ de:
           tb: "TB"
   onboarding:
     heading_getting_started: "Erhalten Sie einen Überblick"
-    text_getting_started_description: "Erhalten Sie einen schnellen Überblick über Projekt-Management und Zusammenarbeit in Teams mit OpenProject."
+    text_getting_started_description: "Erhalten Sie einen schnellen Überblick über Projekt-Management und Zusammenarbeit in Teams mit ProyeksiApp."
     text_show_again: "Sie können dieses Video über das Hilfe-Menü erneut starten"
-    welcome: "Willkommen bei OpenProject"
+    welcome: "Willkommen bei ProyeksiApp"
     select_language: "Bitte wählen Sie Ihre Sprache"
   permission_add_work_package_notes: "Kommentare hinzufügen"
   permission_add_work_packages: "Arbeitspakete hinzufügen"
@@ -2104,7 +2104,7 @@ de:
   permission_add_subprojects: "Unterprojekte erstellen"
   permission_add_work_package_watchers: "Beobachter hinzufügen"
   permission_assign_versions: "Versionen zuweisen"
-  permission_browse_repository: "Lesezugriff auf Projektarchiv (in OpenProject und Checkout)"
+  permission_browse_repository: "Lesezugriff auf Projektarchiv (in ProyeksiApp und Checkout)"
   permission_change_wiki_parent_page: "Übergeordnete Wiki-Seite ändern"
   permission_comment_news: "Nachricht kommentieren"
   permission_commit_access: "Lese- und Schreibzugriff auf Projektarchiv (Commit)"
@@ -2152,7 +2152,7 @@ de:
   permission_select_project_modules: "Projektmodule auswählen"
   permission_manage_types: "Typen auswählen"
   permission_view_calendar: "Kalender ansehen"
-  permission_view_changesets: "Revisionen des Projektarchivs in OpenProject ansehen"
+  permission_view_changesets: "Revisionen des Projektarchivs in ProyeksiApp ansehen"
   permission_view_commit_author_statistics: "Commit Autor Statistiken ansehen"
   permission_view_work_package_watchers: "Liste der Beobachter ansehen"
   permission_view_work_packages: "Arbeitspakete anzeigen"
@@ -2228,7 +2228,7 @@ de:
       show_instructions: "Zeige Checkout-Anweisungen"
       text_instructions: "Dieser Text wird dem Nutzer zusammen mit der Checkout-URL als zusätzliche Hilfestellung für den Checkout von Projektarchiven angezeigt."
       not_available: "Für dieses Projektarchiv sind keine Checkout-Anweisungen definiert. Kontaktieren Sie einen Administrator zur Aktivierung der Checkout-Anweisungen."
-    create_managed_delay: "Bitte beachten Sie: Das Projektarchiv wird in OpenProject verwaltet. Es wird asynchron auf dem Datenträger erstellt und wird in Kürze verfügbar sein."
+    create_managed_delay: "Bitte beachten Sie: Das Projektarchiv wird in ProyeksiApp verwaltet. Es wird asynchron auf dem Datenträger erstellt und wird in Kürze verfügbar sein."
     create_successful: "Das Projektarchiv wurde registriert."
     delete_sucessful: "Das Projektarchiv wurde gelöscht."
     destroy:
@@ -2248,8 +2248,8 @@ de:
       empty_repository: "Das Projektarchiv existiert, ist aber leer. Es enthält noch keine Änderungen."
       exists_on_filesystem: "Das Projektarchiv-Verzeichnis existiert bereits in dem Dateisystem."
       filesystem_access_failed: "Fehler beim Zugriff des Projektarchivs in dem Dateisystem: %{message}"
-      not_manageable: "Dieser Projektarchiv-Anbieter kann nicht von OpenProject verwaltet werden."
-      path_permission_failed: "Ein Fehler ist aufgetreten beim Erstellen des folgenden Pfads: %{path}. Bitte stellen Sie sicher, dass OpenProject in diesen Ordner schreiben darf."
+      not_manageable: "Dieser Projektarchiv-Anbieter kann nicht von ProyeksiApp verwaltet werden."
+      path_permission_failed: "Ein Fehler ist aufgetreten beim Erstellen des folgenden Pfads: %{path}. Bitte stellen Sie sicher, dass ProyeksiApp in diesen Ordner schreiben darf."
       unauthorized: "Sie sind nicht berechtigt auf das Projektarchiv zuzugreifen oder die Anmeldeinformationen sind ungültig."
       unavailable: "Das Projektarchiv ist nicht verfügbar."
       exception_title: "Kann nicht auf das Projektarchiv zugreifen: %{message}"
@@ -2266,9 +2266,9 @@ de:
         path_encoding: "Überschreibe Git Pfad-Codierung (Standard: UTF-8)"
       local_title: "Verknüpfen von vorhandenem lokalen Git Verzeichnis"
       local_url: "Lokale URL"
-      local_introduction: "Wenn Sie ein lokales Git Verzeichnis haben, können Sie es mit OpenProject verknüpfen um von innerhalb der Anwendung auf dieses zuzugreifen."
-      managed_introduction: "Lassen Sie OpenProject automatisch ein lokales Git Verzeichnis erstellen und integrieren."
-      managed_title: "Git Verzeichnis in OpenProject integriert"
+      local_introduction: "Wenn Sie ein lokales Git Verzeichnis haben, können Sie es mit ProyeksiApp verknüpfen um von innerhalb der Anwendung auf dieses zuzugreifen."
+      managed_introduction: "Lassen Sie ProyeksiApp automatisch ein lokales Git Verzeichnis erstellen und integrieren."
+      managed_title: "Git Verzeichnis in ProyeksiApp integriert"
       managed_url: "Verwaltete URL"
       path: "Pfad zum Git Verzeichnis"
       path_encoding: "Path encoding"
@@ -2285,19 +2285,19 @@ de:
     scm_types:
       local: "Verknüpfen von vorhandenem lokalen Projektarchiv"
       existing: "Verknüpfung eines existierenden Projektarchivs"
-      managed: "Neues Projektarchiv in OpenProject erstellen"
+      managed: "Neues Projektarchiv in ProyeksiApp erstellen"
     storage:
       not_available: "Genutzter Festplattenspeicher ist nicht für dieses Projektarchiv verfügbar."
       update_timeout: "Speichere die Informationen bzgl. des genutzten Festplattenspeichers eines Projektarchivs für N Minuten.\nErhöhen Sie diesen Wert zur Verbesserung der Performance, da die Erfassung des genutzten Festplattenspeichers Ressourcen-intensiv ist."
     subversion:
       existing_title: "Vorhandenes Subversion Projektarchiv"
-      existing_introduction: "Wenn Sie ein lokales Subversion Verzeichnis haben, können Sie es mit OpenProject verknüpfen um von innerhalb der Anwendung auf dieses zuzugreifen."
+      existing_introduction: "Wenn Sie ein lokales Subversion Verzeichnis haben, können Sie es mit ProyeksiApp verknüpfen um von innerhalb der Anwendung auf dieses zuzugreifen."
       existing_url: "Bestehende URL"
       instructions:
         managed_url: "Dies ist die URL des verwalteten (lokalen) Subversion Projektarchivs."
         url: "Geben Sie die URL des Projektarchivs ein. Dies kann entweder ein lokales Projektarchiv (beginnend mit %{local_proto}) oder ein externes Projektarchiv sein. Die folgenden URL-Schemata werden unterstützt:"
-      managed_title: "Subversion Projektarchiv in OpenProject integriert"
-      managed_introduction: "Lassen Sie OpenProject automatisch ein lokales Subversion Projektarchiv erstellen und integrieren."
+      managed_title: "Subversion Projektarchiv in ProyeksiApp integriert"
+      managed_introduction: "Lassen Sie ProyeksiApp automatisch ein lokales Subversion Projektarchiv erstellen und integrieren."
       managed_url: "Verwaltete URL"
       password: "Projektarchiv-Passwort"
       username: "Projektarchiv-Nutzername"
@@ -2314,7 +2314,7 @@ de:
   setting_apiv3_cors_enabled: "CORS aktivieren"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) erlaubte Origins"
   setting_apiv3_cors_origins_text_html: >
-    Wenn CORS aktiviert ist, sind dies die Origins, die auf die OpenProject API zugreifen dürfen. <br/> Bitte überprüfen Sie die <a href="%{origin_link}" target="_blank">Dokumentation über den Origin Header</a>, wie die Werte anzugeben sind.
+    Wenn CORS aktiviert ist, sind dies die Origins, die auf die ProyeksiApp API zugreifen dürfen. <br/> Bitte überprüfen Sie die <a href="%{origin_link}" target="_blank">Dokumentation über den Origin Header</a>, wie die Werte anzugeben sind.
   setting_apiv3_docs: "Dokumentation"
   setting_apiv3_docs_enabled: "Dokumentationsseite aktivieren"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2475,7 +2475,7 @@ de:
       sentence_connector: "und"
       skip_last_comma: "true"
   text_accessibility_hint: "Der barrierefreie Modus richtet sich an Benutzer, die motorisch eingeschränkt, blind oder sehbehindert sind. Für letztere werden selektierte Elemente mit einem Rahmen hervorgehoben. Bitte beachten Sie, dass das Backlog-Modul bei aktiviertem barrierefreien Modus nicht verfügbar ist."
-  text_access_token_hint: "Zugangs-Tokens erlauben es externen Applikationen Zugriff auf OpenProject zu erhalten."
+  text_access_token_hint: "Zugangs-Tokens erlauben es externen Applikationen Zugriff auf ProyeksiApp zu erhalten."
   text_analyze: "Weiter analysieren: %{subject}"
   text_are_you_sure: "Sind Sie sicher?"
   text_are_you_sure_with_children: "Lösche Aufgabe und alle Unteraufgaben?"
@@ -2497,7 +2497,7 @@ de:
   text_custom_favicon_instructions: >
     Dies ist das kleine Symbol, das in Ihrem Browser-Fenster/Tab neben dem Seitentitel angezeigt wird. Es muss ein quadratisches 32 x 32 Pixel großes PNG mit transparentem Hintergrund sein.
   text_custom_touch_icon_instructions: >
-    Dieses Symbol wird auf Ihrem Mobilgerät oder Tablet angezeigt, wenn Sie ein Lesezeichen dieser OpenProject-Instanz erstellen. Es muss ein quadratisches 180 x 180 Pixel großes PNG sein. Der Hintergrund sollte nicht transparent sein, da dies auf iOS-Geräten nicht optimal dargestellt wird.
+    Dieses Symbol wird auf Ihrem Mobilgerät oder Tablet angezeigt, wenn Sie ein Lesezeichen dieser ProyeksiApp-Instanz erstellen. Es muss ein quadratisches 180 x 180 Pixel großes PNG sein. Der Hintergrund sollte nicht transparent sein, da dies auf iOS-Geräten nicht optimal dargestellt wird.
   text_database_allows_tsv: "Datenbank unterstützt TSVector (optional)"
   text_default_administrator_account_changed: "Administrator-Kennwort geändert"
   text_default_encoding: "Default: UTF-8"
@@ -2544,7 +2544,7 @@ de:
   text_no_notes: "Es sind keine Kommentare für dieses Arbeitspaket vorhanden."
   text_notice_too_many_values_are_inperformant: "Achtung: Das Anzeigen von mehr als 100 Objekten pro Seite kann die Seitenladezeiten erhöhen."
   text_notice_security_badge_displayed_html: >
-    Hinweis: Wenn aktiviert, wird dies eine Plakette mit dem Status Ihrer Installation in der <a href="%{information_panel_path}">%{information_panel_label}</a> unter Administration und auf der Startseite anzeigen. Es wird nur Administratoren gezeigt. <br/> Die Plakette überprüft Ihre aktuelle OpenProject-Version gegen die offizielle Release Datenbank, um Sie über Updates oder bekannten Sicherheitslücken zu informieren. Für die Überprüfung der Version werden Daten benötigt, um verfügbare Updates für Ihre Umgebung zurückzugeben. Für mehr Informationen über die Plakette, welche Daten sie benötigt und wie Sie diese Überprüfung deaktivieren können, besuchen Sie bitte <a href="%{more_info_url}">die Konfigurationsdokumentation</a>.
+    Hinweis: Wenn aktiviert, wird dies eine Plakette mit dem Status Ihrer Installation in der <a href="%{information_panel_path}">%{information_panel_label}</a> unter Administration und auf der Startseite anzeigen. Es wird nur Administratoren gezeigt. <br/> Die Plakette überprüft Ihre aktuelle ProyeksiApp-Version gegen die offizielle Release Datenbank, um Sie über Updates oder bekannten Sicherheitslücken zu informieren. Für die Überprüfung der Version werden Daten benötigt, um verfügbare Updates für Ihre Umgebung zurückzugeben. Für mehr Informationen über die Plakette, welche Daten sie benötigt und wie Sie diese Überprüfung deaktivieren können, besuchen Sie bitte <a href="%{more_info_url}">die Konfigurationsdokumentation</a>.
   text_own_membership_delete_confirmation: "Sie sind dabei, einige oder alle Ihre Berechtigungen zu entfernen. Es ist möglich, dass Sie danach das Projekt nicht mehr ansehen oder bearbeiten dürfen.\nSind Sie sicher, dass Sie dies tun möchten?"
   text_plugin_assets_writable: "Verzeichnis für Plugin-Assets beschreibbar"
   text_powered_by: "Powered by %{link}"
@@ -2552,7 +2552,7 @@ de:
   text_reassign: "Zuweisung zu Arbeitspaket:"
   text_regexp_info: "z. B. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Der reguläre Ausdruck wird in einem mehrzeiligen Modus angewandt, z.B. ^---\s+'
-  text_repository_usernames_mapping: "Bitte legen Sie die Zuordnung der OpenProject-Benutzer zu den Benutzernamen der Commit-Log-Meldungen des Projektarchivs fest.\nBenutzer mit identischen OpenProject- und Projektarchiv-Benutzernamen oder -E-Mail-Adressen werden automatisch zugeordnet."
+  text_repository_usernames_mapping: "Bitte legen Sie die Zuordnung der ProyeksiApp-Benutzer zu den Benutzernamen der Commit-Log-Meldungen des Projektarchivs fest.\nBenutzer mit identischen ProyeksiApp- und Projektarchiv-Benutzernamen oder -E-Mail-Adressen werden automatisch zugeordnet."
   text_status_changed_by_changeset: "Status geändert durch Projektarchiv-Änderung %{value}."
   text_table_difference_description: "Diese Tabelle zeigt einzelne %{entries} des Projektarchivs. Sie können über die Checkboxen zwei Einträge markieren und über den Schalter unter der Tabelle die Unterschiede zwischen den zwei markierten Einträgen anzeigen lassen."
   text_time_logged_by_changeset: "Status geändert durch Projektarchiv-Änderung %{value}."
@@ -2757,7 +2757,7 @@ de:
     activate_and_reset_failed_logins: "Aktivieren und fehlgeschlagene Logins zurücksetzen"
     authentication_provider: "Authentifizierungsprovider"
     authentication_settings_disabled_due_to_external_authentication: >
-      Dieser Nutzer authentifiziert sich über einen externen Authentifizierungsprovider, so dass das Passwort über OpenProject nicht geändert werden kann.
+      Dieser Nutzer authentifiziert sich über einen externen Authentifizierungsprovider, so dass das Passwort über ProyeksiApp nicht geändert werden kann.
     authorization_rejected: "Sie dürfen sich nicht einloggen."
     assign_random_password: "Zufälliges Passwort zuweisen (wird dem Nutzer per E-Mail geschickt)"
     blocked: "temporär gesperrt"
@@ -2788,7 +2788,7 @@ de:
   warning: Warnung
   warning_attachments_not_saved: "%{count} Datei(en) konnten nicht gespeichert werden."
   warning_imminent_user_limit: >
-    Sie haben mehr Nutzer eingeladen, als Ihr momentaner Plan zulässt. Eingeladene Nutzer können Ihrem OpenProject möglicherweise nicht beitreten. Bitte <a href="%{upgrade_url}">upgraden Sie Ihren Tarif</a> oder blockieren Sie vorhandene Mitglieder, um den eingeladenen und registrierten Nutzern die Möglichkeit zu bieten, Ihrem Projekt beizutreten.
+    Sie haben mehr Nutzer eingeladen, als Ihr momentaner Plan zulässt. Eingeladene Nutzer können Ihrem ProyeksiApp möglicherweise nicht beitreten. Bitte <a href="%{upgrade_url}">upgraden Sie Ihren Tarif</a> oder blockieren Sie vorhandene Mitglieder, um den eingeladenen und registrierten Nutzern die Möglichkeit zu bieten, Ihrem Projekt beizutreten.
   warning_registration_token_expired: |
     E-Mail mit dem Aktivierungslink ist abgelaufen. Wir haben Ihnen ein neues zu %{email} geschickt. Bitte aktivieren Sie Ihr Konto über den Link in dieser E-Mail.
   warning_user_limit_reached: >
@@ -2921,21 +2921,21 @@ de:
         confidential: "Überprüfen Sie, ob die Anwendung verwendet wird, wo das Client-Geheimnis vertraulich gehalten werden kann. Native mobile Apps und Single Page Apps sind nicht vertraulich."
         scopes: "Überprüfen Sie die Bereiche, auf die die Anwendung Zugriff gewähren soll. Wenn kein Geltungsbereich ausgewählt ist, wird api_v3 angenommen."
         client_credential_user_id: "Optionaler Nutzer, der bei der Nutzung dieser Anwendung verkörpert wird. Leer lassen, um nur öffentlichen Zugriff zu erlauben"
-        register_intro: "Wenn Sie eine OAuth API-Client-Anwendung für OpenProject entwickeln, können Sie es mit diesem Formular für alle Benutzer registrieren."
+        register_intro: "Wenn Sie eine OAuth API-Client-Anwendung für ProyeksiApp entwickeln, können Sie es mit diesem Formular für alle Benutzer registrieren."
         default_scopes: ""
     client_id: "Client-ID"
     client_secret_notice: >
-      Dies ist das einzige Mal, dass wir das Client-Geheimnis anzeigen können. Bitte speichern Sie es ab und halten Sie es sicher. Es sollte als Passwort behandelt werden und kann später nicht mehr von OpenProject abgerufen werden.
+      Dies ist das einzige Mal, dass wir das Client-Geheimnis anzeigen können. Bitte speichern Sie es ab und halten Sie es sicher. Es sollte als Passwort behandelt werden und kann später nicht mehr von ProyeksiApp abgerufen werden.
     authorization_dialog:
       authorize: "Autorisieren"
       cancel: "Autorisierung abbrechen und verweigern."
       prompt_html: "Zugriff auf den Account <em>%{login}</em> durch <strong>%{application_name}</strong> gewähren?"
       title: "Autorisiere %{application_name}"
       wants_to_access_html: >
-        Diese Anwendung bittet um Zugriff auf Ihr OpenProject-Konto. <br/> <strong>Es hat folgende Berechtigungen angefordert:</strong>
+        Diese Anwendung bittet um Zugriff auf Ihr ProyeksiApp-Konto. <br/> <strong>Es hat folgende Berechtigungen angefordert:</strong>
     scopes:
       api_v3: "Vollständiger API(v3)-Zugriff"
-      api_v3_text: "Die Anwendung erhält vollen Lese- und Schreibzugriff auf die OpenProject API v3, um Aktionen in Ihrem Namen durchzuführen."
+      api_v3_text: "Die Anwendung erhält vollen Lese- und Schreibzugriff auf die ProyeksiApp API v3, um Aktionen in Ihrem Namen durchzuführen."
     grants:
       created_date: "Genehmigt"
       scopes: "Berechtigungen"
@@ -2951,7 +2951,7 @@ de:
     client_credentials_impersonation_set_to: "Client Credentials User-ID gesetzt auf"
     client_credentials_impersonation_warning: "Hinweis: Clients, die den 'Client-Credentials' Anmeldefluss in dieser Anwendung verwenden, erhalten die Rechte dieses Benutzers"
     client_credentials_impersonation_html: >
-      Standardmäßig bietet OpenProject OAuth 2.0 Autorisierung via %{authorization_code_flow_link}. Sie können optional %{client_credentials_flow_link} aktivieren, aber Sie müssen einen Benutzer angeben, in dessen Namen Anfragen ausgeführt werden.
+      Standardmäßig bietet ProyeksiApp OAuth 2.0 Autorisierung via %{authorization_code_flow_link}. Sie können optional %{client_credentials_flow_link} aktivieren, aber Sie müssen einen Benutzer angeben, in dessen Namen Anfragen ausgeführt werden.
     authorization_error: "Ein Autorisierungsfehler ist aufgetreten."
     revoke_my_application_confirmation: "Möchten Sie diese Anwendung wirklich entfernen? Dies wird %{token_count} aktive Token widerrufen."
     my_registered_applications: "Registrierte OAuth-Anwendungen"

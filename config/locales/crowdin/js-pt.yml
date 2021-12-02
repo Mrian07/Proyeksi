@@ -21,7 +21,7 @@ pt:
         Um novo backup substituirá qualquer realizado anteriormente. Apenas um número limitado de backups por dia pode ser solicitado.
       last_backup: Último backup
       last_backup_from: Último backup de
-      title: fazer backup do OpenProject
+      title: fazer backup do ProyeksiApp
       options: Opções
       include_attachments: Incluir anexos
       download_backup: Baixar backup
@@ -183,7 +183,7 @@ pt:
             label_maximum_users: "Máximo de usuários ativos"
             label_starts_at: "Começa em"
             label_expires_at: "Expira em"
-            receive_newsletter: Quero receber o <a target="_blank" href="%{link}">boletim informativo</a> do OpenProject.
+            receive_newsletter: Quero receber o <a target="_blank" href="%{link}">boletim informativo</a> do ProyeksiApp.
             taken_domain: Só pode haver um teste ativo por domínio.
             taken_email: Cada usuário só pode criar uma avaliação.
           email_not_received: "Não recebeu um e-mail? Você pode reenviá-lo através do link à direita."
@@ -197,7 +197,7 @@ pt:
           status_confirmed: "confirmado"
           status_waiting: "e-mail enviado - aguardando confirmação"
           test_ee: "Teste o Enterprise Edition gratuitamente durante 14 dias"
-          quick_overview: "Obtenha uma visão geral da gestão de projeto e colaboração da equipa com o OpenProject Enterprise Edition."
+          quick_overview: "Obtenha uma visão geral da gestão de projeto e colaboração da equipa com o ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Torne-se um herói!"
           benefits:
@@ -209,14 +209,14 @@ pt:
             premium_features: "Recursos premium"
             premium_features_text: "Painéis práticos, gráficos de temas e logotipos personalizados, fluxos de trabalho inteligentes com ações personalizadas, pesquisa de texto completo para anexos em pacotes de trabalho e campos personalizados de multi-seleção."
             professional_support: "Suporte profissional"
-            professional_support_text: "Receba o suporte de confiança e alto nível de engenheiros sênior de suporte, com conhecimento especializado sobre a gestão do OpenProject em ambientes de negócios críticos."
+            professional_support_text: "Receba o suporte de confiança e alto nível de engenheiros sênior de suporte, com conhecimento especializado sobre a gestão do ProyeksiApp em ambientes de negócios críticos."
           button_start_trial: "Iniciar avaliação gratuita"
           button_book_now: "Reserve agora"
           confidence: >
             Fornecemos toda a segurança de um software de gestão de projetos de classe empresarial, testado e com suporte - com Open Source e mente aberta.
           link_quote: "Fazer uma cotação"
           text: >
-            O OpenProject Enterprise Edition foi construído a partir do Community Edition. Ele conta com recursos premium e suporte profissional, com foco principal em organizações com mais de 10 usuários que gerenciam projetos de negócios críticos com o OpenProject.
+            O ProyeksiApp Enterprise Edition foi construído a partir do Community Edition. Ele conta com recursos premium e suporte profissional, com foco principal em organizações com mais de 10 usuários que gerenciam projetos de negócios críticos com o ProyeksiApp.
           unlimited: "Ilimitado"
           you_contribute: "Os desenvolvedores também têm contas para pagar. Ao obter o Enterprise Edition, você estará contribuindo de forma substancial para os esforços desta comunidade Open Source."
     custom_actions:
@@ -274,7 +274,7 @@ pt:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                A versão contém vários recursos importantes: <br> <ul class="%{list_styling_class}"> <li>Centro de notificações: Reduz o número de e-mails que você recebe. Ao invés disso você encontra e toma as ações necessárias sobre todas as notificações importantes em um único local central.</li> <li>Todos os arquivos IFC enviados agora também podem ser baixados.</li> <li>O envio e processamento de IFC ficou mais rápido e recebeu melhores mensagens de erro.</li> <li>O <a href="https://github.com/opf/openproject-revit-add-in">Complemento Revit do OpenProject</a> passou por várias correções de erros.</li> </ul>
+                A versão contém vários recursos importantes: <br> <ul class="%{list_styling_class}"> <li>Centro de notificações: Reduz o número de e-mails que você recebe. Ao invés disso você encontra e toma as ações necessárias sobre todas as notificações importantes em um único local central.</li> <li>Todos os arquivos IFC enviados agora também podem ser baixados.</li> <li>O envio e processamento de IFC ficou mais rápido e recebeu melhores mensagens de erro.</li> <li>O <a href="https://github.com/opf/openproject-revit-add-in">Complemento Revit do ProyeksiApp</a> passou por várias correções de erros.</li> </ul>
     label_activate: "Ativar"
     label_add_column_after: "Adicionar coluna depois"
     label_add_column_before: "Adicionar coluna antes"
@@ -463,7 +463,7 @@ pt:
         next: 'Próxima'
         got_it: 'Entendi'
       steps:
-        help_menu: 'O menu Ajuda (?) fornece <b>recursos adicionais de ajuda</b>. Aqui você pode encontrar um guia do usuário e vídeos de ajuda úteis e muito mais. <br> Aproveite seu trabalho com o OpenProject!'
+        help_menu: 'O menu Ajuda (?) fornece <b>recursos adicionais de ajuda</b>. Aqui você pode encontrar um guia do usuário e vídeos de ajuda úteis e muito mais. <br> Aproveite seu trabalho com o ProyeksiApp!'
         members: 'Convide novos <b>membros</b> para participar de seu projeto.'
         project_selection: 'Clique em um dos projetos de demonstração que preparamos. Os dados de demonstração estão atualmente disponíveis apenas em inglês. <br> O geral<b> projeto demo </b> é mais adequado para gerenciamento de projeto clássico, enquanto o <b> projeto Scrum </b> é melhor para gerenciamento de projeto ágil.'
         quick_add_button: 'Clique no ícone mais (+) no menu de navegação para <b>criar um novo projeto</b> ou para <b>convidar colegas de trabalho</b>.'

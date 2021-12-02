@@ -28,7 +28,7 @@ module Projects
     end
 
     def enabled_modules_with_dependencies
-      OpenProject::AccessControl
+      ProyeksiApp::AccessControl
         .modules
         .select { |m| model.enabled_module_names.include?(m[:name].to_s) && m[:dependencies] }
     end

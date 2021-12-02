@@ -110,7 +110,7 @@ class LdapAuthSource < AuthSource
   def initialize_ldap_con(ldap_user, ldap_password)
     options = { host: host,
                 port: port,
-                force_no_page: OpenProject::Configuration.ldap_force_no_page,
+                force_no_page: ProyeksiApp::Configuration.ldap_force_no_page,
                 encryption: ldap_encryption }
     unless ldap_user.blank? && ldap_password.blank?
       options.merge!(auth: { method: :simple, username: ldap_user,
@@ -124,7 +124,7 @@ class LdapAuthSource < AuthSource
 
     {
       method: tls_mode.to_sym,
-      tls_options: OpenProject::Configuration.ldap_tls_options.with_indifferent_access
+      tls_options: ProyeksiApp::Configuration.ldap_tls_options.with_indifferent_access
     }
   end
 

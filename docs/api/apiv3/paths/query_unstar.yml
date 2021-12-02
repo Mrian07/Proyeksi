@@ -73,7 +73,7 @@ patch:
                     title: Parent (Descending)
                   user:
                     href: "/api/v3/users/1"
-                    title: OpenProject Admin
+                    title: ProyeksiApp Admin
                 _type: Query
                 createdAt: '2015-03-20T12:56:56Z'
                 filters:

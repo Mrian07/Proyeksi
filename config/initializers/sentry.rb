@@ -1,4 +1,4 @@
-if OpenProject::Logging::SentryLogger.enabled?
+if ProyeksiApp::Logging::SentryLogger.enabled?
   require "sentry-ruby"
   require "sentry-rails"
   require "sentry-delayed_job"
@@ -9,7 +9,7 @@ if OpenProject::Logging::SentryLogger.enabled?
   # We need to manually load the sentry initializer
   # as we're dynamically loading it
   # https://github.com/getsentry/sentry-ruby/blob/master/sentry-rails/lib/sentry/rails/railtie.rb#L8-L13
-  OpenProject::Application.configure do |app|
+  ProyeksiApp::Application.configure do |app|
     # need to be placed at last to smuggle app exceptions via env
     app.config.middleware.use(Sentry::Rails::RescuedExceptionInterceptor)
   end
@@ -21,11 +21,11 @@ if OpenProject::Logging::SentryLogger.enabled?
   end
 
   Sentry.init do |config|
-    config.dsn = OpenProject::Logging::SentryLogger.sentry_dsn
-    config.breadcrumbs_logger = OpenProject::Configuration.sentry_breadcrumb_loggers.map(&:to_sym)
+    config.dsn = ProyeksiApp::Logging::SentryLogger.sentry_dsn
+    config.breadcrumbs_logger = ProyeksiApp::Configuration.sentry_breadcrumb_loggers.map(&:to_sym)
 
     # Submit events as delayed job only when requested to do that
-    if ENV['OPENPROJECT_SENTRY_DELAYED_JOB'] == 'true'
+    if ENV['PROYEKSIAPP_SENTRY_DELAYED_JOB'] == 'true'
       config.async = lambda do |event, hint|
         ::SentryJob.perform_later(event, hint)
       end
@@ -52,7 +52,7 @@ if OpenProject::Logging::SentryLogger.enabled?
     # Sample rate for performance
     # 0.0 = disabled
     # 1.0 = all samples are traced
-    sample_factor = OpenProject::Configuration.sentry_trace_factor.to_f
+    sample_factor = ProyeksiApp::Configuration.sentry_trace_factor.to_f
 
     # Define a tracing sample handler
     trace_sampler = lambda do |sampling_context|
@@ -100,10 +100,10 @@ if OpenProject::Logging::SentryLogger.enabled?
     end
 
     # Set release info
-    config.release = OpenProject::VERSION.to_s
+    config.release = ProyeksiApp::VERSION.to_s
   end
 
   # Extend the core log delegator
-  handler = ::OpenProject::Logging::SentryLogger.method(:log)
-  ::OpenProject::Logging::LogDelegator.register(:sentry, handler)
+  handler = ::ProyeksiApp::Logging::SentryLogger.method(:log)
+  ::ProyeksiApp::Logging::LogDelegator.register(:sentry, handler)
 end

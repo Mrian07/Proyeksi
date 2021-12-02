@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Placeholder users
   priority: 985
-description: Manage placeholder users in in OpenProject.
+description: Manage placeholder users in in ProyeksiApp.
 robots: index, follow
 keywords: placeholder user, example, wildcard, place holder
 ---
 
 # Placeholder users (Premium feature)
 
-In [OpenProject Enterprise on-premises](https://www.openproject.org/enterprise-edition/) and [OpenProject Enterprise cloud](https://www.openproject.org/hosting/) you can add placeholder users to your instance. They can be created without an email address and do not need license seats.
+In [ProyeksiApp Enterprise on-premises](https://www.openproject.org/enterprise-edition/) and [ProyeksiApp Enterprise cloud](https://www.openproject.org/hosting/) you can add placeholder users to your instance. They can be created without an email address and do not need license seats.
 
 Placeholder users can be used to plan a project with or for users who haven't been added to that project yet. This way you can set up projects before staffing them.
 Another use case would be to include customers, vendors or partners in your planning without them knowing it.
@@ -19,7 +19,7 @@ Placeholder users can be managed by system admins and by users with the [role](.
 
 | Topic                                                        | Content                                              |
 | ------------------------------------------------------------ | ---------------------------------------------------- |
-| [Placeholder user list](#placeholder-user-list)              | Manage placeholder users in OpenProject.             |
+| [Placeholder user list](#placeholder-user-list)              | Manage placeholder users in ProyeksiApp.             |
 | [Create placeholder users](#create-placeholder-users)        | Add new placeholder users.                           |
 | [Manage placeholder user settings](#manage-placeholder-user-settings) | Change names and add placeholders users to projects. |
 

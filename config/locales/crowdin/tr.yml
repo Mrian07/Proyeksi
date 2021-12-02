@@ -28,8 +28,8 @@ tr:
         main-menu-hover-font-color: "Fareyle üzerine gelindiğinde ana menü yazı tipi"
         main-menu-border-color: "Ana menü kenarlığı"
       custom_colors: "Özel renkler"
-      customize: "Kendi logonuuz ile OpenProject yüklemenizi özelleştirin. Not: Bu logo genel olarak erişilebilir olacaktır."
-      enterprise_notice: "OpenProject'in geliştirilmesine finansal destek verenlere özel olarak 'Teşekkür ederiz!'. Bu küçük özellik sadece Enterprise Sürüm alan destekçilerimize özeldir."
+      customize: "Kendi logonuuz ile ProyeksiApp yüklemenizi özelleştirin. Not: Bu logo genel olarak erişilebilir olacaktır."
+      enterprise_notice: "ProyeksiApp'in geliştirilmesine finansal destek verenlere özel olarak 'Teşekkür ederiz!'. Bu küçük özellik sadece Enterprise Sürüm alan destekçilerimize özeldir."
       manage_colors: "Renk seçim seçeneklerini düzenle"
       instructions:
         alternative-color: "Güçlü vurgu rengi, genellikle ekrandaki en önemli düğme için kullanılır."
@@ -81,37 +81,37 @@ tr:
       name: LDAP bağlantısının keyfi adı
       host: LDAP ana bilgisayar adı veya IP adresi
       login_map: LDAP’deki benzersiz kullanıcı girişini tanımlamak için kullanılan özellik anahtarı. Genelde bu, 'uid' veya 'samAccountName' olacaktır.
-      generic_map: LDAP'de, OpenProject `%{attribute}` niteliğiyle eşlenen özellik anahtarı
-      admin_map_html: "İsteğe bağlı: LDAP'daki, <strong> varsa </strong> OpenProject kullanıcısına bir yönetici işaretleyen özellik anahtarı. Şüphe duyduğunuzda boş bırakın."
+      generic_map: LDAP'de, ProyeksiApp `%{attribute}` niteliğiyle eşlenen özellik anahtarı
+      admin_map_html: "İsteğe bağlı: LDAP'daki, <strong> varsa </strong> ProyeksiApp kullanıcısına bir yönetici işaretleyen özellik anahtarı. Şüphe duyduğunuzda boş bırakın."
       system_user_dn_html: |
         Salt okunur erişim için kullanılan sistem kullanıcısının DN'sini girin.
         <br/>
         Örnek: uid = openproject, ou = sistem, dc = örnek, dc = com
       system_user_password: Sistem kullanıcısının cilt şifresini girin
       base_dn: |
-        LDAP'da, OpenProject'in kullanıcıları ve grupları aramasını istediğiniz alt ağacın Temel DN'sini girin.
-        OpenProject yalnızca bu alt ağaçta belirtilen kullanıcı adlarını filtreleyecektir.
+        LDAP'da, ProyeksiApp'in kullanıcıları ve grupları aramasını istediğiniz alt ağacın Temel DN'sini girin.
+        ProyeksiApp yalnızca bu alt ağaçta belirtilen kullanıcı adlarını filtreleyecektir.
         Örnek: ou = kullanıcılar, dc = örnek, dc = com
       filter_string: |
         LDAP'de filtrelenen kullanıcılar için döndürülen sonuçlara uygulamak üzere isteğe bağlı bir RFC4515 filtresi ekleyin.
-        Bu, OpenProject tarafından kimlik doğrulama ve grup senkronizasyonu için bulunan kullanıcı kümesini kısıtlamak için kullanılabilir.
+        Bu, ProyeksiApp tarafından kimlik doğrulama ve grup senkronizasyonu için bulunan kullanıcı kümesini kısıtlamak için kullanılabilir.
       filter_string_concat: |
-        OpenProject her zaman kullanıcının kaydı tanımlaması için sağlanan oturum açma özniteliğine filtre uygular. Burada bir filtre sağlarsanız,
+        ProyeksiApp her zaman kullanıcının kaydı tanımlaması için sağlanan oturum açma özniteliğine filtre uygular. Burada bir filtre sağlarsanız,
         bir AND ile birleştirilecektir. Varsayılan olarak filtre olarak bir tümünü yakala (objectClass = *) kullanılır.
       onthefly_register: |
-        Bu kutuyu işaretlerseniz, OpenProject otomatik olarak LDAP girişlerinden yeni kullanıcılar oluşturur
-        OpenProject ile ilk kimlik doğrulaması yaptıklarında.
-        Yalnızca OpenProject’deki mevcut hesapların LDAP üzerinden kimlik doğrulaması yapmasına izin vermek için işaretlenmemiş bırakın!
+        Bu kutuyu işaretlerseniz, ProyeksiApp otomatik olarak LDAP girişlerinden yeni kullanıcılar oluşturur
+        ProyeksiApp ile ilk kimlik doğrulaması yaptıklarında.
+        Yalnızca ProyeksiApp’deki mevcut hesapların LDAP üzerinden kimlik doğrulaması yapmasına izin vermek için işaretlenmemiş bırakın!
     connection_encryption: 'Bağlantı şifreleme'
     system_account: 'Sistem hesabı'
     system_account_legend: |
-      OpenProject, LDAP ağacınızdaki kullanıcıları ve grupları aramak için bir sistem hesabı üzerinden salt okunur erişim gerektirir.
+      ProyeksiApp, LDAP ağacınızdaki kullanıcıları ve grupları aramak için bir sistem hesabı üzerinden salt okunur erişim gerektirir.
       Lütfen aşağıdaki bölümde bu sistem kullanıcısı için bağlama bilgilerini belirtin.
     ldap_details: 'LDAP ayrıntıları'
     user_settings: 'Öznitelik eşlemesi'
     user_settings_legend: |
-      Aşağıdaki alanlar LDAP girişlerinden kullanıcıların OpenProject'te nasıl oluşturulduğuyla ilgilidir ve
-      OpenProject kullanıcısının niteliklerini tanımlamak için hangi LDAP niteliklerinin kullanıldığı (özellik eşlemesi).
+      Aşağıdaki alanlar LDAP girişlerinden kullanıcıların ProyeksiApp'te nasıl oluşturulduğuyla ilgilidir ve
+      ProyeksiApp kullanıcısının niteliklerini tanımlamak için hangi LDAP niteliklerinin kullanıldığı (özellik eşlemesi).
     tls_mode:
       plain: 'hiçbiri'
       simple_tls: 'basit_tls'
@@ -522,7 +522,7 @@ tr:
         confirmation: "%{attribute} eşleşmiyor."
         could_not_be_copied: "%{dependency} (tam olarak) kopyalanamadı."
         does_not_exist: "mevcut değil."
-        error_enterprise_only: "sadece OpenProject'in ticari sürümlerinde mevcuttur"
+        error_enterprise_only: "sadece ProyeksiApp'in ticari sürümlerinde mevcuttur"
         error_unauthorized: "erişilemez."
         error_readonly: "yazılmaya çalışıldı fakat yazılabilir değil."
         email: "Geçerli bir e-posta adresi değil.\n"
@@ -869,7 +869,7 @@ tr:
       heading_reset: "Yedekleme jetonunu sıfırlayın"
       heading_create: "Yedek jeton oluşturun"
       implications: >
-        Yedeklemeleri etkinleştirmek, gerekli izinlere ve bu yedekleme jetonuna sahip herhangi bir kullanıcının bu OpenProject kurulumunun tüm verilerini içeren bir yedeği indirmesine izin verecektir. Bu, diğer tüm kullanıcıların verilerini içerir.
+        Yedeklemeleri etkinleştirmek, gerekli izinlere ve bu yedekleme jetonuna sahip herhangi bir kullanıcının bu ProyeksiApp kurulumunun tüm verilerini içeren bir yedeği indirmesine izin verecektir. Bu, diğer tüm kullanıcıların verilerini içerir.
       info: >
         Yedek oluşturabilmek için bir yedekleme belirteci oluşturmanız gerekecektir. Her yedekleme talebinde bulunduğunuzda, bu belirteci sağlamanız gerekecektir. Bu kullanıcı için yedeklemeleri devre dışı bırakmak için yedekleme jetonunu silebilirsiniz.
       verification: >
@@ -1189,7 +1189,7 @@ tr:
   error_can_not_unarchive_project: "Bu proje arşivlenemez: %{errors}"
   error_check_user_and_role: "Lütfen bir kullanıcı ve bir rol seçin."
   error_code: "Hata  %{code}"
-  error_cookie_missing: 'OpenProject çerezi yok. Lütfen uygulamanın düzgün çalışabilmesi için, tarayıcınızda çerezlere izin verildiğine emin olun.'
+  error_cookie_missing: 'ProyeksiApp çerezi yok. Lütfen uygulamanın düzgün çalışabilmesi için, tarayıcınızda çerezlere izin verildiğine emin olun.'
   error_custom_option_not_found: "Seçenek yok."
   error_enterprise_activation_user_limit: "Hesabınız etkinleştirilemedi (kullanıcı limitine ulaşıldı). Erişim sağlamak için lütfen yöneticinize başvurun."
   error_enterprise_token_invalid_domain: "Enterprise Edition etkin değil. Kurumsal simgenizin etki alanı (%{actual}) sistemin ana makine adıyla (%{expected}) eşleşmiyor."
@@ -1203,7 +1203,7 @@ tr:
   error_work_package_done_ratios_not_updated: "İş tamamlanma oranları güncellenmedi."
   error_work_package_not_found_in_project: "Iş paketi bulunamadı veya bu projeye ait değil"
   error_must_be_project_member: "projesi üyesi olmalıdır"
-  error_migrations_are_pending: "OpenProject kurulumunuzda bekleyen veritabanı geçişleri var. Son yükseltme işleminizde geçiş işlemlerini gerçekleştirme ihtimalinizi büyük olasılıkla kaçırdınız. Lütfen kurulumunuzu uygun şekilde yükseltmek için yükseltme kılavuzunu kontrol edin."
+  error_migrations_are_pending: "ProyeksiApp kurulumunuzda bekleyen veritabanı geçişleri var. Son yükseltme işleminizde geçiş işlemlerini gerçekleştirme ihtimalinizi büyük olasılıkla kaçırdınız. Lütfen kurulumunuzu uygun şekilde yükseltmek için yükseltme kılavuzunu kontrol edin."
   error_migrations_visit_upgrade_guides: "Lütfen yükseltme kılavuzu belgelerimizi ziyaret edin"
   error_no_default_work_package_status: "Varsayılan iş paketi durumu tanımlanmadı. Lütfen yapılandırmanızı kontrol edin (\"Yönetim -> İş paketi durumu \" na gidin)."
   error_no_type_in_project: "Bu proje ile ilişkili bir tür yok. Lütfen Proje ayarlarını kontrol edin."
@@ -1277,7 +1277,7 @@ tr:
       no_visible_projects: "Bu durumda görünür bir proje yok."
       users: "Bu bölümdeki kaydolan en son kullanıcılar."
     blocks:
-      community: "OpenProject topluluğu"
+      community: "ProyeksiApp topluluğu"
       upsale:
         title: "Enterprise Edition sürümüne yükseltme"
         more_info: "Daha fazla bilgi"
@@ -1288,7 +1288,7 @@ tr:
       faq: "SSS"
       glossary: "Terimler sözlüğü"
       shortcuts: "Kısayollar"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Topluluk forumu"
       newsletter: "Güvenlik uyarıları / haber bülteni"
   image_conversion:
@@ -1329,9 +1329,9 @@ tr:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1340,7 +1340,7 @@ tr:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Haberler'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1653,7 +1653,7 @@ tr:
   label_open_menu: "Menüyü Aç"
   label_open_work_packages: "açık"
   label_open_work_packages_plural: "açık"
-  label_openproject_website: "OpenProject web sitesi"
+  label_openproject_website: "ProyeksiApp web sitesi"
   label_optional_description: "Açıklama"
   label_options: "Ayarlar"
   label_other: "Diğer"
@@ -1953,17 +1953,17 @@ tr:
   mail_body_backup_token_reset_user_info: Yedek jetonunuz sıfırlandı.
   mail_body_backup_token_info: Önceki jeton artık geçerli değil.
   mail_body_backup_waiting_period: Yeni jeton %{hours} saat içinde etkinleştirilecek.
-  mail_body_backup_token_warning: Bu siz değildiyseniz, hemen OpenProject'te oturum açın ve yeniden sıfırlayın.
+  mail_body_backup_token_warning: Bu siz değildiyseniz, hemen ProyeksiApp'te oturum açın ve yeniden sıfırlayın.
   mail_body_lost_password: "Parolanızı değiştirmek için aşağıdaki bağlantıyı tıklayın:"
-  mail_body_register: "OpenProject'e hoş geldiniz. Lütfen bu bağlantıyı tıklayarak hesabınızı etkinleştirin:"
+  mail_body_register: "ProyeksiApp'e hoş geldiniz. Lütfen bu bağlantıyı tıklayarak hesabınızı etkinleştirin:"
   mail_body_register_header_title: "Proje üyesi davet e-postası"
   mail_body_register_user: "Sevgili %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "OpenProject ekibiniz"
+  mail_body_register_closing: "ProyeksiApp ekibiniz"
   mail_body_register_ending: "Bağlı kalın! Saygılarımla,"
   mail_body_reminder: "Size tahsis edilen(ler) %{count} iş paketinin bir sonraki %{days} gün içinde ödemesi gerekiyor:"
   mail_body_group_reminder: "\"%{group}\" grubuna atanan %{count} çalışma paketi / paketleri sonraki %{days}  gününden kaynaklanmaktadır:"
@@ -2002,14 +2002,14 @@ tr:
   mail_user_activation_limit_reached:
     subject: Kullanıcı etkinleştirme sınırına ulaşıldı
     message: |
-      Yeni bir kullanıcı (%{email}) yönettiğiniz bir OpenProject ortamında bir hesap oluşturmaya çalıştı (%{host}).
+      Yeni bir kullanıcı (%{email}) yönettiğiniz bir ProyeksiApp ortamında bir hesap oluşturmaya çalıştı (%{host}).
       Kullanıcı sınırına ulaşıldığından beri kullanıcı hesaplarını etkinleştiremiyor.
     steps:
       label: "Kullanıcının oturum açmasına izin vermek için şunlardan birini yapabilirsiniz:"
       a: "Ödeme planınızı yükseltin ([here](upgrade_url))" #here turned into a link
       b: "Mevcut bir kullanıcıyı kilitle veya sil ([buradan](users_url))" #here turned into a link
   more_actions: "Daha fazla işlev"
-  noscript_description: "OpenProject'i kullanmak için JavaScript'i etkinleştirmeniz gerekiyor!"
+  noscript_description: "ProyeksiApp'i kullanmak için JavaScript'i etkinleştirmeniz gerekiyor!"
   noscript_heading: "JavaScript kapalı"
   noscript_learn_more: "Daha fazla bilgi edin"
   notice_accessibility_mode: Erişilebilirlik modu, [hesap settings](url). altından etkinleştirilebilir.
@@ -2073,7 +2073,7 @@ tr:
   notice_wont_delete_auth_source: Kimlik doğrulama modunu kullanan kullanıcılar olduğu sürece silinemez.
   notice_project_cannot_update_custom_fields: "Projenin kullanılabilir özel alanları güncelleştirilemiyor. Proje geçersiz: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Bu sayfa OpenProject güncelleme sırasında otomatik olarak yaratılır. Daha önce %{container_type} "%{container_name}" ile ilişkili tüm ekleri içerir.
+    Bu sayfa ProyeksiApp güncelleme sırasında otomatik olarak yaratılır. Daha önce %{container_type} "%{container_name}" ile ilişkili tüm ekleri içerir.
   #Default format for numbers
   number:
     format:
@@ -2096,9 +2096,9 @@ tr:
           tb: "TB"
   onboarding:
     heading_getting_started: "Genel görünümü al"
-    text_getting_started_description: "OpenProject ile takım çalışması ve proje yönetimi konusuna genel bir bakış."
+    text_getting_started_description: "ProyeksiApp ile takım çalışması ve proje yönetimi konusuna genel bir bakış."
     text_show_again: "Bu videoyu Yardım menüsünden yeniden başlatabilirsiniz"
-    welcome: "OpenProject'e hoş geldiniz"
+    welcome: "ProyeksiApp'e hoş geldiniz"
     select_language: "Lütfen dilinizi seçin"
   permission_add_work_package_notes: "Not eklemek"
   permission_add_work_packages: "İş paketi eklemek"
@@ -2157,7 +2157,7 @@ tr:
   permission_select_project_modules: "Proje modülleri seçmek"
   permission_manage_types: "İş paketi türlerini seçmek"
   permission_view_calendar: "Takvimi görüntülemek"
-  permission_view_changesets: "OpenProject'de depo revizyonlarını görüntüle"
+  permission_view_changesets: "ProyeksiApp'de depo revizyonlarını görüntüle"
   permission_view_commit_author_statistics: "Yazar istatistiklerini inceleyin"
   permission_view_work_package_watchers: "Takipçi listesini göster"
   permission_view_work_packages: "İş paketlerini görüntüle"
@@ -2239,7 +2239,7 @@ tr:
     destroy:
       confirmation: "Devam ederseniz, yönetilen depoyu kalıcı olarak silecektir."
       info: "Deponun silinmesi geri döndürülemez bir işlemdir."
-      info_not_managed: "Not: Bu, OpenProject tarafından yönetilmediğinden, bu deponun içeriğini Silmeyecektir."
+      info_not_managed: "Not: Bu, ProyeksiApp tarafından yönetilmediğinden, bu deponun içeriğini Silmeyecektir."
       managed_path_note: "Aşağıdaki dizin silinir:% {path} %{path}"
       repository_verification: "Deponun silinmesini doğrulamak için projenin tanımlayıcı% {identifier} 'yi girin. %{identifier}"
       subtitle: "% {Project_name} projesinin% {repository_type} dosyasını gerçekten silmek istiyor musunuz? %{repository_type} %{project_name}"
@@ -2253,8 +2253,8 @@ tr:
       empty_repository: "Depo var, ancak boş. Henüz düzeltme içermiyor."
       exists_on_filesystem: "Depo dizini zaten dosya sisteminde var."
       filesystem_access_failed: "Dosya sistemindeki havuza erişirken bir hata oluştu:% {message} %{message}"
-      not_manageable: "Bu depo satıcısı OpenProject tarafından yönetilemez."
-      path_permission_failed: "Aşağıdaki yolu oluşturmaya çalışırken bir hata oluştu:% {path}. Lütfen OpenProject'in bu klasöre yazabileceğinden emin olun. %{path}."
+      not_manageable: "Bu depo satıcısı ProyeksiApp tarafından yönetilemez."
+      path_permission_failed: "Aşağıdaki yolu oluşturmaya çalışırken bir hata oluştu:% {path}. Lütfen ProyeksiApp'in bu klasöre yazabileceğinden emin olun. %{path}."
       unauthorized: "Depolama alanına erişim yetkiniz yok ya da kimlik bilgileri geçersiz."
       unavailable: "Depo kullanılamaz."
       exception_title: "Depoya erişilemiyor:% {message} %{message}"
@@ -2271,9 +2271,9 @@ tr:
         path_encoding: "Git yol kodlamasını geçersiz kıl (Varsayılan: UTF-8)"
       local_title: "Mevcut yerel Git deponuzu bağlayın"
       local_url: "Yerel adres"
-      local_introduction: "Mevcut bir yerel Git deponuz varsa, uygulamadan erişmek için onu OpenProject ile bağlayabilirsiniz."
-      managed_introduction: "OpenProject yerel bir Git deposunu otomatik olarak oluşturup entegre edin."
-      managed_title: "Git deposu OpenProject'e entegredir"
+      local_introduction: "Mevcut bir yerel Git deponuz varsa, uygulamadan erişmek için onu ProyeksiApp ile bağlayabilirsiniz."
+      managed_introduction: "ProyeksiApp yerel bir Git deposunu otomatik olarak oluşturup entegre edin."
+      managed_title: "Git deposu ProyeksiApp'e entegredir"
       managed_url: "Yönetilen URL"
       path: "Git deposunun yolu"
       path_encoding: "Yol kodlaması"
@@ -2290,19 +2290,19 @@ tr:
     scm_types:
       local: "Varolan yerel depoyu bağla"
       existing: "Varolan depoyu bağla"
-      managed: "OpenProject'de yeni depo oluşturun"
+      managed: "ProyeksiApp'de yeni depo oluşturun"
     storage:
       not_available: "Bu depo için disk depolama tüketimi yok."
       update_timeout: "Bir depo için N dakika boyunca gereken son disk alanı bilgilerini saklayın.\nDeponun gerekli disk alanını saymak maliyetli olabileceğinden performans etkisini azaltmak için bu değeri yükseltin."
     subversion:
       existing_title: "Mevcut Subversion deposu"
-      existing_introduction: "Varolan bir Subversion havuzunuz varsa, uygulamanın içinden erişmek için onu OpenProject ile bağlayabilirsiniz."
+      existing_introduction: "Varolan bir Subversion havuzunuz varsa, uygulamanın içinden erişmek için onu ProyeksiApp ile bağlayabilirsiniz."
       existing_url: "Varolan Adres"
       instructions:
         managed_url: "Bu, yönetilen (yerel) Subversion havuzunun URL'si."
         url: "Depo URL'sini girin. Bu, yerel bir depoyu (% {local_proto} ile başlayan) veya uzak bir depoyu hedefleyebilir.\nAşağıdaki URL şemaları desteklenmektedir: %{local_proto}"
-      managed_title: "OpenProject'e entegre edilen Subversion deposu"
-      managed_introduction: "OpenProject yerel bir Subversion havuzunu otomatik olarak oluşturup entegre edin."
+      managed_title: "ProyeksiApp'e entegre edilen Subversion deposu"
+      managed_introduction: "ProyeksiApp yerel bir Subversion havuzunu otomatik olarak oluşturup entegre edin."
       managed_url: "Yönetilen URL"
       password: "Depo Parolası"
       username: "Depo kullanıcı adı"
@@ -2319,7 +2319,7 @@ tr:
   setting_apiv3_cors_enabled: "CORS'u etkinleştir"
   setting_apiv3_cors_origins: "API V3 Kaynaklar Arası Kaynak Paylaşımı (CORS) izin verilen kaynaklar"
   setting_apiv3_cors_origins_text_html: >
-    CORS etkinleştirilirse, bunlar OpenProject API'ye erişmesine izin verilen kaynaklardır. <br/> Beklenen değerlerin nasıl belirtileceğini öğrenmek için lütfen  <a href="%{origin_link}" target="_blank">Kaynak başlığındaki Belgeleri </a> kontrol edin.
+    CORS etkinleştirilirse, bunlar ProyeksiApp API'ye erişmesine izin verilen kaynaklardır. <br/> Beklenen değerlerin nasıl belirtileceğini öğrenmek için lütfen  <a href="%{origin_link}" target="_blank">Kaynak başlığındaki Belgeleri </a> kontrol edin.
   setting_apiv3_docs: "Belgeleme"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2479,7 +2479,7 @@ tr:
       sentence_connector: "ve"
       skip_last_comma: "yanlış"
   text_accessibility_hint: "Erişilebilirlik modu, kör, engelli ve ya ciddi görme güçlüğü çeken kullanıcılar için tasarlandı. Bu modda yazı odaklı bileşenler özellikle vurgulanır. Backlogs modülünde bu özelliği henüz kullanamayacağınızı da belirtelim."
-  text_access_token_hint: "Erişim belirteçleri, OpenProject içindeki kaynaklara harici uygulamalar erişimi vermenizi sağlar."
+  text_access_token_hint: "Erişim belirteçleri, ProyeksiApp içindeki kaynaklara harici uygulamalar erişimi vermenizi sağlar."
   text_analyze: "Daha fazla analiz: %{subject}"
   text_are_you_sure: "Emin misiniz?"
   text_are_you_sure_with_children: "Sil iş paketi ve tüm alt çalışma paketlerini?"
@@ -2548,7 +2548,7 @@ tr:
   text_no_notes: "Bu çalışma paketi için bir yorum bulunmuyor."
   text_notice_too_many_values_are_inperformant: "Not: Her sayfada 100'den fazla öğe gösterildiğinde, sayfa yükleme süresi artabilir."
   text_notice_security_badge_displayed_html: >
-    Not: Etkinleştirildiğinde, bu,  <a href="%{information_panel_path}">%{information_panel_label}</a> yönetim panelinde ve giriş sayfasında yükleme durumunuzla birlikte bir rozet görüntüler. Sadece yöneticilere gösterilir. <br/> Rozet, mevcut OpenProject sürümünüzü resmi OpenProject sürüm veritabanına karşı kontrol eder ve sizi herhangi bir güncelleme veya bilinen güvenlik açığı hakkında uyarır. Çekin sağladığı, mevcut güncellemeleri sağlamak için hangi verilerin gerekli olduğu ve bu kontrolün nasıl devre dışı bırakılacağı hakkında daha fazla bilgi için lütfen <a href="%{more_info_url}"> yapılandırma belgelerini </a> ziyaret edin.
+    Not: Etkinleştirildiğinde, bu,  <a href="%{information_panel_path}">%{information_panel_label}</a> yönetim panelinde ve giriş sayfasında yükleme durumunuzla birlikte bir rozet görüntüler. Sadece yöneticilere gösterilir. <br/> Rozet, mevcut ProyeksiApp sürümünüzü resmi ProyeksiApp sürüm veritabanına karşı kontrol eder ve sizi herhangi bir güncelleme veya bilinen güvenlik açığı hakkında uyarır. Çekin sağladığı, mevcut güncellemeleri sağlamak için hangi verilerin gerekli olduğu ve bu kontrolün nasıl devre dışı bırakılacağı hakkında daha fazla bilgi için lütfen <a href="%{more_info_url}"> yapılandırma belgelerini </a> ziyaret edin.
   text_own_membership_delete_confirmation: "İzinlerinizden bazılarını veya tümünü kaldırmak üzeresiniz ve bundan sonra bu projeyi düzenleyemeyebilirsiniz. Devam etmek istediğine emin misin?"
   text_plugin_assets_writable: "Plugin assets dizini yazılabilir"
   text_powered_by: "%{link} tarafından destekleniyor"
@@ -2556,7 +2556,7 @@ tr:
   text_reassign: "İş paketine yeniden atama:"
   text_regexp_info: "ör ^[A-Z0-9]+$"
   text_regexp_multiline: 'Regex (düzenli ifade) birden çok satırlı modda uygulanır. Örneğin, ^---\s+'
-  text_repository_usernames_mapping: "Depo günlüklerinde bulunan her kullanıcı adına eşlenen OpenProject kullanıcısını seçin veya güncelleyin. Aynı OpenProject ve depo kullanıcı adına veya e-postasına sahip kullanıcılar otomatik olarak eşleştirilir."
+  text_repository_usernames_mapping: "Depo günlüklerinde bulunan her kullanıcı adına eşlenen ProyeksiApp kullanıcısını seçin veya güncelleyin. Aynı ProyeksiApp ve depo kullanıcı adına veya e-postasına sahip kullanıcılar otomatik olarak eşleştirilir."
   text_status_changed_by_changeset: "Uygulanan Değişiklik listesi %{value}."
   text_table_difference_description: "Bu tabloda tek %{entries} girdisi gösteriliyor. İki girdi arasındaki farkı görmek için, tablodaki ilgili alanların üzerindeki seçim kutularını işaretlemelisiniz. Seçiminizden sonra tablonun altındakı tuşa tıklayarak farkları görebilirsiniz."
   text_time_logged_by_changeset: "Uygulanan Değişiklik listesi %{value}."
@@ -2761,7 +2761,7 @@ tr:
     activate_and_reset_failed_logins: "Başarısız oturum açma işlemlerinin kilidini aç ve sıfırla"
     authentication_provider: "Kimlik doğrulama sağlayıcısı"
     authentication_settings_disabled_due_to_external_authentication: >
-      Bu kullanıcı harici bir kimlik doğrulama sağlayıcısı aracılığıyla kimlik doğrulaması yapar, böylece OpenProject'de değiştirilecek şifre yoktur.
+      Bu kullanıcı harici bir kimlik doğrulama sağlayıcısı aracılığıyla kimlik doğrulaması yapar, böylece ProyeksiApp'de değiştirilecek şifre yoktur.
     authorization_rejected: "Oturum açma izniniz yok."
     assign_random_password: "Rastgele şifre atayın (kullanıcıya e-posta ile gönderilir)"
     blocked: "geçici olarak kilitlendi"
@@ -2792,7 +2792,7 @@ tr:
   warning: Uyarı
   warning_attachments_not_saved: "%{count} dosya (lar) kaydedilemedi."
   warning_imminent_user_limit: >
-    Mevcut planınız tarafından desteklenenden daha fazla kullanıcı davet ettiniz. Davet edilen kullanıcılar OpenProject ortamınıza katılamayabilir. Lütfen davet edilen ve kayıtlı kullanıcıların katılmasına izin vermek için <a href="%{upgrade_url}"> planınızı yükseltin </a> veya mevcut kullanıcıları engelleyin.
+    Mevcut planınız tarafından desteklenenden daha fazla kullanıcı davet ettiniz. Davet edilen kullanıcılar ProyeksiApp ortamınıza katılamayabilir. Lütfen davet edilen ve kayıtlı kullanıcıların katılmasına izin vermek için <a href="%{upgrade_url}"> planınızı yükseltin </a> veya mevcut kullanıcıları engelleyin.
   warning_registration_token_expired: |
     Etkinleştirme e-postası süresi doldu. Sana yeni bir %{email} gönderdik. Hesabınızı etkinleştirmek için linki tıklayınız.
   warning_user_limit_reached: >
@@ -2925,21 +2925,21 @@ tr:
         confidential: "Uygulamanın, müşteri sırrının gizli tutulabileceği yerlerde kullanılıp kullanılmayacağını kontrol edin. Yerel mobil uygulamalar ve Tek Sayfa Uygulamaları gizli değildir."
         scopes: "Uygulamanın erişmesine izin vermek istediğiniz kapsamları kontrol edin. Kapsam işaretli değilse, api_v3 olduğu kabul edilir."
         client_credential_user_id: "İstemciler bu uygulamayı kullandıklarında kimliğe bürünmek için isteğe bağlı kullanıcı kimliği. Yalnızca genel erişime izin vermek için boş bırakın"
-        register_intro: "OpenProject için bir OAuth API istemci uygulaması geliştiriyorsanız, tüm kullanıcıların kullanması için bu formu kullanarak kayıt olabilirsiniz."
+        register_intro: "ProyeksiApp için bir OAuth API istemci uygulaması geliştiriyorsanız, tüm kullanıcıların kullanması için bu formu kullanarak kayıt olabilirsiniz."
         default_scopes: ""
     client_id: "Müşteri Kimliği"
     client_secret_notice: >
-      Müşterinin sırrını basabileceğimiz tek zaman bu, lütfen not edin ve güvende tutun. Parola olarak değerlendirilmeli ve daha sonra OpenProject tarafından alınamaz.
+      Müşterinin sırrını basabileceğimiz tek zaman bu, lütfen not edin ve güvende tutun. Parola olarak değerlendirilmeli ve daha sonra ProyeksiApp tarafından alınamaz.
     authorization_dialog:
       authorize: "Yetkilendir"
       cancel: "İptal et ve izni reddet."
       prompt_html: "Hesabınızı <strong>%{application_name}</strong> kullanmak için <em>%{login}</em>?yetkilendirilsin mi?"
       title: "%{application_name} adlı kişiyi yetkilendir"
       wants_to_access_html: >
-        Bu uygulama OpenProject hesabınıza erişim istiyor. <br/> <strong> Aşağıdaki izinleri istedi: </strong>
+        Bu uygulama ProyeksiApp hesabınıza erişim istiyor. <br/> <strong> Aşağıdaki izinleri istedi: </strong>
     scopes:
       api_v3: "Tam API v3 erişimi"
-      api_v3_text: "Uygulama, sizin adınıza işlem yapmak için OpenProject API v3'e tam okuma ve yazma erişimi alacaktır."
+      api_v3_text: "Uygulama, sizin adınıza işlem yapmak için ProyeksiApp API v3'e tam okuma ve yazma erişimi alacaktır."
     grants:
       created_date: "Tarihinde onaylandı"
       scopes: "İzinler"
@@ -2955,7 +2955,7 @@ tr:
     client_credentials_impersonation_set_to: "İstemci kimlik bilgileri kullanıcısı olarak ayarlandı"
     client_credentials_impersonation_warning: "Not: Bu uygulamadaki 'Müşteri kimlik bilgileri' akışını kullanan müşteriler bu kullanıcının haklarına sahip olacak"
     client_credentials_impersonation_html: >
-      Varsayılan olarak, OpenProject,%{authorization_code_flow_link}. yoluyla OAuth 2.0 yetkilendirmesi sağlar. İsteğe bağlı olarak%{client_credentials_flow_link} özelliğini etkinleştirebilirsiniz, ancak kendi adına istekleri gerçekleştirilecek bir kullanıcı sağlamanız gerekir.
+      Varsayılan olarak, ProyeksiApp,%{authorization_code_flow_link}. yoluyla OAuth 2.0 yetkilendirmesi sağlar. İsteğe bağlı olarak%{client_credentials_flow_link} özelliğini etkinleştirebilirsiniz, ancak kendi adına istekleri gerçekleştirilecek bir kullanıcı sağlamanız gerekir.
     authorization_error: "Bir yetkilendirme hatası oluştu."
     revoke_my_application_confirmation: "Bu uygulamayı gerçekten kaldırmak istiyor musunuz? Bu, %{token_count} aktif olanını iptal edecektir."
     my_registered_applications: "OAuth uygulamalarını kayıtedin"

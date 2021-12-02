@@ -28,8 +28,8 @@ sk:
         main-menu-hover-font-color: "Main menu font on hover"
         main-menu-border-color: "Main menu border"
       custom_colors: "Vlastné farby"
-      customize: "Prispôsobte si inštaláciu OpenProject s vlastným logom. Poznámka: Toto logo bude verejne prístupné."
-      enterprise_notice: "Ďakujeme vám za finančnú podporu pri vývoji OpenProject, táto funkcia je k dispozícii iba v spojení s predplatným Enterprise Edition."
+      customize: "Prispôsobte si inštaláciu ProyeksiApp s vlastným logom. Poznámka: Toto logo bude verejne prístupné."
+      enterprise_notice: "Ďakujeme vám za finančnú podporu pri vývoji ProyeksiApp, táto funkcia je k dispozícii iba v spojení s predplatným Enterprise Edition."
       manage_colors: "Upraviť možnosti výberu farieb"
       instructions:
         alternative-color: "Strong accent color, typically used for the most important button on a screen."
@@ -81,37 +81,37 @@ sk:
       name: Arbitrary name of the LDAP connection
       host: LDAP host name or IP address
       login_map: The attribute key in LDAP that is used to identify the unique user login. Usually, this will be `uid` or `samAccountName`.
-      generic_map: The attribute key in LDAP that is mapped to the OpenProject `%{attribute}` attribute
-      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the OpenProject user an admin. Leave empty when in doubt."
+      generic_map: The attribute key in LDAP that is mapped to the ProyeksiApp `%{attribute}` attribute
+      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the ProyeksiApp user an admin. Leave empty when in doubt."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br/>
         Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Enter the bind password of the system user
       base_dn: |
-        Enter the Base DN of the subtree in LDAP you want OpenProject to look for users and groups.
-        OpenProject will filter for provided usernames in this subtree only.
+        Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
+        ProyeksiApp will filter for provided usernames in this subtree only.
         Example: ou=users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        If you check this box, OpenProject will automatically create new users from their LDAP entries
-        when they first authenticate with OpenProject.
-        Leave this unchecked to only allow existing accounts in OpenProject to authenticate through LDAP!
+        If you check this box, ProyeksiApp will automatically create new users from their LDAP entries
+        when they first authenticate with ProyeksiApp.
+        Leave this unchecked to only allow existing accounts in ProyeksiApp to authenticate through LDAP!
     connection_encryption: 'Šifrovanie pripojenia'
     system_account: 'System account'
     system_account_legend: |
-      OpenProject requires read-only access through a system account to lookup users and groups in your LDAP tree.
+      ProyeksiApp requires read-only access through a system account to lookup users and groups in your LDAP tree.
       Please specify the bind credentials for that system user in the following section.
     ldap_details: 'LDAP details'
     user_settings: 'Attribute mapping'
     user_settings_legend: |
-      The following fields are related to how users are created in OpenProject from LDAP entries and
-      what LDAP attributes are used to define the attributes of an OpenProject user (attribute mapping).
+      The following fields are related to how users are created in ProyeksiApp from LDAP entries and
+      what LDAP attributes are used to define the attributes of an ProyeksiApp user (attribute mapping).
     tls_mode:
       plain: 'žiadne'
       simple_tls: 'simple_tls'
@@ -524,7 +524,7 @@ sk:
         confirmation: "%{attribute} sa nezhoduje."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "neexistuje."
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "may not be accessed."
         error_readonly: "was attempted to be written but is not writable."
         email: "is not a valid email address."
@@ -879,7 +879,7 @@ sk:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1223,7 +1223,7 @@ sk:
   error_can_not_unarchive_project: "This project cannot be unarchived: %{errors}"
   error_check_user_and_role: "Zvoľte si, prosím, používateľ a rolu."
   error_code: "Error %{code}"
-  error_cookie_missing: 'Chýbajú súbory cookie pre OpenProject. Skontrolujte, či sú povolené súbory cookie, nakoľko bez nich táto aplikácia nebude správne fungovať.'
+  error_cookie_missing: 'Chýbajú súbory cookie pre ProyeksiApp. Skontrolujte, či sú povolené súbory cookie, nakoľko bez nich táto aplikácia nebude správne fungovať.'
   error_custom_option_not_found: "Nastavenie neexistuje."
   error_enterprise_activation_user_limit: "Váš účet nemôže byť aktivovaný (dosiahnutý limit počtu užívateľov). Prosím kontaktujte vášho správcu pre získanie prístupu."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1237,7 +1237,7 @@ sk:
   error_work_package_done_ratios_not_updated: "Pracovný balíček dokončený, štatistiky neboli prerátané."
   error_work_package_not_found_in_project: "Pracovný balíček nebol nájdený alebo nepatrí k tomuto projektu"
   error_must_be_project_member: "musíte byť členom projektu"
-  error_migrations_are_pending: "Your OpenProject installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
+  error_migrations_are_pending: "Your ProyeksiApp installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
   error_migrations_visit_upgrade_guides: "Please visit our upgrade guide documentation"
   error_no_default_work_package_status: "Žiadny predvolený stav pracovného balíka nieje definovaný. Prosím skontrolujte konfiguráciu (ísť do \"Správa-> pracovného balíka stavy\")."
   error_no_type_in_project: "Neexistuje žiadny typ previazaný s  týmto projektom. Prosím skontrolujte nastavenia projektu."
@@ -1311,7 +1311,7 @@ sk:
       no_visible_projects: "Neexistujú žiadne viditeľné projekty v tomto prípade."
       users: "Najnovší registrovaní používatelia v tejto inštancii."
     blocks:
-      community: "OpenProject komunita"
+      community: "ProyeksiApp komunita"
       upsale:
         title: "Upgrade na Enterprise Edition"
         more_info: "Viac informácií"
@@ -1322,7 +1322,7 @@ sk:
       faq: "Často kladené otázky"
       glossary: "Slovníček pojmov"
       shortcuts: "Skratky"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Komunitné fórum"
       newsletter: "Bezpečnostné upozornenia / Newsletter"
   image_conversion:
@@ -1363,9 +1363,9 @@ sk:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1374,7 +1374,7 @@ sk:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Novinky'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1687,7 +1687,7 @@ sk:
   label_open_menu: "Otvorte menu"
   label_open_work_packages: "otvorené"
   label_open_work_packages_plural: "otvorené"
-  label_openproject_website: "Webová stránka OpenProject"
+  label_openproject_website: "Webová stránka ProyeksiApp"
   label_optional_description: "Popis"
   label_options: "Voľby"
   label_other: "Ostatné"
@@ -1989,17 +1989,17 @@ sk:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "Na zmenu hesla kliknite na nasledujúci odkaz:"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} pracovné balíčky (balíček), ktoré sú priradené vám a finišujú v najbližších %{days} dňoch:"
   mail_body_group_reminder: "%{count} work package(s) that are assigned to group \"%{group}\" are due in the next %{days} days:"
@@ -2038,13 +2038,13 @@ sk:
   mail_user_activation_limit_reached:
     subject: Bol dosiahnutý limit počtu užívateľov
     message: |
-      Nový užívateľ (%{email}) se pokúsil vytvoriť účet v prostredí OpenProject spravovanom Vami (%{host}). Užívateľ nemôže aktivovať svoj účet, pretože bol dosiahnutý limit počtu užívateľov.
+      Nový užívateľ (%{email}) se pokúsil vytvoriť účet v prostredí ProyeksiApp spravovanom Vami (%{host}). Užívateľ nemôže aktivovať svoj účet, pretože bol dosiahnutý limit počtu užívateľov.
     steps:
       label: "Môžete vykonať nasledujúce kroky, aby ste mohli používateľa prihlásiť: "
       a: "Upgrade plánu platieb ([here](upgrade_url))" #here turned into a link
       b: "Zamknúť alebo odstrániť existujúceho používateľa ([here](users_url))" #here turned into a link
   more_actions: "Ďalšie funkcie"
-  noscript_description: "Musíte aktivovať JavaScript, aby ste mohli používať OpenProject!"
+  noscript_description: "Musíte aktivovať JavaScript, aby ste mohli používať ProyeksiApp!"
   noscript_heading: "JavaScript vypnutý"
   noscript_learn_more: "Zistiť viac"
   notice_accessibility_mode: Režim prístupov môžete sprístupniť vo vašich [account settings](url).
@@ -2108,7 +2108,7 @@ sk:
   notice_wont_delete_auth_source: Režim overenia nie je možné odstrániť pokiaľ existujú používatelia, ktorí ho používajú.
   notice_project_cannot_update_custom_fields: "Dostupné vlastné polia projektu sa nedajú aktualizovať. Projekt je neplatný: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Táto stránka bola vygenerovaná automaticky počas aktualizácie OpenProject. Obsahuje všetky prílohy, ktoré boli predtým priradené k %{container_type} "%{container_name}".
+    Táto stránka bola vygenerovaná automaticky počas aktualizácie ProyeksiApp. Obsahuje všetky prílohy, ktoré boli predtým priradené k %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2133,9 +2133,9 @@ sk:
           tb: "TB"
   onboarding:
     heading_getting_started: "Získajte prehľad"
-    text_getting_started_description: "Získajte rýchly prehľad o riadení projektov a tímovej spolupráci s OpenProject."
+    text_getting_started_description: "Získajte rýchly prehľad o riadení projektov a tímovej spolupráci s ProyeksiApp."
     text_show_again: "Môžete spustiť toto video z ponuky Pomocník"
-    welcome: "Vitajte v programe OpenProject"
+    welcome: "Vitajte v programe ProyeksiApp"
     select_language: "Prosím vyberte Váš jazyk"
   permission_add_work_package_notes: "Pridať poznámky"
   permission_add_work_packages: "Pridať pracovné balíky"
@@ -2194,7 +2194,7 @@ sk:
   permission_select_project_modules: "Vyberte moduly projektu"
   permission_manage_types: "Vyberte typy"
   permission_view_calendar: "Zobrazenie kalendára"
-  permission_view_changesets: "Zobraziť revízie úložiska v programe OpenProject"
+  permission_view_changesets: "Zobraziť revízie úložiska v programe ProyeksiApp"
   permission_view_commit_author_statistics: "Zobraziť štatistiky o odovzdávkach do repozitára za autora"
   permission_view_work_package_watchers: "Zobrazenie zoznamu pozorovateľov"
   permission_view_work_packages: "Zobraziť pracovné balíčky"
@@ -2290,8 +2290,8 @@ sk:
       empty_repository: "Úložisko existuje, ale je prázdne. Neobsahuje žiadne revízie."
       exists_on_filesystem: "Adresár úložiska už existuje v súborovom systéme."
       filesystem_access_failed: "Vyskytla sa chyba pri prístupe k úložisku v systéme súborov: %{message}"
-      not_manageable: "Daná osoba nemôže spravovať toto úložisko OpenProject."
-      path_permission_failed: "Pri pokuse o vytvorenie nasledujúcej cesty sa vyskytla chyba: %{path}. Uistite sa, že program OpenProject môže zapisovať do tohto priečinka."
+      not_manageable: "Daná osoba nemôže spravovať toto úložisko ProyeksiApp."
+      path_permission_failed: "Pri pokuse o vytvorenie nasledujúcej cesty sa vyskytla chyba: %{path}. Uistite sa, že program ProyeksiApp môže zapisovať do tohto priečinka."
       unauthorized: "Nie ste oprávnení na prístup k úložisku alebo poverenia sú neplatné."
       unavailable: "Úložisko je nedostupné."
       exception_title: "Nemôže získať prístup k úložisku: %{message}"
@@ -2308,9 +2308,9 @@ sk:
         path_encoding: "Overiť kódovanie cesty Git (predvolené: UTF-8)"
       local_title: "Prepojenie existujúceho lokálneho úložiska Git"
       local_url: "Lokálna adresa URL"
-      local_introduction: "Ak máte existujúce lokálne úložisko Git, môžete ho prepojiť s OpenProject a získať tak prístup z aplikácie."
-      managed_introduction: "Nech OpenProject automaticky vytvorí a integruje miestne úložisko Git."
-      managed_title: "Git úložisko integrované do OpenProject"
+      local_introduction: "Ak máte existujúce lokálne úložisko Git, môžete ho prepojiť s ProyeksiApp a získať tak prístup z aplikácie."
+      managed_introduction: "Nech ProyeksiApp automaticky vytvorí a integruje miestne úložisko Git."
+      managed_title: "Git úložisko integrované do ProyeksiApp"
       managed_url: "Spravovaná adresa URL"
       path: "Cesta k úložisku Git"
       path_encoding: "Kódovanie cesty"
@@ -2327,19 +2327,19 @@ sk:
     scm_types:
       local: "Prepojenie existujúceho lokálneho úložiska"
       existing: "Prepojenie existujúceho úložiska"
-      managed: "Vytvorenie nového úložiska v OpenProject"
+      managed: "Vytvorenie nového úložiska v ProyeksiApp"
     storage:
       not_available: "Spotreba úložného priestoru pre toto úložisko nie je k dispozícii."
       update_timeout: "Uchovávajte posledné požadované informácie o diskovom priestore pre úložisko po dobu minúty N.\nKeď je potrebné počítať požadovaný priestor na disku úložiska, môžete túto hodnotu zvýšiť, aby sa znížil vplyv na výkon."
     subversion:
       existing_title: "Existujúce úložisko Subversion (verzia softvéru a kontrola revízie)"
-      existing_introduction: "Ak máte existujúce lokálne úložisko Subversion, môžete ho prepojiť s OpenProject a získať tak prístup z aplikácie."
+      existing_introduction: "Ak máte existujúce lokálne úložisko Subversion, môžete ho prepojiť s ProyeksiApp a získať tak prístup z aplikácie."
       existing_url: "Existujúca adresa URL"
       instructions:
         managed_url: "Toto je adresa URL spravovaného (lokálneho) úložiska Subversion."
         url: "Zadajte URL úložiska. To môže byť smerované na lokálne úložisko (začínajúce s %{local_proto} ) alebo vzdialené úložisko.\nPodporované sú nasledujúce schémy adries URL:"
-      managed_title: "Subversion úložisko integrované do OpenProject"
-      managed_introduction: "Nechajte OpenProject automaticky vytvárať a integrovať lokálne úložiská Subversion."
+      managed_title: "Subversion úložisko integrované do ProyeksiApp"
+      managed_introduction: "Nechajte ProyeksiApp automaticky vytvárať a integrovať lokálne úložiská Subversion."
       managed_url: "Spravovaná adresa URL"
       password: "Heslo úložiska"
       username: "Užívateľské meno úložiska"
@@ -2356,7 +2356,7 @@ sk:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Dokumentácia"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2516,7 +2516,7 @@ sk:
       sentence_connector: "a"
       skip_last_comma: "nesprávny"
   text_accessibility_hint: "Režim prístupnosti je určený pre používateľov, ktorí sú slepí, s pohyblivým postihnutím alebo majú zlý zrak. Na to sú zamerané špeciálne prvky. Upozorňujeme, že v tomto režime nie je modul Backlogs dostupný."
-  text_access_token_hint: "Prístupové tokeny umožňujú udeliť externých aplikácií prístup k zdrojom v OpenProject."
+  text_access_token_hint: "Prístupové tokeny umožňujú udeliť externých aplikácií prístup k zdrojom v ProyeksiApp."
   text_analyze: "Ďalej analyzovať: %{subject}"
   text_are_you_sure: "Ste si istí?"
   text_are_you_sure_with_children: "Zmazať pracovný balíček a všetky podradené pracovné balíčky?"
@@ -2585,7 +2585,7 @@ sk:
   text_no_notes: "Neexistujú žiadne komentáre pre tento pracovný balíček."
   text_notice_too_many_values_are_inperformant: "Poznámka: Zobrazenie viac ako 100 položiek na stránku môže zvýšiť čas načítania stránky."
   text_notice_security_badge_displayed_html: >
-    Poznámka: Ak je táto možnosť povolená, zobrazí sa v štýle <a href="%{information_panel_path}">%{information_panel_label}</a> na panely správcu, a na domovskej stránke. Zobrazuje sa iba administrátorom. <br/> Znak skontroluje vašu aktuálnu verziu OpenProject s oficiálnou verziu databázy OpenProject, ktorá vás upozorní na akékoľvek aktualizácie alebo známe chyby. Ďalšie informácie o tom, čo daná kontrola poskytuje, aké údaje sú potrebné na poskytovanie dostupných aktualizácií a ako zakázať túto kontrolu, prosím navštívte <a href="%{more_info_url}">dokumentáciu konfigurácie</a>.
+    Poznámka: Ak je táto možnosť povolená, zobrazí sa v štýle <a href="%{information_panel_path}">%{information_panel_label}</a> na panely správcu, a na domovskej stránke. Zobrazuje sa iba administrátorom. <br/> Znak skontroluje vašu aktuálnu verziu ProyeksiApp s oficiálnou verziu databázy ProyeksiApp, ktorá vás upozorní na akékoľvek aktualizácie alebo známe chyby. Ďalšie informácie o tom, čo daná kontrola poskytuje, aké údaje sú potrebné na poskytovanie dostupných aktualizácií a ako zakázať túto kontrolu, prosím navštívte <a href="%{more_info_url}">dokumentáciu konfigurácie</a>.
   text_own_membership_delete_confirmation: "Chystáte sa odstrániť jedno respektíve viac vašich povolení, pričom po aplikovaní zmien môžte stratiť možnosť naďalej upravovať nastavenia projektu. Naozaj chcete pokračovať?"
   text_plugin_assets_writable: "Povolený zápis do priečinka pre pluginy"
   text_powered_by: "Powered by %{link}"
@@ -2593,7 +2593,7 @@ sk:
   text_reassign: "Zaradenie do pracovného balíčka:"
   text_regexp_info: "napr. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Regex je aplikovaný v režime s viacerými riadkami. napríklad ^---\s+'
-  text_repository_usernames_mapping: "Vyberte alebo aktualizujte priradenie používateľov systému OpenProject k menám používateľov nájdených v zázname repozitára.\nPoužívatelia s rovnakým prihlasovacím menom alebo emailom v systéme OpenProject a repozitári sú priradení automaticky."
+  text_repository_usernames_mapping: "Vyberte alebo aktualizujte priradenie používateľov systému ProyeksiApp k menám používateľov nájdených v zázname repozitára.\nPoužívatelia s rovnakým prihlasovacím menom alebo emailom v systéme ProyeksiApp a repozitári sú priradení automaticky."
   text_status_changed_by_changeset: "Aplikované v súbore zmien %{value}."
   text_table_difference_description: "Táto tabuľka zobrazuje jednotlivé %{entries} archívu projektov. Pomocou začiarkavacích políčok môžete vybrať dve položky a pomocou tlačidla pod tabuľkou zobrazíte rozdiely medzi dvoma vybranými položkami."
   text_time_logged_by_changeset: "Aplikované v súbore zmien %{value}."
@@ -2800,7 +2800,7 @@ sk:
     activate_and_reset_failed_logins: "Aktivovať a resetovať chybné prihlásenia"
     authentication_provider: "Poskytovateľ služby overovania identity"
     authentication_settings_disabled_due_to_external_authentication: >
-      Tento používateľ sa overuje za pomoci externého poskytovateľa autentifikácie, takže jeho heslo nie je možné zmeniť pomocou OpenProject .
+      Tento používateľ sa overuje za pomoci externého poskytovateľa autentifikácie, takže jeho heslo nie je možné zmeniť pomocou ProyeksiApp .
     authorization_rejected: "Nemôžete sa prihlásiť."
     assign_random_password: "Priradiť náhodné heslo (a odoslať používateľovi prostredníctvom e-mailu)"
     blocked: "dočasne zablokovať"
@@ -2833,7 +2833,7 @@ sk:
   warning: Upozornenie
   warning_attachments_not_saved: "%{count} súbor (súborov) nebolo možné uložiť."
   warning_imminent_user_limit: >
-    Pozvali ste viac užívateľov, než je podporované vašim aktuálnym predplateným plánom. Pozvaný užívatelia nemusia byť schopný pripojiť sa do OpenProject prostredia. Prosím <a href="%{upgrade_url}">upgradujte váš plán</a> alebo zablokujte aktuálnych užívateľov, aby se pozvaný a registrovaný užívatelia mohli pripojiť.
+    Pozvali ste viac užívateľov, než je podporované vašim aktuálnym predplateným plánom. Pozvaný užívatelia nemusia byť schopný pripojiť sa do ProyeksiApp prostredia. Prosím <a href="%{upgrade_url}">upgradujte váš plán</a> alebo zablokujte aktuálnych užívateľov, aby se pozvaný a registrovaný užívatelia mohli pripojiť.
   warning_registration_token_expired: |
     Platnosť aktivačného emailu vypršala. Poslali sme vám nový %{email}.
     Kliknite prosím na odkaz vnútri pre aktiváciu vášho účtu.
@@ -2968,21 +2968,21 @@ sk:
         confidential: "Overte, či sa aplikácia používa tam, kde môže byť dôverné tajomstvo klienta. Natívne mobilné aplikácie a aplikácie na jednej stránke nie sú dôverné."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "Voliteľný používateľ, ktorý je súčasťou používania tejto aplikácie. Nechajte prázdne, ak chcete povoliť iba verejný prístup"
-        register_intro: "Ak vyvíjate klientskú aplikáciu OAuth API pre OpenProject, môžete ju zaregistrovať pomocou tohto formulára pre všetkých používateľov."
+        register_intro: "Ak vyvíjate klientskú aplikáciu OAuth API pre ProyeksiApp, môžete ju zaregistrovať pomocou tohto formulára pre všetkých používateľov."
         default_scopes: ""
     client_id: "ID klienta"
     client_secret_notice: >
-      Toto je jediný čas, kedy môžeme vytlačiť neverejné klientské údaje, berte to prosím na vedomie a zabezpečte to. Mali by ste s danými informáciami zaobchádzať ako s heslom, v neskoršej dobe dané údaje nie je možné načítať pomocou OpenProject.
+      Toto je jediný čas, kedy môžeme vytlačiť neverejné klientské údaje, berte to prosím na vedomie a zabezpečte to. Mali by ste s danými informáciami zaobchádzať ako s heslom, v neskoršej dobe dané údaje nie je možné načítať pomocou ProyeksiApp.
     authorization_dialog:
       authorize: "Autorizovať"
       cancel: "Zrušiť a odmietnuť autorizáciu."
       prompt_html: "Povoliť <strong>%{application_name}</strong> prístup k Vašemu účtu <em>%{login}</em>?"
       title: "Povoliť %{application_name}"
       wants_to_access_html: >
-        Táto aplikácia vyžaduje prístup k vášmu účtu OpenProject. <br/> <strong>Požiadala o nasledujúce povolenia:</strong>
+        Táto aplikácia vyžaduje prístup k vášmu účtu ProyeksiApp. <br/> <strong>Požiadala o nasledujúce povolenia:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the ProyeksiApp API v3 to perform actions on your behalf."
     grants:
       created_date: "Schválené"
       scopes: "Oprávnenia"
@@ -3000,7 +3000,7 @@ sk:
     client_credentials_impersonation_set_to: "Používateľské poverenie klienta nastavené na"
     client_credentials_impersonation_warning: "Poznámka: Klienti používajúci 'Klientske poverenie' tok v tejto aplikácii bude mať práva tohto používateľa"
     client_credentials_impersonation_html: >
-      V predvolenom nastavení OpenProject poskytuje autorizáciu OAuth 2.0 cez %{authorization_code_flow_link}. Môžete voliteľne povoliť %{client_credentials_flow_link}, ale musíte určiť používateľa, v mene ktorého budú žiadosti vykonávané.
+      V predvolenom nastavení ProyeksiApp poskytuje autorizáciu OAuth 2.0 cez %{authorization_code_flow_link}. Môžete voliteľne povoliť %{client_credentials_flow_link}, ale musíte určiť používateľa, v mene ktorého budú žiadosti vykonávané.
     authorization_error: "Vyskytla sa chyba autorizácie."
     revoke_my_application_confirmation: "Naozaj chcete odstrániť túto aplikáciu? Týmto sa zrušia aktívne tokeny %{token_count}."
     my_registered_applications: "Registrované aplikácie OAuth"

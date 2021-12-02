@@ -1,6 +1,6 @@
 class ErrorsController < ::ActionController::Base
   include ErrorsHelper
-  include OpenProjectErrorHelper
+  include ProyeksiAppErrorHelper
   include Accounts::CurrentUser
 
   def not_found

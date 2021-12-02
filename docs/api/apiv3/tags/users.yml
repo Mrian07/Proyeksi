@@ -5,7 +5,7 @@ description: |-
   | Link                | Description                                                          | Condition                                                        |
   |:-------------------:| -------------------------------------------------------------------- | ---------------------------------------------------------------- |
   | lock                | Restrict the user from logging in and performing any actions         | not locked; **Permission**: Administrator                        |
-  | show                | Link to the OpenProject user page (HTML)                             |                                                                  |
+  | show                | Link to the ProyeksiApp user page (HTML)                             |                                                                  |
   | unlock              | Allow a locked user to login and act again                           | locked; **Permission**: Administrator                            |
   | updateImmediately   | Updates the user's attributes.                                       | **Permission**: Administrator, manage_user global permission       |
   | delete              | Permanently remove a user from the instance                          | **Permission**: Administrator, self-delete                       |

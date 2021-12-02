@@ -22,7 +22,7 @@ describe Authorization::UserGlobalRolesQuery do
                               roles: [role2],
                               principal: user)
   end
-  let(:global_permission) { OpenProject::AccessControl.permissions.find { |p| p.global? } }
+  let(:global_permission) { ProyeksiApp::AccessControl.permissions.find { |p| p.global? } }
   let(:global_role) do
     FactoryBot.build(:global_role,
                      permissions: [global_permission.name])

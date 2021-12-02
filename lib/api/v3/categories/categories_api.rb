@@ -7,7 +7,7 @@ require 'api/v3/categories/category_representer'
 module API
   module V3
     module Categories
-      class CategoriesAPI < ::API::OpenProjectAPI
+      class CategoriesAPI < ::API::ProyeksiAppAPI
         resources :categories do
           route_param :id, type: Integer, desc: 'Category ID' do
             after_validation do

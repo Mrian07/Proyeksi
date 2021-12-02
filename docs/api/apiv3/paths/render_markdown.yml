@@ -6,7 +6,7 @@ post:
       API-Link to the context in which the rendering occurs, for example a specific work package.
 
       If left out only context-agnostic rendering takes place.
-      Please note that OpenProject features markdown-extensions on top of the extensions GitHub Flavored Markdown (gfm) already
+      Please note that ProyeksiApp features markdown-extensions on top of the extensions GitHub Flavored Markdown (gfm) already
       provides that can only work given a context (e.g. display attached images).
 
       **Supported contexts:**

@@ -67,7 +67,7 @@ describe 'bcf export',
     @download_list.refresh_from(page)
 
     # Check the downloaded file
-    OpenProject::Bim::BcfXml::Importer.new(
+    ProyeksiApp::Bim::BcfXml::Importer.new(
       @download_list.latest_download,
       project,
       current_user: current_user

@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Announcement
   priority: 740
-description: Announcements in OpenProject.
+description: Announcements in ProyeksiApp.
 robots: index, follow
 keywords: announcement
 ---
 # Announcement
 
-You can configure **announcements in OpenProject** which will be displayed for a certain period of time for users when the login.
+You can configure **announcements in ProyeksiApp** which will be displayed for a certain period of time for users when the login.
 
 1. Enter a **text** for your announcement message.
 2. **Define a date until when the announcement should be shown**.

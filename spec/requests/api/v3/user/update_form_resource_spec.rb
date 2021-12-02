@@ -80,7 +80,7 @@ describe ::API::V3::Users::UpdateFormAPI, content_type: :json do
           .to have_json_path('_embedded/validationErrors/status')
 
         expect(body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyIsReadOnly'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyIsReadOnly'.to_json)
                 .at_path('_embedded/validationErrors/status/errorIdentifier')
 
         # Does not change the user's status

@@ -15,4 +15,4 @@ lt:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA yra nemokama Google paslauga, kurią galima įjungti jūsų OpenProject. Įjungus captcha forma bus rodoma prisijungiant visiems naudotojams, kurie dar nėra patvirtinti. <br/> Daugiau informacijos apie reCAPTCHA ir jos versijas bei kaip sukurti svetainę ir slaptus raktus rasite: %{recaptcha_link}
+        reCAPTCHA yra nemokama Google paslauga, kurią galima įjungti jūsų ProyeksiApp. Įjungus captcha forma bus rodoma prisijungiant visiems naudotojams, kurie dar nėra patvirtinti. <br/> Daugiau informacijos apie reCAPTCHA ir jos versijas bei kaip sukurti svetainę ir slaptus raktus rasite: %{recaptcha_link}

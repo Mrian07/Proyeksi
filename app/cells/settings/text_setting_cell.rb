@@ -4,7 +4,7 @@ module Settings
   class TextSettingCell < ::RailsCell
     include ActionView::Helpers::JavaScriptHelper
     include ActionView::Helpers::FormOptionsHelper
-    include OpenProject::FormTagHelper
+    include ProyeksiApp::FormTagHelper
     include TextFormattingHelper
 
     options :name # name of setting and tag to differentiate between different language selects

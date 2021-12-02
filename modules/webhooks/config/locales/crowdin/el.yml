@@ -56,4 +56,4 @@ el:
           title: 'Επιλεγμένα έργα'
         secret:
           description: >
-            Αν οριστεί, αυτή η κρυφή τιμή χρησιμοποιείται από το OpenProject για να υπογράψει το webhook payload.
+            Αν οριστεί, αυτή η κρυφή τιμή χρησιμοποιείται από το ProyeksiApp για να υπογράψει το webhook payload.

@@ -3,7 +3,7 @@
 module API
   module V3
     module Actions
-      class ActionsAPI < ::API::OpenProjectAPI
+      class ActionsAPI < ::API::ProyeksiAppAPI
         resources :actions do
           get &API::V3::Utilities::Endpoints::SqlIndex
                  .new(model: Action)

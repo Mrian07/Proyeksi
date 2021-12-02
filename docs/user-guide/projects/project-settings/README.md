@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Project settings
   priority: 500
-description: Configure your project in OpenProject.
+description: Configure your project in ProyeksiApp.
 robots: index, follow
 keywords: project settings
 ---

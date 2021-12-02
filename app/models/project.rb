@@ -93,7 +93,7 @@ class Project < ApplicationRecord
               only_when_blank: true, # Only generate when identifier not set
               limit: IDENTIFIER_MAX_LENGTH,
               blacklist: RESERVED_IDENTIFIERS,
-              adapter: OpenProject::ActsAsUrl::Adapter::OpActiveRecord # use a custom adapter able to handle edge cases
+              adapter: ProyeksiApp::ActsAsUrl::Adapter::OpActiveRecord # use a custom adapter able to handle edge cases
 
   validates :identifier,
             presence: true,
@@ -391,13 +391,13 @@ class Project < ApplicationRecord
     @allowed_permissions ||= begin
       names = enabled_modules.loaded? ? enabled_module_names : enabled_modules.pluck(:name)
 
-      OpenProject::AccessControl.modules_permissions(names).map(&:name)
+      ProyeksiApp::AccessControl.modules_permissions(names).map(&:name)
     end
   end
 
   def allowed_actions
     @actions_allowed ||= allowed_permissions
-                         .map { |permission| OpenProject::AccessControl.allowed_actions(permission) }
+                         .map { |permission| ProyeksiApp::AccessControl.allowed_actions(permission) }
                          .flatten
   end
 

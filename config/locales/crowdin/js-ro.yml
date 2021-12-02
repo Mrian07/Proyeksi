@@ -21,7 +21,7 @@ ro:
         Un backup nou va înlocui orice backup anterior. Se poate solicita doar un număr limitat de backup-uri pe zi.
       last_backup: Ultimul backup
       last_backup_from: 'Ultimul backup: '
-      title: Backup OpenProject
+      title: Backup ProyeksiApp
       options: Opțiuni
       include_attachments: Include atașamente
       download_backup: Descarcă un backup
@@ -183,7 +183,7 @@ ro:
             label_maximum_users: "Număr maxim de utilizatori activi"
             label_starts_at: "Începe de la"
             label_expires_at: "Expiră la"
-            receive_newsletter: Doresc să primesc <a target="_blank" href="%{link}">buletinul informativ</a> OpenProject.
+            receive_newsletter: Doresc să primesc <a target="_blank" href="%{link}">buletinul informativ</a> ProyeksiApp.
             taken_domain: Nu poate exista decât un singur proces activ pe domeniu.
             taken_email: Fiecare utilizator poate crea doar o singură încercare.
           email_not_received: "Nu ați primit un e-mail? Puteți retrimite e-mailul cu ajutorul linkului din dreapta."
@@ -197,7 +197,7 @@ ro:
           status_confirmed: "confirmat"
           status_waiting: "e-mail trimis - aștept confirmarea"
           test_ee: "Testați gratuit ediția Enterprise Edition timp de 14 zile"
-          quick_overview: "Obțineți o imagine de ansamblu rapidă a managementului de proiect și a colaborării în echipă cu OpenProject Enterprise Edition."
+          quick_overview: "Obțineți o imagine de ansamblu rapidă a managementului de proiect și a colaborării în echipă cu ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Deveniți un erou!"
           benefits:
@@ -209,14 +209,14 @@ ro:
             premium_features: "Caracteristici premium"
             premium_features_text: "Tablouri agile, temă și logo personalizate, grafice, fluxuri de lucru inteligente cu acțiuni personalizate, căutare în text complet pentru atașamentele pachetelor de lucru și câmpuri personalizate cu selectare multiplă."
             professional_support: "Suport profesional"
-            professional_support_text: "Beneficiați de asistență fiabilă, de înaltă calitate, din partea unor ingineri de asistență seniori cu cunoștințe de specialitate în ceea ce privește utilizarea OpenProject în medii critice pentru afaceri."
+            professional_support_text: "Beneficiați de asistență fiabilă, de înaltă calitate, din partea unor ingineri de asistență seniori cu cunoștințe de specialitate în ceea ce privește utilizarea ProyeksiApp în medii critice pentru afaceri."
           button_start_trial: "Începeți o încercare gratuită"
           button_book_now: "Rezervă acum"
           confidence: >
             Oferim încrederea unui software de gestionare a proiectelor de clasă enterprise testat și susținut - cu Open Source și o minte deschisă.
           link_quote: "Obțineți o ofertă"
           text: >
-            Ediția OpenProject Enterprise Edition se bazează pe ediția Community Edition. Aceasta include caracteristici premium și asistență profesională, destinate în principal organizațiilor cu peste 10 utilizatori care gestionează proiecte critice de afaceri cu OpenProject.
+            Ediția ProyeksiApp Enterprise Edition se bazează pe ediția Community Edition. Aceasta include caracteristici premium și asistență profesională, destinate în principal organizațiilor cu peste 10 utilizatori care gestionează proiecte critice de afaceri cu ProyeksiApp.
           unlimited: "Nelimitat"
           you_contribute: "Dezvoltatorii trebuie să își plătească și ei facturile. Cu Enterprise Edition, contribuiți substanțial la acest efort al comunității Open Source."
     custom_actions:
@@ -274,7 +274,7 @@ ro:
             bim:
               learn_about_link: https://www.openproject.org/openproject-11-0-release
               new_features_html: >
-                Versiunea conţine diverse caracteristici noi şi îmbunătăţiri: <br> <ul class="%{list_styling_class}"> <li>Centrul de notificare: Reduceţi numărul de e-mailuri pe care le primiţi. Găsește și acționează pe toate notificările relevante într-un singur loc central.</li> <li>Toate fișierele IFC încărcate acum pot fi descărcate.</li> <li>Încărcarea și procesarea IFC a obținut mai repede și a primit mesaje de eroare mai bune.</li> <li>Add-in <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit</a> a primit mai multe remedieri ale erorilor.</li> </ul>
+                Versiunea conţine diverse caracteristici noi şi îmbunătăţiri: <br> <ul class="%{list_styling_class}"> <li>Centrul de notificare: Reduceţi numărul de e-mailuri pe care le primiţi. Găsește și acționează pe toate notificările relevante într-un singur loc central.</li> <li>Toate fișierele IFC încărcate acum pot fi descărcate.</li> <li>Încărcarea și procesarea IFC a obținut mai repede și a primit mesaje de eroare mai bune.</li> <li>Add-in <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit</a> a primit mai multe remedieri ale erorilor.</li> </ul>
     label_activate: "Activare"
     label_add_column_after: "Adauga o coloana dupa"
     label_add_column_before: "Adauga o coloana inainte"
@@ -463,7 +463,7 @@ ro:
         next: 'Înainte'
         got_it: 'Am înțeles'
       steps:
-        help_menu: 'Meniul Ajutor (?) oferă <b>resurse suplimentare de ajutor</b>. Aici puteți găsi un ghid de utilizator și videoclipuri de utilitate și multe altele. <br> Bucurați-vă de munca dvs. cu OpenProject!'
+        help_menu: 'Meniul Ajutor (?) oferă <b>resurse suplimentare de ajutor</b>. Aici puteți găsi un ghid de utilizator și videoclipuri de utilitate și multe altele. <br> Bucurați-vă de munca dvs. cu ProyeksiApp!'
         members: 'Invitați noi <b>membri</b> să se alăture proiectului dumneavoastră.'
         project_selection: 'Vă rugăm să faceți clic pe unul dintre proiectele demo pe care le-am pregătit. Datele demo sunt disponibile în prezent doar în limba engleză. <br> Proiectul demonstrativ <b>general</b> se potrivește cel mai bine pentru gestionarea proiectelor clasice, în timp ce proiectul <b>Scrum</b> este mai bun pentru managementul agile al proiectului.'
         quick_add_button: 'Dă click pe pictograma plus (+) din antetul navigării pentru a <b>crea un nou proiect</b> sau <b>invita colaboratori</b>.'

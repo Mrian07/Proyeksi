@@ -2,7 +2,7 @@
 
 
 
-OpenProject::Application.configure do
+ProyeksiApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Access to rack session

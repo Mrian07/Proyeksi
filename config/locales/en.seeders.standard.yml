@@ -4,7 +4,7 @@ en:
     standard:
       demo_data:
         welcome:
-          title: "Welcome to OpenProject!"
+          title: "Welcome to ProyeksiApp!"
           text: |
             Select one of the demo projects to get started with some demo data we have prepared for you.
 

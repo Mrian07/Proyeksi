@@ -86,7 +86,7 @@ describe API::V3::WorkPackages::Schema::WorkPackageSchemasAPI, type: :request do
 
         it 'returns an error' do
           expect(last_response.body)
-            .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+            .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
             .at_path('errorIdentifier')
         end
       end
@@ -130,7 +130,7 @@ describe API::V3::WorkPackages::Schema::WorkPackageSchemasAPI, type: :request do
                                                         self_link: self_link,
                                                         current_user: current_user)
 
-          expect(OpenProject::Cache.fetch(represented_schema.json_cache_key)).to_not be_nil
+          expect(ProyeksiApp::Cache.fetch(represented_schema.json_cache_key)).to_not be_nil
         end
       end
 

@@ -20,7 +20,7 @@ end
 namespace :scm do
   desc 'List repositories in the current managed path that do not have an associated project'
   task find_unassociated: :environment do
-    scm = OpenProject::Configuration['scm']
+    scm = ProyeksiApp::Configuration['scm']
     if scm.nil?
       abort "No repository configuration is set.\n" \
             "(Configuration resides under key 'scm' in `config/configuration.yaml`)"
@@ -59,14 +59,14 @@ namespace :scm do
           #{'          '}
                     #{missing.map { |identifier| "> #{identifier}" }.join("\n")}
           #{'          '}
-                    When using managed repositories of the vendor #{vendor}, OpenProject will not create
+                    When using managed repositories of the vendor #{vendor}, ProyeksiApp will not create
                     repositories whose associated project identifier is contained in the list above.
           #{'          '}
                     To resolve these cases, you can either:
           #{'          '}
                     1. Remove the affected repositories if they are only remnants of earlier projects
           #{'          '}
-                    2. Move them out of the OpenProject managed directory '#{managed}'
+                    2. Move them out of the ProyeksiApp managed directory '#{managed}'
           #{'          '}
                     3. Create an associated project and linking that repository
                        as existing through the Frontend.
@@ -82,7 +82,7 @@ namespace :scm do
     args.extras.each do |tuple|
       vendor, base_url = tuple.split('=')
 
-      unless OpenProject::SCM::Manager.enabled?(vendor.to_sym)
+      unless ProyeksiApp::SCM::Manager.enabled?(vendor.to_sym)
         puts "Vendor #{vendor} is not enabled, skipping."
         next
       end

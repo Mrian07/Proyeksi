@@ -15,7 +15,7 @@ module API
                                # For the name rendering
                                Setting.user_format,
                                # For avatars
-                               Setting.plugin_openproject_avatars,
+                               Setting.plugin_proyeksiapp_avatars,
                                Setting.protocol
                              ]
                            }

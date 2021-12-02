@@ -16,7 +16,7 @@ module Redmine::MenuManager::TopMenu::ProjectsMenu
       label: label,
       label_options: {
         id: 'projects-menu',
-        accesskey: OpenProject::AccessKeys.key_for(:project_search),
+        accesskey: ProyeksiApp::AccessKeys.key_for(:project_search),
         span_class: 'ellipsis'
       },
       items: project_items,
@@ -43,5 +43,5 @@ module Redmine::MenuManager::TopMenu::ProjectsMenu
     )
   end
 
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 end

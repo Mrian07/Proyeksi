@@ -3,10 +3,10 @@
 module API
   module V3
     module Backups
-      class BackupsAPI < ::API::OpenProjectAPI
+      class BackupsAPI < ::API::ProyeksiAppAPI
         resources :backups do
           before do
-            raise API::Errors::NotFound unless OpenProject::Configuration.backup_enabled?
+            raise API::Errors::NotFound unless ProyeksiApp::Configuration.backup_enabled?
           end
 
           after_validation do

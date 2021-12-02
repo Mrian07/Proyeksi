@@ -74,7 +74,7 @@ describe RedirectPolicy, type: :controller do
     let(:relative_root) { '/mysubdir' }
 
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:[]).with('rails_relative_url_root')
         .and_return(relative_root)
     end

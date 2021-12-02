@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Language and display settings
   priority: 900
-description: Display settings in OpenProject.
+description: Display settings in ProyeksiApp.
 robots: index, follow
 keywords: display settings
 ---
 # Language and display settings
 
-You can configure display settings in OpenProject. Under System settings on the tab **Display** you can configure the following options.
+You can configure display settings in ProyeksiApp. Under System settings on the tab **Display** you can configure the following options.
 
 ## Configure available languages
 
@@ -18,13 +18,13 @@ Choose the languages which you want to activate for your system. Those languages
 
 At the moment there are more than 30 languages available.
 <div>
-**Note**: Many languages are translated by the Community. We highly appreciate if you want to [help translating OpenProject to your language](../../../development/translate-openproject).
+**Note**: Many languages are translated by the Community. We highly appreciate if you want to [help translating ProyeksiApp to your language](../../../development/translate-openproject).
 </div>
 You can [choose your language in your user profile](../../../getting-started/my-account/#change-your-language).
 
 ## Time and date formatting, aggregation of changes in activity
 
-Change time and date formats in OpenProject and configure the display of journal aggregation.
+Change time and date formats in ProyeksiApp and configure the display of journal aggregation.
 
 - **Week starts on**: Configure what date the week starts (e.g. in the calendar view). Default is based on user's language. You can also choose to start a week always on Monday, Sunday or Saturdays.
   If you set Week starts on, you must also set the First week in year or will probably get inconsistencies in week numbering in calendars and the gantt chart.

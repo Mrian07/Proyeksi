@@ -20,26 +20,26 @@ module Roles
     def assignable_member_permissions
       permissions_to_remove = case model.builtin
                               when Role::BUILTIN_NON_MEMBER
-                                OpenProject::AccessControl.members_only_permissions
+                                ProyeksiApp::AccessControl.members_only_permissions
                               when Role::BUILTIN_ANONYMOUS
-                                OpenProject::AccessControl.loggedin_only_permissions
+                                ProyeksiApp::AccessControl.loggedin_only_permissions
                               else
                                 []
                               end
 
-      OpenProject::AccessControl.permissions -
-        OpenProject::AccessControl.public_permissions -
-        OpenProject::AccessControl.global_permissions -
+      ProyeksiApp::AccessControl.permissions -
+        ProyeksiApp::AccessControl.public_permissions -
+        ProyeksiApp::AccessControl.global_permissions -
         permissions_to_remove
     end
 
     def assignable_global_permissions
-      OpenProject::AccessControl.global_permissions
+      ProyeksiApp::AccessControl.global_permissions
     end
 
     def check_permission_prerequisites
       model.permissions.each do |name|
-        permission = OpenProject::AccessControl.permission(name)
+        permission = ProyeksiApp::AccessControl.permission(name)
 
         next unless permission
 

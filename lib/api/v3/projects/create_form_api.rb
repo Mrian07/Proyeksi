@@ -3,7 +3,7 @@
 module API
   module V3
     module Projects
-      class CreateFormAPI < ::API::OpenProjectAPI
+      class CreateFormAPI < ::API::ProyeksiAppAPI
         resource :form do
           after_validation do
             authorize_any %i[add_project add_subprojects], global: true

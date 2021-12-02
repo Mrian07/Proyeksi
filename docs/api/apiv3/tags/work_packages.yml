@@ -64,7 +64,7 @@ description: |-
   | createdAt               | Time of creation                                                                                                                                                            | DateTime    |                                                                                                                                                              | READ                 |                                  |
   | updatedAt               | Time of the most recent change to the work package                                                                                                                          | DateTime    |                                                                                                                                                              | READ                 |                                  |
 
-  Note that the properties listed here only cover the built-in properties of the OpenProject Core.
+  Note that the properties listed here only cover the built-in properties of the ProyeksiApp Core.
   Using plug-ins and custom fields a work package might contain various additional properties.
   A client can consult the schema information to which the work package links. The schema will contain information about
   all properties of the linking work package, including properties added by plug-ins and custom fields.

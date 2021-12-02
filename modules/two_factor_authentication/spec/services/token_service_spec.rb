@@ -3,7 +3,7 @@ require_relative '../spec_helper'
 describe ::TwoFactorAuthentication::TokenService, with_2fa_ee: true do
   describe 'sending messages' do
     let(:user) { FactoryBot.create(:user) }
-    let(:dev_strategy) { ::OpenProject::TwoFactorAuthentication::TokenStrategy::Developer }
+    let(:dev_strategy) { ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Developer }
     let(:configuration) do
       {
         active_strategies: active_strategies,
@@ -13,7 +13,7 @@ describe ::TwoFactorAuthentication::TokenService, with_2fa_ee: true do
     let(:enforced) { false }
 
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
       .to receive(:[]).with('2fa')
       .and_return(configuration)
     end
@@ -26,7 +26,7 @@ describe ::TwoFactorAuthentication::TokenService, with_2fa_ee: true do
 
       context 'when enforced' do
         before do
-          allow(OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+          allow(ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
             .to receive(:add_default_strategy?)
             .and_return false
         end
@@ -45,7 +45,7 @@ describe ::TwoFactorAuthentication::TokenService, with_2fa_ee: true do
       context 'when not enforced' do
         let(:enforced) { false }
         before do
-          allow(OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+          allow(ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
             .to receive(:add_default_strategy?)
             .and_return false
         end

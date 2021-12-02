@@ -365,7 +365,7 @@ module API
           end
 
           def custom_field_class(custom_fields)
-            custom_field_sha = OpenProject::Cache::CacheKey.expand(custom_fields.sort_by(&:id))
+            custom_field_sha = ProyeksiApp::Cache::CacheKey.expand(custom_fields.sort_by(&:id))
 
             cached_custom_field_classes[custom_field_sha] ||= begin
               injector_class = custom_field_injector_config[:injector_class]

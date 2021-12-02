@@ -1,6 +1,6 @@
-# Developing OpenProject Frontend
+# Developing ProyeksiApp Frontend
 
-The OpenProject frontend is split into two parts:
+The ProyeksiApp frontend is split into two parts:
 
 - **The legacy webpack bundle** is located at `frontend/legacy` and contains AngularJS
 from the previous frontend that cannot be converted to Angular. (Mainly because they're used in Rails partials with content within)
@@ -42,7 +42,7 @@ For more information, see [TESTING](./TESTING.md).
 
 ## Plugins
 
-OpenProject Community Edition has some plugins that contain a frontend,
+ProyeksiApp Community Edition has some plugins that contain a frontend,
 e.g., [Costs](https://github.com/finnlabs/openproject-costs/)
 or [My Project Page](https://github.com/finnlabs/openproject-my_project_page/).
 
@@ -75,6 +75,6 @@ The individual topics for the documentation for the frontend are
 
 1. `TESTING.md` - documentation of our approach to integration and unit testing
 2. `STYLING.md` - notes on styling and the Sass-Pipeline
-3. `API.md` - notes on dealing with the several APIs provided by OpenProject
+3. `API.md` - notes on dealing with the several APIs provided by ProyeksiApp
 4. `LEGACY.md` - contains additional information on how to use the legacy bundle
 5. `PLUGINS.md` - contains additional information on how to link plugins with a frontend during development.

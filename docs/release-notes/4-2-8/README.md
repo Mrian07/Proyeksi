@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.8
+  title: ProyeksiApp 4.2.8
   sidebar_navigation:
       title: 4.2.8
   release_version: 4.2.8
@@ -7,13 +7,13 @@
 ---
 
 
-# OpenProject 4.2.8
+# ProyeksiApp 4.2.8
 
-OpenProject 4.2.8 contains a bug fix which caused some problems when
-installing OpenProject via Packager.
+ProyeksiApp 4.2.8 contains a bug fix which caused some problems when
+installing ProyeksiApp via Packager.
 
 In addition, new translations have been added. Thanks to everyone who
-helped to translate and proof read OpenProject\!
+helped to translate and proof read ProyeksiApp\!
 
 For further information on the release, please refer to the [Changelog
 v.4.2.8](https://community.openproject.org/versions/773) or take a look

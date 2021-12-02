@@ -8,7 +8,7 @@ describe CustomStylesHelper, type: :helper do
 
   before do
     allow(CustomStyle).to receive(:current).and_return(current_theme)
-    allow(OpenProject::Configuration).to receive(:bim?).and_return(bim_edition?)
+    allow(ProyeksiApp::Configuration).to receive(:bim?).and_return(bim_edition?)
   end
 
   describe '.apply_custom_styles?' do

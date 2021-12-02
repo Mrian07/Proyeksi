@@ -33,7 +33,7 @@ module Users
     end
 
     def retain_sso_session_values!(user)
-      provider = ::OpenProject::Plugins::AuthPlugin.login_provider_for(user)
+      provider = ::ProyeksiApp::Plugins::AuthPlugin.login_provider_for(user)
       return unless provider && provider[:retain_from_session]
 
       controller.session.to_h.slice(*provider[:retain_from_session])

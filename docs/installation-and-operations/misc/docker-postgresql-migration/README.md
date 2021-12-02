@@ -1,4 +1,4 @@
-# Migrating your Docker OpenProject database to PostgreSQL
+# Migrating your Docker ProyeksiApp database to PostgreSQL
 
 This guide will migrate your all-in-one docker-based MySQL installation to a PostgreSQL installation using [pgloader](https://github.com/dimitri/pgloader). 
 
@@ -20,7 +20,7 @@ In any case, you may also use the internally configured PostgreSQL instance of t
 
 If you want to set up a PostgreSQL installation database outside the container and not use the built-in database, please set up a PostgreSQL database now. These are generic apt-based installation steps, please adapt them appropriately for your distribution.
 
-OpenProject requires at least PostgreSQL 9.5 installed. Please check <https://www.postgresql.org/download/> if your distributed package is too old.
+ProyeksiApp requires at least PostgreSQL 9.5 installed. Please check <https://www.postgresql.org/download/> if your distributed package is too old.
 
 ```bash
 [root@host] apt-get install postgresql postgresql-contrib libpq-dev
@@ -32,7 +32,7 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the system user for OpenProject. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
 [postgres@host] createuser -W openproject

@@ -2,9 +2,9 @@
 
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   root to: 'homescreen#index', as: 'home'
-  rails_relative_url_root = OpenProject::Configuration['rails_relative_url_root'] || ''
+  rails_relative_url_root = ProyeksiApp::Configuration['rails_relative_url_root'] || ''
 
   # Route for error pages
   get '/404', to: "errors#not_found"
@@ -143,8 +143,8 @@ OpenProject::Application.routes.draw do
 
   # generic route for adding/removing watchers.
   # Models declared as acts_as_watchable will be automatically added to
-  # OpenProject::Acts::Watchable::Routes.watched
-  scope ':object_type/:object_id', constraints: OpenProject::Acts::Watchable::Routes do
+  # ProyeksiApp::Acts::Watchable::Routes.watched
+  scope ':object_type/:object_id', constraints: ProyeksiApp::Acts::Watchable::Routes do
     post '/watch' => 'watchers#watch'
     delete '/unwatch' => 'watchers#unwatch'
   end

@@ -92,6 +92,6 @@ describe "Reminder email sending", type: :feature, js: true do
       .to be 1
 
     expect(ActionMailer::Base.deliveries.first.subject)
-      .to eql "OpenProject - 1 unread notification including a mention"
+      .to eql "ProyeksiApp - 1 unread notification including a mention"
   end
 end

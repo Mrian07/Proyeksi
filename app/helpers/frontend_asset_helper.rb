@@ -6,11 +6,11 @@ module FrontendAssetHelper
   CLI_DEFAULT_PROXY = 'http://localhost:4200'.freeze
 
   def self.assets_proxied?
-    !ENV['OPENPROJECT_DISABLE_DEV_ASSET_PROXY'].present? && !Rails.env.production? && cli_proxy?
+    !ENV['PROYEKSIAPP_DISABLE_DEV_ASSET_PROXY'].present? && !Rails.env.production? && cli_proxy?
   end
 
   def self.cli_proxy
-    ENV.fetch('OPENPROJECT_CLI_PROXY', CLI_DEFAULT_PROXY)
+    ENV.fetch('PROYEKSIAPP_CLI_PROXY', CLI_DEFAULT_PROXY)
   end
 
   def self.cli_proxy?
@@ -37,7 +37,7 @@ module FrontendAssetHelper
   end
 
   def frontend_asset_path(unhashed, options = {})
-    file_name = ::OpenProject::Assets.lookup_asset unhashed
+    file_name = ::ProyeksiApp::Assets.lookup_asset unhashed
 
     asset_path "assets/frontend/#{file_name}", options.merge(skip_pipeline: true)
   end

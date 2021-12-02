@@ -3,7 +3,7 @@
 module API
   module V3
     module Documents
-      class DocumentsAPI < ::API::OpenProjectAPI
+      class DocumentsAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         resources :documents do

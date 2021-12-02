@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Kerberos
   priority: 800
-description: How to set up integration of Kerberos for authentication with OpenProject.
+description: How to set up integration of Kerberos for authentication with ProyeksiApp.
 robots: index, follow
 keywords: Kerberos, authentication
 
@@ -12,22 +12,22 @@ keywords: Kerberos, authentication
 # Kerberos integration
 
 <div class="alert alert-info" role="alert">
-**Note**: This documentation is valid for the OpenProject Enterprise Edition only.
+**Note**: This documentation is valid for the ProyeksiApp Enterprise Edition only.
 </div>
 
-[Kerberos](https://web.mit.edu/kerberos/) allows you to authenticate user requests to a service within a computer network. You can integrate it with OpenProject with the use of [Kerberos Apache module](http://modauthkerb.sourceforge.net/) (`mod_auth_kerb`) plugging into the OpenProject packaged installation using Apache web server.
+[Kerberos](https://web.mit.edu/kerberos/) allows you to authenticate user requests to a service within a computer network. You can integrate it with ProyeksiApp with the use of [Kerberos Apache module](http://modauthkerb.sourceforge.net/) (`mod_auth_kerb`) plugging into the ProyeksiApp packaged installation using Apache web server.
 
-This guide will also apply for Docker-based installation, if you have an outer proxying server such as Apache2 that you can configure to use Kerberos. This guide however focuses on the packaged installation of OpenProject.
-
-
-
-## Step 1: Creating Kerberos service and keytab for OpenProject
-
-Assuming you have Kerberos set up with a realm, you need to create a Kerberos service Principal for the OpenProject HTTP service. In the course of this guide, we're going to assume your realm is `EXAMPLE.COM` and your OpenProject installation is running at `openproject.example.com`.
+This guide will also apply for Docker-based installation, if you have an outer proxying server such as Apache2 that you can configure to use Kerberos. This guide however focuses on the packaged installation of ProyeksiApp.
 
 
 
-Create the service principal (e.g. using `kadmin`) and a keytab for OpenProject used for Apache with the following commands:
+## Step 1: Creating Kerberos service and keytab for ProyeksiApp
+
+Assuming you have Kerberos set up with a realm, you need to create a Kerberos service Principal for the ProyeksiApp HTTP service. In the course of this guide, we're going to assume your realm is `EXAMPLE.COM` and your ProyeksiApp installation is running at `openproject.example.com`.
+
+
+
+Create the service principal (e.g. using `kadmin`) and a keytab for ProyeksiApp used for Apache with the following commands:
 
 
 
@@ -59,7 +59,7 @@ First, ensure that you install the `mod_auth_kerb` apache module. The command wi
 sudo apt-get install libapache2-mod-auth-kerb
 ```
 
-You will then need to add the generated keytab to be used for the OpenProject installation. OpenProject allows you to specify additional directives for your installation VirtualHost.
+You will then need to add the generated keytab to be used for the ProyeksiApp installation. ProyeksiApp allows you to specify additional directives for your installation VirtualHost.
 
 We are going to create a new file `/etc/openproject/addons/apache2/includes/vhost/kerberos.conf` with the following contents:
 
@@ -89,9 +89,9 @@ We are going to create a new file `/etc/openproject/addons/apache2/includes/vhos
 
 
 
-## Step 3: Configuration of OpenProject to use Apache header
+## Step 3: Configuration of ProyeksiApp to use Apache header
 
-As the last step, you need to tell OpenProject to look for the `X-Authenticated-User` header and the `MyPassword` secret value.
+As the last step, you need to tell ProyeksiApp to look for the `X-Authenticated-User` header and the `MyPassword` secret value.
 
 You can do that in two ways:
 
@@ -99,7 +99,7 @@ You can do that in two ways:
 
 #### Configure using the configuration.yml
 
-In your OpenProject packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contain the complete OpenProject configuration and can be extended  to include a section for the header checking.
+In your ProyeksiApp packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contain the complete ProyeksiApp configuration and can be extended  to include a section for the header checking.
 
 
 
@@ -120,7 +120,7 @@ production:
     # optional: true
 
     # Specify a logout URL that gets redirected
-    # after the OpenProject internal logout flow
+    # after the ProyeksiApp internal logout flow
     # logout_url: https://sso.example.com/logout
 ```
 
@@ -140,7 +140,7 @@ The three options are mutually exclusive. I.e. if settings are already provided 
 
 #### Configure using environment variables
 
-As with all the rest of the OpenProject configuration settings, the Kerberos header configuration can be provided via environment variables. For example:
+As with all the rest of the ProyeksiApp configuration settings, the Kerberos header configuration can be provided via environment variables. For example:
 
 ```bash
 openproject config:set OPENPROJECT_AUTH__SOURCE__SSO_HEADER="X-Authenticated-User"
@@ -160,13 +160,13 @@ Please note that every underscore (`_`) in the original configuration key has to
 
 ## Step 4: Restarting the server
 
-Once the configuration is completed, restart your OpenProject and Apache2 server with `service openproject restart` and  `service apache2 restart` . Again these commands might differ depending on your Linux distribution.
+Once the configuration is completed, restart your ProyeksiApp and Apache2 server with `service openproject restart` and  `service apache2 restart` . Again these commands might differ depending on your Linux distribution.
 
 
 
 ## Step 5: Logging in
 
-From there on, you will be forced to the Kerberos login flow whenever accessing OpenProject. For existing users that will be found by their login attribute provided in the `X-Authenticated-User`, they will be automatically logged in.
+From there on, you will be forced to the Kerberos login flow whenever accessing ProyeksiApp. For existing users that will be found by their login attribute provided in the `X-Authenticated-User`, they will be automatically logged in.
 
 For non-existing users, if you have an LDAP configured with automatic user registration activated (check out our [LDAP authentication guide](../../../system-admin-guide/authentication/ldap-authentication/) for that), users will be created automatically with the attributes retrieved from the LDAP.
 

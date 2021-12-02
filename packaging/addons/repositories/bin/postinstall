@@ -201,7 +201,7 @@ add_openproject_to_apache_group() {
 
 ##
 # Configure the correct perl include path for loading
-# the OpenProjectAuthentication perl module.
+# the ProyeksiAppAuthentication perl module.
 # Configure and write SVN and Git configuration files as Apache vhosts.
 configure_apache2_server() {
 	local sys_api_key="$(wiz_get "repositories/api-key")"
@@ -216,12 +216,12 @@ configure_apache2_server() {
 	case "$OSFAMILY" in
 		"debian")
 			mkdir -p /usr/lib/perl5/Apache/
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectAuthentication.pm" /usr/lib/perl5/Apache/
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectRepoman.pm" /usr/lib/perl5/Apache/
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppAuthentication.pm" /usr/lib/perl5/Apache/
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppRepoman.pm" /usr/lib/perl5/Apache/
 			cat - <<SERVER_CONF > "$repositories_perl_conf"
 PerlSwitches -I/usr/lib/perl5
-PerlLoadModule Apache::OpenProjectAuthentication
-PerlLoadModule Apache::OpenProjectRepoman
+PerlLoadModule Apache::ProyeksiAppAuthentication
+PerlLoadModule Apache::ProyeksiAppRepoman
 PerlInitHandler Apache2::Reload
 PerlSetVar ReloadAll Off
 SERVER_CONF
@@ -229,12 +229,12 @@ SERVER_CONF
 		"redhat")
 			local perl_dir="/usr/lib64/perl5/Apache/"
 			mkdir -p $perl_dir
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectAuthentication.pm" "$perl_dir"
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectRepoman.pm" "$perl_dir"
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppAuthentication.pm" "$perl_dir"
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppRepoman.pm" "$perl_dir"
 			cat - <<SERVER_CONF > "$repositories_perl_conf"
 PerlSwitches -I/usr/lib64/perl5/vendor_perl
-PerlLoadModule Apache::OpenProjectAuthentication
-PerlLoadModule Apache::OpenProjectRepoman
+PerlLoadModule Apache::ProyeksiAppAuthentication
+PerlLoadModule Apache::ProyeksiAppRepoman
 PerlInitHandler Apache2::Reload
 PerlSetVar ReloadAll Off
 SERVER_CONF
@@ -243,10 +243,10 @@ SERVER_CONF
 			local perl_version="$(perl -e 'print substr $^V, 1;')"
 			local perl_dir="/usr/lib/perl5/vendor_perl/${perl_version}/Apache"
 			mkdir -p "$perl_dir"
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectAuthentication.pm" "$perl_dir"
-			cp -f "${APP_HOME}/extra/Apache/OpenProjectRepoman.pm" "$perl_dir"
-			echo "PerlLoadModule Apache::OpenProjectAuthentication" > "$repositories_perl_conf"
-			echo "PerlLoadModule Apache::OpenProjectRepoman" >> "$repositories_perl_conf"
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppAuthentication.pm" "$perl_dir"
+			cp -f "${APP_HOME}/extra/Apache/ProyeksiAppRepoman.pm" "$perl_dir"
+			echo "PerlLoadModule Apache::ProyeksiAppAuthentication" > "$repositories_perl_conf"
+			echo "PerlLoadModule Apache::ProyeksiAppRepoman" >> "$repositories_perl_conf"
 			;;
 	esac
 

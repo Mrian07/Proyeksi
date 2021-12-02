@@ -15,4 +15,4 @@ ja:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHAは、お使いのOpenProjectインスタンスで有効にできるGoogleの無料サービスです。 有効にすると、キャプチャをまだ確認していないすべてのユーザーのログイン時にキャプチャフォームが表示されます。 <br/> reCAPTCHAとそのバージョンの詳細、およびWebサイトキーと秘密鍵の作成方法については、次のリンクを参照してください: %{recaptcha_link}
+        reCAPTCHAは、お使いのProyeksiAppインスタンスで有効にできるGoogleの無料サービスです。 有効にすると、キャプチャをまだ確認していないすべてのユーザーのログイン時にキャプチャフォームが表示されます。 <br/> reCAPTCHAとそのバージョンの詳細、およびWebサイトキーと秘密鍵の作成方法については、次のリンクを参照してください: %{recaptcha_link}

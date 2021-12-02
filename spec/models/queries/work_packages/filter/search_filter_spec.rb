@@ -64,7 +64,7 @@ describe Queries::WorkPackages::Filter::SearchFilter, type: :model do
     end
   end
 
-  if OpenProject::Database.allows_tsv?
+  if ProyeksiApp::Database.allows_tsv?
     context 'DB allows tsv' do
       context 'with EE' do
         before do

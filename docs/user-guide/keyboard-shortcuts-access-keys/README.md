@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Keyboard Shortcuts and Access Keys
   priority: 450
-description: Keyboard Shortcuts and Access Keys in OpenProject.
+description: Keyboard Shortcuts and Access Keys in ProyeksiApp.
 robots: index, follow
 keywords: keyboard shortcuts and access keys
 ---
 # Keyboard Shortcuts and Access Keys
 
-OpenProject (since version 3.0) offers useful keyboard shortcuts to  enhance your productivity. We use both access keys and regular  shortcuts. When using access keys, press the modifier keys and the  access key number. For the regular shortcuts just type the listed keys  on any OpenProject page.
+ProyeksiApp (since version 3.0) offers useful keyboard shortcuts to  enhance your productivity. We use both access keys and regular  shortcuts. When using access keys, press the modifier keys and the  access key number. For the regular shortcuts just type the listed keys  on any ProyeksiApp page.
 
 ## Shortcuts
 

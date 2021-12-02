@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.2
+  title: ProyeksiApp 4.0.2
   sidebar_navigation:
       title: 4.0.2
   release_version: 4.0.2
@@ -7,13 +7,13 @@
 ---
 
 
-# OpenProject 4.0.2
+# ProyeksiApp 4.0.2
 
-OpenProject 4.0.2 was released today which contains several security and
+ProyeksiApp 4.0.2 was released today which contains several security and
 bug fixes.  
-We advise everyone to update their OpenProject installations.
+We advise everyone to update their ProyeksiApp installations.
 
-With OpenProject 4.0.2 the Rails version has been updated to 3.2.21
+With ProyeksiApp 4.0.2 the Rails version has been updated to 3.2.21
 ([\#17467](https://community.openproject.org/work_packages/17467 "Updating Rails to 3.2.21 (closed)")).  
 In addition, several bugs have been fixed:
 

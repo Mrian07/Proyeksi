@@ -2,7 +2,7 @@
 
 
 
-# Seeds the minimum data required to run OpenProject (BasicDataSeeder, AdminUserSeeder)
+# Seeds the minimum data required to run ProyeksiApp (BasicDataSeeder, AdminUserSeeder)
 # as well as optional demo data (DemoDataSeeder) to give a user some orientation.
 
 class RootSeeder < Seeder
@@ -109,7 +109,7 @@ class RootSeeder < Seeder
   end
 
   def seed_basic_data
-    puts "*** Seeding basic data for #{OpenProject::Configuration['edition']} edition"
+    puts "*** Seeding basic data for #{ProyeksiApp::Configuration['edition']} edition"
     ::StandardSeeder::BasicDataSeeder.new.seed!
   end
 end

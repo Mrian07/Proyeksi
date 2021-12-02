@@ -17,7 +17,7 @@
 import { ErrorReporter } from 'core-app/core/errors/sentry/sentry-reporter';
 import { Injector } from '@angular/core';
 
-import { OpenProject } from 'core-app/core/setup/globals/openproject';
+import { ProyeksiApp } from 'core-app/core/setup/globals/openproject';
 import * as TLodash from 'lodash';
 import * as TMoment from 'moment';
 import { GlobalI18n } from 'core-app/core/i18n/i18n.service';
@@ -40,7 +40,7 @@ declare global {
     I18n:GlobalI18n;
     appBasePath:string;
     ng2Injector:Injector;
-    OpenProject:OpenProject;
+    ProyeksiApp:ProyeksiApp;
     ErrorReporter:ErrorReporter;
     onboardingTourInstance:any;
     screenfull:Screenfull;

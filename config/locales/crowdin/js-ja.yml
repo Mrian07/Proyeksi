@@ -22,7 +22,7 @@ ja:
         新しいバックアップは以前のバックアップを上書きします。1日にリクエストできるバックアップの数には限りがあります。
       last_backup: 前回バックアップ
       last_backup_from: 前回バックアップ日
-      title: OpenProject のバックアップ
+      title: ProyeksiApp のバックアップ
       options: オプション
       include_attachments: 添付ファイルを含める
       download_backup: バックアップのダウンロード
@@ -185,7 +185,7 @@ ja:
             label_maximum_users: "アクティブなユーザーの最大数"
             label_starts_at: "開始"
             label_expires_at: "有効期限"
-            receive_newsletter: OpenProject <a target="_blank" href="%{link}">ニュースレター</a> を受け取りたい。
+            receive_newsletter: ProyeksiApp <a target="_blank" href="%{link}">ニュースレター</a> を受け取りたい。
             taken_domain: 有効なトライアルはドメインごとに1つしかありません。
             taken_email: 各ユーザーはトライアルを1回のみ作成できます。
           email_not_received: "メールが届きませんでしたか？右側のリンクでメールを再送信できます。"
@@ -199,7 +199,7 @@ ja:
           status_confirmed: "確認済み"
           status_waiting: "メールが送信されました - 確認待ちです"
           test_ee: "エンタープライズ版を14日間無料でテストする"
-          quick_overview: "OpenProject Enterprise Edition でのプロジェクト管理とチームコラボレーションの概要をご確認ください。"
+          quick_overview: "ProyeksiApp Enterprise Edition でのプロジェクト管理とチームコラボレーションの概要をご確認ください。"
         upsale:
           become_hero: "ヒーローになろう!"
           benefits:
@@ -211,14 +211,14 @@ ja:
             premium_features: "プレミアム機能"
             premium_features_text: "アジャイルボード、カスタムテーマとロゴ、グラフ、カスタムアクションによるインテリジェントワークフロー、ワークパッケージの添付ファイルおよびマルチセレクトカスタムフィールドの全文検索。"
             professional_support: "プロフェッショナルサポート"
-            professional_support_text: "ビジネスクリティカルな環境での OpenProject 利用に関する専門知識を持つ上級サポートエンジニアから、信頼性の高いハイタッチサポートを受けましょう。"
+            professional_support_text: "ビジネスクリティカルな環境での ProyeksiApp 利用に関する専門知識を持つ上級サポートエンジニアから、信頼性の高いハイタッチサポートを受けましょう。"
           button_start_trial: "無料トライアルを開始"
           button_book_now: "今すぐ予約"
           confidence: >
             テストおよびサポートされているエンタープライズクラスのプロジェクト管理ソフトウェアの信頼性を提供します。オープンソースとオープンマインドとともに。
           link_quote: "見積もりの入手"
           text: >
-            OpenProject Enterprise Edition は、Community Edition の上に構築されます。 OpenProjectでビジネスクリティカルなプロジェクトを管理する10人以上のユーザーを抱える組織を中心としたプレミアム機能とプロフェッショナルサポートが含まれています。
+            ProyeksiApp Enterprise Edition は、Community Edition の上に構築されます。 ProyeksiAppでビジネスクリティカルなプロジェクトを管理する10人以上のユーザーを抱える組織を中心としたプレミアム機能とプロフェッショナルサポートが含まれています。
           unlimited: "無制限"
           you_contribute: "開発者も請求書を支払う必要があります。Enterprise Edition では、このオープンソースコミュニティの取り組みに実質的に貢献します。"
     custom_actions:
@@ -276,7 +276,7 @@ ja:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "有効にする"
     label_add_column_after: "後に列を追加"
     label_add_column_before: "前に列を追加"
@@ -465,7 +465,7 @@ ja:
         next: '次へ'
         got_it: '了承'
       steps:
-        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with OpenProject!'
+        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with ProyeksiApp!'
         members: 'Invite new <b>members</b> to join your project.'
         project_selection: 'Please click on one of the demo projects that we have prepared. Demo data is currently only available in English. <br> The general <b>demo project</b> suits best for classical project management, while the <b>Scrum project</b> is better for agile project management.'
         quick_add_button: 'Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.'

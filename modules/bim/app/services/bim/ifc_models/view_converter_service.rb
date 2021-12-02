@@ -44,7 +44,7 @@ module Bim
           ServiceResult.new(success: ifc_model.save, result: ifc_model)
         end
       rescue StandardError => e
-        OpenProject.logger.error("Failed to convert IFC to XKT", exception: e)
+        ProyeksiApp.logger.error("Failed to convert IFC to XKT", exception: e)
 
         ifc_model.conversion_status = ::Bim::IfcModels::IfcModel.conversion_statuses[:error]
         ifc_model.conversion_error_message = e.message

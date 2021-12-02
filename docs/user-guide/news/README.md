@@ -53,7 +53,7 @@ To add a new news entry, click on **Add news** in the toolbar in the upper right
 
 ![add-news](add-news.png)
 
- A new window will open, allowing you to enter title, summary and description. The title and summary will be displayed in the project overview or on the main OpenProject landing page in the News section.
+ A new window will open, allowing you to enter title, summary and description. The title and summary will be displayed in the project overview or on the main ProyeksiApp landing page in the News section.
 You can further edit the content of your news  by using the provided basic formatting options from the text editor. Also, you are able to enter Macros, e.g. Work package tables, or Work package create buttons.
 
 To finish and publish the entry, click on **Create**.
@@ -66,9 +66,9 @@ To delete a news entry, click on the **Delete** button in the top right corner o
 
 ![delete-news](delete-news.png)
 
-## Latest news section on the OpenProject landing page
+## Latest news section on the ProyeksiApp landing page
 
-On the OpenProject landing page of the application, you have a latest news section. Here, all latest news from all your projects will be summarized.
+On the ProyeksiApp landing page of the application, you have a latest news section. Here, all latest news from all your projects will be summarized.
 
 Clicking on the title of a news will bring you to the news details in the corresponding project.
 

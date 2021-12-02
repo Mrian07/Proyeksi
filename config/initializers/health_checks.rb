@@ -68,15 +68,15 @@ class PumaCheck < OkComputer::Check
 end
 
 # Register delayed_job backed up test
-dj_max = OpenProject::Configuration.health_checks_jobs_queue_count_threshold
+dj_max = ProyeksiApp::Configuration.health_checks_jobs_queue_count_threshold
 OkComputer::Registry.register "delayed_jobs_backed_up",
                               OkComputer::DelayedJobBackedUpCheck.new(0, dj_max)
 
-dj_never_ran_max = OpenProject::Configuration.health_checks_jobs_never_ran_minutes_ago
+dj_never_ran_max = ProyeksiApp::Configuration.health_checks_jobs_never_ran_minutes_ago
 OkComputer::Registry.register "delayed_jobs_never_ran",
                               DelayedJobNeverRanCheck.new(dj_never_ran_max)
 
-backlog_threshold = OpenProject::Configuration.health_checks_backlog_threshold
+backlog_threshold = ProyeksiApp::Configuration.health_checks_backlog_threshold
 OkComputer::Registry.register "puma", PumaCheck.new(backlog_threshold)
 
 # Make dj backed up optional due to bursts
@@ -101,7 +101,7 @@ OkComputer::CheckCollection.new('full').tap do |collection|
 end
 
 # Check if authentication required
-authentication_password = OpenProject::Configuration.health_checks_authentication_password
+authentication_password = ProyeksiApp::Configuration.health_checks_authentication_password
 if authentication_password.present?
   OkComputer.require_authentication('health_checks', authentication_password)
 end

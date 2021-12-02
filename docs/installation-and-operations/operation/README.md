@@ -4,18 +4,18 @@ sidebar_navigation:
   priority: 200
 ---
 
-# Operating OpenProject
+# Operating ProyeksiApp
 
 | ----------- | :---------- |
-| [(Re)Configuring](./reconfiguring) | How to (re)configure your OpenProject installation |
-| [Backing up](./backing-up) | How to backup your OpenProject data |
+| [(Re)Configuring](./reconfiguring) | How to (re)configure your ProyeksiApp installation |
+| [Backing up](./backing-up) | How to backup your ProyeksiApp data |
 | [Restoring](./restoring) | How to restore from a backup |
-| [Upgrading](./upgrading) | How to upgrade your OpenProject installation |
-| [Monitoring & Logs](./monitoring) | How to monitor your OpenProject installation (logs, health checks) |
-| [Process control](./control) | How to start/stop/restart, execute processes in your OpenProject installation |
+| [Upgrading](./upgrading) | How to upgrade your ProyeksiApp installation |
+| [Monitoring & Logs](./monitoring) | How to monitor your ProyeksiApp installation (logs, health checks) |
+| [Process control](./control) | How to start/stop/restart, execute processes in your ProyeksiApp installation |
 | [FAQ](./faq) | Frequently asked questions |
 
 <!--
-| [Troubleshooting](./troubleshooting) | How to troubleshoot your OpenProject installation |
-| [Scaling up/down](./scaling) | How to scale your OpenProject installation |
+| [Troubleshooting](./troubleshooting) | How to troubleshoot your ProyeksiApp installation |
+| [Scaling up/down](./scaling) | How to scale your ProyeksiApp installation |
 -->

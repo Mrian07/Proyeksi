@@ -42,11 +42,11 @@ module Projects
     def notify_on_identifier_renamed
       return unless memoized_changes['identifier']
 
-      OpenProject::Notifications.send(OpenProject::Events::PROJECT_RENAMED, project: model)
+      ProyeksiApp::Notifications.send(ProyeksiApp::Events::PROJECT_RENAMED, project: model)
     end
 
     def send_update_notification
-      OpenProject::Notifications.send(OpenProject::Events::PROJECT_UPDATED, project: model)
+      ProyeksiApp::Notifications.send(ProyeksiApp::Events::PROJECT_UPDATED, project: model)
     end
 
     def only_custom_values_updated?

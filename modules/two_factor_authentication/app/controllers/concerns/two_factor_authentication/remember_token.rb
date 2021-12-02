@@ -82,7 +82,7 @@ module ::TwoFactorAuthentication
     end
 
     def remember_2fa_days
-      OpenProject::TwoFactorAuthentication::TokenStrategyManager.allow_remember_for_days
+      ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager.allow_remember_for_days
     end
 
     private

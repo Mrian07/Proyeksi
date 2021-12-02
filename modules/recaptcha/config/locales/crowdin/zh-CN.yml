@@ -15,4 +15,4 @@ zh-CN:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA 是一项可为您的 OpenProject 实例启用的 Google 免费服务。如果启用，则在登录时将为尚未验证验证码的所有用户提供一个验证码表单。<br/>请参见以下链接，获取有关 reCAPTCHA 及其版本以及如何创建网站和密钥的更多详细信息：%{recaptcha_link}
+        reCAPTCHA 是一项可为您的 ProyeksiApp 实例启用的 Google 免费服务。如果启用，则在登录时将为尚未验证验证码的所有用户提供一个验证码表单。<br/>请参见以下链接，获取有关 reCAPTCHA 及其版本以及如何创建网站和密钥的更多详细信息：%{recaptcha_link}

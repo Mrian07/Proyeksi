@@ -16,7 +16,7 @@ class WorkPackage::PDFExport::View
 
   def info
     @info ||= {
-      Creator: OpenProject::Info.app_name,
+      Creator: ProyeksiApp::Info.app_name,
       CreationDate: Time.now
     }
   end

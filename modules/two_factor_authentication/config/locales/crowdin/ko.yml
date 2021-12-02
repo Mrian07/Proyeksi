@@ -123,14 +123,14 @@ ko:
         text_cannot_scan: |
           코드를 스캔할 수 없는 경우 다음과 같은 세부 정보를 사용하여 수동으로 항목을 입력할 수 있습니다.
         description: |
-          시간 기반 일회용 암호 인증 표준을 사용하여 OpenProject와 함께 사용할 애플리케이션 인증자를 등록하세요.
+          시간 기반 일회용 암호 인증 표준을 사용하여 ProyeksiApp와 함께 사용할 애플리케이션 인증자를 등록하세요.
           일반적인 예로 Google Authenticator 또는 Authy가 있습니다.
       sms:
         title: '휴대폰 사용'
         redacted_identifier: '모바일 장치(%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}님, %{delivery_channel}을(를) 통해 인증 코드를 전송했습니다.'
         description: |
-          OpenProject 일회용 암호 배달을 위해 휴대폰 번호를 등록하세요.
+          ProyeksiApp 일회용 암호 배달을 위해 휴대폰 번호를 등록하세요.
     sns:
       delivery_failed: 'SNS 배달 실패:'
     message_bird:

@@ -25,11 +25,11 @@ lt:
       Nuotraukos peržiūra bus prieš įkeliant parodyta parinkus piešinuką.
     text_change_gravatar_html: 'Norėdami pakeisti jūsų pašto adreso Gravatarą, eikite į %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject leidžia jums įkelti jūsų savo nuotrauką.
+      ProyeksiApp leidžia jums įkelti jūsų savo nuotrauką.
     text_local_avatar_over_gravatar: |
       Jei nurodote, savai nuotraukai bus teikiamas prioritetas prieš aukščiau nurodytą gravatarą.
     text_your_current_gravatar: |
-      OpenProject naudoja gravatarą, jei jį priregistravote. Arba numatytą piešinuką ar piktogramą, jei tokia yra.
+      ProyeksiApp naudoja gravatarą, jei jį priregistravote. Arba numatytą piešinuką ar piktogramą, jei tokia yra.
       Dabartinis gravataras yra toks:
     settings:
       enable_gravatars: 'Įjungti naudotojų gravatarus'

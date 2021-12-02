@@ -9,7 +9,7 @@ module ::Bim::Queries::WorkPackages::Columns
     end
 
     def self.instances(_context = nil)
-      return [] unless OpenProject::Configuration.bim?
+      return [] unless ProyeksiApp::Configuration.bim?
 
       [new(:bcf_thumbnail, { summable: false, groupable: false, sortable: false })]
     end

@@ -1,22 +1,22 @@
 ---
 sidebar_navigation:
   title: Permissions
-description: Get an overview of how roles and permissions are handled in the OpenProject application code
+description: Get an overview of how roles and permissions are handled in the ProyeksiApp application code
 robots: index, follow
 keywords: permissions, roles, RBAC
 ---
 
 # Development concept: Permissions
 
-OpenProject is very flexible when it comes to authorization and granting permissions to users. The OpenProject application uses a Role-based access control (RBAC) approach to grant individual users permissions to projects.
+ProyeksiApp is very flexible when it comes to authorization and granting permissions to users. The ProyeksiApp application uses a Role-based access control (RBAC) approach to grant individual users permissions to projects.
 
-With RBAC, the application defines a set of roles that users and groups can be individually assigned to within the scope of a project or globally. In OpenProject, the roles and permissions contained within are freely configurable. There can be an arbitrary number of roles defined.
+With RBAC, the application defines a set of roles that users and groups can be individually assigned to within the scope of a project or globally. In ProyeksiApp, the roles and permissions contained within are freely configurable. There can be an arbitrary number of roles defined.
 
 
 
 ## Key takeaways
 
-*Permissions in OpenProject...*
+*Permissions in ProyeksiApp...*
 
 - use the Role-based access control (RBAC) approach to allow fine-grained access to authorized resources
 - are assigned to users and groups through roles on a per-project or global level
@@ -26,14 +26,14 @@ With RBAC, the application defines a set of roles that users and groups can be i
 
 ## Definition of roles
 
-Roles in OpenProject can be defined in the global administration. If you would read about roles from a user experience, please see the [Roles & Permissions guide](../../../system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions)
+Roles in ProyeksiApp can be defined in the global administration. If you would read about roles from a user experience, please see the [Roles & Permissions guide](../../../system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions)
 
 In the backend, roles are a Rails model  [`Role`](https://github.com/opf/openproject/tree/dev/app/models/role.rb) that holds a set of permissions associated in a `RolePermission` lookup table.
 
 There are multiple types of roles:
 
 - [Global roles](https://github.com/opf/openproject/tree/dev/modules/global_roles/app/models/global_role.rb) that are granted to user on a global level, i.e. they are not assigned per project. They can contain the permissions to e.g., *Create new projects*. *Please note, that the global_roles module is a relict of the past and is to be merged into the core*
-- *Non member* roles that is a special role that applies to any _authenticated_ user and all public projects that this user is not a member of. On the OpenProject community, it is configured to grant non-members of the public projects, i.e. all logged in users, the permissions *Add forum posts* and *Create new work package*.
+- *Non member* roles that is a special role that applies to any _authenticated_ user and all public projects that this user is not a member of. On the ProyeksiApp community, it is configured to grant non-members of the public projects, i.e. all logged in users, the permissions *Add forum posts* and *Create new work package*.
 - *Anonymous* roles that is a special role, similar to the *non member* role but applying to non-authenticated users.
 - All other roles, which are saved in the database and contain a user-defined set of permissions that this role will grant.
 
@@ -130,7 +130,7 @@ The same is true for permissions outside a project using`user.allowed_to_globall
 
 In the frontend, we have to rely on the API to tell us what actions the user is allowed to do. With [`HAL+JSON resources`](../hal-resources), we can do that by checking for the presence or absence of an action link in responses.
 
-For example, if the user has the permission to create work packages in the OpenProject project on the community, [the collection response of the work packages API](https://community.openproject.com/api/v3/projects/openproject/work_packages?pageSize=0) of it will contain a link `createWorkPackage` that contains the link to the create form API endpoint.
+For example, if the user has the permission to create work packages in the ProyeksiApp project on the community, [the collection response of the work packages API](https://community.openproject.com/api/v3/projects/openproject/work_packages?pageSize=0) of it will contain a link `createWorkPackage` that contains the link to the create form API endpoint.
 
 To check these links, one can use the [`ModelAuthService`](https://github.com/opf/openproject/tree/dev/frontend/src/app/modules/common/model-auth/model-auth.service.ts) that gets initialized with the resources being loaded:
 

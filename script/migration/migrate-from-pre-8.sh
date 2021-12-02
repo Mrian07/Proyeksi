@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script is used to migrate an OpenProject (<= 8) database in MySQL to the latest version in Postgres.
+# This script is used to migrate an ProyeksiApp (<= 8) database in MySQL to the latest version in Postgres.
 # All that's needed is docker. The result will be a SQL dump to the current directory.
 #
-# We do the MySQL-to-Postgres migration because in the old OpenProject packages MySQL
+# We do the MySQL-to-Postgres migration because in the old ProyeksiApp packages MySQL
 # used to be the standard database. If you are already running on Postgres this script won't work as it is.
 # For it to work it you will have to use postgres in every step and remove the line
 # containing MYSQL_DATABASE_URL.
@@ -59,23 +59,23 @@ if [[ ! "$SKIP_STEP_1" = "true" ]]; then
   fi
 
   echo
-  echo "1.2) Starting OpenProject 7"
+  echo "1.2) Starting ProyeksiApp 7"
   if [[ ! `docker ps | grep $OP7_CONTAINER` ]]; then
     docker run -d --name $OP7_CONTAINER openproject/community:7 # can use `run -it` directly because the image doesn't support it yet in version 8
     if [[ $? -gt 0 ]]; then exit 1; fi
-    echo "  OpenProject started"
+    echo "  ProyeksiApp started"
   else
-    echo "  OpenProject already running"
+    echo "  ProyeksiApp already running"
   fi
 
   echo
-  echo "1.3) Starting OpenProject 8"
+  echo "1.3) Starting ProyeksiApp 8"
   if [[ ! `docker ps | grep $OP8_CONTAINER` ]]; then
     docker run -d --name $OP8_CONTAINER openproject/community:8-mysql # can use `run -it` directly because the image doesn't support it yet in version 8
     if [[ $? -gt 0 ]]; then exit 1; fi
-    echo "  OpenProject started"
+    echo "  ProyeksiApp started"
   else
-    echo "  OpenProject already running"
+    echo "  ProyeksiApp already running"
   fi
 
   echo

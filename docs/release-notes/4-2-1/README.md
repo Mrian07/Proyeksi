@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.1
+  title: ProyeksiApp 4.2.1
   sidebar_navigation:
       title: 4.2.1
   release_version: 4.2.1
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.1
+# ProyeksiApp 4.2.1
 
-OpenProject 4.2.1 contains a hotfix for the packager installation which
+ProyeksiApp 4.2.1 contains a hotfix for the packager installation which
 prevented translations from being displayed properly
 ([\#20837](https://community.openproject.org/work_packages/20837)).
 

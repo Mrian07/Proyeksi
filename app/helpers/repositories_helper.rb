@@ -195,7 +195,7 @@ module RepositoriesHelper
   # displaying an existing repository.
   def scm_options(repository = nil)
     options = []
-    OpenProject::SCM::Manager.enabled.each do |vendor, klass|
+    ProyeksiApp::SCM::Manager.enabled.each do |vendor, klass|
       # Skip repositories that were configured to have no
       # available types left.
       next if klass.available_types.empty?

@@ -8,7 +8,7 @@ describe UserInvitation do
     let!(:token) { FactoryBot.create :invitation_token, user: user }
 
     it 'notifies listeners of the re-invite' do
-      expect(OpenProject::Notifications).to receive(:send) do |event, _new_token|
+      expect(ProyeksiApp::Notifications).to receive(:send) do |event, _new_token|
         expect(event).to eq 'user_reinvited'
       end
 

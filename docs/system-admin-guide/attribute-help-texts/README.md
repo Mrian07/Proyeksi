@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Attribute help texts
   priority: 790
-description: Learn how to set attribute help texts in OpenProject
+description: Learn how to set attribute help texts in ProyeksiApp
 robots: index, follow
 keywords: attribute help texts, help texts for projects and work packages
 

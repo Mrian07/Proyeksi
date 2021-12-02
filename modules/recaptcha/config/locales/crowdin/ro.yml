@@ -15,4 +15,4 @@ ro:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA este un serviciu gratuit de la Google care poate fi activat pentru instanța OpenProject. Dacă este activat, un formular captcha va fi redat la autentificare pentru toți utilizatorii care nu au verificat încă un captcha. <br/>. Vă rugăm să consultați următorul link pentru mai multe detalii despre reCAPTCHA și versiunile lor, precum și despre cum să creați site-ul și cheile secrete %{recaptcha_link}
+        reCAPTCHA este un serviciu gratuit de la Google care poate fi activat pentru instanța ProyeksiApp. Dacă este activat, un formular captcha va fi redat la autentificare pentru toți utilizatorii care nu au verificat încă un captcha. <br/>. Vă rugăm să consultați următorul link pentru mai multe detalii despre reCAPTCHA și versiunile lor, precum și despre cum să creați site-ul și cheile secrete %{recaptcha_link}

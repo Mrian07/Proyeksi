@@ -43,7 +43,7 @@ describe 'API v3 time_entry resource', type: :request do
   before do
     login_as(current_user)
 
-    OpenProject::Cache.clear
+    ProyeksiApp::Cache.clear
   end
 
   describe 'GET api/v3/time_entries' do
@@ -303,7 +303,7 @@ describe 'API v3 time_entry resource', type: :request do
         expect(subject.status).to eq(400)
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end

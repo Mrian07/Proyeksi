@@ -7,5 +7,5 @@ export MAKE="make --jobs $(nproc)"
 bundle install --jobs $(nproc)
 bundle exec rake db:create db:migrate
 bundle exec rake db:seed
-bundle exec rake openproject:plugins:register_frontend
+bundle exec rake proyeksiapp:plugins:register_frontend
 bundle exec rake i18n:js:export

@@ -56,4 +56,4 @@ sl:
           title: 'Izbrani projekti'
         secret:
           description: >
-            Če je nastavljeno, OpenProject to skrivno vrednost uporabi za podpis uporabnega bremena spletne zanke. 
+            Če je nastavljeno, ProyeksiApp to skrivno vrednost uporabi za podpis uporabnega bremena spletne zanke. 

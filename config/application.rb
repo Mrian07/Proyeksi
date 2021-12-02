@@ -11,30 +11,30 @@ require 'core_extensions'
 
 # Silence deprecations early on for testing on CI and production
 ActiveSupport::Deprecation.silenced =
-  (Rails.env.production? && !ENV['OPENPROJECT_SHOW_DEPRECATIONS']) ||
+  (Rails.env.production? && !ENV['PROYEKSIAPP_SHOW_DEPRECATIONS']) ||
   (Rails.env.test? && ENV['CI'])
 
 if defined?(Bundler)
   # lib directory has to be added to the load path so that
-  # the open_project/plugins files can be found (places under lib).
+  # the proyeksi_app/plugins files can be found (places under lib).
   # Now it would be possible to remove that and use require with
   # lib included but some plugins already use
   #
-  # require 'open_project/plugins'
+  # require 'proyeksi_app/plugins'
   #
   # to ensure the code to be loaded. So we provide a compatibility
   # layer here. One might remove this later.
   $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
-  require 'open_project/plugins'
+  require 'proyeksi_app/plugins'
 
   # Require the gems listed in Gemfile, including any gems
   # you've limited to :test, :development, or :production.
   Bundler.require(*Rails.groups(:opf_plugins))
 end
 
-require_relative '../lib/open_project/configuration'
+require_relative '../lib/proyeksi_app/configuration'
 
-module OpenProject
+module ProyeksiApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -159,18 +159,18 @@ module OpenProject
 
     # Configure the relative url root to be whatever the configuration is set to.
     # This allows for setting the root either via config file or via environment variable.
-    config.action_controller.relative_url_root = OpenProject::Configuration['rails_relative_url_root']
+    config.action_controller.relative_url_root = ProyeksiApp::Configuration['rails_relative_url_root']
 
-    OpenProject::Configuration.configure_cache(config)
+    ProyeksiApp::Configuration.configure_cache(config)
 
     config.active_job.queue_adapter = :delayed_job
 
-    config.action_controller.asset_host = OpenProject::Configuration::AssetHost.value
+    config.action_controller.asset_host = ProyeksiApp::Configuration::AssetHost.value
 
     # Return false instead of self when enqueuing is aborted from a callback.
     # Rails.application.config.active_job.return_false_on_aborted_enqueue = true
 
-    config.log_level = OpenProject::Configuration['log_level'].to_sym
+    config.log_level = ProyeksiApp::Configuration['log_level'].to_sym
 
     def self.root_url
       Setting.protocol + "://" + Setting.host_name

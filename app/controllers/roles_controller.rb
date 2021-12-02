@@ -68,7 +68,7 @@ class RolesController < ApplicationController
 
   def report
     @roles = Role.order(Arel.sql('builtin, position'))
-    @permissions = OpenProject::AccessControl.permissions.reject(&:public?)
+    @permissions = ProyeksiApp::AccessControl.permissions.reject(&:public?)
   end
 
   def bulk_update
@@ -81,7 +81,7 @@ class RolesController < ApplicationController
       redirect_to action: 'index'
     else
       @calls = calls
-      @permissions = OpenProject::AccessControl.permissions.reject(&:public?)
+      @permissions = ProyeksiApp::AccessControl.permissions.reject(&:public?)
       render action: 'report'
     end
   end

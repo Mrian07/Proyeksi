@@ -5,7 +5,7 @@ require 'spec_helper'
 
 describe Bim::Queries::WorkPackages::Filter::BcfIssueAssociatedFilter, type: :model do
   include_context 'filter tests'
-  let(:values) { [OpenProject::Database::DB_VALUE_TRUE] }
+  let(:values) { [ProyeksiApp::Database::DB_VALUE_TRUE] }
 
   it_behaves_like 'basic query filter' do
     let(:class_key) { :bcf_issue_associated }

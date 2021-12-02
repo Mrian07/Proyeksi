@@ -5,7 +5,7 @@
 module API
   module V3
     module JobStatus
-      class JobStatusAPI < ::API::OpenProjectAPI
+      class JobStatusAPI < ::API::ProyeksiAppAPI
         resources :job_statuses do
           route_param :job_id, type: String, desc: 'Job UUID' do
             after_validation do

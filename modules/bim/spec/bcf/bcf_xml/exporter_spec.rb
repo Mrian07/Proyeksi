@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe ::OpenProject::Bim::BcfXml::Exporter do
+describe ::ProyeksiApp::Bim::BcfXml::Exporter do
   let(:query) { FactoryBot.build(:global_query) }
   let(:work_package) { FactoryBot.create :work_package }
   let(:admin) { FactoryBot.create(:admin) }

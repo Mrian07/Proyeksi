@@ -8,7 +8,7 @@ description: |-
 
   | Link                  | Description                                      | Type            | Nullable | Supported operations | Condition                                        |
   | :-------------------: | ------------------------------------------------ | --------------- | -------- | -------------------- | ---------                                        |
-  | configuration         | The configuration of this OpenProject instance   | Configuration   |          | READ                 |                                                  |
+  | configuration         | The configuration of this ProyeksiApp instance   | Configuration   |          | READ                 |                                                  |
   | user                  | The user currently logged-in                     | User            |          | READ                 | logged in                                        |
   | userPreferences       | The preferences of the logged-in user            | UserPreference  |          | READ                 | logged in                                        |
   | priorities            | List of available priorities                     | Collection      |          | READ                 | **Permission** View work packages in any project |
@@ -21,6 +21,6 @@ description: |-
 
   | Property                  | Description                                          | Type       | Condition                                | Supported operations |
   | :-----------------------: | ---------------------------------------------------- | ---------- | ---------------------------------        | -------------------- |
-  | instanceName              | The name of the OpenProject instance                 | String     |                                          | READ                 |
-  | coreVersion               | The OpenProject core version number for the instance | String     | **Permission** requires admin privileges | READ                 |
+  | instanceName              | The name of the ProyeksiApp instance                 | String     |                                          | READ                 |
+  | coreVersion               | The ProyeksiApp core version number for the instance | String     | **Permission** requires admin privileges | READ                 |
 name: Root

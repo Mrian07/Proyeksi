@@ -19,7 +19,7 @@ module Bim::Bcf
         return unless snapshot_data_complete? && snapshot_content_type
 
         name = "snapshot.#{snapshot_extension}"
-        file = OpenProject::Files
+        file = ProyeksiApp::Files
                  .create_uploaded_file(name: name,
                                        content_type: snapshot_content_type,
                                        content: snapshot_binary_contents,

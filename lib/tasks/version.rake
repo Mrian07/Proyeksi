@@ -2,8 +2,8 @@
 
 
 
-require 'open_project/version'
-desc 'Displays the current version of OpenProject'
+require 'proyeksi_app/version'
+desc 'Displays the current version of ProyeksiApp'
 task :version do
-  puts ::OpenProject::VERSION.to_semver
+  puts ::ProyeksiApp::VERSION.to_semver
 end

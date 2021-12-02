@@ -56,4 +56,4 @@ sv:
           title: 'Valda projekt'
         secret:
           description: >
-            Om angiven används detta hemliga värde av OpenProject för att signera webhook-nyttolasten.
+            Om angiven används detta hemliga värde av ProyeksiApp för att signera webhook-nyttolasten.

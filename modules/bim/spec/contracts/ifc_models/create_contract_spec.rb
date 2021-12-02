@@ -11,7 +11,7 @@ describe Bim::IfcModels::CreateContract do
       ::Bim::IfcModels::IfcModel.new(project: model_project,
                                      title: model_title,
                                      uploader: model_user).tap do |m|
-        m.extend(OpenProject::ChangedBySystem)
+        m.extend(ProyeksiApp::ChangedBySystem)
         m.changed_by_system("uploader_id" => [nil, model_user.id])
       end
     end

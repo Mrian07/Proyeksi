@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OpenProject::Acts::Watchable::Routes do
+describe ProyeksiApp::Acts::Watchable::Routes do
   let(:request) do
     Struct.new(:type, :id) do
       def path_parameters
@@ -17,7 +17,7 @@ describe OpenProject::Acts::Watchable::Routes do
         let(:id) { '1' }
 
         it 'should be true' do
-          expect(OpenProject::Acts::Watchable::Routes.matches?(request)).to be_truthy
+          expect(ProyeksiApp::Acts::Watchable::Routes.matches?(request)).to be_truthy
         end
       end
 
@@ -25,7 +25,7 @@ describe OpenProject::Acts::Watchable::Routes do
         let(:id) { 'schmu' }
 
         it 'should be false' do
-          expect(OpenProject::Acts::Watchable::Routes.matches?(request)).to be_falsey
+          expect(ProyeksiApp::Acts::Watchable::Routes.matches?(request)).to be_falsey
         end
       end
     end
@@ -43,7 +43,7 @@ describe OpenProject::Acts::Watchable::Routes do
       let(:id) { '4' }
 
       it 'should be false' do
-        expect(OpenProject::Acts::Watchable::Routes.matches?(request)).to be_falsey
+        expect(ProyeksiApp::Acts::Watchable::Routes.matches?(request)).to be_falsey
       end
     end
   end

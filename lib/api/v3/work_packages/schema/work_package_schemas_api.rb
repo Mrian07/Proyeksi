@@ -9,7 +9,7 @@ module API
   module V3
     module WorkPackages
       module Schema
-        class WorkPackageSchemasAPI < ::API::OpenProjectAPI
+        class WorkPackageSchemasAPI < ::API::ProyeksiAppAPI
           resources :schemas do
             helpers do
               def raise404

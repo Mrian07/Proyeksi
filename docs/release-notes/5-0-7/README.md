@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.7
+  title: ProyeksiApp 5.0.7
   sidebar_navigation:
       title: 5.0.7
   release_version: 5.0.7
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.7
+# ProyeksiApp 5.0.7
 
-OpenProject 5.0.7 contains several bug fixes:
+ProyeksiApp 5.0.7 contains several bug fixes:
 
   - When creating a child work package from the relations tab, there was
     no parent-child relationship after the creation

@@ -26,7 +26,7 @@ class Attachments::CleanupUncontaineredJob < ::Cron::CronJob
     attachment_table = Attachment.arel_table
 
     attachment_table[:created_at]
-      .lteq(Time.now - OpenProject::Configuration.attachments_grace_period.minutes)
+      .lteq(Time.now - ProyeksiApp::Configuration.attachments_grace_period.minutes)
       .to_sql
   end
 end

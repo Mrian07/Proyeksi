@@ -21,7 +21,7 @@ describe 'API v3 User avatar resource', type: :request, content_type: :json do
   describe '/avatar', with_settings: { protocol: 'http' } do
     before do
       allow(Setting)
-        .to receive(:plugin_openproject_avatars)
+        .to receive(:plugin_proyeksiapp_avatars)
         .and_return(enable_gravatars: gravatars, enable_local_avatars: local_avatars)
 
       setup

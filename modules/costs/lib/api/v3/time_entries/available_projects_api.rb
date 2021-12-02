@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class AvailableProjectsAPI < ::API::OpenProjectAPI
+      class AvailableProjectsAPI < ::API::ProyeksiAppAPI
         after_validation do
           authorize_any %i[log_time edit_time_entries edit_own_time_entries],
                         global: true

@@ -21,7 +21,7 @@ tr:
         Yeni bir yedekleme, herhangi bir öncekini geçersiz kılacaktır. Günde yalnızca sınırlı sayıda yedekleme talep edilebilir.
       last_backup: Son yedekleme
       last_backup_from: Adlı kişiden son yedekleme
-      title: OpenProject Yedekleme
+      title: ProyeksiApp Yedekleme
       options: Ayarlar
       include_attachments: Ekleri dahil et
       download_backup: Yedeği indir
@@ -184,7 +184,7 @@ tr:
             label_maximum_users: "En çok aktif kullanıcı"
             label_starts_at: "Başlangıç tarihi:"
             label_expires_at: "Süre sonu: "
-            receive_newsletter: OpenProject almak istiyorum  <a target="_blank" href="%{link}">Bülten</a>.
+            receive_newsletter: ProyeksiApp almak istiyorum  <a target="_blank" href="%{link}">Bülten</a>.
             taken_domain: Alan adı başına yalnızca bir etkin deneme olabilir.
             taken_email: Her kullanıcı yalnızca bir deneme oluşturabilir.
           email_not_received: "E-posta almadınız mı? Sağdaki bağlantıyı kullanarak e-postayı yeniden gönderebilirsiniz."
@@ -198,7 +198,7 @@ tr:
           status_confirmed: "onaylanmış"
           status_waiting: "e-posta gönderildi - onay bekleniyor"
           test_ee: "Enterprise Edition ürününü 14 gün ücretsiz test edin"
-          quick_overview: "OpenProject Enterprise Edition ile proje yönetimi ve ekip işbirliğine hızlı bir genel bakış edinin."
+          quick_overview: "ProyeksiApp Enterprise Edition ile proje yönetimi ve ekip işbirliğine hızlı bir genel bakış edinin."
         upsale:
           become_hero: "Kahraman olun!"
           benefits:
@@ -210,14 +210,14 @@ tr:
             premium_features: "Ayrıcalıklı özellikler"
             premium_features_text: "Çevik tahtalar, özel tema ve logo, grafikler, özel eylemlerle akıllı iş akışları, iş paketi ekleri için tam metin araması ve çoklu seçim özel alanları."
             professional_support: "Profesyonel destek"
-            professional_support_text: "İş açısından kritik ortamlarda OpenProject çalıştırma konusunda uzman bilgiye sahip kıdemli destek mühendislerinden güvenilir, yüksek dokunuşlu destek alın."
+            professional_support_text: "İş açısından kritik ortamlarda ProyeksiApp çalıştırma konusunda uzman bilgiye sahip kıdemli destek mühendislerinden güvenilir, yüksek dokunuşlu destek alın."
           button_start_trial: "Deneme sürümüne başla"
           button_book_now: "Şimdi rezervasyon yaptırın"
           confidence: >
             Açık Kaynak ve açık fikirli olmak üzere, test edilmiş ve desteklenen bir kurumsal sınıf proje yönetimi yazılımının güvenini sunuyoruz.
           link_quote: "Fiyat teklifi alın"
           text: >
-            OpenProject Enterprise Edition, Topluluk Sürümü'nün üzerine kuruludur. OpenProject ile iş açısından kritik öneme sahip projeleri yöneten 10'dan fazla kullanıcısı olan kuruluşlara yönelik premium özellikler ve profesyonel destek içerir.
+            ProyeksiApp Enterprise Edition, Topluluk Sürümü'nün üzerine kuruludur. ProyeksiApp ile iş açısından kritik öneme sahip projeleri yöneten 10'dan fazla kullanıcısı olan kuruluşlara yönelik premium özellikler ve profesyonel destek içerir.
           unlimited: "Sınırsız"
           you_contribute: "Geliştiricilerin faturalarını da ödemeleri gerekiyor. Enterprise Edition ile bu Açık Kaynak topluluk çalışmasına önemli ölçüde katkıda bulunursunuz."
     custom_actions:
@@ -275,7 +275,7 @@ tr:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "Etkinleştir"
     label_add_column_after: "Sonrasına sütun ekle"
     label_add_column_before: "Öncesine sütun ekle"
@@ -464,7 +464,7 @@ tr:
         next: 'Sonraki'
         got_it: 'Anladım'
       steps:
-        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with OpenProject!'
+        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with ProyeksiApp!'
         members: 'Invite new <b>members</b> to join your project.'
         project_selection: 'Please click on one of the demo projects that we have prepared. Demo data is currently only available in English. <br> The general <b>demo project</b> suits best for classical project management, while the <b>Scrum project</b> is better for agile project management.'
         quick_add_button: 'Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.'

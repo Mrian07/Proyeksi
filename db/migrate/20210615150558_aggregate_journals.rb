@@ -56,7 +56,7 @@ class AggregateJournals < ActiveRecord::Migration[6.1]
     SQL
 
     suppress_messages do
-      execute ::OpenProject::SqlSanitization.sanitize(sql, notes: mismatched_journal.notes, id: mismatched_journal.id)
+      execute ::ProyeksiApp::SqlSanitization.sanitize(sql, notes: mismatched_journal.notes, id: mismatched_journal.id)
     end
   end
 

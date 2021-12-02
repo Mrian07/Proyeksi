@@ -15,4 +15,4 @@ pl:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA jest bezpłatną usługą Google, którą można włączyć dla wystąpienia OpenProject. Jeśli jest włączona, formularz captcha będzie wyświetlany po zalogowaniu wszystkim użytkownikom, którzy nie zweryfikowali jeszcze captcha. <br/> Aby uzyskać więcej informacji na temat reCAPTCHA i jej wersji oraz sposobu tworzenia witryny internetowej i tajnych kluczy, sprawdź następujące łącze: %{recaptcha_link}
+        reCAPTCHA jest bezpłatną usługą Google, którą można włączyć dla wystąpienia ProyeksiApp. Jeśli jest włączona, formularz captcha będzie wyświetlany po zalogowaniu wszystkim użytkownikom, którzy nie zweryfikowali jeszcze captcha. <br/> Aby uzyskać więcej informacji na temat reCAPTCHA i jej wersji oraz sposobu tworzenia witryny internetowej i tajnych kluczy, sprawdź następujące łącze: %{recaptcha_link}

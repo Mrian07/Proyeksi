@@ -6,7 +6,7 @@ FactoryBot.define do
     uuid { new_uuid }
     viewpoint_name { "full_viewpoint.bcfv" }
     json_viewpoint do
-      file = OpenProject::Bim::Engine.root.join("spec/fixtures/viewpoints/#{viewpoint_name}.json")
+      file = ProyeksiApp::Bim::Engine.root.join("spec/fixtures/viewpoints/#{viewpoint_name}.json")
       if file.readable?
         JSON.parse(file.read)
       else

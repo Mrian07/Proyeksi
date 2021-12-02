@@ -1,16 +1,16 @@
-# Repository Integration in OpenProject
+# Repository Integration in ProyeksiApp
 
-OpenProject can (by default) browse Subversion and Git repositories, but it does not serve them to git/svn clients.
+ProyeksiApp can (by default) browse Subversion and Git repositories, but it does not serve them to git/svn clients.
 
-We support integration with the Apache webserver to create and serve repositories on the fly along with contributions to the fine-grained project authorization system of OpenProject.
+We support integration with the Apache webserver to create and serve repositories on the fly along with contributions to the fine-grained project authorization system of ProyeksiApp.
 
 ## Existing Repositories
 
-Using the default configuration, OpenProject allows you to *link* existing Subversion and Git repositories from the local filesystem (For Subversion, you can also integrate repositories from other servers using basic auth credentials).
+Using the default configuration, ProyeksiApp allows you to *link* existing Subversion and Git repositories from the local filesystem (For Subversion, you can also integrate repositories from other servers using basic auth credentials).
 
-After linking the repositories, you may browse the repository through OpenProject.
+After linking the repositories, you may browse the repository through ProyeksiApp.
 
-This functionality is extended with managed repositories, whose life spans are actively controlled by OpenProject. You can explicitly create local repositories for a project and configure repository access using permission the existing access-control functionality on a per-project level.
+This functionality is extended with managed repositories, whose life spans are actively controlled by ProyeksiApp. You can explicitly create local repositories for a project and configure repository access using permission the existing access-control functionality on a per-project level.
 
 ## Managed Repositories
 
@@ -29,10 +29,10 @@ The following is an excerpt of the configuration and contains all required infor
 	# manages:
 	#   You may either specify a local path on the filesystem or an absolute URL to call when
 	#   repositories are to be created or deleted.
-	#   This allows OpenProject to take control over the given path to create and delete repositories
+	#   This allows ProyeksiApp to take control over the given path to create and delete repositories
 	#   directly when created in the frontend.
 	#
-	#   When entering a URL, OpenProject will POST to this resource when repositories are created
+	#   When entering a URL, ProyeksiApp will POST to this resource when repositories are created
 	#   using the following JSON-encoded payload:
 	#     - action: The action to perform (create, delete)
 	#     - identifier: The repository identifier name
@@ -67,13 +67,13 @@ With this configuration, you can create managed repositories by selecting the `m
 
 Part of the managed repositories functionality was previously provided with reposman.rb.
 Reposman periodically checked for new projects and automatically created a repository of a given type.
-It never deleted repositories on the filesystem when their associated project was removed in OpenProject.
+It never deleted repositories on the filesystem when their associated project was removed in ProyeksiApp.
 
-This script has been integrated into OpenProject and extended. For further guidance on how to migrate to managed repositories, please see the [upgrade guide to 5.0](../../operation/upgrading) 
+This script has been integrated into ProyeksiApp and extended. For further guidance on how to migrate to managed repositories, please see the [upgrade guide to 5.0](../../operation/upgrading) 
 
 ### Managing Repositories Remotely
 
-OpenProject comes with a simple webhook to call other services rather than management repositories itself.
+ProyeksiApp comes with a simple webhook to call other services rather than management repositories itself.
 To enable remote managed repositories, pass an absolute URL to the `manages` key of a vendor in the `configuration.yml`. The following excerpt shows that configuration for Subversion, assuming your callback is `https://example.org/repos`.
 
 	scm:
@@ -81,7 +81,7 @@ To enable remote managed repositories, pass an absolute URL to the `manages` key
 	    manages: https://example.org/repos
 	    accesstoken: <Fixed access token passed to the endpoint>
 
-Upon creating and deleting repositories in the frontend, OpenProject will POST to this endpoint a JSON object containing information on the repository.
+Upon creating and deleting repositories in the frontend, ProyeksiApp will POST to this endpoint a JSON object containing information on the repository.
 
 	{
 		"identifier": "seeded_project.git",
@@ -99,10 +99,10 @@ Upon creating and deleting repositories in the frontend, OpenProject will POST t
 The endpoint is expected to return a JSON with at least a `message` property when the response is not successful (2xx).
 When the response is successful, it must at least return a `url` property that contains an accessible URL and optionally a `path` property to access the repository locally.
 
-*Note* that for Git repositories, OpenProject currently can only read them locally (i.e, through an NFS mount), so a path is mandatory here.
+*Note* that for Git repositories, ProyeksiApp currently can only read them locally (i.e, through an NFS mount), so a path is mandatory here.
 For Subversion, you can either return a `file:///<path>` URL, or a local path.
 
-Our main use-cases for this feature is to eliminate the complexity associated with permission issues around Subversion mainly in packager, for which a simple Apache wrapper script is used in `extra/Apache/OpenProjectRepoman.pm`.
+Our main use-cases for this feature is to eliminate the complexity associated with permission issues around Subversion mainly in packager, for which a simple Apache wrapper script is used in `extra/Apache/ProyeksiAppRepoman.pm`.
 This functionality is very limited but may be extended when other use cases arise.
 It supports notifications for creating repositories (action `create`), moving repositories (action `relocate`, when a project's identifier has changed), and deleting repositories (action `delete`).
 
@@ -110,7 +110,7 @@ If you're interested in setting up the integration manually outside the context 
 
 
 	PerlSwitches -I/srv/www/perl-lib -T
-	PerlLoadModule Apache::OpenProjectRepoman
+	PerlLoadModule Apache::ProyeksiAppRepoman
 	
 	<Location /repos>
 	        SetHandler perl-script
@@ -125,17 +125,17 @@ If you're interested in setting up the integration manually outside the context 
 	        PerlAddVar ScmVendorPaths "subversion"
 	        PerlAddVar ScmVendorPaths "/srv/repositories/subversion"
 	
-	        PerlResponseHandler Apache::OpenProjectRepoman
+	        PerlResponseHandler Apache::ProyeksiAppRepoman
 	</Location>
 
 
 ## Other Features
 
-OpenProject 5.0 introduces more features regarding repository management that we briefly outline in the following.
+ProyeksiApp 5.0 introduces more features regarding repository management that we briefly outline in the following.
 
 ### Checkout instructions
 
-OpenProject 5.0 also integrates functionality to display checkout instructions and URLs for Subversion and Git repositories.
+ProyeksiApp 5.0 also integrates functionality to display checkout instructions and URLs for Subversion and Git repositories.
 This functionality is very basic and we hope to make it more robust over the next releases.
 
 * Checkout instructions may be configured globally for each vendor
@@ -158,20 +158,20 @@ For a future release, we are hoping to provide a webhook to update changesets an
 
 # Accessing repositories through Apache
 
-With managed repositories, OpenProject takes care of the lifetime of repositories and their association with projects, however we still need to serve the repositories to the client.
+With managed repositories, ProyeksiApp takes care of the lifetime of repositories and their association with projects, however we still need to serve the repositories to the client.
 
 ## Preliminary Setup
 
-In the remainder of this document, we assume that you run OpenProject using a separate process, which listens for requests on http://localhost:3000 that you serve over Apache using a proxy.
+In the remainder of this document, we assume that you run ProyeksiApp using a separate process, which listens for requests on http://localhost:3000 that you serve over Apache using a proxy.
 
 We let Apache serve Subversion and git repositories (with the help of some modules) and
-authenticate against the OpenProject user database.
+authenticate against the ProyeksiApp user database.
 
-Therefore, we use an authentication perl script located in `extra/svn/OpenProjectAuthentication.pm`.
+Therefore, we use an authentication perl script located in `extra/svn/ProyeksiAppAuthentication.pm`.
 This script needs to be in your Apache perl path (for example it might be sym-linked into /etc/apache2/Apache).
 
 To work with the authentication, you need to generate a secret repository API key, generated in your 
-OpenProject instance at `Modules → Administration → Settings → Repositories`.
+ProyeksiApp instance at `Modules → Administration → Settings → Repositories`.
 On that page, enable  *"Enable repository management web service"* and generate an API key (do not
 forget to save the settings). We need that API key later in our Apache configuration.
 
@@ -191,23 +191,23 @@ This method requires some apache modules to be enabled and installed. The follow
 
 ### Permissions
 
-**Important:** If Apache and OpenProject run under separate users, you need to ensure OpenProject remains the owner of the repository in order to browse and delete it, when requested through the user interface.
+**Important:** If Apache and ProyeksiApp run under separate users, you need to ensure ProyeksiApp remains the owner of the repository in order to browse and delete it, when requested through the user interface.
 
 Due to the implementation of `mod_svn`, we have no way to influence the permissions determined by apache when changing repositories (i.e., by committing changes).
 Without correcting the permissions, the following situation will occur:
 
-* The run user of OpenProject can correctly create and manage repository under the managed path with appropriate permissions set
+* The run user of ProyeksiApp can correctly create and manage repository under the managed path with appropriate permissions set
 * As soon as a user checks out the repository and commits new data
   * Apache alters and adds files to the repository on the server, now owned by the apache user its default umask.
 * If the user decides to delete the repository through the frontend
-  * Altered files are not / no longer owned or writable by the OpenProject user
+  * Altered files are not / no longer owned or writable by the ProyeksiApp user
   * The deletion fails
 
 The following workarounds exist:
 
-#### Apache running `mod_dav_svn` and OpenProject must be run with the same user
+#### Apache running `mod_dav_svn` and ProyeksiApp must be run with the same user
 
-This is a simple solution, but theoretically less secure when the server provides more than just SVN and OpenProject.
+This is a simple solution, but theoretically less secure when the server provides more than just SVN and ProyeksiApp.
 
 #### Use Filesystem ACLs
 
@@ -218,7 +218,7 @@ Assuming the following situation:
 
 * Apache run user / group: `www-data`
 
-* OpenProject run user: `openproject`
+* ProyeksiApp run user: `openproject`
 
 * Repository path for SCM vendor X: `/srv/repositories/X`
 
@@ -256,7 +256,7 @@ Note that this issue applies to mod_dav_svn only.
 
 ### Use the Apache wrapper script
 
-Similar to the integration we use ourselves for the packager-based installation, you can set up Apache to manage repositories using the remote hook in OpenProject.
+Similar to the integration we use ourselves for the packager-based installation, you can set up Apache to manage repositories using the remote hook in ProyeksiApp.
 
 For more information, see the section 'Managing Repositories Remotely'.
 
@@ -284,17 +284,17 @@ Depending on your installation, it may reside in `/usr/libexec/git-core/git-http
 
 ### Permissions
 
-We create bare Git repositories in OpenProject with the [`--shared`](https://www.kernel.org/pub/software/scm/git/docs/git-init.html) option of `git-init` set to group-writable.
-Thus, if you use a separate user for Apache and OpenProject, they need to reside in a common group that is used for repository management. That group must be set in the `configuration.yml` (see above).
+We create bare Git repositories in ProyeksiApp with the [`--shared`](https://www.kernel.org/pub/software/scm/git/docs/git-init.html) option of `git-init` set to group-writable.
+Thus, if you use a separate user for Apache and ProyeksiApp, they need to reside in a common group that is used for repository management. That group must be set in the `configuration.yml` (see above).
 
 ### Exemplary Apache Configuration
 
 We provide an example apache configuration. Some details are explained inline as comments.
 
-    # Load OpenProject per module used to authenticate requests against the user database.
-    # Be sure that the OpenProjectAuthentication.pm script is located in your perl path.
+    # Load ProyeksiApp per module used to authenticate requests against the user database.
+    # Be sure that the ProyeksiAppAuthentication.pm script is located in your perl path.
     PerlSwitches -I/srv/www/perl-lib -T
-    PerlLoadModule Apache::OpenProjectAuthentication
+    PerlLoadModule Apache::ProyeksiAppAuthentication
     
     <VirtualHost *:80>
       ErrorLog /var/log/apache2/error
@@ -311,7 +311,7 @@ We provide an example apache configuration. Some details are explained inline as
       RequestHeader edit Destination ^https: http: early
     
       # Serves svn repositories locates in /srv/openproject/svn via WebDAV
-      # It is secure with basic auth against the OpenProject user database.
+      # It is secure with basic auth against the ProyeksiApp user database.
       <Location /svn>
         DAV svn
         SVNParentPath "/srv/openproject/svn"
@@ -321,11 +321,11 @@ We provide an example apache configuration. Some details are explained inline as
         AuthName "Secured Area"
         Require valid-user
     
-        PerlAccessHandler Apache::Authn::OpenProject::access_handler
-        PerlAuthenHandler Apache::Authn::OpenProject::authen_handler
+        PerlAccessHandler Apache::Authn::ProyeksiApp::access_handler
+        PerlAuthenHandler Apache::Authn::ProyeksiApp::authen_handler
     
-        OpenProjectUrl 'http://127.0.0.1:3000'
-        OpenProjectApiKey 'REPLACE WITH REPOSITORY API KEY'
+        ProyeksiAppUrl 'http://127.0.0.1:3000'
+        ProyeksiAppApiKey 'REPLACE WITH REPOSITORY API KEY'
     
         <Limit OPTIONS PROPFIND GET REPORT MKACTIVITY PROPPATCH PUT CHECKOUT MKCOL MOVE COPY DELETE LOCK UNLOCK MERGE>
           Allow from all
@@ -342,15 +342,15 @@ We provide an example apache configuration. Some details are explained inline as
         Allow from all
     
         AuthType Basic
-        AuthName "OpenProject GIT"
+        AuthName "ProyeksiApp GIT"
         Require valid-user
     
-        PerlAccessHandler Apache::Authn::OpenProject::access_handler
-        PerlAuthenHandler Apache::Authn::OpenProject::authen_handler
+        PerlAccessHandler Apache::Authn::ProyeksiApp::access_handler
+        PerlAuthenHandler Apache::Authn::ProyeksiApp::authen_handler
     
-        OpenProjectGitSmartHttp yes
-        OpenProjectUrl 'http://127.0.0.1:3000'
-        OpenProjectApiKey 'REPLACE WITH REPOSITORY API KEY'
+        ProyeksiAppGitSmartHttp yes
+        ProyeksiAppUrl 'http://127.0.0.1:3000'
+        ProyeksiAppApiKey 'REPLACE WITH REPOSITORY API KEY'
       </Location>
     
       # Requires the apache module mod_proxy. Enable it with

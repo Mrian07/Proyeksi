@@ -4,7 +4,7 @@
 
 
 warn <<~EOS
-    [DEPRECATION] The functionality provided by reposman.rb has been integrated into OpenProject.
+    [DEPRECATION] The functionality provided by reposman.rb has been integrated into ProyeksiApp.
     Please remove any existing cronjobs that still use this script.
   #{'  '}
     You can create repositories explicitly on the filesystem using managed repositories.

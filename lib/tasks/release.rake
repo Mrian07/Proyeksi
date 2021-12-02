@@ -4,7 +4,7 @@
 
 require 'fileutils'
 
-desc 'Package up a OpenProject release from git. example: `rake release[1.1.0]`'
+desc 'Package up a ProyeksiApp release from git. example: `rake release[1.1.0]`'
 task :release, [:version] do |_task, args|
   version = args[:version]
   abort 'Missing version in the form of 1.0.0' unless version.present?

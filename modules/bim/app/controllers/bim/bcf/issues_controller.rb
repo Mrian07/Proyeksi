@@ -166,7 +166,7 @@ module Bim
       end
 
       def build_importer
-        @importer = ::OpenProject::Bim::BcfXml::Importer.new(@bcf_xml_file, @project, current_user: current_user)
+        @importer = ::ProyeksiApp::Bim::BcfXml::Importer.new(@bcf_xml_file, @project, current_user: current_user)
       end
 
       def get_persisted_file
@@ -211,7 +211,7 @@ module Bim
         unless @importer.bcf_version_valid?
           flash[:error] =
             I18n.t('bcf.bcf_xml.import_failed_unsupported_bcf_version',
-                   minimal_version: OpenProject::Bim::BcfXml::Importer::MINIMUM_BCF_VERSION)
+                   minimal_version: ProyeksiApp::Bim::BcfXml::Importer::MINIMUM_BCF_VERSION)
           redirect_to action: :upload
         end
       end

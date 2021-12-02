@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.4
+  title: ProyeksiApp 7.4.4
   sidebar_navigation:
       title: 7.4.4
   release_version: 7.4.4
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 7.4.4
+# ProyeksiApp 7.4.4
 
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-10">Version</span>
-7.4.4 of OpenProject has been released. This release contains the
+7.4.4 of ProyeksiApp has been released. This release contains the
 following bug
     fixes:
 

@@ -5,9 +5,9 @@
 require 'spec_helper'
 
 describe MemberMailer, type: :mailer do
-  include OpenProject::ObjectLinking
+  include ProyeksiApp::ObjectLinking
   include ActionView::Helpers::UrlHelper
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 
   let(:current_user) { FactoryBot.build_stubbed(:user) }
   let(:member) do
@@ -66,9 +66,9 @@ describe MemberMailer, type: :mailer do
     end
   end
 
-  shared_examples_for 'sets the expected openproject header' do
-    it 'sets the expected openproject header' do
-      expect(subject['X-OpenProject-Project'].value)
+  shared_examples_for 'sets the expected proyeksiapp header' do
+    it 'sets the expected proyeksiapp header' do
+      expect(subject['X-ProyeksiApp-Project'].value)
         .to eql project.identifier
     end
   end
@@ -129,7 +129,7 @@ describe MemberMailer, type: :mailer do
     it_behaves_like "sends a mail to the member's principal"
     it_behaves_like 'has a subject', :'mail_member_added_project.subject'
     it_behaves_like 'sets the expected message_id header'
-    it_behaves_like 'sets the expected openproject header'
+    it_behaves_like 'sets the expected proyeksiapp header'
     it_behaves_like 'has the expected body' do
       let(:expected_header) do
         "mail_member_added_project.body.added_by"
@@ -144,7 +144,7 @@ describe MemberMailer, type: :mailer do
     it_behaves_like "sends a mail to the member's principal"
     it_behaves_like 'has a subject', :'mail_member_updated_project.subject'
     it_behaves_like 'sets the expected message_id header'
-    it_behaves_like 'sets the expected openproject header'
+    it_behaves_like 'sets the expected proyeksiapp header'
     it_behaves_like 'has the expected body' do
       let(:expected_header) do
         "mail_member_updated_project.body.updated_by"

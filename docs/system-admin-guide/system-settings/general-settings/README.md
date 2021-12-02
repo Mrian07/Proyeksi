@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: General settings
   priority: 990
-description: General system settings in OpenProject.
+description: General system settings in ProyeksiApp.
 robots: index, follow
 keywords: general settings
 ---
 # General system settings
 
-You can configure general system settings in OpenProject. Under System settings on the tab **General** you can configure the following options.
+You can configure general system settings in ProyeksiApp. Under System settings on the tab **General** you can configure the following options.
 
 1. **Application title**: This title will be displayed on the [application start page](../../../user-guide/start-page).
 
@@ -34,7 +34,7 @@ You can configure general system settings in OpenProject. Under System settings 
 
 12. **Display security badge** enables to display a badge with your installation status in the [Information administration panel](../../information), and on the [start page](../../../user-guide/start-page). It is displayed to administrators only.
 
-    The badge will check your current OpenProject version against the official OpenProject release database to alert you of any updates or  known vulnerabilities. For more information on what the check provides,  what data is needed to provide available updates, and how to disable this check, please visit [the configuration documentation](../../information#security-badge).        
+    The badge will check your current ProyeksiApp version against the official ProyeksiApp release database to alert you of any updates or  known vulnerabilities. For more information on what the check provides,  what data is needed to provide available updates, and how to disable this check, please visit [the configuration documentation](../../information#security-badge).        
 
 ![System-admin-guide-system-settings-general](System-admin-guide-system-settings-general.png)
 

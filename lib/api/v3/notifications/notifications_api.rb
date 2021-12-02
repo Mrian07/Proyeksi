@@ -3,7 +3,7 @@
 module API
   module V3
     module Notifications
-      class NotificationsAPI < ::API::OpenProjectAPI
+      class NotificationsAPI < ::API::ProyeksiAppAPI
         resources :notifications do
           after_validation do
             authorize_by_with_raise current_user.logged?

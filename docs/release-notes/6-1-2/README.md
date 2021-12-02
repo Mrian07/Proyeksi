@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.2
+  title: ProyeksiApp 6.1.2
   sidebar_navigation:
       title: 6.1.2
   release_version: 6.1.2
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 6.1.2
+# ProyeksiApp 6.1.2
 
 This patch release contains some small features and minor bug fixes. We
-recommend to update your OpenProject installation to this version.
+recommend to update your ProyeksiApp installation to this version.
 
 ## Features (5)
 

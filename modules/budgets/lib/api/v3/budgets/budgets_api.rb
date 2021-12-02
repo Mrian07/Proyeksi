@@ -5,7 +5,7 @@
 module API
   module V3
     module Budgets
-      class BudgetsAPI < ::API::OpenProjectAPI
+      class BudgetsAPI < ::API::ProyeksiAppAPI
         resources :budgets do
           route_param :id, type: Integer, desc: 'Budget ID' do
             after_validation do

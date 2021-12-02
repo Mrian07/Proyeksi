@@ -5,7 +5,7 @@ require 'api/v3/activities/activity_representer'
 module API
   module V3
     module Activities
-      class ActivitiesByWorkPackageAPI < ::API::OpenProjectAPI
+      class ActivitiesByWorkPackageAPI < ::API::ProyeksiAppAPI
         resource :activities do
           get do
             self_link = api_v3_paths.work_package_activities @work_package.id

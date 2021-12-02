@@ -1,6 +1,6 @@
-# OpenProject development setup via docker
+# ProyeksiApp development setup via docker
 
-The quickest way to get started developing OpenProject is to use the docker setup.
+The quickest way to get started developing ProyeksiApp is to use the docker setup.
 
 ## Requirements
 
@@ -53,7 +53,7 @@ git clone https://github.com/opf/openproject.git
 
 This will checkout the dev branch in `openproject`. **Change into that directory.**
 
-If you have OpenProject checked out already make sure that you do not have a `config/database.yml`
+If you have ProyeksiApp checked out already make sure that you do not have a `config/database.yml`
 as that will interfere with the database connection inside of the docker containers.
 
 ### 2) Configure environment
@@ -104,7 +104,7 @@ However, these are cached in a docker volume. Meaning that from the 2nd run onwa
 
 Wait until you see `frontend_1  | : Compiled successfully.` and `backend_1   | => Rails 6.0.2.2 application starting in development http://0.0.0.0:3000` in the logs.
 This means both frontend and backend have come up successfully.
-You can now access OpenProject under http://localhost:3000, and via the live-reloaded under http://localhost:4200.
+You can now access ProyeksiApp under http://localhost:3000, and via the live-reloaded under http://localhost:4200.
 
 Again the first request to the server can take some time too.
 But subsequent requests will be a lot faster.

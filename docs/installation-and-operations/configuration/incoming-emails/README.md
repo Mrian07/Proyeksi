@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Configuring inbound emails
   priority: 7
-description: Configuring inbound emails in OpenProject.
+description: Configuring inbound emails in ProyeksiApp.
 robots: index, follow
 keywords: incoming, e-mail, inbound, mail
 ---
 
 # Configuring inbound emails
 
-OpenProject is able to receive incoming emails and create and update work packages and reply in forums depending on the content of the email.
+ProyeksiApp is able to receive incoming emails and create and update work packages and reply in forums depending on the content of the email.
 If you're using the Enterprise cloud you can skip the Setup section, as the settings are already configured.
 
 ## Setup
@@ -127,7 +127,7 @@ to create work packages, set the option `no_permission_check=1` and specify with
 
 **Users with mail suffixes**
 
-If you're used to using mail accounts with suffix support such as Google Mail, where you can specify `account+suffix@googlemail.com`, you will receive mails to that account but respond with your regular account `account@googlemail.com` . To mitigate this, OpenProject by default will expand searching for mail addresses `account@domain` to accounts `account+suffix@domain`  through regex searching the mail column. If you do not wish that behavior or want to customize the prefix, alter the setting `mail_suffix_separators` by running `bundle exec rails runner "Setting.mail_suffix_separators = ''"`
+If you're used to using mail accounts with suffix support such as Google Mail, where you can specify `account+suffix@googlemail.com`, you will receive mails to that account but respond with your regular account `account@googlemail.com` . To mitigate this, ProyeksiApp by default will expand searching for mail addresses `account@domain` to accounts `account+suffix@domain`  through regex searching the mail column. If you do not wish that behavior or want to customize the prefix, alter the setting `mail_suffix_separators` by running `bundle exec rails runner "Setting.mail_suffix_separators = ''"`
 
 
 
@@ -166,8 +166,8 @@ If you create or update a work package via email the attachments of the email wi
 
 #### Watchers
 
-If you create a work package via email and sent it to another email (to or bcc) OpenProject will search for a user with this email and add it as watcher.
+If you create a work package via email and sent it to another email (to or bcc) ProyeksiApp will search for a user with this email and add it as watcher.
 
 ### Truncate Emails
 
-In the administrator's setting you can specify lines after which an email will not be parsed anymore. That is useful if you want to reply to an email automatically sent to you from OpenProject. E.g. you could set it to `--Truncate here--` and insert this line into your email below the updates you want to perform.
+In the administrator's setting you can specify lines after which an email will not be parsed anymore. That is useful if you want to reply to an email automatically sent to you from ProyeksiApp. E.g. you could set it to `--Truncate here--` and insert this line into your email below the updates you want to perform.

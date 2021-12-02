@@ -178,7 +178,7 @@ describe ::API::V3::Groups::GroupRepresenter, 'rendering' do
     let(:embed_links) { false }
 
     it 'is based on the representer\'s cache_key' do
-      expect(OpenProject::Cache)
+      expect(ProyeksiApp::Cache)
         .to receive(:fetch)
         .with(representer.json_cache_key)
         .and_call_original

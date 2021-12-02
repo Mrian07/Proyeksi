@@ -25,11 +25,11 @@ ja:
       画像を選択すると、アップロード前にアバターのプレビューが表示されます。
     text_change_gravatar_html: 'メールアドレスのグラバターを変更または追加するには、%{gravatar_url} にアクセスしてください。'
     text_your_local_avatar: |
-      OpenProject は独自のカスタムアバターをアップロードすることができます。
+      ProyeksiApp は独自のカスタムアバターをアップロードすることができます。
     text_local_avatar_over_gravatar: |
       設定すると、このカスタムアバターが上のグラバターよりも優先して使用されます。
     text_your_current_gravatar: |
-      OpenProject は、登録済みの場合はグラバターを、存在する場合はデフォルトの画像またはアイコンを使用します。
+      ProyeksiApp は、登録済みの場合はグラバターを、存在する場合はデフォルトの画像またはアイコンを使用します。
       現在のグラバターは以下の通りです:
     settings:
       enable_gravatars: 'ユーザーのグラバターを有効にする'

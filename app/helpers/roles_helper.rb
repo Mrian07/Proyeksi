@@ -19,7 +19,7 @@ module RolesHelper
 
   def group_permissions_by_module(perms)
     perms_by_module = perms.group_by { |p| p.project_module.to_s }
-    ::OpenProject::AccessControl
+    ::ProyeksiApp::AccessControl
       .sorted_module_names(false)
       .select { |module_name| perms_by_module[module_name].present? }
       .map do |module_name|

@@ -28,45 +28,45 @@ describe ApplicationHelper, type: :helper do
   describe 'footer_content' do
     context 'no additional footer content' do
       before do
-        OpenProject::Footer.content = nil
+        ProyeksiApp::Footer.content = nil
       end
 
       it {
-        expect(footer_content).to eq(I18n.t(:text_powered_by, link: link_to(OpenProject::Info.app_name, OpenProject::Info.url)))
+        expect(footer_content).to eq(I18n.t(:text_powered_by, link: link_to(ProyeksiApp::Info.app_name, ProyeksiApp::Info.url)))
       }
     end
 
     context 'string as additional footer content' do
       before do
-        OpenProject::Footer.content = nil
-        OpenProject::Footer.add_content('openproject', 'footer')
+        ProyeksiApp::Footer.content = nil
+        ProyeksiApp::Footer.add_content('proyeksiapp', 'footer')
       end
 
       it {
         expect(footer_content.include?(I18n.t(:text_powered_by,
-                                              link: link_to(OpenProject::Info.app_name, OpenProject::Info.url)))).to be_truthy
+                                              link: link_to(ProyeksiApp::Info.app_name, ProyeksiApp::Info.url)))).to be_truthy
       }
-      it { expect(footer_content.include?("<span class=\"footer_openproject\">footer</span>")).to be_truthy }
+      it { expect(footer_content.include?("<span class=\"footer_proyeksiapp\">footer</span>")).to be_truthy }
     end
 
     context 'proc as additional footer content' do
       before do
-        OpenProject::Footer.content = nil
-        OpenProject::Footer.add_content('openproject', Proc.new { Date.parse(Time.now.to_s) })
+        ProyeksiApp::Footer.content = nil
+        ProyeksiApp::Footer.add_content('proyeksiapp', Proc.new { Date.parse(Time.now.to_s) })
       end
 
       it {
-        expect(footer_content.include?("<span class=\"footer_openproject\">#{Date.parse(Time.now.to_s)}</span>")).to be_truthy
+        expect(footer_content.include?("<span class=\"footer_proyeksiapp\">#{Date.parse(Time.now.to_s)}</span>")).to be_truthy
       }
     end
 
     context 'proc which returns nothing' do
       before do
-        OpenProject::Footer.content = nil
-        OpenProject::Footer.add_content('openproject', Proc.new { 'footer' if false })
+        ProyeksiApp::Footer.content = nil
+        ProyeksiApp::Footer.add_content('proyeksiapp', Proc.new { 'footer' if false })
       end
 
-      it { expect(footer_content.include?("<span class=\"footer_openproject\">")).to be_falsey }
+      it { expect(footer_content.include?("<span class=\"footer_proyeksiapp\">")).to be_falsey }
     end
   end
 

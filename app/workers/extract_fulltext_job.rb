@@ -11,9 +11,9 @@ class ExtractFulltextJob < ApplicationJob
     @text = nil
     @file = nil
     @filename = nil
-    @language = OpenProject::Configuration.main_content_language
+    @language = ProyeksiApp::Configuration.main_content_language
 
-    return unless OpenProject::Database.allows_tsv?
+    return unless ProyeksiApp::Database.allows_tsv?
     return unless @attachment = find_attachment(attachment_id)
 
     init
@@ -45,9 +45,9 @@ class ExtractFulltextJob < ApplicationJob
       .update_all(['fulltext = ?, fulltext_tsv = to_tsvector(?, ?), file_tsv = to_tsvector(?, ?)',
                    @text,
                    @language,
-                   OpenProject::FullTextSearch.normalize_text(@text),
+                   ProyeksiApp::FullTextSearch.normalize_text(@text),
                    @language,
-                   OpenProject::FullTextSearch.normalize_filename(@filename)])
+                   ProyeksiApp::FullTextSearch.normalize_filename(@filename)])
   rescue StandardError => e
     Rails.logger.error(
       "Failed to update TSV values for attachment #{@attachment&.id} (On domain #{Setting.host_name}): #{e.message[0..499]}[...]"

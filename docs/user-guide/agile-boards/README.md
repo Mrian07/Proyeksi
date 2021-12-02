@@ -14,7 +14,7 @@ Boards support agile project management methodologies, such as Scrum or Kanban.
 Our Agile boards can be for anything you would like to keep track of within your projects: Tasks to be done, Bugs to be fixed, Things to be reviewed, Features to be developed, Risks to be monitored, Ideas to be spread, anything! The boards consist of lists (columns) and cards. You can choose between a Basic board and various Action boards.
 
 <div class="alert alert-info" role="alert">
-**Note**: OpenProject Agile boards is a Premium Feature and can only be used with [Enterprise cloud](../../enterprise-guide/enterprise-cloud-guide/) or [Enterprise on-premises](../../enterprise-guide/enterprise-on-premises-guide/). An upgrade from the free Community Edition is easily possible.
+**Note**: ProyeksiApp Agile boards is a Premium Feature and can only be used with [Enterprise cloud](../../enterprise-guide/enterprise-cloud-guide/) or [Enterprise on-premises](../../enterprise-guide/enterprise-on-premises-guide/). An upgrade from the free Community Edition is easily possible.
 </div>
 
 | Topic                                                     | Content                                                      |
@@ -30,10 +30,10 @@ Our Agile boards can be for anything you would like to keep track of within your
 | [Manage boards](#manage-boards)                           | How to manage permissions for boards.                        |
 | [Examples for agile boards](#agile-boards-examples)       | Best practices for using the basic board and status, assignee and version board. |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Agile-Boards.mp4" type="video/mp4" controls="" style="width:100%"></video> 
-## Agile boards in OpenProject
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Agile-Boards.mp4" type="video/mp4" controls="" style="width:100%"></video> 
+## Agile boards in ProyeksiApp
 
-The new Boards are tightly integrated with all other project management functionalities in OpenProject, i.e. work packages or Gantt charts. This makes it so easy and practical to include the Boards in your daily project management routines and to gain a much quicker overview of important topics in your project.
+The new Boards are tightly integrated with all other project management functionalities in ProyeksiApp, i.e. work packages or Gantt charts. This makes it so easy and practical to include the Boards in your daily project management routines and to gain a much quicker overview of important topics in your project.
 
 ![openproject-board-overview](openproject-board-overview-1364050.png)
 
@@ -45,7 +45,7 @@ If you haven't done so yet, [activate the Boards module](../projects/project-set
 
 Click on the green **+Board** button to create a new Board view. 
 
-![OpenProject-Boards_create-new](OpenProject-Boards_create-new.png)
+![ProyeksiApp-Boards_create-new](ProyeksiApp-Boards_create-new.png)
 
 ## Choose between board types
 
@@ -88,7 +88,7 @@ Please note: This will only display one hierarchy level below the displayed work
 
 Choose a meaningful title for your Board so that it is clear, e.g. for other team members, what you want to do.
 
-![OpenProject-Boards_title](OpenProject-Boards_title.png) 
+![ProyeksiApp-Boards_title](ProyeksiApp-Boards_title.png) 
 
 ## Add lists to your board
 
@@ -97,13 +97,13 @@ Choose a meaningful title for your Board so that it is clear, e.g. for other tea
 **Action boards lists**: The available lists depend on the [type of board you choose](#choose-between-board-types). Remember: if you change a card between the lists, the respective attribute (e.g. status) will be updated automatically.
 **Basic board lists**: You can create any kind of list and name them to your needs. Remember: No updates to the attributes will happen when moving cards between the lists.
 
-![OpenProject-Boards_lists](OpenProject-Boards_lists.png)
+![ProyeksiApp-Boards_lists](ProyeksiApp-Boards_lists.png)
 
   
 
 Click **+ add list** to add lists to your board.
 
-![OpenProject-Boards_new-lists](OpenProject-Boards_new-lists.png) 
+![ProyeksiApp-Boards_new-lists](ProyeksiApp-Boards_new-lists.png) 
 
 **Basic board lists:** Give the list any meaningful name.
 **Action board lists:** The list's name will depend on the type of Action board you chose, e.g. "New", "In Progress", etc. for the Status board.
@@ -112,22 +112,22 @@ Click **+ add list** to add lists to your board.
 
 ## Remove lists
 
-To remove lists, click on the three dots next to a list's title, and select **Delete list**.![OpenProject-Boards_delete-lists](OpenProject-Boards_delete-lists.png) 
+To remove lists, click on the three dots next to a list's title, and select **Delete list**.![ProyeksiApp-Boards_delete-lists](ProyeksiApp-Boards_delete-lists.png) 
 
 ## Add cards to a list
 
-You can add cards to a list. Cards represent a [work package](../../user-guide/work-packages/) in OpenProject. They can be any kind of work within a project, e.g. a Task, a Bug, a Feature, a Risk, anything.
+You can add cards to a list. Cards represent a [work package](../../user-guide/work-packages/) in ProyeksiApp. They can be any kind of work within a project, e.g. a Task, a Bug, a Feature, a Risk, anything.
 
-![OpenProject-Boards_cards](OpenProject-Boards_cards-1568639967764.png) 
+![ProyeksiApp-Boards_cards](ProyeksiApp-Boards_cards-1568639967764.png) 
 
 Click **+** under the lists' title to add a card: create a new card or choose an existing work package and add it as a card to your list.
 
- ![OpenProject-Boards_add-cards](OpenProject-Boards_add-cards-1568640084027.png)
+ ![ProyeksiApp-Boards_add-cards](ProyeksiApp-Boards_add-cards-1568640084027.png)
 
 **Add new card**: enter a title and press Enter.
 **Add existing**: enter an existing title or an ID and press Enter.
 
-![OpenProject-Boards_create-cards](OpenProject-Boards_create-cards-1568640108117.png)
+![ProyeksiApp-Boards_create-cards](ProyeksiApp-Boards_create-cards-1568640108117.png)
 
 ## Update cards
 
@@ -135,15 +135,15 @@ You can update cards in the following ways:
 
 **Move cards with drag and drop** within a list or to a new list. Remember: Moving cards to another list in an Action board will update their attributes, e.g. status.
 
-![OpenProject-Boards_update-cards](OpenProject-Boards_update-cards-1568640157240.png) 
+![ProyeksiApp-Boards_update-cards](ProyeksiApp-Boards_update-cards-1568640157240.png) 
 
 
 
 Apart from the Status board you can **update a work package's status** directly in the card.
 
- ![OpenProject-Boards_update-status](OpenProject-Boards_update-status-1568640175105.png)
+ ![ProyeksiApp-Boards_update-status](ProyeksiApp-Boards_update-status-1568640175105.png)
 
-A **double click on a card** will open the work package's **fullscreen view.** The **arrow** on top will bring you back to the boards view. ![OpenProject-Boards_card-details](OpenProject-Boards_card-details-1568640191629.png)
+A **double click on a card** will open the work package's **fullscreen view.** The **arrow** on top will bring you back to the boards view. ![ProyeksiApp-Boards_card-details](ProyeksiApp-Boards_card-details-1568640191629.png)
 
 Clicking on **Open details view** (the blue "**i**") will open the work package's **[split screen view](../work-packages/work-package-views/#work-package-split-screen-view)**. You can close it by clicking on the **"x"** in its upper right corner.
 
@@ -153,7 +153,7 @@ Clicking on **Open details view** (the blue "**i**") will open the work package'
 
 To remove a card from a **Basic board** hover over the card and press the **X**.
 
- ![OpenProject-Boards_remove-cards](OpenProject-Boards_remove-cards-1568640218366.png)
+ ![ProyeksiApp-Boards_remove-cards](ProyeksiApp-Boards_remove-cards-1568640218366.png)
 
 Cards from **Actions boards** will be removed automatically from a list as soon as the respective attribute (e.g. Status) is changed.
 
@@ -163,7 +163,7 @@ Removing a card will not delete the work package, you can still add it back to t
 
 To **create new** boards, **open existing** boards, or **delete** boards, navigate to the main Boards menu item.
 
- ![OpenProject-manage-boards](OpenProject-manage-boards-1568640234856.png)
+ ![ProyeksiApp-manage-boards](ProyeksiApp-manage-boards-1568640234856.png)
 
 Verify and **update roles and permissions for boards** in the [system's administration](../../system-admin-guide/users-permissions/) if necessary.
 
@@ -178,7 +178,7 @@ Also, once you have set up your custom boards, you can easily copy them along wi
 
 ### Basic board
 
-Freely create any kind of list you need to organize your team in OpenProject. If it is organizing tasks for a department, planning a team event, collecting feedback for different topics, coordinating tasks in different locations, generating ideas and many more. Every team member can add tasks to this board and thus the board will be growing over time. It allows you to always know what tasks need to be done without using an Excel file and one coordinator. Everyone has access to the information at any time from anywhere.
+Freely create any kind of list you need to organize your team in ProyeksiApp. If it is organizing tasks for a department, planning a team event, collecting feedback for different topics, coordinating tasks in different locations, generating ideas and many more. Every team member can add tasks to this board and thus the board will be growing over time. It allows you to always know what tasks need to be done without using an Excel file and one coordinator. Everyone has access to the information at any time from anywhere.
 
 ![basic-board-docs](basic-board-docs.png)
 

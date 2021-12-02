@@ -2,7 +2,7 @@
 
 
 
-OpenProject::Application.configure do
+ProyeksiApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -51,13 +51,13 @@ OpenProject::Application.configure do
   # config.active_storage.service = :local
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = ActiveModel::Type::Boolean.new.cast(OpenProject::Configuration['rails_force_ssl'])
+  config.force_ssl = ActiveModel::Type::Boolean.new.cast(ProyeksiApp::Configuration['rails_force_ssl'])
   config.ssl_options = {
     # Disable redirect on the internal SYS API
     redirect: {
       exclude: ->(request) do
         # Respect the relative URL
-        relative_url = Regexp.escape(OpenProject::Configuration['rails_relative_url_root'])
+        relative_url = Regexp.escape(ProyeksiApp::Configuration['rails_relative_url_root'])
         # When we match SYS controller API, allow non-https access
         request.path =~ /#{relative_url}\/sys\// || request.path =~ /#{relative_url}\/health_checks/
       end
@@ -66,7 +66,7 @@ OpenProject::Application.configure do
   }
 
   # Set to :debug to see everything in the log.
-  config.log_level = OpenProject::Configuration['log_level'].to_sym
+  config.log_level = ProyeksiApp::Configuration['log_level'].to_sym
 
   config.assets.quiet = true unless config.log_level == :debug
 
@@ -95,7 +95,7 @@ OpenProject::Application.configure do
 
   config.active_record.dump_schema_after_migration = false
 
-  if OpenProject::Configuration.enable_internal_assets_server?
+  if ProyeksiApp::Configuration.enable_internal_assets_server?
     config.public_file_server.enabled = true
     config.public_file_server.headers = {
       'Access-Control-Allow-Origin' => '*',

@@ -1,17 +1,17 @@
 ---
-title: OpenProject 12.0.0
+title: ProyeksiApp 12.0.0
 sidebar_navigation:
 title: 12.0.0
 release_version: 12.0.0
 release_date: 2021-11-15
 ---
 
-# OpenProject 12.0.0
+# ProyeksiApp 12.0.0
 
 Release date: 2021-11-15
 
-We released [OpenProject 12.0.0](https://community.openproject.com/versions/1478).
-This release will change the way how you work with OpenProject. We have introduced the concept of in-app notifications. A new notification center in OpenProject will display changes in your projects directly in the application. This reduces the flood of emails in your inbox significantly. Additionally, you can add daily email summaries to keep up to date about latest updates and changes.
+We released [ProyeksiApp 12.0.0](https://community.openproject.com/versions/1478).
+This release will change the way how you work with ProyeksiApp. We have introduced the concept of in-app notifications. A new notification center in ProyeksiApp will display changes in your projects directly in the application. This reduces the flood of emails in your inbox significantly. Additionally, you can add daily email summaries to keep up to date about latest updates and changes.
 
 ## Introducing in-app notifications
 
@@ -57,7 +57,7 @@ The work package auto-completer for relations now also shows additional informat
 
 ## Export of the project list
 
-With OpenProject 12.0 it is now possible to export the project list with all project specific information, incl. project custom fields. You can choose between the formats XLS and CSV export.
+With ProyeksiApp 12.0 it is now possible to export the project list with all project specific information, incl. project custom fields. You can choose between the formats XLS and CSV export.
 
 ![project-list-export](project-list-export.png)
 
@@ -73,7 +73,7 @@ With 12.0 we have added more granular rights for projects, for example the addti
 
 ## Drop official support for PostgreSQL < 13
 
-OpenProject 12.0 will deprecate PostgreSQL versions < 13. This will result in a warning about the necessary migration to inform users trying to upgrade with an older version. The warning will be shown on startup and on the Administration > Info page. It will not result in a hard error for now.
+ProyeksiApp 12.0 will deprecate PostgreSQL versions < 13. This will result in a warning about the necessary migration to inform users trying to upgrade with an older version. The warning will be shown on startup and on the Administration > Info page. It will not result in a hard error for now.
 
 
 
@@ -212,18 +212,18 @@ OpenProject 12.0 will deprecate PostgreSQL versions < 13. This will result in a 
 
 ## Installation and Updates
 
-To use OpenProject 12.0 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
+To use ProyeksiApp 12.0 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
 
-Prefer to run OpenProject 12.0 in your own infrastructure?
-Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 12.0 in your own infrastructure?
+Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from your self-managed Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/blog/enterprise-edition-upgrade-test-free/)  Navigate to the -> *Administration*-> *Enterprise Edition* and request your trial token.
 
-## Migrating to OpenProject 12.0
+## Migrating to ProyeksiApp 12.0
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 12.0. Please note the blue box on top of the page.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 12.0. Please note the blue box on top of the page.
 
-We update the hosted OpenProject environments (Enterprise Cloud) automatically.
+We update the hosted ProyeksiApp environments (Enterprise Cloud) automatically.
 
 ## Credits and contributions
 

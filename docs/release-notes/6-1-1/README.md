@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.1
+  title: ProyeksiApp 6.1.1
   sidebar_navigation:
       title: 6.1.1
   release_version: 6.1.1
@@ -7,11 +7,11 @@
 ---
 
 
-# OpenProject 6.1.1
+# ProyeksiApp 6.1.1
 
-OpenProject 6.1.1 contains several bug fixes and improvements.
+ProyeksiApp 6.1.1 contains several bug fixes and improvements.
 
-**The following bugs have been fixed in OpenProject 6.1.1:**
+**The following bugs have been fixed in ProyeksiApp 6.1.1:**
 
   - Work packages
       - Watchers could not be selected in projects with too many
@@ -65,7 +65,7 @@ For further information on the release, please refer to the [Changelog
 v.6.1.1](https://community.openproject.com/versions/821) or take a look
 at [GitHub](https://github.com/opf/openproject/tree/v6.1.1).
 
-You can try OpenProject for free. For a free 30 day trial create your
-OpenProject instance on [OpenProject.org](https://openproject.org/).
+You can try ProyeksiApp for free. For a free 30 day trial create your
+ProyeksiApp instance on [ProyeksiApp.org](https://openproject.org/).
 
 

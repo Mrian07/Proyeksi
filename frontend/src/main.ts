@@ -1,4 +1,4 @@
-import { OpenProjectModule } from 'core-app/app.module';
+import { ProyeksiAppModule } from 'core-app/app.module';
 import { enableProdMode } from '@angular/core';
 import * as jQuery from 'jquery';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -43,7 +43,7 @@ void initializeLocale()
     jQuery(() => {
       // Due to the behaviour of the Edge browser we need to wait for 'DOM ready'
       void platformBrowserDynamic()
-        .bootstrapModule(OpenProjectModule)
+        .bootstrapModule(ProyeksiAppModule)
         .then(() => {
           jQuery('body').addClass('__ng2-bootstrap-has-run');
         });

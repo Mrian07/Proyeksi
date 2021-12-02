@@ -2,7 +2,7 @@
   "node": true,
   "jquery": true,
   "predef": [
-    "OpenProject",
+    "ProyeksiApp",
 
     "_",
     "moment",

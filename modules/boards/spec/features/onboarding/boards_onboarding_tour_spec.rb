@@ -70,7 +70,7 @@ describe 'boards onboarding tour', js: true do
 
     it "I see the board onboarding tour in the scrum project" do
       # Set sessionStorage value so that the tour knows that it is in the scum tour
-      page.execute_script("window.sessionStorage.setItem('openProject-onboardingTour', 'startMainTourFromBacklogs');")
+      page.execute_script("window.sessionStorage.setItem('proyeksiapp-onboardingTour', 'startMainTourFromBacklogs');")
 
       # Set the tour parameter so that we can start on the wp page
       visit "/projects/#{scrum_project.identifier}/work_packages?start_onboarding_tour=true"

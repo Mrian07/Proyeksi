@@ -123,14 +123,14 @@ pl:
         text_cannot_scan: |
           Jeśli nie możesz zeskanować kodu, możesz wprowadzić wpis ręcznie, korzystając z następujących informacji:
         description: |
-          Zarejestruj aplikację uwierzytelniającą do użytku z OpenProject, korzystając z opartego na czasie standardu uwierzytelniania za pomocą hasła jednorazowego.
+          Zarejestruj aplikację uwierzytelniającą do użytku z ProyeksiApp, korzystając z opartego na czasie standardu uwierzytelniania za pomocą hasła jednorazowego.
           Typowymi przykładami są Google Authenticator lub Authy.
       sms:
         title: 'Użyj swojego telefonu komórkowego'
         redacted_identifier: 'Urządzenie mobilne (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, wysłaliśmy Ci kod uwierzytelniający za pośrednictwem %{delivery_channel}'
         description: |
-          Zarejestruj swój numer telefonu komórkowego w celu dostarczenia jednorazowych haseł OpenProject.
+          Zarejestruj swój numer telefonu komórkowego w celu dostarczenia jednorazowych haseł ProyeksiApp.
     sns:
       delivery_failed: 'Nie udało się dostarczyć SNS:'
     message_bird:

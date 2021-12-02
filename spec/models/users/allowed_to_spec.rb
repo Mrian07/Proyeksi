@@ -20,7 +20,7 @@ describe User, 'allowed_to?' do
                               roles: [role2],
                               principal: user)
   end
-  let(:global_permission) { OpenProject::AccessControl.permissions.find { |p| p.global? } }
+  let(:global_permission) { ProyeksiApp::AccessControl.permissions.find { |p| p.global? } }
   let(:global_role) { FactoryBot.build(:global_role, permissions: [global_permission.name]) }
   let(:global_member) do
     FactoryBot.build(:global_member,

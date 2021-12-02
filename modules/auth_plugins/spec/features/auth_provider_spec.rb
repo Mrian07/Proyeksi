@@ -10,7 +10,7 @@ describe 'rendering the login buttons', js: true do
   end
 
   before do
-    allow(OpenProject::Plugins::AuthPlugin).to receive(:providers).and_return(providers)
+    allow(ProyeksiApp::Plugins::AuthPlugin).to receive(:providers).and_return(providers)
   end
 
   describe 'in a public project', with_settings: { login_required: false } do

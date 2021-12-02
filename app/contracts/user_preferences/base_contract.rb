@@ -30,7 +30,7 @@ module UserPreferences
 
     class << self
       ##
-      # Returns time zones supported by OpenProject. Those include only the subset of all the
+      # Returns time zones supported by ProyeksiApp. Those include only the subset of all the
       # TZInfo timezones also handled by ActiveSupport::TimeZone.
       # The reason for this is currently:
       #   * the reminder mail implementation which could be amended

@@ -17,7 +17,7 @@ describe 'Login with 2FA device', with_2fa_ee: true, type: :feature,
 
     it 'requests a 2FA' do
       sms_token = nil
-      allow_any_instance_of(::OpenProject::TwoFactorAuthentication::TokenStrategy::Developer)
+      allow_any_instance_of(::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Developer)
           .to receive(:create_mobile_otp).and_wrap_original do |m|
         sms_token = m.call
       end

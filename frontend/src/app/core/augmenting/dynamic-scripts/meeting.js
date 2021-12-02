@@ -19,7 +19,7 @@ jQuery(function($) {
   $('.button--cancel-agenda').click(function() {
     var content_type = $(this).data('contentType');
     toggleContentTypeForm(content_type, false);
-    window.OpenProject.pageWasEdited = false;
+    window.ProyeksiApp.pageWasEdited = false;
 
     return false;
   });

@@ -18,7 +18,7 @@ class WorkPackage < ApplicationRecord
   include WorkPackages::Costs
   include ::Scopes::Scoped
 
-  include OpenProject::Journal::AttachmentHelper
+  include ProyeksiApp::Journal::AttachmentHelper
 
   DONE_RATIO_OPTIONS = %w(field status disabled).freeze
 

@@ -2,19 +2,19 @@
 sidebar_navigation:
   title: Time and costs
   priority: 680
-description: Define cost types and change the currency in OpenProject.
+description: Define cost types and change the currency in ProyeksiApp.
 robots: index, follow
 keywords: cost type, currency, time and costs, budget
 ---
 # Time and costs
 
-You can configure costs in OpenProject and create cost types to track unit costs. Also, you can configure the currency you want to use for your cost reports.
+You can configure costs in ProyeksiApp and create cost types to track unit costs. Also, you can configure the currency you want to use for your cost reports.
 
 Navigate to *Administration* -> *Time and costs*.
 
 ## Settings
 
-Navigate to *Administration* -> *Time and costs* -> *Settings* to define settings for costs in OpenProject.
+Navigate to *Administration* -> *Time and costs* -> *Settings* to define settings for costs in ProyeksiApp.
 
 1. Configure the **currency used in the system, e.g. EUR**.
 2. **Specify the format of the currency**, if the number should be before or after the currency, e.g. 10 EUR, or $ 10.
@@ -24,7 +24,7 @@ Navigate to *Administration* -> *Time and costs* -> *Settings* to define setting
 
 ## Create and manage cost types
 
-You can create and manage **cost types** to [book unit costs to work packages in OpenProject](../../user-guide/time-and-costs/cost-tracking/).
+You can create and manage **cost types** to [book unit costs to work packages in ProyeksiApp](../../user-guide/time-and-costs/cost-tracking/).
 
 Navigate to -> *Administration* -> *Time and costs* -> *Cost types* to create and manage unit costs types.
 

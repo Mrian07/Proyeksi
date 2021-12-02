@@ -46,7 +46,7 @@ describe 'rb_master_backlogs/index', type: :view do
   let(:sprint) { FactoryBot.create(:sprint, project: project) }
 
   before :each do
-    allow(Setting).to receive(:plugin_openproject_backlogs).and_return({ 'story_types' => [type_feature.id],
+    allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return({ 'story_types' => [type_feature.id],
                                                                          'task_type' => type_task.id })
     view.extend RbCommonHelper
     view.extend RbMasterBacklogsHelper

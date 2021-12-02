@@ -5,8 +5,8 @@
 # on handing very simple mails where only the recipient, subject and body is provided.
 
 class AnnouncementMailer < ApplicationMailer
-  include OpenProject::StaticRouting::UrlHelpers
-  include OpenProject::TextFormatting
+  include ProyeksiApp::StaticRouting::UrlHelpers
+  include ProyeksiApp::TextFormatting
   helper :mail_notification
 
   def announce(user, subject:, body:, body_header: nil, body_subheader: nil)

@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class TimeEntriesAPI < ::API::OpenProjectAPI
+      class TimeEntriesAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         resources :time_entries do

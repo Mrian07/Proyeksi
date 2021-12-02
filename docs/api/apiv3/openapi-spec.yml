@@ -2,7 +2,7 @@
 openapi: 3.0.0
 info:
   description: |-
-    You're looking at the current **stable** documentation of the OpenProject APIv3. If you're interested in the current
+    You're looking at the current **stable** documentation of the ProyeksiApp APIv3. If you're interested in the current
     development version, please go to [github.com/opf](https://github.com/opf/openproject/tree/dev/docs/api/apiv3).
 
     ## Introduction
@@ -22,7 +22,7 @@ info:
     HAL is a simple format that gives a consistent and easy way to hyperlink between resources in your API.
     Read more in the following specification: [https://tools.ietf.org/html/draft-kelly-json-hal-08](https://tools.ietf.org/html/draft-kelly-json-hal-08)
 
-    **OpenProject API implementation of HAL+JSON format** enriches JSON and introduces a few meta properties:
+    **ProyeksiApp API implementation of HAL+JSON format** enriches JSON and introduces a few meta properties:
 
     - `_type` - specifies the type of the resource (e.g.: WorkPackage, Project)
     - `_links` - contains all related resource and action links available for the resource
@@ -42,7 +42,7 @@ info:
 
     The API supports the following authentication schemes: OAuth2, session based authentication, and basic auth.
 
-    Depending on the settings of the OpenProject instance many resources can be accessed without being authenticated.
+    Depending on the settings of the ProyeksiApp instance many resources can be accessed without being authenticated.
     In case the instance requires authentication on all requests the client will receive an **HTTP 401** status code
     in response to any request.
 
@@ -50,8 +50,8 @@ info:
 
     ### Session-based Authentication
 
-    This means you have to login to OpenProject via the Web-Interface to be authenticated in the API.
-    This method is well-suited for clients acting within the browser, like the Angular-Client built into OpenProject.
+    This means you have to login to ProyeksiApp via the Web-Interface to be authenticated in the API.
+    This method is well-suited for clients acting within the browser, like the Angular-Client built into ProyeksiApp.
 
     In this case, you always need to pass the HTTP header `X-Requested-With "XMLHttpRequest"` for authentication.
 
@@ -69,9 +69,9 @@ info:
 
     ### OAuth2.0 authentication
 
-    OpenProject allows authentication and authorization with OAuth2 with *Authorization code flow*, as well as *Client credentials* operation modes.
+    ProyeksiApp allows authentication and authorization with OAuth2 with *Authorization code flow*, as well as *Client credentials* operation modes.
 
-    To get started, you first need to register an application in the OpenProject OAuth administration section of your installation.
+    To get started, you first need to register an application in the ProyeksiApp OAuth administration section of your installation.
     This will save an entry for your application with a client unique identifier (`client_id`) and an accompanying secret key (`client_secret`).
 
     You can then use one the following guides to perform the supported OAuth 2.0 flows:
@@ -85,11 +85,11 @@ info:
     ### Why not username and password?
 
     The simplest way to do basic auth would be to use a user's username and password naturally.
-    However, OpenProject already has supported API keys in the past for the API v2, though not through basic auth.
+    However, ProyeksiApp already has supported API keys in the past for the API v2, though not through basic auth.
 
     Using **username and password** directly would have some advantages:
 
-    * It is intuitive for the user who then just has to provide those just as they would when logging into OpenProject.
+    * It is intuitive for the user who then just has to provide those just as they would when logging into ProyeksiApp.
 
     * No extra logic for token management necessary.
 
@@ -104,8 +104,8 @@ info:
 
     ## Cross-Origin Resource Sharing (CORS)
 
-    By default, the OpenProject API is _not_ responding with any CORS headers.
-    If you want to allow cross-domain AJAX calls against your OpenProject instance, you need to enable CORS headers being returned.
+    By default, the ProyeksiApp API is _not_ responding with any CORS headers.
+    If you want to allow cross-domain AJAX calls against your ProyeksiApp instance, you need to enable CORS headers being returned.
 
     Please see [our API settings documentation](https://www.openproject.org/docs/system-admin-guide/system-settings/api-settings/) on
     how to selectively enable CORS.
@@ -125,7 +125,7 @@ info:
     Responses are compressed if requested by the client. Currently [gzip](http://www.gzip.org/) and [deflate](https://tools.ietf.org/html/rfc1951)
     are supported. The client signals the desired compression by setting the [`Accept-Encoding` header](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3).
     If no `Accept-Encoding` header is send, `Accept-Encoding: identity` is assumed which will result in the API responding uncompressed.
-  title: OpenProject API V3 (Stable)
+  title: ProyeksiApp API V3 (Stable)
   version: ''
 servers: []
 paths:

@@ -4,8 +4,8 @@
 
 class TimeEntries::CreateService < ::BaseServices::Create
   def after_perform(call)
-    OpenProject::Notifications.send(
-      OpenProject::Events::TIME_ENTRY_CREATED,
+    ProyeksiApp::Notifications.send(
+      ProyeksiApp::Events::TIME_ENTRY_CREATED,
       time_entry: call.result
     )
 

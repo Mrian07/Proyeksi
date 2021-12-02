@@ -11,7 +11,7 @@ module MailNotificationHelper
       logo = File.read(logo_file)
       content_type = MIME::Types.type_for(logo_file.path).first.content_type
     else
-      logo = File.read(Rails.root.join('app/assets/images/logo_openproject_narrow.svg'))
+      logo = File.read(Rails.root.join('app/assets/images/logo_proyeksiapp_narrow.svg'))
       content_type = "image/svg+xml"
     end
 

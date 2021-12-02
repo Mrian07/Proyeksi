@@ -20,7 +20,7 @@ describe Notifications::GroupMemberAlteredJob, type: :model do
   let(:message) { "Some message" }
 
   before do
-    allow(OpenProject::Notifications)
+    allow(ProyeksiApp::Notifications)
       .to receive(:send)
 
     allow(Member)
@@ -32,16 +32,16 @@ describe Notifications::GroupMemberAlteredJob, type: :model do
   it 'sends a created notification for the membership with the matching timestamps' do
     service_call
 
-    expect(OpenProject::Notifications)
+    expect(ProyeksiApp::Notifications)
       .to have_received(:send)
-      .with(OpenProject::Events::MEMBER_CREATED, member: member1, message: message)
+      .with(ProyeksiApp::Events::MEMBER_CREATED, member: member1, message: message)
   end
 
   it 'sends an updated notification for the membership with the mismatching timestamps' do
     service_call
 
-    expect(OpenProject::Notifications)
+    expect(ProyeksiApp::Notifications)
       .to have_received(:send)
-      .with(OpenProject::Events::MEMBER_UPDATED, member: member2, message: message)
+      .with(ProyeksiApp::Events::MEMBER_UPDATED, member: member2, message: message)
   end
 end

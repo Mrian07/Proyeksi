@@ -18,7 +18,7 @@ describe 'Homescreen index', type: :feature do
            } do
     it 'renders the correct link' do
       expect(page)
-        .to have_selector("a[href=\"#{OpenProject::Application.root_url}/projects/public-project\"]")
+        .to have_selector("a[href=\"#{ProyeksiApp::Application.root_url}/projects/public-project\"]")
 
       click_link "a link to the public project"
       expect(page).to have_current_path project_path(project)

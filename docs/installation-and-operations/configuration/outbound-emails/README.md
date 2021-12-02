@@ -29,11 +29,11 @@ to see what values should be used.
 
 ## Package-based installation (DEB/RPM)
 
-If you installed OpenProject with the package-based installation, simply run `sudo openproject reconfigure`, and when the email wizard is displayed, select the **SMTP** option and fill in the required details ([cf the initial configuration section](../../installation/packaged/#step-5-outgoing-email-configuration))
+If you installed ProyeksiApp with the package-based installation, simply run `sudo openproject reconfigure`, and when the email wizard is displayed, select the **SMTP** option and fill in the required details ([cf the initial configuration section](../../installation/packaged/#step-5-outgoing-email-configuration))
 
 ## Docker installation
 
-If you installed OpenProject with Docker, here is how you would enable outbound
+If you installed ProyeksiApp with Docker, here is how you would enable outbound
 emails through the use of the SMTP environment variables (with SendGrid, the
 `SMTP_USER_NAME` is always `apikey`. Just replace `SMTP_PASSWORD` with the API
 key you've generated and you should be good to
@@ -62,9 +62,9 @@ Please see the [Configuration guide](../) and [Environment variables guide](../e
 
 * `smtp_address`: SMTP server hostname, e.g. `smtp.example.net`
 * `smtp_port`: SMTP server port. Common options are `25` and `587`.
-* `smtp_domain`: The domain told to the SMTP server, probably the hostname of your OpenProject instance (sent in the HELO domain command). Example: `example.net`
+* `smtp_domain`: The domain told to the SMTP server, probably the hostname of your ProyeksiApp instance (sent in the HELO domain command). Example: `example.net`
 * `smtp_authentication`: Authentication method, possible values: `plain`, `login`, `cram_md5` (optional, only when authentication is required)
 * `smtp_user_name`: Username for authentication against the SMTP server (optional, only when authentication is required)
 * `smtp_password` (optional, only when authentication is required)
 * `smtp_enable_starttls_auto`: You can disable STARTTLS here in case it doesn't work. Make sure you don't login to a SMTP server over a public network when using this. This setting can't currently be used via environment variables, since setting options to `false` is only possible via a YAML file. (default: true, optional)
-* `smtp_openssl_verify_mode`: Define how the SMTP server certificate is validated. Make sure you don't just disable verification here unless both, OpenProject and SMTP servers are on a private network. Possible values: `none`, `peer`, `client_once` or `fail_if_no_peer_cert`
+* `smtp_openssl_verify_mode`: Define how the SMTP server certificate is validated. Make sure you don't just disable verification here unless both, ProyeksiApp and SMTP servers are on a private network. Possible values: `none`, `peer`, `client_once` or `fail_if_no_peer_cert`

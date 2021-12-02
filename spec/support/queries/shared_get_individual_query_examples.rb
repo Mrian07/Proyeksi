@@ -66,7 +66,7 @@ shared_examples_for 'GET individual query' do
 
     it 'returns an error' do
       expect(last_response.body)
-        .to be_json_eql("urn:openproject-org:api:v3:errors:InvalidQuery".to_json)
+        .to be_json_eql("urn:proyeksiapp-org:api:v3:errors:InvalidQuery".to_json)
         .at_path('errorIdentifier')
     end
   end

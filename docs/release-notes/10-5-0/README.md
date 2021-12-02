@@ -1,22 +1,22 @@
 ---
-title: OpenProject 10.5.0
+title: ProyeksiApp 10.5.0
 sidebar_navigation:
     title: 10.5.0
 release_version: 10.5.0
 release_date: 2020-04-23
 ---
 ---
-# Release notes OpenProject 10.5.0
+# Release notes ProyeksiApp 10.5.0
 
 | Release notes                                                | Description                                                  |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| [OpenProject 10.5.0](#openproject-1050)                      | What is new for OpenProject 10.5.0?                          |
-| [OpenProject 10.5 BIM Edition for construction project management](#openproject-105-bim-edition-for-construction-project-management) | What is new for the construction project management for the building industry in OpenProject 10.5.0? |
+| [ProyeksiApp 10.5.0](#openproject-1050)                      | What is new for ProyeksiApp 10.5.0?                          |
+| [ProyeksiApp 10.5 BIM Edition for construction project management](#openproject-105-bim-edition-for-construction-project-management) | What is new for the construction project management for the building industry in ProyeksiApp 10.5.0? |
 
 
-# OpenProject 10.5.0
+# ProyeksiApp 10.5.0
 
-We released [OpenProject 10.5.0](https://community.openproject.com/versions/1386).
+We released [ProyeksiApp 10.5.0](https://community.openproject.com/versions/1386).
 The new release of the open source project management software contains new action boards for assignees, much more intuitive sorting of versions by name, the removed 24-hours booking restriction for time tracking, the summary of news on the project overview page, and much more usability improvements and bug fixes.
 
 We recommend updating to the newest version.
@@ -47,19 +47,19 @@ The summary of news will now be displayed in the news widget on the project over
 
 ![news-summary](news-summary.png)
 
-## Upgrade to the OpenProject Enterprise Edition
+## Upgrade to the ProyeksiApp Enterprise Edition
 
-With OpenProject 10.5 it is now much easier to upgrade an existing Community installation to the Enterprise Edition. Within your system Administration under -> Enterprise Edition you now have the possibility to start a 14 days free trial for the Enterprise Edition. Also, you can upgrade directly to get professional support, premium features, and additional security features. The Enterprise token will be generated and updated in your Community installation.
+With ProyeksiApp 10.5 it is now much easier to upgrade an existing Community installation to the Enterprise Edition. Within your system Administration under -> Enterprise Edition you now have the possibility to start a 14 days free trial for the Enterprise Edition. Also, you can upgrade directly to get professional support, premium features, and additional security features. The Enterprise token will be generated and updated in your Community installation.
 
  ![Enterprise-Edition-upgrade](Enterprise-Edition-upgrade.png)
 
-## OpenProject 10.5 BIM Edition for construction project management
+## ProyeksiApp 10.5 BIM Edition for construction project management
 
-OpenProject BIM 10.5 will improvement BIM project management for the construction industry, especially with the support of the BIM Collaboration Format (BCF). With the BCF Management module, the OpenProject BIM Edition now offers a fast and intuitive form of central collaboration and coordination in your BIM projects. Release 10.4 has already added an IFC Viewer for the integration of 3D building models. Now, BCF issues can be created directly in the 3D model and managed centrally.
+ProyeksiApp BIM 10.5 will improvement BIM project management for the construction industry, especially with the support of the BIM Collaboration Format (BCF). With the BCF Management module, the ProyeksiApp BIM Edition now offers a fast and intuitive form of central collaboration and coordination in your BIM projects. Release 10.4 has already added an IFC Viewer for the integration of 3D building models. Now, BCF issues can be created directly in the 3D model and managed centrally.
 
 ### Collaboration and coordination in one central BIM project management software
 
-OpenProject supports BIM project management with central planning, collaboration and coordination for BIM projects. The software thus connects all project participants in a web-based system. As a web-based coordination tool, all BIM issues can be created, managed and distributed centrally in OpenProject.
+ProyeksiApp supports BIM project management with central planning, collaboration and coordination for BIM projects. The software thus connects all project participants in a web-based system. As a web-based coordination tool, all BIM issues can be created, managed and distributed centrally in ProyeksiApp.
 
 ![BCF-management](BCF-management.png)
 
@@ -70,21 +70,21 @@ Both, model-associated issues (BCFs) directly on the BIM model as well as non-mo
 
 ![BCF-management-details](BCF-management-details.png)
 
-### Central BCF issue management and BCF communication in OpenProject
+### Central BCF issue management and BCF communication in ProyeksiApp
 
-The BCF Issue management and communication is thus done centrally in OpenProject. Issues can be created directly on the 3D building model, jointly prioritized and analyzed, and assigned to the responsible BIM modelers.
+The BCF Issue management and communication is thus done centrally in ProyeksiApp. Issues can be created directly on the 3D building model, jointly prioritized and analyzed, and assigned to the responsible BIM modelers.
 
-OpenProject offers an ideal way to comment on and track BCFs. Powerful filter and search functions support fast and intuitive use and transparent tracking.
+ProyeksiApp offers an ideal way to comment on and track BCFs. Powerful filter and search functions support fast and intuitive use and transparent tracking.
 
  ![BCF-management-split-screen-details](BCF-management-split-screen-details.png)
 
 ### Support of open formats IFC and BCF
 
-BCF Management in OpenProject is compatible with hundreds of applications that support the exchange formats IFC (Industry Foundation Classes) and BCF (BIM Collaboration Format).
+BCF Management in ProyeksiApp is compatible with hundreds of applications that support the exchange formats IFC (Industry Foundation Classes) and BCF (BIM Collaboration Format).
 
 ### Robust BCF import and export
 
-BIM Issues can be created wherever the user identifies them, i.e. in his favorite BIM tool. These issues can then be easily imported into OpenProject - the central BCF management system - for centralized tracking and consolidation.
+BIM Issues can be created wherever the user identifies them, i.e. in his favorite BIM tool. These issues can then be easily imported into ProyeksiApp - the central BCF management system - for centralized tracking and consolidation.
 An export function can then be used to distribute the BCFs back to the local applications.
 
 ### All changes and bug fixes
@@ -95,7 +95,7 @@ An export function can then be used to distribute the BCFs back to the local app
 - Changed: Change version, type, priority validations to case-insensitive \[[#32513](https://community.openproject.com/wp/32513)\]
 - Changed: Sort versions by name not by dates \[[#32749](https://community.openproject.com/wp/32749)\]
 - Changed: Remove 24 hour restriction for time tracking \[[#32811](https://community.openproject.com/wp/32811)\]
-- Changed: What's new teaser OpenProject 10.5 \[[#33105](https://community.openproject.com/wp/33105)\]
+- Changed: What's new teaser ProyeksiApp 10.5 \[[#33105](https://community.openproject.com/wp/33105)\]
 - Changed: Change the Billing image on the start page to the new icon set \[[#33114](https://community.openproject.com/wp/33114)\]
 - Fixed: Noop on WorkPackage creates empty journal \[[#21816](https://community.openproject.com/wp/21816)\]
 - Fixed: Markdown link behind reverse proxy \[[#29010](https://community.openproject.com/wp/29010)\]

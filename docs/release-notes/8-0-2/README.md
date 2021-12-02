@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.0.2
+  title: ProyeksiApp 8.0.2
   sidebar_navigation:
       title: 8.0.2
   release_version: 8.0.2
@@ -7,16 +7,16 @@
 ---
 
 
-# OpenProject 8.0.2
+# ProyeksiApp 8.0.2
 
 We released
-[OpenProject 8.0.2](https://community.openproject.com/versions/1154).
+[ProyeksiApp 8.0.2](https://community.openproject.com/versions/1154).
 The release contains several bug fixes and we recommend updating to the
 newest version.
 
 #### Bug fixes and changes
 
-  - Fixed: Relations cannot be added when OpenProject is running on
+  - Fixed: Relations cannot be added when ProyeksiApp is running on
     relative URL root
     \[[\#28639](https://community.openproject.com/wp/28639)\]
   - Fixed: Cannot select values for custom field filter
@@ -37,7 +37,7 @@ newest version.
   - Fixed: Content-Disposition was not set for AWS hosted attachments
     for non-inlineable images. This resulted in SVGs being displayed
     inline, which opens an SVG XSS attack vector on the AWS domain (NOT
-    on the OpenProject domain). From this version onward, non-image
+    on the ProyeksiApp domain). From this version onward, non-image
     files will receive a forced *attachment* content disposition to
     ensure the file is not loaded in the browser.
 

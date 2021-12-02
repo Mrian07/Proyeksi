@@ -2,38 +2,38 @@
 sidebar_navigation:
   title: Sign in and registration
   priority: 990
-description: Sign in and registration in OpenProject.
+description: Sign in and registration in ProyeksiApp.
 robots: index, follow
 keywords: sign in, login, registration
 ---
 
 # Sign in and registration
 
-Here you will get an overview how to sign in and register to an existing OpenProject installation.
+Here you will get an overview how to sign in and register to an existing ProyeksiApp installation.
 
 <div class="alert alert-info" role="alert">
-**Note**: If you do not have an OpenProject installation yet, please visit our site on [how to create an OpenProject trial installation](../../enterprise-guide/enterprise-cloud-guide/create-cloud-trial/).
+**Note**: If you do not have an ProyeksiApp installation yet, please visit our site on [how to create an ProyeksiApp trial installation](../../enterprise-guide/enterprise-cloud-guide/create-cloud-trial/).
 </div>
 
 
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Sign in with an existing account](#sign-in-with-an-existing-account) | Sign in with an existing account to an OpenProject installation. |
+| [Sign in with an existing account](#sign-in-with-an-existing-account) | Sign in with an existing account to an ProyeksiApp installation. |
 | [Sign in with Google](#sign-in-with-a-google-account)                  | Find out how to sign in with a Google account.               |
-| [Sign in from the OpenProject website](#sign-in-from-the-openproject-website) | Sign in to an existing OpenProject Cloud Edition from the website. |
-| [Create a new account](#create-a-new-account)                | Create a new account for OpenProject.                        |
-| [Choose your language](#choose-your-language)                | How to select your language in OpenProject?                  |
+| [Sign in from the ProyeksiApp website](#sign-in-from-the-openproject-website) | Sign in to an existing ProyeksiApp Cloud Edition from the website. |
+| [Create a new account](#create-a-new-account)                | Create a new account for ProyeksiApp.                        |
+| [Choose your language](#choose-your-language)                | How to select your language in ProyeksiApp?                  |
 | [Reset your password](#reset-your-password)                  | If you forgot your password find out how to reset it.        |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Sign in with an existing account
 
-To sign in to an OpenProject installation with an existing account, please enter the URL of your OpenProject in a modern browser, e.g. documentation.openproject.com.
+To sign in to an ProyeksiApp installation with an existing account, please enter the URL of your ProyeksiApp in a modern browser, e.g. documentation.openproject.com.
 
-Type in your user name and password in the respective fields and click the blue Sign in button. You will then be signed in to your OpenProject environment.
+Type in your user name and password in the respective fields and click the blue Sign in button. You will then be signed in to your ProyeksiApp environment.
 
-![Sign-in to OpenProject](1565974792215.png)
+![Sign-in to ProyeksiApp](1565974792215.png)
 
 ## Sign in with a Google account
 
@@ -51,19 +51,19 @@ If you have activated Two-factor authentication, please enter your second factor
 
 ![1566204298041](1566204298041.png)
 
-Then, you are asked to create your OpenProject Account.
+Then, you are asked to create your ProyeksiApp Account.
 
 ![Create-account](1566204388512.png)
 
-## Sign in from the OpenProject website
+## Sign in from the ProyeksiApp website
 
-If you are using the OpenProject Cloud Edition, you can sign in to your installation directly from the OpenProject website.
+If you are using the ProyeksiApp Cloud Edition, you can sign in to your installation directly from the ProyeksiApp website.
 
 Please follow the [instructions in our Cloud Edition guide](../../enterprise-guide/enterprise-cloud-guide/sign-in).
 
 ## Create a new account
 
-If you have been invited via email to an OpenProject installation, or if you have set up your own OpenProject (trial) installation, you are asked to create a new account in the system.
+If you have been invited via email to an ProyeksiApp installation, or if you have set up your own ProyeksiApp (trial) installation, you are asked to create a new account in the system.
 
 Please click the link in the invitation email:
 
@@ -87,7 +87,7 @@ Make sure to remember your password in order to sign-in again at a later point.
 After the creation of your account you are logged into the system. You will then be asked to set your language in the system. Please choose your preferred language from the drop-down list.
 
 <div class="alert alert-info" role="alert">
-**Note**: OpenProject is available in more than 30 languages. If you do not find your preferred language, it first needs to be activated in the system's administration. Please talk to your system administrator so set up the language.
+**Note**: ProyeksiApp is available in more than 30 languages. If you do not find your preferred language, it first needs to be activated in the system's administration. Please talk to your system administrator so set up the language.
 </div>
 
 ![select language](20191202171349241.png)
@@ -100,7 +100,7 @@ If you forgot your password, you can reset your password by clicking the blue **
 
 ![Forgot-password](1566205596114.png)
 
-You are then asked to enter you email address with which you have registered to OpenProject. 
+You are then asked to enter you email address with which you have registered to ProyeksiApp. 
 
 ![enter-email-address](1566205903097.png)
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-if Rails.env.development? && ENV['OPENPROJECT_RACK_PROFILER_ENABLED']
+if Rails.env.development? && ENV['PROYEKSIAPP_RACK_PROFILER_ENABLED']
   require "rack-mini-profiler"
   require 'flamegraph'
   require 'stackprof'

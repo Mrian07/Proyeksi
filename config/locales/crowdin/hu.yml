@@ -28,8 +28,8 @@ hu:
         main-menu-hover-font-color: "Főmenü betűtípusa, ha egér rajta"
         main-menu-border-color: "Főmenü kerete"
       custom_colors: "Egyéni színek"
-      customize: "Adjon meg saját logót az installált OpenProjecthez. Megjegyzés: Ez a logó nyilvánosan elérhető lesz."
-      enterprise_notice: "Ez egy különleges \"Köszönöm!\" az OpenProject kifejlesztéséhez nyújtott pénzügyi hozzájárulásért, ami egy aprócska szolgáltatás a Vállalati Verziót használó előfizetők számára."
+      customize: "Adjon meg saját logót az installált ProyeksiApphez. Megjegyzés: Ez a logó nyilvánosan elérhető lesz."
+      enterprise_notice: "Ez egy különleges \"Köszönöm!\" az ProyeksiApp kifejlesztéséhez nyújtott pénzügyi hozzájárulásért, ami egy aprócska szolgáltatás a Vállalati Verziót használó előfizetők számára."
       manage_colors: "A színválasztás beállításainak módosítása"
       instructions:
         alternative-color: "Kiemelt szín, tipikusan a képernyőn megjelenő legfontosabb gomb esetén."
@@ -81,36 +81,36 @@ hu:
       name: Az LDAP kapcsolat tetszőleges neve
       host: LDAP Kiszolgáló neve vagy IP címe
       login_map: Az LDAP attribútumkulcsa, amelyet az egyedi felhasználói bejelentkezés azonosítására használnak. Ez általában `uid` vagy` samAccountName`.
-      generic_map: Az LDAP attribútumkulcsa, amely az OpenProject %{attribute} attribútumhoz van leképezve
-      admin_map_html: "Opcionális: Az LDAP attribútumkulcsa, amely a <strong> ha van </strong> jelöli az OpenProject felhasználó adminisztrátorát. Hagyja üresen ha kétséges."
+      generic_map: Az LDAP attribútumkulcsa, amely az ProyeksiApp %{attribute} attribútumhoz van leképezve
+      admin_map_html: "Opcionális: Az LDAP attribútumkulcsa, amely a <strong> ha van </strong> jelöli az ProyeksiApp felhasználó adminisztrátorát. Hagyja üresen ha kétséges."
       system_user_dn_html: |
         Írja be az írásvédett hozzáféréshez használt rendszerfelhasználó DN-jét.
         <br/>
         Példa: uid = openproject, ou = rendszer, dc = példa, dc = com
       system_user_password: Adja meg a rendszergazda bind jelszavát
       base_dn: |
-        Írja be annak az alrésznek az alap DN-jét az LDAP-ban, amelyben az OpenProject felhasználókat és csoportokat szeretne keresni.
-        Az OpenProject csak ebben a részfában biztosítja a megadott felhasználóneveket.
+        Írja be annak az alrésznek az alap DN-jét az LDAP-ban, amelyben az ProyeksiApp felhasználókat és csoportokat szeretne keresni.
+        Az ProyeksiApp csak ebben a részfában biztosítja a megadott felhasználóneveket.
         Példa: ou = felhasználók, dc = példa, dc = com
       filter_string: |
         Adjon hozzá egy opcionális RFC4515 szűrőt az LDAP -ban szűrt felhasználók számára visszaadott eredményekhez.
-        Ezzel korlátozhatja az OpenProject által hitelesítésre és csoportszinkronizálásra talált felhasználók körét.
+        Ezzel korlátozhatja az ProyeksiApp által hitelesítésre és csoportszinkronizálásra talált felhasználók körét.
       filter_string_concat: |
-        Az OpenProject mindig szűri a felhasználó által megadott bejelentkezési attribútumot a rekord azonosítására. Ha itt megad egy szűrőt,
+        Az ProyeksiApp mindig szűri a felhasználó által megadott bejelentkezési attribútumot a rekord azonosítására. Ha itt megad egy szűrőt,
         ÉS -sel lesz összekapcsolva. Alapértelmezés szerint a mindenre kiterjedő (objectClass =*) lesz szűrő.
       onthefly_register: |
-        Ha bejelöli ezt a négyzetet, az OpenProject automatikusan új felhasználókat hoz létre az LDAP bejegyzéseikből
-        amikor először hitelesítenek az OpenProject segítségével.
-        Ha ezt nem jelöli, akkor az OpenProject már létező fiókjai csak az LDAP segítségével hitelesíthetők!
+        Ha bejelöli ezt a négyzetet, az ProyeksiApp automatikusan új felhasználókat hoz létre az LDAP bejegyzéseikből
+        amikor először hitelesítenek az ProyeksiApp segítségével.
+        Ha ezt nem jelöli, akkor az ProyeksiApp már létező fiókjai csak az LDAP segítségével hitelesíthetők!
     connection_encryption: 'Kapcsolat titkosítása'
     system_account: 'Rendszer fiók'
     system_account_legend: |
-      Az OpenProject csak olvasható hozzáférést igényel egy rendszerfiókon keresztül az LDAP-fában lévő felhasználók és csoportok kereséséhez.
+      Az ProyeksiApp csak olvasható hozzáférést igényel egy rendszerfiókon keresztül az LDAP-fában lévő felhasználók és csoportok kereséséhez.
       A következő szakaszban adja meg a rendszerfelhasználó bind hitelesítő adatait.
     ldap_details: 'LDAP részletek'
     user_settings: 'Attribútum-leképezés'
     user_settings_legend: |
-      Az alábbi mezők a felhasználók létrehozásához kapcsolódnak LDAP bejegyzések alapján az OpenProject-ben, és ahhoz mely LDAP tulajdonságok lesznek felhasználva OpenProject felhasználó tulajdonságainak deffiniálásakor (tulajdonság társítás).
+      Az alábbi mezők a felhasználók létrehozásához kapcsolódnak LDAP bejegyzések alapján az ProyeksiApp-ben, és ahhoz mely LDAP tulajdonságok lesznek felhasználva ProyeksiApp felhasználó tulajdonságainak deffiniálásakor (tulajdonság társítás).
     tls_mode:
       plain: 'Egyik sem'
       simple_tls: 'Egyszerű_TLS'
@@ -870,7 +870,7 @@ hu:
       heading_reset: "Visszaállítási kulcs törlése"
       heading_create: "Visszaállítási kulcs létrehozása"
       implications: >
-        A biztonsági mentések engedélyezésével a szükséges jogosultságokkal és ezzel a biztonsági mentési jogkivonattal rendelkező felhasználók letölthetnek egy biztonsági másolatot, amely tartalmazza az OpenProject telepítés összes adatát. Ez magában foglalja az összes többi felhasználó adatait.
+        A biztonsági mentések engedélyezésével a szükséges jogosultságokkal és ezzel a biztonsági mentési jogkivonattal rendelkező felhasználók letölthetnek egy biztonsági másolatot, amely tartalmazza az ProyeksiApp telepítés összes adatát. Ez magában foglalja az összes többi felhasználó adatait.
 
       info: >
         A biztonsági mentés létrehozásához biztonsági másolatot kell generálnia. Minden alkalommal, amikor biztonsági másolatot szeretne kérni, meg kell adnia ezt a tokent. A biztonsági mentés törlésével letilthatja a biztonsági mentést ennél a felhasználónál.
@@ -1194,7 +1194,7 @@ hu:
   error_can_not_unarchive_project: "Ezt a projektet nem lehet az archívumból visszavenni: %{errors}"
   error_check_user_and_role: "Légy szíves válassz felhasználót és szerepkört"
   error_code: "Hibakód: %{code}"
-  error_cookie_missing: 'Hiányzó OpenProject cookie. Ellenőrizze, hogy böngészőjében a cookie-k használata engedélyezve van, mert anélkül ez az alkalmazás nem tud megfelelően működni.'
+  error_cookie_missing: 'Hiányzó ProyeksiApp cookie. Ellenőrizze, hogy böngészőjében a cookie-k használata engedélyezve van, mert anélkül ez az alkalmazás nem tud megfelelően működni.'
   error_custom_option_not_found: "A beállítás nem létezik."
   error_enterprise_activation_user_limit: "Fiókját nem lehet aktiválni (elérte a felhasználói korlátot). Kérjük, lépjen kapcsolatba rendszergazdájával a hozzáféréshez."
   error_enterprise_token_invalid_domain: "Az Enterprise Edition nem aktív. Vállalati jogkivonata domainje (%{actual}) nem egyezik a rendszer gazdagépnevével (%{expected})."
@@ -1282,7 +1282,7 @@ hu:
       no_visible_projects: "Ebben a példányban nincsenek látható projektek."
       users: "Legújabb regisztrált felhasználók ebben az esetben."
     blocks:
-      community: "OpenProject Közösség"
+      community: "ProyeksiApp Közösség"
       upsale:
         title: "Frissítés a Vállalati Verzióra"
         more_info: "További információ"
@@ -1293,7 +1293,7 @@ hu:
       faq: "GY. I. K."
       glossary: "Szószedet"
       shortcuts: "Parancsikonok"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Közösségi fórum"
       newsletter: "Biztonsági figyelmeztetések / hírlevél"
   image_conversion:
@@ -1334,9 +1334,9 @@ hu:
         watched: "Megfigyeled a %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1345,7 +1345,7 @@ hu:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Hírek'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1658,7 +1658,7 @@ hu:
   label_open_menu: "Menü megnyitása"
   label_open_work_packages: "nyitott"
   label_open_work_packages_plural: "nyitott"
-  label_openproject_website: "OpenProject honlap"
+  label_openproject_website: "ProyeksiApp honlap"
   label_optional_description: "Leírás"
   label_options: "Beállítások"
   label_other: "Egyéb"
@@ -1958,17 +1958,17 @@ hu:
   mail_body_backup_token_reset_user_info: A visszaállítási kulcs törölve.
   mail_body_backup_token_info: Az előző kulcs elavult.
   mail_body_backup_waiting_period: A visszaállítási kulcs még %{hours} óráig érvényes.
-  mail_body_backup_token_warning: "Ha nem te voltál, azonnal jelentkezz be az OpenProject szolgáltatásba, és állítsd újra.\n"
+  mail_body_backup_token_warning: "Ha nem te voltál, azonnal jelentkezz be az ProyeksiApp szolgáltatásba, és állítsd újra.\n"
   mail_body_lost_password: "A jelszó módosításához kattintson az alábbi linkre:"
-  mail_body_register: "Üdvözli az OpenProject. Kérjük, aktiválja fiókját a következő linkre kattintva:\n"
+  mail_body_register: "Üdvözli az ProyeksiApp. Kérjük, aktiválja fiókját a következő linkre kattintva:\n"
   mail_body_register_header_title: "Projekttag meghívó e -mail\n"
   mail_body_register_user: "Kedves %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Az OpenProject csapata"
+  mail_body_register_closing: "Az ProyeksiApp csapata"
   mail_body_register_ending: "Maradj kapcsolatban! Üdvözlettel,"
   mail_body_reminder: "Ön rendelt  %{count} munkacsomag(ok) a következő  %{days}  napokon esedékesek:"
   mail_body_group_reminder: "A \"%{group}\" csoporthoz rendelt %{count} feladat határidős az elkövetkező %{days} napban:"
@@ -2007,13 +2007,13 @@ hu:
   mail_user_activation_limit_reached:
     subject: A felhasználó aktiválási korlátját elérte
     message: |
-      Egy új felhasználó (%{email}) megpróbált létrehozni egy fiókot az Ön által kezelt OpenProject környezetben (%{host}). A felhasználó nem tudja aktiválni fiókját, mivel elérte a felhasználói korlátot.
+      Egy új felhasználó (%{email}) megpróbált létrehozni egy fiókot az Ön által kezelt ProyeksiApp környezetben (%{host}). A felhasználó nem tudja aktiválni fiókját, mivel elérte a felhasználói korlátot.
     steps:
       label: "A felhasználó bejelentkezéséhez a következőket teheti: "
       a: "Fizetés módjának frissítése ([here](upgrade_url))" #here turned into a link
       b: "Felhasználó zárolása vagy törlése ([here](users_url))" #here turned into a link
   more_actions: "További funkciók"
-  noscript_description: "Engedélyezze a JavaScriptet, hogy használni tudja az OpenProjectet !"
+  noscript_description: "Engedélyezze a JavaScriptet, hogy használni tudja az ProyeksiAppet !"
   noscript_heading: "JavaScript le van tiltva"
   noscript_learn_more: "További információ"
   notice_accessibility_mode: A kisegítő lehetőségek mód bekapcsolható a [felhasználói fiók beállításaiban](url).
@@ -2077,7 +2077,7 @@ hu:
   notice_wont_delete_auth_source: Az autentikációs mód nem törölhető, amíg valamelyik felhasználó azt használja.
   notice_project_cannot_update_custom_fields: "Nem tudod firssíteni a projekt egyedi mezőit. A projekt érvénytelen: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Ez az oldal automatikusan jött létre az OpenProject frissítésekor. Tartalmazza az összes mellékletet az alábbiakhoz: %{container_type} %{container_name}.
+    Ez az oldal automatikusan jött létre az ProyeksiApp frissítésekor. Tartalmazza az összes mellékletet az alábbiakhoz: %{container_type} %{container_name}.
   #Default format for numbers
   number:
     format:
@@ -2100,9 +2100,9 @@ hu:
           tb: "TB"
   onboarding:
     heading_getting_started: "Áttekintés"
-    text_getting_started_description: "Gyors áttekintés a projekt menedzsmentről és csapatmunkáról az OpenProjecttel."
+    text_getting_started_description: "Gyors áttekintés a projekt menedzsmentről és csapatmunkáról az ProyeksiApptel."
     text_show_again: "Újra tudod indítani ezt a videót a segítség menüből"
-    welcome: "Üdvözöl az OpenProject"
+    welcome: "Üdvözöl az ProyeksiApp"
     select_language: "Kéjük válasszon nyelvet"
   permission_add_work_package_notes: "Megjegyzések hozzáadása"
   permission_add_work_packages: "feladatcsoport hozzáadása"
@@ -2161,7 +2161,7 @@ hu:
   permission_select_project_modules: "Projekt modulok kiválasztása"
   permission_manage_types: "Jelölje ki a típust"
   permission_view_calendar: "A naptár megtekintése"
-  permission_view_changesets: "Tároló verziók megtekintése az OpenProject-ben"
+  permission_view_changesets: "Tároló verziók megtekintése az ProyeksiApp-ben"
   permission_view_commit_author_statistics: "Szerző,statisztika megtekintése"
   permission_view_work_package_watchers: "A megfigyelők listájának megtekintése"
   permission_view_work_packages: "Munkacsomagok megtekintése"
@@ -2243,7 +2243,7 @@ hu:
     destroy:
       confirmation: "Ha folytatja, a kezelt tároló véglegesen törlésre kerül."
       info: "A tároló törlése visszafordíthatatlan művelet."
-      info_not_managed: "Megjegyzés: Ez NEM törli a tároló tartalmát, mivel nem az OpenProject által kezelt."
+      info_not_managed: "Megjegyzés: Ez NEM törli a tároló tartalmát, mivel nem az ProyeksiApp által kezelt."
       managed_path_note: "Az következő könyvtár törlésre kerül: %{path}"
       repository_verification: "Írja be a projekt azonosítót %{identifier} a tároló törlésének megerősítéséhez."
       subtitle: "Biztosan törli a %{project_name} projekthez tartozó %{repository_type}-t?"
@@ -2257,8 +2257,8 @@ hu:
       empty_repository: "A tároló létezik, de üres. Nem tartalmaz egy revíziót sem."
       exists_on_filesystem: "A tároló könyvtár már létezik a fájlrendszeren."
       filesystem_access_failed: "Hiba merült fel a tároló fájlrendszeren való elérésekor: %{message}"
-      not_manageable: "A tároló típusa OpenProjecttel nem kezelhető."
-      path_permission_failed: "Hiba merült fel a következő létrehozásakor: %{path}. Kérem, biztosítsa az OpenProject írási jogát a könyvtárban."
+      not_manageable: "A tároló típusa ProyeksiApptel nem kezelhető."
+      path_permission_failed: "Hiba merült fel a következő létrehozásakor: %{path}. Kérem, biztosítsa az ProyeksiApp írási jogát a könyvtárban."
       unauthorized: "Nincs jogosultsága elérni a tárolót vagy a hitelesítő adatai hibásak."
       unavailable: "A tároló nem érhető el."
       exception_title: "A tároló nem elérhető: %{message}"
@@ -2275,9 +2275,9 @@ hu:
         path_encoding: "Git útvonal kódolásának felülírása (Alapértelmezett: UTF-8)"
       local_title: "Hivatkozás egy meglévő helyi tárolóra"
       local_url: "Helyi URL"
-      local_introduction: "Ha rendelkezik meglévő helyi Git tárolóval, akkor az OpenProject alkalmazáson belül kapcsolódhat hozzá."
-      managed_introduction: "Engedélyezze, hogy az OpenProject automatikusan létrehozza és integrálja a helyi Git tárolót."
-      managed_title: "Git tároló integrálva az OpenProject-be"
+      local_introduction: "Ha rendelkezik meglévő helyi Git tárolóval, akkor az ProyeksiApp alkalmazáson belül kapcsolódhat hozzá."
+      managed_introduction: "Engedélyezze, hogy az ProyeksiApp automatikusan létrehozza és integrálja a helyi Git tárolót."
+      managed_title: "Git tároló integrálva az ProyeksiApp-be"
       managed_url: "Kezelt URL"
       path: "Git tároló elérési útja"
       path_encoding: "Elérési út kódolás"
@@ -2294,19 +2294,19 @@ hu:
     scm_types:
       local: "Hivatkozás egy meglévő helyi tárolóra"
       existing: "Hivatkozás egy meglévő tárolóra"
-      managed: "Új tároló létrehozása az OpenProject-ben"
+      managed: "Új tároló létrehozása az ProyeksiApp-ben"
     storage:
       not_available: "A lemez felhasználási adatai nem érhetőek el a tárolón."
       update_timeout: "Tartsa meg az utolsó szükséges lemezterület-információt egy tárolóhoz N percig. Mivel egy tároló szükséges lemezterületének kiszámítása erőforrás igényes lehet, növelje ezt az értéket a teljesítmény növelésének érdekében."
     subversion:
       existing_title: "Meglévő Subversion tároló"
-      existing_introduction: "Ha rendelkezik meglévő Subversion tárolóval, akkor az OpenProject segítségével kapcsolódhat hozzá az alkalmazáson belül."
+      existing_introduction: "Ha rendelkezik meglévő Subversion tárolóval, akkor az ProyeksiApp segítségével kapcsolódhat hozzá az alkalmazáson belül."
       existing_url: "Létező URL"
       instructions:
         managed_url: "Ez egy hivatkozás kezelt (helyi) Subversion tárolóra."
         url: "Adja meg az tároló URL-jét. Ez akár egy helyi tároló is lehet (kezdődő %{local_proto} ), vagy egy távoli cím. A következő URL-sémák támogatottak:"
-      managed_title: "Subversion tároló integrálva az OpenProject-be"
-      managed_introduction: "Hagyja, hogy az OpenProject hozza létre, és integrálja a helyi Subversion tárolót automatikusan."
+      managed_title: "Subversion tároló integrálva az ProyeksiApp-be"
+      managed_introduction: "Hagyja, hogy az ProyeksiApp hozza létre, és integrálja a helyi Subversion tárolót automatikusan."
       managed_url: "Kezelt URL"
       password: "Tároló jelszava"
       username: "Tároló felhasználónév"
@@ -2323,7 +2323,7 @@ hu:
   setting_apiv3_cors_enabled: "A CORS engedélyezése"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) engedélyezett származások"
   setting_apiv3_cors_origins_text_html: >
-    Ha a CORS engedélyezve van, ezek azok az eredetiek, amelyek hozzáférhetnek az OpenProject API-hoz. <br/> Kérjük, olvassa el a <a href="%{origin_link}" target="_blank">Dokumentáció az Origin fejlécről</a> című dokumentumot az elvárt értékek megadásáról.
+    Ha a CORS engedélyezve van, ezek azok az eredetiek, amelyek hozzáférhetnek az ProyeksiApp API-hoz. <br/> Kérjük, olvassa el a <a href="%{origin_link}" target="_blank">Dokumentáció az Origin fejlécről</a> című dokumentumot az elvárt értékek megadásáról.
 
   setting_apiv3_docs: "Dokumentáció"
   setting_apiv3_docs_enabled: "Dokumentumok oldal engedélyezése\n"
@@ -2488,7 +2488,7 @@ hu:
       sentence_connector: "és"
       skip_last_comma: "hamis"
   text_accessibility_hint: "A kisegítő lehetőségek mód vakok és gyengén látók illetve mozgásukban korlátozottak számára lett tervezve. Gyengénlátók számára a fókuszált elemek kivételes kiemeléssel jelennek meg. Vegye figyelembe, hogy a \"Backlogs\" modul nem érhető el ebben a módban."
-  text_access_token_hint: "Hozzáférés tokennel lehetővé teszi, hogy külső alkalmazások hozzáférhessenek az OpenProject forrásaihoz."
+  text_access_token_hint: "Hozzáférés tokennel lehetővé teszi, hogy külső alkalmazások hozzáférhessenek az ProyeksiApp forrásaihoz."
   text_analyze: "További elemzése: %{subject}"
   text_are_you_sure: "Biztos vagy benne?"
   text_are_you_sure_with_children: "Törli a feladatcsoportot és minden hozzá tartozó gyermek feladatcsoportot?"
@@ -2557,7 +2557,7 @@ hu:
   text_no_notes: "Ehhez a munkacsomaghoz nincsenek megjegyzések."
   text_notice_too_many_values_are_inperformant: "Megjegyzés: Az oldalanként több mint 100 elem megjelenítésekor az oldal betöltési ideje  növekedhet."
   text_notice_security_badge_displayed_html: >
-    Megjegyzés: ha engedélyezve van, akkor a telepítési állapotot jelző jelvény jelenik meg a <a href="%{information_panel_path}">%{information_panel_label} </a> adminisztrációs panelen és a kezdőlapon. Csak a rendszergazdák számára jelenik meg. <br/> A jelvény ellenőrzi az aktuális OpenProject verziót a hivatalos OpenProject kiadási adatbázishoz képest, hogy figyelmeztesse Önt minden frissítésre vagy ismert biztonsági résre. Ha többet szeretne megtudni arról, hogy mit tartalmaz az ellenőrzés, milyen adatokra van szükség az elérhető frissítésekhez, és hogyan tilthatja le ezt az ellenőrzést, keresse fel a <a href="%{more_info_url}"> konfigurációs dokumentációt </a>.
+    Megjegyzés: ha engedélyezve van, akkor a telepítési állapotot jelző jelvény jelenik meg a <a href="%{information_panel_path}">%{information_panel_label} </a> adminisztrációs panelen és a kezdőlapon. Csak a rendszergazdák számára jelenik meg. <br/> A jelvény ellenőrzi az aktuális ProyeksiApp verziót a hivatalos ProyeksiApp kiadási adatbázishoz képest, hogy figyelmeztesse Önt minden frissítésre vagy ismert biztonsági résre. Ha többet szeretne megtudni arról, hogy mit tartalmaz az ellenőrzés, milyen adatokra van szükség az elérhető frissítésekhez, és hogyan tilthatja le ezt az ellenőrzést, keresse fel a <a href="%{more_info_url}"> konfigurációs dokumentációt </a>.
 
   text_own_membership_delete_confirmation: "Értesítem arról, hogy eltávolít néhány vagy az összes jogosultságot, és ezt követően már nem lehet szerkeszteni ezt a projektet. Biztosan folytatni kívánja?"
   text_plugin_assets_writable: "Plugin eszközök könyvtára írható"
@@ -2802,7 +2802,7 @@ hu:
   warning: Figyelem
   warning_attachments_not_saved: "%{count} fájl nem menthető."
   warning_imminent_user_limit: >
-    Több olyan felhasználót hívott meg, akiket a jelenlegi beállítás támogat. A meghívott felhasználók nem tudnak csatlakozni az OpenProject környezetéhez. Kérjük, <a href="%{upgrade_url}"> frissítse a beállítást </a>, vagy blokkolja a meglévő felhasználókat, hogy engedélyezhesse a meghívott és regisztrált felhasználók csatlakozását.
+    Több olyan felhasználót hívott meg, akiket a jelenlegi beállítás támogat. A meghívott felhasználók nem tudnak csatlakozni az ProyeksiApp környezetéhez. Kérjük, <a href="%{upgrade_url}"> frissítse a beállítást </a>, vagy blokkolja a meglévő felhasználókat, hogy engedélyezhesse a meghívott és regisztrált felhasználók csatlakozását.
   warning_registration_token_expired: |
     Az aktiváló e-mail lejárt. Új levelet küldtünk Önnek %{email} részére.
     Kérjük, kattintson a belsejében lévő linkre a fiók aktiválásához.
@@ -2937,11 +2937,11 @@ hu:
         confidential: "Ellenőrizze, hogy az alkalmazást olyan helyen használják-e, ahol az ügyféltitkot bizalmasan lehet kezelni. A natív mobilalkalmazások és az egyoldalas alkalmazások feltételezhetően nem bizalmasak."
         scopes: "Ellenőrizze azokat a hatóköröket, amelyekhez az alkalmazás hozzáférést biztosít. Ha nem ellenőrzi a hatókört, akkor az api_v3 feltételezzük."
         client_credential_user_id: "Választható felhasználói azonosító, amelyet az ügyfelek az alkalmazás használatakor megszemélyesíthetnek. Üresen hagyva csak nyilvános hozzáférést engedélyez\n"
-        register_intro: "Ha OAuth API kliensalkalmazást fejleszt az OpenProject számára, akkor ezen az űrlapon regisztrálhatja azt, hogy minden felhasználó használhassa."
+        register_intro: "Ha OAuth API kliensalkalmazást fejleszt az ProyeksiApp számára, akkor ezen az űrlapon regisztrálhatja azt, hogy minden felhasználó használhassa."
         default_scopes: ""
     client_id: "Ügyfél azonosító"
     client_secret_notice: >
-      Ez az egyetlen alkalom, amikor kinyomtathatjuk az ügyfél titkát, jegyezze fel és tartsa biztonságban. Jelszóként kell kezelni, és az OpenProject később nem tudja lekérni.
+      Ez az egyetlen alkalom, amikor kinyomtathatjuk az ügyfél titkát, jegyezze fel és tartsa biztonságban. Jelszóként kell kezelni, és az ProyeksiApp később nem tudja lekérni.
 
     authorization_dialog:
       authorize: "Engedélyez"
@@ -2949,10 +2949,10 @@ hu:
       prompt_html: "Engedélyezze <strong>%{application_name}</strong> hogy használhassa a felhasználó<em>%{login}</em>"
       title: "Engedélyezze %{application_name}"
       wants_to_access_html: >
-        Ez az alkalmazás hozzáférést kér az Ön OpenProject-fiókjához. <br/> <strong>A következő jogosultságokat kérte:</strong>
+        Ez az alkalmazás hozzáférést kér az Ön ProyeksiApp-fiókjához. <br/> <strong>A következő jogosultságokat kérte:</strong>
     scopes:
       api_v3: "Teljes API v3 hozzáférés"
-      api_v3_text: "Az alkalmazás teljes olvasási és írási hozzáférést kap az OpenProject API v3 verzióhoz az Ön nevében végzett műveletek elvégzéséhez."
+      api_v3_text: "Az alkalmazás teljes olvasási és írási hozzáférést kap az ProyeksiApp API v3 verzióhoz az Ön nevében végzett műveletek elvégzéséhez."
     grants:
       created_date: "Elfogadva "
       scopes: "Jogosultságok"
@@ -2968,7 +2968,7 @@ hu:
     client_credentials_impersonation_set_to: "Az ügyfél hitelesítő adathoz felhasználó beállítása\n"
     client_credentials_impersonation_warning: "Megjegyzés: Az ebben az alkalmazásban az „Ügyféladatok” folyamatot használó ügyfelek jogosultak lesznek erre a felhasználóra\n"
     client_credentials_impersonation_html: >
-      Alapértelmezés szerint az OpenProject az OAuth 2.0 engedélyezést a %{authorization_code_flow_link} segítségével biztosítja. Opcionálisan engedélyezheti a %{client_credentials_flow_link} opciót, de meg kell adnia egy felhasználót, akinek a nevében a kérések végrehajtásra kerülnek.
+      Alapértelmezés szerint az ProyeksiApp az OAuth 2.0 engedélyezést a %{authorization_code_flow_link} segítségével biztosítja. Opcionálisan engedélyezheti a %{client_credentials_flow_link} opciót, de meg kell adnia egy felhasználót, akinek a nevében a kérések végrehajtásra kerülnek.
     authorization_error: "Engedélyezési hiba történt."
     revoke_my_application_confirmation: "Tényleg el akarja távolítani ezt az alkalmazást? Ez visszavonja az aktív %{token_count} értéket.\n"
     my_registered_applications: "Regisztrált OAuth alkalmazások"

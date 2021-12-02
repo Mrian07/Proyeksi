@@ -15,4 +15,4 @@ hu:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        A reCAPTCHA egy ingyenes Google által nyújtott szolgáltatás, amely engedélyezhető az OpenProject példányához. Ha engedélyezve van, a captcha-űrlapot bejelentkezéskor jelenítik meg azoknak a felhasználóknak, akik még nem hitelesítették a captcha-t. <br/> Kérjük, olvassa el a következő linket, ahol további részleteket talál az reCAPTCHA-ról és azok verzióiról, valamint a webhely és a titkos kulcsok létrehozásáról: %{recaptcha_link}
+        A reCAPTCHA egy ingyenes Google által nyújtott szolgáltatás, amely engedélyezhető az ProyeksiApp példányához. Ha engedélyezve van, a captcha-űrlapot bejelentkezéskor jelenítik meg azoknak a felhasználóknak, akik még nem hitelesítették a captcha-t. <br/> Kérjük, olvassa el a következő linket, ahol további részleteket talál az reCAPTCHA-ról és azok verzióiról, valamint a webhely és a titkos kulcsok létrehozásáról: %{recaptcha_link}

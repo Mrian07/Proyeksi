@@ -16,7 +16,7 @@ module Attachments
     end
 
     def in_container_mutex(container)
-      OpenProject::Mutex.with_advisory_lock_transaction(container) do
+      ProyeksiApp::Mutex.with_advisory_lock_transaction(container) do
         yield.tap do
           # Get the latest attachments to ensure having them all for journalization.
           # We just created an attachment and a different worker might have added attachments
@@ -32,8 +32,8 @@ module Attachments
 
       touch(container) unless container.nil?
 
-      OpenProject::Notifications.send(
-        OpenProject::Events::ATTACHMENT_CREATED,
+      ProyeksiApp::Notifications.send(
+        ProyeksiApp::Events::ATTACHMENT_CREATED,
         attachment: attachment
       )
 
@@ -57,7 +57,7 @@ module Attachments
     def log_attachment_saving_error(error)
       message = "Failed to save attachment: #{error&.class} - #{error&.message || 'Unknown error'}"
 
-      OpenProject.logger.error message
+      ProyeksiApp.logger.error message
     end
   end
 end

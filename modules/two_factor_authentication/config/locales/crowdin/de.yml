@@ -120,14 +120,14 @@ de:
         text_cannot_scan: |
           Wenn Sie den QR-Code nicht einscannen können, können Sie das Gerät auch händisch über die folgende URI registrieren:
         description: |
-          Registrieren Sie einen App-basierten Authenticator für die Zwei-Faktor-Authentifizierung in OpenProject mittels des zeitbasierten Einmalpasswort Standard (TOTP).
+          Registrieren Sie einen App-basierten Authenticator für die Zwei-Faktor-Authentifizierung in ProyeksiApp mittels des zeitbasierten Einmalpasswort Standard (TOTP).
           Kompatible Anwendungen sind unter anderem Google Authenticator oder Authy.
       sms:
         title: 'Verwenden Sie Ihr Mobiltelefon'
         redacted_identifier: 'Mobiltelefon (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, es wurde ein Einmalpasswort über %{delivery_channel} zugestellt'
         description: |
-          Registrieren Sie Ihr Mobiltelefon für die Zwei-Faktor-Authentifizierung in OpenProject. Einmalpasswörter werden an Ihre Handy-Nummer versendet.
+          Registrieren Sie Ihr Mobiltelefon für die Zwei-Faktor-Authentifizierung in ProyeksiApp. Einmalpasswörter werden an Ihre Handy-Nummer versendet.
     sns:
       delivery_failed: 'Zustellung über Amazon SNS fehlgeschlagen:'
     message_bird:

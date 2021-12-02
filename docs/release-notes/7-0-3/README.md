@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.0.3
+  title: ProyeksiApp 7.0.3
   sidebar_navigation:
       title: 7.0.3
   release_version: 7.0.3
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 7.0.3
+# ProyeksiApp 7.0.3
 
 The release contains an important security fix regarding session expiry
 and several bug fixes.

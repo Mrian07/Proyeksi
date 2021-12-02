@@ -2,7 +2,7 @@
 
 
 
-require 'open_project/repository_authentication'
+require 'proyeksi_app/repository_authentication'
 
 class SysController < ActionController::Base
   before_action :check_enabled
@@ -128,8 +128,8 @@ class SysController < ActionController::Base
     end
 
     user = nil
-    user_id = Rails.cache.fetch(OpenProject::RepositoryAuthentication::CACHE_PREFIX + Digest::SHA1.hexdigest("#{username}#{password}"),
-                                expires_in: OpenProject::RepositoryAuthentication::CACHE_EXPIRES_AFTER) do
+    user_id = Rails.cache.fetch(ProyeksiApp::RepositoryAuthentication::CACHE_PREFIX + Digest::SHA1.hexdigest("#{username}#{password}"),
+                                expires_in: ProyeksiApp::RepositoryAuthentication::CACHE_EXPIRES_AFTER) do
       user = user_login(username, password)
       user ? user.id.to_s : '-1'
     end

@@ -15,7 +15,7 @@ class WikiPage < ApplicationRecord
               scope: :wiki_id, # Unique slugs per WIKI
               sync_url: true, # Keep slug updated on #rename
               locale: :en,
-              adapter: OpenProject::ActsAsUrl::Adapter::OpActiveRecord # use a custom adapter able to handle edge cases
+              adapter: ProyeksiApp::ActsAsUrl::Adapter::OpActiveRecord # use a custom adapter able to handle edge cases
 
   acts_as_watchable
   acts_as_event title: Proc.new { |o| "#{Wiki.model_name.human}: #{o.title}" },

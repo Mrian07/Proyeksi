@@ -12,15 +12,15 @@ describe Members::UpdateService, type: :model do
     end
 
     let!(:allow_notification_call) do
-      allow(OpenProject::Notifications)
+      allow(ProyeksiApp::Notifications)
         .to receive(:send)
     end
 
     describe 'if successful' do
       it 'sends a notification' do
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .to receive(:send)
-          .with(OpenProject::Events::MEMBER_UPDATED,
+          .with(ProyeksiApp::Events::MEMBER_UPDATED,
                 member: model_instance,
                 message: call_attributes[:notification_message])
 
@@ -32,7 +32,7 @@ describe Members::UpdateService, type: :model do
       let(:set_attributes_success) { false }
 
       it 'sends no notification' do
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .not_to receive(:send)
 
         subject
@@ -43,7 +43,7 @@ describe Members::UpdateService, type: :model do
       let(:model_save_result) { false }
 
       it 'sends no notification' do
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .not_to receive(:send)
 
         subject

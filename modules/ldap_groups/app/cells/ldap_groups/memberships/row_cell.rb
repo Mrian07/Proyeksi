@@ -1,7 +1,7 @@
 module LdapGroups
   module Memberships
     class RowCell < ::RowCell
-      include ::OpenProject::ObjectLinking
+      include ::ProyeksiApp::ObjectLinking
 
       def membership
         model

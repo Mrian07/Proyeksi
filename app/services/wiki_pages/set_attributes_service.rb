@@ -30,7 +30,7 @@ class WikiPages::SetAttributesService < ::BaseServices::SetAttributes
 
   def set_default_attributes(_params)
     model.build_content page: model
-    model.content.extend(OpenProject::ChangedBySystem)
+    model.content.extend(ProyeksiApp::ChangedBySystem)
 
     model.content.change_by_system do
       model.content.author = user

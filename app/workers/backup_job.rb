@@ -63,11 +63,11 @@ class BackupJob < ::ApplicationJob
   end
 
   def db_dump_file_name
-    @db_dump_file_name ||= tmp_file_name "openproject", ".sql"
+    @db_dump_file_name ||= tmp_file_name "proyeksiapp", ".sql"
   end
 
   def archive_file_name
-    @archive_file_name ||= tmp_file_name "openproject-backup", ".zip"
+    @archive_file_name ||= tmp_file_name "proyeksiapp-backup", ".zip"
   end
 
   def status_reference
@@ -96,7 +96,7 @@ class BackupJob < ::ApplicationJob
     File.open(file_name) do |file|
       call = Attachments::CreateService
         .bypass_whitelist(user: user)
-        .call(container: backup, filename: file_name, file: file, description: 'OpenProject backup')
+        .call(container: backup, filename: file_name, file: file, description: 'ProyeksiApp backup')
 
       call.on_success do
         download_url = ::API::V3::Utilities::PathHelper::ApiV3Path.attachment_content(call.result.id)
@@ -127,7 +127,7 @@ class BackupJob < ::ApplicationJob
         zipfile.add "attachment/file/#{attachment.id}/#{attachment[:file]}", path
       end
 
-      zipfile.get_output_stream("openproject.sql") { |f| f.write File.read(db_dump_file_name) }
+      zipfile.get_output_stream("proyeksiapp.sql") { |f| f.write File.read(db_dump_file_name) }
     end
 
     @archived = true

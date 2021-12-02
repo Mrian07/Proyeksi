@@ -28,7 +28,7 @@ describe 'layouts/admin', type: :view do
   describe 'LDAP authentication menu entry' do
     context 'with password login enabled' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
         render
       end
 
@@ -39,7 +39,7 @@ describe 'layouts/admin', type: :view do
 
     context 'with password login disabled' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
         render
       end
 

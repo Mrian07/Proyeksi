@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.6
+  title: ProyeksiApp 4.0.6
   sidebar_navigation:
       title: 4.0.6
   release_version: 4.0.6
@@ -7,15 +7,15 @@
 ---
 
 
-# OpenProject 4.0.6 released
+# ProyeksiApp 4.0.6 released
 
-OpenProject 4.0.6 has been released which contains a bug fix for font
+ProyeksiApp 4.0.6 has been released which contains a bug fix for font
 problems on Windows 7.
 
 Several users reported problems when displaying fonts in Windows 7.  
 In some cases letters or entire words were not displayed.
 
-With OpenProject 4.0.6, a fix has been introduced which addresses this
+With ProyeksiApp 4.0.6, a fix has been introduced which addresses this
 problem
 ([\#8753](https://community.openproject.org/work_packages/8753 "#8753")).
 

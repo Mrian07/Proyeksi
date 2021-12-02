@@ -81,37 +81,37 @@ ro:
       name: Numele arbitrar al conexiunii LDAP
       host: Numele gazdei LDAP sau adresa IP
       login_map: Cheia atributului în LDAP care este utilizată pentru a identifica autentificarea unică a utilizatorului. De obicei, aceasta va fi `uid` sau `samAccountName`.
-      generic_map: Cheia atributului din LDAP care este mapată pe atributul OpenProject `%{attribute}`
-      admin_map_html: "Opțional: Cheia atributului în LDAP care, <strong>dacă este prezentă</strong>, marchează utilizatorul OpenProject ca fiind administrator. Lăsați gol dacă aveți îndoieli."
+      generic_map: Cheia atributului din LDAP care este mapată pe atributul ProyeksiApp `%{attribute}`
+      admin_map_html: "Opțional: Cheia atributului în LDAP care, <strong>dacă este prezentă</strong>, marchează utilizatorul ProyeksiApp ca fiind administrator. Lăsați gol dacă aveți îndoieli."
       system_user_dn_html: |
         Introduceți DN-ul utilizatorului de sistem utilizat pentru accesul numai pentru citire.
         <br/>
         Exemplu: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Introduceți parola de legătură a utilizatorului de sistem
       base_dn: |
-        Introduceți DN-ul de bază al subarborelui din LDAP în care doriți ca OpenProject să caute utilizatori și grupuri.
-        OpenProject va filtra numai pentru numele de utilizator furnizate în acest subarbore.
+        Introduceți DN-ul de bază al subarborelui din LDAP în care doriți ca ProyeksiApp să caute utilizatori și grupuri.
+        ProyeksiApp va filtra numai pentru numele de utilizator furnizate în acest subarbore.
         Exemplu: ou=users,dc=example,dc=com
       filter_string: |
         Adăugați un filtru RFC4515 opțional care să se aplice rezultatelor returnate pentru utilizatorii filtrați în LDAP.
-        Acesta poate fi utilizat pentru a restricționa setul de utilizatori care sunt găsiți de OpenProject pentru autentificare și sincronizare de grup.
+        Acesta poate fi utilizat pentru a restricționa setul de utilizatori care sunt găsiți de ProyeksiApp pentru autentificare și sincronizare de grup.
       filter_string_concat: |
-        OpenProject va filtra întotdeauna pentru atributul de autentificare furnizat de utilizator pentru a identifica înregistrarea. Dacă furnizați un filtru aici,
+        ProyeksiApp va filtra întotdeauna pentru atributul de autentificare furnizat de utilizator pentru a identifica înregistrarea. Dacă furnizați un filtru aici,
         acesta va fi concatenat cu un AND. În mod implicit, ca filtru se va utiliza un "catch-all" (objectClass=*).
       onthefly_register: |
-        Dacă bifați această casetă, OpenProject va crea automat noi utilizatori din intrările LDAP ale acestora
-        atunci când aceștia se autentifică pentru prima dată cu OpenProject.
-        Lăsați această casetă debifată pentru a permite doar conturilor existente în OpenProject să se autentifice prin LDAP!
+        Dacă bifați această casetă, ProyeksiApp va crea automat noi utilizatori din intrările LDAP ale acestora
+        atunci când aceștia se autentifică pentru prima dată cu ProyeksiApp.
+        Lăsați această casetă debifată pentru a permite doar conturilor existente în ProyeksiApp să se autentifice prin LDAP!
     connection_encryption: 'Criptarea conexiunii'
     system_account: 'Contul de sistem'
     system_account_legend: |
-      OpenProject necesită acces doar pentru citire printr-un cont de sistem pentru a căuta utilizatori și grupuri în arborele LDAP.
+      ProyeksiApp necesită acces doar pentru citire printr-un cont de sistem pentru a căuta utilizatori și grupuri în arborele LDAP.
       Vă rugăm să specificați acreditările de conectare pentru acest utilizator de sistem în secțiunea următoare.
     ldap_details: 'Detalii LDAP'
     user_settings: 'Lista Mapare Atribute'
     user_settings_legend: |
-      Următoarele câmpuri sunt legate de modul în care sunt creați utilizatorii în OpenProject din intrările LDAP și
-      ce atribute LDAP sunt utilizate pentru a defini atributele unui utilizator OpenProject (cartografiere de atribute).
+      Următoarele câmpuri sunt legate de modul în care sunt creați utilizatorii în ProyeksiApp din intrările LDAP și
+      ce atribute LDAP sunt utilizate pentru a defini atributele unui utilizator ProyeksiApp (cartografiere de atribute).
     tls_mode:
       plain: 'niciunul'
       simple_tls: 'simple_tls'
@@ -523,7 +523,7 @@ ro:
         confirmation: "nu se potrivește cu %{attribute}."
         could_not_be_copied: "%{dependency} nu a putut fi copiat (integral)."
         does_not_exist: "nu există."
-        error_enterprise_only: "este disponibil doar în OpenProject Enterprise Edition"
+        error_enterprise_only: "este disponibil doar în ProyeksiApp Enterprise Edition"
         error_unauthorized: "nu pot fi accesate."
         error_readonly: "a fost încercat să fie scris, dar nu este inscriptibil."
         email: "is not a valid email address."
@@ -874,7 +874,7 @@ ro:
       heading_reset: "Resetează token backup"
       heading_create: "Creează token backup"
       implications: >
-        Activarea backup-urilor va permite oricărui utilizator cu permisiunile necesare și acestui token de backup să descarce o copie de rezervă care conține toate datele acestei instalări OpenProject. Acestea includ datele tuturor celorlalți utilizatori.
+        Activarea backup-urilor va permite oricărui utilizator cu permisiunile necesare și acestui token de backup să descarce o copie de rezervă care conține toate datele acestei instalări ProyeksiApp. Acestea includ datele tuturor celorlalți utilizatori.
       info: >
         Va trebui să generezi un token de backup pentru a putea crea o copie de rezervă. De fiecare dată când doriţi să solicitaţi o copie de rezervă va trebui să furnizaţi acest token. Puteți șterge token-ul de backup pentru a dezactiva copiile de rezervă ale acestui utilizator.
       verification: >
@@ -1206,7 +1206,7 @@ ro:
   error_can_not_unarchive_project: "Acest proiect nu poate fi dezarhivat: %{errors}"
   error_check_user_and_role: "Alegeți un utilizator și un rol."
   error_code: "Eroare %{code}"
-  error_cookie_missing: 'Cookie-ul OpenProject lipseşte. Vă rugăm să verificați setările referitoare la cookies, această aplicație nu va funcţiona corespunzător fără acestea.'
+  error_cookie_missing: 'Cookie-ul ProyeksiApp lipseşte. Vă rugăm să verificați setările referitoare la cookies, această aplicație nu va funcţiona corespunzător fără acestea.'
   error_custom_option_not_found: "Opțiunea nu există."
   error_enterprise_activation_user_limit: "Contul dvs. nu a putut fi activat (limita utilizatorilor a fost atinsă). Contactați administratorul dvs. pentru a avea acces."
   error_enterprise_token_invalid_domain: "Ediția Enterprise Edition nu este activă. Domeniul (%{actual}) al token-ului Enterprise nu se potrivește cu numele de gazdă al sistemului (%{expected})."
@@ -1220,7 +1220,7 @@ ro:
   error_work_package_done_ratios_not_updated: "Rația pachetului de lucru nu a fost actualizată."
   error_work_package_not_found_in_project: "Pachetul de lucru nu a fost găsit sau nu aparține acestui proiect"
   error_must_be_project_member: "trebuie să fie membru al proiectului"
-  error_migrations_are_pending: "Instalarea OpenProject are migrări de baze de date în așteptare. Probabil că nu ați reușit să executați migrările la ultima actualizare. Vă rugăm să consultați ghidul de actualizare pentru a vă actualiza corect instalarea."
+  error_migrations_are_pending: "Instalarea ProyeksiApp are migrări de baze de date în așteptare. Probabil că nu ați reușit să executați migrările la ultima actualizare. Vă rugăm să consultați ghidul de actualizare pentru a vă actualiza corect instalarea."
   error_migrations_visit_upgrade_guides: "Vă rugăm să vizitați documentația ghidului nostru de actualizare"
   error_no_default_work_package_status: "Nu există un status implicit al pachetelor de lucru. Verificați configurația (\"Administrare -> Stări pachete de lucru\")."
   error_no_type_in_project: "Nu există un tip asociat cu proiectul. Verificați setările proiectului."
@@ -1294,7 +1294,7 @@ ro:
       no_visible_projects: "Cele mai noi proiecte vizibile."
       users: "Cei mai noi utilizatori înregistrați."
     blocks:
-      community: "Comunitatea OpenProject"
+      community: "Comunitatea ProyeksiApp"
       upsale:
         title: "Achiziționați versiunea Enterprise"
         more_info: "Mai multe informatii"
@@ -1305,7 +1305,7 @@ ro:
       faq: "Întrebări Frecvente"
       glossary: "Glosar"
       shortcuts: "Scurtături"
-      blog: "Blog-ul OpenProject"
+      blog: "Blog-ul ProyeksiApp"
       forums: "Forum comunitate"
       newsletter: "Alerte de securitate / Buletin informativ"
   image_conversion:
@@ -1346,9 +1346,9 @@ ro:
         watched: "Urmăriți %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1357,7 +1357,7 @@ ro:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Noutăţi'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1670,7 +1670,7 @@ ro:
   label_open_menu: "Deschidere meniu"
   label_open_work_packages: "deschise"
   label_open_work_packages_plural: "deschise"
-  label_openproject_website: "Site-ul OpenProject"
+  label_openproject_website: "Site-ul ProyeksiApp"
   label_optional_description: "Descriere"
   label_options: "Opțiuni"
   label_other: "Altele"
@@ -1971,17 +1971,17 @@ ro:
   mail_body_backup_token_reset_user_info: Token-ul backup a fost resetat.
   mail_body_backup_token_info: Token-ul anterior nu mai este valid.
   mail_body_backup_waiting_period: Noul token va fi activat în %{hours} ore.
-  mail_body_backup_token_warning: Dacă nu ați fost dvs., conectați-vă la OpenProject imediat și resetați-l din nou.
+  mail_body_backup_token_warning: Dacă nu ați fost dvs., conectați-vă la ProyeksiApp imediat și resetați-l din nou.
   mail_body_lost_password: "Pentru a vă modifica parola, dați click pe următorul link:"
-  mail_body_register: "Bine ați venit la OpenProject. Vă rugăm să vă activați contul făcând clic pe acest link:"
+  mail_body_register: "Bine ați venit la ProyeksiApp. Vă rugăm să vă activați contul făcând clic pe acest link:"
   mail_body_register_header_title: "E-mail de invitație pentru membrii proiectului"
   mail_body_register_user: "Dragă %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Echipa dumneavoastră OpenProject"
+  mail_body_register_closing: "Echipa dumneavoastră ProyeksiApp"
   mail_body_register_ending: "Rămâneți conectați! Vă salutăm cu drag,"
   mail_body_reminder: "%{count} pachete de lucru care vă sunt atribuite au scadență în următoarele %{days} zile:"
   mail_body_group_reminder: "%{count} pachetul (pachetele) de lucru care sunt atribuite grupului \"%{group}\" trebuie depuse în următoarele %{days} zile:"
@@ -2026,7 +2026,7 @@ ro:
       a: "Actualizați planul de plată ([here](upgrade_url))" #here turned into a link
       b: "Blocați sau ștergeți un utilizator existent ([aici](users_url))" #here turned into a link
   more_actions: "Mai multe acțiuni"
-  noscript_description: "Trebuie să activaţi JavaScript pentru a utiliza OpenProject!"
+  noscript_description: "Trebuie să activaţi JavaScript pentru a utiliza ProyeksiApp!"
   noscript_heading: "JavaScript dezactivat"
   noscript_learn_more: "Aflați mai multe"
   notice_accessibility_mode: Modul accesibilitate poate fi activat în contul tău [settings](url).
@@ -2090,7 +2090,7 @@ ro:
   notice_wont_delete_auth_source: Modul de autentificare nu poate fi șters atâta timp cât există utilizatori care încă îl folosesc.
   notice_project_cannot_update_custom_fields: "Nu puteți actualiza câmpurile particularizate disponibile ale proiectului. Proiectul este invalid: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Această pagină a fost generată automat în timpul actualizării OpenProject. Aceasta conține toate atașamentele asociate anterior cu %{container_type} "%{container_name}".
+    Această pagină a fost generată automat în timpul actualizării ProyeksiApp. Aceasta conține toate atașamentele asociate anterior cu %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2114,9 +2114,9 @@ ro:
           tb: "TB"
   onboarding:
     heading_getting_started: "Obțineți o prezentare generală"
-    text_getting_started_description: "Obțineți o viziune de ansamblu asupra administrării unui proiect și a activității echipelor folosind OpenProject."
+    text_getting_started_description: "Obțineți o viziune de ansamblu asupra administrării unui proiect și a activității echipelor folosind ProyeksiApp."
     text_show_again: "Poate reporni acest videoclip din meniul de ajutor"
-    welcome: "Bine ați venit la OpenProject"
+    welcome: "Bine ați venit la ProyeksiApp"
     select_language: "Vă rugăm să selectați limba dvs"
   permission_add_work_package_notes: "Adăugare note"
   permission_add_work_packages: "Adăugare pachete de lucru"
@@ -2175,7 +2175,7 @@ ro:
   permission_select_project_modules: "Selectare module proiect"
   permission_manage_types: "Selectare tipuri"
   permission_view_calendar: "Vizualizare calendar"
-  permission_view_changesets: "Vizualizare revizii repo în OpenProject"
+  permission_view_changesets: "Vizualizare revizii repo în ProyeksiApp"
   permission_view_commit_author_statistics: "Vizualizare statistici autor înregistrări"
   permission_view_work_package_watchers: "Vizualizare listă observatori"
   permission_view_work_packages: "Vizualizare pachete de lucru"
@@ -2257,7 +2257,7 @@ ro:
     destroy:
       confirmation: "Prin continuarea operațiunii veți șterge permanent repo-ul gestionat."
       info: "Ștergerea repo-ului este o acțiune ireversibilă."
-      info_not_managed: "Atenție: Această acțiune NU va șterge conținutul repo-ului, deoarece acesta nu este gestionat de OpenProject."
+      info_not_managed: "Atenție: Această acțiune NU va șterge conținutul repo-ului, deoarece acesta nu este gestionat de ProyeksiApp."
       managed_path_note: "Urmatorul director va fi şters: %{path}"
       repository_verification: "Introduceţi identificatorul proiectului %{identifier} pentru a verifica ștergerea sa din repo."
       subtitle: "Sunteți sigur că doriţi să ştergeţi %{repository_type} din proiectul %{project_name}?"
@@ -2271,8 +2271,8 @@ ro:
       empty_repository: "Repo-ul există, dar este gol. Nu conține nicio revizie deocamdată."
       exists_on_filesystem: "Directorul repo-ului există deja în sistemul de fișiere."
       filesystem_access_failed: "A apărut o eroare la accesarea repo-ului în sistemul de fişiere: %{message}"
-      not_manageable: "Acest furnizor de repo nu poate fi gestionat de OpenProject."
-      path_permission_failed: "A apărut o eroare la încercarea de a crea calea următoare: %{path}. Asiguraţi-vă că OpenProject are drepturi de scriere în acel folder."
+      not_manageable: "Acest furnizor de repo nu poate fi gestionat de ProyeksiApp."
+      path_permission_failed: "A apărut o eroare la încercarea de a crea calea următoare: %{path}. Asiguraţi-vă că ProyeksiApp are drepturi de scriere în acel folder."
       unauthorized: "Nu sunteți autorizat să accesați repo-ul sau credențialele nu sunt valide."
       unavailable: "Repo-ul este indisponibil."
       exception_title: "Repo-ul nu este accesibil: %{message}"
@@ -2289,9 +2289,9 @@ ro:
         path_encoding: "Suprascriere codificare text Git (implicit: UTF-8)"
       local_title: "Legare la repo Git local existent"
       local_url: "URL local"
-      local_introduction: "Dacă aveţi deja un repo de Git local, puteți să-l conectați cu OpenProject pentru a-l accesa din aplicație."
-      managed_introduction: "Permiteți aplicației OpenProject să creeze şi să integreze un repo Git local automat."
-      managed_title: "Repo Git integrat cu OpenProject"
+      local_introduction: "Dacă aveţi deja un repo de Git local, puteți să-l conectați cu ProyeksiApp pentru a-l accesa din aplicație."
+      managed_introduction: "Permiteți aplicației ProyeksiApp să creeze şi să integreze un repo Git local automat."
+      managed_title: "Repo Git integrat cu ProyeksiApp"
       managed_url: "URL gestionat"
       path: "Calea către repo-ul Git"
       path_encoding: "Codificare cale"
@@ -2308,19 +2308,19 @@ ro:
     scm_types:
       local: "Link la repo local"
       existing: "Link la repo existent"
-      managed: "Creare repo nou în OpenProject"
+      managed: "Creare repo nou în ProyeksiApp"
     storage:
       not_available: "Consumul de spațiu de stocare nu este disponibil pentru acest repo."
       update_timeout: "Păstraţi informaţia referitoare la spaţiul de stocare necesar pentru un repo timp de N minute. \nDeoarece măsurarea spațiului necesar pentru un repo poate fi costisitoare, creșteți această valoare pentru a reduce impactul în performanță."
     subversion:
       existing_title: "Repo Subversion existent"
-      existing_introduction: "Dacă aveţi deja un repo de Subversion, puteți să-l conectați cu OpenProject pentru a-l accesa din aplicație."
+      existing_introduction: "Dacă aveţi deja un repo de Subversion, puteți să-l conectați cu ProyeksiApp pentru a-l accesa din aplicație."
       existing_url: "URL existent"
       instructions:
         managed_url: "Aceasta este adresa URL a repo-ului Subversion gestionat (local)."
         url: "Introduceţi adresa URL a repo-ului. Aceasta poate să adreseze fie un repo local (începe cu %{local_proto}), fie un repo la distanță.\nUrmătoarele modele de adrese URL sunt acceptate:"
-      managed_title: "Repo Subversion integrat cu OpenProject"
-      managed_introduction: "Permiteți aplicației OpenProject să creeze şi să integreze un repo Subversion local automat."
+      managed_title: "Repo Subversion integrat cu ProyeksiApp"
+      managed_introduction: "Permiteți aplicației ProyeksiApp să creeze şi să integreze un repo Subversion local automat."
       managed_url: "URL gestionat"
       password: "Parola repo"
       username: "Utilizatorul repo"
@@ -2337,7 +2337,7 @@ ro:
   setting_apiv3_cors_enabled: "Activați CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) origini permise"
   setting_apiv3_cors_origins_text_html: >
-    Dacă CORS este activat, acestea sunt originile cărora li se permite accesul la OpenProject API. <br/> Vă rugăm să consultați <a href="%{origin_link}" target="_blank">documentația privind antetul Origin</a> pentru a specifica valorile așteptate.
+    Dacă CORS este activat, acestea sunt originile cărora li se permite accesul la ProyeksiApp API. <br/> Vă rugăm să consultați <a href="%{origin_link}" target="_blank">documentația privind antetul Origin</a> pentru a specifica valorile așteptate.
   setting_apiv3_docs: "Documentație"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2497,7 +2497,7 @@ ro:
       sentence_connector: "și"
       skip_last_comma: "fals"
   text_accessibility_hint: "Modul de accesibilitate este conceput pentru utilizatorii nevăzători, cu handicap motor sau cu vedere slabă. Pentru aceștia din urmă, elementele focalizate sunt evidențiate în mod special. Vă rugăm să rețineți că modulul Backlogs nu este disponibil în acest mod."
-  text_access_token_hint: "Tichetele de acces permit aplicaţiilor externe accesul la resurse din OpenProject."
+  text_access_token_hint: "Tichetele de acces permit aplicaţiilor externe accesul la resurse din ProyeksiApp."
   text_analyze: "Continuare analiză: %{subject}"
   text_are_you_sure: "Sunteți sigur?"
   text_are_you_sure_with_children: "Doriți ștergerea pachetului de lucru și a tuturor pachetelor fii?"
@@ -2566,7 +2566,7 @@ ro:
   text_no_notes: "Nu sunt comentarii disponibile pentru acest pachet de lucru."
   text_notice_too_many_values_are_inperformant: "Atenție: Afişarea unui număr mai mare de 100 de articole pe pagină poate creşte durata de încărcare."
   text_notice_security_badge_displayed_html: >
-    Notă: dacă este activată, aceasta va afișa o insignă cu starea instalării în fereastra <a href="%{information_panel_path}">%{information_panel_label}</a> panoul de administrare și pe pagina principală. Aceasta este afișată numai pentru administratori. <br/> Insigna va verifica versiunea curentă a OpenProject în raport cu baza de date oficială a versiunilor OpenProject pentru a vă alerta cu privire la orice actualizări sau vulnerabilități cunoscute. Pentru mai multe informații despre ce oferă verificarea, ce date sunt necesare pentru a furniza actualizările disponibile și cum să dezactivați această verificare, vă rugăm să vizitați <a href="%{more_info_url}">documentația de configurare</a>.
+    Notă: dacă este activată, aceasta va afișa o insignă cu starea instalării în fereastra <a href="%{information_panel_path}">%{information_panel_label}</a> panoul de administrare și pe pagina principală. Aceasta este afișată numai pentru administratori. <br/> Insigna va verifica versiunea curentă a ProyeksiApp în raport cu baza de date oficială a versiunilor ProyeksiApp pentru a vă alerta cu privire la orice actualizări sau vulnerabilități cunoscute. Pentru mai multe informații despre ce oferă verificarea, ce date sunt necesare pentru a furniza actualizările disponibile și cum să dezactivați această verificare, vă rugăm să vizitați <a href="%{more_info_url}">documentația de configurare</a>.
   text_own_membership_delete_confirmation: "Sunteţi cale de a elimina unele sau toate permisiunile şi e posibil să nu mai puteți edita acest proiect după aceea. \nSunteţi sigur că doriţi să continuaţi?"
   text_plugin_assets_writable: "Se poate scrie în directorul de resurse pentru module"
   text_powered_by: "Propulsat de %{link}"
@@ -2574,7 +2574,7 @@ ro:
   text_reassign: "Reatribuire la pachetul de lucru:"
   text_regexp_info: "ex. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Formula regex este aplicată într-un mod multilinie - de exemplu: ^---\s+'
-  text_repository_usernames_mapping: "Selectați sau modificați contul OpenProject mapat la fiecare cont din istoricul repo-ului.\nUtilizatorii cu cont sau e-mail identic în OpenProject și repo sunt echivalați automat."
+  text_repository_usernames_mapping: "Selectați sau modificați contul ProyeksiApp mapat la fiecare cont din istoricul repo-ului.\nUtilizatorii cu cont sau e-mail identic în ProyeksiApp și repo sunt echivalați automat."
   text_status_changed_by_changeset: "Aplicat prin editarea %{value}."
   text_table_difference_description: "În acest tabel este prezentat un singur %{entries}. Puteți vizualiza diferența dintre oricare două intrări selectând mai întâi casetele de selectare corespunzătoare din tabel. Când faceți clic pe butonul de sub tabel, se afișează diferențele."
   text_time_logged_by_changeset: "Aplicat prin editarea %{value}."
@@ -2780,7 +2780,7 @@ ro:
     activate_and_reset_failed_logins: "Activare și resetare autentificări eșuate"
     authentication_provider: "Furnizor de autentificare"
     authentication_settings_disabled_due_to_external_authentication: >
-      Acest utilizator se autentifică prin intermediul unui furnizor de autentificare extern, prin urmare nu există o parolă în OpenProject care să poată fi schimbată.
+      Acest utilizator se autentifică prin intermediul unui furnizor de autentificare extern, prin urmare nu există o parolă în ProyeksiApp care să poată fi schimbată.
     authorization_rejected: "Nu aveți drepturi de autentificare."
     assign_random_password: "Atribuiţi o parolă aleatoare (trimisă utilizatorului prin e-mail)"
     blocked: "blocat temporar"
@@ -2812,7 +2812,7 @@ ro:
   warning: Avertizare
   warning_attachments_not_saved: "Nu au putut fi salvate %{count} fișiere."
   warning_imminent_user_limit: >
-    Ați invitat mai mulți utilizatori decât suportă planul dvs. actual. Este posibil ca utilizatorii invitați să nu se poată alătura mediului dumneavoastră OpenProject. Vă rugăm să <a href="%{upgrade_url}">vă actualizați planul</a> sau să blocați utilizatorii existenți pentru a permite utilizatorilor invitați și înregistrați să se alăture.
+    Ați invitat mai mulți utilizatori decât suportă planul dvs. actual. Este posibil ca utilizatorii invitați să nu se poată alătura mediului dumneavoastră ProyeksiApp. Vă rugăm să <a href="%{upgrade_url}">vă actualizați planul</a> sau să blocați utilizatorii existenți pentru a permite utilizatorilor invitați și înregistrați să se alăture.
   warning_registration_token_expired: |
     E-mailul de activare a expirat. Ți-am trimis unul nou la %{email}.
     Vă rugăm să faceți clic pe linkul din interiorul acestuia pentru a vă activa contul.
@@ -2946,21 +2946,21 @@ ro:
         confidential: "Verificați dacă aplicația va fi utilizată în cazul în care secretul clientului poate fi păstrat confidențial. Aplicațiile mobile native și aplicațiile cu o singură pagină sunt considerate neconfidențiale."
         scopes: "Bifați domeniile la care doriți ca aplicația să acorde acces. Dacă nu se bifează niciun domeniu de aplicare, se presupune api_v3."
         client_credential_user_id: "ID-ul de utilizator opțional pe care trebuie să se substituie atunci când clienții utilizează această aplicație. Lăsați gol pentru a permite doar accesul public"
-        register_intro: "Dacă dezvoltați o aplicație client OAuth API pentru OpenProject, o puteți înregistra folosind acest formular pentru toți utilizatorii."
+        register_intro: "Dacă dezvoltați o aplicație client OAuth API pentru ProyeksiApp, o puteți înregistra folosind acest formular pentru toți utilizatorii."
         default_scopes: ""
     client_id: "ID Client"
     client_secret_notice: >
-      Acesta este singurul moment în care putem imprima secretul clientului, vă rugăm să îl notați și să îl păstrați în siguranță. Acesta trebuie tratat ca o parolă și nu poate fi recuperat ulterior de OpenProject.
+      Acesta este singurul moment în care putem imprima secretul clientului, vă rugăm să îl notați și să îl păstrați în siguranță. Acesta trebuie tratat ca o parolă și nu poate fi recuperat ulterior de ProyeksiApp.
     authorization_dialog:
       authorize: "Autorizează"
       cancel: "Anulează și refuză autorizarea."
       prompt_html: "Autorizarea <strong>%{application_name}</strong> pentru a utiliza contul dvs <em>%{login}</em>?"
       title: "Autorizează %{application_name}"
       wants_to_access_html: >
-        Această aplicație solicită acces la contul dumneavoastră OpenProject. <br/> <strong>A solicitat următoarele permisiuni</strong>:
+        Această aplicație solicită acces la contul dumneavoastră ProyeksiApp. <br/> <strong>A solicitat următoarele permisiuni</strong>:
     scopes:
       api_v3: "Acces complet la API v3"
-      api_v3_text: "Aplicația va primi acces complet de citire și scriere la OpenProject API v3 pentru a efectua acțiuni în numele dumneavoastră."
+      api_v3_text: "Aplicația va primi acces complet de citire și scriere la ProyeksiApp API v3 pentru a efectua acțiuni în numele dumneavoastră."
     grants:
       created_date: "Aprobat"
       scopes: "Drepturi"
@@ -2977,7 +2977,7 @@ ro:
     client_credentials_impersonation_set_to: "Credențiale client ID utilizator"
     client_credentials_impersonation_warning: "Notă: Clienții care utilizează fluxul \"Client credentials\" în această aplicație vor avea drepturile acestui utilizator"
     client_credentials_impersonation_html: >
-      În mod implicit, OpenProject oferă autorizare OAuth 2.0 prin %{authorization_code_flow_link}. Puteți activa opțional %{client_credentials_flow_link}, dar trebuie să furnizați un utilizator în numele căruia vor fi efectuate cererile.
+      În mod implicit, ProyeksiApp oferă autorizare OAuth 2.0 prin %{authorization_code_flow_link}. Puteți activa opțional %{client_credentials_flow_link}, dar trebuie să furnizați un utilizator în numele căruia vor fi efectuate cererile.
     authorization_error: "A apărut o eroare internă."
     revoke_my_application_confirmation: "Chiar doriți să eliminați această aplicație? Acest lucru va anula %{token_count} active pentru aceasta."
     my_registered_applications: "Aplicații OAuth înregistrate"

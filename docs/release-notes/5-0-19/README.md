@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.19
+  title: ProyeksiApp 5.0.19
   sidebar_navigation:
       title: 5.0.19
   release_version: 5.0.19
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.19
+# ProyeksiApp 5.0.19
 
-OpenProject 5.0.19 contains several bug fixes:
+ProyeksiApp 5.0.19 contains several bug fixes:
 
   - An error has been resolved which prevented the assignment of work
     packages to groups when editing a work package

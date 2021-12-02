@@ -71,7 +71,7 @@ class ExportCardConfiguration < ApplicationRecord
     end
   end
 
-  include OpenProject::PDFExport::Exceptions
+  include ProyeksiApp::PDFExport::Exceptions
 
   validates :name, presence: true
   validates :rows, rows_yaml: true

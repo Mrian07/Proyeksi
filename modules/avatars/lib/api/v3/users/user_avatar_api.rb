@@ -5,7 +5,7 @@
 module API
   module V3
     module Users
-      class UserAvatarAPI < ::API::OpenProjectAPI
+      class UserAvatarAPI < ::API::ProyeksiAppAPI
         helpers ::AvatarHelper
         helpers ::API::Helpers::AttachmentRenderer
 

@@ -15,4 +15,4 @@ tr:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA, OpenProject örneğiniz için etkinleştirilebilen Google tarafından sunulan ücretsiz bir hizmettir. Etkinleştirilirse, henüz bir captcha doğrulamayan tüm kullanıcılar için oturum açıldığında bir captcha formu oluşturulur. <br/> reCAPTCHA ve sürümleri ile web sitesinin ve gizli anahtarların nasıl oluşturulacağı hakkında daha fazla ayrıntı için lütfen aşağıdaki bağlantıya bakın: %{recaptcha_link}
+        reCAPTCHA, ProyeksiApp örneğiniz için etkinleştirilebilen Google tarafından sunulan ücretsiz bir hizmettir. Etkinleştirilirse, henüz bir captcha doğrulamayan tüm kullanıcılar için oturum açıldığında bir captcha formu oluşturulur. <br/> reCAPTCHA ve sürümleri ile web sitesinin ve gizli anahtarların nasıl oluşturulacağı hakkında daha fazla ayrıntı için lütfen aşağıdaki bağlantıya bakın: %{recaptcha_link}

@@ -16,13 +16,13 @@ class Journals::CompletedJob < ApplicationJob
     def aggregated_event(journal)
       case journal.journable_type
       when WikiContent.name
-        OpenProject::Events::AGGREGATED_WIKI_JOURNAL_READY
+        ProyeksiApp::Events::AGGREGATED_WIKI_JOURNAL_READY
       when WorkPackage.name
-        OpenProject::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY
+        ProyeksiApp::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY
       when News.name
-        OpenProject::Events::AGGREGATED_NEWS_JOURNAL_READY
+        ProyeksiApp::Events::AGGREGATED_NEWS_JOURNAL_READY
       when Message.name
-        OpenProject::Events::AGGREGATED_MESSAGE_JOURNAL_READY
+        ProyeksiApp::Events::AGGREGATED_MESSAGE_JOURNAL_READY
       end
     end
 
@@ -50,7 +50,7 @@ class Journals::CompletedJob < ApplicationJob
   private
 
   def notify_journal_complete(journal, send_mails)
-    OpenProject::Notifications.send(self.class.aggregated_event(journal),
+    ProyeksiApp::Notifications.send(self.class.aggregated_event(journal),
                                     journal: journal,
                                     send_mail: send_mails)
   end

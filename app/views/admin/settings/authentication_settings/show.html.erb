@@ -21,7 +21,7 @@
       </div>
     </fieldset>
 
-    <% if OpenProject::Configuration.registration_footer.blank? %>
+    <% if ProyeksiApp::Configuration.registration_footer.blank? %>
       <%= rails_cell Settings::NumericSettingCell, "invitation_expiration_days", unit: "days" %>
 
       <fieldset class="form--fieldset">
@@ -34,10 +34,10 @@
 
     <fieldset class="form--fieldset">
       <legend class="form--fieldset-legend"><%= I18n.t(:passwords, scope: [:settings]) %></legend>
-      <% if !OpenProject::Configuration.disable_password_login? %>
+      <% if !ProyeksiApp::Configuration.disable_password_login? %>
         <div class="form--field -wide-label"><%= setting_text_field :password_min_length, size: 6, container_class: '-xslim' %></div>
         <div class="form--field -wide-label">
-          <% rules = OpenProject::Passwords::Evaluator.known_rules.map do |rule|
+          <% rules = ProyeksiApp::Passwords::Evaluator.known_rules.map do |rule|
             [t("label_password_rule_#{rule}"), rule]
           end %>
           <%= setting_multiselect :password_active_rules, rules %>
@@ -54,7 +54,7 @@
         <div class="form--field -wide-label">
           <label><b><%= I18n.t :note %>: </b>
             <%=
-              url = 'https://docs.openproject.org/installation-and-operations/configuration/#disable-password-login'
+              url = 'https://docs.proyeksiapp.org/installation-and-operations/configuration/#disable-password-login'
 
               explanation = I18n.t :note_password_login_disabled,
                                    configuration: "<a target=\"_blank\" href=\"#{url}\"> #{I18n.t('label_configuration')}</a>"
@@ -66,7 +66,7 @@
       <% end %>
     </fieldset>
 
-    <% unless OpenProject::Configuration.disable_password_login? %>
+    <% unless ProyeksiApp::Configuration.disable_password_login? %>
       <fieldset class="form--fieldset">
         <legend class="form--fieldset-legend"><%= I18n.t(:brute_force_prevention, scope: [:settings]) %></legend>
         <div class="form--field -wide-label"><%= setting_text_field :brute_force_block_after_failed_logins, container_class: '-xslim' %>
@@ -103,7 +103,7 @@
       <div class="form--field -wide-label"><%= setting_check_box :rest_api_enabled %></div>
     </fieldset>
   </section>
-  <% unless OpenProject::Configuration.disable_password_login? %>
+  <% unless ProyeksiApp::Configuration.disable_password_login? %>
     <div style="float:right;">
       <%= link_to t(:label_ldap_authentication), {controller: '/ldap_auth_sources', action: 'index'}, class: 'icon icon-server-key' %>
     </div>

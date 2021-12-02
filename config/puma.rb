@@ -3,8 +3,8 @@
 # Any libraries that use thread pools should be configured to match
 # the maximum value specified for Puma.
 #
-threads_min_count = OpenProject::Configuration.web_min_threads
-threads_max_count = OpenProject::Configuration.web_max_threads
+threads_min_count = ProyeksiApp::Configuration.web_min_threads
+threads_max_count = ProyeksiApp::Configuration.web_max_threads
 threads threads_min_count, [threads_min_count, threads_max_count].max
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
@@ -21,7 +21,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # Workers do not work on JRuby or Windows (both of which do not support
 # processes).
 #
-workers OpenProject::Configuration.web_workers
+workers ProyeksiApp::Configuration.web_workers
 
 # Use the `preload_app!` method when specifying a `workers` number.
 # This directive tells Puma to first boot the application and load code
@@ -34,11 +34,11 @@ preload_app! if ENV["RAILS_ENV"] == 'production'
 plugin :tmp_restart unless ENV["RAILS_ENV"] == 'production'
 
 # activate statsd plugin only if a host is configured explicitly
-if OpenProject::Configuration.statsd_host.present?
-  module ConfigurationViaOpenProject
+if ProyeksiApp::Configuration.statsd_host.present?
+  module ConfigurationViaProyeksiApp
     def initialize
-      host = OpenProject::Configuration.statsd_host
-      port = OpenProject::Configuration.statsd_port
+      host = ProyeksiApp::Configuration.statsd_host
+      port = ProyeksiApp::Configuration.statsd_port
 
       Rails.logger.debug { "Enabling puma statsd plugin (publish to udp://#{host}:#{port})" }
 
@@ -47,7 +47,7 @@ if OpenProject::Configuration.statsd_host.present?
     end
   end
 
-  StatsdConnector.prepend ConfigurationViaOpenProject
+  StatsdConnector.prepend ConfigurationViaProyeksiApp
 
   plugin :statsd
 end

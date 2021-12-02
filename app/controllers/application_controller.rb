@@ -22,9 +22,9 @@ class ApplicationController < ActionController::Base
   include ErrorsHelper
   include Accounts::CurrentUser
   include Accounts::UserLogin
-  include ::OpenProject::Authentication::SessionExpiry
+  include ::ProyeksiApp::Authentication::SessionExpiry
   include AdditionalUrlHelpers
-  include OpenProjectErrorHelper
+  include ProyeksiAppErrorHelper
 
   layout 'base'
 
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
   # Thus, we show an error message unless the request probably is an API
   # request.
   def handle_unverified_request
-    cookies.delete(OpenProject::Configuration['autologin_cookie_name'])
+    cookies.delete(ProyeksiApp::Configuration['autologin_cookie_name'])
     self.logged_user = nil
 
     # Don't render an error message for requests that appear to be API requests.
@@ -80,7 +80,7 @@ class ApplicationController < ActionController::Base
       # Check whether user have cookies enabled, otherwise they'll only be
       # greeted with the CSRF error upon login.
       message = I18n.t(:error_token_authenticity)
-      message << ' ' + I18n.t(:error_cookie_missing) if openproject_cookie_missing?
+      message << ' ' + I18n.t(:error_cookie_missing) if proyeksiapp_cookie_missing?
 
       log_csrf_failure
 
@@ -102,7 +102,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::ConnectionTimeoutError do |exception|
     render_500 exception: exception,
-               payload: ::OpenProject::Logging::ThreadPoolContextBuilder.build!
+               payload: ::ProyeksiApp::Logging::ThreadPoolContextBuilder.build!
   end
 
   before_action :user_setup,
@@ -133,7 +133,7 @@ class ApplicationController < ActionController::Base
   # https://websecuritytool.codeplex.com/wikipage?title=Checks#http-cache-control-header-no-store
   # http://stackoverflow.com/questions/711418/how-to-prevent-browser-page-caching-in-rails
   def set_cache_buster
-    if OpenProject::Configuration['disable_browser_cache']
+    if ProyeksiApp::Configuration['disable_browser_cache']
       response.cache_control.merge!(
         max_age: 0,
         public: false,
@@ -143,22 +143,22 @@ class ApplicationController < ActionController::Base
   end
 
   def reload_mailer_configuration!
-    OpenProject::Configuration.reload_mailer_configuration!
+    ProyeksiApp::Configuration.reload_mailer_configuration!
   end
 
   # Checks if the session cookie is missing.
   # This is useful only on a second request
-  def openproject_cookie_missing?
-    request.cookies[OpenProject::Configuration['session_cookie_name']].nil?
+  def proyeksiapp_cookie_missing?
+    request.cookies[ProyeksiApp::Configuration['session_cookie_name']].nil?
   end
 
-  helper_method :openproject_cookie_missing?
+  helper_method :proyeksiapp_cookie_missing?
 
   ##
   # Create CSRF issue
   def log_csrf_failure
     message = 'CSRF validation error'
-    message << ' (No session cookie present)' if openproject_cookie_missing?
+    message << ' (No session cookie present)' if proyeksiapp_cookie_missing?
 
     op_handle_error message, reference: :csrf_validation_failed
   end
@@ -170,7 +170,7 @@ class ApplicationController < ActionController::Base
       login_and_mail = " (#{escape_for_logging(User.current.login)} ID: #{User.current.id} " \
                        "<#{escape_for_logging(User.current.mail)}>)"
     end
-    logger.info "OpenProject User: #{escape_for_logging(User.current.name)}#{login_and_mail}"
+    logger.info "ProyeksiApp User: #{escape_for_logging(User.current.name)}#{login_and_mail}"
   end
 
   # Escape string to prevent log injection
@@ -413,8 +413,8 @@ class ApplicationController < ActionController::Base
   def api_key_from_request
     if params[:key].present?
       params[:key]
-    elsif request.headers['X-OpenProject-API-Key'].present?
-      request.headers['X-OpenProject-API-Key']
+    elsif request.headers['X-ProyeksiApp-API-Key'].present?
+      request.headers['X-ProyeksiApp-API-Key']
     end
   end
 

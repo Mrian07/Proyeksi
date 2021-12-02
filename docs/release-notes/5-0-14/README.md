@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.14
+  title: ProyeksiApp 5.0.14
   sidebar_navigation:
       title: 5.0.14
   release_version: 5.0.14
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.14
+# ProyeksiApp 5.0.14
 
-OpenProject 5.0.14 contains several bug fixes:
+ProyeksiApp 5.0.14 contains several bug fixes:
 
   - User avatars were not displayed unless a specific admin setting was
     selected. This has been adjusted

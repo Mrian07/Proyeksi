@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'admin/settings/authentication_settings/show', type: :view do
   context 'with password login enabled' do
     before do
-      allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+      allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
       render
     end
 
@@ -20,7 +20,7 @@ describe 'admin/settings/authentication_settings/show', type: :view do
 
   context 'with password login disabled' do
     before do
-      allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+      allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
       render
     end
 
@@ -35,7 +35,7 @@ describe 'admin/settings/authentication_settings/show', type: :view do
 
   context 'with no registration_footer configured' do
     before do
-      allow(OpenProject::Configuration).to receive(:registration_footer).and_return({})
+      allow(ProyeksiApp::Configuration).to receive(:registration_footer).and_return({})
       render
     end
 
@@ -46,7 +46,7 @@ describe 'admin/settings/authentication_settings/show', type: :view do
 
   context 'with registration_footer configured' do
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:registration_footer)
         .and_return("en" => "You approve.")
 

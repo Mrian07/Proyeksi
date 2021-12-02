@@ -5,7 +5,7 @@
 require 'SVG/Graph/Bar'
 require 'SVG/Graph/BarHorizontal'
 require 'digest/sha1'
-require_dependency 'open_project/scm/adapters'
+require_dependency 'proyeksi_app/scm/adapters'
 
 class ChangesetNotFound < StandardError
 end
@@ -26,7 +26,7 @@ class RepositoriesController < ApplicationController
   before_action :find_repository, except: %i[edit update create destroy destroy_info]
   accept_key_auth :revisions
 
-  rescue_from OpenProject::SCM::Exceptions::SCMError, with: :show_error_command_failed
+  rescue_from ProyeksiApp::SCM::Exceptions::SCMError, with: :show_error_command_failed
 
   def update
     @repository = @project.repository
@@ -173,7 +173,7 @@ class RepositoriesController < ApplicationController
     # UTF-16 contains "\x00".
     # It is very strict that file contains less than 30% of ascii symbols
     # in non Western Europe.
-    return true if OpenProject::MimeType.is_type?('text', path)
+    return true if ProyeksiApp::MimeType.is_type?('text', path)
     # Ruby 1.8.6 has a bug of integer divisions.
     # http://apidock.com/ruby/v1_8_6_287/String/is_binary_data%3F
     if ent.respond_to?('is_binary_data?') && ent.is_binary_data? # Ruby 1.8.x and <1.9.2
@@ -323,7 +323,7 @@ class RepositoriesController < ApplicationController
     if !@rev.to_s.match(REV_PARAM_RE) && @rev_to.to_s.match(REV_PARAM_RE) && @repository.branches.blank?
       raise InvalidRevisionParam
     end
-  rescue OpenProject::SCM::Exceptions::SCMEmpty
+  rescue ProyeksiApp::SCM::Exceptions::SCMEmpty
     render 'empty'
   rescue ActiveRecord::RecordNotFound
     render_404
@@ -455,7 +455,7 @@ class RepositoriesController < ApplicationController
   def send_raw(content, path)
     # Force the download
     send_opt = { filename: filename_for_content_disposition(path.split('/').last) }
-    send_type = OpenProject::MimeType.of(path)
+    send_type = ProyeksiApp::MimeType.of(path)
     send_opt[:type] = send_type.to_s if send_type
     send_data content, send_opt
   end

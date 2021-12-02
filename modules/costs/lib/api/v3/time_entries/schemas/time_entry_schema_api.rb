@@ -4,7 +4,7 @@ module API
   module V3
     module TimeEntries
       module Schemas
-        class TimeEntrySchemaAPI < ::API::OpenProjectAPI
+        class TimeEntrySchemaAPI < ::API::ProyeksiAppAPI
           resources :schema do
             after_validation do
               authorize_any %i[log_time

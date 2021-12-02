@@ -11,7 +11,7 @@ keywords: manage sprints
 
 In order to work with the Backlogs module, at least one sprint needs to be created in the project settings.
 
-Sprints are technically a version in OpenProject. Therefore, creating a sprint is done following the same procedure as for creating a new version.
+Sprints are technically a version in ProyeksiApp. Therefore, creating a sprint is done following the same procedure as for creating a new version.
 
 It is advisable to number your sprints chronologically for a better overview.  Sprints usually run for a fixed period of approx. two to three weeks. In order to configure these settings, click on the Sprint title in the  backlogs view.
 

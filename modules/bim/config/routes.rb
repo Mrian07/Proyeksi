@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   scope '', as: 'bcf' do
     mount ::Bim::Bcf::API::Root => '/api/bcf'
 

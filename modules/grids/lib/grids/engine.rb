@@ -1,6 +1,6 @@
 module Grids
   class Engine < ::Rails::Engine
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     add_api_path :attachments_by_grid do |id|
       "#{root}/grids/#{id}/attachments"

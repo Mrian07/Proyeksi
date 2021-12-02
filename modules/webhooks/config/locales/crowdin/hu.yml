@@ -56,4 +56,4 @@ hu:
           title: 'Kiválasztott projektek'
         secret:
           description: >
-            Ha be van állítva, ezt a titkos értéket az OpenProject használja a webhook hasznos teher aláírására.
+            Ha be van állítva, ezt a titkos értéket az ProyeksiApp használja a webhook hasznos teher aláírására.

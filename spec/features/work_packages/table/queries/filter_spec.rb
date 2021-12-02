@@ -338,7 +338,7 @@ describe 'filter work packages', js: true do
 
     context 'with full text search capabilities' do
       before do
-        skip("Database does not support full text search.") unless OpenProject::Database::allows_tsv?
+        skip("Database does not support full text search.") unless ProyeksiApp::Database::allows_tsv?
       end
 
       it 'allows filtering and retrieving and altering the saved filter' do
@@ -422,7 +422,7 @@ describe 'filter work packages', js: true do
 
   context 'DB does not offer TSVector support' do
     before do
-      allow(OpenProject::Database).to receive(:allows_tsv?).and_return(false)
+      allow(ProyeksiApp::Database).to receive(:allows_tsv?).and_return(false)
     end
 
     it "does not offer attachment filters" do

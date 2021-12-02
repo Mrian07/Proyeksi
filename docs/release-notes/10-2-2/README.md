@@ -1,14 +1,14 @@
 ---
-title: OpenProject 10.2.2
+title: ProyeksiApp 10.2.2
 sidebar_navigation:
     title: 10.2.2
 release_version: 10.2.2
 release_date: 2019-12-11
 ---
 
-# OpenProject 10.2.2
+# ProyeksiApp 10.2.2
 
-We released [OpenProject 10.2.2](https://community.openproject.com/versions/1405).
+We released [ProyeksiApp 10.2.2](https://community.openproject.com/versions/1405).
 The release contains several bug fixes and fixes server security issues. We thus urge everybody to upgrade to the newest version as soon as possible.
 
 <!--more-->
@@ -16,7 +16,7 @@ The release contains several bug fixes and fixes server security issues. We thus
 
 - Fixed: Outline of display-field extends table cell width \[[#31214](https://community.openproject.com/wp/31214)\]
 - Fixed: SQL error in work package view \[[#31667](https://community.openproject.com/wp/31667)\]
-- Fixed: Error in OpenProject::Patches::ActiveRecordJoinPartPatch module after ActiveRecord updating to 6 version \[[#31673](https://community.openproject.com/wp/31673)\]
+- Fixed: Error in ProyeksiApp::Patches::ActiveRecordJoinPartPatch module after ActiveRecord updating to 6 version \[[#31673](https://community.openproject.com/wp/31673)\]
 - Fixed: [WorkPackages] "group by"-header line to short \[[#31720](https://community.openproject.com/wp/31720)\]
 - Fixed: Second level menu of boards is not reachable on first click \[[#31721](https://community.openproject.com/wp/31721)\]
 - Fixed: Doubled scrollbar in sidebar when "Buy Now" teaser is activated \[[#31729](https://community.openproject.com/wp/31729)\]

@@ -21,10 +21,10 @@ module Accounts::UserLogin
     cookie_options = {
       value: token.plain_value,
       expires: 1.year.from_now,
-      path: OpenProject::Configuration['autologin_cookie_path'],
-      secure: OpenProject::Configuration['autologin_cookie_secure'],
+      path: ProyeksiApp::Configuration['autologin_cookie_path'],
+      secure: ProyeksiApp::Configuration['autologin_cookie_secure'],
       httponly: true
     }
-    cookies[OpenProject::Configuration['autologin_cookie_name']] = cookie_options
+    cookies[ProyeksiApp::Configuration['autologin_cookie_name']] = cookie_options
   end
 end

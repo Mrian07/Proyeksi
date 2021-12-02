@@ -7,7 +7,7 @@ require 'spec_helper'
 ##
 # Tests that email notifications will be sent upon creating or changing a work package.
 describe WorkPackage, type: :model, with_settings: { journal_aggregation_time_minutes: 0 } do
-  describe 'OpenProject notifications' do
+  describe 'ProyeksiApp notifications' do
     shared_let(:admin) { FactoryBot.create :admin }
 
     let(:project) { FactoryBot.create :project }
@@ -21,13 +21,13 @@ describe WorkPackage, type: :model, with_settings: { journal_aggregation_time_mi
     let(:journal_ids) { [] }
 
     let!(:subscription) do
-      OpenProject::Notifications.subscribe(OpenProject::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY) do |payload|
+      ProyeksiApp::Notifications.subscribe(ProyeksiApp::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY) do |payload|
         journal_ids << payload[:journal].id
       end
     end
 
     after do
-      OpenProject::Notifications.unsubscribe(OpenProject::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY, subscription)
+      ProyeksiApp::Notifications.unsubscribe(ProyeksiApp::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY, subscription)
     end
 
     context 'when after creation' do

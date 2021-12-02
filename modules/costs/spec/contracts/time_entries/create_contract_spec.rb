@@ -19,7 +19,7 @@ describe TimeEntries::CreateContract do
                     spent_on: time_entry_spent_on,
                     hours: time_entry_hours,
                     comments: time_entry_comments).tap do |t|
-        t.extend(OpenProject::ChangedBySystem)
+        t.extend(ProyeksiApp::ChangedBySystem)
         t.changed_by_system(changed_by_system) if changed_by_system
       end
     end

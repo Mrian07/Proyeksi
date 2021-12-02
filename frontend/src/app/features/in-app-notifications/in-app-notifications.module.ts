@@ -52,5 +52,5 @@ import { IanBellService } from 'core-app/features/in-app-notifications/bell/stat
     IanBellService,
   ],
 })
-export class OpenProjectInAppNotificationsModule {
+export class ProyeksiAppInAppNotificationsModule {
 }

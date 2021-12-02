@@ -18,7 +18,7 @@ class SCM::DeleteManagedRepositoryService < SCM::BaseRepositoryService
     else
       delete_local_repository
     end
-  rescue OpenProject::SCM::Exceptions::SCMError => e
+  rescue ProyeksiApp::SCM::Exceptions::SCMError => e
     @rejected = e.message
     false
   end

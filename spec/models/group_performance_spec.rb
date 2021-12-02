@@ -46,7 +46,7 @@ describe Group, type: :model do
       let(:deleted_user) { DeletedUser.first }
 
       before do
-        allow(::OpenProject::Notifications)
+        allow(::ProyeksiApp::Notifications)
           .to receive(:send)
 
         start = Time.now.to_i
@@ -63,9 +63,9 @@ describe Group, type: :model do
       end
 
       it 'reassigns the work package to nobody and cleans up the journals' do
-        expect(::OpenProject::Notifications)
+        expect(::ProyeksiApp::Notifications)
           .to have_received(:send)
-          .with(OpenProject::Events::MEMBER_DESTROYED, any_args)
+          .with(ProyeksiApp::Events::MEMBER_DESTROYED, any_args)
           .exactly(projects.size).times
 
         work_packages.each do |wp|

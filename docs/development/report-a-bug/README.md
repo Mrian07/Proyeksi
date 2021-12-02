@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Report a bug
   priority: 995
-description: How to submit a bug report for OpenProject
+description: How to submit a bug report for ProyeksiApp
 robots: index, follow
 keywords: bug report, bug, error, not working
 ---
@@ -10,7 +10,7 @@ keywords: bug report, bug, error, not working
 
 If you find a bug please create a bug report.
 
-1. Login to or register at the [OpenProject community platform](https://community.openproject.org/login). It's fast and free.
+1. Login to or register at the [ProyeksiApp community platform](https://community.openproject.org/login). It's fast and free.
 2. Look for an existing bug report using the search bar in the header navigation on top. If there's one, please leave a comment or add additional information. Otherwise:
 3. Open the [bug form](https://community.openproject.org/projects/openproject/work_packages/new?type=1).
 4. Add a precise subject.

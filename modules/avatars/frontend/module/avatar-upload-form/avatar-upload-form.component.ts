@@ -1,6 +1,6 @@
 
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { OpenProjectFileUploadService, UploadFile } from "core-app/core/file-upload/op-file-upload.service";
+import { ProyeksiAppFileUploadService, UploadFile } from "core-app/core/file-upload/op-file-upload.service";
 import { resizeFile } from "core-app/shared/helpers/images/resizer";
 import { I18nService } from "core-app/core/i18n/i18n.service";
 import { ToastService } from "core-app/shared/components/toaster/toast.service";
@@ -37,7 +37,7 @@ export class AvatarUploadFormComponent implements OnInit {
   public constructor(protected I18n:I18nService,
                      protected elementRef:ElementRef,
                      protected toastService:ToastService,
-                     protected opFileUpload:OpenProjectFileUploadService) {
+                     protected opFileUpload:ProyeksiAppFileUploadService) {
   }
 
   public ngOnInit() {

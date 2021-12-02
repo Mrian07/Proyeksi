@@ -1,12 +1,12 @@
 
 
 import { Injector, NgModule } from '@angular/core';
-import { OpenProjectPluginContext } from 'core-app/features/plugins/plugin-context';
+import { ProyeksiAppPluginContext } from 'core-app/features/plugins/plugin-context';
 import { CostsByTypeDisplayField } from './wp-display/costs-by-type-display-field.module';
 import { CurrencyDisplayField } from './wp-display/currency-display-field.module';
 
 export function initializeCostsPlugin(injector:Injector) {
-  window.OpenProject.getPluginContext().then((pluginContext:OpenProjectPluginContext) => {
+  window.ProyeksiApp.getPluginContext().then((pluginContext:ProyeksiAppPluginContext) => {
     const displayFieldService = pluginContext.services.displayField;
     displayFieldService.addFieldType(CostsByTypeDisplayField, 'costs', ['costsByType']);
     displayFieldService.addFieldType(CurrencyDisplayField, 'currency', ['laborCosts', 'materialCosts', 'overallCosts']);

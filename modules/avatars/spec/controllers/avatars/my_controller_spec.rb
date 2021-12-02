@@ -8,7 +8,7 @@ describe ::Avatars::MyAvatarController, type: :controller do
 
   before do
     login_as user
-    allow(::OpenProject::Avatars::AvatarManager).to receive(:avatars_enabled?).and_return enabled
+    allow(::ProyeksiApp::Avatars::AvatarManager).to receive(:avatars_enabled?).and_return enabled
   end
 
   describe '#show' do

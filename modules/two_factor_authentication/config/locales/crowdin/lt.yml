@@ -123,13 +123,13 @@ lt:
         text_cannot_scan: |
           Jei negalite nuskenuoti kodo, jūs galite jį įvesti rankomis naudodami šią informaciją:
         description: |
-          Registruokite aplikacijos autentifikatorių OpenProject'e naudodami nuo laiko priklausančio ar vienkartinio slaptažodžio autentifikavimo standartą. Pavyzdžiai yra Google Authenticator arba Authy.
+          Registruokite aplikacijos autentifikatorių ProyeksiApp'e naudodami nuo laiko priklausančio ar vienkartinio slaptažodžio autentifikavimo standartą. Pavyzdžiai yra Google Authenticator arba Authy.
       sms:
         title: 'Naudoti jūsų mobilų telefoną'
         redacted_identifier: 'Mobilus įrenginys (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, mes išsiuntėme jums autentifikavimo kodą į %{delivery_channel}'
         description: |
-          Registruokite savo mobilų telefoną OpenProject vienkartinių slaptažodžių siuntimui.
+          Registruokite savo mobilų telefoną ProyeksiApp vienkartinių slaptažodžių siuntimui.
     sns:
       delivery_failed: 'SNS pristatymas nepavyko:'
     message_bird:

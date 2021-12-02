@@ -45,7 +45,7 @@ module BaseServices
     end
 
     def prepare_model(model)
-      model.extend(OpenProject::ChangedBySystem)
+      model.extend(ProyeksiApp::ChangedBySystem)
       model
     end
   end

@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   namespace 'webhooks' do
     match ":hook_name", to: 'incoming/hooks#handle_hook', via: %i(get post)
   end

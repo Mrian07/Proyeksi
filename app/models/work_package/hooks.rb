@@ -13,12 +13,12 @@ module WorkPackage::Hooks
   def call_after_create_hook
     context = { work_package: self }
 
-    OpenProject::Hook.call_hook :work_package_after_create, context
+    ProyeksiApp::Hook.call_hook :work_package_after_create, context
   end
 
   def call_after_update_hook
     context = { work_package: self }
 
-    OpenProject::Hook.call_hook :work_package_after_update, context
+    ProyeksiApp::Hook.call_hook :work_package_after_update, context
   end
 end

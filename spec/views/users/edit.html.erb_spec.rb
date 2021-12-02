@@ -32,7 +32,7 @@ describe 'users/edit', type: :view do
     end
 
     it 'does not show a no-login warning when password login is disabled' do
-      allow(OpenProject::Configuration).to receive(:disable_password_login).and_return(true)
+      allow(ProyeksiApp::Configuration).to receive(:disable_password_login).and_return(true)
       render
 
       expect(rendered).not_to include I18n.t('user.no_login')
@@ -100,7 +100,7 @@ describe 'users/edit', type: :view do
 
     context 'with password login disabled' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
       end
 
       it 'warns that the user cannot login' do
@@ -126,7 +126,7 @@ describe 'users/edit', type: :view do
 
     context 'with password login enabled' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
       end
 
       it 'shows password options' do
@@ -151,7 +151,7 @@ describe 'users/edit', type: :view do
 
       context 'with password choice enabled' do
         before do
-          expect(OpenProject::Configuration)
+          expect(ProyeksiApp::Configuration)
             .to receive(:disable_password_choice?)
             .and_return(false)
         end
@@ -168,7 +168,7 @@ describe 'users/edit', type: :view do
 
       context 'with password choice disabled' do
         before do
-          expect(OpenProject::Configuration).to receive(:disable_password_choice?).and_return(true)
+          expect(ProyeksiApp::Configuration).to receive(:disable_password_choice?).and_return(true)
         end
 
         it "doesn't show the password and password confirmation fields" do

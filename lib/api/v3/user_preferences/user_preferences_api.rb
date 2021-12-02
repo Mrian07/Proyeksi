@@ -3,7 +3,7 @@
 module API
   module V3
     module UserPreferences
-      class UserPreferencesAPI < ::API::OpenProjectAPI
+      class UserPreferencesAPI < ::API::ProyeksiAppAPI
         resource :my_preferences do
           get do
             redirect api_v3_paths.user_preferences('me'), permanent: true

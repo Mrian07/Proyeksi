@@ -56,7 +56,7 @@ describe GithubPullRequest do
 
   describe '.find_by_github_identifiers' do
     let(:github_id) { 5 }
-    let(:github_url) { 'https://github.com/opf/openproject/pull/123' }
+    let(:github_url) { 'https://github.com/opf/proyeksiapp/pull/123' }
     let(:pull_request) do
       FactoryBot.create(:github_pull_request,
                         github_id: github_id,

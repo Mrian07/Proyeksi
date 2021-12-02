@@ -123,7 +123,7 @@ fil:
         text_cannot_scan: |
           Kung hindi mo ma-scan ang code, maaari mong ipasok ang entry manomano gamit ang mga sumusunod na mga detalye:
         description: |
-          Irehistro ang aplikasyon sa authenticator para magamit kasama ang OpenProject gamit ang basehan sa oras ang pamantayan sa password authentication.
+          Irehistro ang aplikasyon sa authenticator para magamit kasama ang ProyeksiApp gamit ang basehan sa oras ang pamantayan sa password authentication.
           Mga karaniwan na halimbawa sa Google Authenticator o Authy.
       sms:
         title: 'Gamit ang iyong mobile na telepono'

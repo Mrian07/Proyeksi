@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 if ARGV.join(" ") =~ /((-h)|(--help))/
-  puts "Prints the self-contained OpenAPI 3.0 specification of OpenProject's APIv3"
+  puts "Prints the self-contained OpenAPI 3.0 specification of ProyeksiApp's APIv3"
   puts
   puts "usage: ./script/api/spec [--format JSON|yaml]"
   return

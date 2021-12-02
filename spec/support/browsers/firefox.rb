@@ -28,7 +28,7 @@ def register_firefox(language, name: :"firefox_#{language}")
 
     yield(profile, options, capabilities) if block_given?
 
-    unless ActiveRecord::Type::Boolean.new.cast(ENV['OPENPROJECT_TESTING_NO_HEADLESS'])
+    unless ActiveRecord::Type::Boolean.new.cast(ENV['PROYEKSIAPP_TESTING_NO_HEADLESS'])
       options.args << "--headless"
     end
 

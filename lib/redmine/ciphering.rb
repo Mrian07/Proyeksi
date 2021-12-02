@@ -40,7 +40,7 @@ module Redmine
       end
 
       def cipher_key
-        key = OpenProject::Configuration['database_cipher_key'].to_s
+        key = ProyeksiApp::Configuration['database_cipher_key'].to_s
         # With aes-256-cbc chosen to be the cipher,
         # keys need to be 32 bytes long. Ruby < 2.4 used to silently truncate the
         # key to the desired length but with

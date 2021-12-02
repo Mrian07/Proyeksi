@@ -9,7 +9,7 @@ describe ::Members::DeleteService, type: :model do
     before do
       model_instance.principal = principal
 
-      allow(::OpenProject::Notifications)
+      allow(::ProyeksiApp::Notifications)
         .to receive(:send)
     end
 
@@ -36,9 +36,9 @@ describe ::Members::DeleteService, type: :model do
         it 'sends a notification' do
           service_call
 
-          expect(::OpenProject::Notifications)
+          expect(::ProyeksiApp::Notifications)
             .to have_received(:send)
-            .with(OpenProject::Events::MEMBER_DESTROYED, member: model_instance)
+            .with(ProyeksiApp::Events::MEMBER_DESTROYED, member: model_instance)
         end
 
         context 'when the model`s principal is a group' do

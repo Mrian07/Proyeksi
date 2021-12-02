@@ -122,7 +122,7 @@ module Grids::Configuration
     end
 
     def url_helpers
-      @url_helpers ||= OpenProject::StaticRouting::StaticUrlHelpers.new
+      @url_helpers ||= ProyeksiApp::StaticRouting::StaticUrlHelpers.new
     end
   end
 end

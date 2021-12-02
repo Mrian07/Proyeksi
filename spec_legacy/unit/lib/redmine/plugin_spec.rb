@@ -38,26 +38,26 @@ describe Redmine::Plugin do
     assert_equal '0.0.1', plugin.version
   end
 
-  it 'should requires openproject' do
+  it 'should requires proyeksiapp' do
     test = self
-    version = OpenProject::VERSION.to_semver
+    version = ProyeksiApp::VERSION.to_semver
 
     @klass.register :foo do
-      test.assert requires_openproject('>= 0.1')
-      test.assert requires_openproject(">= #{version}")
-      test.assert requires_openproject(version)
+      test.assert requires_proyeksiapp('>= 0.1')
+      test.assert requires_proyeksiapp(">= #{version}")
+      test.assert requires_proyeksiapp(version)
       test.assert_raises Redmine::PluginRequirementError do
-        requires_openproject('>= 99.0.0')
+        requires_proyeksiapp('>= 99.0.0')
       end
       test.assert_raises Redmine::PluginRequirementError do
-        requires_openproject('< 0.9')
+        requires_proyeksiapp('< 0.9')
       end
-      requires_openproject('> 0.9', '<= 99.0.0')
+      requires_proyeksiapp('> 0.9', '<= 99.0.0')
       test.assert_raises Redmine::PluginRequirementError do
-        requires_openproject('< 0.9', '>= 98.0.0')
+        requires_proyeksiapp('< 0.9', '>= 98.0.0')
       end
 
-      test.assert requires_openproject("~> #{OpenProject::VERSION.to_semver.gsub(/\d+\z/, '0')}")
+      test.assert requires_proyeksiapp("~> #{ProyeksiApp::VERSION.to_semver.gsub(/\d+\z/, '0')}")
     end
   end
 

@@ -64,7 +64,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
     end
 
     it 'redirects to the index page if no provider available', with_settings: {
-      plugin_openproject_openid_connect: {
+      plugin_proyeksiapp_openid_connect: {
         "providers" => OpenIDConnect::Provider::ALLOWED_TYPES.inject({}) do |accu, name|
           accu.merge(name => { "identifier" => "IDENTIFIER", "secret" => "SECRET" })
         end
@@ -79,7 +79,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
     it 'is successful if valid params' do
       post :create, params: { openid_connect_provider: valid_params }
       expect(flash[:notice]).to eq(I18n.t(:notice_successful_create))
-      expect(Setting.plugin_openproject_openid_connect["providers"]).to have_key("azure")
+      expect(Setting.plugin_proyeksiapp_openid_connect["providers"]).to have_key("azure")
       expect(response).to be_redirect
     end
 
@@ -91,7 +91,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
 
   describe '#edit' do
     context 'when found', with_settings: {
-      plugin_openproject_openid_connect: {
+      plugin_proyeksiapp_openid_connect: {
         "providers" => { "azure" => { "identifier" => "IDENTIFIER", "secret" => "SECRET" } }
       }
     } do
@@ -114,7 +114,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
 
   describe '#update' do
     context 'when found', with_settings: {
-      plugin_openproject_openid_connect: {
+      plugin_proyeksiapp_openid_connect: {
         "providers" => { "azure" => { "identifier" => "IDENTIFIER", "secret" => "SECRET" } }
       }
     } do
@@ -122,7 +122,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
         put :update, params: { id: "azure", openid_connect_provider: valid_params.merge(secret: "NEWSECRET") }
         expect(response).to be_redirect
         expect(flash[:notice]).to be_present
-        provider = OpenProject::OpenIDConnect.providers.find { |item| item.name == "azure" }
+        provider = ProyeksiApp::OpenIDConnect.providers.find { |item| item.name == "azure" }
         expect(provider.secret).to eq("NEWSECRET")
       end
     end
@@ -130,7 +130,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
 
   describe '#destroy' do
     context 'when found', with_settings: {
-      plugin_openproject_openid_connect: {
+      plugin_proyeksiapp_openid_connect: {
         "providers" => { "azure" => { "identifier" => "IDENTIFIER", "secret" => "SECRET" } }
       }
     } do
@@ -138,7 +138,7 @@ describe ::OpenIDConnect::ProvidersController, type: :controller do
         delete :destroy, params: { id: "azure" }
         expect(response).to be_redirect
         expect(flash[:notice]).to be_present
-        expect(OpenProject::OpenIDConnect.providers).to be_empty
+        expect(ProyeksiApp::OpenIDConnect.providers).to be_empty
       end
     end
   end

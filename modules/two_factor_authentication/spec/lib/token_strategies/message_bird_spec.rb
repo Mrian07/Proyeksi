@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 require 'messagebird'
 
-describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird, with_2fa_ee: true do
+describe ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::MessageBird, with_2fa_ee: true do
   let(:channel) { :sms }
   let(:locale) { 'en' }
   let(:user) { FactoryBot.create :user, language: locale }
@@ -36,7 +36,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird, wit
 
       it 'returns the correct language and message' do
         expect(subject[:language]).to eq :'en-us'
-        expect(subject[:message]).to include 'Your OpenProject one-time password is 1234'
+        expect(subject[:message]).to include 'Your ProyeksiApp one-time password is 1234'
       end
     end
 

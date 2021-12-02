@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.6
+  title: ProyeksiApp 7.4.6
   sidebar_navigation:
       title: 7.4.6
   release_version: 7.4.6
@@ -7,14 +7,14 @@
 ---
 
 
-# OpenProject 7.4.6
+# ProyeksiApp 7.4.6
 
-We released OpenProject 7.4.6. The release contains several bug fixes.
+We released ProyeksiApp 7.4.6. The release contains several bug fixes.
 We recommend the update to the current version.
 
 #### Support for Ubuntu 18.04.
 
-OpenProject 7.4.6 packaged installation introduces support for Ubuntu
+ProyeksiApp 7.4.6 packaged installation introduces support for Ubuntu
 18.04. 
 ([\#27799](https://community.openproject.com/projects/openproject/work_packages/27799))
 
@@ -34,7 +34,7 @@ OpenProject 7.4.6 packaged installation introduces support for Ubuntu
   - Improved: Performance on global activities page
     ([\#27582](https://community.openproject.com/projects/openproject/work_packages/27582))
 
-Special thanks go to all OpenProject contributors for [reporting
+Special thanks go to all ProyeksiApp contributors for [reporting
 bugs](../../development/report-a-bug/) and helping
 us to reproduce them.
 

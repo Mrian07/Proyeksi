@@ -14,7 +14,7 @@ FactoryBot.define do
     sequence(:identifier) { |n| "myproject_no_#{n}" }
     created_at { Time.now }
     updated_at { Time.now }
-    enabled_module_names { OpenProject::AccessControl.available_project_modules }
+    enabled_module_names { ProyeksiApp::AccessControl.available_project_modules }
     public { false }
     templated { false }
 

@@ -219,8 +219,8 @@ module RbCommonHelper
 
   def backlogs_types
     @backlogs_types ||= begin
-      backlogs_ids = Setting.plugin_openproject_backlogs['story_types']
-      backlogs_ids << Setting.plugin_openproject_backlogs['task_type']
+      backlogs_ids = Setting.plugin_proyeksiapp_backlogs['story_types']
+      backlogs_ids << Setting.plugin_proyeksiapp_backlogs['task_type']
 
       Type.where(id: backlogs_ids).order(Arel.sql('position ASC'))
     end
@@ -237,7 +237,7 @@ module RbCommonHelper
 
   def story_types
     @story_types ||= begin
-      backlogs_type_ids = Setting.plugin_openproject_backlogs['story_types'].map(&:to_i)
+      backlogs_type_ids = Setting.plugin_proyeksiapp_backlogs['story_types'].map(&:to_i)
 
       backlogs_types.select { |t| backlogs_type_ids.include?(t.id) }
     end

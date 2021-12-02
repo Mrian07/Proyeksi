@@ -44,13 +44,13 @@ describe BackupJob, type: :model do
       expect(Open3).to receive(:capture3).and_return [nil, "Dump failed", db_dump_process_status]
 
       allow_any_instance_of(BackupJob)
-        .to receive(:tmp_file_name).with("openproject", ".sql").and_return("/tmp/openproject.sql")
+        .to receive(:tmp_file_name).with("proyeksiapp", ".sql").and_return("/tmp/proyeksiapp.sql")
 
       allow_any_instance_of(BackupJob)
-        .to receive(:tmp_file_name).with("openproject-backup", ".zip").and_return("/tmp/openproject.zip")
+        .to receive(:tmp_file_name).with("proyeksiapp-backup", ".zip").and_return("/tmp/proyeksiapp.zip")
 
       allow(File).to receive(:read).and_call_original
-      allow(File).to receive(:read).with("/tmp/openproject.sql").and_return "SOME SQL"
+      allow(File).to receive(:read).with("/tmp/proyeksiapp.sql").and_return "SOME SQL"
     end
 
     def perform
@@ -86,11 +86,11 @@ describe BackupJob, type: :model do
       end
 
       it "stores a new backup as an attachment" do
-        expect(stored_backup.filename).to eq "openproject.zip"
+        expect(stored_backup.filename).to eq "proyeksiapp.zip"
       end
 
       it "includes the database dump in the backup" do
-        expect(backup_files).to include "openproject.sql"
+        expect(backup_files).to include "proyeksiapp.sql"
       end
 
       if opts[:include_attachments] != false

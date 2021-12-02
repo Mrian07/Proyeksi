@@ -1,3 +1,3 @@
 
 
-require 'open_project/documents'
+require 'proyeksi_app/documents'

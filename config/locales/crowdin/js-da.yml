@@ -21,7 +21,7 @@ da:
         A new backup will override any previous one. Only a limited number of backups per day can be requested.
       last_backup: Last backup
       last_backup_from: Last backup from
-      title: Backup OpenProject
+      title: Backup ProyeksiApp
       options: Muligheder
       include_attachments: Include attachments
       download_backup: Download backup
@@ -183,7 +183,7 @@ da:
             label_maximum_users: "Maximum active users"
             label_starts_at: "Starter fra"
             label_expires_at: "Expires at"
-            receive_newsletter: Jeg ønsker at modtage OpenProject <a target="_blank" href="%{link}">nyhedsbrevet</a>.
+            receive_newsletter: Jeg ønsker at modtage ProyeksiApp <a target="_blank" href="%{link}">nyhedsbrevet</a>.
             taken_domain: Der kan kun være én aktiv prøve pr. domæne.
             taken_email: Hver bruger kan kun oprette en prøveversion.
           email_not_received: "Du har ikke modtaget en e-mail? Du kan gensende e-mailen med linket til højre."
@@ -197,7 +197,7 @@ da:
           status_confirmed: "Bekræftet"
           status_waiting: "e-mail sendt - venter på bekræftelse"
           test_ee: "Test Enterprise Version 14 dage gratis"
-          quick_overview: "Få et hurtigt overblik over projektledelse og teamsamarbejde med OpenProject Enterprise Edition."
+          quick_overview: "Få et hurtigt overblik over projektledelse og teamsamarbejde med ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Become a hero!"
           benefits:
@@ -209,14 +209,14 @@ da:
             premium_features: "Premium-funktioner"
             premium_features_text: "Agile tavler, brugerdefineret tema og logo, grafer, intelligente arbejdsgange med brugerdefinerede handlinger, fuld tekst søgning efter vedhæftede filer arbejde og multi-valgs brugerdefinerede felter."
             professional_support: "Professionel support"
-            professional_support_text: "Få pålidelig, høj-touch support fra senior support ingeniører med ekspert viden om at køre OpenProject i forretningskritiske miljøer."
+            professional_support_text: "Få pålidelig, høj-touch support fra senior support ingeniører med ekspert viden om at køre ProyeksiApp i forretningskritiske miljøer."
           button_start_trial: "Start gratis prøveperiode"
           button_book_now: "Bestil nu"
           confidence: >
             Vi leverer tillid til en testet og understøttet enterprise-klasse projektstyringssoftware - med Open Source og et åbent sind.
           link_quote: "Få et tilbud"
           text: >
-            OpenProject Enterprise Edition bygger oven på Community Edition. Det omfatter premium-funktioner og professionel support primært rettet mod organisationer med mere end 10 brugere, der administrerer forretningskritiske projekter med OpenProject.
+            ProyeksiApp Enterprise Edition bygger oven på Community Edition. Det omfatter premium-funktioner og professionel support primært rettet mod organisationer med mere end 10 brugere, der administrerer forretningskritiske projekter med ProyeksiApp.
           unlimited: "Ubegrænset"
           you_contribute: "Udviklere skal også betale deres regninger. Med Enterprise Edition bidrager du væsentligt til denne Open Source-fællesskabsindsats."
     custom_actions:
@@ -274,7 +274,7 @@ da:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "Aktivér"
     label_add_column_after: "Add column after"
     label_add_column_before: "Add column before"
@@ -463,7 +463,7 @@ da:
         next: 'Næste'
         got_it: 'Forstået'
       steps:
-        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with OpenProject!'
+        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with ProyeksiApp!'
         members: 'Invite new <b>members</b> to join your project.'
         project_selection: 'Please click on one of the demo projects that we have prepared. Demo data is currently only available in English. <br> The general <b>demo project</b> suits best for classical project management, while the <b>Scrum project</b> is better for agile project management.'
         quick_add_button: 'Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.'

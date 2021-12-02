@@ -45,7 +45,7 @@
     <div id="email_delivery_method_letter_opener" class="email_delivery_method_settings">
       <p>Letter opener is used to render emails as a file in your Rails tmp folder. Mails will automatically open in your browser if supported.</p>
     </div>
-  <% end unless OpenProject::Configuration['email_delivery_configuration'] == 'legacy' %>
+  <% end unless ProyeksiApp::Configuration['email_delivery_configuration'] == 'legacy' %>
 
   <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>
 

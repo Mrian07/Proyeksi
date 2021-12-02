@@ -5,7 +5,7 @@
 module API
   module V3
     module CustomOptions
-      class CustomOptionsAPI < ::API::OpenProjectAPI
+      class CustomOptionsAPI < ::API::ProyeksiAppAPI
         resources :custom_options do
           namespace ':id' do
             params do

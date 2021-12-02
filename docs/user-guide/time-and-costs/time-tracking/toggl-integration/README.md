@@ -11,15 +11,15 @@ keywords: time tracking, toggl integration
 
 To track time to a work package via a start and stop button, we offer an integration for the time recording software (or online timesheet software) Toggl (https://toggl.com/).
 
-## OpenProject Toggl integration
+## ProyeksiApp Toggl integration
 
-You can install a browser add-in to track time via Toggl in OpenProject. This way, you can record spent times directly to a work package in OpenProject via a start/stop button. 
+You can install a browser add-in to track time via Toggl in ProyeksiApp. This way, you can record spent times directly to a work package in ProyeksiApp via a start/stop button. 
 
-If this add-in is installed, a start/stop button is displayed on the work package details view, which can be used to record times from OpenProject into Toggl:
+If this add-in is installed, a start/stop button is displayed on the work package details view, which can be used to record times from ProyeksiApp into Toggl:
 
 ![Toggl-integration](Toggl-integration.png)
 
 This integration can be added for example for Google Chrome as Chrome Extension: https://chrome.google.com/webstore/detail/toggl-button-productivity/oejgccbfbmkkpaidnkphaiaecficdnfn.
 
-You can then transfer the recorded times from Toggl to OpenProject via the API if needed.
+You can then transfer the recorded times from Toggl to ProyeksiApp via the API if needed.
 Details can be found in our [API documentation](../../../../api/).

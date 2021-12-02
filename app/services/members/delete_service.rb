@@ -15,7 +15,7 @@ class Members::DeleteService < ::BaseServices::Delete
   end
 
   def send_notification(member)
-    ::OpenProject::Notifications.send(OpenProject::Events::MEMBER_DESTROYED,
+    ::ProyeksiApp::Notifications.send(ProyeksiApp::Events::MEMBER_DESTROYED,
                                       member: member)
   end
 
