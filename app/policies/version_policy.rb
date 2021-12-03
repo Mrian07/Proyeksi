@@ -1,5 +1,3 @@
-
-
 class VersionPolicy < BasePolicy
   private
 

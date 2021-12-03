@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module OAuth
   class GrantsController < ::ApplicationController
     before_action :require_login

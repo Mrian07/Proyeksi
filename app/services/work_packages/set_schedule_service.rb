@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::SetScheduleService
   attr_accessor :user, :work_packages
 

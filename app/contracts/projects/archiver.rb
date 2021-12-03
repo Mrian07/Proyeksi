@@ -1,5 +1,3 @@
-
-
 module Projects
   module Archiver
     # Check that there is no wp of a non descendant project that is assigned

@@ -1,5 +1,3 @@
-
-
 module Attachments
   class CreateService < BaseService
     include TouchContainer

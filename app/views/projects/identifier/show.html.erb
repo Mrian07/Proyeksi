@@ -1,5 +1,3 @@
-
-
 <%= error_messages_for @project %>
 
 <%= form_for @project,
@@ -26,7 +24,7 @@
       </span>
       <span>
         <%= link_to project_settings_general_path(@project), class: 'button' do %>
-          <%= op_icon('button--icon icon-cancel') %> 
+          <%= op_icon('button--icon icon-cancel') %>
           <span class="button--text"><%= t(:button_cancel) %></span>
         <% end %>
       </span>
@@ -36,7 +34,7 @@
 
     <div class="form--field-instructions">
       <%= t(:text_length_between, min: 1,
-                                  max: Project::IDENTIFIER_MAX_LENGTH) %>
+            max: Project::IDENTIFIER_MAX_LENGTH) %>
       <%= t(:text_project_identifier_info).html_safe %>
     </div>
 

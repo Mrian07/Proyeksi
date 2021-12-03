@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Provides an asynchronous job to create a managed repository on the filesystem.
 # Currently, this is run synchronously due to potential issues

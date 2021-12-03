@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomStylesController < ApplicationController
   layout 'admin'
   menu_item :custom_style
@@ -76,8 +74,8 @@ class CustomStylesController < ApplicationController
     theme = ProyeksiApp::CustomStyles::ColorThemes.themes.find { |t| t[:theme] == params[:theme] }
 
     call = ::Design::UpdateDesignService
-      .new(theme)
-      .call
+             .new(theme)
+             .call
 
     call.on_success do
       flash[:notice] = I18n.t(:notice_successful_update)

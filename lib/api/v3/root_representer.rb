@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/decorators/single'
 
 module API
@@ -21,7 +19,7 @@ module API
 
       link :memberships do
         next unless current_user.allowed_to?(:view_members, nil, global: true) ||
-                    current_user.allowed_to?(:manage_members, nil, global: true)
+          current_user.allowed_to?(:manage_members, nil, global: true)
 
         {
           href: api_v3_paths.memberships

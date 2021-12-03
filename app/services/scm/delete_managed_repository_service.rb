@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Implements the asynchronous deletion of a local repository.
 class SCM::DeleteManagedRepositoryService < SCM::BaseRepositoryService

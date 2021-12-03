@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Sends mails for updates to memberships. There can be three cases we have to cover:
 # * user is added to a project
 # * existing project membership is altered

@@ -1,17 +1,16 @@
-
 <%
   managable = User.current.allowed_to?(:manage_news, @project)
- %>
+%>
 
 <% html_title(t(:label_news_plural)) -%>
 <%= toolbar title: t(:label_news_plural) do %>
   <% if managable %>
     <li class="toolbar-item">
       <%= link_to new_project_news_path(@project),
-          { class: 'button -alt-highlight',
-            id: 'new_news_link',
-            aria: {label: t(:label_news_new)},
-            title: t(:label_news_new)} do %>
+                  { class: 'button -alt-highlight',
+                    id: 'new_news_link',
+                    aria: { label: t(:label_news_new) },
+                    title: t(:label_news_new) } do %>
         <%= op_icon('button--icon icon-add') %>
         <span class="button--text"><%= t(:label_news_singular) %></span>
       <% end %>
@@ -21,19 +20,19 @@
 
 <% if @newss.any? %>
   <% @newss.each do |news| %>
-   <div class="news">
-    <h3 class="news--header"><%= avatar(news.author) %><%= link_to_project(news.project) + ': ' unless news.project == @project %>
-      <%= link_to h(news.title), news_path(news) %>
-      <%= "(#{t(:label_x_comments, count: news.comments_count)})" if news.comments_count > 0 %></h3>
-    <p class="author additional-information"><%= authoring news.created_at, news.author %></p>
-    <div class="wiki op-uc-container">
-      <%= format_text(news.summary.present? ? news.summary : truncate(news.description, length: 150, escape: false), object: news) %>
+    <div class="news">
+      <h3 class="news--header"><%= avatar(news.author) %><%= link_to_project(news.project) + ': ' unless news.project == @project %>
+        <%= link_to h(news.title), news_path(news) %>
+        <%= "(#{t(:label_x_comments, count: news.comments_count)})" if news.comments_count > 0 %></h3>
+      <p class="author additional-information"><%= authoring news.created_at, news.author %></p>
+      <div class="wiki op-uc-container">
+        <%= format_text(news.summary.present? ? news.summary : truncate(news.description, length: 150, escape: false), object: news) %>
+      </div>
     </div>
-   </div>
   <% end %>
 <% else %>
   <% if managable %>
-    <%= no_results_box(action_url:     new_project_news_path(@project),
+    <%= no_results_box(action_url: new_project_news_path(@project),
                        display_action: true) %>
   <% else %>
     <%= no_results_box %>
@@ -43,9 +42,9 @@
 <%= pagination_links_full @newss %>
 
 <%= other_formats_links do |f| %>
-  <%= f.link_to 'Atom', url: {project_id: @project, key: User.current.rss_key} %>
+  <%= f.link_to 'Atom', url: { project_id: @project, key: User.current.rss_key } %>
 <% end %>
 
 <% content_for :header_tags do %>
-  <%= auto_discovery_link_tag(:atom, params.merge({format: 'atom', page: nil, key: User.current.rss_key})) %>
+  <%= auto_discovery_link_tag(:atom, params.merge({ format: 'atom', page: nil, key: User.current.rss_key })) %>
 <% end %>

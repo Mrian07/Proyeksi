@@ -1,15 +1,14 @@
-
 <%= t(:mail_body_register_user, name: @user.name) %>
 
 <%= t(:mail_body_register) %>
 <%= @activation_url %>
 
 <%= strip_tags t(:mail_body_register_links_html,
-      webinar_link: ProyeksiApp::Static::Links.links[:webinar_videos][:href],
-      youtube_link: ProyeksiApp::Configuration.youtube_channel,
-      get_started_link: ProyeksiApp::Static::Links.links[:get_started_videos][:href],
-      documentation_link: ProyeksiApp::Static::Links.links[:proyeksiapp_docs][:href]
-    )
+                 webinar_link: ProyeksiApp::Static::Links.links[:webinar_videos][:href],
+                 youtube_link: ProyeksiApp::Configuration.youtube_channel,
+                 get_started_link: ProyeksiApp::Static::Links.links[:get_started_videos][:href],
+                 documentation_link: ProyeksiApp::Static::Links.links[:proyeksiapp_docs][:href]
+               )
 %>
 
 <%= t(:mail_body_register_ending) %>

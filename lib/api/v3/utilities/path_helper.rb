@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Utilities
@@ -20,31 +18,37 @@ module API
               "#{root}/#{path}"
             end
           end
+
           private_class_method :index
 
           def self.show(name)
             define_singleton_method(name) { |id| build_path(name, id) }
           end
+
           private_class_method :show
 
           def self.create_form(name)
             define_singleton_method(:"create_#{name}_form") { build_path(name, "form") }
           end
+
           private_class_method :create_form
 
           def self.update_form(name)
             define_singleton_method(:"#{name}_form") { |id| build_path(name, id, "form") }
           end
+
           private_class_method :update_form
 
           def self.schema(name)
             define_singleton_method(:"#{name}_schema") { build_path(name, "schema") }
           end
+
           private_class_method :schema
 
           def self.build_path(name, *kwargs)
             [root, name.to_s.pluralize, *kwargs].compact.join("/")
           end
+
           private_class_method :build_path
 
           def self.resources(name,
@@ -55,6 +59,7 @@ module API
               send(method, name)
             end
           end
+
           private_class_method :resources
 
           # Determining the root_path on every url we want to render is

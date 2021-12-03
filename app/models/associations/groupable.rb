@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Associations::Groupable
   def self.included(base)
     base.has_and_belongs_to_many :groups,

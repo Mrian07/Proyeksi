@@ -1,5 +1,3 @@
-
-
 require 'api/v3/configuration/configuration_representer'
 
 module API

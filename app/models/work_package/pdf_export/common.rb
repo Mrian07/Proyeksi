@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::PDFExport::Common
   include Redmine::I18n
   include ActionView::Helpers::TextHelper

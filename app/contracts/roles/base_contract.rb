@@ -1,5 +1,3 @@
-
-
 module Roles
   class BaseContract < ::ModelContract
     attribute :name

@@ -16,7 +16,7 @@ import { DynamicFieldWrapperComponent } from 'core-app/shared/components/dynamic
 import { InviteUserButtonModule } from 'core-app/features/invite-user-modal/button/invite-user-button.module';
 import { DateInputComponent } from 'core-app/shared/components/dynamic-forms/components/dynamic-inputs/date-input/date-input.component';
 import { DynamicFieldGroupWrapperComponent } from 'core-app/shared/components/dynamic-forms/components/dynamic-field-group-wrapper/dynamic-field-group-wrapper.component';
-import { ProyeksiAppHeaderInterceptor } from 'core-app/features/hal/http/openproject-header-interceptor';
+import { ProyeksiappHeaderInterceptor } from 'core-app/features/hal/http/proyeksiapp-header-interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormattableControlModule } from 'core-app/shared/components/dynamic-forms/components/dynamic-inputs/formattable-textarea-input/components/formattable-control/formattable-control.module';
 import { OPSharedModule } from 'core-app/shared/shared.module';
@@ -70,7 +70,7 @@ import { OPSharedModule } from 'core-app/shared/shared.module';
     FormattableTextareaInputComponent,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ProyeksiAppHeaderInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ProyeksiappHeaderInterceptor, multi: true },
   ],
   exports: [
     DynamicFormComponent,

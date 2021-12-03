@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages
   class CreateNoteContract < ::ModelContract
     def self.model

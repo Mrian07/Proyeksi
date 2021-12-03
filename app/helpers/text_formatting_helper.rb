@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module TextFormattingHelper
   extend Forwardable
   def_delegators :current_formatting_helper,

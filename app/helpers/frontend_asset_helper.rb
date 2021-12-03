@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module FrontendAssetHelper
   CLI_DEFAULT_PROXY = 'http://localhost:4200'.freeze
 

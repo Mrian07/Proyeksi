@@ -1,5 +1,3 @@
-
-
 module Roles
   class CreateContract < BaseContract
     attribute :type

@@ -1,5 +1,3 @@
-
-
 module BaseServices
   class Delete < BaseContracted
     def initialize(user:, model:, contract_class: nil, contract_options: {})

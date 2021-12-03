@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackage::InexistentWorkPackage < WorkPackage
   _validators.clear
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::WorkPackages::Filter::FilterOnUndirectedRelationsMixin
   include ::Queries::WorkPackages::Filter::FilterForWpMixin
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # rubocop:disable Naming/MethodName
 
 class Authorization::QueryTransformationVisitor < Arel::Visitors::Visitor

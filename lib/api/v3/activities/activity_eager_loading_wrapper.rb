@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Activities
@@ -105,8 +103,8 @@ module API
                   AND current.version > predecessors.version
                   ORDER BY predecessors.journable_type, predecessors.journable_id, current.version, predecessors.version DESC
                   ) AS journals
-                SQL
-              )
+            SQL
+            )
               .includes(:attachable_journals, :customizable_journals)
           end
         end

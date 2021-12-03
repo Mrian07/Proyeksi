@@ -1,10 +1,10 @@
 class CleanCustomValues < ActiveRecord::Migration[5.2]
   def up
     invalid_cv = CustomValue
-      .joins(:custom_field)
-      .where("#{CustomField.table_name}.field_format = 'list'")
-      .where.not(value: '')
-      .where("value !~ '^[0-9]+$'")
+                   .joins(:custom_field)
+                   .where("#{CustomField.table_name}.field_format = 'list'")
+                   .where.not(value: '')
+                   .where("value !~ '^[0-9]+$'")
 
     if invalid_cv.count > 0
       warn_string = "Replacing invalid list custom values:\n"

@@ -1,5 +1,3 @@
-
-
 module Versions
   class BaseContract < ::ModelContract
     include AssignableValuesContract

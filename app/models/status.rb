@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Status < ApplicationRecord
   extend Pagination::Model
 
@@ -59,13 +57,16 @@ class Status < ApplicationRecord
     position <=> other.position
   end
 
-  def to_s; name end
+  def to_s
+    name
+  end
 
   def is_readonly
     return false unless can_readonly?
 
     super
   end
+
   alias :is_readonly? :is_readonly
 
   ##

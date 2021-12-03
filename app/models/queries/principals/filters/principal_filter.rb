@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Principals::Filters::PrincipalFilter < Queries::Filters::Base
   self.model = Principal
 

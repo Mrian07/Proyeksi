@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::FilterConfiguration
   attr_accessor(:filter_class, :filter_name, :operator)
 

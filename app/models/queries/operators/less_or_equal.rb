@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class LessOrEqual < Base
     label 'less_or_equal'

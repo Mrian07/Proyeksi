@@ -1,5 +1,3 @@
-
-
 # Deletes the roles granted to users by being part of a group.
 # Will only delete the roles that are no longer granted so the group's membership needs to be deleted first.
 # In case the user has roles independent of the group (not inherited) they are kept.

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'roar/decorator'
 require 'roar/json/hal'
 
@@ -41,8 +39,8 @@ module API
                  end
 
           url_query = ::API::V3::Queries::QueryParamsRepresenter
-            .new(represented)
-            .to_url_query(merge_params: params.slice(:offset, :pageSize))
+                        .new(represented)
+                        .to_url_query(merge_params: params.slice(:offset, :pageSize))
           {
             href: [path, url_query].join('?')
           }
@@ -92,7 +90,7 @@ module API
 
         link :updateImmediately do
           next unless represented.new_record? && allowed_to?(:create) ||
-                      represented.persisted? && allowed_to?(:update)
+            represented.persisted? && allowed_to?(:update)
 
           {
             href: api_v3_paths.query(represented.id),
@@ -102,7 +100,7 @@ module API
 
         link :updateOrderedWorkPackages do
           next unless represented.new_record? && allowed_to?(:create) ||
-                      represented.persisted? && allowed_to?(:reorder_work_packages)
+            represented.persisted? && allowed_to?(:reorder_work_packages)
 
           {
             href: api_v3_paths.query_order(represented.id),
@@ -112,7 +110,7 @@ module API
 
         link :delete do
           next if represented.new_record? ||
-                  !allowed_to?(:destroy)
+            !allowed_to?(:destroy)
 
           {
             href: api_v3_paths.query(represented.id),

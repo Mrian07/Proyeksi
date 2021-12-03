@@ -1,5 +1,3 @@
-
-
 require 'api/v3/activities/activity_representer'
 
 module API

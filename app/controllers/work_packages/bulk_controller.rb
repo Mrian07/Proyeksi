@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::BulkController < ApplicationController
   before_action :find_work_packages
   before_action :authorize
@@ -17,8 +15,8 @@ class WorkPackages::BulkController < ApplicationController
 
   def update
     @call = ::WorkPackages::Bulk::UpdateService
-      .new(user: current_user, work_packages: @work_packages)
-      .call(params: params)
+              .new(user: current_user, work_packages: @work_packages)
+              .call(params: params)
 
     if @call.success?
       flash[:notice] = t(:notice_successful_update)

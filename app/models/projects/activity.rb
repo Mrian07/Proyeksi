@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require Rails.root.join('config/constants/project_activity')
 
 module Projects::Activity

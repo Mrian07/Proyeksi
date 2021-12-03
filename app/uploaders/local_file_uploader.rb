@@ -1,5 +1,3 @@
-
-
 require 'fileutils'
 
 class LocalFileUploader < CarrierWave::Uploader::Base

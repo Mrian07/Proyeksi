@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Notifications::CreateFromModelService
   MENTION_USER_ID_PATTERN =
     '<mention[^>]*(?:data-type="user"[^>]*data-id="(\d+)")|(?:data-id="(\d+)"[^>]*data-type="user")[^>]*>)|(?:\buser#(\d+)\b'

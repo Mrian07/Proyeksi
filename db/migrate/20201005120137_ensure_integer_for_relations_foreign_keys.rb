@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # The conversion of MySQL databases to PostgreSQL seems to create a lot of columns
 # that should be of type `integer` but are created as `bigint`.
 # This leads to cast errors e.g. when combining an array of integers with a bigint.

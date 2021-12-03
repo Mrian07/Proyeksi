@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 class Tables::WorkPackages < Tables::Base
@@ -46,5 +44,6 @@ class Tables::WorkPackages < Tables::Base
       t.index %i[project_id updated_at]
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

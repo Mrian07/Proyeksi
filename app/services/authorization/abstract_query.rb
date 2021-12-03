@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::AbstractQuery
   class_attribute :model
   class_attribute :base_table

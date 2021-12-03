@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MenuItems::WikiMenuItem < MenuItem
   belongs_to :wiki, foreign_key: 'navigatable_id'
 

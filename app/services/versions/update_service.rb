@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Versions
   class UpdateService < ::BaseServices::Update
     private
@@ -15,7 +13,7 @@ module Versions
     # Update the issue's versions. Used if a version's sharing changes.
     def update_wps_from_sharing_change
       if no_valid_version_before_or_now? ||
-         sharing_now_less_broad?
+        sharing_now_less_broad?
         WorkPackage.update_versions_from_sharing_change model
       end
     end

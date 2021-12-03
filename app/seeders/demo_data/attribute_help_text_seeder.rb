@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DemoData
   class AttributeHelpTextSeeder < Seeder
     def initialize; end

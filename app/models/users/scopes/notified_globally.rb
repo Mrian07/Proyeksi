@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Return all users who have a global setting configured
 # Does not take into consideration local overrides, as
 # that is currently not available for non-work-package settings

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Admin::BackupsController < ApplicationController
   include PasswordConfirmation
   include ActionView::Helpers::TagHelper

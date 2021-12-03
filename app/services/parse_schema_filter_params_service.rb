@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ParseSchemaFilterParamsService
   extend ActiveModel::Naming
   extend ActiveModel::Translation

@@ -1,5 +1,3 @@
-
-
 module PlaceholderUsers
   class RowCell < ::RowCell
     include AvatarHelper

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 Dir["#{Rails.root}/db/migrate/tables/*.rb"].each { |file| require file }
 Dir["#{Rails.root}/db/migrate/aggregated/*.rb"].each { |file| require file }
 

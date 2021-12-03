@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Wiki < ApplicationRecord
   belongs_to :project
   has_many :pages, -> {

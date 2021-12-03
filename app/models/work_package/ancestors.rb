@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::Ancestors
   extend ActiveSupport::Concern
 
@@ -43,8 +41,8 @@ module WorkPackage::Ancestors
       end
 
       results = with_work_package_ancestors
-                .map { |wp| [wp.id, wp.ancestors] }
-                .to_h
+                  .map { |wp| [wp.id, wp.ancestors] }
+                  .to_h
 
       default.merge(results)
     end

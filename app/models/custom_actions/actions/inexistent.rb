@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::Inexistent < CustomActions::Actions::Base
   def self.key
     :inexistent

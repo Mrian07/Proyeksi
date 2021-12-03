@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::StatusTransitions
   # Return true if the issue is being reopened
   def reopened?

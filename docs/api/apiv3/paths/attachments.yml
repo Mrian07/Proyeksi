@@ -43,7 +43,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request could not be parsed as JSON.
       description: |-
         Returned if the client sends a not understandable request. Reasons include:
@@ -59,7 +59,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to delete this attachment.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -73,7 +73,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: File is too large (maximum size is 5242880 Bytes).
       description: |-
         Returned if the client tries to send an invalid attachment.

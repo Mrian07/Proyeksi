@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Strategies
   class HugeList < List
     delegate :allowed_values_subset,

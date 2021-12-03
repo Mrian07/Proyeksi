@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   module DatetimeRangeClauses
     def datetime_range_clause(table, field, from, to)

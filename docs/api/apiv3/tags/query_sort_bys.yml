@@ -12,7 +12,7 @@ description: |-
   | :--------------: | ------------------------------------------------------                                                                                                                                                                    | ----------- | -------------------------------- | -------------------- |
   | self             | This query sort by                                                                                                                                                                                                        | QuerySortBy | not null                         | READ                 |
   | column           | The QueryColumn to sort on.                                                                                                                                                                                               | QueryColumn | not null                         | READ                 |
-  | direction        | The direction the QueryColumn is to be sorted in. This property is identified by a URI (`urn:openproject-org:api:v3:queries:directions:asc` or `urn:openproject-org:api:v3:queries:directions:desc`) instead of by a URL. |             | not null                         | READ                 |
+  | direction        | The direction the QueryColumn is to be sorted in. This property is identified by a URI (`urn:proyeksi-app:api:v3:queries:directions:asc` or `urn:proyeksi-app:api:v3:queries:directions:desc`) instead of by a URL. |             | not null                         | READ                 |
 
   ## Local Properties
 

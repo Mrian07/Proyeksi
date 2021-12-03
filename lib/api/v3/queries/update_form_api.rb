@@ -1,5 +1,3 @@
-
-
 require 'api/v3/queries/query_representer'
 
 module API

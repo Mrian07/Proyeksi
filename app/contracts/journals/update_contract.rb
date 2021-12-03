@@ -1,5 +1,3 @@
-
-
 module Journals
   class UpdateContract < BaseContract
     attribute :notes

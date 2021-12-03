@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Queries::Filters::ProjectIdentifierFilter < Queries::Queries::Filters::QueryFilter
   def type
     :list

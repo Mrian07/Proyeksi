@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AddHierarchyPaths < ActiveRecord::Migration[5.1]
   def change
     create_table :hierarchy_paths, id: :integer do |t|

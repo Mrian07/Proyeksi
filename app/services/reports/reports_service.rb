@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Reports::ReportsService
   class_attribute :report_types
 

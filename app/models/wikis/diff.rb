@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Wikis::Diff < Redmine::Helpers::Diff
   attr_reader :content_to, :content_from
 

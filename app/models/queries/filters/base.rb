@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'queries/operators'
 
 class Queries::Filters::Base
@@ -147,8 +145,8 @@ class Queries::Filters::Base
 
   def error_messages
     messages = errors
-               .full_messages
-               .join(" #{I18n.t('support.array.sentence_connector')} ")
+                 .full_messages
+                 .join(" #{I18n.t('support.array.sentence_connector')} ")
 
     errors.full_message(human_name, messages)
   end

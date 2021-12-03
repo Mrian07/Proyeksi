@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ErrorMessageHelper
   def error_messages_for(*params)
     objects, options = extract_objects_from_params(params)

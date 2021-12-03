@@ -1,5 +1,3 @@
-
-
 module Projects
   class UpdateContract < BaseContract
     private

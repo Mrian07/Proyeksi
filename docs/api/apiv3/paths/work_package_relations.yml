@@ -46,7 +46,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: Occurs when the client did not send a valid JSON object in the
         request body.
@@ -58,7 +58,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to create a relation.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -72,7 +72,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:UpdateConflict
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:UpdateConflict
                 message: Couldn't update the resource because of conflicting modifications.
       description: |-
         Returned if there already exists a relation between the given work packages of **any** type
@@ -88,7 +88,7 @@ post:
                   details:
                     attribute: delay
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: Delay must be a number greater than or equal to 0
       description: |-
         Returned if:

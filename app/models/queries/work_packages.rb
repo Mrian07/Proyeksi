@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::WorkPackages
   filters_module = Queries::WorkPackages::Filter
   register = Queries::Register

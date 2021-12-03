@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # The contract is not actually used for validations but rather to display the unimbedded schema
 # as the writable attributes differ depending on whether the user has the necessary permissions.
 # As we do not know the context of the schema, other than when it is embedded inside a form, we have to allow

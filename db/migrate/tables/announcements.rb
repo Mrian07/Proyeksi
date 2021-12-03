@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 class Tables::Announcements < Tables::Base

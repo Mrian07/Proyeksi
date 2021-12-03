@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 #
 module Query::ManualSorting
   extend ActiveSupport::Concern
@@ -16,6 +15,7 @@ module Query::ManualSorting
     def self.manual_sorting_column
       ::Queries::WorkPackages::Columns::ManualSortingColumn.new
     end
+
     delegate :manual_sorting_column, to: :class
   end
 end

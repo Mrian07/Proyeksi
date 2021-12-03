@@ -1,5 +1,3 @@
-
-
 # The sole purpose of this is to have a work package
 # that is inexpensive to initialize by overriding the after_initialize hook
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Filters::IdFilter < Queries::Notifications::Filters::NotificationFilter
   def allowed_values
     Notification

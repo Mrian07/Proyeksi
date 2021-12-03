@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Returns principals whose
 # * login
 # * firstname
@@ -19,9 +17,9 @@ module Principals::Scopes
         s = "%#{query.to_s.downcase.strip.tr(',', '')}%"
 
         where(['LOWER(login) LIKE :s OR ' +
-               "LOWER(#{firstnamelastname}) LIKE :s OR " +
-               "LOWER(#{lastnamefirstname}) LIKE :s OR " +
-               'LOWER(mail) LIKE :s',
+                 "LOWER(#{firstnamelastname}) LIKE :s OR " +
+                 "LOWER(#{lastnamefirstname}) LIKE :s OR " +
+                 'LOWER(mail) LIKE :s',
                { s: s }])
           .order(:type, :login, :lastname, :firstname, :mail)
       end

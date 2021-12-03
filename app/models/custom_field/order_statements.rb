@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomField::OrderStatements
   # Returns a ORDER BY clause that can used to sort customized
   # objects by their value of the custom field.

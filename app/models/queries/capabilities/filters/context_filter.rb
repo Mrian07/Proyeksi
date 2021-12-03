@@ -1,5 +1,3 @@
-
-
 class Queries::Capabilities::Filters::ContextFilter < Queries::Capabilities::Filters::CapabilityFilter
   include Queries::Filters::Shared::ParsedFilter
 

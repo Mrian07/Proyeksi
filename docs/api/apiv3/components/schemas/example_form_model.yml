@@ -72,6 +72,6 @@ example:
     validationErrors:
       subject:
         _type: Error
-        errorIdentifier: urn:openproject-org:api:v3:errors:BadExampleError
+        errorIdentifier: urn:proyeksi-app:api:v3:errors:BadExampleError
         message: For the purpose of this example we need a validation error. The remainder
           of the response pretends there were no errors.

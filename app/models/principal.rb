@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Principal < ApplicationRecord
   include ::Scopes::Scoped
 
@@ -136,7 +134,7 @@ class Principal < ApplicationRecord
     # by the #compact call.
     def type_condition(table = arel_table)
       sti_column = table[inheritance_column]
-      sti_names  = ([self] + descendants).map(&:sti_name).compact
+      sti_names = ([self] + descendants).map(&:sti_name).compact
 
       predicate_builder.build(sti_column, sti_names)
     end

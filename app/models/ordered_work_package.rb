@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 #
 class OrderedWorkPackage < ApplicationRecord
   belongs_to :query

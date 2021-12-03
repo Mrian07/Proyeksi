@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Admin::Settings
   class AuthenticationSettingsController < ::Admin::SettingsController
     menu_item :authentication_settings

@@ -1,5 +1,3 @@
-
-
 module Tableless
   extend ActiveSupport::Concern
 

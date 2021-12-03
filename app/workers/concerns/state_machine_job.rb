@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # A StateMachineJob is a job that consists of multiple steps to complete where a step needs
 # to be finished before the next step is to be taken. Between each step, an amount of time may have to pass.
 # A job including this concern can define step-blocks that will be executed one after another.

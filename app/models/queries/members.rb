@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Members
   query = Queries::Members::MemberQuery
   filter_ns = Queries::Members::Filters

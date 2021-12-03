@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Projects::Filters::CustomFieldContext
   class << self
     def custom_field_class

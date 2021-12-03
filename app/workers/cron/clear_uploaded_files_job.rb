@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Cron
   class ClearUploadedFilesJob < CronJob
     include ::RakeJob

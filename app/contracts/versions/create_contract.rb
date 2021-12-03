@@ -1,5 +1,3 @@
-
-
 module Versions
   class CreateContract < BaseContract
     attribute :project_id

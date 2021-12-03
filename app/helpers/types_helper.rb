@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ::TypesHelper
   def types_tabs
     [
@@ -71,8 +69,8 @@ module ::TypesHelper
     return nil unless group.group_type == :attribute
 
     group.attributes
-      .select { |key| inactive.delete(key) }
-      .map! { |key| attr_form_map(key, available[key]) }
+         .select { |key| inactive.delete(key) }
+         .map! { |key| attr_form_map(key, available[key]) }
   end
 
   def query_to_query_props(group)

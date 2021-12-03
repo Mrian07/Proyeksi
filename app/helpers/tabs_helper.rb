@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module TabsHelper
   # Renders tabs and their content
   def render_tabs(tabs, form = nil)

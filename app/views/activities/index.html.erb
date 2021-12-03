@@ -1,9 +1,7 @@
-
-
 <%= call_hook :activity_index_head %>
 
 <%= toolbar title: (@author.nil? ? t(:label_activity) : t(:label_user_activity, value: link_to_user(@author))).html_safe,
-            subtitle: t(:label_date_from_to, start: format_date(@date_to - @days), end: format_date(@date_to-1))
+            subtitle: t(:label_date_from_to, start: format_date(@date_to - @days), end: format_date(@date_to - 1))
 %>
 
 <div id="activity">
@@ -21,11 +19,11 @@
               <%= content_tag('span', link_to(e.project.name, e.project), class: 'project') %>
               <span> - </span>
             <% end %>
-            <%= link_to format_activity_title(e.event_title), e.event_path%>
+            <%= link_to format_activity_title(e.event_title), e.event_path %>
           </div>
           <div class="description"><%= format_activity_description(e.event_description) %></div>
           <div class="author">
-            <%= avatar(e.event_author, {class: 'avatar-mini'}) if e.respond_to?(:event_author) %>
+            <%= avatar(e.event_author, { class: 'avatar-mini' }) if e.respond_to?(:event_author) %>
             <%= link_to_user(e.event_author) if e.respond_to?(:event_author) %>
           </div>
         </li>
@@ -42,14 +40,14 @@
 <div style="float:left;">
   <%= link_to_content_update(t(:label_previous),
                              { from: (@date_to - @days - 1) },
-                             {title: t(:label_date_from_to, start: format_date(@date_to - 2*@days), end: format_date(@date_to - @days - 1)),
-                             class: 'navigate-left'}) %>
+                             { title: t(:label_date_from_to, start: format_date(@date_to - 2 * @days), end: format_date(@date_to - @days - 1)),
+                               class: 'navigate-left' }) %>
 </div>
 <div style="float:right;">
   <%= link_to_content_update(t(:label_next),
                              { from: (@date_to + @days - 1) },
-                             {title: t(:label_date_from_to, start: format_date(@date_to), end: format_date(@date_to + @days - 1)),
-                             class: 'navigate-right'}) unless @date_to >= Date.today %>
+                             { title: t(:label_date_from_to, start: format_date(@date_to), end: format_date(@date_to + @days - 1)),
+                               class: 'navigate-right' }) unless @date_to >= Date.today %>
 </div>
 &nbsp;
 <%= other_formats_links do |f| %>
@@ -65,21 +63,23 @@
   <%= form_tag({}, method: :get) do %>
     <fieldset class="form--fieldset">
       <legend class="form--fieldset-legend"><%= t(:description_filter) %></legend>
-    <p>
-      <%= hidden_field_tag "event_types[]" %>
-      <% @activity.event_types.sort_by { |type| t("label_#{type.singularize}_plural") }.each do |t| %>
-        <%= check_box_tag "event_types[]", t, @activity.scope.include?(t), id: "event_types_#{t}" %>
-        <label for="event_types_<%=t%>"><%=t("label_#{t.singularize}_plural")%></label>
-        <br />
+      <p>
+        <%= hidden_field_tag "event_types[]" %>
+        <% @activity.event_types.sort_by { |type| t("label_#{type.singularize}_plural") }.each do |t| %>
+          <%= check_box_tag "event_types[]", t, @activity.scope.include?(t), id: "event_types_#{t}" %>
+          <label for="event_types_<%= t %>"><%= t("label_#{t.singularize}_plural") %></label>
+          <br/>
+        <% end %>
+      </p>
+      <% if @project && @project.descendants.active.any? %>
+        <%= hidden_field_tag 'with_subprojects', 0 %>
+        <p>
+          <label><%= check_box_tag 'with_subprojects', 1, @with_subprojects %> <%= t(:label_subproject_plural) %></label>
+        </p>
       <% end %>
-    </p>
-    <% if @project && @project.descendants.active.any? %>
-      <%= hidden_field_tag 'with_subprojects', 0 %>
-      <p><label><%= check_box_tag 'with_subprojects', 1, @with_subprojects %> <%=t(:label_subproject_plural)%></label></p>
-    <% end %>
-    <%= hidden_field_tag('user_id', params[:user_id]) unless params[:user_id].blank? %>
-    <%= hidden_field_tag('apply', true) %>
-    <p><%= submit_tag t(:button_apply), class: 'button -small -highlight', name: nil %></p>
+      <%= hidden_field_tag('user_id', params[:user_id]) unless params[:user_id].blank? %>
+      <%= hidden_field_tag('apply', true) %>
+      <p><%= submit_tag t(:button_apply), class: 'button -small -highlight', name: nil %></p>
     </fieldset>
   <% end %>
 <% end %>

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'htmldiff'
 
 # The WikiController follows the Rails REST controller pattern but with
@@ -234,12 +232,12 @@ class WikiController < ApplicationController
   def history
     # don't load text
     @versions = @page
-                .content
-                .journals
-                .select(:id, :user_id, :notes, :created_at, :version)
-                .order(Arel.sql('version DESC'))
-                .page(page_param)
-                .per_page(per_page_param)
+                  .content
+                  .journals
+                  .select(:id, :user_id, :notes, :created_at, :version)
+                  .order(Arel.sql('version DESC'))
+                  .page(page_param)
+                  .per_page(per_page_param)
 
     render layout: !request.xhr?
   end

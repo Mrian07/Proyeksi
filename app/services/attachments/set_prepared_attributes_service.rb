@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Attachments
   class SetPreparedAttributesService < SetAttributesService
     private

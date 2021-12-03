@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Projects::Status < ActiveRecord::Base
   belongs_to :project
 

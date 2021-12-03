@@ -42,8 +42,8 @@ class DirectFogUploader < FogFileUploader
     )
       uploader = direct_fog_hash_uploader attachment, success_action_redirect, success_action_status
       hash = uploader
-        .direct_fog_hash(enforce_utf8: false, max_file_size: max_file_size)
-        .merge(extra_fog_hash_attributes(uploader: uploader))
+               .direct_fog_hash(enforce_utf8: false, max_file_size: max_file_size)
+               .merge(extra_fog_hash_attributes(uploader: uploader))
 
       if success_action_redirect.present?
         hash.merge(success_action_redirect: success_action_redirect)

@@ -1,4 +1,3 @@
-
 module DevelopmentData
   class ProjectsSeeder < Seeder
     def seed_data!

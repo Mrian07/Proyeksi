@@ -1,5 +1,3 @@
-
-
 module Attachments
   class DeleteContract < ::DeleteContract
     delete_permission -> {

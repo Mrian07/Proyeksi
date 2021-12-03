@@ -1,8 +1,8 @@
 #-- encoding: UTF-8
 
-
-
-module Aggregated; end
+module Aggregated
+  ;
+end
 
 class Aggregated::Base
   def self.migrations

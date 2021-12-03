@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Comment < ApplicationRecord
   belongs_to :commented, polymorphic: true, counter_cache: true
   belongs_to :author, class_name: 'User'

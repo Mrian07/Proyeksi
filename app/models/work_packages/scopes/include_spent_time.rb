@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages::Scopes::IncludeSpentTime
   extend ActiveSupport::Concern
 
@@ -10,9 +8,9 @@ module WorkPackages::Scopes::IncludeSpentTime
       query = join_time_entries(user)
 
       scope = left_join_self_and_descendants(user, work_package)
-              .joins(query.join_sources)
-              .group(:id)
-              .select('SUM(time_entries.hours) AS hours')
+                .joins(query.join_sources)
+                .group(:id)
+                .select('SUM(time_entries.hours) AS hours')
 
       if work_package
         scope.where(id: work_package.id)
@@ -25,8 +23,8 @@ module WorkPackages::Scopes::IncludeSpentTime
 
     def join_time_entries(user)
       join_condition = time_entries_table[:work_package_id]
-                       .eq(wp_descendants[:id])
-                       .and(allowed_to_view_time_entries(user))
+                         .eq(wp_descendants[:id])
+                         .and(allowed_to_view_time_entries(user))
 
       wp_table
         .outer_join(time_entries_table)

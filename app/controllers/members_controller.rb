@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MembersController < ApplicationController
   model_object Member
   before_action :find_model_object_and_project, except: [:autocomplete_for_member]
@@ -55,8 +53,8 @@ class MembersController < ApplicationController
 
   def destroy
     service_call = Members::DeleteService
-      .new(user: current_user, model: @member)
-      .call
+                     .new(user: current_user, model: @member)
+                     .call
 
     if service_call.success?
       display_success(I18n.t(:notice_member_removed, user: @member.principal.name))
@@ -205,7 +203,7 @@ class MembersController < ApplicationController
           # The invitation can pretty much only fail due to the user already
           # having been invited. So look them up if it does.
           user = UserInvitation.invite_new_user(email: id) ||
-                 User.find_by_mail(id)
+            User.find_by_mail(id)
 
           user&.id
         end

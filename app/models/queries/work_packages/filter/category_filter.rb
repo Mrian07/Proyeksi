@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::CategoryFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values

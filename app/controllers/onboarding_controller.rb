@@ -1,14 +1,12 @@
 #-- encoding: UTF-8
 
-
-
 class OnboardingController < ApplicationController
   def user_settings
     @user = User.current
 
     result = Users::UpdateService
-             .new(model: @user, user: @user)
-             .call(permitted_params.user.to_h)
+               .new(model: @user, user: @user)
+               .call(permitted_params.user.to_h)
 
     if result.success?
       flash[:notice] = I18n.t(:notice_account_updated)

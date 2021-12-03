@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     class ParamsToQueryService < ::ParamsToQueryService

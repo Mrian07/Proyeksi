@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomStylesHelper
   def apply_custom_styles?(skip_ee_check: ProyeksiApp::Configuration.bim?)
     # Apply custom styles either if EE allows OR we are on a BIM edition with the BIM theme active.

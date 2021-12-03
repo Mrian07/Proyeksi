@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class BooleanEqualsStrict < Base
     label 'equals'

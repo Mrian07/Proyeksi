@@ -26,7 +26,7 @@ class ApplicationRecord < ::ActiveRecord::Base
       column_name = clz.send(:timestamp_attributes_for_update_in_model)&.first || 'updated_at'
       "(SELECT MAX(#{column_name}) AS max_updated_at FROM #{clz.table_name})"
     end
-      .join(" UNION ")
+                            .join(" UNION ")
 
     union_query = <<~SQL
       SELECT MAX(union_query.max_updated_at)

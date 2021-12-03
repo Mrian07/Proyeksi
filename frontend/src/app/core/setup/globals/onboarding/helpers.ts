@@ -1,6 +1,6 @@
 export const demoProjectName = 'Demo project';
 export const scrumDemoProjectName = 'Scrum project';
-export const onboardingTourStorageKey = 'openProject-onboardingTour';
+export const onboardingTourStorageKey = 'proyeksiapp-onboardingTour';
 export type OnboardingTourNames = 'prepareBacklogs'|'backlogs'|'taskboard'|'homescreen'|'main';
 
 export function waitForElement(element:string, container:string, execFunction:Function) {

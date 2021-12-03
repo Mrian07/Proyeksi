@@ -1,5 +1,3 @@
-
-
 module Notifications
   class SetAttributesService < ::BaseServices::SetAttributes
     private

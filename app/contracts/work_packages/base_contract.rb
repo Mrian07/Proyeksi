@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages
   class BaseContract < ::ModelContract
     include ::Attachments::ValidateReplacements
@@ -160,6 +158,7 @@ module WorkPackages
         Principal.none
       end
     end
+
     alias_method :assignable_responsibles, :assignable_assignees
 
     private
@@ -374,11 +373,11 @@ module WorkPackages
 
     def new_statuses_by_workflow(status)
       workflows = Workflow
-                  .from_status(status.id,
-                               model.type_id,
-                               users_roles_in_project.map(&:id),
-                               user_is_author?,
-                               user_was_or_is_assignee?)
+                    .from_status(status.id,
+                                 model.type_id,
+                                 users_roles_in_project.map(&:id),
+                                 user_is_author?,
+                                 user_was_or_is_assignee?)
 
       Status.where(id: workflows.select(:new_status_id))
     end

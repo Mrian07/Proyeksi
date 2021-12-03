@@ -55,7 +55,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidUserStatusTransition
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidUserStatusTransition
                 message: The current user account status does not allow this operation.
       description: |-
         Returned if the client tries to unlock a user account whose current status does not allow this transition.
@@ -69,7 +69,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to unlock the account of this user.
       description: |-
         Returned if the client does not have sufficient permissions for unlocking a user.
@@ -83,7 +83,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified user does not exist.
       description: Returned if the user does not exist.
       headers: {}
@@ -147,7 +147,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidUserStatusTransition
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidUserStatusTransition
                 message: The current user account status does not allow this operation.
       description: |-
         Returned if the client tries to lock a user account whose current status does not allow this transition.
@@ -161,7 +161,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to lock the account of this user.
       description: |-
         Returned if the client does not have sufficient permissions for locking a user.
@@ -175,7 +175,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified user does not exist.
       description: Returned if the user does not exist.
       headers: {}

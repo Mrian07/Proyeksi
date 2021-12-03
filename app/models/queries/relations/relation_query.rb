@@ -1,5 +1,3 @@
-
-
 module Queries
   module Relations
     class RelationQuery < ::Queries::BaseQuery

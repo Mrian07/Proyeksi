@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module BasicData
   class ColorSchemeSeeder < Seeder
     def seed_data!

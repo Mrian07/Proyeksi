@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # project, projects, global, user = nil
 
 class AuthorizationService

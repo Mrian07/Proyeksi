@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ::Query::Results::Sums
   include ActionView::Helpers::NumberHelper
 
@@ -57,9 +55,9 @@ module ::Query::Results::Sums
 
   def sums_work_package_scope(grouped)
     scope = WorkPackage
-            .where(id: work_packages)
-            .except(:order, :select)
-            .select(sums_work_package_scope_selects(grouped))
+              .where(id: work_packages)
+              .except(:order, :select)
+              .select(sums_work_package_scope_selects(grouped))
 
     if grouped
       scope.group(query.group_by_statement)
@@ -71,14 +69,14 @@ module ::Query::Results::Sums
   def sums_callable_joins(grouped)
     callable_summed_up_columns
       .map do |c|
-        join_condition = if grouped
-                           "#{c.name}.id = work_packages.id OR #{c.name}.id IS NULL AND work_packages.id IS NULL"
-                         else
-                           "TRUE"
-                         end
+      join_condition = if grouped
+                         "#{c.name}.id = work_packages.id OR #{c.name}.id IS NULL AND work_packages.id IS NULL"
+                       else
+                         "TRUE"
+                       end
 
-        "LEFT OUTER JOIN (#{c.summable.(query, grouped).to_sql}) #{c.name} ON #{join_condition}"
-      end
+      "LEFT OUTER JOIN (#{c.summable.(query, grouped).to_sql}) #{c.name} ON #{join_condition}"
+    end
       .join(' ')
   end
 

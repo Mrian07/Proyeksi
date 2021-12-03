@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Members
   class SetAttributesService < ::BaseServices::SetAttributes
     private
@@ -16,9 +14,9 @@ module Members
       return unless params[:role_ids]
 
       role_ids = params
-        .delete(:role_ids)
-        .select(&:present?)
-        .map(&:to_i)
+                   .delete(:role_ids)
+                   .select(&:present?)
+                   .map(&:to_i)
 
       existing_ids = model.member_roles.map(&:role_id)
 

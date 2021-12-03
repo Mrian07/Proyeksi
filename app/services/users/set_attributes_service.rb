@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class SetAttributesService < ::BaseServices::SetAttributes
     include ::HookHelper
@@ -50,6 +48,7 @@ module Users
       model.lastname = model.lastname.presence || placeholder.last
       model.language = model.language.presence || Setting.default_language
     end
+
     # rubocop:enable Metrics/AbcSize
 
     ##

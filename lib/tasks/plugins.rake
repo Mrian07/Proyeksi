@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 require 'bundler'
 require 'json'
 

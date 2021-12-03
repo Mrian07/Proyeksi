@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Because we mark the notifications as read even though they in fact aren't, we do it in a transaction
 # so that the change is rolled back in case of an error.
 module Notifications

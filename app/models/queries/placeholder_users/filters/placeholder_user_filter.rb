@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::PlaceholderUsers::Filters::PlaceholderUserFilter < Queries::Filters::Base
   self.model = PlaceholderUser
 

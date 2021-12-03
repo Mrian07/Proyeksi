@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AttributeHelpTextsHelper
   def selectable_attributes(instance)
     available = instance.class.available_attributes

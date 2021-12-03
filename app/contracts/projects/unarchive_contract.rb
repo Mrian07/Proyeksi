@@ -1,5 +1,3 @@
-
-
 module Projects
   class UnarchiveContract < ModelContract
     include RequiresAdminGuard

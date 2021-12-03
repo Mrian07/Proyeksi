@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Version < ApplicationRecord
   include ::Versions::ProjectSharing
   include ::Scopes::Scoped
@@ -57,10 +55,10 @@ class Version < ApplicationRecord
   # Returns the total reported time for this version
   def spent_hours
     @spent_hours ||= TimeEntry
-                     .includes(:work_package)
-                     .where(work_packages: { version_id: id })
-                     .sum(:hours)
-                     .to_f
+                       .includes(:work_package)
+                       .where(work_packages: { version_id: id })
+                       .sum(:hours)
+                       .to_f
   end
 
   def closed?
@@ -135,7 +133,9 @@ class Version < ApplicationRecord
     @wiki_page
   end
 
-  def to_s; name end
+  def to_s
+    name
+  end
 
   def to_s_with_project
     "#{project} - #{name}"
@@ -190,21 +190,21 @@ class Version < ApplicationRecord
   def issues_progress(open)
     @issues_progress ||= {}
     @issues_progress[open] ||= begin
-      progress = 0
+                                 progress = 0
 
-      if issues_count > 0
-        ratio = open ? 'done_ratio' : 100
-        sum_sql = self.class.sanitize_sql_array(
-          ["COALESCE(#{WorkPackage.table_name}.estimated_hours, ?) * #{ratio}", estimated_average]
-        )
+                                 if issues_count > 0
+                                   ratio = open ? 'done_ratio' : 100
+                                   sum_sql = self.class.sanitize_sql_array(
+                                     ["COALESCE(#{WorkPackage.table_name}.estimated_hours, ?) * #{ratio}", estimated_average]
+                                   )
 
-        done = work_packages
-               .where(statuses: { is_closed: !open })
-               .includes(:status)
-               .sum(sum_sql)
-        progress = done.to_f / (estimated_average * issues_count)
-      end
-      progress
-    end
+                                   done = work_packages
+                                            .where(statuses: { is_closed: !open })
+                                            .includes(:status)
+                                            .sum(sum_sql)
+                                   progress = done.to_f / (estimated_average * issues_count)
+                                 end
+                                 progress
+                               end
   end
 end

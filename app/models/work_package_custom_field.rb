@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackageCustomField < CustomField
   has_and_belongs_to_many :projects,
                           join_table: "#{table_name_prefix}custom_fields_projects#{table_name_suffix}",

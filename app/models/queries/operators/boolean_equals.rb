@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class BooleanEquals < Base
     label 'equals'
@@ -15,7 +13,7 @@ module Queries::Operators
       end
 
       sql += "#{db_table}.#{db_field} IN (" +
-             values.map { |val| "'#{connection.quote_string(val)}'" }.join(',') + ')'
+        values.map { |val| "'#{connection.quote_string(val)}'" }.join(',') + ')'
 
       sql
     end

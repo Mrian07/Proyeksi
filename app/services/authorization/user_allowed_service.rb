@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::UserAllowedService
   attr_accessor :user
 

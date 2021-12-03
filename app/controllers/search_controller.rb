@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class SearchController < ApplicationController
   include Layout
 

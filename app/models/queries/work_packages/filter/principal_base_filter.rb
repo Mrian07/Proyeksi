@@ -1,15 +1,13 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::PrincipalBaseFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   include Queries::WorkPackages::Filter::MeValueFilterMixin
 
   def allowed_values
     @allowed_values ||= begin
-      me_allowed_value + principal_loader.principal_values
-    end
+                          me_allowed_value + principal_loader.principal_values
+                        end
   end
 
   def available?

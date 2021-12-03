@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Projects::Settings::StorageController < Projects::SettingsController
   menu_item :settings_storage
 

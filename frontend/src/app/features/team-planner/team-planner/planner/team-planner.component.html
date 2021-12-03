@@ -1,4 +1,14 @@
-<full-calendar #ucCalendar
-               *ngIf="calendarOptions"
-               [options]="calendarOptions">
-</full-calendar>
+<ng-container
+  *ngIf="(calendarOptions$ | async) as calendarOptions"
+>
+  <full-calendar
+    #ucCalendar
+    *ngIf="calendarOptions"
+    [options]="calendarOptions"
+  ></full-calendar>
+</ng-container>
+<ng-template #resourceContent let-resource="resource">
+  <op-principal
+    [principal]="resource.extendedProps.user"
+  ></op-principal>
+</ng-template>

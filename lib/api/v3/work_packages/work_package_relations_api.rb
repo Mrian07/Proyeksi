@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module WorkPackages
@@ -14,10 +12,10 @@ module API
             query = ::Queries::Relations::RelationQuery.new(user: current_user)
 
             relations = query
-                        .where(:involved, '=', @work_package.id)
-                        .results
-                        .non_hierarchy
-                        .includes(::API::V3::Relations::RelationCollectionRepresenter.to_eager_load)
+                          .where(:involved, '=', @work_package.id)
+                          .results
+                          .non_hierarchy
+                          .includes(::API::V3::Relations::RelationCollectionRepresenter.to_eager_load)
 
             ::API::V3::Relations::RelationCollectionRepresenter.new(
               relations,

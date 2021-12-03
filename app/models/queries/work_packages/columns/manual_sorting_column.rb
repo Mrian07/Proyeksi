@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Columns::ManualSortingColumn < Queries::WorkPackages::Columns::WorkPackageColumn
   include ::Queries::WorkPackages::Common::ManualSorting
 

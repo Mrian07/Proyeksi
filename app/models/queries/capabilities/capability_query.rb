@@ -1,5 +1,3 @@
-
-
 class Queries::Capabilities::CapabilityQuery < Queries::BaseQuery
   def self.model
     Capability

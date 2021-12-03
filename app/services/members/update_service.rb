@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Members::UpdateService < ::BaseServices::Update
   include Members::Concerns::CleanedUp
 

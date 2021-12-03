@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Filters::NotificationFilter < Queries::Filters::Base
   self.model = Notification
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::CreateService < ::BaseServices::BaseCallable
   include ::WorkPackages::Shared::UpdateAncestors
   include ::Shared::ServiceContext
@@ -63,9 +61,9 @@ class WorkPackages::CreateService < ::BaseServices::BaseCallable
 
   def reschedule_related(work_package)
     result = WorkPackages::SetScheduleService
-             .new(user: user,
-                  work_package: work_package)
-             .call
+               .new(user: user,
+                    work_package: work_package)
+               .call
 
     result.self_and_dependent.each do |r|
       unless r.result.save

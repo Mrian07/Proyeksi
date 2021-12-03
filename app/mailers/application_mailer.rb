@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ApplicationMailer < ActionMailer::Base
   layout 'mailer'
 

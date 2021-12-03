@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Activities::NewsActivityProvider < Activities::BaseActivityProvider
   activity_provider_for type: 'news',
                         permission: :view_news

@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Groups
@@ -28,9 +26,9 @@ module API
                      .new(model: Group)
                      .mount
             delete &::API::V3::Utilities::Endpoints::Delete
-                     .new(model: Group,
-                          success_status: 202)
-                     .mount
+                      .new(model: Group,
+                           success_status: 202)
+                      .mount
           end
         end
       end

@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Queries
@@ -7,8 +5,8 @@ module API
         module QueryRepresenterResponse
           def query_representer_response(query, params, valid_subset = false)
             representer = ::API::V3::WorkPackageCollectionFromQueryService
-                          .new(query, current_user)
-                          .call(params, valid_subset: valid_subset)
+                            .new(query, current_user)
+                            .call(params, valid_subset: valid_subset)
 
             if representer.success?
               QueryRepresenter.new(query,

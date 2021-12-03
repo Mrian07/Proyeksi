@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::EmptyStrategy < CustomValue::FormatStrategy
   def typed_value
     "#{value} #{I18n.t(:label_not_found)}"

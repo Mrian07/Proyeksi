@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class Required < Base
     label ::Relation::TYPE_REQUIRED

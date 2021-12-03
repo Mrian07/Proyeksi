@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module BasicData
   class ActivitySeeder < Seeder
     def seed_data!

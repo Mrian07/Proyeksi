@@ -1,5 +1,3 @@
-
-
 require 'api/v3/repositories/revision_collection_representer'
 
 module API

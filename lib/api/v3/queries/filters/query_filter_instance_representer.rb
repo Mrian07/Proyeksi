@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Queries
@@ -43,10 +41,10 @@ module API
                           next unless fragment
 
                           represented.operator = ::API::Utilities::ResourceLinkParser
-                                                 .parse_id fragment["href"],
-                                                           property: 'operator',
-                                                           expected_version: '3',
-                                                           expected_namespace: 'queries/operators'
+                                                   .parse_id fragment["href"],
+                                                             property: 'operator',
+                                                             expected_version: '3',
+                                                             expected_namespace: 'queries/operators'
                         }
 
           resources :values,
@@ -55,13 +53,13 @@ module API
 
                       represented.value_objects.map do |value_object|
                         href = begin
-                          path_name = value_object.class.name.demodulize.underscore
+                                 path_name = value_object.class.name.demodulize.underscore
 
-                          api_v3_paths.send(path_name, value_object.id)
-                        rescue StandardError => e
-                          Rails.logger.error "Failed to get href for value_object #{value_object}: #{e}"
-                          nil
-                        end
+                                 api_v3_paths.send(path_name, value_object.id)
+                               rescue StandardError => e
+                                 Rails.logger.error "Failed to get href for value_object #{value_object}: #{e}"
+                                 nil
+                               end
 
                         link_object = {
                           href: href,

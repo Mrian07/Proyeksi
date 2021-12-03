@@ -1,5 +1,3 @@
-
-
 <%= call_hook(:view_repositories_show_contextual, { repository: @repository, project: @project }) %>
 
 <%= render partial: 'repository_header', locals: { empty: false } %>
@@ -11,4 +9,4 @@
 
 <p><%= render partial: 'link_to_functions' %></p>
 
-<%= render partial: 'common/file', locals: {filename: @path, content: @content} %>
+<%= render partial: 'common/file', locals: { filename: @path, content: @content } %>

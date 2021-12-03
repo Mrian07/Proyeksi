@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Type::FormGroup
   attr_accessor :key,
                 :attributes,

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Notifications
   [Queries::Notifications::Filters::ReadIanFilter,
    Queries::Notifications::Filters::IdFilter,

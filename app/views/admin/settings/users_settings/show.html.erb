@@ -1,4 +1,3 @@
-
 <% html_title t(:label_administration), t(:label_user_settings) -%>
 
 <%= toolbar title: t(:label_user_settings) %>
@@ -6,7 +5,7 @@
 <%= styled_form_tag(admin_settings_users_path, method: :patch, class: 'admin-settings--form') do %>
 
   <fieldset class="form--fieldset">
-    <legend class="form--fieldset-legend"><%= t(:'settings.user.default_preferences')%></legend>
+    <legend class="form--fieldset-legend"><%= t(:'settings.user.default_preferences') %></legend>
 
     <div class="form--field" id="setting_default_language">
       <%= setting_select :default_language, all_lang_options_for_select(false), container_class: '-slim' %>
@@ -14,10 +13,10 @@
 
     <%=
       cell(
-          Settings::TimeZoneSettingCell,
-          "user_default_timezone",
-          container_class: "-slim",
-          title: I18n.t("tooltip_user_default_timezone")
+        Settings::TimeZoneSettingCell,
+        "user_default_timezone",
+        container_class: "-slim",
+        title: I18n.t("tooltip_user_default_timezone")
       )
     %>
 
@@ -27,7 +26,7 @@
   </fieldset>
 
   <fieldset class="form--fieldset">
-    <legend class="form--fieldset-legend"><%= t(:'settings.user.deletion')%></legend>
+    <legend class="form--fieldset-legend"><%= t(:'settings.user.deletion') %></legend>
     <div class="form--field">
       <%= setting_check_box :users_deletable_by_admins %>
     </div>

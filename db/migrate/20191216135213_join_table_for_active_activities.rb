@@ -43,7 +43,7 @@ class JoinTableForActiveActivities < ActiveRecord::Migration[6.0]
         USING enumerations AS enums
         LEFT OUTER JOIN projects on enums.project_id = projects.id
         WHERE enums.id = enumerations.id AND enums.type = 'TimeEntryActivity' AND projects.id IS NULL AND enums.project_id IS NOT NULL
-      SQL
+    SQL
     )
   end
 
@@ -59,7 +59,7 @@ class JoinTableForActiveActivities < ActiveRecord::Migration[6.0]
         INNER JOIN enumerations ON te_source.activity_id = enumerations.id AND enumerations.parent_id IS NOT NULL AND enumerations.type = 'TimeEntryActivity'
         WHERE
           te_sink.id = te_source.id
-      SQL
+    SQL
     )
   end
 
@@ -82,10 +82,10 @@ class JoinTableForActiveActivities < ActiveRecord::Migration[6.0]
 
   def fill_new_join_table
     values = TimeEntryActivity
-             .where
-             .not(parent_id: nil)
-             .pluck(:project_id, :parent_id, :active)
-             .map { |project_id, parent_id, active| { project_id: project_id, activity_id: parent_id, active: active } }
+               .where
+               .not(parent_id: nil)
+               .pluck(:project_id, :parent_id, :active)
+               .map { |project_id, parent_id, active| { project_id: project_id, activity_id: parent_id, active: active } }
 
     ActivitiesJoinTable.insert_all(values) if values.present?
   end
@@ -110,7 +110,7 @@ class JoinTableForActiveActivities < ActiveRecord::Migration[6.0]
           NOW()
         FROM time_entry_activities_projects teap
         JOIN enumerations tea ON tea.id = teap.activity_id AND tea.type = 'TimeEntryActivity'
-      SQL
+    SQL
     )
   end
 end

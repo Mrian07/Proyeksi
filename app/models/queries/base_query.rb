@@ -1,5 +1,3 @@
-
-
 class Queries::BaseQuery
   class << self
     def model

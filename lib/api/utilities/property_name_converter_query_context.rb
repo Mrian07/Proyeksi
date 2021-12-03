@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     # The PropertyNameConverter checks whether the object responds to the attribute

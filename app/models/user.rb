@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'digest/sha1'
 
 class User < Principal
@@ -17,15 +15,15 @@ class User < Principal
   extend DeprecatedAlias
 
   has_many :categories, foreign_key: 'assigned_to_id',
-                        dependent: :nullify
+           dependent: :nullify
   has_many :watches, class_name: 'Watcher',
-                     dependent: :delete_all
+           dependent: :delete_all
   has_many :changesets, dependent: :nullify
   has_many :passwords, -> {
     order('id DESC')
   }, class_name: 'UserPassword',
-     dependent: :destroy,
-     inverse_of: :user
+           dependent: :destroy,
+           inverse_of: :user
   has_one :rss_token, class_name: '::Token::RSS', dependent: :destroy
   has_one :api_token, class_name: '::Token::API', dependent: :destroy
   belongs_to :auth_source
@@ -78,10 +76,10 @@ class User < Principal
   attr_accessor :password, :password_confirmation, :last_before_login_on
 
   validates :login,
-                        :firstname,
-                        :lastname,
-                        :mail,
-                        presence: { unless: Proc.new { |user| user.builtin? } }
+            :firstname,
+            :lastname,
+            :mail,
+            presence: { unless: Proc.new { |user| user.builtin? } }
 
   validates :login, uniqueness: { if: Proc.new { |user| !user.login.blank? }, case_sensitive: false }
   validates :mail, uniqueness: { allow_blank: true, case_sensitive: false }
@@ -111,6 +109,7 @@ class User < Principal
   def self.unique_attribute
     :login
   end
+
   prepend ::Mixins::UniqueFinder
 
   def current_password
@@ -244,11 +243,11 @@ class User < Principal
   def name(formatter = nil)
     case formatter || Setting.user_format
 
-    when :firstname_lastname      then "#{firstname} #{lastname}"
-    when :lastname_firstname      then "#{lastname} #{firstname}"
+    when :firstname_lastname then "#{firstname} #{lastname}"
+    when :lastname_firstname then "#{lastname} #{firstname}"
     when :lastname_coma_firstname then "#{lastname}, #{firstname}"
-    when :firstname               then firstname
-    when :username                then login
+    when :firstname then firstname
+    when :username then login
 
     else
       "#{firstname} #{lastname}"
@@ -308,7 +307,7 @@ class User < Principal
   # Does the backend storage allow this user to change their password?
   def change_password_allowed?
     return false if uses_external_authentication? ||
-                    ProyeksiApp::Configuration.disable_password_login?
+      ProyeksiApp::Configuration.disable_password_login?
     return true if auth_source_id.blank?
 
     auth_source.allow_password_changes?
@@ -341,7 +340,7 @@ class User < Principal
     return false if block_threshold == 0 # disabled
 
     (last_failed_login_within_block_time? and
-            failed_login_count >= block_threshold)
+      failed_login_count >= block_threshold)
   end
 
   def log_failed_login
@@ -441,6 +440,7 @@ class User < Principal
   def roles_for_project(project)
     project_role_cache.fetch(project)
   end
+
   alias :roles :roles_for_project
 
   # Cheap version of Project.visible.count
@@ -544,20 +544,20 @@ class User < Principal
   # one anonymous user per database.
   def self.anonymous
     RequestStore[:anonymous_user] ||= begin
-      anonymous_user = AnonymousUser.first
+                                        anonymous_user = AnonymousUser.first
 
-      if anonymous_user.nil?
-        (anonymous_user = AnonymousUser.new.tap do |u|
-          u.lastname = 'Anonymous'
-          u.login = ''
-          u.firstname = ''
-          u.mail = ''
-          u.status = User.statuses[:active]
-        end).save
-        raise 'Unable to create the anonymous user.' if anonymous_user.new_record?
-      end
-      anonymous_user
-    end
+                                        if anonymous_user.nil?
+                                          (anonymous_user = AnonymousUser.new.tap do |u|
+                                            u.lastname = 'Anonymous'
+                                            u.login = ''
+                                            u.firstname = ''
+                                            u.mail = ''
+                                            u.status = User.statuses[:active]
+                                          end).save
+                                          raise 'Unable to create the anonymous user.' if anonymous_user.new_record?
+                                        end
+                                        anonymous_user
+                                      end
   end
 
   def self.system

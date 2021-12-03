@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class Dependency < ::Copy::Dependency
     delegate :should_copy?, to: :class

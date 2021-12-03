@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Governs the workflow of how journals are passed through:
 #   1) The notifications for any event (e.g. journal creation) is to be created as fast as possible
 #      so that it becomes visible as an in app notification. If the resource passed in is indeed a journal,
@@ -27,10 +25,10 @@ class Notifications::WorkflowJob < ApplicationJob
   state :create_notifications,
         to: :send_mails do |resource, send_notification|
     mentioned, delayed = Notifications::CreateFromModelService
-                         .new(resource)
-                         .call(send_notification)
-                         .all_results
-                         .partition(&:reason_mentioned?)
+                           .new(resource)
+                           .call(send_notification)
+                           .all_results
+                           .partition(&:reason_mentioned?)
 
     mentioned
       .select { |n| n.mail_alert_sent == false }

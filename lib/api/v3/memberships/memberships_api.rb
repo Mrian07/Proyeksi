@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Memberships
@@ -28,9 +26,9 @@ module API
           route_param :id, type: Integer, desc: 'Member ID' do
             after_validation do
               @member = ::Queries::Members::MemberQuery
-                        .new(user: current_user)
-                        .results
-                        .find(params['id'])
+                          .new(user: current_user)
+                          .results
+                          .find(params['id'])
             end
 
             get &::API::V3::Utilities::Endpoints::Show

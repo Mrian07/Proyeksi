@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Members::CreateService < ::BaseServices::Create
   around_call :post_process
 

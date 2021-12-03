@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Versions::Orders::SemverNameOrder < Queries::Orders::Base
   self.model = Version
 

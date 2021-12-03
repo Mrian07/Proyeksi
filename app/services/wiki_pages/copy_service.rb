@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WikiPages::CopyService
   include ::Shared::ServiceContext
   include Contracted

@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DemoData
   class ProjectSeeder < Seeder
     # Careful: The seeding recreates the seeded project before it runs, so any changes

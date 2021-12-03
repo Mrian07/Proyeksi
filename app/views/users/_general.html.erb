@@ -1,5 +1,3 @@
-
-
 <section class="form--section">
   <div class="form--field">
     <%= styled_label_tag 'FIXME', I18n.t(:status, scope: [:attributes]) %>
@@ -13,10 +11,10 @@
 
 <%= labelled_tabular_form_for @user,
                               url: { controller: '/users',
-                                        action: "update",
-                                        tab: nil },
+                                     action: "update",
+                                     tab: nil },
                               html: { method: :put,
-                                         autocomplete: 'off' },
+                                      autocomplete: 'off' },
                               as: :user do |f| %>
   <%= render partial: 'form', locals: { f: f } %>
 

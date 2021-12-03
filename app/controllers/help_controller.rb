@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class HelpController < ApplicationController
   def keyboard_shortcuts
     redirect_to ProyeksiApp::Static::Links[:shortcuts][:href]

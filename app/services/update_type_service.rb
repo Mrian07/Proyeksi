@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UpdateTypeService < BaseTypeService
   def call(params)
     # forbid renaming if it is a standard type

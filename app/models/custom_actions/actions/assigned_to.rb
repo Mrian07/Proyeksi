@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::AssignedTo < CustomActions::Actions::Base
   include CustomActions::Actions::Strategies::MeAssociated
 

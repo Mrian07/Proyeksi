@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   class Root < ::API::RootAPI
     content_type 'hal+json', 'application/hal+json; charset=utf-8'

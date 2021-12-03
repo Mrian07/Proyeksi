@@ -1,5 +1,3 @@
-
-
 module Design
   class UpdateDesignService
     attr_reader :params

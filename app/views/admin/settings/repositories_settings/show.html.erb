@@ -1,4 +1,3 @@
-
 <%= toolbar title: t(:label_repository_plural) %>
 
 <%= styled_form_tag(admin_settings_update_repositories_path, method: :patch) do %>
@@ -6,7 +5,7 @@
     <div class="form--field">
       <%= setting_check_box :autofetch_changesets %>
       <div class="form--field-instructions">
-        <%=  simple_format t('repositories.autofetch_information') %>
+        <%= simple_format t('repositories.autofetch_information') %>
       </div>
     </div>
     <div class="form--field">
@@ -28,17 +27,17 @@
       </div>
     </div>
     <div class="form--field"><%= setting_text_field :sys_api_key, size: 30,
-                                        id: 'settings_sys_api_key',
-                                        disabled: !Setting.sys_api_enabled?,
-                                        label: :setting_mail_handler_api_key,
-                                        container_class: '-middle' %>
+                                                    id: 'settings_sys_api_key',
+                                                    disabled: !Setting.sys_api_enabled?,
+                                                    label: :setting_mail_handler_api_key,
+                                                    container_class: '-middle' %>
     </div>
     <%
-    available_scms = ProyeksiApp::SCM::Manager.registered
-                                              .map {|vendor, klass| [klass.vendor_name, vendor.to_s] }
+      available_scms = ProyeksiApp::SCM::Manager.registered
+                                                .map { |vendor, klass| [klass.vendor_name, vendor.to_s] }
 
-    manageable_scms = ProyeksiApp::SCM::Manager.manageable
-                                               .map {|vendor, klass| [klass.vendor_name, vendor.to_s, { disabled: !klass.enabled? }]}
+      manageable_scms = ProyeksiApp::SCM::Manager.manageable
+                                                 .map { |vendor, klass| [klass.vendor_name, vendor.to_s, { disabled: !klass.enabled? }] }
     %>
     <div class="form--field">
 
@@ -49,10 +48,10 @@
       <div class="form--field-container">
         <%= setting_select :repositories_automatic_managed_vendor,
                            [[
-                             "--- #{t('repositories.settings.automatic_managed_repos_disabled')} ---",
-                             '',
-                             { selected: true }
-                           ]] + manageable_scms,
+                              "--- #{t('repositories.settings.automatic_managed_repos_disabled')} ---",
+                              '',
+                              { selected: true }
+                            ]] + manageable_scms,
                            label: false,
                            container_class: '-middle' %>
       </div>
@@ -88,13 +87,13 @@
         <div class="form--field -vertical">
           <%= styled_label_tag :settings_commit_fix_status_id, t(:label_applied_status) %>
           <div class="form--field-container">
-            <%= setting_select :commit_fix_status_id, [["--- #{t(:actionview_instancetag_blank_option)} ---", '0', { disabled: true }]] + Status.all.collect{ |status| [status.name, status.id.to_s] }, label: false %>
+            <%= setting_select :commit_fix_status_id, [["--- #{t(:actionview_instancetag_blank_option)} ---", '0', { disabled: true }]] + Status.all.collect { |status| [status.name, status.id.to_s] }, label: false %>
           </div>
         </div>
         <div class="form--field -vertical">
           <%= styled_label_tag :settings_commit_fix_done_ratio, WorkPackage.human_attribute_name(:done_ratio) %>
           <div class="form--field-container">
-            <%= setting_select :commit_fix_done_ratio, (0..10).to_a.collect {|r| ["#{r*10} %", "#{r*10}"] }, blank: :label_no_change_option, label: false %>
+            <%= setting_select :commit_fix_done_ratio, (0..10).to_a.collect { |r| ["#{r * 10} %", "#{r * 10}"] }, blank: :label_no_change_option, label: false %>
           </div>
         </div>
       </div>
@@ -105,9 +104,9 @@
                      '#setting_commit_logtime_enabled') %>
     </div>
     <div class="form--field"><%= setting_select :commit_logtime_activity_id,
-         [[t(:label_default), 0]] + TimeEntryActivity.shared.map {|activity| [activity.name, activity.id.to_s]},
-         disabled: !Setting.commit_logtime_enabled?,
-         container_class: '-middle' %></div>
+                                                [[t(:label_default), 0]] + TimeEntryActivity.shared.map { |activity| [activity.name, activity.id.to_s] },
+                                                disabled: !Setting.commit_logtime_enabled?,
+                                                container_class: '-middle' %></div>
   </fieldset>
   <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>
 <% end %>

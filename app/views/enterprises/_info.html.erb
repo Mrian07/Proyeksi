@@ -1,4 +1,3 @@
-
 <% content_for :header_tags do %>
   <script src="<%= ProyeksiApp::Static::Links.links[:chargebee][:href] %>"
           data-cb-site="<%= ProyeksiApp::Configuration.enterprise_chargebee_site %>">
@@ -22,7 +21,7 @@
     <%= link_to t(quote_link[:label]),
                 quote_link[:href],
                 target: '_blank',
-                class: 'button -highlight-inverted'%>
+                class: 'button -highlight-inverted' %>
   </div>
 
   <%= static_link_to :contact %>

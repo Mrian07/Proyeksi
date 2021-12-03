@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users::Scopes
   module HavingReminderMailToSend
     extend ActiveSupport::Concern

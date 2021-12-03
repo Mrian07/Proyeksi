@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AccessibilityHelper
   def you_are_here_info(condition = true, disabled = nil)
     if condition && !disabled

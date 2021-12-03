@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 require 'open3'
 
 class AdminController < ApplicationController
@@ -89,10 +88,10 @@ class AdminController < ApplicationController
     if ProyeksiApp::Database.allows_tsv?
       [
         [:'extraction.available.pdftotext', Plaintext::PdfHandler.available?],
-        [:'extraction.available.unrtf',     Plaintext::RtfHandler.available?],
-        [:'extraction.available.catdoc',    Plaintext::DocHandler.available?],
-        [:'extraction.available.xls2csv',   Plaintext::XlsHandler.available?],
-        [:'extraction.available.catppt',    Plaintext::PptHandler.available?],
+        [:'extraction.available.unrtf', Plaintext::RtfHandler.available?],
+        [:'extraction.available.catdoc', Plaintext::DocHandler.available?],
+        [:'extraction.available.xls2csv', Plaintext::XlsHandler.available?],
+        [:'extraction.available.catppt', Plaintext::PptHandler.available?],
         [:'extraction.available.tesseract', Plaintext::ImageHandler.available?]
       ]
     else

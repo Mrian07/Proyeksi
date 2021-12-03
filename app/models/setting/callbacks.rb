@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Setting
   module Callbacks
     # register a callback for a setting named #name

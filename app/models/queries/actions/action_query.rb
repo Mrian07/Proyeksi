@@ -1,5 +1,3 @@
-
-
 class Queries::Actions::ActionQuery < Queries::BaseQuery
   def self.model
     Action

@@ -2,7 +2,7 @@ import * as ObservableArray from 'observable-array';
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 import { HalLink } from 'core-app/features/hal/hal-link/hal-link';
 import { HalResourceService } from 'core-app/features/hal/services/hal-resource.service';
-import { OpenprojectHalModuleHelpers } from 'core-app/features/hal/helpers/lazy-accessor';
+import { ProyeksiappHalModuleHelpers } from 'core-app/features/hal/helpers/lazy-accessor';
 
 interface HalSource {
   _links:any;
@@ -75,7 +75,7 @@ export function initializeHalProperties<T extends HalResource>(halResourceServic
 
   function setLinksAsProperties() {
     halResource.$linkableKeys().forEach((linkName:string) => {
-      OpenprojectHalModuleHelpers.lazy(halResource, linkName,
+      ProyeksiappHalModuleHelpers.lazy(halResource, linkName,
         () => {
           const link:any = halResource.$links[linkName].$link || halResource.$links[linkName];
 
@@ -116,7 +116,7 @@ export function initializeHalProperties<T extends HalResource>(halResourceServic
     }
 
     Object.keys(halResource.$source._embedded).forEach((name) => {
-      OpenprojectHalModuleHelpers.lazy(halResource,
+      ProyeksiappHalModuleHelpers.lazy(halResource,
         name,
         () => halResource.$embedded[name],
         (val:any) => setter(val, name));
@@ -130,7 +130,7 @@ export function initializeHalProperties<T extends HalResource>(halResourceServic
 
     if (_.isObject(sourceObj)) {
       Object.keys(sourceObj).forEach((propName) => {
-        OpenprojectHalModuleHelpers.lazy((halResource)[instanceName],
+        ProyeksiappHalModuleHelpers.lazy((halResource)[instanceName],
           propName,
           () => callback((sourceObj as any)[propName]));
       });
@@ -156,7 +156,7 @@ export function initializeHalProperties<T extends HalResource>(halResourceServic
       if (_.isObject(element)) {
         _.each(element, (child:any, name:string) => {
           if (child && (child._embedded || child._links)) {
-            OpenprojectHalModuleHelpers.lazy(element as any,
+            ProyeksiappHalModuleHelpers.lazy(element as any,
               name,
               () => asHalResource(child, true));
           }

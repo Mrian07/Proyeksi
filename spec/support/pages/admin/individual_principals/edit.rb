@@ -18,14 +18,14 @@ module Pages
           "/#{individual_principal.class.name.underscore}s/#{id}/edit"
         end
 
-        def open_projects_tab!
+        def proyeksi_app_tab!
           within('.content--tabs') do
             click_on 'Projects'
           end
         end
 
         def add_to_project!(project_name, as:)
-          open_projects_tab!
+          proyeksi_app_tab!
           select_project! project_name
           Array(as).each { |role| check role }
           click_on 'Add'
@@ -34,7 +34,7 @@ module Pages
         end
 
         def remove_from_project!(name)
-          open_projects_tab!
+          proyeksi_app_tab!
           find_project(name).find('a[data-method=delete]').click
         end
 

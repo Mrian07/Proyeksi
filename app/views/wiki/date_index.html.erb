@@ -1,9 +1,7 @@
-
-
 <%= toolbar title: t(:label_index_by_date) do %>
-    <li class="toolbar-item">
-      <%= watcher_link(@wiki, User.current) %>
-    </li>
+  <li class="toolbar-item">
+    <%= watcher_link(@wiki, User.current) %>
+  </li>
 <% end %>
 
 <% if @pages.empty? %>
@@ -19,8 +17,8 @@
 <% end %>
 <% if @pages.any? %>
   <%= other_formats_links do |f| %>
-    <%= f.link_to 'Atom', url: {controller: '/activities', action: 'index', show_wiki_edits: 1, key: User.current.rss_key} %>
-    <%= f.link_to('HTML', url: {action: 'export'}) if User.current.allowed_to?(:export_wiki_pages, @project) %>
+    <%= f.link_to 'Atom', url: { controller: '/activities', action: 'index', show_wiki_edits: 1, key: User.current.rss_key } %>
+    <%= f.link_to('HTML', url: { action: 'export' }) if User.current.allowed_to?(:export_wiki_pages, @project) %>
   <% end %>
 <% end %>
 <% content_for :header_tags do %>

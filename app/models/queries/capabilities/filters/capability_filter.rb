@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Capabilities::Filters::CapabilityFilter < Queries::Filters::Base
   self.model = Capability
 

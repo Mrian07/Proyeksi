@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkflowsController < ApplicationController
   layout 'admin'
 
@@ -32,8 +30,8 @@ class WorkflowsController < ApplicationController
 
   def update
     call = Workflows::BulkUpdateService
-           .new(role: @role, type: @type)
-           .call(params['status'])
+             .new(role: @role, type: @type)
+             .call(params['status'])
 
     if call.success?
       flash[:notice] = I18n.t(:notice_successful_update)

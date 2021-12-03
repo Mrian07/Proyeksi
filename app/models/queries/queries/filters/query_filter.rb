@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Queries::Filters::QueryFilter < Queries::Filters::Base
   self.model = Query
 

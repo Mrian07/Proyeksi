@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ProjectMailer < ApplicationMailer
   def delete_project_completed(project, user:)
     open_project_headers Project: project.identifier,

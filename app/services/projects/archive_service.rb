@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class ArchiveService < ::BaseServices::BaseContracted
     include Contracted

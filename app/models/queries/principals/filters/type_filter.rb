@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Principals::Filters::TypeFilter < Queries::Principals::Filters::PrincipalFilter
   def allowed_values
     [User, Group, PlaceholderUser]

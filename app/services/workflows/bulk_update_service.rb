@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Workflows::BulkUpdateService < ::BaseServices::Update
   def initialize(role:, type:)
     @role = role
@@ -55,8 +53,8 @@ class Workflows::BulkUpdateService < ::BaseServices::Update
 
     columns = %w(role_id type_id old_status_id new_status_id author assignee)
     values = workflows
-             .map { |w| "(#{w.attributes.slice(*columns).values.join(', ')})" }
-             .join(', ')
+               .map { |w| "(#{w.attributes.slice(*columns).values.join(', ')})" }
+               .join(', ')
 
     # use Workflow.insert_all in rails 6
     sql = <<-SQL

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ActivitiesController < ApplicationController
   menu_item :activity
   before_action :find_optional_project,
@@ -46,7 +44,10 @@ class ActivitiesController < ApplicationController
     @days = Setting.activity_days_default.to_i
 
     if params[:from]
-      begin; @date_to = params[:from].to_date + 1.day; rescue StandardError; end
+      begin
+        ; @date_to = params[:from].to_date + 1.day;
+      rescue StandardError;
+      end
     end
 
     @date_to ||= User.current.today + 1.day

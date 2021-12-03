@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages::DerivedDates
   # Returns the maximum of the dates of all descendants (start and due date)
   # No visibility check is applied so a user will always see the maximum regardless of his permission.
@@ -50,20 +48,20 @@ module WorkPackages::DerivedDates
 
   def compute_derived_dates
     @derived_dates ||= begin
-      attributes = %w[derived_start_date derived_due_date]
+                         attributes = %w[derived_start_date derived_due_date]
 
-      values = if persisted?
-                 WorkPackage
-                   .from(WorkPackage.include_derived_dates.where(id: self))
-                   .pluck(*attributes.each { |a| Arel.sql(a) })
-                   .first || []
-               else
-                 []
-               end
+                         values = if persisted?
+                                    WorkPackage
+                                      .from(WorkPackage.include_derived_dates.where(id: self))
+                                      .pluck(*attributes.each { |a| Arel.sql(a) })
+                                      .first || []
+                                  else
+                                    []
+                                  end
 
-      attributes
-        .zip(values)
-        .to_h
-    end
+                         attributes
+                           .zip(values)
+                           .to_h
+                       end
   end
 end

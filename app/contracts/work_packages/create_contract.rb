@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'work_packages/base_contract'
 
 module WorkPackages
@@ -19,7 +17,7 @@ module WorkPackages
 
     def user_allowed_to_add
       if (model.project && !@user.allowed_to?(:add_work_packages, model.project)) ||
-         !@user.allowed_to?(:add_work_packages, nil, global: true)
+        !@user.allowed_to?(:add_work_packages, nil, global: true)
 
         errors.add :base, :error_unauthorized
       end

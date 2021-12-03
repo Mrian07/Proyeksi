@@ -1,6 +1,5 @@
-
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { ProyeksiAppFileUploadService, UploadFile } from "core-app/core/file-upload/op-file-upload.service";
+import { ProyeksiaAppFileUploadService, UploadFile } from "core-app/core/file-upload/op-file-upload.service";
 import { resizeFile } from "core-app/shared/helpers/images/resizer";
 import { I18nService } from "core-app/core/i18n/i18n.service";
 import { ToastService } from "core-app/shared/components/toaster/toast.service";
@@ -35,9 +34,9 @@ export class AvatarUploadFormComponent implements OnInit {
   };
 
   public constructor(protected I18n:I18nService,
-                     protected elementRef:ElementRef,
-                     protected toastService:ToastService,
-                     protected opFileUpload:ProyeksiAppFileUploadService) {
+    protected elementRef:ElementRef,
+    protected toastService:ToastService,
+    protected opFileUpload:ProyeksiaAppFileUploadService) {
   }
 
   public ngOnInit() {
@@ -75,18 +74,18 @@ export class AvatarUploadFormComponent implements OnInit {
     upload[1].subscribe(
       (evt:any) => {
         switch (evt.type) {
-        case 0: // Sent
-          return;
+          case 0: // Sent
+            return;
 
-        case 4:
-          this.avatarFile.progress = 100;
-          this.busy = false;
-          window.location.reload();
-          return;
+          case 4:
+            this.avatarFile.progress = 100;
+            this.busy = false;
+            window.location.reload();
+            return;
 
-        default:
-          // Sent or unknown event
-          return;
+          default:
+            // Sent or unknown event
+            return;
         }
       },
       (error:any) => {

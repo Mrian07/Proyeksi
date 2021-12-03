@@ -1,5 +1,3 @@
-
-
 <% permissions.each do |mod, mod_permissions| %>
   <% global_prefix = showGlobalRole ? 'fieldset--global--' : 'fieldset--' %>
   <% module_name = mod.blank? ? 'fieldset--global--' + Project.model_name.human.downcase.gsub(' ', '_') : global_prefix + l_or_humanize(mod, prefix: 'project_module_').downcase.gsub(' ', '_') %>

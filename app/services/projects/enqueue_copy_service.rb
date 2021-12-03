@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class EnqueueCopyService < ::BaseServices::BaseCallable
     attr_reader :source, :user

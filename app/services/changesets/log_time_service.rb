@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Changesets
   class LogTimeService
     def initialize(user:, changeset:)
@@ -11,8 +9,8 @@ module Changesets
 
     def call(work_package, hours)
       service_result = TimeEntries::CreateService
-                       .new(user: user)
-                       .call(combined_parameters(work_package, hours))
+                         .new(user: user)
+                         .call(combined_parameters(work_package, hours))
 
       log_error(service_result)
 

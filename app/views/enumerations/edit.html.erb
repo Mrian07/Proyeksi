@@ -1,8 +1,6 @@
-
-
 <% html_title t(:label_administration), "#{t(:label_edit)} #{Enumeration.model_name.human} #{h @enumeration.name}" %>
 
-<% local_assigns[:additional_breadcrumb] =  @enumeration %>
+<% local_assigns[:additional_breadcrumb] = @enumeration %>
 <%= breadcrumb_toolbar @enumeration %>
 
 <%= labelled_tabular_form_for @enumeration do |f| %>

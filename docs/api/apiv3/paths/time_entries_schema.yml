@@ -98,7 +98,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not authorized to access this resource.
       description: |-
         Returned if the client does not have sufficient permissions to see the schema.

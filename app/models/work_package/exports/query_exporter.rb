@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module WorkPackage::Exports
   class QueryExporter < Exports::Exporter
     self.model = WorkPackage

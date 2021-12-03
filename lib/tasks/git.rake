@@ -1,12 +1,10 @@
 #-- encoding: UTF-8
 
-
-
 namespace :git do
   desc 'Clean up your locale and remote repository'
   task :clean do
     # FIXME: change this to master once we are there
-    main_branch       = 'dev'
+    main_branch = 'dev'
     excluded_branches = [
       main_branch,
       'release/4.0',
@@ -37,18 +35,18 @@ namespace :git do
 
     puts 'Fetching merged branches...'
     remote_branches = `git branch -r --merged`
-                      .split("\n")
-                      .map(&:strip)
-                      .reject do |b|
-                        !b.starts_with?('origin') ||
-                          excluded_branches.include?(b.split('/').drop(1).join('/'))
-                      end
+                        .split("\n")
+                        .map(&:strip)
+                        .reject do |b|
+      !b.starts_with?('origin') ||
+        excluded_branches.include?(b.split('/').drop(1).join('/'))
+    end
 
     local_branches = `git branch --merged`
-                     .gsub(/^\* /, '')
-                     .split("\n")
-                     .map(&:strip)
-                     .reject { |b| excluded_branches.include?(b) }
+                       .gsub(/^\* /, '')
+                       .split("\n")
+                       .map(&:strip)
+                       .reject { |b| excluded_branches.include?(b) }
 
     if remote_branches.empty? && local_branches.empty?
       puts "No existing branches have been merged into #{current_branch}."

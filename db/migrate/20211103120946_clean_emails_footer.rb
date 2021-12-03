@@ -2,8 +2,8 @@ class CleanEmailsFooter < ActiveRecord::Migration[6.1]
   def up
     Setting.reset_column_information
     filtered_footer = Setting
-      .emails_footer
-      .reject do |locale, text|
+                        .emails_footer
+                        .reject do |locale, text|
       if assumed_notification_text?(text)
         warn "Removing emails footer for #{locale} as it matches the default notification syntax."
         true

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MyController < ApplicationController
   include PasswordConfirmation
   include Accounts::UserPasswordChange
@@ -15,12 +13,12 @@ class MyController < ApplicationController
   before_action :set_current_user
   before_action :check_password_confirmation, only: %i[update_account]
 
-  menu_item :account,             only: [:account]
-  menu_item :settings,            only: [:settings]
-  menu_item :password,            only: [:password]
-  menu_item :access_token,        only: [:access_token]
-  menu_item :notifications,       only: [:notifications]
-  menu_item :reminders,           only: [:reminders]
+  menu_item :account, only: [:account]
+  menu_item :settings, only: [:settings]
+  menu_item :password, only: [:password]
+  menu_item :access_token, only: [:access_token]
+  menu_item :notifications, only: [:notifications]
+  menu_item :reminders, only: [:reminders]
 
   def account; end
 
@@ -130,8 +128,8 @@ class MyController < ApplicationController
     user_params = permitted_params.my_account_settings
 
     result = Users::UpdateService
-             .new(user: current_user, model: current_user)
-             .call(user_params.to_h)
+               .new(user: current_user, model: current_user)
+               .call(user_params.to_h)
 
     if result&.success
       flash[:notice] = t(:notice_account_updated)

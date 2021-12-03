@@ -16,15 +16,15 @@
   </li>
   <li>
     <%= link_to(t('label_proyeksiapp_website'), "#{ProyeksiApp::Static::Links.links[:website][:href]}/?utm_source=unknown&utm_medium=op-instance&utm_campaign=website-home-screen",
-                { aria: {label: t('label_proyeksiapp_website')},
+                { aria: { label: t('label_proyeksiapp_website') },
                   target: '_blank',
-                  title: t('label_proyeksiapp_website')}) %>
+                  title: t('label_proyeksiapp_website') }) %>
   </li>
   <li>
     <%= link_to(t('homescreen.links.newsletter'), "#{ProyeksiApp::Static::Links.links[:newsletter][:href]}/?utm_source=unknown&utm_medium=op-instance&utm_campaign=newsletter-home-screen",
-          { aria: {label: t('homescreen.links.newsletter')},
-            target: '_blank',
-            title: t('homescreen.links.newsletter')}) %>
+                { aria: { label: t('homescreen.links.newsletter') },
+                  target: '_blank',
+                  title: t('homescreen.links.newsletter') }) %>
   </li>
   <li>
     <%= static_link_to :blog %>

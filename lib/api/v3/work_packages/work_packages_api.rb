@@ -1,5 +1,3 @@
-
-
 require 'api/v3/work_packages/work_package_representer'
 
 module API
@@ -18,8 +16,8 @@ module API
           get do
             authorize(:view_work_packages, global: true)
             service = WorkPackageCollectionFromQueryParamsService
-                      .new(current_user)
-                      .call(params)
+                        .new(current_user)
+                        .call(params)
 
             if service.success?
               service.result

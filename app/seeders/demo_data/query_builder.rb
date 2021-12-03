@@ -1,4 +1,3 @@
-
 module DemoData
   class QueryBuilder < ::Seeder
     attr_reader :config, :project

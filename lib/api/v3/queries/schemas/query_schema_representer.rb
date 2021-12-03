@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'roar/decorator'
 require 'roar/json/hal'
 
@@ -234,8 +232,8 @@ module API
           def filters_schemas
             # TODO: The RelatableFilter is not supported by the schema dependencies yet
             filters = represented
-                      .available_filters
-                      .reject { |f| f.is_a?(::Queries::WorkPackages::Filter::RelatableFilter) }
+                        .available_filters
+                        .reject { |f| f.is_a?(::Queries::WorkPackages::Filter::RelatableFilter) }
 
             QueryFilterInstanceSchemaCollectionRepresenter.new(filters,
                                                                self_link: filter_instance_schemas_href,

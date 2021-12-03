@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class WorkPackageAttachmentsDependentService < Dependency
     include ::Copy::Concerns::CopyAttachments

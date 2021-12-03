@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::Parent
   def self.prepended(base)
     base.after_save :update_parent_relation, if: :saved_change_to_parent_id?

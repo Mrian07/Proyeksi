@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Notifications
@@ -12,8 +10,8 @@ module API
           helpers do
             def notification_query
               @notification_query ||= ParamsToQueryService
-                                      .new(Notification, current_user)
-                                      .call(params)
+                                        .new(Notification, current_user)
+                                        .call(params)
             end
 
             def notification_scope
@@ -35,8 +33,8 @@ module API
           end
 
           get &::API::V3::Utilities::Endpoints::Index
-            .new(model: Notification, scope: -> { notification_scope })
-            .mount
+                 .new(model: Notification, scope: -> { notification_scope })
+                 .mount
 
           post :read_ian do
             bulk_update_status(read_ian: true)

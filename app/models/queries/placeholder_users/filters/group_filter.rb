@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::PlaceholderUsers::Filters::GroupFilter < Queries::PlaceholderUsers::Filters::PlaceholderUserFilter
   include Queries::Filters::Shared::GroupFilter
 

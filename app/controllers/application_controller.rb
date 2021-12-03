@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'uri'
 require 'cgi'
 
@@ -306,10 +304,10 @@ class ApplicationController < ActionController::Base
   def find_belongs_to_chained_objects(associations, start_object = nil)
     associations.inject([start_object].compact) do |instances, association|
       scope_name, scope_association = if association.is_a?(Hash)
-        [association.keys.first.to_s.downcase, association.values.first]
-      else
-        [association.to_s.downcase, association.to_s.downcase]
-      end
+                                        [association.keys.first.to_s.downcase, association.values.first]
+                                      else
+                                        [association.to_s.downcase, association.to_s.downcase]
+                                      end
 
       # TODO: Remove this hidden dependency on params
       instances << (
@@ -429,13 +427,13 @@ class ApplicationController < ActionController::Base
   def render_validation_errors(object)
     options = { status: :unprocessable_entity, layout: false }
     errors = case params[:format]
-    when 'xml'
-      { xml: object.errors }
-    when 'json'
-      { json: { 'errors' => object.errors } } # ActiveResource client compliance
-    else
-      fail "Unknown format #{params[:format]} in #render_validation_errors"
-    end
+             when 'xml'
+               { xml: object.errors }
+             when 'json'
+               { json: { 'errors' => object.errors } } # ActiveResource client compliance
+             else
+               fail "Unknown format #{params[:format]} in #render_validation_errors"
+             end
     options.merge! errors
     render options
   end

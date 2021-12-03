@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Mails::WithSender
   def perform(recipient_id, sender_id)
     self.sender_id = sender_id

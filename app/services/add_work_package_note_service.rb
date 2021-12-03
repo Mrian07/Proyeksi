@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Create journal for the given user and note.
 # Does not change the work package itself.

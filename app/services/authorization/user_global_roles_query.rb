@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::UserGlobalRolesQuery < Authorization::UserRolesQuery
   transformations.register roles_member_roles_join,
                            :builtin_role do |statement, user|

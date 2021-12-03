@@ -1,5 +1,3 @@
-
-
 module Queries::Filters::Shared::ParsedFilter
   def type
     :string

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackage < ApplicationRecord
   include WorkPackage::Validations
   include WorkPackage::SchedulingRules
@@ -49,8 +47,8 @@ class WorkPackage < ApplicationRecord
   }
 
   scope :in_status, ->(*args) do
-                      where(status_id: (args.first.respond_to?(:id) ? args.first.id : args.first))
-                    end
+    where(status_id: (args.first.respond_to?(:id) ? args.first.id : args.first))
+  end
 
   scope :for_projects, ->(projects) {
     where(project_id: projects)
@@ -202,12 +200,12 @@ class WorkPackage < ApplicationRecord
     #   OR (relations.to_id = [ID] AND relations.from_id IN (SELECT [IDs OF VISIBLE WORK_PACKAGES]))
     # is arguably easier to read and performs equally good on both DBs.
     relations_from = Relation
-                     .where(from: self)
-                     .where(to: WorkPackage.visible(user))
+                       .where(from: self)
+                       .where(to: WorkPackage.visible(user))
 
     relations_to = Relation
-                   .where(to: self)
-                   .where(from: WorkPackage.visible(user))
+                     .where(to: self)
+                     .where(from: WorkPackage.visible(user))
 
     relations_from
       .or(relations_to)
@@ -236,9 +234,9 @@ class WorkPackage < ApplicationRecord
   #     (to make sure, that you can still update closed tickets)
   def assignable_versions
     @assignable_versions ||= begin
-      current_version = version_id_changed? ? Version.find_by(id: version_id_was) : version
-      ((project&.assignable_versions || []) + [current_version]).compact.uniq
-    end
+                               current_version = version_id_changed? ? Version.find_by(id: version_id_was) : version
+                               ((project&.assignable_versions || []) + [current_version]).compact.uniq
+                             end
   end
 
   def to_s
@@ -264,6 +262,7 @@ class WorkPackage < ApplicationRecord
   def milestone?
     type&.is_milestone?
   end
+
   alias_method :is_milestone?, :milestone?
 
   def done_ratio
@@ -447,6 +446,7 @@ class WorkPackage < ApplicationRecord
       .not_being_descendant_of(wp) # can't relate to a descendant (see relations)
       .satisfying_cross_project_setting(wp)
   end
+
   private_class_method :relateable_shared
 
   def self.satisfying_cross_project_setting(wp)
@@ -483,10 +483,10 @@ class WorkPackage < ApplicationRecord
 
   def self.order_by_ancestors(direction)
     max_relation_depth = Relation
-                         .hierarchy
-                         .group(:to_id)
-                         .select(:to_id,
-                                 "MAX(hierarchy) AS depth")
+                           .hierarchy
+                           .group(:to_id)
+                           .select(:to_id,
+                                   "MAX(hierarchy) AS depth")
 
     joins("LEFT OUTER JOIN (#{max_relation_depth.to_sql}) AS max_depth ON max_depth.to_id = work_packages.id")
       .reorder(Arel.sql("COALESCE(max_depth.depth, 0) #{direction}"))
@@ -536,10 +536,11 @@ class WorkPackage < ApplicationRecord
   def self.having_version_from_other_project
     where(
       "#{WorkPackage.table_name}.version_id IS NOT NULL" +
-      " AND #{WorkPackage.table_name}.project_id <> #{Version.table_name}.project_id" +
-      " AND #{Version.table_name}.sharing <> 'system'"
+        " AND #{WorkPackage.table_name}.project_id <> #{Version.table_name}.project_id" +
+        " AND #{Version.table_name}.sharing <> 'system'"
     )
   end
+
   private_class_method :having_version_from_other_project
 
   # Update issues so their versions are not pointing to a
@@ -559,6 +560,7 @@ class WorkPackage < ApplicationRecord
       end
     end
   end
+
   private_class_method :update_versions
 
   # Default assignment based on category
@@ -624,6 +626,7 @@ class WorkPackage < ApplicationRecord
       group by s.id, s.is_closed, j.id"
     ).to_a
   end
+
   private_class_method :count_and_group_by
 
   def set_attachments_error_details

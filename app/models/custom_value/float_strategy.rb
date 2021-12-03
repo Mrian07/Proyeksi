@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::FloatStrategy < CustomValue::FormatStrategy
   include ActionView::Helpers::NumberHelper
 

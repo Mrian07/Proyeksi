@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Group < Principal
   include ::Scopes::Scoped
 

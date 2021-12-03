@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared::GroupFilter
   def self.included(base)
     base.include(InstanceMethods)
@@ -11,8 +9,8 @@ module Queries::Filters::Shared::GroupFilter
   module InstanceMethods
     def allowed_values
       @allowed_values ||= begin
-        ::Group.pluck(:id).map { |g| [g, g.to_s] }
-      end
+                            ::Group.pluck(:id).map { |g| [g, g.to_s] }
+                          end
     end
 
     def available?

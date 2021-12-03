@@ -4,9 +4,9 @@
 
 <%= f.fields_for :page, @page do |page_form| %>
   <%= editable_toolbar(form: page_form, field_name: :title) do %>
-      <li class="toolbar-item">
-        <zen-mode-toggle-button></zen-mode-toggle-button>
-      </li>
+    <li class="toolbar-item">
+      <zen-mode-toggle-button></zen-mode-toggle-button>
+    </li>
   <% end %>
 <% end %>
 
@@ -28,7 +28,7 @@
     <%= page_fields.select :parent_id,
                            wiki_page_options_for_select(@wiki.pages),
                            { label: WikiPage.human_attribute_name(:parent_title), include_blank: false, container_class: '-wide' } %>
-  <% end%>
+  <% end %>
 </div>
 
 <div class="form--field">

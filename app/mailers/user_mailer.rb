@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UserMailer < ApplicationMailer
   include MessagesHelper
 
@@ -53,7 +51,7 @@ class UserMailer < ApplicationMailer
   def news_added(user, news)
     @news = news
 
-    open_project_headers 'Type'    => 'News'
+    open_project_headers 'Type' => 'News'
     open_project_headers 'Project' => @news.project.identifier if @news.project
 
     message_id @news, user
@@ -82,7 +80,7 @@ class UserMailer < ApplicationMailer
 
   def news_comment_added(user, comment)
     @comment = comment
-    @news    = @comment.commented
+    @news = @comment.commented
 
     open_project_headers 'Project' => @news.project.identifier if @news.project
 
@@ -106,7 +104,7 @@ class UserMailer < ApplicationMailer
   end
 
   def wiki_content_updated(user, wiki_content)
-    @wiki_content  = wiki_content
+    @wiki_content = wiki_content
     @wiki_diff_url = url_for(controller: '/wiki',
                              action: :diff,
                              project_id: wiki_content.project,
@@ -141,7 +139,7 @@ class UserMailer < ApplicationMailer
   end
 
   def account_information(user, password)
-    @user     = user
+    @user = user
     @password = password
 
     open_project_headers 'Type' => 'Account'
@@ -151,7 +149,7 @@ class UserMailer < ApplicationMailer
   end
 
   def account_activation_requested(admin, user)
-    @user           = user
+    @user = user
     @activation_url = url_for(controller: '/users',
                               action: :index,
                               status: 'registered',
@@ -165,8 +163,8 @@ class UserMailer < ApplicationMailer
 
   def reminder_mail(user, issues, days, group = nil)
     @issues = issues
-    @days   = days
-    @group  = group
+    @days = days
+    @group = group
 
     assigned_to_id = if group
                        group.id

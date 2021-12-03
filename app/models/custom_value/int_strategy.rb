@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::IntStrategy < CustomValue::FormatStrategy
   def typed_value
     unless value.blank?

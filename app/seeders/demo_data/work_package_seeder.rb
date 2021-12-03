@@ -1,4 +1,3 @@
-
 module DemoData
   class WorkPackageSeeder < Seeder
     attr_accessor :project, :user, :statuses, :repository,
@@ -157,8 +156,8 @@ module DemoData
     def create_relations(attributes)
       Array(attributes[:relations]).each do |relation|
         root_work_package = WorkPackage.find_by!(subject: attributes[:subject])
-        to_work_package =  WorkPackage.find_by(subject: relation[:to], project: root_work_package.project)
-        to_work_package =  WorkPackage.find_by!(subject: relation[:to]) unless to_work_package.nil?
+        to_work_package = WorkPackage.find_by(subject: relation[:to], project: root_work_package.project)
+        to_work_package = WorkPackage.find_by!(subject: relation[:to]) unless to_work_package.nil?
         create_relation(
           to: to_work_package,
           from: root_work_package,

@@ -1,4 +1,3 @@
-
 class DemoDataSeeder < CompositeSeeder
   def data_seeder_classes
     [

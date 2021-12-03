@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module BackupHelper
   ##
   # The idea here is to only allow users, who can confirm their password, to backup

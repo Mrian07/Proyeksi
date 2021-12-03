@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class GanttQueryGeneratorService
     DEFAULT_GANTT_QUERY ||=
@@ -25,7 +23,7 @@ module Projects
 
       def default_gantt_query
         default_with_filter = JSON
-                              .parse(Projects::GanttQueryGeneratorService::DEFAULT_GANTT_QUERY)
+                                .parse(Projects::GanttQueryGeneratorService::DEFAULT_GANTT_QUERY)
 
         milestone_ids = Type.milestone.pluck(:id).map(&:to_s)
         if milestone_ids.any?

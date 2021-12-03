@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Filters::LatestActivityAtFilter < Queries::Projects::Filters::ProjectFilter
   self.model = Project.with_latest_activity
 

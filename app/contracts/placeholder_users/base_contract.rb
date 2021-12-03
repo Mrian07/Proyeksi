@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module PlaceholderUsers
   class BaseContract < ::ModelContract
     # attribute_alias is broken in the sense

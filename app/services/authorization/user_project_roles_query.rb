@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::UserProjectRolesQuery < Authorization::UserRolesQuery
   transformations.register :all, :project_where_projection do |statement, user, _|
     statement.where(users_table[:id].eq(user.id))
@@ -20,9 +18,9 @@ class Authorization::UserProjectRolesQuery < Authorization::UserRolesQuery
                      end
 
       builtin_role_condition = members_table[:id]
-                               .eq(nil)
-                               .and(roles_table[:builtin]
-                                    .eq(builtin_role))
+                                 .eq(nil)
+                                 .and(roles_table[:builtin]
+                                        .eq(builtin_role))
 
       statement = statement.or(builtin_role_condition)
     end

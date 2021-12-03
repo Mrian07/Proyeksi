@@ -24,7 +24,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to delete this work package.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -38,7 +38,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified work package does not exist.
       description: |-
         Returned if the work package does not exist or the client does not have sufficient permissions to see it.
@@ -219,7 +219,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified work package does not exist.
       description: |-
         Returned if the work package does not exist or the client does not have sufficient permissions to see it.
@@ -406,7 +406,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: Occurs when the client did not send a valid JSON object in the
         request body.
@@ -418,7 +418,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to edit the content of the work package.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -432,7 +432,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified work package does not exist.
       description: |-
         Returned if the work package does not exist or the client does not have sufficient permissions to see it.
@@ -446,7 +446,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:UpdateConflict
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:UpdateConflict
                 message: Your changes could not be saved, because the work package
                   was changed since you've seen it the last time.
       description: Returned if the resource was changed since the client requested
@@ -462,7 +462,7 @@ patch:
                   details:
                     attribute: Subject
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: The subject might not be blank.
       description: |-
         Returned if:

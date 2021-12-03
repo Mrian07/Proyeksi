@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Copy
   class OrderedWorkPackagesDependentService < ::Copy::Dependency
     protected

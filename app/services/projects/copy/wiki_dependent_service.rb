@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class WikiDependentService < Dependency
 
@@ -48,10 +46,10 @@ module Projects::Copy
       # Relying on ActionMailer::Base.perform_deliveries is violating cohesion
       # but the value is currently not otherwise provided
       service_call = WikiPages::CopyService
-                     .new(user: user, model: source_page, contract_class: WikiPages::CopyContract)
-                     .call(wiki: target.wiki,
-                           parent_id: new_parent_id,
-                           send_notifications: ActionMailer::Base.perform_deliveries)
+                       .new(user: user, model: source_page, contract_class: WikiPages::CopyContract)
+                       .call(wiki: target.wiki,
+                             parent_id: new_parent_id,
+                             send_notifications: ActionMailer::Base.perform_deliveries)
 
       if service_call.success?
         service_call.result

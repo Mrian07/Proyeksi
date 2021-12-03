@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::CustomFieldFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   include Queries::Filters::Shared::CustomFieldFilter

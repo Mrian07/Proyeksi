@@ -1,4 +1,3 @@
-
 <%= t(:mail_body_reminder, count: @issues.size, days: @days) %>
 <% @issues.each do |issue| -%>
   * <%= "#{issue.project} - #{issue.type} ##{issue.id}: #{issue.subject}" %>

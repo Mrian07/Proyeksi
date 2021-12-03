@@ -1,5 +1,3 @@
-
-
 <div class="generic-table--container">
   <div class="generic-table--results-container">
     <table class="generic-table">
@@ -10,37 +8,37 @@
         <col>
       </colgroup>
       <thead>
-        <tr>
-          <% headers.each do |name, options| %>
-            <% if sortable_column?(name) %>
-              <%= sort_header_tag name, options %>
-            <% else %>
-              <th>
-                <div class="generic-table--sort-header-outer">
-                  <div class="generic-table--sort-header">
+      <tr>
+        <% headers.each do |name, options| %>
+          <% if sortable_column?(name) %>
+            <%= sort_header_tag name, options %>
+          <% else %>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
                     <span>
                       <%= options[:caption] %>
                     </span>
-                  </div>
                 </div>
-              </th>
-            <% end %>
+              </div>
+            </th>
           <% end %>
-          <th>
-            <%# last column for buttons %>
-            <div class="generic-table--empty-header"></div>
-          </th>
-        </tr>
+        <% end %>
+        <th>
+          <%# last column for buttons %>
+          <div class="generic-table--empty-header"></div>
+        </th>
+      </tr>
       </thead>
       <tbody>
-        <% if rows.empty? %>
+      <% if rows.empty? %>
         <tr class="generic-table--empty-row">
           <td colspan="<%= headers.length + 1 %>"><%= empty_row_message %></td>
         </tr>
-        <% end %>
-        <% for row in rows do -%>
-          <%= render_row row %>
-        <% end -%>
+      <% end %>
+      <% for row in rows do -%>
+        <%= render_row row %>
+      <% end -%>
       </tbody>
     </table>
     <% if inline_create_link && show_inline_create %>

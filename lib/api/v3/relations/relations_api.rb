@@ -1,5 +1,3 @@
-
-
 require 'api/v3/relations/relation_representer'
 require 'api/v3/relations/relation_collection_representer'
 
@@ -13,8 +11,8 @@ module API
         resources :relations do
           get do
             scope = Relation
-                    .non_hierarchy
-                    .includes(::API::V3::Relations::RelationRepresenter.to_eager_load)
+                      .non_hierarchy
+                      .includes(::API::V3::Relations::RelationRepresenter.to_eager_load)
 
             ::API::V3::Utilities::ParamsToQuery.collection_response(scope,
                                                                     current_user,

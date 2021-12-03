@@ -1,5 +1,3 @@
-
-
 module Notifications
   class CreateContract < ::ModelContract
     attribute :recipient

@@ -1,5 +1,3 @@
-
-
 ##
 # Intended to be used by the ApplicationController to provide login/logout helpers
 module Accounts::CurrentUser

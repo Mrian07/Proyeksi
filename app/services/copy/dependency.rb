@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Dependent service to be executed under the BaseServices::Copy service
 module Copy

@@ -1,5 +1,3 @@
-
-
 class WorkPackagePolicy < BasePolicy
   private
 
@@ -95,7 +93,7 @@ class WorkPackagePolicy < BasePolicy
   def comment_allowed?(work_package)
     @comment_cache ||= Hash.new do |hash, project|
       hash[project] = user.allowed_to?(:add_work_package_notes, work_package.project) ||
-                      edit_allowed?(work_package)
+        edit_allowed?(work_package)
     end
 
     @comment_cache[work_package.project]

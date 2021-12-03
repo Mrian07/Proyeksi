@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     # Since APIv3 uses different names for some properties, there is sometimes the need to convert

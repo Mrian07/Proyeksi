@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module HideSectionsHelper
   def initialize_hide_sections_with(all, active)
     gon.push(

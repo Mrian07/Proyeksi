@@ -1,5 +1,3 @@
-
-
 namespace 'openproject:cron' do
   desc 'An hourly cron job hook for plugin functionality'
   task :hourly do

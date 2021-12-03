@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DemoData
   class WorkPackageBoardSeeder < Seeder
     attr_accessor :project, :key

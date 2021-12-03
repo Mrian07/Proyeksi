@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ColorsController < ApplicationController
   before_action :require_admin_unless_readonly_api_request
 
@@ -91,6 +89,6 @@ class ColorsController < ApplicationController
 
   def require_admin_unless_readonly_api_request
     require_admin unless %w[index show].include? params[:action] and
-                         api_request?
+      api_request?
   end
 end

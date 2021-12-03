@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Query < ApplicationRecord
   include Timelines
   include Highlighting
@@ -168,7 +166,7 @@ class Query < ApplicationRecord
 
   def available_columns
     if @available_columns &&
-       (@available_columns_project == (project && project.cache_key || 0))
+      (@available_columns_project == (project && project.cache_key || 0))
       return @available_columns
     end
 
@@ -232,8 +230,8 @@ class Query < ApplicationRecord
 
   def column_names=(names)
     col_names = Array(names)
-                .reject(&:blank?)
-                .map(&:to_sym)
+                  .reject(&:blank?)
+                  .map(&:to_sym)
 
     # Set column_names to blank/nil if it is equal to the default columns
     if col_names.map(&:to_s) == Setting.work_package_list_default_columns
@@ -279,10 +277,10 @@ class Query < ApplicationRecord
   def sort_criteria_columns
     sort_criteria
       .map do |attribute, direction|
-        attribute = attribute.to_sym
+      attribute = attribute.to_sym
 
-        [sort_criteria_column(attribute), direction]
-      end
+      [sort_criteria_column(attribute), direction]
+    end
   end
 
   def sort_criteria_column(attribute)

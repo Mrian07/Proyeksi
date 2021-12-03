@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class EnabledModule < ApplicationRecord
   belongs_to :project
 
@@ -23,8 +21,8 @@ class EnabledModule < ApplicationRecord
       end
     when 'repository'
       if project &&
-         project.repository.nil? &&
-         Setting.repositories_automatic_managed_vendor.present?
+        project.repository.nil? &&
+        Setting.repositories_automatic_managed_vendor.present?
         create_managed_repository
       end
     end

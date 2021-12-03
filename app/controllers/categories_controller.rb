@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CategoriesController < ApplicationController
   menu_item :settings_categories
   model_object Category

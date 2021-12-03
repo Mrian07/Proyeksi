@@ -1,5 +1,3 @@
-
-
 module CustomActions::Actions::Strategies::ValuesToString
   def values=(values)
     super(Array(values).map { |v| to_string_or_nil(v) }.uniq)

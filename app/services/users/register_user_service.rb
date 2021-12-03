@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class RegisterUserService
     attr_reader :user

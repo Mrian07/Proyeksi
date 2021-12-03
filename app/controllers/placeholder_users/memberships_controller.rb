@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class PlaceholderUsers::MembershipsController < ApplicationController
   include IndividualPrincipals::MembershipControllerMethods
   layout 'admin'

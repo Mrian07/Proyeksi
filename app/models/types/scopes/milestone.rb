@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Types::Scopes
   module Milestone
     extend ActiveSupport::Concern

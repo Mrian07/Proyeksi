@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Type::QueryGroup < Type::FormGroup
   MEMBER_PREFIX = 'query_'.freeze
 

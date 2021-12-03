@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Users::ProjectAuthorizationCache
   attr_accessor :user
 

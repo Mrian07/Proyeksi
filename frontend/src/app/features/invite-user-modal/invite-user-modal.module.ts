@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CurrentUserModule } from 'core-app/core/current-user/current-user.module';
-import { OpenprojectModalModule } from 'core-app/shared/components/modal/modal.module';
+import { ProyeksiappModalModule } from 'core-app/shared/components/modal/modal.module';
 import { InviteUserButtonModule } from 'core-app/features/invite-user-modal/button/invite-user-button.module';
 import { DynamicFormsModule } from 'core-app/shared/components/dynamic-forms/dynamic-forms.module';
 import { OpInviteUserModalAugmentService } from 'core-app/features/invite-user-modal/invite-user-modal-augment.service';
@@ -32,7 +32,7 @@ export function initializeServices(injector:Injector) {
   imports: [
     CommonModule,
     OPSharedModule,
-    OpenprojectModalModule,
+    ProyeksiappModalModule,
     NgSelectModule,
     ReactiveFormsModule,
     TextFieldModule,
@@ -62,5 +62,5 @@ export function initializeServices(injector:Injector) {
     },
   ],
 })
-export class OpenprojectInviteUserModalModule {
+export class ProyeksiappInviteUserModalModule {
 }

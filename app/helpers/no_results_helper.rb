@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module NoResultsHelper
   # Helper to render the /common/no_results partial custamizable content.
   # Example usage:
@@ -19,9 +17,9 @@ module NoResultsHelper
   # Displays the box with the title and link to the passed in url.
   # The title and action_text are found using the locales key lookup unless
   # custom_title and custom_action_text are provided.
-  def no_results_box(action_url:         nil,
-                     display_action:     false,
-                     custom_title:       nil,
+  def no_results_box(action_url: nil,
+                     display_action: false,
+                     custom_title: nil,
                      custom_action_text: nil)
 
     title = custom_title || t('.no_results_title_text', cascade: true)

@@ -1,10 +1,10 @@
-<% title =  @current_token.present? ? t('admin.enterprise.replace_token') : t('admin.enterprise.add_token')  %>
+<% title = @current_token.present? ? t('admin.enterprise.replace_token') : t('admin.enterprise.add_token') %>
 <%= augmented_collapsible_section initiallyExpanded: !@current_token.present?,
                                   title: title do %>
   <%= labelled_tabular_form_for @token,
-               url: { action: :create },
-               html: { class: 'token-form form -vertical' },
-               method: :post do |f|%>
+                                url: { action: :create },
+                                html: { class: 'token-form form -vertical' },
+                                method: :post do |f| %>
 
     <div class="form--space"></div>
 

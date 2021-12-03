@@ -1,5 +1,3 @@
-
-
 # AssociatedJournals that belong to another journal reflecting
 # an has_many relation (e.g. custom_values) on the journaled object.
 class Journal::AssociatedJournal < ApplicationRecord

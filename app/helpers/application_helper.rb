@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'forwardable'
 require 'cgi'
 
@@ -101,8 +99,8 @@ module ApplicationHelper
   # Renders flash messages
   def render_flash_messages
     messages = flash
-      .reject { |k, _| k.start_with? '_' }
-      .map { |k, v| render_flash_message(k, v) }
+                 .reject { |k, _| k.start_with? '_' }
+                 .map { |k, v| render_flash_message(k, v) }
 
     safe_join messages, "\n"
   end
@@ -116,7 +114,7 @@ module ApplicationHelper
   end
 
   def render_flash_message(type, message, html_options = {})
-    css_classes  = ["flash #{type} icon icon-#{type}", html_options.delete(:class)]
+    css_classes = ["flash #{type} icon icon-#{type}", html_options.delete(:class)]
 
     # Add autohide class to notice flashes if configured
     if type.to_s == 'notice' && User.current.pref.auto_hide_popups?
@@ -128,9 +126,9 @@ module ApplicationHelper
     content_tag :div, html_options do
       concat(join_flash_messages(message))
       concat(content_tag(:i, '', class: 'icon-close close-handler',
-                                 tabindex: '0',
-                                 role: 'button',
-                                 aria: { label: ::I18n.t('js.close_popup_title') }))
+                         tabindex: '0',
+                         role: 'button',
+                         aria: { label: ::I18n.t('js.close_popup_title') }))
     end
   end
 
@@ -218,7 +216,7 @@ module ApplicationHelper
   def html_hours(text)
     text.gsub(%r{(\d+)\.(\d+)},
               '<span class="hours hours-int">\1</span><span class="hours hours-dec">.\2</span>')
-      .html_safe
+        .html_safe
   end
 
   def authoring(created, author, options = {})
@@ -246,7 +244,7 @@ module ApplicationHelper
     else
       datetime = time.acts_like?(:time) ? time.xmlschema : time.iso8601
       content_tag(:time, text, datetime: datetime,
-                               title: format_time(time), class: 'timestamp')
+                  title: format_time(time), class: 'timestamp')
     end
   end
 
@@ -295,10 +293,10 @@ module ApplicationHelper
   # Same as Rails' simple_format helper without using paragraphs
   def simple_format_without_paragraph(text)
     text.to_s
-      .gsub(/\r\n?/, "\n")                    # \r\n and \r -> \n
-      .gsub(/\n\n+/, '<br /><br />')          # 2+ newline  -> 2 br
-      .gsub(/([^\n]\n)(?=[^\n])/, '\1<br />') # 1 newline   -> br
-      .html_safe
+        .gsub(/\r\n?/, "\n") # \r\n and \r -> \n
+        .gsub(/\n\n+/, '<br /><br />') # 2+ newline  -> 2 br
+        .gsub(/([^\n]\n)(?=[^\n])/, '\1<br />') # 1 newline   -> br
+        .html_safe
   end
 
   def lang_options_for_select(blank = true)
@@ -368,7 +366,7 @@ module ApplicationHelper
   def progress_bar(pcts, options = {})
     pcts = Array(pcts).map(&:round)
     closed = pcts[0]
-    done   = (pcts[1] || closed) - closed
+    done = (pcts[1] || closed) - closed
     width = options[:width] || '100px;'
     legend = options[:legend] || ''
     total_progress = options[:hide_total_progress] ? '' : t(:total_progress)
@@ -377,7 +375,7 @@ module ApplicationHelper
     content_tag :span do
       progress = content_tag :span, class: 'progress-bar', style: "width: #{width}" do
         concat content_tag(:span, '', class: 'inner-progress closed', style: "width: #{closed}%")
-        concat content_tag(:span, '', class: 'inner-progress done',   style: "width: #{done}%")
+        concat content_tag(:span, '', class: 'inner-progress done', style: "width: #{done}%")
       end
       progress + content_tag(:span, "#{legend}#{percent_sign} #{total_progress}", class: 'progress-bar-legend')
     end
@@ -469,7 +467,7 @@ module ApplicationHelper
   def translate_language(lang_code)
     # rename in-context translation language name for the language select box
     if lang_code == Redmine::I18n::IN_CONTEXT_TRANSLATION_CODE &&
-       ::I18n.locale != Redmine::I18n::IN_CONTEXT_TRANSLATION_CODE
+      ::I18n.locale != Redmine::I18n::IN_CONTEXT_TRANSLATION_CODE
       [Redmine::I18n::IN_CONTEXT_TRANSLATION_NAME, lang_code.to_s]
     else
       [ll(lang_code.to_s, :general_lang_name), lang_code.to_s]

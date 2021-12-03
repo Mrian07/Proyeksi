@@ -29,7 +29,7 @@ description: |-
 
   Depending on custom fields defined for projects, additional links might exist.
 
-  Note, that the parent link may contain the "undisclosed uri" `urn:openproject-org:api:v3:undisclosed` in case a
+  Note, that the parent link may contain the "undisclosed uri" `urn:proyeksi-app:api:v3:undisclosed` in case a
   parent project is defined but the client lacks permission to see it. See the
   [general introduction into links' properties](https://www.openproject.org/docs/api/basic-objects/#local-properties) for more information.
 

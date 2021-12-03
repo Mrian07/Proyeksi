@@ -1,28 +1,27 @@
-
 <h2 class="emailTitle"><%= t(:mail_body_register_header_title) %> </h2>
-<br />
+<br/>
 
 <p><%= t(:mail_body_register_user, name: @user.name) %>
-   <br />
-   <%= t(:mail_body_register) %>
-   <br />
-   <%= link_to @activation_url, @activation_url %>
+  <br/>
+  <%= t(:mail_body_register) %>
+  <br/>
+  <%= link_to @activation_url, @activation_url %>
 </p>
 
-<br />
+<br/>
 <p>
-   <%= t(:mail_body_register_links_html,
-               webinar_link: link_to('Webinar Link', ProyeksiApp::Static::Links.links[:webinar_videos][:href]),
-               youtube_link: link_to('Youtube Link', ProyeksiApp::Configuration.youtube_channel),
-               get_started_link: link_to('Get Started Videos Link', ProyeksiApp::Static::Links.links[:get_started_videos][:href]),
-               documentation_link: link_to('Documentation Link', ProyeksiApp::Static::Links.links[:proyeksiapp_docs][:href])
-               )
-   %>
+  <%= t(:mail_body_register_links_html,
+        webinar_link: link_to('Webinar Link', ProyeksiApp::Static::Links.links[:webinar_videos][:href]),
+        youtube_link: link_to('Youtube Link', ProyeksiApp::Configuration.youtube_channel),
+        get_started_link: link_to('Get Started Videos Link', ProyeksiApp::Static::Links.links[:get_started_videos][:href]),
+        documentation_link: link_to('Documentation Link', ProyeksiApp::Static::Links.links[:proyeksiapp_docs][:href])
+      )
+  %>
 </p>
 
 <p>
-   <br />
-   <%= t(:mail_body_register_ending) %>
-   <br />
-   <%= t(:mail_body_register_closing) %>
+  <br/>
+  <%= t(:mail_body_register_ending) %>
+  <br/>
+  <%= t(:mail_body_register_closing) %>
 </p>

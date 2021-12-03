@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Members::Orders::StatusOrder < Queries::Orders::Base
   self.model = Member
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Activities::WorkPackageActivityProvider < Activities::BaseActivityProvider
   activity_provider_for type: 'work_packages',
                         permission: :view_work_packages

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Utilities
@@ -38,9 +36,9 @@ module API
                   title = link_value_title(custom_value)
 
                   [{
-                    title: title,
-                    href: link_value_href(custom_field, custom_value)
-                  }]
+                     title: title,
+                     href: link_value_href(custom_field, custom_value)
+                   }]
                 else
                   []
                 end

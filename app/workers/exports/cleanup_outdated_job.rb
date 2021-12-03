@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Exports::CleanupOutdatedJob < ApplicationJob
   queue_with_priority :low
 

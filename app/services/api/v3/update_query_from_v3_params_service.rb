@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     class UpdateQueryFromV3ParamsService
@@ -10,8 +8,8 @@ module API
 
       def call(params, valid_subset: false)
         parsed = ::API::V3::ParseQueryParamsService
-                 .new
-                 .call(params)
+                   .new
+                   .call(params)
 
         if parsed.success?
           ::UpdateQueryFromParamsService

@@ -1,22 +1,20 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions::Actions::Strategies::Associated
   include CustomActions::ValidateAllowedValue
   include CustomActions::ValuesToInteger
 
   def allowed_values
     @allowed_values ||= begin
-      options = associated
-                .map { |value, label| { value: value, label: label } }
+                          options = associated
+                                      .map { |value, label| { value: value, label: label } }
 
-      if required?
-        options
-      else
-        options.unshift(value: nil, label: I18n.t('placeholders.default'))
-      end
-    end
+                          if required?
+                            options
+                          else
+                            options.unshift(value: nil, label: I18n.t('placeholders.default'))
+                          end
+                        end
   end
 
   def apply(work_package)

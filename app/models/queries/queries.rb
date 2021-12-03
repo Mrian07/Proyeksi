@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Configures a Query on the Query model.  This allows to
 # e.g get all queries that belong to a specific project or
 # all projects that are global

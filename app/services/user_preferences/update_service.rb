@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module UserPreferences
   class UpdateService < ::BaseServices::Update
     protected

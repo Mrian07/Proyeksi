@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::AbstractUserQuery < Authorization::AbstractQuery
   transformations.register :all,
                            :users_members_join do |statement|

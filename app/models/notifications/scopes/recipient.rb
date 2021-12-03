@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Return mail notifications destined at the provided recipient
 module Notifications::Scopes
   module Recipient

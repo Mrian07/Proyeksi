@@ -1,5 +1,3 @@
-
-
 module Queries
   module Serialization
     module Hash

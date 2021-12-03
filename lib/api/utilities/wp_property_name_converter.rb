@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/utilities/property_name_converter'
 require 'api/utilities/property_name_converter_work_package_dummy'
 

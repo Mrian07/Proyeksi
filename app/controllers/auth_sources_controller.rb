@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AuthSourcesController < ApplicationController
   include PaginationHelper
   layout 'admin'
@@ -11,7 +9,7 @@ class AuthSourcesController < ApplicationController
 
   def index
     @auth_sources = AuthSource.page(page_param)
-                    .per_page(per_page_param)
+                              .per_page(per_page_param)
 
     render 'auth_sources/index'
   end

@@ -68,10 +68,10 @@
         <div class="advanced-filters--add-filter-value">
           <%= select_tag 'add_filter_select',
                          options_from_collection_for_select(
-                             allowed_filters(query),
-                             :name,
-                             :human_name,
-                             disabled: query.filters.map(&:name)
+                           allowed_filters(query),
+                           :name,
+                           :human_name,
+                           disabled: query.filters.map(&:name)
                          ),
                          prompt: t(:actionview_instancetag_blank_option),
                          class: 'advanced-filters--select',
@@ -83,7 +83,7 @@
         <%= submit_tag t('button_apply'), class: 'button -small -highlight', name: nil %>
       </li>
     </ul>
-    <% unless EnterpriseToken.allows_to?(:custom_fields_in_projects_list)%>
+    <% unless EnterpriseToken.allows_to?(:custom_fields_in_projects_list) %>
       <enterprise-banner-bootstrap
         text-message="<%= t('ee.upsale.project_filters.description_html') %>"
         referrer="project-list-filter">

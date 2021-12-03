@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages::Scopes::LeftJoinSelfAndDescendants
   extend ActiveSupport::Concern
 

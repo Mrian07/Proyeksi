@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Reports::PriorityReport < Reports::Report
   def self.report_type
     'priority'

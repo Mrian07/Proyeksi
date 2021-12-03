@@ -1,21 +1,19 @@
-
-
 <% action = @backup_token.present? ? 'reset' : 'create' %>
 <% icon = @backup_token.present? ? 'delete' : 'add' %>
 
 <% html_title(t(:label_administration), t("backup.reset_token.heading_#{action}")) -%>
 
 <%= password_confirmation_form_for(
-  @user,
-  as: :user,
-  url: { action: 'perform_token_reset' },
-  builder: ::TabularFormBuilder,
-  lang: current_language,
-  html: {
-    method: :post,
-    class: '-wide-labels confirm_required request-for-confirmation form danger-zone'
-  }
-) do |f| %>
+      @user,
+      as: :user,
+      url: { action: 'perform_token_reset' },
+      builder: ::TabularFormBuilder,
+      lang: current_language,
+      html: {
+        method: :post,
+        class: '-wide-labels confirm_required request-for-confirmation form danger-zone'
+      }
+    ) do |f| %>
   <div class='wiki'>
     <section class="form--section">
       <h3 class="form--section-title">
@@ -27,18 +25,18 @@
       </p>
 
       <% if !allow_instant_backup_for_user? current_user %>
-      <p class="danger-zone--warning">
-        <span class="icon icon-error"></span>
-        <span><%= t("backup.reset_token.warning") %></span>
-      </p>
+        <p class="danger-zone--warning">
+          <span class="icon icon-error"></span>
+          <span><%= t("backup.reset_token.warning") %></span>
+        </p>
       <% end %>
 
       <p>
         <%= t(
-          "backup.reset_token.verification",
-          word: "<em class=\"danger-zone--expected-value\">#{t("backup.reset_token.verification_word_#{action}")}</em>",
-          action: action
-        ).html_safe %>
+              "backup.reset_token.verification",
+              word: "<em class=\"danger-zone--expected-value\">#{t("backup.reset_token.verification_word_#{action}")}</em>",
+              action: action
+            ).html_safe %>
       </p>
       <div class="danger-zone--verification">
         <input type="text" name="login_verification"/>

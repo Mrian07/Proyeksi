@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::FormatStrategy
   attr_reader :custom_value
 

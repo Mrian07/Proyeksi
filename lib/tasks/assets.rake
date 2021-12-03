@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'proyeksi_app/assets'
 
 # The ng build task must run before assets:environment task.

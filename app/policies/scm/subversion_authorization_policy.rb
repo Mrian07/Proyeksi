@@ -1,5 +1,3 @@
-
-
 class SCM::SubversionAuthorizationPolicy < SCM::AuthorizationPolicy
   private
 

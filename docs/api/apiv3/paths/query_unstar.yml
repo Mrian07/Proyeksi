@@ -119,7 +119,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not empty.
       description: Occurs when the client did not send an empty request body.
       headers: {}
@@ -130,7 +130,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to unstar this query.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -146,7 +146,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified query does not exist.
       description: |-
         Returned if the query does not exist or the client does not have sufficient permissions to see it.

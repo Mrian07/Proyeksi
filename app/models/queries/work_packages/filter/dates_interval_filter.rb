@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::DatesIntervalFilter < Queries::WorkPackages::Filter::WorkPackageFilter
   include Queries::Operators::DateRangeClauses
 

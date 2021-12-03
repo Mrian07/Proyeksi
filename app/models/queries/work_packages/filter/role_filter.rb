@@ -1,12 +1,10 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::RoleFilter < Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values
     @allowed_values ||= begin
-      roles.map { |r| [r.name, r.id.to_s] }
-    end
+                          roles.map { |r| [r.name, r.id.to_s] }
+                        end
   end
 
   def available?

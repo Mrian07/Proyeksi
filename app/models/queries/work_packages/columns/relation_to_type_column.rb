@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Columns::RelationToTypeColumn < Queries::WorkPackages::Columns::RelationColumn
   def initialize(type)
     super

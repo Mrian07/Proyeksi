@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::ScheduleDependency
   def initialize(work_packages)
     self.work_packages = Array(work_packages)
@@ -180,13 +178,13 @@ class WorkPackages::ScheduleDependency
         .map(&:follows_relations)
         .flatten
         .map do |relation|
-          scheduled = scheduled_work_packages.detect { |c| relation.to_id == c.id }
+        scheduled = scheduled_work_packages.detect { |c| relation.to_id == c.id }
 
-          if scheduled
-            relation.to = scheduled
-            relation
-          end
+        if scheduled
+          relation.to = scheduled
+          relation
         end
+      end
         .compact
     end
 
@@ -195,8 +193,8 @@ class WorkPackages::ScheduleDependency
         .map(&:follows_relations)
         .flatten
         .reject do |relation|
-          scheduled_work_packages.any? { |m| relation.to_id == m.id }
-        end
+        scheduled_work_packages.any? { |m| relation.to_id == m.id }
+      end
     end
   end
 end

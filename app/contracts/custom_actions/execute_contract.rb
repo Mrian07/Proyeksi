@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions
   class ExecuteContract < BaseContract
     property :lock_version

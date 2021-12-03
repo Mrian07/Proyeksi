@@ -1,5 +1,3 @@
-
-
 module Attachments
   class CreateContract < ::ModelContract
     attribute :file

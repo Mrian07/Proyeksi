@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Implements the creation of a local repository.
 class SCM::CreateManagedRepositoryService < SCM::BaseRepositoryService

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Migration
   module Utils
     UpdateResult = Struct.new(:row, :updated)

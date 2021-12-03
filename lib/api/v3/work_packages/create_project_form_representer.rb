@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -29,8 +27,8 @@ module API
 
         link :commit do
           if current_user
-             .allowed_to?(:edit_work_packages, represented.project) &&
-             @errors.empty?
+               .allowed_to?(:edit_work_packages, represented.project) &&
+            @errors.empty?
             {
               href: api_v3_paths.work_packages_by_project(represented.project_id),
               method: :post
@@ -51,8 +49,8 @@ module API
 
         link :configureForm do
           if current_user.admin? &&
-             represented.type_id &&
-             represented.type_id != 0
+            represented.type_id &&
+            represented.type_id != 0
             {
               href: edit_type_path(represented.type_id,
                                    tab: 'form_configuration'),

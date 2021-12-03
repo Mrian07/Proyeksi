@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions::Actions::Strategies::MeAssociated
   include ::CustomActions::Actions::Strategies::Associated
 

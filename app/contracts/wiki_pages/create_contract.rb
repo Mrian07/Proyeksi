@@ -1,5 +1,3 @@
-
-
 module WikiPages
   class CreateContract < BaseContract
     validate :validate_user_current_user

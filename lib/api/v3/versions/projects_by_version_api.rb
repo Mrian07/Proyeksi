@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/v3/projects/project_collection_representer'
 
 module API

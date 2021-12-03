@@ -1,5 +1,3 @@
-
-
 module Groups::Concerns
   module MembershipManipulation
     extend ActiveSupport::Concern

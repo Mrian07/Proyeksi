@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::SetAttributesService < ::BaseServices::SetAttributes
   include Attachments::SetReplacements
 
@@ -155,7 +153,7 @@ class WorkPackages::SetAttributesService < ::BaseServices::SetAttributes
 
   def set_version_to_nil
     if work_package.version &&
-       !work_package.project&.shared_versions.include?(work_package.version)
+      !work_package.project&.shared_versions.include?(work_package.version)
       work_package.version = nil
     end
   end
@@ -215,7 +213,7 @@ class WorkPackages::SetAttributesService < ::BaseServices::SetAttributes
 
   def new_start_date_from_parent
     return unless work_package.parent_id_changed? &&
-                  work_package.parent_id
+      work_package.parent_id
 
     work_package.parent.soonest_start
   end

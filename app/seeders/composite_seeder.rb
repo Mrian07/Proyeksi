@@ -1,4 +1,3 @@
-
 class CompositeSeeder < Seeder
   def seed_data!
     ActiveRecord::Base.transaction do

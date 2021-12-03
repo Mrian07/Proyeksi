@@ -1,5 +1,3 @@
-
-
 module Members
   class CleanupService < ::BaseServices::BaseCallable
     def initialize(users, projects)

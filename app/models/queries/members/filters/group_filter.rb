@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Members::Filters::GroupFilter < Queries::Members::Filters::MemberFilter
   include Queries::Filters::Shared::GroupFilter
 

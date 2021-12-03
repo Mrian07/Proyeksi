@@ -1,12 +1,10 @@
-
-
 <%= toolbar title: t(:label_work_package_category_plural) do -%>
-  <% if current_user.allowed_to?(:manage_categories, @project)  %>
+  <% if current_user.allowed_to?(:manage_categories, @project) %>
     <li class="toolbar-item">
       <%= link_to_if_authorized({ controller: '/categories', action: 'new', project_id: @project },
                                 { aria: { label: t(:label_work_package_category_new) },
                                   title: t(:label_work_package_category_new),
-                                  class: 'button -alt-highlight'}) do %>
+                                  class: 'button -alt-highlight' }) do %>
         <%= op_icon('icon-add button--icon') %>
         <span class="button--text"><%= t('activerecord.models.category') %></span>
       <% end %>
@@ -24,49 +22,51 @@
           <col>
         </colgroup>
         <thead>
-          <tr>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+        <tr>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
                     <%= Category.model_name.human %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
                     <%= Category.human_attribute_name(:assigned_to) %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th><div class="generic-table--empty-header"></div></th>
-          </tr>
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--empty-header"></div>
+          </th>
+        </tr>
         </thead>
         <tbody>
-          <% for category in @project.categories %>
-            <% unless category.new_record? %>
-              <tr>
-                <td><%=h(category.name) %></td>
-                <td><%=h(category.assigned_to.name) if category.assigned_to %></td>
-                <td class="buttons">
-                  <%= link_to_if_authorized '',
-                                            { controller: '/categories', action: 'edit', id: category },
-                                            class: 'icon icon-edit',
-                                            title: t(:button_edit) %>
-                  <%= link_to_if_authorized '',
-                                            { controller: '/categories', action: 'destroy', id: category },
-                                            data: { confirm: t(:text_are_you_sure) },
-                                            method: :delete,
-                                            class: 'icon icon-delete',
-                                            title: t(:button_delete) %>
-                </td>
-              </tr>
-            <% end %>
+        <% for category in @project.categories %>
+          <% unless category.new_record? %>
+            <tr>
+              <td><%= h(category.name) %></td>
+              <td><%= h(category.assigned_to.name) if category.assigned_to %></td>
+              <td class="buttons">
+                <%= link_to_if_authorized '',
+                                          { controller: '/categories', action: 'edit', id: category },
+                                          class: 'icon icon-edit',
+                                          title: t(:button_edit) %>
+                <%= link_to_if_authorized '',
+                                          { controller: '/categories', action: 'destroy', id: category },
+                                          data: { confirm: t(:text_are_you_sure) },
+                                          method: :delete,
+                                          class: 'icon icon-delete',
+                                          title: t(:button_delete) %>
+              </td>
+            </tr>
           <% end %>
+        <% end %>
         </tbody>
       </table>
 

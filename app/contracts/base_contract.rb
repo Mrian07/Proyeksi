@@ -1,5 +1,3 @@
-
-
 class BaseContract < Disposable::Twin
   require "disposable/twin/composition" # Expose.
   include Expose
@@ -110,8 +108,8 @@ class BaseContract < Disposable::Twin
 
   def writable_attributes
     @writable_attributes ||= begin
-      reduce_writable_attributes(collect_writable_attributes)
-    end
+                               reduce_writable_attributes(collect_writable_attributes)
+                             end
   end
 
   def writable?(attribute)
@@ -142,10 +140,10 @@ class BaseContract < Disposable::Twin
 
   def self.model
     @model ||= begin
-      name.deconstantize.singularize.constantize
-    rescue NameError
-      ActiveRecord::Base
-    end
+                 name.deconstantize.singularize.constantize
+               rescue NameError
+                 ActiveRecord::Base
+               end
   end
 
   # use activerecord as the base scope instead of 'activemodel' to be compatible
@@ -153,6 +151,7 @@ class BaseContract < Disposable::Twin
   def self.i18n_scope
     :activerecord
   end
+
   # end Methods required to get ActiveModel error messages working
 
   protected
@@ -229,8 +228,8 @@ class BaseContract < Disposable::Twin
       canonical_attribute = attribute.gsub(/_id\z/, '')
 
       permissions = attribute_permissions[canonical_attribute] ||
-                    attribute_permissions["#{canonical_attribute}_id"] ||
-                    attribute_permissions[:default_permission]
+        attribute_permissions["#{canonical_attribute}_id"] ||
+        attribute_permissions[:default_permission]
 
       next unless permissions
 

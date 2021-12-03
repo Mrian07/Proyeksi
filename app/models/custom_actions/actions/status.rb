@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::Status < CustomActions::Actions::Base
   include CustomActions::Actions::Strategies::Associated
 

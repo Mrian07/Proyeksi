@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::ReportsController < ApplicationController
   menu_item :work_packages
   before_action :find_project_by_project_id, :authorize
@@ -24,8 +22,8 @@ class WorkPackages::ReportsController < ApplicationController
 
   def report_details
     @report = Reports::ReportsService
-              .new(@project)
-              .report_for(params[:detail])
+                .new(@project)
+                .report_for(params[:detail])
 
     respond_to do |format|
       if @report

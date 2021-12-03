@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module IconsHelper
   ##
   # Create an <i> tag with the given icon class names

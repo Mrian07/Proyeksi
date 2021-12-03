@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Provides an asynchronous job to create a managed repository on a remote system
 # using a simple HTTP callback

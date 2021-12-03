@@ -1,5 +1,3 @@
-
-
 module AttachableServiceCall
   ##
   # Call the presented CreateContract service

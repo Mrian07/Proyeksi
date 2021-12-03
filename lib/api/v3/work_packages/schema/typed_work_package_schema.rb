@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -31,16 +29,16 @@ module API
 
           def contract
             @contract ||= begin
-              ::API::V3::WorkPackages::Schema::TypedSchemaContract
-                .new(work_package,
-                     User.current)
-            end
+                            ::API::V3::WorkPackages::Schema::TypedSchemaContract
+                              .new(work_package,
+                                   User.current)
+                          end
           end
 
           def work_package
             @work_package ||= WorkPackage
-                              .new(project: project,
-                                   type: type)
+                                .new(project: project,
+                                     type: type)
           end
         end
       end

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Notifications::AggregatedJournalService
   ##
   # Move existing notifications for aggregated events over

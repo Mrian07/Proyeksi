@@ -1,5 +1,3 @@
-
-
 module Notifications::MailService::WikiContentStrategy
   class << self
     def send_mail(notification)

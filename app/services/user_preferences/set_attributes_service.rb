@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module UserPreferences
   class SetAttributesService < ::BaseServices::SetAttributes
     def set_attributes(params)

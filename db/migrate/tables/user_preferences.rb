@@ -1,5 +1,3 @@
-
-
 require_relative 'base'
 
 class Tables::UserPreferences < Tables::Base

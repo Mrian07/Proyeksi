@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::AttachmentContentFilter < Queries::WorkPackages::Filter::AttachmentBaseFilter
   def self.key
     :attachment_content

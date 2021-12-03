@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Versions::Filters::SharingFilter < Queries::Versions::Filters::VersionFilter
   def allowed_values
     Version::VERSION_SHARINGS.map do |name|

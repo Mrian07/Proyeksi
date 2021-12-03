@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # TODO: use default update base class
 class WorkPackages::UpdateService < ::BaseServices::BaseCallable
   include ::WorkPackages::Shared::UpdateAncestors
@@ -45,7 +43,7 @@ class WorkPackages::UpdateService < ::BaseServices::BaseCallable
   def save_if_valid(result)
     if result.success?
       result.success = consolidated_results(result)
-                       .all?(&:save)
+                         .all?(&:save)
     end
 
     result.success?

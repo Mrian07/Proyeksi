@@ -1,9 +1,7 @@
 #-- encoding: UTF-8
 
-
-
 class
-  CustomValue::FormattableStrategy < CustomValue::FormatStrategy
+CustomValue::FormattableStrategy < CustomValue::FormatStrategy
   def formatted_value
     ProyeksiApp::TextFormatting::Renderer.format_text value
   end

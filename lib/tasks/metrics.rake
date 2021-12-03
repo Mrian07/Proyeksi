@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 begin
   require 'metric_fu'
 rescue LoadError

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class WikiPageAttachmentsDependentService < Dependency
     include ::Copy::Concerns::CopyAttachments

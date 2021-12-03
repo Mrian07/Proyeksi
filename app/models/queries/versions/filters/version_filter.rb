@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Versions::Filters::VersionFilter < Queries::Filters::Base
   self.model = Version
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'will_paginate'
 
 module PaginationHelper
@@ -26,7 +24,7 @@ module PaginationHelper
   def pagination_option_links(paginator, pagination_options)
     option_links = pagination_settings(paginator,
                                        pagination_options[:params]
-                                        .merge(safe_query_params(%w{filters sortBy expand})))
+                                         .merge(safe_query_params(%w{filters sortBy expand})))
 
     content_tag(:div, option_links, class: 'op-pagination--options')
   end

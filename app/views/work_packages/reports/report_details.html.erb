@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_summary) %>
 <%= toolbar title: t(:label_summary) %>
 <div class="form--fieldset">
@@ -10,7 +8,7 @@
                                           data: @data,
                                           field_name: @field,
                                           report: @report } %>
-  <br />
+  <br/>
 </div>
 
-<%= link_to t(:button_back), report_project_work_packages_path(@project), class:'button' %>
+<%= link_to t(:button_back), report_project_work_packages_path(@project), class: 'button' %>

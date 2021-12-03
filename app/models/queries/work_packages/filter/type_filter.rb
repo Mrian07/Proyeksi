@@ -1,13 +1,11 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::TypeFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values
     @allowed_values ||= begin
-      types.map { |s| [s.name, s.id.to_s] }
-    end
+                          types.map { |s| [s.name, s.id.to_s] }
+                        end
   end
 
   def available?

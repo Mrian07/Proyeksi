@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::TypeaheadFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   def type

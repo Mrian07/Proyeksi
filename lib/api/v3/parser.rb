@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API::V3
   class Parser
     def call(object, _env)

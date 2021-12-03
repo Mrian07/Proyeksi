@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Root class of the API
 # This is the place for all API wide configuration, helper methods, exceptions
 # rescuing, mounting of different API versions etc.

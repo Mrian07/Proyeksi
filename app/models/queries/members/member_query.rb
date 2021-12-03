@@ -1,5 +1,3 @@
-
-
 class Queries::Members::MemberQuery < Queries::BaseQuery
   def self.model
     Member

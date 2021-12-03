@@ -194,6 +194,6 @@ class AddDerivedEstimatedHoursToWorkPackages < ActiveRecord::Migration[5.2]
 
     WorkPackage.connection.execute("
       UPDATE work_packages SET updated_at = NOW(), lock_version = lock_version + 1 #{where}
-    ")
+                                   ")
   end
 end

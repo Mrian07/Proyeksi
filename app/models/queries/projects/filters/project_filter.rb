@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Filters::ProjectFilter < Queries::Filters::Base
   self.model = Project
 

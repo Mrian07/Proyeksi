@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Relations::Scopes
   module FollowsNonManualAncestors
     extend ActiveSupport::Concern

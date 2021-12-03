@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -24,7 +22,9 @@ module API
           attr_accessor :work_packages
         end
 
-        module NoOp; end
+        module NoOp
+          ;
+        end
       end
     end
   end

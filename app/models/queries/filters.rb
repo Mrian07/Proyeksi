@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters
   STRATEGIES = {
     list: Queries::Filters::Strategies::List,

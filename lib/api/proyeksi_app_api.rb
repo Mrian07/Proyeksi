@@ -1,5 +1,3 @@
-
-
 module API
   class ProyeksiAppAPI < ::Grape::API
     class << self

@@ -1,13 +1,12 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Queries
       module Schemas
         class FilterDependencyDecorator
           include ::API::V3::Utilities::PathHelper
+
           def initialize(filter, operator)
             self.filter = filter
             self.operator = operator

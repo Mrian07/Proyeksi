@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 #
 module Query::Timelines
   extend ActiveSupport::Concern

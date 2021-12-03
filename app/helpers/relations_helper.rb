@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module RelationsHelper
   def collection_for_relation_type_select
     values = Relation::TYPES

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # An AR helper class to access sessions, but not create them.
 # You can still use AR methods to delete records however.

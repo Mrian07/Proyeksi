@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -24,13 +22,13 @@ module API
 
           def projects_by_id
             @projects_by_id ||= begin
-              ::Project
-                .includes(:enabled_modules)
-                .where(id: project_ids)
-                .to_a
-                .map { |p| [p.id, p] }
-                .to_h
-            end
+                                  ::Project
+                                    .includes(:enabled_modules)
+                                    .where(id: project_ids)
+                                    .to_a
+                                    .map { |p| [p.id, p] }
+                                    .to_h
+                                end
           end
 
           def project_ids

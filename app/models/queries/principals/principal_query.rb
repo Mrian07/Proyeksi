@@ -1,5 +1,3 @@
-
-
 class Queries::Principals::PrincipalQuery < Queries::BaseQuery
   def self.model
     Principal

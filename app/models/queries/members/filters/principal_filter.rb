@@ -1,20 +1,18 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Members::Filters::PrincipalFilter < Queries::Members::Filters::MemberFilter
   include Queries::Filters::Shared::MeValueFilter
 
   def allowed_values
     @allowed_values ||= begin
-      values = Principal
-               .not_locked
-               .in_visible_project_or_me
-               .map { |s| [s.name, s.id.to_s] }
-               .sort
+                          values = Principal
+                                     .not_locked
+                                     .in_visible_project_or_me
+                                     .map { |s| [s.name, s.id.to_s] }
+                                     .sort
 
-      me_allowed_value + values
-    end
+                          me_allowed_value + values
+                        end
   end
 
   def available?

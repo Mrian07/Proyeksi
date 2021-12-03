@@ -51,16 +51,16 @@ module Projects
 
     def all_columns
       @all_columns ||= begin
-        [
-          [:hierarchy, { builtin: true }],
-          [:name, { builtin: true, caption: Project.human_attribute_name(:name) }],
-          [:project_status, { caption: Project.human_attribute_name(:status) }],
-          [:status_explanation, { caption: Projects::Status.human_attribute_name(:explanation) }],
-          [:public, { caption: Project.human_attribute_name(:public) }],
-          *custom_field_columns,
-          *admin_columns
-        ]
-      end
+                         [
+                           [:hierarchy, { builtin: true }],
+                           [:name, { builtin: true, caption: Project.human_attribute_name(:name) }],
+                           [:project_status, { caption: Project.human_attribute_name(:status) }],
+                           [:status_explanation, { caption: Projects::Status.human_attribute_name(:explanation) }],
+                           [:public, { caption: Project.human_attribute_name(:public) }],
+                           *custom_field_columns,
+                           *admin_columns
+                         ]
+                       end
     end
 
     def headers
@@ -96,17 +96,17 @@ module Projects
 
     def project_custom_fields
       @project_custom_fields ||= begin
-        fields =
-          if EnterpriseToken.allows_to?(:custom_fields_in_projects_list)
-            ProjectCustomField.visible(current_user).order(:position)
-          else
-            ProjectCustomField.none
-          end
+                                   fields =
+                                     if EnterpriseToken.allows_to?(:custom_fields_in_projects_list)
+                                       ProjectCustomField.visible(current_user).order(:position)
+                                     else
+                                       ProjectCustomField.none
+                                     end
 
-        fields
-          .map { |cf| [:"cf_#{cf.id}", cf] }
-          .to_h
-      end
+                                   fields
+                                     .map { |cf| [:"cf_#{cf.id}", cf] }
+                                     .to_h
+                                 end
     end
   end
 end

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -29,7 +27,7 @@ module API
 
           def wrap_and_apply(work_packages, container_classes)
             containers = container_classes
-                         .map { |klass| klass.new(work_packages) }
+                           .map { |klass| klass.new(work_packages) }
 
             work_packages = work_packages.map do |work_package|
               new(work_package)

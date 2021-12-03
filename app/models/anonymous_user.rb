@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AnonymousUser < User
   validate :validate_unique_anonymous_user, on: :create
 
@@ -15,19 +13,35 @@ class AnonymousUser < User
   end
 
   # Overrides a few properties
-  def logged?; false end
+  def logged?
+    false
+  end
 
-  def builtin?; true end
+  def builtin?
+    true
+  end
 
-  def admin; false end
+  def admin
+    false
+  end
 
-  def name(*_args); I18n.t(:label_user_anonymous) end
+  def name(*_args)
+    ; I18n.t(:label_user_anonymous)
+  end
 
-  def mail; nil end
+  def mail
+    nil
+  end
 
-  def time_zone; nil end
+  def time_zone
+    nil
+  end
 
-  def rss_key; nil end
+  def rss_key
+    nil
+  end
 
-  def destroy; false end
+  def destroy
+    false
+  end
 end

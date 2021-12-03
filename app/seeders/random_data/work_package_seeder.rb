@@ -1,4 +1,3 @@
-
 module RandomData
   class WorkPackageSeeder
     attr_accessor :project, :user, :statuses, :repository, :types

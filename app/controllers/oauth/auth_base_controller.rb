@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module OAuth
   ##
   # Base controller for doorkeeper to skip the login check

@@ -1,14 +1,12 @@
-
-
 <div id="add-message" style="display:none;">
   <% if authorize_for('messages', 'new') %>
     <h2><%= link_to h(@forum.name), project_forum_path(@project, @forum) %> &#187; <%= t(:label_message_new) %></h2>
     <%= labelled_tabular_form_for Message.new(project: @project),
                                   url: forum_topics_path(@forum),
-                                  html: {multipart: true,
-                                         id: 'message-form',
-                                         class: 'form'} do |f| %>
-      <%= render partial: 'messages/form', locals: {f: f} %>
+                                  html: { multipart: true,
+                                          id: 'message-form',
+                                          class: 'form' } do |f| %>
+      <%= render partial: 'messages/form', locals: { f: f } %>
 
       <hr class="form--separator"/>
       <%= styled_button_tag t(:button_create), class: '-highlight -with-icon icon-checkmark' %>
@@ -22,10 +20,10 @@
 <%= toolbar title: @forum.name, subtitle: format_text(@forum.description) do %>
   <% if authorize_for(:messages, :new) %>
     <li class="toolbar-item">
-      <%= link_to({controller: '/messages', action: 'new', forum_id: @forum},
-                  {class: 'add-message-button button -alt-highlight',
-                   aria: {label: t(:label_message_new)},
-                   title: t(:label_message_new)}) do %>
+      <%= link_to({ controller: '/messages', action: 'new', forum_id: @forum },
+                  { class: 'add-message-button button -alt-highlight',
+                    aria: { label: t(:label_message_new) },
+                    title: t(:label_message_new) }) do %>
         <%= op_icon('button--icon icon-add') %>
         <span class="button--text"><%= t(:label_message) %></span>
       <% end %>
@@ -115,9 +113,9 @@
 <% end %>
 
 <%= other_formats_links do |f| %>
-  <%= f.link_to 'Atom', url: {key: User.current.rss_key} %>
+  <%= f.link_to 'Atom', url: { key: User.current.rss_key } %>
 <% end %>
 <% html_title h(@forum.name) %>
 <% content_for :header_tags do %>
-  <%= auto_discovery_link_tag(:atom, {format: 'atom', key: User.current.rss_key}, title: "#{@project}: #{@forum}") %>
+  <%= auto_discovery_link_tag(:atom, { format: 'atom', key: User.current.rss_key }, title: "#{@project}: #{@forum}") %>
 <% end %>

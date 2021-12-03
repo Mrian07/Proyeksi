@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Provides aliases to hierarchy_*
 # methods to stay compatible with code written for awesome_nested_set
 

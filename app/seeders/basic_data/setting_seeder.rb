@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module BasicData
   class SettingSeeder < Seeder
     def seed_data!
@@ -23,24 +22,24 @@ module BasicData
 
     def data
       @settings ||= begin
-        settings = Setting.available_settings.each_with_object({}) do |(k, v), hash|
-          hash[k] = v['default'] || ''
-        end
+                      settings = Setting.available_settings.each_with_object({}) do |(k, v), hash|
+                        hash[k] = v['default'] || ''
+                      end
 
-        # deviate from the defaults specified in settings.yml here
-        # to set a default role. The role cannot be specified in the settings.yml as
-        # that would mean to know the ID upfront.
-        update_unless_present(settings, 'new_project_user_role_id') do
-          Role.find_by(name: I18n.t(:default_role_project_admin)).try(:id)
-        end
+                      # deviate from the defaults specified in settings.yml here
+                      # to set a default role. The role cannot be specified in the settings.yml as
+                      # that would mean to know the ID upfront.
+                      update_unless_present(settings, 'new_project_user_role_id') do
+                        Role.find_by(name: I18n.t(:default_role_project_admin)).try(:id)
+                      end
 
-        # Set the closed status for repository commit references
-        update_unless_present(settings, 'commit_fix_status_id') do
-          Status.find_by(name: I18n.t(:default_status_closed)).try(:id)
-        end
+                      # Set the closed status for repository commit references
+                      update_unless_present(settings, 'commit_fix_status_id') do
+                        Status.find_by(name: I18n.t(:default_status_closed)).try(:id)
+                      end
 
-        settings
-      end
+                      settings
+                    end
     end
 
     private

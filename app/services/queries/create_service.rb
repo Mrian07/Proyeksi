@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::CreateService < Queries::BaseService
   def initialize(**args)
     super(**args)

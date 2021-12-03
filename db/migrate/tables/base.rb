@@ -1,8 +1,8 @@
 #-- encoding: UTF-8
 
-
-
-module Tables; end
+module Tables
+  ;
+end
 
 class Tables::Base
   def self.create(migration)

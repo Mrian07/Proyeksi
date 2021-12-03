@@ -1,5 +1,3 @@
-
-
 class Attachments::DeleteService < ::BaseServices::Delete
   include Attachments::TouchContainer
 

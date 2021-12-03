@@ -1,4 +1,3 @@
-
 module RandomData
   class WikiSeeder
     def self.seed!(project)

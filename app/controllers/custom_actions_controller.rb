@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActionsController < ApplicationController
   before_action :require_admin
   before_action :require_enterprise_token

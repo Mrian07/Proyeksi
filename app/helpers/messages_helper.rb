@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module MessagesHelper
   def message_attachment_representer(message)
     ::API::V3::Posts::PostRepresenter.new(message,

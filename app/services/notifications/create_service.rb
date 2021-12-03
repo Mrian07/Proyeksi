@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Notifications::CreateService < ::BaseServices::Create
   protected
 

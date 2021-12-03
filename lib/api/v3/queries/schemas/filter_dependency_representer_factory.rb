@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 Dir[File.dirname(__FILE__) + '/*.rb'].each { |file| require_dependency file }
 
 module API
@@ -36,9 +34,9 @@ module API
 
           def representer_class(filter)
             name = filter_specific_representer_class(filter) ||
-                   cf_representer_class(filter) ||
-                   type_specific_representer_class(filter) ||
-                   custom_representer_class(filter)
+              cf_representer_class(filter) ||
+              type_specific_representer_class(filter) ||
+              custom_representer_class(filter)
 
             name.constantize
           end

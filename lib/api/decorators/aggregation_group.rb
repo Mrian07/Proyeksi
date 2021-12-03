@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Decorators
     class AggregationGroup < Single

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Changeset < ApplicationRecord
   belongs_to :repository
   belongs_to :user
@@ -11,8 +9,8 @@ class Changeset < ApplicationRecord
   acts_as_journalized timestamp: :committed_on
 
   acts_as_event title: Proc.new { |o|
-                         "#{I18n.t(:label_revision)} #{o.format_identifier}" + (o.short_comments.blank? ? '' : (': ' + o.short_comments))
-                       },
+    "#{I18n.t(:label_revision)} #{o.format_identifier}" + (o.short_comments.blank? ? '' : (': ' + o.short_comments))
+  },
                 description: :long_comments,
                 datetime: :committed_on,
                 url: Proc.new { |o|
@@ -250,7 +248,7 @@ class Changeset < ApplicationRecord
 
   def sanitize_attributes
     self.committer = self.class.to_utf8(committer, repository.repo_log_encoding)
-    self.comments  = self.class.normalize_comments(comments, repository.repo_log_encoding)
+    self.comments = self.class.normalize_comments(comments, repository.repo_log_encoding)
   end
 
   def assign_proyeksiapp_user_from_comitter
@@ -272,12 +270,12 @@ class Changeset < ApplicationRecord
       if normalized_encoding.upcase != 'UTF-8'
         str.force_encoding(normalized_encoding)
         str = str.encode('UTF-8', invalid: :replace,
-                                  undef: :replace, replace: '?')
+                         undef: :replace, replace: '?')
       else
         str.force_encoding('UTF-8')
         unless str.valid_encoding?
           str = str.encode('US-ASCII', invalid: :replace,
-                                       undef: :replace, replace: '?').encode('UTF-8')
+                           undef: :replace, replace: '?').encode('UTF-8')
         end
       end
     else

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class VersionsController < ApplicationController
   menu_item :roadmap, only: %i(index show)
   menu_item :settings_versions
@@ -31,10 +29,10 @@ class VersionsController < ApplicationController
 
   def show
     @issues = @version
-              .work_packages
-              .visible
-              .includes(:status, :type, :priority)
-              .order("#{::Type.table_name}.position, #{WorkPackage.table_name}.id")
+                .work_packages
+                .visible
+                .includes(:status, :type, :priority)
+                .order("#{::Type.table_name}.position, #{WorkPackage.table_name}.id")
   end
 
   def new
@@ -43,12 +41,12 @@ class VersionsController < ApplicationController
 
   def create
     attributes = permitted_params
-                 .version
-                 .merge(project_id: @project.id)
+                   .version
+                   .merge(project_id: @project.id)
 
     call = Versions::CreateService
-           .new(user: current_user)
-           .call(attributes)
+             .new(user: current_user)
+             .call(attributes)
 
     render_cu(call, :notice_successful_create, 'new')
   end
@@ -57,12 +55,12 @@ class VersionsController < ApplicationController
 
   def update
     attributes = permitted_params
-                 .version
+                   .version
 
     call = Versions::UpdateService
-           .new(user: current_user,
-                model: @version)
-           .call(attributes)
+             .new(user: current_user,
+                  model: @version)
+             .call(attributes)
 
     render_cu(call, :notice_successful_update, 'edit')
   end
@@ -76,9 +74,9 @@ class VersionsController < ApplicationController
 
   def destroy
     call = Versions::DeleteService
-           .new(user: current_user,
-                model: @version)
-           .call
+             .new(user: current_user,
+                  model: @version)
+             .call
 
     unless call.success?
       flash[:error] = call.errors.full_messages

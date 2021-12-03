@@ -1,5 +1,3 @@
-
-
 <%= error_messages_for_contract @application, @errors %>
 
 <section class="form--section">
@@ -48,7 +46,7 @@
     <p>
       <%= t('oauth.client_credentials_impersonation_html',
             client_credentials_flow_link: static_link_to(:client_credentials_code_flow),
-            authorization_code_flow_link: static_link_to(:oauth_authorization_code_flow))  %>
+            authorization_code_flow_link: static_link_to(:oauth_authorization_code_flow)) %>
     </p>
 
     <div class="form--field -visible-overflow">
@@ -56,7 +54,7 @@
       </label>
       <div class="form--field-container">
         <div class="form--text-field-container -middle">
-          <%= f.hidden_field :client_credentials_user_id,  value: @application.client_credentials_user_id %>
+          <%= f.hidden_field :client_credentials_user_id, value: @application.client_credentials_user_id %>
           <user-autocompleter data-allow-empty="true"
                               data-update-input="application[client_credentials_user_id]"></user-autocompleter>
         </div>

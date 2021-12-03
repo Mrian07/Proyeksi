@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Principals
@@ -12,9 +10,9 @@ module API
 
             if query.valid?
               principals = query
-                           .results
-                           .where(id: Principal.visible(current_user))
-                           .includes(:preference)
+                             .results
+                             .where(id: Principal.visible(current_user))
+                             .includes(:preference)
 
               ::API::V3::Users::PaginatedUserCollectionRepresenter.new(principals,
                                                                        self_link: api_v3_paths.principals,

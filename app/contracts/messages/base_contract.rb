@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Messages
   class BaseContract < ::ModelContract
     include Attachments::ValidateReplacements

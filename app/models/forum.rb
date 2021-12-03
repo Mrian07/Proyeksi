@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Forum < ApplicationRecord
   belongs_to :project
   has_many :topics, -> {
@@ -36,7 +34,7 @@ class Forum < ApplicationRecord
     forum_id = forum_id.to_i
     where(id: forum_id)
       .update_all("topics_count = (SELECT COUNT(*) FROM #{Message.table_name} WHERE forum_id=#{forum_id} AND parent_id IS NULL)," +
-               " messages_count = (SELECT COUNT(*) FROM #{Message.table_name} WHERE forum_id=#{forum_id})," +
-               " last_message_id = (SELECT MAX(id) FROM #{Message.table_name} WHERE forum_id=#{forum_id})")
+                    " messages_count = (SELECT COUNT(*) FROM #{Message.table_name} WHERE forum_id=#{forum_id})," +
+                    " last_message_id = (SELECT MAX(id) FROM #{Message.table_name} WHERE forum_id=#{forum_id})")
   end
 end

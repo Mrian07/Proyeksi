@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Users::MembershipsController < ApplicationController
   include IndividualPrincipals::MembershipControllerMethods
   layout 'admin'

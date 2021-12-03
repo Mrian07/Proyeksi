@@ -1,5 +1,3 @@
-
-
 module WikiPages
   class CopyContract < CreateContract
     # Disable check for edit_wiki_pages permission

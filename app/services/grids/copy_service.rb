@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Grids
   ##
   # Base class for any grid-based model's copy service.
@@ -35,6 +33,8 @@ module Grids
       ServiceResult.new success: grid.save, result: grid
     end
 
-    def initialize_new_grid!(_new_grid, _original_grid, _params); end
+    def initialize_new_grid!(_new_grid, _original_grid, _params)
+      ;
+    end
   end
 end

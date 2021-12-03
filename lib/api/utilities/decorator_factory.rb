@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     # When ROAR is tasked with creating embedded representers, it accepts a Decorator class

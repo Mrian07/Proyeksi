@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class PartOf < Base
     label ::Relation::TYPE_PARTOF

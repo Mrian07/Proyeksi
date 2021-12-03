@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ProjectsController < ApplicationController
   menu_item :overview
   menu_item :roadmap, only: :roadmap

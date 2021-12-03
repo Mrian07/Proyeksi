@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class SCM::BaseRepositoryService
   def initialize(repository)
     self.repository = repository

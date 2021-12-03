@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Capabilities::Orders::IdOrder < Queries::Orders::Base
   self.model = Capability
 

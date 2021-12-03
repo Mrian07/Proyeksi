@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module Projects::Exports
   module Formatters
     class Status < ::Exports::Formatters::Default

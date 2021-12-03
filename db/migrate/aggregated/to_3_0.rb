@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 # rubocop:disable Naming/ClassAndModuleCamelCase
@@ -206,4 +204,5 @@ class Aggregated::To_3_0 < Aggregated::Base
     MIGRATIONS
   end
 end
+
 # rubocop:enable Naming/ClassAndModuleCamelCase

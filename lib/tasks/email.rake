@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 namespace :redmine do
   namespace :email do
     desc <<~END_DESC

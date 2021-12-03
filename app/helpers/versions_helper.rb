@@ -1,5 +1,3 @@
-
-
 module VersionsHelper
   # Returns a set of options for a select field, grouped by project.
   def version_options_for_select(versions, selected = nil)

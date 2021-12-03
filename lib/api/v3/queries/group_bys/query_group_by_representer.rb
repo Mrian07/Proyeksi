@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Queries
@@ -11,6 +9,7 @@ module API
 
           self_link id_attribute: ->(*) { converted_name },
                     title_getter: ->(*) { represented.caption }
+
           def initialize(model, *_)
             super(model, current_user: nil, embed_links: true)
           end

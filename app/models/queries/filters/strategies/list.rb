@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Strategies
   class List < BaseStrategy
     delegate :allowed_values,

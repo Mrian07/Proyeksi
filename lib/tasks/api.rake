@@ -1,5 +1,3 @@
-
-
 namespace :api do
   desc 'Print all api routes'
   task routes: [:environment] do

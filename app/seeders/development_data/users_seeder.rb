@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DevelopmentData
   class UsersSeeder < Seeder
     def seed_data!

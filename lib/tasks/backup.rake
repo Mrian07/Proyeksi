@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'tempfile'
 require 'fileutils'
 
@@ -76,7 +74,7 @@ namespace :backup do
     end
 
     def sql_dump_tempfile(config)
-      t =  "[client]\n"
+      t = "[client]\n"
       t << "password=\"#{config['password']}\"\n"
       t << "user=\"#{config.values_at('user', 'username').compact.first}\"\n"
       t << "host=\"#{config['host'] || '127.0.0.1'}\"\n"

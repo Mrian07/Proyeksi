@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WikiPage < ApplicationRecord
   belongs_to :wiki, touch: true
   has_one :project, through: :wiki
@@ -158,10 +156,10 @@ class WikiPage < ApplicationRecord
         # content updated_at was eager loaded with the page
         unless time.is_a? Time
           time = begin
-            Time.zone.parse(time)
-          rescue StandardError
-            nil
-          end
+                   Time.zone.parse(time)
+                 rescue StandardError
+                   nil
+                 end
         end
         @updated_at = time
       else

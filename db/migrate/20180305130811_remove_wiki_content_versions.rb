@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class RemoveWikiContentVersions < ActiveRecord::Migration[5.1]
   def up
     drop_table :wiki_content_versions

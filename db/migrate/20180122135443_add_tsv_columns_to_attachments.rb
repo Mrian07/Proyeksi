@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AddTsvColumnsToAttachments < ActiveRecord::Migration[5.0]
   def up
     if ProyeksiApp::Database.allows_tsv?

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Exporter for work package table.
 #
 # It can optionally export a work package with
@@ -288,11 +286,11 @@ class WorkPackage::PDFExport::WorkPackageListToPdf < WorkPackage::Exports::Query
     return @batch_supported if defined?(@batch_supported)
 
     @batch_supported = begin
-      _, status = Open3.capture2e('pdfunite', '-h')
-      status.success?
-    rescue StandardError => e
-      Rails.logger.error "Failed to test pdfunite version: #{e.message}"
-      false
-    end
+                         _, status = Open3.capture2e('pdfunite', '-h')
+                         status.success?
+                       rescue StandardError => e
+                         Rails.logger.error "Failed to test pdfunite version: #{e.message}"
+                         false
+                       end
   end
 end

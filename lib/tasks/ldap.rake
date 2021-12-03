@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 namespace :ldap do
   def parse_args
     # Rake croaks when using commas in default args without properly escaping

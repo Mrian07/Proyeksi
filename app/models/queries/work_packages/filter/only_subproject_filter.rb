@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::OnlySubprojectFilter <
   Queries::WorkPackages::Filter::SubprojectFilter
   def type

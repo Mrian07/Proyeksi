@@ -1,5 +1,3 @@
-
-
 <% html_title(t(:label_my_account), t(:label_setting_plural)) %>
 
 <% breadcrumb_paths(t(:label_my_account), t(:label_setting_plural)) %>
@@ -10,8 +8,8 @@
                               lang: current_language,
                               html: { id: 'my_account_form', class: 'form -wide-labels' } do |f| %>
   <fieldset class="form--fieldset">
-      <div class="form--field"><%= f.select :language, lang_options_for_select,  container_class: '-middle' %></div>
-      <%= render partial: 'users/preferences', locals: { input_size: :middle } %>
+    <div class="form--field"><%= f.select :language, lang_options_for_select, container_class: '-middle' %></div>
+    <%= render partial: 'users/preferences', locals: { input_size: :middle } %>
   </fieldset>
   <%= call_hook(:view_my_settings, user: @user, form: f) %>
   <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>

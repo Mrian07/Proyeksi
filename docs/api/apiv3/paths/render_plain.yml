@@ -19,7 +19,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:TypeNotSupported
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:TypeNotSupported
                 message: Expected Content-Type to be 'text/plain' but got 'application/json'.
       description: Returned if the Content-Type indicated in the request is not `text/plain`.
       headers: {}

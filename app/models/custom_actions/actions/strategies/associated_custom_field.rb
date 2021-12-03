@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions::Actions::Strategies::AssociatedCustomField
   include CustomActions::Actions::Strategies::Associated
   include CustomActions::Actions::Strategies::CustomField

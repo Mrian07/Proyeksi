@@ -1,5 +1,3 @@
-
-
 # Updates the roles of a membership assigned to the group.
 
 module Groups
@@ -97,6 +95,7 @@ module Groups
         UNION SELECT member_id from members_with_added_roles
       SQL
     end
+
     # rubocop:enable Metrics/AbcSize
   end
 end

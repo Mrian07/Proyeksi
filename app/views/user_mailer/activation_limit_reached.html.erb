@@ -1,20 +1,18 @@
-
-
 <p>
-    <% mail_link = "<a href=\"mailto:#{@email}\">#{@email}</a>" %>
-    <% host = ProyeksiApp::Application.root_url %>
-    <% host_link = "<a href=\"#{host}\">#{Setting.app_title}</a>" %>
-    <%= t("mail_user_activation_limit_reached.message", email: mail_link, host: host_link).html_safe %>
+  <% mail_link = "<a href=\"mailto:#{@email}\">#{@email}</a>" %>
+  <% host = ProyeksiApp::Application.root_url %>
+  <% host_link = "<a href=\"#{host}\">#{Setting.app_title}</a>" %>
+  <%= t("mail_user_activation_limit_reached.message", email: mail_link, host: host_link).html_safe %>
 </p>
 
 <p>
-    <span><%= t("mail_user_activation_limit_reached.steps.label") %></span>
-    <ul>
-        <li>
-            <%= link_translate("mail_user_activation_limit_reached.steps.a", links: { upgrade_url: ProyeksiApp::Enterprise.upgrade_url }).html_safe %>
-        </li>
-        <li>
-            <%= link_translate("mail_user_activation_limit_reached.steps.b", links: { users_url: users_url }).html_safe %>
-        </li>
-    </ul>
+  <span><%= t("mail_user_activation_limit_reached.steps.label") %></span>
+<ul>
+  <li>
+    <%= link_translate("mail_user_activation_limit_reached.steps.a", links: { upgrade_url: ProyeksiApp::Enterprise.upgrade_url }).html_safe %>
+  </li>
+  <li>
+    <%= link_translate("mail_user_activation_limit_reached.steps.b", links: { users_url: users_url }).html_safe %>
+  </li>
+</ul>
 </p>

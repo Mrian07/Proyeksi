@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Conditions::Type < CustomActions::Conditions::Base
   def self.key
     :type

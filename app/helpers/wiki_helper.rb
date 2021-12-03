@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WikiHelper
   def wiki_page_options_for_select(pages,
                                    ids: true,

@@ -1,5 +1,3 @@
-
-
 module API::V3::Formatter
   class TxtCharset
     def self.call(object, env)
@@ -17,6 +15,7 @@ module API::V3::Formatter
     rescue StandardError
       object.encoding
     end
+
     private_class_method :encoding
 
     # Detects the charset in the content_type header.
@@ -32,6 +31,7 @@ module API::V3::Formatter
         Encoding.default_external
       end
     end
+
     private_class_method :charset
   end
 end

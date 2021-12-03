@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class UpdateContract < BaseContract
     validate :user_allowed_to_update

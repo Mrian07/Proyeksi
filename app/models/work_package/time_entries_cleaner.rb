@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::TimeEntriesCleaner
   extend ActiveSupport::Concern
 
@@ -38,9 +36,9 @@ module WorkPackage::TimeEntriesCleaner
     def reassign_time_entries_before_destruction_of(work_packages, user, ids)
       work_packages = Array(work_packages)
       reassign_to = WorkPackage
-                    .joins(:project)
-                    .merge(Project.allowed_to(user, :edit_time_entries))
-                    .find_by(id: ids)
+                      .joins(:project)
+                      .merge(Project.allowed_to(user, :edit_time_entries))
+                      .find_by(id: ids)
 
       if reassign_to.nil?
         work_packages.each do |wp|

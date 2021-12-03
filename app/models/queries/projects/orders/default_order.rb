@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Orders::DefaultOrder < Queries::Orders::Base
   self.model = Project
 

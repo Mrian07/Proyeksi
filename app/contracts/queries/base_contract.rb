@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'model_contract'
 
 module Queries

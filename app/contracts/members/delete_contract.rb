@@ -1,5 +1,3 @@
-
-
 module Members
   class DeleteContract < ::DeleteContract
     delete_permission :manage_members

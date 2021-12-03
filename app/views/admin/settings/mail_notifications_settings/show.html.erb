@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_administration), t(:'menus.admin.mail_notification') -%>
 
 <%= toolbar title: t(:'menus.admin.mail_notification') %>
@@ -12,7 +10,8 @@
       <div class="form--field"><%= setting_check_box :plain_text_mail %></div>
     </section>
 
-    <fieldset id="emails_decorators" class="form--fieldset"><legend class="form--fieldset-legend"><%= t(:setting_emails_header) %> & <%= t(:setting_emails_footer) %></legend>
+    <fieldset id="emails_decorators" class="form--fieldset">
+      <legend class="form--fieldset-legend"><%= t(:setting_emails_header) %> & <%= t(:setting_emails_footer) %></legend>
       <%= rails_cell Settings::TextSettingCell, I18n.locale, name: "emails_header" %>
       <%= rails_cell Settings::TextSettingCell, I18n.locale, name: "emails_footer" %>
     </fieldset>
@@ -27,7 +26,7 @@
     email_methods << :letter_opener if Rails.env.development?
   %>
   <%= content_tag :fieldset, id: "mail_configuration", class: "form--fieldset" do %>
-    <legend class="form--fieldset-legend"><%=t(:text_setup_mail_configuration)%></legend>
+    <legend class="form--fieldset-legend"><%= t(:text_setup_mail_configuration) %></legend>
     <div class="form--field"><%= setting_select(:email_delivery_method, email_methods, id: "email_delivery_method_switch", container_class: '-slim') %></div>
     <div id="email_delivery_method_smtp" class="email_delivery_method_settings">
       <div class="form--field"><%= setting_text_field :smtp_address, container_class: '-middle' %></div>
@@ -43,7 +42,8 @@
       <div class="form--field"><%= setting_text_field :sendmail_location %></div>
     </div>
     <div id="email_delivery_method_letter_opener" class="email_delivery_method_settings">
-      <p>Letter opener is used to render emails as a file in your Rails tmp folder. Mails will automatically open in your browser if supported.</p>
+      <p>Letter opener is used to render emails as a file in your Rails tmp folder. Mails will automatically open in
+        your browser if supported.</p>
     </div>
   <% end unless ProyeksiApp::Configuration['email_delivery_configuration'] == 'legacy' %>
 

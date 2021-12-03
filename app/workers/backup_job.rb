@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'tempfile'
 require 'zip'
 
@@ -95,8 +93,8 @@ class BackupJob < ::ApplicationJob
   def store_backup(file_name, backup:, user:)
     File.open(file_name) do |file|
       call = Attachments::CreateService
-        .bypass_whitelist(user: user)
-        .call(container: backup, filename: file_name, file: file, description: 'ProyeksiApp backup')
+               .bypass_whitelist(user: user)
+               .call(container: backup, filename: file_name, file: file, description: 'ProyeksiApp backup')
 
       call.on_success do
         download_url = ::API::V3::Utilities::PathHelper::ApiV3Path.attachment_content(call.result.id)

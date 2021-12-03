@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Settings::UpdateService < ::BaseServices::BaseContracted
   def initialize(user:)
     super user: user,

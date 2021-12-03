@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ForumsController < ApplicationController
   default_search_scope :messages
   before_action :find_project_by_project_id,
@@ -41,10 +39,10 @@ class ForumsController < ApplicationController
       end
       format.atom do
         @messages = @forum
-                    .messages
-                    .order(["#{Message.table_name}.sticked_on ASC", sort_clause].compact.join(', '))
-                    .includes(:author, :forum)
-                    .limit(Setting.feeds_limit.to_i)
+                      .messages
+                      .order(["#{Message.table_name}.sticked_on ASC", sort_clause].compact.join(', '))
+                      .includes(:author, :forum)
+                      .limit(Setting.feeds_limit.to_i)
 
         render_feed(@messages, title: "#{@project}: #{@forum}")
       end
@@ -52,12 +50,12 @@ class ForumsController < ApplicationController
   end
 
   def set_topics
-    @topics =  @forum
-               .topics
-               .order(["#{Message.table_name}.sticked_on ASC", sort_clause].compact.join(', '))
-               .includes(:author, last_reply: :author)
-               .page(page_param)
-               .per_page(per_page_param)
+    @topics = @forum
+                .topics
+                .order(["#{Message.table_name}.sticked_on ASC", sort_clause].compact.join(', '))
+                .includes(:author, last_reply: :author)
+                .page(page_param)
+                .per_page(per_page_param)
   end
 
   def new; end

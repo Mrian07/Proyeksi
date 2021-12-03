@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Conditions::Base
   attr_reader :values
 
@@ -66,6 +64,7 @@ class CustomActions::Conditions::Base
       .includes(association_key)
       .where(habtm_table => { key_id => Array(work_packages).map { |w| w.send(key_id) }.uniq })
   end
+
   private_class_method :custom_action_scope_has_current
 
   def self.custom_action_scope_has_no
@@ -73,30 +72,36 @@ class CustomActions::Conditions::Base
       .includes(association_key)
       .where(habtm_table => { key_id => nil })
   end
+
   private_class_method :custom_action_scope_has_no
 
   def self.pluralized_key
     key.to_s.pluralize.to_sym
   end
+
   private_class_method :pluralized_key
 
   def self.habtm_table
     :"custom_actions_#{pluralized_key}"
   end
+
   private_class_method :habtm_table
 
   def self.key_id
     "#{key}_id".to_sym
   end
+
   private_class_method :key_id
 
   def self.association_key
     "#{key}_conditions".to_sym
   end
+
   private_class_method :association_key
 
   def self.association_ids
     "#{key}_condition_ids".to_sym
   end
+
   private_class_method :association_ids
 end

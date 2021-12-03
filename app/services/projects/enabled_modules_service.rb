@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Adds and removes modules from a project
 #

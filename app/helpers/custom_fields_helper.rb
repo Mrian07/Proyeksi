@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomFieldsHelper
   def custom_fields_tabs
     [
@@ -55,14 +53,14 @@ module CustomFieldsHelper
     tag = case field_format.try(:edit_as)
           when 'date'
             styled_text_field_tag(field_name, custom_value.value, id: field_id, class: '-augmented-datepicker', size: 10,
-                                                                  container_class: '-slim', required: custom_field.is_required)
+                                  container_class: '-slim', required: custom_field.is_required)
           when 'text'
             styled_text_area_tag(field_name, custom_value.value, id: field_id, rows: 3, container_class: '-middle',
-                                                                 required: custom_field.is_required)
+                                 required: custom_field.is_required)
           when 'bool'
             hidden_tag = hidden_field_tag(field_name, '0')
             checkbox_tag = styled_check_box_tag(field_name, '1', custom_value.typed_value, id: field_id,
-                                                                                           required: custom_field.is_required)
+                                                required: custom_field.is_required)
             hidden_tag + checkbox_tag
           when 'list'
             blank_option = if custom_field.is_required? && custom_field.default_value.blank?
@@ -79,7 +77,7 @@ module CustomFieldsHelper
             styled_select_tag(field_name, options, id: field_id, container_class: '-middle', required: custom_field.is_required)
           else
             styled_text_field_tag(field_name, custom_value.value, id: field_id, container_class: '-middle',
-                                                                  required: custom_field.is_required)
+                                  required: custom_field.is_required)
           end
 
     tag = content_tag :span, tag, lang: custom_field.name_locale, class: 'form--field-container'
@@ -94,7 +92,7 @@ module CustomFieldsHelper
   # Return custom field label tag
   def custom_field_label_tag(name, custom_value)
     content_tag 'label', h(custom_value.custom_field.name) +
-                         (custom_value.custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
+      (custom_value.custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
                 for: "#{name}_custom_field_values_#{custom_value.custom_field.id}",
                 class: "form--label #{custom_value.errors.empty? ? nil : 'error'}",
                 lang: custom_value.custom_field.name_locale
@@ -102,7 +100,7 @@ module CustomFieldsHelper
 
   def hidden_custom_field_label_tag(name, custom_value)
     content_tag 'label', h(custom_value.custom_field.name) +
-                         (custom_value.custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
+      (custom_value.custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
                 for: "#{name}_custom_field_values_#{custom_value.custom_field.id}",
                 class: "hidden-for-sighted",
                 lang: custom_value.custom_field.name_locale
@@ -110,7 +108,7 @@ module CustomFieldsHelper
 
   def blank_custom_field_label_tag(name, custom_field)
     content_tag 'label', h(custom_field.name) +
-                         (custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
+      (custom_field.is_required? ? content_tag('span', ' *', class: 'required') : ''),
                 for: "#{name}_custom_field_values_#{custom_field.id}",
                 class: 'form--label'
   end
@@ -163,8 +161,8 @@ module CustomFieldsHelper
       .sort_by(&:order)
       .reject { |format| format.label.nil? }
       .map do |custom_field_format|
-        [label_for_custom_field_format(custom_field_format.name), custom_field_format.name]
-      end
+      [label_for_custom_field_format(custom_field_format.name), custom_field_format.name]
+    end
   end
 
   def label_for_custom_field_format(format_string)

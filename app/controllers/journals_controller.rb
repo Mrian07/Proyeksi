@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class JournalsController < ApplicationController
   before_action :find_journal, except: [:index]
   before_action :find_optional_project, only: [:index]

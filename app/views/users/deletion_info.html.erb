@@ -1,13 +1,12 @@
-
 <% html_title(t(:label_administration), "#{ t('account.deletion_info.heading', name: @user.name)}") -%>
 
 <%= labelled_tabular_form_for(
-        :user,
-        url: user_path(@user),
-        html: {
-            method: :delete, class: 'confirm_required request-for-confirmation form danger-zone',
-            data: password_confirmation_data_attribute
-        }) do %>
+      :user,
+      url: user_path(@user),
+      html: {
+        method: :delete, class: 'confirm_required request-for-confirmation form danger-zone',
+        data: password_confirmation_data_attribute
+      }) do %>
   <div class='wiki'>
     <section class="form--section">
       <h3 class="form--section-title">

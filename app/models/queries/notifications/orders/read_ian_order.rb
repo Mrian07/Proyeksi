@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Orders::ReadIanOrder < Queries::Orders::Base
   self.model = Notification
 

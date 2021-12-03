@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Migration::MigrationUtils
   class SettingRenamer
     # define all the following methods as class methods

@@ -1,5 +1,3 @@
-
-
 module Projects
   class ArchiveContract < ModelContract
     include RequiresAdminGuard

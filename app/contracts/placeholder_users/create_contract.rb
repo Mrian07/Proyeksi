@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module PlaceholderUsers
   class CreateContract < BaseContract
     include RequiresEnterpriseGuard

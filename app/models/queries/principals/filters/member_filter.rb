@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Principals::Filters::MemberFilter < Queries::Principals::Filters::PrincipalFilter
   def allowed_values
     Project.active.all.map do |project|

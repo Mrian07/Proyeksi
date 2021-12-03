@@ -1,12 +1,11 @@
-
 <% html_title t(:label_administration), t(:label_user_plural) -%>
 <%
   user_limit = begin
-    token = ProyeksiApp::Enterprise.token
-    limit = token && Hash(token.restrictions)[:active_user_count]
+                 token = ProyeksiApp::Enterprise.token
+                 limit = token && Hash(token.restrictions)[:active_user_count]
 
-    limit if limit && limit > 0
-  end
+                 limit if limit && limit > 0
+               end
 %>
 <% users_info = user_limit && content_tag(:div) do %>
   <%= t(:label_enterprise_active_users, current: ProyeksiApp::Enterprise.active_user_count, limit: user_limit) %>
@@ -16,9 +15,9 @@
 <%= toolbar title: t(:label_user_plural), title_class: 'no-padding-bottom', subtitle: users_info do %>
   <li class="toolbar-item">
     <%= link_to new_user_path,
-        { class: 'button -alt-highlight',
-          aria: { label: t(:label_user_new) },
-          title: t(:label_user_new) } do %>
+                { class: 'button -alt-highlight',
+                  aria: { label: t(:label_user_new) },
+                  title: t(:label_user_new) } do %>
       <%= op_icon('button--icon icon-add') %>
       <span class="button--text"><%= t('activerecord.models.user') %></span>
     <% end %>

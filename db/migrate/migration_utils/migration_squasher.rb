@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # This migration aggregates the migrations passed in migrations into one given as a block
 # heredoc
 module Migration

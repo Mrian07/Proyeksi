@@ -1,12 +1,10 @@
-
-
 <%= toolbar title: t(:label_version_plural) do %>
   <% if current_user.allowed_to?(:manage_versions, @project) %>
     <li class="toolbar-item">
       <%= link_to_if_authorized({ controller: '/versions', action: 'new', project_id: @project },
                                 { class: 'button -alt-highlight',
-                                  aria: {label: t(:label_version_new)},
-                                  title: t(:label_version_new)}) do %>
+                                  aria: { label: t(:label_version_new) },
+                                  title: t(:label_version_new) }) do %>
         <%= op_icon('button--icon icon-add') %>
         <span class="button--text"><%= t('activerecord.models.version') %></span>
       <% end %>

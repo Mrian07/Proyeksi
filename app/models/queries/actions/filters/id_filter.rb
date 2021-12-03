@@ -1,5 +1,3 @@
-
-
 class Queries::Actions::Filters::IdFilter < Queries::Actions::Filters::ActionFilter
   include ::Queries::Filters::Shared::ParsedFilter
 

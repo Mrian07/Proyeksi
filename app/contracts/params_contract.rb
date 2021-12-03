@@ -1,5 +1,3 @@
-
-
 class ParamsContract < BaseContract
   attr_reader :params
 

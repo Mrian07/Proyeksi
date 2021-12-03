@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Cron
   class CronJob < ApplicationJob
     class_attribute :cron_expression

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Activities
   # Class used to retrieve activity events
   class Fetcher
@@ -23,20 +21,20 @@ module Activities
     # Returns an array of available event types
     def event_types
       @event_types ||= begin
-        if @project
-          ProyeksiApp::Activity.available_event_types.select do |o|
-            @project.self_and_descendants.detect do |_p|
-              permissions = constantized_providers(o).map do |p|
-                p.activity_provider_options[:permission]
-              end.compact
+                         if @project
+                           ProyeksiApp::Activity.available_event_types.select do |o|
+                             @project.self_and_descendants.detect do |_p|
+                               permissions = constantized_providers(o).map do |p|
+                                 p.activity_provider_options[:permission]
+                               end.compact
 
-              permissions.all? { |p| @user.allowed_to?(p, @project) }
-            end
-          end
-        else
-          ProyeksiApp::Activity.available_event_types
-        end
-      end
+                               permissions.all? { |p| @user.allowed_to?(p, @project) }
+                             end
+                           end
+                         else
+                           ProyeksiApp::Activity.available_event_types
+                         end
+                       end
     end
 
     # Returns an array of events for the given date range

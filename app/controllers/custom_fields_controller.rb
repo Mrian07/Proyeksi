@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomFieldsController < ApplicationController
   layout 'admin'
 
@@ -31,8 +29,8 @@ class CustomFieldsController < ApplicationController
 
   def create
     call = ::CustomFields::CreateService
-      .new(user: current_user)
-      .call(get_custom_field_params.merge(type: permitted_params.custom_field_type))
+             .new(user: current_user)
+             .call(get_custom_field_params.merge(type: permitted_params.custom_field_type))
 
     if call.success?
       flash[:notice] = t(:notice_successful_create)
@@ -52,10 +50,10 @@ class CustomFieldsController < ApplicationController
 
   def reorder_alphabetical
     reordered_options = @custom_field
-      .custom_options
-      .sort_by(&:value)
-      .each_with_index
-      .map do |custom_option, index|
+                          .custom_options
+                          .sort_by(&:value)
+                          .each_with_index
+                          .map do |custom_option, index|
       { id: custom_option.id, position: index + 1 }
     end
 
@@ -89,8 +87,8 @@ class CustomFieldsController < ApplicationController
 
   def perform_update(custom_field_params)
     call = ::CustomFields::UpdateService
-      .new(user: current_user, model: @custom_field)
-      .call(custom_field_params)
+             .new(user: current_user, model: @custom_field)
+             .call(custom_field_params)
 
     if call.success?
       flash[:notice] = t(:notice_successful_update)

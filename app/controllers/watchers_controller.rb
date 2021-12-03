@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WatchersController < ApplicationController
   before_action :find_watched_by_object
   before_action :find_project
@@ -25,8 +23,8 @@ class WatchersController < ApplicationController
     klass = params[:object_type].singularize.camelcase.constantize
 
     return false unless klass.respond_to?('watched_by') and
-                        klass.ancestors.include? Redmine::Acts::Watchable and
-                        params[:object_id].to_s =~ /\A\d+\z/
+      klass.ancestors.include? Redmine::Acts::Watchable and
+      params[:object_id].to_s =~ /\A\d+\z/
 
     unless @watched = klass.find(params[:object_id])
       render_404

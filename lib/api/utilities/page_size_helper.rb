@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     module PageSizeHelper
@@ -30,8 +28,8 @@ module API
       # * the maximum page size
       def resulting_page_size(value, relation = nil)
         [value || relation&.base_class&.per_page || Setting.per_page_options_array.min, maximum_page_size]
-           .map(&:to_i)
-           .min
+          .map(&:to_i)
+          .min
       end
 
       ##

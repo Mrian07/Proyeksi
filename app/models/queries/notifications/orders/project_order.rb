@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Orders::ProjectOrder < Queries::Orders::Base
   self.model = Notification
 

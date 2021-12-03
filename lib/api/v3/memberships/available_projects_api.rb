@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Memberships

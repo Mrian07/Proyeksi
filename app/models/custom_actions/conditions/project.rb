@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Conditions::Project < CustomActions::Conditions::Base
   def self.key
     :project

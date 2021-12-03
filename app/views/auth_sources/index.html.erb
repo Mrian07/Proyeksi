@@ -1,12 +1,10 @@
-
-
 <% html_title t(:label_administration), t(:label_auth_source_plural) %>
 <%= toolbar title: t(:label_auth_source_plural) do %>
   <li class="toolbar-item">
     <%= link_to({ action: 'new' },
-          { class: 'button -alt-highlight',
-            aria: {label: t(:label_auth_source_new)},
-            title: t(:label_auth_source_new)}) do %>
+                { class: 'button -alt-highlight',
+                  aria: { label: t(:label_auth_source_new) },
+                  title: t(:label_auth_source_new) }) do %>
       <%= op_icon('button--icon icon-add') %>
       <span class="button--text"><%= t(:label_auth_source) %></span>
     <% end %>
@@ -25,64 +23,66 @@
           <col>
         </colgroup>
         <thead>
-          <tr>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+        <tr>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
                     <%= AuthSource.human_attribute_name(:name) %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
                     <%= AuthSource.human_attribute_name(:type) %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
                     <%= AuthSource.human_attribute_name(:host) %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th>
-              <div class="generic-table--sort-header-outer">
-                <div class="generic-table--sort-header">
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--sort-header-outer">
+              <div class="generic-table--sort-header">
                   <span>
-                    <%= t(:label_user_plural)%>
+                    <%= t(:label_user_plural) %>
                   </span>
-                </div>
               </div>
-            </th>
-            <th><div class="generic-table--empty-header"></div></th>
-          </tr>
+            </div>
+          </th>
+          <th>
+            <div class="generic-table--empty-header"></div>
+          </th>
+        </tr>
         </thead>
         <tbody>
-          <% for source in @auth_sources %>
-            <tr>
-              <td><%= link_to source.name, action: 'edit', id: source %></td>
-              <td><%= source.auth_method_name %></td>
-              <td><%= source.host %></td>
-              <td><%= source.users.count %></td>
-              <td class="buttons">
-                <%= link_to t(:button_test), { action: 'test_connection', id: source } %>
-                <%= link_to '', { action: 'destroy', id: source },
-                                           method: :delete,
-                                           data: { confirm: t(:text_are_you_sure) },
-                                           class: 'icon icon-delete',
-                                           disabled: source.users.any?,
-                                           title: t(:button_delete) %>
-              </td>
-            </tr>
-          <% end %>
+        <% for source in @auth_sources %>
+          <tr>
+            <td><%= link_to source.name, action: 'edit', id: source %></td>
+            <td><%= source.auth_method_name %></td>
+            <td><%= source.host %></td>
+            <td><%= source.users.count %></td>
+            <td class="buttons">
+              <%= link_to t(:button_test), { action: 'test_connection', id: source } %>
+              <%= link_to '', { action: 'destroy', id: source },
+                          method: :delete,
+                          data: { confirm: t(:text_are_you_sure) },
+                          class: 'icon icon-delete',
+                          disabled: source.users.any?,
+                          title: t(:button_delete) %>
+            </td>
+          </tr>
+        <% end %>
         </tbody>
       </table>
 

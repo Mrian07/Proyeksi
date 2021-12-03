@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::DeleteService < ::BaseServices::Delete
   include ::WorkPackages::Shared::UpdateAncestors
 

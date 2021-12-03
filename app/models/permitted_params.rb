@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'permitted_params/allowed_settings'
 
 class PermittedParams
@@ -68,8 +66,8 @@ class PermittedParams
 
   def custom_action
     whitelisted = params
-      .require(:custom_action)
-      .permit(*self.class.permitted_attributes[:custom_action])
+                    .require(:custom_action)
+                    .permit(*self.class.permitted_attributes[:custom_action])
 
     whitelisted.merge(params[:custom_action].slice(:actions, :conditions).permit!)
   end
@@ -127,8 +125,8 @@ class PermittedParams
     # Here we try to circumvent this
     p = params.require(:query).permit(*self.class.permitted_attributes[:query])
     p[:sort_criteria] = params
-      .require(:query)
-      .permit(sort_criteria: { '0' => [], '1' => [], '2' => [] })
+                          .require(:query)
+                          .permit(sort_criteria: { '0' => [], '1' => [], '2' => [] })
     p[:sort_criteria].delete :sort_criteria
     p
   end
@@ -167,8 +165,8 @@ class PermittedParams
 
   def user_register_via_omniauth
     permitted_params = params
-      .require(:user)
-      .permit(:login, :firstname, :lastname, :mail, :language)
+                         .require(:user)
+                         .permit(:login, :firstname, :lastname, :mail, :language)
     permitted_params.merge(custom_field_values(:user))
   end
 
@@ -388,13 +386,13 @@ class PermittedParams
 
   def self.permitted_attributes
     @whitelisted_params ||= begin
-      params = {
-        attribute_help_text: %i(
+                              params = {
+                                attribute_help_text: %i(
           type
           attribute_name
           help_text
         ),
-        auth_source: %i(
+                                auth_source: %i(
           name
           host
           port
@@ -410,126 +408,126 @@ class PermittedParams
           attr_mail
           attr_admin
         ),
-        forum: %i(
+                                forum: %i(
           name
           description
         ),
-        color: %i(
+                                color: %i(
           name
           hexcode
           move_to
         ),
-        custom_action: %i(
+                                custom_action: %i(
           name
           description
           move_to
         ),
-        custom_field: [
-          :editable,
-          :field_format,
-          :is_filter,
-          :is_for_all,
-          :is_required,
-          :max_length,
-          :min_length,
-          :move_to,
-          :name,
-          :possible_values,
-          :regexp,
-          :searchable,
-          :visible,
-          :default_value,
-          :possible_values,
-          :multi_value,
-          :content_right_to_left,
-          { custom_options_attributes: %i(id value default_value position) },
-          { type_ids: [] }
-        ],
-        enumeration: %i(
+                                custom_field: [
+                                  :editable,
+                                  :field_format,
+                                  :is_filter,
+                                  :is_for_all,
+                                  :is_required,
+                                  :max_length,
+                                  :min_length,
+                                  :move_to,
+                                  :name,
+                                  :possible_values,
+                                  :regexp,
+                                  :searchable,
+                                  :visible,
+                                  :default_value,
+                                  :possible_values,
+                                  :multi_value,
+                                  :content_right_to_left,
+                                  { custom_options_attributes: %i(id value default_value position) },
+                                  { type_ids: [] }
+                                ],
+                                enumeration: %i(
           active
           is_default
           move_to
           name
           reassign_to_id
         ),
-        group: [
-          :lastname
-        ],
-        membership: [
-          :project_id,
-          { role_ids: [] }
-        ],
-        group_membership: [
-          :membership_id,
-          { membership: [
-            :project_id,
-            { role_ids: [] }
-          ],
-            new_membership: [
-              :project_id,
-              { role_ids: [] }
-            ] }
-        ],
-        member: [
-          role_ids: []
-        ],
-        new_work_package: [
-          :assigned_to_id,
-          { attachments: %i[file description] },
-          :category_id,
-          :description,
-          :done_ratio,
-          :due_date,
-          :estimated_hours,
-          :version_id,
-          :budget_id,
-          :parent_id,
-          :priority_id,
-          :responsible_id,
-          :start_date,
-          :status_id,
-          :type_id,
-          :subject,
-          Proc.new do |args|
-            # avoid costly allowed_to? if the param is not there at all
-            if args[:params]['work_package'] &&
-               args[:params]['work_package'].has_key?('watcher_user_ids') &&
-               args[:current_user].allowed_to?(:add_work_package_watchers, args[:project])
+                                group: [
+                                  :lastname
+                                ],
+                                membership: [
+                                  :project_id,
+                                  { role_ids: [] }
+                                ],
+                                group_membership: [
+                                  :membership_id,
+                                  { membership: [
+                                    :project_id,
+                                    { role_ids: [] }
+                                  ],
+                                    new_membership: [
+                                      :project_id,
+                                      { role_ids: [] }
+                                    ] }
+                                ],
+                                member: [
+                                  role_ids: []
+                                ],
+                                new_work_package: [
+                                  :assigned_to_id,
+                                  { attachments: %i[file description] },
+                                  :category_id,
+                                  :description,
+                                  :done_ratio,
+                                  :due_date,
+                                  :estimated_hours,
+                                  :version_id,
+                                  :budget_id,
+                                  :parent_id,
+                                  :priority_id,
+                                  :responsible_id,
+                                  :start_date,
+                                  :status_id,
+                                  :type_id,
+                                  :subject,
+                                  Proc.new do |args|
+                                    # avoid costly allowed_to? if the param is not there at all
+                                    if args[:params]['work_package'] &&
+                                      args[:params]['work_package'].has_key?('watcher_user_ids') &&
+                                      args[:current_user].allowed_to?(:add_work_package_watchers, args[:project])
 
-              { watcher_user_ids: [] }
-            end
-          end,
-          # attributes unique to :new_work_package
-          :journal_notes,
-          :lock_version
-        ],
-        oauth_application: [
-          :name,
-          :redirect_uri,
-          :confidential,
-          :client_credentials_user_id,
-          { scopes: [] }
-        ],
-        placeholder_user: %i(
+                                      { watcher_user_ids: [] }
+                                    end
+                                  end,
+                                  # attributes unique to :new_work_package
+                                  :journal_notes,
+                                  :lock_version
+                                ],
+                                oauth_application: [
+                                  :name,
+                                  :redirect_uri,
+                                  :confidential,
+                                  :client_credentials_user_id,
+                                  { scopes: [] }
+                                ],
+                                placeholder_user: %i(
           name
         ),
-        project_type: [
-          :name,
-          { type_ids: [] }
-        ],
-        query: %i(
+                                project_type: [
+                                  :name,
+                                  { type_ids: [] }
+                                ],
+                                query: %i(
           name
           display_sums
           is_public
           group_by
         ),
-        role: [
-          :name,
-          :assignable,
-          :move_to,
-          { permissions: [] }
-        ],
-        search: %i(
+                                role: [
+                                  :name,
+                                  :assignable,
+                                  :move_to,
+                                  { permissions: [] }
+                                ],
+                                search: %i(
           q
           offset
           previous
@@ -542,7 +540,7 @@ class PermittedParams
           projects
           submit
         ),
-        status: %i(
+                                status: %i(
           name
           color_id
           default_done_ratio
@@ -551,17 +549,17 @@ class PermittedParams
           is_readonly
           move_to
         ),
-        type: [
-          :name,
-          :is_in_roadmap,
-          :is_milestone,
-          :is_default,
-          :color_id,
-          :default,
-          :description,
-          { project_ids: [] }
-        ],
-        user: %i(
+                                type: [
+                                  :name,
+                                  :is_in_roadmap,
+                                  :is_milestone,
+                                  :is_default,
+                                  :color_id,
+                                  :default,
+                                  :description,
+                                  { project_ids: [] }
+                                ],
+                                user: %i(
           firstname
           lastname
           mail
@@ -569,23 +567,23 @@ class PermittedParams
           language
           custom_fields
         ),
-        wiki_page: %i(
+                                wiki_page: %i(
           title
           parent_id
           redirect_existing_links
         ),
-        wiki_content: %i(
+                                wiki_content: %i(
           text
           lock_version
           journal_notes
         ),
-        move_to: [:move_to]
-      }
+                                move_to: [:move_to]
+                              }
 
-      # Accept new parameters, defaulting to an empty array
-      params.default = []
-      params
-    end
+                              # Accept new parameters, defaulting to an empty array
+                              params.default = []
+                              params
+                            end
   end
 
   ## Add attributes as permitted attributes (only to be used by the plugins plugin)

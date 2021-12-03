@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class VersionsDependentService < Dependency
     def self.human_name

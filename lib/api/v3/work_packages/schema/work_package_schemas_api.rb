@@ -1,5 +1,3 @@
-
-
 require 'api/v3/work_packages/schema/typed_work_package_schema'
 require 'api/v3/work_packages/schema/work_package_sums_schema'
 require 'api/v3/work_packages/schema/work_package_schema_representer'
@@ -31,8 +29,8 @@ module API
                 end
 
                 service = ParseSchemaFilterParamsService
-                          .new(user: current_user)
-                          .call(filter)
+                            .new(user: current_user)
+                            .call(filter)
 
                 if service.success?
                   service.result

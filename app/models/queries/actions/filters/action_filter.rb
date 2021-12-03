@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Actions::Filters::ActionFilter < Queries::Filters::Base
   self.model = Action
 

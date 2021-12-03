@@ -75,7 +75,7 @@ post:
                   validationErrors:
                     from:
                       _type: Error
-                      errorIdentifier: urn:openproject-org:api:v3:errors:BadExampleError
+                      errorIdentifier: urn:proyeksi-app:api:v3:errors:BadExampleError
                       message: For the purpose of this example we need a validation
                         error. The remainder of the response pretends there were no
                         errors.
@@ -100,7 +100,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to edit the specified relation.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -116,7 +116,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified relation does not exist.
       description: |-
         Returned if the relation does not exist or the client does not have sufficient permissions to see it.

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module QueriesHelper
   def retrieve_query
     @query = if params[:query_id].present?

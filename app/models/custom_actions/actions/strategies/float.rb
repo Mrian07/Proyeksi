@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions::Actions::Strategies::Float
   include CustomActions::Actions::Strategies::ValidateInRange
 

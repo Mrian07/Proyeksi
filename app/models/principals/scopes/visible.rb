@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Only return Principals that are visible to the current user.
 #
 # Either the user has the `manage_members` permission in any project,

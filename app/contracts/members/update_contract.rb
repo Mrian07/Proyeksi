@@ -1,5 +1,3 @@
-
-
 module Members
   class UpdateContract < BaseContract
   end

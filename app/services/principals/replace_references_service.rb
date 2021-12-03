@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Rewrites references to a principal from one principal to the other.
 # No data is to be removed.
 module Principals
@@ -94,6 +92,7 @@ module Principals
         klass.where(responsible_id: from.id).update_all(responsible_id: to.id)
       end
     end
+
     # rubocop:enable Rails/SkipsModelValidations
 
     def journal_classes

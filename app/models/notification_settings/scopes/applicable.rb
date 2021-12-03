@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module NotificationSettings::Scopes
   module Applicable
     extend ActiveSupport::Concern
@@ -16,14 +14,15 @@ module NotificationSettings::Scopes
         project_notifications = NotificationSetting.arel_table.alias('project_settings')
 
         subselect = global_notifications
-                    .where(global_notifications[:project_id].eq(nil))
-                    .join(project_notifications, Arel::Nodes::OuterJoin)
-                    .on(project_notifications[:project_id].eq(project.id),
-                        global_notifications[:user_id].eq(project_notifications[:user_id]))
-                    .project(global_notifications.coalesce(project_notifications[:id], global_notifications[:id]))
+                      .where(global_notifications[:project_id].eq(nil))
+                      .join(project_notifications, Arel::Nodes::OuterJoin)
+                      .on(project_notifications[:project_id].eq(project.id),
+                          global_notifications[:user_id].eq(project_notifications[:user_id]))
+                      .project(global_notifications.coalesce(project_notifications[:id], global_notifications[:id]))
 
         where(global_notifications[:id].in(subselect))
       end
+
       # rubocop:enable Metrics/AbcSize
     end
   end

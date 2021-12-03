@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomFields
   class CreateService < ::BaseServices::Create
     def self.careful_new_custom_field(type)

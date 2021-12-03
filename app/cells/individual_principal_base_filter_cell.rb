@@ -1,5 +1,3 @@
-
-
 class IndividualPrincipalBaseFilterCell < RailsCell
   include UsersHelper
   include ActionView::Helpers::FormOptionsHelper

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Render
@@ -79,7 +77,7 @@ module API
                   I18n.t('api_v3.errors.render.context_not_parsable')
                 )
               elsif !SUPPORTED_CONTEXT_NAMESPACES.include?(context[:namespace]) ||
-                    context[:version] != '3'
+                context[:version] != '3'
                 fail ::API::Errors::InvalidRenderContext.new(
                   I18n.t('api_v3.errors.render.unsupported_context')
                 )

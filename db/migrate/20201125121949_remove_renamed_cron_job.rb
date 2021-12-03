@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class RemoveRenamedCronJob < ActiveRecord::Migration[6.0]
   def up
     # The job has been renamed to JobStatus::Cron::ClearOldJobStatusJob

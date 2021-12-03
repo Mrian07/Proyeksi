@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Admin::Settings
   class AttachmentsSettingsController < ::Admin::SettingsController
     menu_item :settings_attachments

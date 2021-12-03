@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -34,8 +32,8 @@ module API
             property = :start_date if property == :date && milestone?
 
             @writable_attributes ||= begin
-              contract.writable_attributes
-            end
+                                       contract.writable_attributes
+                                     end
 
             property_name = ::API::Utilities::PropertyNameConverter.to_ar_name(property, context: work_package)
 

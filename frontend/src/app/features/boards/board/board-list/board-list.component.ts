@@ -413,7 +413,7 @@ export class BoardListComponent extends AbstractWidgetComponent implements OnIni
           this.wpStatesInitialization.updateQuerySpace(query, query.results);
         },
         (error) => {
-          const userIsNotAllowedToSeeSubprojectError = 'urn:openproject-org:api:v3:errors:InvalidQuery';
+          const userIsNotAllowedToSeeSubprojectError = 'urn:proyeksi-app:api:v3:errors:InvalidQuery';
           if(error.errorIdentifier === userIsNotAllowedToSeeSubprojectError) {
             this.visibilityChange.emit(false);
           }

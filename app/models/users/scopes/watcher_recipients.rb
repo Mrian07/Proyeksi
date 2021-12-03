@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Returns a scope of users watching the instance that should be notified via whatever channel upon updates to the instance.
 # The users need to have the necessary permissions to see the instance as defined by the watchable_permission.
 # Additionally, the users need to have their mail notification setting set to watched: true.

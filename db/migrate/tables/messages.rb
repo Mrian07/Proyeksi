@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 class Tables::Messages < Tables::Base
@@ -29,5 +27,6 @@ class Tables::Messages < Tables::Base
       t.index %i[board_id updated_on]
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

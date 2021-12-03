@@ -1,5 +1,3 @@
-
-
 class VacuumRelations < ActiveRecord::Migration[5.0]
   disable_ddl_transaction!
 

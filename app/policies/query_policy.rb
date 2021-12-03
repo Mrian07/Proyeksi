@@ -1,5 +1,3 @@
-
-
 class QueryPolicy < BasePolicy
   private
 
@@ -26,7 +24,7 @@ class QueryPolicy < BasePolicy
     query.persisted? &&
       (
         (save_queries_allowed?(query) && query.user == user) ||
-        public_manageable_query?(query)
+          public_manageable_query?(query)
       )
   end
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class HighlightingController < ApplicationController
   before_action :determine_freshness
   skip_before_action :check_if_login_required, only: [:styles]

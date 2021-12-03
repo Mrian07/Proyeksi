@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Exports
   class Register
     class << self
