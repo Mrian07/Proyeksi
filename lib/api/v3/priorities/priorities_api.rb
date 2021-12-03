@@ -8,7 +8,7 @@ require 'api/v3/priorities/priority_representer'
 module API
   module V3
     module Priorities
-      class PrioritiesAPI < ::API::OpenProjectAPI
+      class PrioritiesAPI < ::API::ProyeksiAppAPI
         resources :priorities do
           after_validation do
             authorize(:view_work_packages, global: true)

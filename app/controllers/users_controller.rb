@@ -103,7 +103,7 @@ class UsersController < ApplicationController
 
         if @user.invited?
           # setting a password for an invited user activates them implicitly
-          if OpenProject::Enterprise.user_limit_reached?
+          if ProyeksiApp::Enterprise.user_limit_reached?
             @user.register!
             show_user_limit_warning!
           else
@@ -241,9 +241,9 @@ class UsersController < ApplicationController
 
       respond_to do |format|
         format.html { render_403 }
-        format.xml  { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="OpenProject API"' }
-        format.js   { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="OpenProject API"' }
-        format.json { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="OpenProject API"' }
+        format.xml  { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
+        format.js   { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
+        format.json { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
       end
 
       false
@@ -265,7 +265,7 @@ class UsersController < ApplicationController
   end
 
   def set_password?(params)
-    params[:user][:password].present? && !OpenProject::Configuration.disable_password_choice?
+    params[:user][:password].present? && !ProyeksiApp::Configuration.disable_password_choice?
   end
 
   protected
@@ -292,7 +292,7 @@ class UsersController < ApplicationController
     return update_params unless @user.change_password_allowed?
 
     if params[:user][:assign_random_password]
-      password = OpenProject::Passwords::Generator.random_password
+      password = ProyeksiApp::Passwords::Generator.random_password
       update_params.merge!(
         password: password,
         password_confirmation: password,

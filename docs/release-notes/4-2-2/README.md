@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.2
+  title: ProyeksiApp 4.2.2
   sidebar_navigation:
       title: 4.2.2
   release_version: 4.2.2
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.2
+# ProyeksiApp 4.2.2
 
-OpenProject 4.2.2 contains additional translations for the OpenProject
+ProyeksiApp 4.2.2 contains additional translations for the ProyeksiApp
 core and plugins, for instance complete translations for French
 ([\#20798](https://community.openproject.org/work_packages/20798)).
 

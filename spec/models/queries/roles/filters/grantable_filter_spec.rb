@@ -17,7 +17,7 @@ describe Queries::Roles::Filters::GrantableFilter, type: :model do
 
     describe '#scope' do
       context 'for the true value' do
-        let(:values) { [OpenProject::Database::DB_VALUE_TRUE] }
+        let(:values) { [ProyeksiApp::Database::DB_VALUE_TRUE] }
 
         context 'for "="' do
           let(:operator) { '=' }
@@ -43,7 +43,7 @@ describe Queries::Roles::Filters::GrantableFilter, type: :model do
       end
 
       context 'for the false value' do
-        let(:values) { [OpenProject::Database::DB_VALUE_FALSE] }
+        let(:values) { [ProyeksiApp::Database::DB_VALUE_FALSE] }
 
         context 'for "="' do
           let(:operator) { '=' }

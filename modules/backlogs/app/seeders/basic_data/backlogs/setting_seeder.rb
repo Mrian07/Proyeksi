@@ -26,7 +26,7 @@ module BasicData
         end
 
         def backlogs_setting_name
-          'plugin_openproject_backlogs'
+          'plugin_proyeksiapp_backlogs'
         end
 
         def backlogs_setting_value

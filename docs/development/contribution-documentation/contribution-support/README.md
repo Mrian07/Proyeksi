@@ -9,9 +9,9 @@ keywords: help, support, documentation process, documentation
 
 # Get support for your contribution
 
-If you have any questions on the contribution process or encounter problems with your contribution to the OpenProject documentation, please open a ticket. We will then get in touch with you via the ticket.
+If you have any questions on the contribution process or encounter problems with your contribution to the ProyeksiApp documentation, please open a ticket. We will then get in touch with you via the ticket.
 
-1. Login to or register at the [OpenProject community platform](https://community.openproject.org/login). It’s fast and free.
+1. Login to or register at the [ProyeksiApp community platform](https://community.openproject.org/login). It’s fast and free.
 
 2. Open a new [documentation work package]( https://community.openproject.org/projects/openproject/work_packages/new?type=69).
 

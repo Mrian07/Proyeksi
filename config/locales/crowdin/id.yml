@@ -28,8 +28,8 @@ id:
         main-menu-hover-font-color: "Font menu utama melayang"
         main-menu-border-color: "Batas menu utama"
       custom_colors: "Warna kostum"
-      customize: "Sesuaikan instalasi OpenProject anda dengan logo Anda sendiri. Catatan: Logo ini dapat diakses secara publik."
-      enterprise_notice: "Sebagai 'Terima Kasih' spesial untuk finansial konstributor untuk mengembangkan OpenProject, fitur kecil ini hanya akan tersedia untuk Enterprise Edition dukungan pelanggan."
+      customize: "Sesuaikan instalasi ProyeksiApp anda dengan logo Anda sendiri. Catatan: Logo ini dapat diakses secara publik."
+      enterprise_notice: "Sebagai 'Terima Kasih' spesial untuk finansial konstributor untuk mengembangkan ProyeksiApp, fitur kecil ini hanya akan tersedia untuk Enterprise Edition dukungan pelanggan."
       manage_colors: "Edit warna pilih opsi"
       instructions:
         alternative-color: "Warna cerah, umumnya dipakai sebagai penanda tombol penting pada layar monitor."
@@ -79,36 +79,36 @@ id:
       name: Nama arbitary koneksi LDAP
       host: Nama host LDAP atau alamat IP
       login_map: Kunci atribut pada LDAP digunakan untuk mengidentifikasi pengguna unik yang masuk. Biasanya akan menjadi 'uid' atau 'samAccountName'.
-      generic_map: Kunci atribut pada LDAP dipetakan ke atribut '%{attribute}' OpenProject
-      admin_map_html: "Opsional: Kunci atribut pada LDAP yang <strong>jika ada</strong> akan menandai pengguna OpenProject sebagai admin. Biarkan kososng jika ragu."
+      generic_map: Kunci atribut pada LDAP dipetakan ke atribut '%{attribute}' ProyeksiApp
+      admin_map_html: "Opsional: Kunci atribut pada LDAP yang <strong>jika ada</strong> akan menandai pengguna ProyeksiApp sebagai admin. Biarkan kososng jika ragu."
       system_user_dn_html: |
         Masukan DN pengguna sistem hanya digunakan untuk akses membaca.
         <br/>
         contoh: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Masukan password yang terikat dengan pengguna sistem
       base_dn: |
-        Masukan Base DN dari subtree LDAP yang anda inginkan agar OpenProject dapat melihat pengguna dan grup.
-        OpenProject akan memfilter username pada subtree saja.
+        Masukan Base DN dari subtree LDAP yang anda inginkan agar ProyeksiApp dapat melihat pengguna dan grup.
+        ProyeksiApp akan memfilter username pada subtree saja.
         Contoh: users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        Jika anda ceklis box ini, OpenProject akan secara otomatis membuat pengguna baru dari seluruh LDAP saat pertamakali autentikasi dengan OpenProject.
-        Biarkan tidak terceklis untuk mengizinkan akun yang ada di OpenProject untuk mengautentikasi melalui LDAP!
+        Jika anda ceklis box ini, ProyeksiApp akan secara otomatis membuat pengguna baru dari seluruh LDAP saat pertamakali autentikasi dengan ProyeksiApp.
+        Biarkan tidak terceklis untuk mengizinkan akun yang ada di ProyeksiApp untuk mengautentikasi melalui LDAP!
     connection_encryption: 'Enkripsi sambungan'
     system_account: 'Akun sistem'
     system_account_legend: |
-      OpenProject membutuhkan akses hanya baca melalui akun sistem untuk melihat pengguna dan grup pada pohon LDAP anda.
+      ProyeksiApp membutuhkan akses hanya baca melalui akun sistem untuk melihat pengguna dan grup pada pohon LDAP anda.
       Harap tentukan kredensial pengikatan untuk pengguna sistem tersebut di bagian berikut.
     ldap_details: 'detil dari LDAP'
     user_settings: 'Pemetaan atribut'
     user_settings_legend: |
-      The following fields are related to how users are created in OpenProject from LDAP entries and
-      what LDAP attributes are used to define the attributes of an OpenProject user (attribute mapping).
+      The following fields are related to how users are created in ProyeksiApp from LDAP entries and
+      what LDAP attributes are used to define the attributes of an ProyeksiApp user (attribute mapping).
     tls_mode:
       plain: 'kosong'
       simple_tls: 'simple_tls'
@@ -518,7 +518,7 @@ id:
         confirmation: "tidak sesuai dengan %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "tidak ditemukan."
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "may not be accessed."
         error_readonly: "was attempted to be written but is not writable."
         email: "is not a valid email address."
@@ -861,7 +861,7 @@ id:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1169,7 +1169,7 @@ id:
   error_can_not_unarchive_project: "This project cannot be unarchived: %{errors}"
   error_check_user_and_role: "Silakan pilih user dan Role."
   error_code: "Error %{code}"
-  error_cookie_missing: 'The OpenProject cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without.'
+  error_cookie_missing: 'The ProyeksiApp cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without.'
   error_custom_option_not_found: "Pilihan tidak ada."
   error_enterprise_activation_user_limit: "Your account could not be activated (user limit reached). Please contact your administrator to gain access."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1183,7 +1183,7 @@ id:
   error_work_package_done_ratios_not_updated: "Paket-Penugasan selesai, rasio tidak diupdate."
   error_work_package_not_found_in_project: "Paket-Penugasan tidak ditemukan atau tidak termasuk dalam Project ini"
   error_must_be_project_member: "harus sbg Project Member"
-  error_migrations_are_pending: "Instalasi OpenProject anda tertunda karena migrasi databse. kemungkinan anda melewatkan migrasi yang ada saat upgrade terakhir. silahkan periksa panduan upgrade untuk meng-upgrade dengan benar."
+  error_migrations_are_pending: "Instalasi ProyeksiApp anda tertunda karena migrasi databse. kemungkinan anda melewatkan migrasi yang ada saat upgrade terakhir. silahkan periksa panduan upgrade untuk meng-upgrade dengan benar."
   error_migrations_visit_upgrade_guides: "Silahkan kunjungi panduan dokumentasi upgrade kami"
   error_no_default_work_package_status: "Status Paket-Penugasan default tidak didefinisikan. Silakan periksa konfigurasi (ke \"Administrasi -> Paket-Penugasan Status\")."
   error_no_type_in_project: "Tidak ada Tipe terasosiasi dengan Project ini. Silakan cek Pengaturan Project."
@@ -1257,7 +1257,7 @@ id:
       no_visible_projects: "There are no visible projects in this instance."
       users: "Newest registered users in this instance."
     blocks:
-      community: "OpenProject community"
+      community: "ProyeksiApp community"
       upsale:
         title: "Tingkatkan ke edisi enterprise"
         more_info: "Informasi lebih lanjut"
@@ -1268,7 +1268,7 @@ id:
       faq: "FAQ"
       glossary: "Glossary"
       shortcuts: "Shortcuts"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Community forum"
       newsletter: "Peringatan keamanan / Jurnal berkala"
   image_conversion:
@@ -1309,9 +1309,9 @@ id:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1320,7 +1320,7 @@ id:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'News'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1633,7 +1633,7 @@ id:
   label_open_menu: "Buka menu"
   label_open_work_packages: "buka"
   label_open_work_packages_plural: "buka"
-  label_openproject_website: "OpenProject website"
+  label_openproject_website: "ProyeksiApp website"
   label_optional_description: "Deskripsi"
   label_options: "Opsi"
   label_other: "Lainnya"
@@ -1932,17 +1932,17 @@ id:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "Untuk mengubah password, klik link berikut :"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} Paket-Penugasan yang dilimpahkan kepada Anda akan berakhir dalam %{days} hari :"
   mail_body_group_reminder: "%{count} work package(s) that are assigned to group \"%{group}\" are due in the next %{days} days:"
@@ -1981,7 +1981,7 @@ id:
   mail_user_activation_limit_reached:
     subject: User activation limit reached
     message: |
-      A new user (%{email}) tried to create an account on an OpenProject environment that you manage (%{host}).
+      A new user (%{email}) tried to create an account on an ProyeksiApp environment that you manage (%{host}).
       The user cannot activate their account since the user limit has been reached.
     steps:
       label: "To allow the user to sign in you can either: "
@@ -2052,7 +2052,7 @@ id:
   notice_wont_delete_auth_source: The authentication mode cannot be deleted as long as there are still users using it.
   notice_project_cannot_update_custom_fields: "You cannot update the project's available custom fields. The project is invalid: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Halaman ini dihasilkan secara otomatis selama pembaharuan OpenProject. Ini berisi semua lampiran yang terkait sebelumnya dengan %{container_type} "%{container_name}".
+    Halaman ini dihasilkan secara otomatis selama pembaharuan ProyeksiApp. Ini berisi semua lampiran yang terkait sebelumnya dengan %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2074,9 +2074,9 @@ id:
           tb: "TB"
   onboarding:
     heading_getting_started: "Mendapatkan gambaran"
-    text_getting_started_description: "Mendapatkan gambaran singkat mengenai manajemen proyek dan tim kolaborasi bersama OpenProject."
+    text_getting_started_description: "Mendapatkan gambaran singkat mengenai manajemen proyek dan tim kolaborasi bersama ProyeksiApp."
     text_show_again: "You can restart this video from the help menu"
-    welcome: "Welcome to OpenProject"
+    welcome: "Welcome to ProyeksiApp"
     select_language: "Please select your language"
   permission_add_work_package_notes: "Tambahkan catatan"
   permission_add_work_packages: "Tambah Paket-Penugasan"
@@ -2135,7 +2135,7 @@ id:
   permission_select_project_modules: "Pilih modul Project"
   permission_manage_types: "Pilih Tipe"
   permission_view_calendar: "Lihat kalender"
-  permission_view_changesets: "View repository revisions in OpenProject"
+  permission_view_changesets: "View repository revisions in ProyeksiApp"
   permission_view_commit_author_statistics: "Lihat commit statistik penulis"
   permission_view_work_package_watchers: "Lihat daftar pemantau"
   permission_view_work_packages: "View work packages"
@@ -2215,7 +2215,7 @@ id:
     destroy:
       confirmation: "If you continue, this will permanently delete the managed repository."
       info: "Deleting the repository is an irreversible action."
-      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by OpenProject."
+      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by ProyeksiApp."
       managed_path_note: "Berikut direktory yang akan dihapus: %{path}"
       repository_verification: "Enter the project's identifier %{identifier} to verify the deletion of its repository."
       subtitle: "Do you really want to delete the %{repository_type} of the project %{project_name}?"
@@ -2229,8 +2229,8 @@ id:
       empty_repository: "Pada repository yang ditemukan belum terdapat revisi sama sekali."
       exists_on_filesystem: "The repository directory already exists in the filesystem."
       filesystem_access_failed: "An error occurred while accessing the repository in the filesystem: %{message}"
-      not_manageable: "Repository dari vendor yang anda pilih belum bisa dikelola oleh OpenProject."
-      path_permission_failed: "Terjadi error saat membuat %{path}. Pastikan OpenProject memiliki hak akses di folder."
+      not_manageable: "Repository dari vendor yang anda pilih belum bisa dikelola oleh ProyeksiApp."
+      path_permission_failed: "Terjadi error saat membuat %{path}. Pastikan ProyeksiApp memiliki hak akses di folder."
       unauthorized: "Anda tidak memiliki izin untuk mengakses repository, atau terjadi kesalahan data login."
       unavailable: "Repository tidak ditemukan."
       exception_title: "Repository tidak dapat diakses: %{message}"
@@ -2247,8 +2247,8 @@ id:
         path_encoding: "Encoding git (Default: UTF-8)"
       local_title: "Ambil dari Git lokal"
       local_url: "Local URL"
-      local_introduction: "Repository Git lokal yang anda miliki dapat dihubungkan dengan OpenProject untuk dikelola dari dalam."
-      managed_introduction: "Perbolehkan Repository Git lokal untuk dikelola secara otomatis oleh OpenProject."
+      local_introduction: "Repository Git lokal yang anda miliki dapat dihubungkan dengan ProyeksiApp untuk dikelola dari dalam."
+      managed_introduction: "Perbolehkan Repository Git lokal untuk dikelola secara otomatis oleh ProyeksiApp."
       managed_title: "Repository Git telah terintegrasi"
       managed_url: "Managed URL"
       path: "Path Git"
@@ -2266,19 +2266,19 @@ id:
     scm_types:
       local: "Kaitkan dengan repository lokal"
       existing: "Kaitkan dengan repository"
-      managed: "Buat repository baru dalam OpenProject"
+      managed: "Buat repository baru dalam ProyeksiApp"
     storage:
       not_available: "Storage tidak tersedia untuk repository ini."
       update_timeout: "Pertahankan informasi kebutuhan disk repository selama N menit. Semakin besar nilai N akan mengurangi beban komputasi."
     subversion:
       existing_title: "Repository Subversion yang sudah ada"
-      existing_introduction: "Repository Git lokal yang anda miliki dapat dihubungkan dengan OpenProject untuk dikelola dari dalam."
+      existing_introduction: "Repository Git lokal yang anda miliki dapat dihubungkan dengan ProyeksiApp untuk dikelola dari dalam."
       existing_url: "URL yang ada"
       instructions:
         managed_url: "Ini adalah URL dari repositori Subversion (lokal) yang dikelola."
         url: "Masukkan URL dari repository anda. Untuk lokal repository URL dimulai dengan (%{local_proto}).\nSkema URL yang diterima:"
-      managed_title: "Repository Subversion telah diintegrasikan ke OpenProject"
-      managed_introduction: "Ijinkan OpenProject membuat dan mengintegrasikan Subversion lokal secara otomatis."
+      managed_title: "Repository Subversion telah diintegrasikan ke ProyeksiApp"
+      managed_introduction: "Ijinkan ProyeksiApp membuat dan mengintegrasikan Subversion lokal secara otomatis."
       managed_url: "Managed URL"
       password: "Password Repository"
       username: "Username Repository"
@@ -2295,7 +2295,7 @@ id:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Dokumentasi"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2455,7 +2455,7 @@ id:
       sentence_connector: "dan"
       skip_last_comma: "false"
   text_accessibility_hint: "Modus aksesibilitas dirancang untuk pengguna yang buta, terkendala secara motorik atau memiliki penglihatan yang buruk. Untuk elemen-elemen fokus terakhir secara khusus diperhatikan. Harap diperhatikan, bahwa modul Backlogs tidak tersedia dalam modus ini."
-  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in OpenProject."
+  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in ProyeksiApp."
   text_analyze: "Analisa lanjut: %{subject}"
   text_are_you_sure: "Anda yakin?"
   text_are_you_sure_with_children: "Hapus Paket-Penugasan dan semua paket turunannya?"
@@ -2524,7 +2524,7 @@ id:
   text_no_notes: "There are no comments available for this work package."
   text_notice_too_many_values_are_inperformant: "Catatan: Menampilkan lebih dari 100 item per halaman dapat meningkatkan delay waktu membuka halaman."
   text_notice_security_badge_displayed_html: >
-    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current OpenProject version against the official OpenProject release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
+    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current ProyeksiApp version against the official ProyeksiApp release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
   text_own_membership_delete_confirmation: "Anda akan menghapus hak akses Anda dan mungkin Anda tidak dapat lagi mengedit Project ini. Apakah Anda yakin Anda ingin melanjutkan?"
   text_plugin_assets_writable: "Plugin aset direktori, bisa ditulisi"
   text_powered_by: "Didukung oleh %{link}"
@@ -2766,7 +2766,7 @@ id:
   warning: Warning
   warning_attachments_not_saved: "%{count} file tidak akan disimpan."
   warning_imminent_user_limit: >
-    You invited more users than are supported by your current plan. Invited users may not be able to join your OpenProject environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
+    You invited more users than are supported by your current plan. Invited users may not be able to join your ProyeksiApp environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
   warning_registration_token_expired: |
     The activation email has expired. We sent you a new one to %{email}.
     Please click the link inside of it to activate your account.
@@ -2900,21 +2900,21 @@ id:
         confidential: "Check if the application will be used where the client secret can be kept confidential. Native mobile apps and Single Page Apps are assumed non-confidential."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "Optional user ID to impersonate when clients use this application. Leave empty to allow public access only"
-        register_intro: "If you are developing an OAuth API client application for OpenProject, you can register it using this form for all users to use."
+        register_intro: "If you are developing an OAuth API client application for ProyeksiApp, you can register it using this form for all users to use."
         default_scopes: ""
     client_id: "ID Pelanggan"
     client_secret_notice: >
-      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by OpenProject at a later time.
+      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by ProyeksiApp at a later time.
     authorization_dialog:
       authorize: "Authorize"
       cancel: "Cancel and deny authorization."
       prompt_html: "Authorize <strong>%{application_name}</strong> to use your account <em>%{login}</em>?"
       title: "Authorize %{application_name}"
       wants_to_access_html: >
-        This application requests access to your OpenProject account. <br/> <strong>It has requested the following permissions:</strong>
+        This application requests access to your ProyeksiApp account. <br/> <strong>It has requested the following permissions:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the ProyeksiApp API v3 to perform actions on your behalf."
     grants:
       created_date: "Approved on"
       scopes: "Hak akses"
@@ -2929,7 +2929,7 @@ id:
     client_credentials_impersonation_set_to: "Client credentials user set to"
     client_credentials_impersonation_warning: "Note: Clients using the 'Client credentials' flow in this application will have the rights of this user"
     client_credentials_impersonation_html: >
-      By default, OpenProject provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
+      By default, ProyeksiApp provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
     authorization_error: "An authorization error has occurred."
     revoke_my_application_confirmation: "Do you really want to remove this application? This will revoke %{token_count} active for it."
     my_registered_applications: "Registered OAuth applications"

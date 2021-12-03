@@ -5,13 +5,13 @@
 module WarningBarHelper
   def render_pending_migrations_warning?
     current_user.admin? &&
-      OpenProject::Configuration.show_pending_migrations_warning? &&
-      OpenProject::Database.migrations_pending?
+      ProyeksiApp::Configuration.show_pending_migrations_warning? &&
+      ProyeksiApp::Database.migrations_pending?
   end
 
   def render_host_and_protocol_mismatch?
     current_user.admin? &&
-      OpenProject::Configuration.show_setting_mismatch_warning? &&
+      ProyeksiApp::Configuration.show_setting_mismatch_warning? &&
       (setting_protocol_mismatched? || setting_hostname_mismatched?)
   end
 
@@ -27,6 +27,6 @@ module WarningBarHelper
   # By default, never show a warning bar in the
   # test mode due to overshadowing other elements.
   def show_warning_bar?
-    OpenProject::Configuration.show_warning_bars?
+    ProyeksiApp::Configuration.show_warning_bars?
   end
 end

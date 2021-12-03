@@ -44,7 +44,7 @@ class Seeder
   end
 
   def edition_data_for(key)
-    data = translate_with_base_url("seeders.#{OpenProject::Configuration['edition']}.#{key}")
+    data = translate_with_base_url("seeders.#{ProyeksiApp::Configuration['edition']}.#{key}")
 
     return nil if data.is_a?(String) && data.start_with?("translation missing")
 
@@ -60,7 +60,7 @@ class Seeder
   end
 
   def project_has_data_for?(project, key)
-    I18n.exists?("seeders.#{OpenProject::Configuration['edition']}.demo_data.projects.#{project}.#{key}")
+    I18n.exists?("seeders.#{ProyeksiApp::Configuration['edition']}.demo_data.projects.#{project}.#{key}")
   end
 
   def without_notifications(&block)

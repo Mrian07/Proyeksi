@@ -1,4 +1,4 @@
-package Apache::OpenProjectAuthentication;
+package Apache::ProyeksiAppAuthentication;
 
 use strict;
 use warnings FATAL => 'all', NONFATAL => 'redefine';
@@ -23,34 +23,34 @@ use LWP::Protocol::http;
 
 my @directives = (
   {
-    name => 'OpenProjectUrl',
+    name => 'ProyeksiAppUrl',
     req_override => OR_AUTHCFG,
     args_how => TAKE1,
-    errmsg => 'URL of your (local) OpenProject. (e.g. http://localhost/ or http://www.example.com/openproject/)',
+    errmsg => 'URL of your (local) ProyeksiApp. (e.g. http://localhost/ or http://www.example.com/openproject/)',
   },
   {
-    name => 'OpenProjectApiKey',
+    name => 'ProyeksiAppApiKey',
     req_override => OR_AUTHCFG,
     args_how => TAKE1,
   },
   {
-    name => 'OpenProjectGitSmartHttp',
+    name => 'ProyeksiAppGitSmartHttp',
     req_override => OR_AUTHCFG,
     args_how => TAKE1,
   },
 );
 
-sub OpenProjectUrl { set_val('OpenProjectUrl', @_); }
-sub OpenProjectApiKey { set_val('OpenProjectApiKey', @_); }
+sub ProyeksiAppUrl { set_val('ProyeksiAppUrl', @_); }
+sub ProyeksiAppApiKey { set_val('ProyeksiAppApiKey', @_); }
 
-sub OpenProjectGitSmartHttp {
+sub ProyeksiAppGitSmartHttp {
   my ($self, $params, $arg) = @_;
   $arg = lc $arg;
 
   if ($arg eq "yes" || $arg eq "true") {
-    $self->{OpenProjectGitSmartHttp} = 1;
+    $self->{ProyeksiAppGitSmartHttp} = 1;
   } else {
-    $self->{OpenProjectGitSmartHttp} = 0;
+    $self->{ProyeksiAppGitSmartHttp} = 0;
   }
 }
 
@@ -109,17 +109,17 @@ sub is_access_allowed {
 
   my $cfg = Apache2::Module::get_config( __PACKAGE__, $r->server, $r->per_dir_config );
 
-  my $key = $cfg->{OpenProjectApiKey};
+  my $key = $cfg->{ProyeksiAppApiKey};
 
   # Trim url base if users add trailing slash
-  my $url_base = $cfg->{OpenProjectUrl};
+  my $url_base = $cfg->{ProyeksiAppUrl};
   $url_base =~ s|/$||;
 
   my $openproject_url = "$url_base/sys/repo_auth";
   my $openproject_unparsed_uri = $r->unparsed_uri;
   my $openproject_location = $r->location;
   my $openproject_git_smart_http = 0;
-  if (defined $cfg->{OpenProjectGitSmartHttp} and $cfg->{OpenProjectGitSmartHttp}) {
+  if (defined $cfg->{ProyeksiAppGitSmartHttp} and $cfg->{ProyeksiAppGitSmartHttp}) {
     $openproject_git_smart_http = 1;
   }
 
@@ -147,7 +147,7 @@ sub get_project_identifier {
 
     my $cfg = Apache2::Module::get_config(__PACKAGE__, $r->server, $r->per_dir_config);
     my $location = $r->location;
-    $location =~ s/\.git$// if (defined $cfg->{OpenProjectGitSmartHttp} and $cfg->{OpenProjectGitSmartHttp});
+    $location =~ s/\.git$// if (defined $cfg->{ProyeksiAppGitSmartHttp} and $cfg->{ProyeksiAppGitSmartHttp});
     my ($identifier) = $r->uri =~ m{$location/*([^/.]+)};
     $identifier;
 }

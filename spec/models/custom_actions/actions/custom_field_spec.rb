@@ -428,8 +428,8 @@ describe CustomActions::Actions::CustomField, type: :model do
 
       let(:expected) do
         [
-          { label: I18n.t(:general_text_yes), value: OpenProject::Database::DB_VALUE_TRUE },
-          { label: I18n.t(:general_text_no), value: OpenProject::Database::DB_VALUE_FALSE }
+          { label: I18n.t(:general_text_yes), value: ProyeksiApp::Database::DB_VALUE_TRUE },
+          { label: I18n.t(:general_text_no), value: ProyeksiApp::Database::DB_VALUE_FALSE }
         ]
       end
 
@@ -512,8 +512,8 @@ describe CustomActions::Actions::CustomField, type: :model do
       it_behaves_like 'bool custom action validations' do
         let(:allowed_values) do
           [
-            { true: OpenProject::Database::DB_VALUE_TRUE },
-            { false: OpenProject::Database::DB_VALUE_FALSE }
+            { true: ProyeksiApp::Database::DB_VALUE_TRUE },
+            { false: ProyeksiApp::Database::DB_VALUE_FALSE }
           ]
         end
       end

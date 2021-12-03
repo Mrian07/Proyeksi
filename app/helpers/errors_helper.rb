@@ -35,9 +35,9 @@ module ErrorsHelper
   end
 
   def get_additional_message
-    return unless OpenProject::Configuration.migration_check_on_exceptions?
+    return unless ProyeksiApp::Configuration.migration_check_on_exceptions?
 
-    if OpenProject::Database.migrations_pending?(ensure_fresh: true)
+    if ProyeksiApp::Database.migrations_pending?(ensure_fresh: true)
       I18n.t(:error_migrations_are_pending)
     end
   end

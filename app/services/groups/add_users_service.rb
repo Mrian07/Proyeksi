@@ -16,7 +16,7 @@ module Groups
     private
 
     def modify_members_and_roles(params)
-      sql_query = ::OpenProject::SqlSanitization
+      sql_query = ::ProyeksiApp::SqlSanitization
                   .sanitize add_to_user_and_projects_cte,
                             group_id: model.id,
                             user_ids: params[:ids]

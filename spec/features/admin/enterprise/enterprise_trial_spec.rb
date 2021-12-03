@@ -16,11 +16,11 @@ describe 'Enterprise trial management',
         {
           self:
             {
-              href: "https://augur.openproject-edge.com/public/v1/trials/#{trial_id}"
+              href: "https://augur.proyeksiapp-edge.com/public/v1/trials/#{trial_id}"
             },
           details:
             {
-              href: "https://augur.openproject-edge.com/public/v1/trials/#{trial_id}/details"
+              href: "https://augur.proyeksiapp-edge.com/public/v1/trials/#{trial_id}/details"
             }
         }
     }
@@ -34,11 +34,11 @@ describe 'Enterprise trial management',
       description: "User has to confirm their email address",
       _links: {
         resend: {
-          href: "https://augur.openproject-edge.com/public/v1/trials/#{trial_id}/resend",
+          href: "https://augur.proyeksiapp-edge.com/public/v1/trials/#{trial_id}/resend",
           method: "POST"
         },
         details: {
-          href: "https://augur.openproject-edge.com/public/v1/trials/#{trial_id}/details"
+          href: "https://augur.proyeksiapp-edge.com/public/v1/trials/#{trial_id}/details"
         }
       }
     }
@@ -46,7 +46,7 @@ describe 'Enterprise trial management',
 
   let(:expired_token) do
     <<~EOS
-      -----BEGIN OPENPROJECT-EE TOKEN-----
+      -----BEGIN PROYEKSIAPP-EE TOKEN-----
       eyJkYXRhIjoiTE02OG5UWjJ1cTY4dnlKNWo4NEk0ZnZGdHlFcUtEU1ZxVGd5
       WnBicTUzTlA5VFFOa3NSc3haOGl1KzZpXG5VTEhuQmhnWjc5c3pYRzhTV2lt
       Tlg3QnpLdkh2MlFLeXFqOCtkQ2dzNHNhQUEvV21aRWZ3YmtPVExTSTBcblVY
@@ -86,7 +86,7 @@ describe 'Enterprise trial management',
       VDN3OGkxSDVYNCtodlJ5T1g0Y0JEVWhNN2pcbnN3Wkw0citmWlRmaGlNQkZi
       K2NmSUZ0U2lyMVBpdz09XG4iLCJpdiI6IjFxbEZqRWM4QzcrMjg4QWR6cXdL
       OEE9PVxuIn0=
-      -----END OPENPROJECT-EE TOKEN-----
+      -----END PROYEKSIAPP-EE TOKEN-----
     EOS
   end
   let (:confirmed_body) do
@@ -97,7 +97,7 @@ describe 'Enterprise trial management',
       token_retrieved: false,
       _links: {
         self: {
-          href: "https://augur.openproject-edge.com/public/v1/trials/#{trial_id}"
+          href: "https://augur.proyeksiapp-edge.com/public/v1/trials/#{trial_id}"
         }
       }
     }
@@ -150,7 +150,7 @@ describe 'Enterprise trial management',
   end
 
   it 'blocks the request assuming the mail was used' do
-    proxy.stub('https://augur.openproject-edge.com:443/public/v1/trials', method: 'post')
+    proxy.stub('https://augur.proyeksiapp-edge.com:443/public/v1/trials', method: 'post')
       .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 422, body: mail_in_use_body.to_json)
 
     find('.button', text: 'Start free trial').click
@@ -163,7 +163,7 @@ describe 'Enterprise trial management',
   end
 
   it 'blocks the request assuming the domain was used' do
-    proxy.stub('https://augur.openproject-edge.com:443/public/v1/trials', method: 'post')
+    proxy.stub('https://augur.proyeksiapp-edge.com:443/public/v1/trials', method: 'post')
       .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 422, body: domain_in_use_body.to_json)
 
     find('.button', text: 'Start free trial').click
@@ -176,7 +176,7 @@ describe 'Enterprise trial management',
   end
 
   it 'shows an error in case of other errors' do
-    proxy.stub('https://augur.openproject-edge.com:443/public/v1/trials', method: 'post')
+    proxy.stub('https://augur.proyeksiapp-edge.com:443/public/v1/trials', method: 'post')
       .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 409, body: other_error_body.to_json)
 
     find('.button', text: 'Start free trial').click
@@ -189,13 +189,13 @@ describe 'Enterprise trial management',
 
   context 'with a waiting request pending' do
     before do
-      proxy.stub('https://augur.openproject-edge.com:443/public/v1/trials', method: 'post')
+      proxy.stub('https://augur.proyeksiapp-edge.com:443/public/v1/trials', method: 'post')
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 200, body: created_body.to_json)
 
-      proxy.stub("https://augur.openproject-edge.com:443/public/v1/trials/#{trial_id}")
+      proxy.stub("https://augur.proyeksiapp-edge.com:443/public/v1/trials/#{trial_id}")
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 422, body: waiting_body.to_json)
 
-      proxy.stub("https://augur.openproject-edge.com:443/public/v1/trials/#{trial_id}/resend", method: 'post')
+      proxy.stub("https://augur.proyeksiapp-edge.com:443/public/v1/trials/#{trial_id}/resend", method: 'post')
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 200, body: waiting_body.to_json)
 
       find('.button', text: 'Start free trial').click
@@ -213,21 +213,21 @@ describe 'Enterprise trial management',
       # Stub with successful body
       # Stub the proxy to a successful return
       # which marks the user has confirmed the mail link
-      proxy.stub("https://augur.openproject-edge.com:443/public/v1/trials/#{trial_id}")
+      proxy.stub("https://augur.proyeksiapp-edge.com:443/public/v1/trials/#{trial_id}")
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 200, body: confirmed_body.to_json)
 
       # Stub the details URL to still return 403
-      proxy.stub("https://augur.openproject-edge.com:443/public/v1/trials/#{trial_id}/details")
+      proxy.stub("https://augur.proyeksiapp-edge.com:443/public/v1/trials/#{trial_id}/details")
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 403)
 
       visit enterprise_path
 
-      expect(page).to have_selector('.attributes-key-value--value-container', text: 'OpenProject Test', wait: 20)
+      expect(page).to have_selector('.attributes-key-value--value-container', text: 'ProyeksiApp Test', wait: 20)
       expect(page).to have_selector('.attributes-key-value--value-container', text: '01/01/2020')
       expect(page).to have_selector('.attributes-key-value--value-container', text: '01/02/2020')
       expect(page).to have_selector('.attributes-key-value--value-container', text: '5')
       # Generated expired token has different mail
-      expect(page).to have_selector('.attributes-key-value--value-container', text: 'info@openproject.com')
+      expect(page).to have_selector('.attributes-key-value--value-container', text: 'info@proyeksiapp.com')
     end
 
     it 'can confirm that trial regularly' do
@@ -239,7 +239,7 @@ describe 'Enterprise trial management',
 
       # Stub the proxy to a successful return
       # which marks the user has confirmed the mail link
-      proxy.stub("https://augur.openproject-edge.com:443/public/v1/trials/#{trial_id}")
+      proxy.stub("https://augur.proyeksiapp-edge.com:443/public/v1/trials/#{trial_id}")
         .and_return(headers: { 'Access-Control-Allow-Origin' => '*' }, code: 200, body: confirmed_body.to_json)
 
       # Wait until the next request
@@ -252,12 +252,12 @@ describe 'Enterprise trial management',
       click_on 'Continue'
 
       expect(page).to have_selector('.flash.notice', text: 'Successful update.', wait: 10)
-      expect(page).to have_selector('.attributes-key-value--value-container', text: 'OpenProject Test')
+      expect(page).to have_selector('.attributes-key-value--value-container', text: 'ProyeksiApp Test')
       expect(page).to have_selector('.attributes-key-value--value-container', text: '01/01/2020')
       expect(page).to have_selector('.attributes-key-value--value-container', text: '01/02/2020')
       expect(page).to have_selector('.attributes-key-value--value-container', text: '5')
       # Generated expired token has different mail
-      expect(page).to have_selector('.attributes-key-value--value-container', text: 'info@openproject.com')
+      expect(page).to have_selector('.attributes-key-value--value-container', text: 'info@proyeksiapp.com')
     end
   end
 end

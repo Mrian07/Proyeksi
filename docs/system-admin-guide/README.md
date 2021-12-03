@@ -2,17 +2,17 @@
 sidebar_navigation:
   title: System Admin Guide
   priority: 970
-description: OpenProject system administration guide.
+description: ProyeksiApp system administration guide.
 robots: index, follow
 keywords: system administration
 ---
 # System Administration guide
 
-Welcome to the OpenProject **System Administration guide**.
+Welcome to the ProyeksiApp **System Administration guide**.
 
-In order to make changes to settings affecting your entire OpenProject environment, you need to navigate to the OpenProject administration.
+In order to make changes to settings affecting your entire ProyeksiApp environment, you need to navigate to the ProyeksiApp administration.
 
-If you are an administrator on your OpenProject environment,  you can access the administration by clicking on your user Avatar in the upper right corner and selecting ->*Administration* from the dropdown menu.
+If you are an administrator on your ProyeksiApp environment,  you can access the administration by clicking on your user Avatar in the upper right corner and selecting ->*Administration* from the dropdown menu.
 
 Click on one of the categories in order to proceed with the configuration.
 
@@ -24,23 +24,23 @@ Click on one of the categories in order to proceed with the configuration.
 
 | Topic                                                  | Content                                                      |
 | ------------------------------------------------------ | :----------------------------------------------------------- |
-| [Users and permissions](./users-permissions)           | How to manage users, groups and permissions in OpenProject?  |
+| [Users and permissions](./users-permissions)           | How to manage users, groups and permissions in ProyeksiApp?  |
 | [Work packages](./manage-work-packages)                | How to configure work packages, types, status and workflows? |
 | [Custom fields](./custom-fields)                       | Set custom fields for work packages, Spent time, projects, versions, users, groups and more. |
 | [Attribute help texts](./attribute-help-texts)         | Add help texts to explain attributes (including custom fields) in projects and work packages. |
 | [Enumerations](./enumerations)                         | Set enumerations, e.g. work package priorities, time tracking activities, document categories, and more. |
 | [System settings](./system-settings)                   | Configure your system settings, e.g. a welcome text block on the landing page, display settings, repositories, and more. |
-| [Incoming emails](./../installation-and-operations/configuration/incoming-emails) | Configure email settings in OpenProject. How to set up incoming email? |
-| [Outbound emails](./../installation-and-operations/configuration/outbound-emails) | Configure email settings in OpenProject. How to configure email notifications and your email provider? |
-| [Authentication](./authentication)                     | Configure authentication methods in OpenProject, e.g. OAuth, OpenID, Two-factor-authentication, LDAP, and more. |
+| [Incoming emails](./../installation-and-operations/configuration/incoming-emails) | Configure email settings in ProyeksiApp. How to set up incoming email? |
+| [Outbound emails](./../installation-and-operations/configuration/outbound-emails) | Configure email settings in ProyeksiApp. How to configure email notifications and your email provider? |
+| [Authentication](./authentication)                     | Configure authentication methods in ProyeksiApp, e.g. OAuth, OpenID, Two-factor-authentication, LDAP, and more. |
 | [Announcement](./announcement)                         | How to create a system announcement?                         |
 | [Design](./design)                                     | Create your own design and make it compliant to your company's Corporate Identity, upload logo and customize colors. |
 | [Colors](./colors)                                     | Configure colors used in the system, e.g. status colors, work package types, priorities and more. |
-| [Time and costs](./time-and-costs)                     | Configure your currency and create cost types in OpenProject. |
-| [Backlogs](./backlogs)                                 | Configure your backlogs settings in OpenProject, e.g. story types to be displayed in the backlogs, task types, and more. |
-| [Plugins](./plugins)                                   | Manage plugins in OpenProject.                               |
-| [Webhooks](./webhooks)                                 | Add and manage webhooks in OpenProject.                      |
+| [Time and costs](./time-and-costs)                     | Configure your currency and create cost types in ProyeksiApp. |
+| [Backlogs](./backlogs)                                 | Configure your backlogs settings in ProyeksiApp, e.g. story types to be displayed in the backlogs, task types, and more. |
+| [Plugins](./plugins)                                   | Manage plugins in ProyeksiApp.                               |
+| [Webhooks](./webhooks)                                 | Add and manage webhooks in ProyeksiApp.                      |
 | [Information](information)                             | View the latest system information status.                   |
-| [GitHub Integration](github-integration)               | How to combine GitHub and OpenProject.                       |
+| [GitHub Integration](github-integration)               | How to combine GitHub and ProyeksiApp.                       |
 | [Enterprise on-premises](../enterprise-guide/enterprise-on-premises-guide/) | Upgrading your Community Edition to Enterprise on-premises and other administrative topics. |
-| [Enterprise cloud](../enterprise-guide/enterprise-cloud-guide/)            | Manage your OpenProject Enterprise cloud and other administrative topics. |
+| [Enterprise cloud](../enterprise-guide/enterprise-cloud-guide/)            | Manage your ProyeksiApp Enterprise cloud and other administrative topics. |

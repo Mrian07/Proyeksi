@@ -59,8 +59,8 @@ RSpec.configure do |config|
   config.include ::ActiveSupport::Testing::Assertions
   config.include ::ActiveJob::TestHelper
 
-  OpenProject::Configuration['attachments_storage_path'] = 'tmp/files'
+  ProyeksiApp::Configuration['attachments_storage_path'] = 'tmp/files'
 
   # Hide warning bars by default
-  OpenProject::Configuration['show_warning_bars'] = false
+  ProyeksiApp::Configuration['show_warning_bars'] = false
 end

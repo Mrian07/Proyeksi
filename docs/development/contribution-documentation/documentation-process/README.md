@@ -2,24 +2,24 @@
 sidebar_navigation:
   title: Documentation process
   priority: 999
-description: The process of how to contribute to the OpenProject documentation
+description: The process of how to contribute to the ProyeksiApp documentation
 robots: index, follow
 keywords: contribution, documentation, documentation process
 ---
 
 # Documentation process
 
-Proudly open source software, we created our processes in a way that invites anyone to contribute to the OpenProject documentation.
+Proudly open source software, we created our processes in a way that invites anyone to contribute to the ProyeksiApp documentation.
 
 ## The documentation process step-by-step
 
 You will find the description for the basic development process in the [GitHub guideline](../../git-workflow/#development-at-github). In the following, you find the detailed information about the process for the documentation.
 
-Please note that you find  the [OpenProject repository on GitHub](https://github.com/opf/openproject).
+Please note that you find  the [ProyeksiApp repository on GitHub](https://github.com/opf/openproject).
 
-If you would like to contribute changes to the OpenProject documentation, please follow these steps:
+If you would like to contribute changes to the ProyeksiApp documentation, please follow these steps:
 
-1. [Fork the OpenProject repository](https://www.openproject.org/docs/development/git-workflow/#fork-openproject) and create a local development branch. Include documentation in your branch name.
+1. [Fork the ProyeksiApp repository](https://www.openproject.org/docs/development/git-workflow/#fork-openproject) and create a local development branch. Include documentation in your branch name.
 2. Create your changes in the documentation. It can be found in the folder [docs](https://github.com/opf/openproject/tree/dev/docs). You can work directly in the GitHub markdown files or use e.g. GitHub desktop and a markdown editor like Typora.
    If you are not only changing something in an existing documentation page but are adding a new page, please make sure to add metadata. To provide additional directives and useful information, we add metadata to the beginning of each documentation page. This will give you guidance on what information to provide in the metadata: 
   - Sidebar navigation: You do not have to add anything here. Leave it blank.
@@ -39,9 +39,9 @@ If the author or reviewer has any questions, they can use the comments in the pu
 
 Moving or renaming a document is the same as changing its location. We want to make sure after renaming or moving a page, the users will still find it. That is why we will need to redirect browsers to the new page. 
 
-Redirects are managed in a repository that is not accessible by the OpenProject community. In case you would like to move or rename a document, please create a ticket so that we can take care of it. Follow these steps to create your ticket:
+Redirects are managed in a repository that is not accessible by the ProyeksiApp community. In case you would like to move or rename a document, please create a ticket so that we can take care of it. Follow these steps to create your ticket:
 
-1. Login to or register at the [OpenProject community platform](https://community.openproject.org/login). It’s fast and free.
+1. Login to or register at the [ProyeksiApp community platform](https://community.openproject.org/login). It’s fast and free.
 
 2. Check if there is already an existing ticket by using the search bar in the header navigation at the top. If there is one, please leave a comment or add additional information. Otherwise:
 

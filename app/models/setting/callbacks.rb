@@ -26,7 +26,7 @@ class Setting
 
     # the notifier to delegate to
     def notifier
-      OpenProject::Notifications
+      ProyeksiApp::Notifications
     end
   end
 end

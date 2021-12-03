@@ -3,7 +3,7 @@
 module API
   module V3
     module WorkPackages
-      class WorkPackageRelationsAPI < ::API::OpenProjectAPI
+      class WorkPackageRelationsAPI < ::API::ProyeksiAppAPI
         helpers ::API::V3::Relations::RelationsHelper
 
         resources :relations do

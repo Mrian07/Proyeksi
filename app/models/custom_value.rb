@@ -35,7 +35,7 @@ class CustomValue < ApplicationRecord
   def strategy
     @strategy ||= begin
                     format = custom_field&.field_format || 'empty'
-                    OpenProject::CustomFieldFormat.find_by_name(format).formatter.new(self)
+                    ProyeksiApp::CustomFieldFormat.find_by_name(format).formatter.new(self)
                   end
   end
 

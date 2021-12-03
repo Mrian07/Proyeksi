@@ -8,7 +8,7 @@
 # no other user/action altering the current state at the same time especially in a multi process/thread setup.
 # Therefore, the whole update of a journable needs to be safeguarded by a mutex. In our implementation, we use
 #
-# OpenProject::Mutex.with_advisory_lock_transaction(journable)
+# ProyeksiApp::Mutex.with_advisory_lock_transaction(journable)
 #
 # for this purpose.
 
@@ -161,7 +161,7 @@ module Journals
         RETURNING *
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(journal_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(journal_sql,
                                               notes: notes,
                                               journable_id: journable.id,
                                               activity_type: journable.activity_type,
@@ -194,7 +194,7 @@ module Journals
         RETURNING *
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(data_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(data_sql,
                                               journable_id: journable.id)
     end
 
@@ -217,7 +217,7 @@ module Journals
           AND attachments.container_type = :journable_class_name
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(attachable_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(attachable_sql,
                                               journable_id: journable.id,
                                               journable_class_name: journable.class.name)
     end
@@ -243,7 +243,7 @@ module Journals
           AND custom_values.value != ''
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(customizable_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(customizable_sql,
                                               journable_id: journable.id,
                                               journable_class_name: journable.class.name)
     end
@@ -266,7 +266,7 @@ module Journals
            AND journals.version IN (SELECT MAX(version) FROM journals WHERE journable_id = :journable_id AND journable_type = :journable_type)
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(max_journal_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(max_journal_sql,
                                               journable_id: journable.id,
                                               journable_type: journable_type)
     end
@@ -309,7 +309,7 @@ module Journals
           OR (attachable_journals.attachment_id IS NULL AND attachments.id IS NOT NULL)
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(attachable_changes_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(attachable_changes_sql,
                                               journable_id: journable.id,
                                               container_type: journable.class.name)
     end
@@ -337,7 +337,7 @@ module Journals
               #{normalize_newlines_sql('custom_values.value')})
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(customizable_changes_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(customizable_changes_sql,
                                               customized_type: journable.class.name,
                                               journable_id: journable.id)
     end
@@ -360,7 +360,7 @@ module Journals
           #{journable_table_name}.id = :journable_id AND (#{data_changes_condition_sql})
       SQL
 
-      ::OpenProject::SqlSanitization.sanitize(data_changes_sql,
+      ::ProyeksiApp::SqlSanitization.sanitize(data_changes_sql,
                                               journable_id: journable.id)
     end
 
@@ -468,7 +468,7 @@ module Journals
     end
 
     def notify_aggregation_destruction(predecessor, journal)
-      OpenProject::Notifications.send(OpenProject::Events::JOURNAL_AGGREGATE_BEFORE_DESTROY,
+      ProyeksiApp::Notifications.send(ProyeksiApp::Events::JOURNAL_AGGREGATE_BEFORE_DESTROY,
                                       journal: journal,
                                       predecessor: predecessor)
     end

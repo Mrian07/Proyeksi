@@ -56,4 +56,4 @@ de:
           title: 'Ausgewählte Projekte'
         secret:
           description: >
-            Wenn gesetzt, wird dieser Schlüssel von OpenProject verwendet, um die Webhook-Payload zu signieren.
+            Wenn gesetzt, wird dieser Schlüssel von ProyeksiApp verwendet, um die Webhook-Payload zu signieren.

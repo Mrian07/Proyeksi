@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module Filters
-        class QueryFiltersAPI < ::API::OpenProjectAPI
+        class QueryFiltersAPI < ::API::ProyeksiAppAPI
           resource :filters do
             helpers do
               def convert_to_ar(attribute)

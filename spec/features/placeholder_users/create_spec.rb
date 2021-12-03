@@ -31,7 +31,7 @@ describe 'create placeholder users', type: :feature, selenium: true do
         new_placeholder_user_page.fill_in! name: 'UX Designer'
         new_placeholder_user_page.submit!
 
-        expect(page).to have_text 'is only available in the OpenProject Enterprise Edition'
+        expect(page).to have_text 'is only available in the ProyeksiApp Enterprise Edition'
       end
     end
   end

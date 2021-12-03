@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "OpenProject": {
+    "ProyeksiApp": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -90,19 +90,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "OpenProject:build",
+            "browserTarget": "ProyeksiApp:build",
             "proxyConfig": "cli_to_rails_proxy.js"
           },
           "configurations": {
             "production": {
-              "browserTarget": "OpenProject:build:production"
+              "browserTarget": "ProyeksiApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "OpenProject:build"
+            "browserTarget": "ProyeksiApp:build"
           }
         },
         "test": {
@@ -135,7 +135,7 @@
       }
     }
   },
-  "defaultProject": "OpenProject",
+  "defaultProject": "ProyeksiApp",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "op",

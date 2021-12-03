@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.4
+  title: ProyeksiApp 3.0.4
   sidebar_navigation:
       title: 3.0.4
   release_version: 3.0.4
@@ -7,12 +7,12 @@
 ---
 
 
-# OpenProject 3.0.4
+# ProyeksiApp 3.0.4
 
-The most important changes in OpenProject 3.0.4 are the fix to the
+The most important changes in ProyeksiApp 3.0.4 are the fix to the
 `reposman` (see
 [`extra/svn/reposman.rb`](https://github.com/opf/openproject/blob/dev/extra/svn/reposman.rb#L103))
-script and fixes for making OpenProject subfolder installations less of
+script and fixes for making ProyeksiApp subfolder installations less of
 a hassle.
 
 The `reposman` script was setting the wrong file (system) permissions

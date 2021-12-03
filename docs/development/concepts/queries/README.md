@@ -1,7 +1,7 @@
 ---
 sidebar_navigation:
   title: Queries
-description: An introduction to queries in OpenProject and their use in the frontend
+description: An introduction to queries in ProyeksiApp and their use in the frontend
 robots: index, follow
 keywords: queries, query space, work package views
 ---
@@ -10,9 +10,9 @@ keywords: queries, query space, work package views
 
 # Query
 
-The Query object is the concept of holding the configuration for a specific work package view as well as computing and outputting its results.  They are fundamental building blocks in OpenProject and used in many modules (Work packages, BIM, boards, timeline, embedded tables).  Their flexibility allows for building complex features with relatively little effort on the backend side. For an OpenProject developer who wants to improve or create new features it is fundamental to understand how queries work. 
+The Query object is the concept of holding the configuration for a specific work package view as well as computing and outputting its results.  They are fundamental building blocks in ProyeksiApp and used in many modules (Work packages, BIM, boards, timeline, embedded tables).  Their flexibility allows for building complex features with relatively little effort on the backend side. For an ProyeksiApp developer who wants to improve or create new features it is fundamental to understand how queries work. 
 
-Most of the communication in OpenProject is organized in work packages. Work packages are managed and displayed in many different places, such as the work package table in the *Work packages* module, or as cards the *Boards* module, within the *Calendar* or in *My page* widgets, such as charts for instance. Even the list of child work packages within a work package is a query.
+Most of the communication in ProyeksiApp is organized in work packages. Work packages are managed and displayed in many different places, such as the work package table in the *Work packages* module, or as cards the *Boards* module, within the *Calendar* or in *My page* widgets, such as charts for instance. Even the list of child work packages within a work package is a query.
 
 For the work packages table, the query object holds the way the table displays (selected columns, display mode) as well as what data it contains (filters, sort criteria).
 
@@ -112,9 +112,9 @@ These filters are also saved within the queries. If you would like to read more 
 
 ### Exemplary query response
 
-Due to the public nature of the OpenProject community, you can check out the following exemplary query response in HAL+JSON: http://community.openproject.com/api/v3/queries/2453
+Due to the public nature of the ProyeksiApp community, you can check out the following exemplary query response in HAL+JSON: http://community.openproject.com/api/v3/queries/2453
 
-It returns a saved query for the OpenProject 11.0 release, with a type filter `type is not [Idea, Phase, Release]` , a version filter `version = 11.0.0` and a "show all subprojects" filter with `subProject = all` . It is sorted by `type ascending`.
+It returns a saved query for the ProyeksiApp 11.0 release, with a type filter `type is not [Idea, Phase, Release]` , a version filter `version = 11.0.0` and a "show all subprojects" filter with `subProject = all` . It is sorted by `type ascending`.
 
 The resulting work packages will differ based on the visibility of the work packages and your permissions in the projects. For more information, check out [the concept on permissions](../permissions).
 

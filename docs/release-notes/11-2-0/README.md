@@ -1,16 +1,16 @@
 ---
-title: OpenProject 11.2.0
+title: ProyeksiApp 11.2.0
 sidebar_navigation:
     title: 11.2.0
 release_version: 11.2.0
 release_date: 2021-03-09
 ---
 
-# OpenProject 11.2.0
+# ProyeksiApp 11.2.0
 
 Release date: 2021-03-09
 
-We released [OpenProject 11.2.0](https://community.openproject.com/versions/1461).
+We released [ProyeksiApp 11.2.0](https://community.openproject.com/versions/1461).
 This new release will bring many new features and bug fixes that will improve classical as well as agile project management. 
 
 ## Placeholder users (premium feature)
@@ -46,7 +46,7 @@ The user administration is now distributed to non-admins by a new  global role f
 
 ## UI and UX improvements and various bug fixes
 
-Furthermore, with 11.2 we have implemented various UI and UX  improvements for OpenProject. We harmonized the navigation for the time and costs module so that it is consistent with the other navigation.  Also, we adapted the background colors of sum rows and group rows in the work package list so that it is easier to understand. We introduced a group show page (similar to the users show page) in order to link this page in case of mentioning a group and be also available for non-admins.
+Furthermore, with 11.2 we have implemented various UI and UX  improvements for ProyeksiApp. We harmonized the navigation for the time and costs module so that it is consistent with the other navigation.  Also, we adapted the background colors of sum rows and group rows in the work package list so that it is easier to understand. We introduced a group show page (similar to the users show page) in order to link this page in case of mentioning a group and be also available for non-admins.
 
 ### All bug fixes and changes
 
@@ -96,28 +96,28 @@ Furthermore, with 11.2 we have implemented various UI and UX  improvements for O
 
 ## Installation and Updates
 
-To use OpenProject 11.2 right away, create a free trial instance for our [OpenProject Enterprise cloud.](https://start.openproject.com/)
+To use ProyeksiApp 11.2 right away, create a free trial instance for our [ProyeksiApp Enterprise cloud.](https://start.openproject.com/)
 
-Prefer to run OpenProject 11.2 in your own infrastructure?
- Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 11.2 in your own infrastructure?
+ Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from a Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/enterprise-edition/)
 
-## Migrating to OpenProject 11.2
+## Migrating to ProyeksiApp 11.2
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 11.2.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 11.2.
 
-We update hosted OpenProject environments (Enterprise cloud) automatically.
+We update hosted ProyeksiApp environments (Enterprise cloud) automatically.
 
 ## Support
 
-You will find useful information in the OpenProject [Documentation](https://www.openproject.org/docs) or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
+You will find useful information in the ProyeksiApp [Documentation](https://www.openproject.org/docs) or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
 
 ## Credits
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject. Special thanks for reporting and finding bugs go to
+- All the developers, designers, project managers who have contributed to ProyeksiApp. Special thanks for reporting and finding bugs go to
 
   Rémi Schillinger, Sander Kleijwegt, Tibor Budai.
 

@@ -250,7 +250,7 @@ describe ::API::V3::Users::UserRepresenter do
 
     describe 'caching' do
       it 'is based on the representer\'s cache_key' do
-        expect(OpenProject::Cache)
+        expect(ProyeksiApp::Cache)
           .to receive(:fetch)
           .with(representer.json_cache_key)
           .and_call_original
@@ -298,7 +298,7 @@ describe ::API::V3::Users::UserRepresenter do
 
         it 'changes when the avatars plugin settings change' do
           allow(Setting)
-            .to receive(:plugin_openproject_avatars)
+            .to receive(:plugin_proyeksiapp_avatars)
                   .and_return 'something else'
 
           expect(representer.json_cache_key)

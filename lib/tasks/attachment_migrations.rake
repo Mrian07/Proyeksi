@@ -11,7 +11,7 @@ module Migrations
   ##
   # We create a separate classes as this is most likely to be used during
   # the migration of an ChiliProject (2.x or 3.x) which lacks a couple
-  # of columns models have in OpenProject >6.
+  # of columns models have in ProyeksiApp >6.
   module Attachments
     class CurrentWikiPage < ::ActiveRecord::Base
       self.table_name = "wiki_pages"

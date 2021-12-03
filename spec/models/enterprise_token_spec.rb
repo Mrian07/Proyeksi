@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe EnterpriseToken, type: :model do
-  let(:object) { OpenProject::Token.new domain: Setting.host_name }
+  let(:object) { ProyeksiApp::Token.new domain: Setting.host_name }
   subject { EnterpriseToken.new(encoded_token: 'foo') }
 
   before do
     RequestStore.delete :current_ee_token
-    allow(OpenProject::Configuration).to receive(:ee_manager_visible?).and_return(true)
+    allow(ProyeksiApp::Configuration).to receive(:ee_manager_visible?).and_return(true)
   end
 
   describe 'existing token' do
@@ -107,7 +107,7 @@ RSpec.describe EnterpriseToken, type: :model do
 
   describe "Configuration file has `ee_manager_visible` set to false" do
     it 'does not show banners promoting EE' do
-      expect(OpenProject::Configuration).to receive(:ee_manager_visible?).and_return(false)
+      expect(ProyeksiApp::Configuration).to receive(:ee_manager_visible?).and_return(false)
       expect(EnterpriseToken.show_banners?).to be_falsey
     end
   end

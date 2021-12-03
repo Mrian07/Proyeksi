@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.3.0
+  title: ProyeksiApp 8.3.0
   sidebar_navigation:
       title: 8.3.0
   release_version: 8.3.0
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 8.3.0
+# ProyeksiApp 8.3.0
 
 We released
-[OpenProject 8.3.0](https://community.openproject.com/versions/1319).  
+[ProyeksiApp 8.3.0](https://community.openproject.com/versions/1319).  
 The release contains several bug fixes and we recommend updating to the
 newest version.
 
@@ -22,7 +22,7 @@ newest version.
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-57"><span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-57">My
 page</span></span> grid implementation**
 
-OpenProject 8.3. introduces a grid-style dashboard that is now being
+ProyeksiApp 8.3. introduces a grid-style dashboard that is now being
 rolled out to
 the *<span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-57"><span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-57">My
 page</span></span>*. Additional pages will be converted to this grid in
@@ -33,11 +33,11 @@ created.
 
 **Improved search functionality**
 
-The global search functionality of OpenProject has been extended to
+The global search functionality of ProyeksiApp has been extended to
 auto-suggest work package results and provides improved action buttons
 to search globally or in the current project.
 
-![OpenProject
+![ProyeksiApp
 Search](Search-1024x626.png)
 
 **Autocompletion of work package attributes**
@@ -52,12 +52,12 @@ autocompleter.
 
 When bulk editing work packages (multiple selected work packages in the
 table \> right click and select bulk edit), erroneous work packages were
-only reported by their ID. OpenProject 8.3 prints all errors on the bulk
+only reported by their ID. ProyeksiApp 8.3 prints all errors on the bulk
 edit page to correct them on the spot.
 
 **Packaged installation uses PostgreSQL**
 
-The packaged installation of OpenProject now suggests to install
+The packaged installation of ProyeksiApp now suggests to install
 PostgreSQL instead of MySQL. For users with previous installations,
 nothing will change and their installed MySQL version will be kept. New
 users are suggested to use either the autoinstall method of PostgreSQL,

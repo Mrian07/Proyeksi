@@ -4,13 +4,13 @@ sidebar_navigation:
   priority: 9
 ---
 
-# Backing up your OpenProject installation
+# Backing up your ProyeksiApp installation
 
-We advise to backup your OpenProject installation regularly — especially before upgrading to a newer version.
+We advise to backup your ProyeksiApp installation regularly — especially before upgrading to a newer version.
 
 ## What should be backed up
 
-In general the following parts of your OpenProject installation should be backed up:
+In general the following parts of your ProyeksiApp installation should be backed up:
 
 - Data stored in the database
 - Configuration files
@@ -20,7 +20,7 @@ In general the following parts of your OpenProject installation should be backed
 ## Package-based installation (DEB/RPM)
 
 The DEB/RPM packages provide a backup tool which can be used to take a snapshot
-of the current OpenProject installation. This tool will create a backup of
+of the current ProyeksiApp installation. This tool will create a backup of
 all parts mentioned above. The backup tool is invoked by executing the following
 command:
 
@@ -85,7 +85,7 @@ If you need a regular dump of the database you can get one using `pg_dump` like 
 docker exec -e PGPASSWORD=openproject -it $OP_CONTAINER_NAME pg_dump -U openproject -h localhost -d openproject -x -O > openproject.sql
 ```
 
-Where `$OP_CONTAINER_NAME` is the name of your OpenProject container. If you don't know it you can find it using `docker ps | grep openproject`.
+Where `$OP_CONTAINER_NAME` is the name of your ProyeksiApp container. If you don't know it you can find it using `docker ps | grep openproject`.
 
 ### Importing the dump into a new container
 

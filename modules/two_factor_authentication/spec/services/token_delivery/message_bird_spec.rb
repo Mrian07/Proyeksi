@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 require 'messagebird'
 
-describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird, with_2fa_ee: true do
+describe ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::MessageBird, with_2fa_ee: true do
   describe 'sending messages' do
     let!(:user) { FactoryBot.create :user, language: locale }
     let!(:locale) { 'en' }
@@ -15,11 +15,11 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird, wit
     end
 
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:[]).with('2fa')
         .and_return(active_strategies: [:message_bird], message_bird: params)
 
-      allow_any_instance_of(::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird)
+      allow_any_instance_of(::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::MessageBird)
         .to receive(:create_mobile_otp)
         .and_return('1234')
     end
@@ -70,7 +70,7 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird, wit
       let(:channel) { :sms }
 
       before do
-        allow_any_instance_of(::OpenProject::TwoFactorAuthentication::TokenStrategy::MessageBird)
+        allow_any_instance_of(::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::MessageBird)
           .to receive(:message_bird_client)
           .and_return(messagebird)
       end

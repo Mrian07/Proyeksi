@@ -21,7 +21,7 @@ el:
         A new backup will override any previous one. Only a limited number of backups per day can be requested.
       last_backup: Last backup
       last_backup_from: Last backup from
-      title: Backup OpenProject
+      title: Backup ProyeksiApp
       options: Επιλογές
       include_attachments: Include attachments
       download_backup: Λήψη αντιγράφου ασφαλείας
@@ -183,7 +183,7 @@ el:
             label_maximum_users: "Μέγιστοι ενεργοί χρήστες"
             label_starts_at: "Αρχίζει στις"
             label_expires_at: "Λήγει στις"
-            receive_newsletter: Θέλω να λαμβάνω το <a target="_blank" href="%{link}">ενημερωτικό δελτίο</a> του OpenProject.
+            receive_newsletter: Θέλω να λαμβάνω το <a target="_blank" href="%{link}">ενημερωτικό δελτίο</a> του ProyeksiApp.
             taken_domain: Μπορεί να υπάρχει μόνο μια ενεργή δοκιμαστική συνδρομή ανά τομέα.
             taken_email: Κάθε χρήστης μπορεί να δημιουργήσει μόνο μία δοκιμαστική συνδρομή.
           email_not_received: "Δεν λάβατε email? Μπορείτε να ξαναστείλετε το email με τον σύνδεσμο στα δεξιά."
@@ -197,7 +197,7 @@ el:
           status_confirmed: "επιβεβαιωμένο"
           status_waiting: "το email απεστάλη - αναμονή για επιβεβαίωση"
           test_ee: "Δοκιμάστε την Έκδοση για Επιχειρήσεις για 14 ημέρες δωρεάν "
-          quick_overview: "Λάβετε μια γρήγορη επισκόπηση της διαχείρισης έργων και της ομαδικής συνεργασίας με την Enterprise έκδοση του OpenProject."
+          quick_overview: "Λάβετε μια γρήγορη επισκόπηση της διαχείρισης έργων και της ομαδικής συνεργασίας με την Enterprise έκδοση του ProyeksiApp."
         upsale:
           become_hero: "Γίνετε ήρωας!"
           benefits:
@@ -209,14 +209,14 @@ el:
             premium_features: "Premium λειτουργίες"
             premium_features_text: "Agile πίνακες, προσαρμοσμένα θέματα και λογότυπα, γραφήματα, έξυπνες ροές εργασίας με προσαρμοσμένες ενέργειες, αναζήτηση κειμένου για συνημμένα πακέτων εργασίας και πολλαπλή επιλογή προσαρμοσμένων πεδίων."
             professional_support: "Επαγγελματική υποστήριξη"
-            professional_support_text: "Αποκτήστε αξιόπιστη, high-touch υποστήριξη από ανώτερους μηχανικούς υποστήριξης με εξειδικευμένες γνώσεις σχετικά με τη λειτουργία του OpenProject σε κρίσιμα επιχειρηματικά περιβάλλοντα."
+            professional_support_text: "Αποκτήστε αξιόπιστη, high-touch υποστήριξη από ανώτερους μηχανικούς υποστήριξης με εξειδικευμένες γνώσεις σχετικά με τη λειτουργία του ProyeksiApp σε κρίσιμα επιχειρηματικά περιβάλλοντα."
           button_start_trial: "Έναρξη δωρεάν δοκιμαστικής περιόδου"
           button_book_now: "Κάντε κράτηση τώρα"
           confidence: >
             Παρέχουμε την εμπιστοσύνη ενός δοκιμασμένου και υποστηριζόμενου λογισμικού διαχείρισης έργων, επιχειρησιακού επιπέδου - με Ανοιχτό Κώδικα και ανοιχτό μυαλό.
           link_quote: "Λάβετε μια προσφορά"
           text: >
-            Η OpenProject Enterprise έκδοση βασίζεται στην Community έκδοση. Περιλαμβάνει premium χαρακτηριστικά και επαγγελματική υποστήριξη που απευθύνεται κυρίως σε οργανισμούς με περισσότερους από 10 χρήστες που διαχειρίζονται κρίσιμα επιχειρηματικά έργα με το OpenProject.
+            Η ProyeksiApp Enterprise έκδοση βασίζεται στην Community έκδοση. Περιλαμβάνει premium χαρακτηριστικά και επαγγελματική υποστήριξη που απευθύνεται κυρίως σε οργανισμούς με περισσότερους από 10 χρήστες που διαχειρίζονται κρίσιμα επιχειρηματικά έργα με το ProyeksiApp.
           unlimited: "Απεριόριστα"
           you_contribute: "Και οι προγραμματιστές πρέπει να πληρώσουν τους λογαριασμούς τους. Με την Έκδοση για Επιχειρήσεις, μπορείτε να συνεισφέρετε ουσιαστικά σε αυτή προσπάθεια της Open Source κοινότητας."
     custom_actions:
@@ -274,7 +274,7 @@ el:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "Ενεργοποίηση"
     label_add_column_after: "Προσθήκη στήλης μετά"
     label_add_column_before: "Προσθήκη στήλης πριν"
@@ -463,7 +463,7 @@ el:
         next: 'Επόμενο'
         got_it: 'Το κατάλαβα'
       steps:
-        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with OpenProject!'
+        help_menu: 'The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide and helpful how-to videos and more. <br> Enjoy your work with ProyeksiApp!'
         members: 'Invite new <b>members</b> to join your project.'
         project_selection: 'Please click on one of the demo projects that we have prepared. Demo data is currently only available in English. <br> The general <b>demo project</b> suits best for classical project management, while the <b>Scrum project</b> is better for agile project management.'
         quick_add_button: 'Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.'

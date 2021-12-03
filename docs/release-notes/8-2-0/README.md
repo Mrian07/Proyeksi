@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.2.0
+  title: ProyeksiApp 8.2.0
   sidebar_navigation:
       title: 8.2.0
   release_version: 8.2.0
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 8.2
+# ProyeksiApp 8.2
 
-OpenProject 8.2 includes several improvements, such as a modernized
+ProyeksiApp 8.2 includes several improvements, such as a modernized
 calendar as well as many usability improvements.
 
 Users of the [Cloud Edition](https://www.openproject.org/hosting/) and
@@ -20,7 +20,7 @@ Additionally, embedded work package now also support relations.
 ## Modernized calendar view
 
 The existing calendar view has been replaced with a new, modern calendar
-view with OpenProject 8.2. This affects all existing calendar views
+view with ProyeksiApp 8.2. This affects all existing calendar views
 (e.g. in a project, on the
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-57">My
 page</span>).
@@ -29,15 +29,15 @@ page</span>).
 
 ## Usability improvements
 
-OpenProject 8.2 includes many usability improvements which make
-OpenProject easier and smoother to use. Some examples of usability
+ProyeksiApp 8.2 includes many usability improvements which make
+ProyeksiApp easier and smoother to use. Some examples of usability
 improvements include:
 
   - Create a version from the roadmap and backlog page.
   - Change a work package parent directly from the breadcrumb.
   - A “Related to” relation is created automatically when copying a work
     package.
-  - The OpenProject search searches the current project and subprojects
+  - The ProyeksiApp search searches the current project and subprojects
     by default.
 
 ## Read-only mode for work packages (Enterprise Edition / Cloud Edition)
@@ -53,8 +53,8 @@ packages](Read-only-mode-work-packages-1024x432.png)
 
 ## Embedded work packages with other relation types (Enterprise Edition / Cloud Edition)
 
-With OpenProject 8.2 the embed work package capability introduced with
-OpenProject 8 is extended to be used with other relation types besides
+With ProyeksiApp 8.2 the embed work package capability introduced with
+ProyeksiApp 8 is extended to be used with other relation types besides
 hierarchical relationships.
 
 ![Embedded work package
@@ -62,11 +62,11 @@ table](WorkPackage-Table-1024x457.png)
 
 ## Technical improvements and bug fixes
 
-The OpenProject API now allows you to update times in OpenProject
+The ProyeksiApp API now allows you to update times in ProyeksiApp
 ([\#29003](https://community.openproject.com/projects/openproject/work_packages/29003/activity))
 and delete time entries
 ([\#29029](https://community.openproject.com/projects/openproject/work_packages/29029/activity)),
-OpenProject 8.2 contains a large number of smaller improvements and bug
+ProyeksiApp 8.2 contains a large number of smaller improvements and bug
 fixes.
 
 For an overview, please take a look at the [list of bug

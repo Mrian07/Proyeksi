@@ -1,6 +1,6 @@
 ---
 description: |-
-  Throughout OpenProject user input for many properties can be formatted using *Markdown*.
+  Throughout ProyeksiApp user input for many properties can be formatted using *Markdown*.
   Using the appropriate rendering endpoint it is possible to render custom formatted inputs into HTML and thus
   receive a preview of the rendered text.
 

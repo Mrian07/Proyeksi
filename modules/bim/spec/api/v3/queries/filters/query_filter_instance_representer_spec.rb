@@ -16,7 +16,7 @@ describe ::API::V3::Queries::Filters::QueryFilterInstanceRepresenter do
 
     context 'with a bool bcf_associated_filter' do
       context "with 't' as filter value" do
-        let(:values) { [OpenProject::Database::DB_VALUE_TRUE] }
+        let(:values) { [ProyeksiApp::Database::DB_VALUE_TRUE] }
 
         it "has `true` for 'values'" do
           is_expected
@@ -26,7 +26,7 @@ describe ::API::V3::Queries::Filters::QueryFilterInstanceRepresenter do
       end
 
       context "with 'f' as filter value" do
-        let(:values) { [OpenProject::Database::DB_VALUE_FALSE] }
+        let(:values) { [ProyeksiApp::Database::DB_VALUE_FALSE] }
 
         it "has `true` for 'values'" do
           is_expected

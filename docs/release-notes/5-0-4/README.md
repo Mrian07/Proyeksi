@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.4
+  title: ProyeksiApp 5.0.4
   sidebar_navigation:
       title: 5.0.4
   release_version: 5.0.4
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.4
+# ProyeksiApp 5.0.4
 
-OpenProject 5.0.4 contains several bug fixes and performance
+ProyeksiApp 5.0.4 contains several bug fixes and performance
 improvements:
 
   - Copying projects works properly again

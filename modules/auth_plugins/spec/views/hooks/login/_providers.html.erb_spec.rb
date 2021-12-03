@@ -12,7 +12,7 @@ describe 'rendering the login buttons for all providers' do
   end
 
   before do
-    allow(OpenProject::Plugins::AuthPlugin).to receive(:providers).and_return(providers)
+    allow(ProyeksiApp::Plugins::AuthPlugin).to receive(:providers).and_return(providers)
 
     render partial: 'hooks/login/providers', handlers: [:erb], formats: [:html]
   end

@@ -16,7 +16,7 @@ class EnterpriseToken < ApplicationRecord
     end
 
     def show_banners?
-      OpenProject::Configuration.ee_manager_visible? && (!current || current.expired?)
+      ProyeksiApp::Configuration.ee_manager_visible? && (!current || current.expired?)
     end
 
     def set_current_token
@@ -77,8 +77,8 @@ class EnterpriseToken < ApplicationRecord
   private
 
   def load_token!
-    @token_object = OpenProject::Token.import(encoded_token)
-  rescue OpenProject::Token::ImportError => e
+    @token_object = ProyeksiApp::Token.import(encoded_token)
+  rescue ProyeksiApp::Token::ImportError => e
     Rails.logger.error "Failed to load EE token: #{e}"
     nil
   end

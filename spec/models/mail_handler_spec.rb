@@ -105,7 +105,7 @@ describe MailHandler, type: :model do
     let(:permissions) { %i[add_work_package_notes view_work_packages] }
     let!(:user) do
       FactoryBot.create(:user,
-                        mail: 'j.doe@openproject.org',
+                        mail: 'j.doe@proyeksiapp.org',
                         member_in_project: project,
                         member_with_permissions: permissions)
     end
@@ -131,7 +131,7 @@ describe MailHandler, type: :model do
     end
     let!(:user) do
       FactoryBot.create(:user,
-                        mail: 'j.doe@openproject.org',
+                        mail: 'j.doe@proyeksiapp.org',
                         member_in_project: project,
                         member_through_role: role)
     end
@@ -181,7 +181,7 @@ describe MailHandler, type: :model do
     let(:permissions) { %i[view_messages add_messages] }
     let!(:user) do
       FactoryBot.create(:user,
-                        mail: 'j.doe@openproject.org',
+                        mail: 'j.doe@proyeksiapp.org',
                         member_in_project: project,
                         member_with_permissions: permissions)
     end
@@ -396,7 +396,7 @@ describe MailHandler, type: :model do
         end
       end
 
-      context 'email from emission address', with_settings: { mail_from: 'openproject@example.net' } do
+      context 'email from emission address', with_settings: { mail_from: 'proyeksiapp@example.net' } do
         before do
           Role.non_member.add_permission!(:add_work_packages)
         end
@@ -471,7 +471,7 @@ describe MailHandler, type: :model do
 
       before do
         # Avoid trying to extract text
-        allow(OpenProject::Database).to receive(:allows_tsv?).and_return false
+        allow(ProyeksiApp::Database).to receive(:allows_tsv?).and_return false
       end
 
       context 'with attachments to be added' do
@@ -600,7 +600,7 @@ describe MailHandler, type: :model do
           allow_any_instance_of(WorkPackage).to receive(:available_custom_fields).and_return([custom_field])
 
           allow(WorkPackage).to receive(:find_by).with(id: 42).and_return(work_package)
-          allow(User).to receive(:find_by_mail).with("h.wurst@openproject.com").and_return(mail_user)
+          allow(User).to receive(:find_by_mail).with("h.wurst@proyeksiapp.com").and_return(mail_user)
         end
 
         context 'of type text' do
@@ -697,7 +697,7 @@ describe MailHandler, type: :model do
         end
       end
 
-      context 'with a single quoted reply (e.g. reply to a OpenProject email notification)',
+      context 'with a single quoted reply (e.g. reply to a ProyeksiApp email notification)',
               with_settings: { mail_handler_body_delimiters: '--- Reply above. Do not remove this line. ---' } do
         include_context 'with a reply to a wp mention with quotes above'
 

@@ -152,7 +152,7 @@ export class WpResizerDirective extends UntilDestroyedMixin implements OnInit, A
     }
 
     // Store item in local storage
-    window.OpenProject.guardedLocalStorage(this.localStorageKey, `${newValue}`);
+    window.ProyeksiApp.guardedLocalStorage(this.localStorageKey, `${newValue}`);
 
     // Apply two column layout
     this.applyColumnLayout();
@@ -162,7 +162,7 @@ export class WpResizerDirective extends UntilDestroyedMixin implements OnInit, A
   }
 
   private parseLocalStorageValue():number|undefined {
-    const localStorageValue = window.OpenProject.guardedLocalStorage(this.localStorageKey);
+    const localStorageValue = window.ProyeksiApp.guardedLocalStorage(this.localStorageKey);
     const number = parseInt(localStorageValue || '', 10);
 
     if (typeof number === 'number' && number !== NaN) {

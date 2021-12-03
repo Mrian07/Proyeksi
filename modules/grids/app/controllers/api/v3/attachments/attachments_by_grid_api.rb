@@ -3,7 +3,7 @@
 module API
   module V3
     module Attachments
-      class AttachmentsByGridAPI < ::API::OpenProjectAPI
+      class AttachmentsByGridAPI < ::API::ProyeksiAppAPI
         resources :attachments do
           helpers API::V3::Attachments::AttachmentsByContainerAPI::Helpers
 

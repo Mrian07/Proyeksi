@@ -7,7 +7,7 @@ module Attachments
     private
 
     def validate_direct_uploads_active
-      errors.add :base, :not_available unless OpenProject::Configuration.direct_uploads?
+      errors.add :base, :not_available unless ProyeksiApp::Configuration.direct_uploads?
     end
 
     ##
@@ -24,9 +24,9 @@ module Attachments
     end
 
     def pending_content_type?
-      return false unless OpenProject::Configuration.direct_uploads?
+      return false unless ProyeksiApp::Configuration.direct_uploads?
 
-      model.content_type == OpenProject::ContentTypeDetector::SENSIBLE_DEFAULT
+      model.content_type == ProyeksiApp::ContentTypeDetector::SENSIBLE_DEFAULT
     end
   end
 end

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.0.0
+  title: ProyeksiApp 8.0.0
   sidebar_navigation:
       title: 8.0.0
   release_version: 8.0.0
@@ -7,27 +7,27 @@
 ---
 
 
-# OpenProject 8.0
+# ProyeksiApp 8.0
 
-OpenProject 8.0 introduces a new, professional text editor which makes
+ProyeksiApp 8.0 introduces a new, professional text editor which makes
 editing wiki pages, meetings, news and work packages much easier and
 comfortable. In addition, intelligent workflows are possible – thanks to
 custom actions. With the click of a button several attributes can be
 updated at once. Thanks to a new side navigation and a new design
-OpenProject offers a fresh, new look.
+ProyeksiApp offers a fresh, new look.
 
 The old timeline view has been removed and is replaced by the new
 interactive Gantt chart. Make sure to [migrate your timeline
 reports](https://www.openproject.org/blog/old-timeline-view-discontinued-please-migrate-timeline-openproject-7-0/)
-prior to upgrading to OpenProject 8. Embedded timeline views (using the
+prior to upgrading to ProyeksiApp 8. Embedded timeline views (using the
 old timeline) are removed. Instead, you can use embedded work package
 tables (see below).
 
-Read below to get a detailed overview of what is new in OpenProject 8.
+Read below to get a detailed overview of what is new in ProyeksiApp 8.
 
 ## WYSIWYG Markdown text editor
 
-A new WYSIWYG editor replaces the existing editor in OpenProject
+A new WYSIWYG editor replaces the existing editor in ProyeksiApp
 ([18039](https://community.openproject.com/projects/openproject/work_packages/18039/activity)).
 Based on CKEditor 5, the new editor makes it easy to create and format
 texts. Users do no longer have to remember textile syntax and can
@@ -44,7 +44,7 @@ pandoc.
 
 ## New side navigation
 
-Navigating within OpenProject is now even easier: The new side
+Navigating within ProyeksiApp is now even easier: The new side
 navigation
 ([26824](https://community.openproject.com/projects/openproject/work_packages/26824/activity),
 [27828](https://community.openproject.com/projects/openproject/work_packages/27828/activity))
@@ -57,7 +57,7 @@ to.
 
 ## Embedded work package tables
 
-With OpenProject 8 you can easily embed work package views and the Gantt
+With ProyeksiApp 8 you can easily embed work package views and the Gantt
 chart in wiki pages
 ([26233](https://community.openproject.com/projects/openproject/work_packages/26233/activity)).
 This way you can display key project information (such as the current
@@ -79,7 +79,7 @@ with certain attachments.
 
 ## Custom actions (Enterprise / Cloud Edition)
 
-With OpenProject 8 you can model intelligent workflows using custom
+With ProyeksiApp 8 you can model intelligent workflows using custom
 actions
 ([26612](https://community.openproject.com/projects/openproject/work_packages/26612/activity)).
 Simply select which actions should be triggered when you click a custom
@@ -112,7 +112,7 @@ displayed.
 
 ## Usability improvements
 
-OpenProject’s overall usability has been improved. The functionality of
+ProyeksiApp’s overall usability has been improved. The functionality of
 several existing modules has changed.  
 In particular, the work package page configuration has been updated to
 be usable for embedded tables as well. In addition
@@ -123,33 +123,33 @@ has been renamed to *Accountable*.
 
 ## New design
 
-With version 8, OpenProject gets a fresh new look: Both the OpenProject
+With version 8, ProyeksiApp gets a fresh new look: Both the ProyeksiApp
 logo and default color theme has been updated. As a user of the Cloud
 Edition or Enterprise Edition you can of course change the default color
 theme.
 
 ## Performance improvements
 
-OpenProject 8 also includes several performance improvements, e.g. for
+ProyeksiApp 8 also includes several performance improvements, e.g. for
 the work package page.
 
 ## Upgrade to Angular 6
 
-On the technical side, OpenProject 8 uses the latest version of Angular
+On the technical side, ProyeksiApp 8 uses the latest version of Angular
 (Angular 6) instead of AngularJS. This improves the overall performance
-and ensures that OpenProject is future-proof.
+and ensures that ProyeksiApp is future-proof.
 
 ## Substantial number of bug fixes
 
-OpenProject 8.0 contains a large number of bugs fixes.
+ProyeksiApp 8.0 contains a large number of bugs fixes.
 
 For an extensive overview of bug fixes please refer to the [following
 list](https://community.openproject.com/projects/openproject/work_packages?query_props=%7B%22c%22:%5B%22id%22,%22subject%22,%22type%22,%22status%22,%22assignee%22%5D,%22tzl%22:%22days%22,%22hi%22:false,%22g%22:%22%22,%22t%22:%22parent:desc%22,%22f%22:%5B%7B%22n%22:%22version%22,%22o%22:%22%253D%22,%22v%22:%5B%22818%22%5D%7D,%7B%22n%22:%22type%22,%22o%22:%22%253D%22,%22v%22:%5B%221%22%5D%7D,%7B%22n%22:%22subprojectId%22,%22o%22:%22*%22,%22v%22:%5B%5D%7D%5D,%22pa%22:1,%22pp%22:20%7D).
 
-## Upgrading your installation to OpenProject 8.0.
+## Upgrading your installation to ProyeksiApp 8.0.
 
-If you’re on our hosted environment of OpenProject, you are already
-running on the latest version of OpenProject 8.0.0. For your local
+If you’re on our hosted environment of ProyeksiApp, you are already
+running on the latest version of ProyeksiApp 8.0.0. For your local
 installations, there are some minor changes you need to do in order to
 perform the upgrade.
 

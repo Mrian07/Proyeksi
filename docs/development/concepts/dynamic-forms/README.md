@@ -10,7 +10,7 @@ keywords: concept, forms, dynamic forms, schemas
 
 # Dynamically generated forms
 
-Starting in OpenProject 11.3.0, the frontend application received a new mechanism to dynamically generate HTML forms from an APIv3 form response. The form response contains the model being changed/created and [a schema resource](../resource-schemas/) to describe the attributes of the resource.
+Starting in ProyeksiApp 11.3.0, the frontend application received a new mechanism to dynamically generate HTML forms from an APIv3 form response. The form response contains the model being changed/created and [a schema resource](../resource-schemas/) to describe the attributes of the resource.
 
 
 

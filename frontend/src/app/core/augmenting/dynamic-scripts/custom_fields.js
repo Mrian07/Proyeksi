@@ -266,7 +266,7 @@
     });
 
     // Setup autoscroll
-    window.OpenProject.getPluginContext().then((pluginContext) => {
+    window.ProyeksiApp.getPluginContext().then((pluginContext) => {
       new pluginContext.classes.DomAutoscrollService(
         [
           document.getElementById('content-wrapper'),

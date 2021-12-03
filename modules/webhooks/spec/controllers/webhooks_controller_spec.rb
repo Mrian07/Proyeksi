@@ -3,12 +3,12 @@
 require File.expand_path('../spec_helper', __dir__)
 
 describe Webhooks::Incoming::HooksController, type: :controller do
-  let(:hook) { double(OpenProject::Webhooks::Hook) }
+  let(:hook) { double(ProyeksiApp::Webhooks::Hook) }
   let(:user) { double(User).as_null_object }
 
   describe '#handle_hook' do
     before do
-      expect(OpenProject::Webhooks).to receive(:find).with('testhook').and_return(hook)
+      expect(ProyeksiApp::Webhooks).to receive(:find).with('testhook').and_return(hook)
       allow(controller).to receive(:find_current_user).and_return(user)
     end
 

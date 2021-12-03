@@ -63,7 +63,7 @@ module Accounts::AuthenticationStages
   end
 
   def authentication_stages(after_activation: false, reset: true)
-    if OpenProject::Authentication::Stage.stages.select(&:active?).any?
+    if ProyeksiApp::Authentication::Stage.stages.select(&:active?).any?
       session.delete %i[authentication_stages stage_secrets back_url] if reset
 
       if session.include?(:authentication_stages)
@@ -77,7 +77,7 @@ module Accounts::AuthenticationStages
   end
 
   def lookup_authentication_stages
-    OpenProject::Authentication::Stage.find_all session[:authentication_stages]
+    ProyeksiApp::Authentication::Stage.find_all session[:authentication_stages]
   end
 
   def init_authentication_stages(after_activation:)
@@ -97,7 +97,7 @@ module Accounts::AuthenticationStages
   end
 
   def active_stages(after_activation)
-    OpenProject::Authentication::Stage
+    ProyeksiApp::Authentication::Stage
       .stages
       .select(&:active?)
       .select { |s| s.run_after_activation? || !after_activation }

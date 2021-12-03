@@ -2,26 +2,26 @@
 sidebar_navigation:
   title: Documentation style guide
   priority: 998
-description: What styles and formats to follow when contributing to the OpenProject documentation
+description: What styles and formats to follow when contributing to the ProyeksiApp documentation
 robots: index, follow
 keywords: documentation style guide, style guide, format, style
 ---
 
 # Documentation style guide
 
-This document defines the standards for the OpenProject documentation, including grammar, formatting, wording and more.
+This document defines the standards for the ProyeksiApp documentation, including grammar, formatting, wording and more.
 
 
 
 ## Markup language
 
-All OpenProject documentation is written in Markdown. Feel free to either work directly in the Markdown files or to use [GitHub desktop](https://desktop.github.com) with a markdown editor like [Typora](https://typora.io) or others.
+All ProyeksiApp documentation is written in Markdown. Feel free to either work directly in the Markdown files or to use [GitHub desktop](https://desktop.github.com) with a markdown editor like [Typora](https://typora.io) or others.
 
 
 
 ## Documentation structure
 
-The OpenProject documentation is divided into the top level folders:
+The ProyeksiApp documentation is divided into the top level folders:
 
 - Guides: getting started guide, user guide, system admin guide, Enterprise edition guide, installation and operation guide. Thereby each guide is available at top level on its own.
 - FAQs
@@ -29,9 +29,9 @@ The OpenProject documentation is divided into the top level folders:
 - Development
 - API
 
-Within each folder there is a sub-hierarchy of topics. E.g. in the Getting started guide you find amongst others the Introduction to OpenProject and Sign in and registration as sub-topics. Sub-topics are individual documentation pages in GitHub. You will notice the sub-topics in the documentation menu on the left when unfolding each folder's menu.
+Within each folder there is a sub-hierarchy of topics. E.g. in the Getting started guide you find amongst others the Introduction to ProyeksiApp and Sign in and registration as sub-topics. Sub-topics are individual documentation pages in GitHub. You will notice the sub-topics in the documentation menu on the left when unfolding each folder's menu.
 
-![OpenProject_documentation_menu_left_side_unfolded_sub_topics](OpenProject_documentation_menu.png)
+![ProyeksiApp_documentation_menu_left_side_unfolded_sub_topics](ProyeksiApp_documentation_menu.png)
 
 
 
@@ -43,14 +43,14 @@ Find an overview of content per folder here:
 
 | **Directory**                                                | **Contents**                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Getting started guide](https://www.openproject.org/docs/getting-started/) | Here you will learn about the first steps with OpenProject. It is a short introduction on registration,  sign up, inviting members, starting to set up a project and the most important  features work packages, Gantt charts and agile boards. |
-| [User guide](https://www.openproject.org/docs/user-guide/)   | This guide covers the details of all features and  functionalities found in OpenProject. |
-| [System admin guide](https://www.openproject.org/docs/system-admin-guide/) | Documentation on how to  make changes to settings affecting your entire OpenProject environment. This  is relevant for users with administrator rights for the configuration of all  modules but also overall, e.g. regarding system settings, authentication or user  permissions. |
+| [Getting started guide](https://www.openproject.org/docs/getting-started/) | Here you will learn about the first steps with ProyeksiApp. It is a short introduction on registration,  sign up, inviting members, starting to set up a project and the most important  features work packages, Gantt charts and agile boards. |
+| [User guide](https://www.openproject.org/docs/user-guide/)   | This guide covers the details of all features and  functionalities found in ProyeksiApp. |
+| [System admin guide](https://www.openproject.org/docs/system-admin-guide/) | Documentation on how to  make changes to settings affecting your entire ProyeksiApp environment. This  is relevant for users with administrator rights for the configuration of all  modules but also overall, e.g. regarding system settings, authentication or user  permissions. |
 | [Enterprise guide](https://www.openproject.org/docs/enterprise-guide/) | Here you will find all about the management and  administration of your Enterprise cloud and Enterprise on-premises  subscription. |
-| [FAQs](https://www.openproject.org/docs/faq/)                | This is  the central overview of frequently asked questions for OpenProject. |
-| [Installation and operations guide](https://www.openproject.org/docs/installation-and-operations/) | This guide summarizes the options for getting  OpenProject, either hosted or on-premises and what to do if you want to  include BIM features in your application. For the on-premises versions you  will find all operation and installation instructions. |
-| [Release notes](https://www.openproject.org/docs/release-notes/) | OpenProject is regularly upgraded with new features, security updates  and more. The release notes inform you about the news in each release. |
-| [Development](https://www.openproject.org/docs/development/) | This guide details how to contribute to the code of  the OpenProject application. |
+| [FAQs](https://www.openproject.org/docs/faq/)                | This is  the central overview of frequently asked questions for ProyeksiApp. |
+| [Installation and operations guide](https://www.openproject.org/docs/installation-and-operations/) | This guide summarizes the options for getting  ProyeksiApp, either hosted or on-premises and what to do if you want to  include BIM features in your application. For the on-premises versions you  will find all operation and installation instructions. |
+| [Release notes](https://www.openproject.org/docs/release-notes/) | ProyeksiApp is regularly upgraded with new features, security updates  and more. The release notes inform you about the news in each release. |
+| [Development](https://www.openproject.org/docs/development/) | This guide details how to contribute to the code of  the ProyeksiApp application. |
 | [API](https://www.openproject.org/docs/api/)                 | This part of the documentation deals with the API specification, what endpoints  and functionality are available. |
 
  
@@ -78,7 +78,7 @@ Do not include the same information in multiple places. Instead, link through to
 
 ## References across the documentation
 
-- When mentioning other OpenProject modules or features, link to their respective documentation, at least on first mention. 
+- When mentioning other ProyeksiApp modules or features, link to their respective documentation, at least on first mention. 
 - 
 - Please see in [links](#links) how to use links within the documentation.
 
@@ -94,7 +94,7 @@ Do not include the same information in multiple places. Instead, link through to
 
 ## Documentation language
 
-The OpenProject documentation should be as clear and easy to understand as possible. Avoid unnecessary words.
+The ProyeksiApp documentation should be as clear and easy to understand as possible. Avoid unnecessary words.
 
 - Be clear and concise with as little words as possible.
 
@@ -108,7 +108,7 @@ The OpenProject documentation should be as clear and easy to understand as possi
 
 Use sentences that describe the content and capitalize the first letter in the sentence. For example:
 
-`# Create an OpenProject trial installation`
+`# Create an ProyeksiApp trial installation`
 
 `## Start a new trial installation`
 
@@ -137,10 +137,10 @@ Feature names are typically capitalized (the first word) and in bold. For exampl
 
 Capitalize names of:
 
-- OpenProject products: OpenProject Community edition, OpenProject Enterprise on-premises edition, OpenProject Enterprise cloud edition
+- ProyeksiApp products: ProyeksiApp Community edition, ProyeksiApp Enterprise on-premises edition, ProyeksiApp Enterprise cloud edition
 - Third-party organizations, software, and products. For example Nextcloud, The Linux Foundation etc.
 
-Follow the capitalization style by the third party which may use non-standard case styles. For example: OpenProject, GitHub.
+Follow the capitalization style by the third party which may use non-standard case styles. For example: ProyeksiApp, GitHub.
 
 
 
@@ -148,7 +148,7 @@ Follow the capitalization style by the third party which may use non-standard ca
 
 ### User information
 
-You may need to include user information in entries. Do not use real user information or email addresses in the OpenProject documentation. For email addresses and names, do use:
+You may need to include user information in entries. Do not use real user information or email addresses in the ProyeksiApp documentation. For email addresses and names, do use:
 
 - Email address: Use an email address ending in @example.com.
 
@@ -276,7 +276,7 @@ To help tables be easier to maintain, consider adding additional spaces to the c
 | **Feature**                                                | **Description**                                              |
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
 | Great feature                                              |  Enhances collaboration between marketing and sales  |
-| Best feature                                               | Use it to synchronize your example table with OpenProject  |
+| Best feature                                               | Use it to synchronize your example table with ProyeksiApp  |
 
 
 ## Headings
@@ -309,13 +309,13 @@ Keep heading titles clear and direct. Make every word count. Where possible, use
 
 Headings generate anchor links when rendered. ##This is an example generates the anchor #this-is-an-example.
 
-Keep in mind that there are various links to OpenProject documentation pages and anchor links on the internet to take the users to the right spot. Thus, please avoid changing headings.
+Keep in mind that there are various links to ProyeksiApp documentation pages and anchor links on the internet to take the users to the right spot. Thus, please avoid changing headings.
 
 
 
 ## Links
 
-Links are important in the documentation. Use links instead of duplicating content to help preserve a single source of truth in the OpenProject documentation.
+Links are important in the documentation. Use links instead of duplicating content to help preserve a single source of truth in the ProyeksiApp documentation.
 
 
 
@@ -329,7 +329,7 @@ Links are important in the documentation. Use links instead of duplicating conte
 
 ### Links to internal documentation
 
-Internal links are links within the OpenProject website which includes the OpenProject documentation. In these cases, use relative links. I.e. do not use the full URL of the linked page but instead show the current URL's relation to the linked page's URL. 
+Internal links are links within the ProyeksiApp website which includes the ProyeksiApp documentation. In these cases, use relative links. I.e. do not use the full URL of the linked page but instead show the current URL's relation to the linked page's URL. 
 
 To link to internal documentation:
 
@@ -346,17 +346,17 @@ When linking to external information, you have to use absolute URLs. Make sure t
 
 ## Navigation
 
-When documenting navigation through the OpenProject application, use these terms.
+When documenting navigation through the ProyeksiApp application, use these terms.
 
 
 
 ### Menus
 
-Use these terms when referring to OpenProject’s main application elements:
+Use these terms when referring to ProyeksiApp’s main application elements:
 
-- **Header menu**: This is the blue bar at the top that spans the width of the application. It includes the OpenProject logo, the search field, the link to all projects, the global modules, the help icon and the user’s avatar.
+- **Header menu**: This is the blue bar at the top that spans the width of the application. It includes the ProyeksiApp logo, the search field, the link to all projects, the global modules, the help icon and the user’s avatar.
 
-- **Project menu**: This is the menu on the left in the OpenProject application that displays the modules after the selection of a project.
+- **Project menu**: This is the menu on the left in the ProyeksiApp application that displays the modules after the selection of a project.
 
   
 
@@ -384,7 +384,7 @@ Use images to help the reader understand where they are in a process, or how the
 
 When you take screenshots:
 
-- Capture the most relevant area: Do not include unnecessary blank space or areas of the page that do not help illustrate the point. The project menu on the left of the OpenProject application can change, so don’t include it unless it is necessary.
+- Capture the most relevant area: Do not include unnecessary blank space or areas of the page that do not help illustrate the point. The project menu on the left of the ProyeksiApp application can change, so don’t include it unless it is necessary.
 
 - Be consistent: Coordinate screenshots with the other screenshots already on a documentation page. For example, if other screenshots include the left sidebar, include the sidebar in all screenshots.
 
@@ -418,11 +418,11 @@ At the moment it is not possible for external contributors to upload videos to t
 
 ## Alert boxes
 
-Use alert boxes to call attention to information. The alert boxes in the OpenProject documentation have a specific format. Please use the following to be consistent:
+Use alert boxes to call attention to information. The alert boxes in the ProyeksiApp documentation have a specific format. Please use the following to be consistent:
 
 ```
 <div class="alert alert-info" role="alert">
-**Note**: If you do not have an OpenProject installation yet, please visit our site on [how to create an OpenProject trial installation](../../enterprise-guide/enterprise-cloud-guide/#create-a-new-account).
+**Note**: If you do not have an ProyeksiApp installation yet, please visit our site on [how to create an ProyeksiApp trial installation](../../enterprise-guide/enterprise-cloud-guide/#create-a-new-account).
 </div>
 ```
 

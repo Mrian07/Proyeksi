@@ -73,7 +73,7 @@ class CustomStylesController < ApplicationController
   end
 
   def update_themes
-    theme = OpenProject::CustomStyles::ColorThemes.themes.find { |t| t[:theme] == params[:theme] }
+    theme = ProyeksiApp::CustomStyles::ColorThemes.themes.find { |t| t[:theme] == params[:theme] }
 
     call = ::Design::UpdateDesignService
       .new(theme)
@@ -97,7 +97,7 @@ class CustomStylesController < ApplicationController
   private
 
   def options_for_theme_select
-    options = OpenProject::CustomStyles::ColorThemes.themes.map { |val| val[:theme] }
+    options = ProyeksiApp::CustomStyles::ColorThemes.themes.map { |val| val[:theme] }
     unless @current_theme.present?
       options << [t('admin.custom_styles.color_theme_custom'), '',
                   { selected: true, disabled: true }]

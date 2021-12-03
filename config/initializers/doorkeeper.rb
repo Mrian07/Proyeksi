@@ -197,7 +197,7 @@ Doorkeeper.configure do
   # realm "Doorkeeper"
 end
 
-OpenProject::Application.configure do |application|
+ProyeksiApp::Application.configure do |application|
   application.config.to_prepare do
     # Requiring some classes of Doorkeeper ourselves which for whatever reasons are
     # no longer loaded for us now that we use zeitwerk

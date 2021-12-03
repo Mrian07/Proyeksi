@@ -424,7 +424,7 @@ example:
       method: post
     author:
       href: "/api/v3/users/1"
-      title: OpenProject Admin - admin
+      title: ProyeksiApp Admin - admin
     customActions:
     - href: "/api/v3/work_packages/1528/custom_actions/153/execute"
       method: post
@@ -484,7 +484,7 @@ example:
     changeParent:
       href: "/api/v3/work_packages/694"
       method: patch
-      title: Change parent of Bug in OpenProject
+      title: Change parent of Bug in ProyeksiApp
     addComment:
       href: "/api/v3/work_packages/1528/activities"
       method: post
@@ -517,8 +517,8 @@ example:
   subject: Develop API
   description:
     format: markdown
-    raw: Develop super cool OpenProject API.
-    html: "<p>Develop super cool OpenProject API.</p>"
+    raw: Develop super cool ProyeksiApp API.
+    html: "<p>Develop super cool ProyeksiApp API.</p>"
   scheduleManually: false
   startDate: 
   dueDate: 

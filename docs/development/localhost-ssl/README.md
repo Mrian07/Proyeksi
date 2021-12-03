@@ -1,8 +1,8 @@
-# Developing OpenProject locally with HTTPS
+# Developing ProyeksiApp locally with HTTPS
 
-In some cases, running OpenProject locally with https can be useful for development. For example, if your testing or developing an OmniAuth plugin, you'll want to be able to return to OpenProject running under https.
+In some cases, running ProyeksiApp locally with https can be useful for development. For example, if your testing or developing an OmniAuth plugin, you'll want to be able to return to ProyeksiApp running under https.
 
-This guide will instruct you how to install and configure an Apache2 proxy/reverse-proxy pattern with OpenProject. This closely matches the way OpenProject is run in production systems for packaged and docker-based installations.
+This guide will instruct you how to install and configure an Apache2 proxy/reverse-proxy pattern with ProyeksiApp. This closely matches the way ProyeksiApp is run in production systems for packaged and docker-based installations.
 
 
 
@@ -37,7 +37,7 @@ sudo apt-get install apache2
 
 Next, ensure that `mod_ssl`, `mod_proxy` and `mod_proxy_http` are installed and active. Read up in your distribution's apache configuration on how to enable them. You can check the output of `apachectl -M` and verify they are being loaded.
 
-You will then add a configuration for OpenProject under:
+You will then add a configuration for ProyeksiApp under:
 
 ```bash
 nano /etc/apache2/sites-available/openproject-dev-ssl.conf
@@ -66,7 +66,7 @@ The following contains an exemplary configuration:
     # SSLCertificateChainFile /etc/ssl/openproject-dev/chain.pem
 
     # Set Forwarded protocol header to proxy
-    # otherwise OpenProject doesn't know we're terminating SSL here.
+    # otherwise ProyeksiApp doesn't know we're terminating SSL here.
     RequestHeader set X_FORWARDED_PROTO 'https'
 
     #
@@ -92,9 +92,9 @@ In case you're in an environment with SELinux enabled, you will also need to all
 
 
 
-## Step 4: Configure OpenProject for HTTPS usage
+## Step 4: Configure ProyeksiApp for HTTPS usage
 
-We assume you have already configured your OpenProject local development environment as [described in this guide](../development-environment-ubuntu). You will need to add your custom host name to `config/environments/development.rb`:
+We assume you have already configured your ProyeksiApp local development environment as [described in this guide](../development-environment-ubuntu). You will need to add your custom host name to `config/environments/development.rb`:
 
 ```ruby
 Rails.application.config.hosts << 'openproject.example.com'
@@ -102,7 +102,7 @@ Rails.application.config.hosts << 'openproject.example.com'
 
 
 
-Then, you will start a REPL console for OpenProject with: `RAILS_ENV=development ./bin/rails console`
+Then, you will start a REPL console for ProyeksiApp with: `RAILS_ENV=development ./bin/rails console`
 
 Update the settings for host name and protocol:
 
@@ -113,11 +113,11 @@ Setting.host_name = 'openproject.example.com'
 
 
 
-Finally, start your OpenProject development server and Frontend server and access `https://openproject.example.com` in your browser.
+Finally, start your ProyeksiApp development server and Frontend server and access `https://openproject.example.com` in your browser.
 
 
 
 ## Questions, Comments, and Feedback
 
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow OpenProject on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.

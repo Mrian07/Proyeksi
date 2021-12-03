@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: User settings
   priority: 999
-description: Configure user settings in OpenProject.
+description: Configure user settings in ProyeksiApp.
 robots: index, follow
 keywords: user settings
 ---
@@ -11,7 +11,7 @@ keywords: user settings
 
 The user settings sections covers general settings, such as the default language, user deletion and user consent.
 
-User settings are accessible by administrators from the OpenProject administration.
+User settings are accessible by administrators from the ProyeksiApp administration.
 
 ![user and permissions settings](image-20200211140959585.png)
 
@@ -29,7 +29,7 @@ The default preferences section covers default user settings.
 
 Here, you can specify the default language for new users as well as the default time zone.
 
-The default language is displayed for users when they first sign into OpenProject. They can then choose a different language.
+The default language is displayed for users when they first sign into ProyeksiApp. They can then choose a different language.
 
 You can also choose if success notifications (e.g. on the work package page) should be hidden automatically.
 
@@ -51,8 +51,8 @@ If you want to prevent users from deleting their own accounts, it is recommended
 
 ![image-20191104163858457](image-20191104163858457.png)
 
-Data privacy and security is a priority in OpenProject. In order to comply with GDPR regulation, a consent form can be configured in OpenProject. When the option "Consent required" is checked, a user consent form is shown for users when they sign into OpenProject for the first time.
+Data privacy and security is a priority in ProyeksiApp. In order to comply with GDPR regulation, a consent form can be configured in ProyeksiApp. When the option "Consent required" is checked, a user consent form is shown for users when they sign into ProyeksiApp for the first time.
 
-By default, OpenProject's privacy and security policy is referenced in the consent form. If you have any additional information you would like your users to consent to, you can link it in the consent information text.
+By default, ProyeksiApp's privacy and security policy is referenced in the consent form. If you have any additional information you would like your users to consent to, you can link it in the consent information text.
 
 Furthermore, you can provide the email address of a consent contact. This user can then be notified when a data change or data removal is required.

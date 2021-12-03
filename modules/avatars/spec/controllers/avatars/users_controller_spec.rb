@@ -9,7 +9,7 @@ describe ::Avatars::UsersController, type: :controller do
 
   before do
     allow(User).to receive(:current).and_return current_user
-    allow(::OpenProject::Avatars::AvatarManager).to receive(:avatars_enabled?).and_return enabled
+    allow(::ProyeksiApp::Avatars::AvatarManager).to receive(:avatars_enabled?).and_return enabled
   end
 
   describe ':show' do

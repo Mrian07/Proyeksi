@@ -56,4 +56,4 @@ tr:
           title: 'Seçilmiş projeler'
         secret:
           description: >
-            Ayarlanırsa, bu gizli değer OpenProject tarafından web kancası yükünü imzalamak için kullanılır.
+            Ayarlanırsa, bu gizli değer ProyeksiApp tarafından web kancası yükünü imzalamak için kullanılır.

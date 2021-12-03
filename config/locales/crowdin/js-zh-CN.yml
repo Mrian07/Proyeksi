@@ -21,7 +21,7 @@ zh-CN:
         新备份将覆盖任何之前的备份。每天只能请求有限次数的备份。
       last_backup: 上次备份
       last_backup_from: 上次备份自
-      title: 备份 OpenProject
+      title: 备份 ProyeksiApp
       options: 选项
       include_attachments: 包含附件
       download_backup: 下载备份
@@ -184,7 +184,7 @@ zh-CN:
             label_maximum_users: "最大活动用户数"
             label_starts_at: "开始时间："
             label_expires_at: "到期时间"
-            receive_newsletter: 我想要接收 OpenProject <a target="_blank" href="%{link}">简报</a>。
+            receive_newsletter: 我想要接收 ProyeksiApp <a target="_blank" href="%{link}">简报</a>。
             taken_domain: 每个域名只能有一个活跃的试用。
             taken_email: 每个用户只能创建一个试用。
           email_not_received: "没有收到电子邮件？您可以使用右侧的链接重新发送电子邮件。"
@@ -198,7 +198,7 @@ zh-CN:
           status_confirmed: "已确认"
           status_waiting: "电子邮件已发送 - 等待确认"
           test_ee: "免费测试企业版 14 天"
-          quick_overview: "快速了解 OpenProject 企业版的项目管理和团队协作。"
+          quick_overview: "快速了解 ProyeksiApp 企业版的项目管理和团队协作。"
         upsale:
           become_hero: "成为英雄！"
           benefits:
@@ -210,14 +210,14 @@ zh-CN:
             premium_features: "高级功能"
             premium_features_text: "敏捷面板，自定义主题和徽标，图表，包含自定义操作的智能工作流，全文搜索工作包附件和多选自定义字段。"
             professional_support: "专业支持"
-            professional_support_text: "从高级支持工程师那里获得可靠的个性化支持，这些工程师拥有在业务关键型环境中运行 OpenProject 的专业知识。"
+            professional_support_text: "从高级支持工程师那里获得可靠的个性化支持，这些工程师拥有在业务关键型环境中运行 ProyeksiApp 的专业知识。"
           button_start_trial: "开始免费试用"
           button_book_now: "立即预订"
           confidence: >
             我们秉承开源和开放心态，有信心提供经得起考验和充分支持的企业级项目管理软件。
           link_quote: "获取报价"
           text: >
-            OpenProject 企业版以社区版为基础。它包括高级功能和专业支持，主要面向拥有 10 个以上用户并使用 OpenProject 管理业务关键型项目的组织。
+            ProyeksiApp 企业版以社区版为基础。它包括高级功能和专业支持，主要面向拥有 10 个以上用户并使用 ProyeksiApp 管理业务关键型项目的组织。
           unlimited: "不受限制"
           you_contribute: "开发者也需要支付账单。使用企业版，您可以为这项开源社区工作提供大力支持。"
     custom_actions:
@@ -275,7 +275,7 @@ zh-CN:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                该版本包含多种新增功能和改进：<br> <ul class="%{list_styling_class}"> <li>通知中心：减少您的邮件接收量。取而代之，您可以在一个中心场所查找所有相关通知并采取行动。</li> <li>现在，您也可以下载所有上传的 IFC 文件。</li> <li>IFC 的上传和处理速度更快，并会收到更好的错误消息。</li> <li><a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit 插件</a>修复了许多错误。</li> </ul>
+                该版本包含多种新增功能和改进：<br> <ul class="%{list_styling_class}"> <li>通知中心：减少您的邮件接收量。取而代之，您可以在一个中心场所查找所有相关通知并采取行动。</li> <li>现在，您也可以下载所有上传的 IFC 文件。</li> <li>IFC 的上传和处理速度更快，并会收到更好的错误消息。</li> <li><a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit 插件</a>修复了许多错误。</li> </ul>
     label_activate: "激活"
     label_add_column_after: "之后添加列"
     label_add_column_before: "在之前添加列"
@@ -464,7 +464,7 @@ zh-CN:
         next: '下一个'
         got_it: '知道了'
       steps:
-        help_menu: '帮助 (?) 菜单中提供了<b>其他帮助资源</b>。您可在此找到用户指南和实用的使用方法视频等内容。<br>使用 OpenProject 尽情享受您的工作吧！'
+        help_menu: '帮助 (?) 菜单中提供了<b>其他帮助资源</b>。您可在此找到用户指南和实用的使用方法视频等内容。<br>使用 ProyeksiApp 尽情享受您的工作吧！'
         members: '邀请新<b>成员</b>加入您的项目。'
         project_selection: '请点击我们准备的演示项目之一。演示数据目前仅提供英文版本。<br>一般的<b>演示项目</b>最适合经典项目管理，而 <b>Scrum 项目</b>则更适合敏捷项目管理。'
         quick_add_button: '点击标题导航中的加号 (+) 图标可<b>创建新项目</b>或<b>邀请同事</b>。'

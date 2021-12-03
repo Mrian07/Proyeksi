@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.3.2
+  title: ProyeksiApp 8.3.2
   sidebar_navigation:
       title: 8.3.2
   release_version: 8.3.2
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 8.3.2
+# ProyeksiApp 8.3.2
 
-We released OpenProject 8.3.2.  
+We released ProyeksiApp 8.3.2.  
 The release contains a security related fix and we urge updating to the
 newest version.
 
@@ -17,10 +17,10 @@ newest version.
 
 ## CVE-2019-11600
 
-A SQL injection vulnerability in the activities API in OpenProject
+A SQL injection vulnerability in the activities API in ProyeksiApp
 before 8.3.2 allows a remote attacker to execute arbitrary SQL commands
 via the id parameter. The attack can be performed unauthenticated if
-OpenProject is configured not to require authentication for API access. 
+ProyeksiApp is configured not to require authentication for API access. 
 This vulnerability has been assigned the CVE identifier CVE-2019-11600.
 
 Versions Affected: 5.0.0 – 8.3.1  

@@ -1,6 +1,6 @@
 
 
-module OpenProject::Reporting::SpecHelper
+module ProyeksiApp::Reporting::SpecHelper
   module CustomFieldFilterHelper
     def group_by_class_name_string(custom_field)
       id = custom_field.is_a?(ActiveRecord::Base) ? custom_field.id : custom_field

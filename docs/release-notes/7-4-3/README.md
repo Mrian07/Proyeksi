@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.3
+  title: ProyeksiApp 7.4.3
   sidebar_navigation:
       title: 7.4.3
   release_version: 7.4.3
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 7.4.3
+# ProyeksiApp 7.4.3
 
 Several security fixes have been made as part of the Ruby 2.4.4 release
-as well as in gems used by OpenProject. We urge users to update their
+as well as in gems used by ProyeksiApp. We urge users to update their
 Ruby installations. If you’re using the packaged installation, this
 package will contain all necessary fixes.
 

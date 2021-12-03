@@ -1135,10 +1135,10 @@ describe ::API::V3::WorkPackages::WorkPackageRepresenter do
 
     describe 'caching' do
       it 'is based on the representer\'s cache_key' do
-        allow(OpenProject::Cache)
+        allow(ProyeksiApp::Cache)
           .to receive(:fetch)
           .and_return({ _links: {} }.to_json)
-        expect(OpenProject::Cache)
+        expect(ProyeksiApp::Cache)
           .to receive(:fetch)
           .with(representer.json_cache_key)
           .and_call_original

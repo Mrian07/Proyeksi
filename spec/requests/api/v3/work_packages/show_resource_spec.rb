@@ -64,7 +64,7 @@ describe 'API v3 Work package resource',
           <<~DESCRIPTION
             <macro class="toc"><macro>
 
-            # OpenProject Masterplan for 2015
+            # ProyeksiApp Masterplan for 2015
 
             ## three point plan
 
@@ -100,7 +100,7 @@ describe 'API v3 Work package resource',
               .to have_selector("macro.macro--wp-quickinfo[data-id='#{other_wp.id}']")
             # resolves macros, e.g. toc
             expect(subject['html'])
-              .to have_selector('.op-uc-toc--list-item', text: "OpenProject Masterplan for 2015")
+              .to have_selector('.op-uc-toc--list-item', text: "ProyeksiApp Masterplan for 2015")
           end
         end
 

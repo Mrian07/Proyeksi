@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.3
+  title: ProyeksiApp 4.2.3
   sidebar_navigation:
       title: 4.2.3
   release_version: 4.2.3
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.3
+# ProyeksiApp 4.2.3
 
-OpenProject 4.2.3 contains several bug fixes and updated translations.
+ProyeksiApp 4.2.3 contains several bug fixes and updated translations.
 
 The following bugs have been fixed:
 
@@ -17,18 +17,18 @@ The following bugs have been fixed:
     was created in a project which has a lot of possible watchers and
     /or custom fields
     ([\#20998](https://community.openproject.org/work_packages/20998)).
-  - With OpenProject 4.2.2 logged out users could see the “Modules” menu
+  - With ProyeksiApp 4.2.2 logged out users could see the “Modules” menu
     even when the option “Authentication required” was activated. This
     has been fixed
     ([\#20935](https://community.openproject.org/work_packages/20935)).
   - In some circumstances journal entries in work packages were
     displayed twice. This has been fixed
     ([\#20914](https://community.openproject.org/work_packages/20914)).
-  - The REST API option is now activated for new OpenProject instances
+  - The REST API option is now activated for new ProyeksiApp instances
     by default
     ([\#20914](https://community.openproject.org/work_packages/20914)).
 
-Apart from the OpenProject core, several wrong strings in plugins have
+Apart from the ProyeksiApp core, several wrong strings in plugins have
 been fixed:
 
   - Global Roles: In the details view of a role a wrong string was

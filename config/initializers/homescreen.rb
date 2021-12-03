@@ -2,10 +2,10 @@
 
 
 
-require 'open_project/static/homescreen'
-require 'open_project/static/links'
+require 'proyeksi_app/static/homescreen'
+require 'proyeksi_app/static/links'
 
-OpenProject::Static::Homescreen.manage :blocks do |blocks|
+ProyeksiApp::Static::Homescreen.manage :blocks do |blocks|
   blocks.push(
     {
       partial: 'welcome',
@@ -16,7 +16,7 @@ OpenProject::Static::Homescreen.manage :blocks do |blocks|
     },
     {
       partial: 'new_features',
-      if: Proc.new { OpenProject::Configuration.show_community_links? }
+      if: Proc.new { ProyeksiApp::Configuration.show_community_links? }
     },
     {
       partial: 'users',
@@ -32,7 +32,7 @@ OpenProject::Static::Homescreen.manage :blocks do |blocks|
     },
     {
       partial: 'community',
-      if: Proc.new { EnterpriseToken.show_banners? || OpenProject::Configuration.show_community_links? }
+      if: Proc.new { EnterpriseToken.show_banners? || ProyeksiApp::Configuration.show_community_links? }
     },
     {
       partial: 'administration',
@@ -45,8 +45,8 @@ OpenProject::Static::Homescreen.manage :blocks do |blocks|
   )
 end
 
-OpenProject::Static::Homescreen.manage :links do |links|
-  link_hash = OpenProject::Static::Links.links
+ProyeksiApp::Static::Homescreen.manage :links do |links|
+  link_hash = ProyeksiApp::Static::Links.links
 
   links.push(
     {

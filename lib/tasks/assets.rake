@@ -2,7 +2,7 @@
 
 
 
-require 'open_project/assets'
+require 'proyeksi_app/assets'
 
 # The ng build task must run before assets:environment task.
 # Otherwise Sprockets cannot find the files that webpack produces.
@@ -33,10 +33,10 @@ namespace :assets do
       next
     end
 
-    OpenProject::Assets.clear!
+    ProyeksiApp::Assets.clear!
 
     puts "Linking frontend plugins"
-    Rake::Task['openproject:plugins:register_frontend'].invoke
+    Rake::Task['proyeksiapp:plugins:register_frontend'].invoke
 
     puts "Building angular frontend"
     Dir.chdir Rails.root.join('frontend') do
@@ -51,7 +51,7 @@ namespace :assets do
   desc 'Write angular assets manifest'
   task :rebuild_manifest do
     puts "Writing angular assets manifest"
-    OpenProject::Assets.rebuild_manifest!
+    ProyeksiApp::Assets.rebuild_manifest!
   end
 
   desc 'Export frontend locale files'

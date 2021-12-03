@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.17
+  title: ProyeksiApp 5.0.17
   sidebar_navigation:
       title: 5.0.17
   release_version: 5.0.17
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.17
+# ProyeksiApp 5.0.17
 
-OpenProject 5.0.17 contains several bug fixes:
+ProyeksiApp 5.0.17 contains several bug fixes:
 
   - The work package attribute
     “<span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-73">Estimated

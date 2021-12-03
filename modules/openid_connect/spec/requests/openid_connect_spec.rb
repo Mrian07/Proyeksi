@@ -36,12 +36,12 @@ describe 'OpenID Connect', type: :rails_request do
     )
 
     # enable storing the access token in a cookie
-    OpenProject::Configuration['omniauth_store_access_token_in_cookie'] = true
+    ProyeksiApp::Configuration['omniauth_store_access_token_in_cookie'] = true
   end
 
   describe 'sign-up and login' do
     before do
-      allow(Setting).to receive(:plugin_openproject_openid_connect).and_return(
+      allow(Setting).to receive(:plugin_proyeksiapp_openid_connect).and_return(
         'providers' => {
           'heroku' => {
             'identifier' => 'does not',
@@ -97,16 +97,16 @@ describe 'OpenID Connect', type: :rails_request do
 
       # after_login requires the optional third context parameter
       # remove this guard once we are on v4.1
-      if OpenProject::OmniAuth::Authorization.method(:after_login!).arity.abs > 2
+      if ProyeksiApp::OmniAuth::Authorization.method(:after_login!).arity.abs > 2
         # check that cookie is stored in the access token
-        expect(response.cookies['_open_project_session_access_token']).to eq 'foo bar baz'
+        expect(response.cookies['_proyeksi_app_session_access_token']).to eq 'foo bar baz'
       end
     end
   end
 
   context 'provider configuration through the settings' do
     before do
-      allow(Setting).to receive(:plugin_openproject_openid_connect).and_return(
+      allow(Setting).to receive(:plugin_proyeksiapp_openid_connect).and_return(
         'providers' => {
           'google' => {
             'identifier' => 'does not',

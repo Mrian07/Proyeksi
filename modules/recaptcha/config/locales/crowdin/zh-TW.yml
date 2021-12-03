@@ -15,4 +15,4 @@ zh-TW:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA is a free service by Google that can be enabled for your OpenProject instance. If enabled, a captcha form will be rendered upon login for all users that have not verified a captcha yet. <br/> Please see the following link for more details on reCAPTCHA and their versions, and how to create the website and secret keys: %{recaptcha_link}
+        reCAPTCHA is a free service by Google that can be enabled for your ProyeksiApp instance. If enabled, a captcha form will be rendered upon login for all users that have not verified a captcha yet. <br/> Please see the following link for more details on reCAPTCHA and their versions, and how to create the website and secret keys: %{recaptcha_link}

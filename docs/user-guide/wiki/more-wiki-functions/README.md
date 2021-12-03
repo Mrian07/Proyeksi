@@ -3,7 +3,7 @@ sidebar_navigation:
   title: More wiki functions
   priority: 797
 title: More Wiki functions
-description: Wiki settings in OpenProject.
+description: Wiki settings in ProyeksiApp.
 robots: index, follow
 keywords: wiki settings, delete wiki, lock wiki, export wiki
 ---

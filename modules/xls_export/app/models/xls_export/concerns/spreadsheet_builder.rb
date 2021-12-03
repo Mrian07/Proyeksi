@@ -69,7 +69,7 @@ module XlsExport
       end
 
       def spreadsheet_builder
-        OpenProject::XlsExport::SpreadsheetBuilder.new spreadsheet_title
+        ProyeksiApp::XlsExport::SpreadsheetBuilder.new spreadsheet_title
       end
 
       def headers

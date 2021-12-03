@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.0.2
+  title: ProyeksiApp 6.0.2
   sidebar_navigation:
       title: 6.0.2
   release_version: 6.0.2
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 6.0.2
+# ProyeksiApp 6.0.2
 
-**The following errors have been fixed in OpenProject 6.0.2:**
+**The following errors have been fixed in ProyeksiApp 6.0.2:**
 
   - An error message was displayed when all work package filters were
     removed
@@ -48,7 +48,7 @@ For further information on the release, please refer to the [Changelog
 v.6.0.2](https://community.openproject.com/versions/814) or take a look
 at [GitHub](https://github.com/opf/openproject/tree/v6.0.2).
 
-You can try OpenProject for free. For a free 30 day trial create your
-OpenProject instance on [OpenProject.org](https://openproject.org/).
+You can try ProyeksiApp for free. For a free 30 day trial create your
+ProyeksiApp instance on [ProyeksiApp.org](https://openproject.org/).
 
 

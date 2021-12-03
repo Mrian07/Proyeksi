@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Members
   priority: 650
-description: Manage members in OpenProject.
+description: Manage members in ProyeksiApp.
 robots: index, follow
 keywords: members, project participants
 ---
@@ -17,7 +17,7 @@ keywords: members, project participants
 | [Roles and permissions](#roles-and-permissions) | How to manage roles and permissions for members?             |
 | [Groups](#groups)                               | How to add members to a groups and add groups to a project?  |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Invite-and-Manage-Members.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Invite-and-Manage-Members.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Add members
 
@@ -54,4 +54,4 @@ To assign work packages to a project member, the respective user's or placeholde
 ## Groups
 
 Users can be added to groups. A group can be added to a project. With this, all users within a group will have the corresponding role in this project. 
-Find out how to create and manage groups in OpenProject [here](../../system-admin-guide/users-permissions/groups).
+Find out how to create and manage groups in ProyeksiApp [here](../../system-admin-guide/users-permissions/groups).

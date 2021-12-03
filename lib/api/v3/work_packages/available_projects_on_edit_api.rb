@@ -5,7 +5,7 @@ require 'api/v3/projects/project_collection_representer'
 module API
   module V3
     module WorkPackages
-      class AvailableProjectsOnEditAPI < ::API::OpenProjectAPI
+      class AvailableProjectsOnEditAPI < ::API::ProyeksiAppAPI
         resource :available_projects do
           after_validation do
             authorize(:edit_work_packages, context: @work_package.project)

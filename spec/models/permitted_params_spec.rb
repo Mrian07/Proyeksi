@@ -690,7 +690,7 @@ describe PermittedParams, type: :model do
 
     describe 'with password login enabled' do
       before do
-        allow(OpenProject::Configuration)
+        allow(ProyeksiApp::Configuration)
           .to receive(:disable_password_login?)
                 .and_return(false)
       end
@@ -712,7 +712,7 @@ describe PermittedParams, type: :model do
       include_context 'prepare params comparison'
 
       before do
-        allow(OpenProject::Configuration)
+        allow(ProyeksiApp::Configuration)
           .to receive(:disable_password_login?)
                 .and_return(true)
       end
@@ -741,7 +741,7 @@ describe PermittedParams, type: :model do
 
     describe 'with no registration footer configured' do
       before do
-        allow(OpenProject::Configuration)
+        allow(ProyeksiApp::Configuration)
           .to receive(:registration_footer)
                 .and_return({})
       end
@@ -761,7 +761,7 @@ describe PermittedParams, type: :model do
       include_context 'prepare params comparison'
 
       before do
-        allow(OpenProject::Configuration)
+        allow(ProyeksiApp::Configuration)
           .to receive(:registration_footer)
                 .and_return("en" => "configured footer")
       end

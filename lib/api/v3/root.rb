@@ -8,7 +8,7 @@
 
 module API
   module V3
-    class Root < ::API::OpenProjectAPI
+    class Root < ::API::ProyeksiAppAPI
       helpers ::API::V3::Utilities::EpropsConversion
 
       # All endpoint accept query props as gzipped and base64 encoded json objects

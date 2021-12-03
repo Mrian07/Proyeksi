@@ -42,7 +42,7 @@ if ENV['CAPYBARA_AWS_ACCESS_KEY_ID']
       secret_access_key: ENV.fetch('CAPYBARA_AWS_SECRET_ACCESS_KEY'),
       region: ENV.fetch('CAPYBARA_AWS_REGION', 'eu-west-1')
     },
-    bucket_name: ENV.fetch('CAPYBARA_AWS_BUCKET', 'openproject-ci-public-logs')
+    bucket_name: ENV.fetch('CAPYBARA_AWS_BUCKET', 'proyeksiapp-ci-public-logs')
   }
   Capybara::Screenshot.s3_object_configuration = {
     acl: 'public-read'

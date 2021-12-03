@@ -7,7 +7,7 @@ require 'api/v3/cost_types/cost_type_representer'
 module API
   module V3
     module CostTypes
-      class CostTypesAPI < ::API::OpenProjectAPI
+      class CostTypesAPI < ::API::ProyeksiAppAPI
         resources :cost_types do
           after_validation do
             authorize_any(%i[view_cost_entries view_own_cost_entries],

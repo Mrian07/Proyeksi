@@ -15,7 +15,7 @@ describe Projects::UpdateService, type: :model do
     let(:project_status) { FactoryBot.build_stubbed(:project_status) }
 
     it 'sends an update notification' do
-      expect(OpenProject::Notifications)
+      expect(ProyeksiApp::Notifications)
         .to(receive(:send))
         .with('project_updated', project: model_instance)
 
@@ -32,10 +32,10 @@ describe Projects::UpdateService, type: :model do
       end
 
       it 'sends the notification' do
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .to(receive(:send))
           .with('project_updated', project: model_instance)
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .to(receive(:send))
           .with('project_renamed', project: model_instance)
 

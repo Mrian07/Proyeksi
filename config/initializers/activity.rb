@@ -2,7 +2,7 @@
 
 
 
-OpenProject::Activity.map do |activity|
+ProyeksiApp::Activity.map do |activity|
   activity.register :work_packages, class_name: '::Activities::WorkPackageActivityProvider'
   activity.register :changesets, class_name: 'Activities::ChangesetActivityProvider'
   activity.register :news, class_name: 'Activities::NewsActivityProvider',

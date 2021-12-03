@@ -29,7 +29,7 @@ module Users
     end
 
     def remove_cookies!(cookies)
-      cookies.delete OpenProject::Configuration.autologin_cookie_name
+      cookies.delete ProyeksiApp::Configuration.autologin_cookie_name
     end
   end
 end

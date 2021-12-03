@@ -21,7 +21,7 @@ pl:
         Nowa kopia zapasowa zastąpi poprzednią. Można żądać tylko ograniczonej liczby kopii zapasowych dziennie.
       last_backup: Ostatnia kopia zapasowa
       last_backup_from: 'Ostatnia kopia zapasowa: z'
-      title: Kopia zapasowa OpenProject
+      title: Kopia zapasowa ProyeksiApp
       options: Opcje
       include_attachments: Dołącz załączniki
       download_backup: Pobierz kopię zapasową
@@ -184,7 +184,7 @@ pl:
             label_maximum_users: "Maksymalna liczba aktywnych użytkowników"
             label_starts_at: "Data rozpoczęcia"
             label_expires_at: "Wygasa"
-            receive_newsletter: Chcę otrzymywać <a target="_blank" href="%{link}">biuletyn </a> OpenProject.
+            receive_newsletter: Chcę otrzymywać <a target="_blank" href="%{link}">biuletyn </a> ProyeksiApp.
             taken_domain: W każdej domenie może być aktywna tylko jedna wersja próbna.
             taken_email: Każdy użytkownik może utworzyć tylko jeden okres próbny.
           email_not_received: "Wiadomość e-mail nie doszła? Możesz ją ponownie wysłać za pomocą linku po prawej stronie."
@@ -198,7 +198,7 @@ pl:
           status_confirmed: "potwierdzony"
           status_waiting: "wysłano wiadomość e-mail — oczekiwanie na potwierdzenie"
           test_ee: "Testuj wersję Enterprise przez 14 dni za darmo"
-          quick_overview: "Zapoznaj się z krótkim omówieniem zarządzania projektami i pracy zespołowej w OpenProject w wersji Enterprise."
+          quick_overview: "Zapoznaj się z krótkim omówieniem zarządzania projektami i pracy zespołowej w ProyeksiApp w wersji Enterprise."
         upsale:
           become_hero: "Zostań bohaterem!"
           benefits:
@@ -210,14 +210,14 @@ pl:
             premium_features: "Funkcje premium"
             premium_features_text: "Tablice zwinne, niestandardowy motyw i logotyp, wykresy, inteligentne przepływy pracy z działaniami niestandardowymi, wyszukiwanie pełnotekstowe w załącznikach do pakietów roboczych i pola niestandardowe, umożliwiające wybór wielokrotny."
             professional_support: "Profesjonalne wsparcie"
-            professional_support_text: "Uzyskaj niezawodne, wysokiej klasy wsparcie od starszych inżynierów wsparcia technicznego posiadających wiedzę fachową na temat uruchamiania oprogramowania OpenProject w środowiskach o znaczeniu krytycznym dla biznesu."
+            professional_support_text: "Uzyskaj niezawodne, wysokiej klasy wsparcie od starszych inżynierów wsparcia technicznego posiadających wiedzę fachową na temat uruchamiania oprogramowania ProyeksiApp w środowiskach o znaczeniu krytycznym dla biznesu."
           button_start_trial: "Rozpocznij bezpłatny okres próbny"
           button_book_now: "Zarezerwuj teraz"
           confidence: >
             Dostarczamy sprawdzone i wspierane oprogramowanie klasy korporacyjnej do zarządzania projektami — z otwartym kodem źródłowym i otwartym umysłem.
           link_quote: "Uzyskaj wycenę"
           text: >
-            Wersja OpenProject Enterprise opiera się na wersji społecznościowej. Zawiera funkcje premium i profesjonalne wsparcie skierowane głównie do organizacji z ponad 10 użytkownikami, które zarządzają projektami o znaczeniu krytycznym dla biznesu za pomocą OpenProject.
+            Wersja ProyeksiApp Enterprise opiera się na wersji społecznościowej. Zawiera funkcje premium i profesjonalne wsparcie skierowane głównie do organizacji z ponad 10 użytkownikami, które zarządzają projektami o znaczeniu krytycznym dla biznesu za pomocą ProyeksiApp.
           unlimited: "Bez ograniczeń"
           you_contribute: "Programiści też muszą płacić rachunki. Kupując wersję Enterprise, znacznie przyczyniasz się do tego wysiłku społeczności Open-Source."
     custom_actions:
@@ -275,7 +275,7 @@ pl:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                Wersja zawiera różne nowe funkcje i ulepszenia: <br> <ul class="%{list_styling_class}"> <li>Centrum powiadomień: Zmniejsz liczbę otrzymywanych wiadomości. Zamiast tego wszystkie istotne powiadomienia znajdziesz w jednym centralnym miejscu.</li> <li>Możesz również pobierać wszystkie przesłane pliki IFC.</li> <li>Przesyłanie i przetwarzanie IFC stało się szybsze i otrzymało lepsze komunikaty o błędach.</li> <li>Natomiast w<a href="https://github.com/opf/openproject-revit-add-in">Dodatku OpenProject Revit</a> poprawiliśmy wiele usterek.</li> </ul>
+                Wersja zawiera różne nowe funkcje i ulepszenia: <br> <ul class="%{list_styling_class}"> <li>Centrum powiadomień: Zmniejsz liczbę otrzymywanych wiadomości. Zamiast tego wszystkie istotne powiadomienia znajdziesz w jednym centralnym miejscu.</li> <li>Możesz również pobierać wszystkie przesłane pliki IFC.</li> <li>Przesyłanie i przetwarzanie IFC stało się szybsze i otrzymało lepsze komunikaty o błędach.</li> <li>Natomiast w<a href="https://github.com/opf/openproject-revit-add-in">Dodatku ProyeksiApp Revit</a> poprawiliśmy wiele usterek.</li> </ul>
     label_activate: "Aktywuj"
     label_add_column_after: "Dodaj kolumnę po"
     label_add_column_before: "Dodaj kolumnę przed"
@@ -464,7 +464,7 @@ pl:
         next: 'Następny'
         got_it: 'OK'
       steps:
-        help_menu: 'Menu Pomoc (?) zapewnia <b>dodatkowe zasoby pomocy</b>. Tutaj znajdziesz przewodnik użytkownika, pomocne filmy instruktażowe i wiele więcej. <br> Życzymy miłej pracy w OpenProject!'
+        help_menu: 'Menu Pomoc (?) zapewnia <b>dodatkowe zasoby pomocy</b>. Tutaj znajdziesz przewodnik użytkownika, pomocne filmy instruktażowe i wiele więcej. <br> Życzymy miłej pracy w ProyeksiApp!'
         members: 'Zaproś nowych <b>członków</b> do swojego projektu.'
         project_selection: 'Kliknij na jeden z projektów demonstracyjnych, które przygotowaliśmy. Dane demonstracyjne są obecnie dostępne tylko w języku angielskim. <br> Ogólny <b>projekt demo</b> najlepiej pasuje do klasycznego zarządzania projektami, natomiast <b>projekt Scrum</b> jest lepszy do zwinnego zarządzania projektami.'
         quick_add_button: 'Kliknij ikonę plus (+) w nawigacji nagłówka, aby <b>utworzyć nowy projekt</b> lub <b>zaprosić współpracowników</b>.'

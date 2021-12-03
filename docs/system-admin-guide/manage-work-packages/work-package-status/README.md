@@ -39,7 +39,7 @@ When you decide to set the new status as default status please note the followin
 
 - The default status value will affect all work packages.
 - All work packages will have the new default status value set as their initial status value.
-- OpenProject defined "New" as the default status value for work packages. That means it is the first status in the workflow of all standard work packages. If you change the default status value, you would also need to consider changing the workflow of all work packages as your new default status value will now be the first status in the workflow. Consequently, you need to define, what the next status in the workflow will be. Otherwise you will not be able to change a work package's status.
+- ProyeksiApp defined "New" as the default status value for work packages. That means it is the first status in the workflow of all standard work packages. If you change the default status value, you would also need to consider changing the workflow of all work packages as your new default status value will now be the first status in the workflow. Consequently, you need to define, what the next status in the workflow will be. Otherwise you will not be able to change a work package's status.
 
 ## Edit, re-order or remove a work package status
 

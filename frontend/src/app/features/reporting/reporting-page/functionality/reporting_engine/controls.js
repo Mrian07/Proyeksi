@@ -87,7 +87,7 @@ Reporting.Controls = function($){
   var update_result_table = function (response) {
     $('#result-table').html(response);
 
-    window.OpenProject.pluginContext
+    window.ProyeksiApp.pluginContext
       .valuesPromise()
       .then((context) => {
         context.bootstrap(document.getElementById('result-table'));

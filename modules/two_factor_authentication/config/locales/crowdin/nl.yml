@@ -122,13 +122,13 @@ nl:
         text_cannot_scan: |
           Als u de code niet kunt scannen, kunt u het item handmatig invoeren met behulp van de volgende details:
         description: |
-          Registreer een applicatie-authenticator voor gebruik met OpenProject met behulp van de tijdgebonden eenmalige wachtwoordauthenticatie-standaard (TOTP). Veelvoorkomende voorbeelden zijn Google Authenticator of Authy.
+          Registreer een applicatie-authenticator voor gebruik met ProyeksiApp met behulp van de tijdgebonden eenmalige wachtwoordauthenticatie-standaard (TOTP). Veelvoorkomende voorbeelden zijn Google Authenticator of Authy.
       sms:
         title: 'Gebruik uw mobiele telefoon'
         redacted_identifier: 'Mobiel apparaat (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, we hebben u een authenticatiecode gestuurd via %{delivery_channel}'
         description: |
-          Registreer uw mobiele telefoonnummer voor de levering van OpenProject eenmalige wachtwoorden.
+          Registreer uw mobiele telefoonnummer voor de levering van ProyeksiApp eenmalige wachtwoorden.
     sns:
       delivery_failed: 'SNS levering mislukt:'
     message_bird:

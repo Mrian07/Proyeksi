@@ -15,7 +15,7 @@ import { ExternalRelationQueryConfigurationService } from 'core-app/features/wor
 import { InjectField } from 'core-app/shared/helpers/angular/inject-field.decorator';
 import { APIV3Service } from 'core-app/core/apiv3/api-v3.service';
 import { ConfigurationService } from 'core-app/core/config/configuration.service';
-import { OpenProjectFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
 import { EditorMacrosService } from 'core-app/shared/components/modals/editor/editor-macros.service';
 import { ConfirmDialogService } from 'core-app/shared/components/modals/confirm-dialog/confirm-dialog.service';
 import { HalResourceService } from 'core-app/features/hal/services/hal-resource.service';
@@ -30,7 +30,7 @@ import { DomAutoscrollService } from 'core-app/shared/helpers/drag-and-drop/dom-
  * Plugin context bridge for plugins outside the CLI compiler context
  * in order to access services and parts of the core application
  */
-export class OpenProjectPluginContext {
+export class ProyeksiAppPluginContext {
   private _knownHookNames = [
     'workPackageBulkContextMenu',
     'workPackageTableContextMenu',
@@ -48,7 +48,7 @@ export class OpenProjectPluginContext {
     i18n: this.injector.get<I18nService>(I18nService),
     notifications: this.injector.get<ToastService>(ToastService),
     opModalService: this.injector.get<OpModalService>(OpModalService),
-    opFileUpload: this.injector.get<OpenProjectFileUploadService>(OpenProjectFileUploadService),
+    opFileUpload: this.injector.get<ProyeksiAppFileUploadService>(ProyeksiAppFileUploadService),
     displayField: this.injector.get<DisplayFieldService>(DisplayFieldService),
     editField: this.injector.get<EditFieldService>(EditFieldService),
     macros: this.injector.get<EditorMacrosService>(EditorMacrosService),

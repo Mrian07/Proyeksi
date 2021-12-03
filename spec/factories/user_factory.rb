@@ -51,7 +51,7 @@ FactoryBot.define do
     end
 
     factory :admin do
-      firstname { 'OpenProject' }
+      firstname { 'ProyeksiApp' }
       sequence(:lastname) { |n| "Admin#{n}" }
       sequence(:login) { |n| "admin#{n}" }
       sequence(:mail) { |n| "admin#{n}@example.com" }

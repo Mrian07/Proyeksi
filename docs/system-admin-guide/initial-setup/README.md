@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Initial setup
   priority: 999
-description: Getting started as an system administrator in OpenProject
+description: Getting started as an system administrator in ProyeksiApp
 robots: index, follow
 keywords: initial setup, initial configuration in frontend
 ---
 
-# Initial setup of OpenProject for administrators
+# Initial setup of ProyeksiApp for administrators
 
-This section will guide you through some basic recommendations for setting up your OpenProject instance as a system administrator and for preparing it for its users.
+This section will guide you through some basic recommendations for setting up your ProyeksiApp instance as a system administrator and for preparing it for its users.
 For the backend setup and initial technical configurations for on-premise editions please have a look at the [respective section](../../installation-and-operations/installation/packaged/#initial-configuration) in the installation guide.
 
 

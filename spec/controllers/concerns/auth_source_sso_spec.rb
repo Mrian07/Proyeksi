@@ -63,7 +63,7 @@ describe MyController, type: :controller do
 
   before do
     if sso_config
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:auth_source_sso)
         .and_return(sso_config)
     end

@@ -21,7 +21,7 @@ lt:
         Nauja atsarginė kopija perrašys senąją. Per dieną galima prašyti tik riboto kiekio atsarginių kopijų.
       last_backup: 'Paskutinė atsarginė kopija:'
       last_backup_from: Paskutinė atsarginė kopija nuo
-      title: OpenProject atsarginė kopija
+      title: ProyeksiApp atsarginė kopija
       options: Nustatymai
       include_attachments: Įtraukti priedus
       download_backup: Atsiųsti atsarginę kopiją
@@ -184,7 +184,7 @@ lt:
             label_maximum_users: "Maksimalus aktyvių naudotojų skaičius"
             label_starts_at: "Prasideda nuo"
             label_expires_at: "Nustoja galioti"
-            receive_newsletter: Noriu gauti OpenProject <a target="_blank" href="%{link}">naujienlaiškį</a>.
+            receive_newsletter: Noriu gauti ProyeksiApp <a target="_blank" href="%{link}">naujienlaiškį</a>.
             taken_domain: Gali būti tik vienas aktyvus bandomasis periodas domenui.
             taken_email: Kiekvienas vartotojas gali sukurti tik vieną bandomąjį periodą.
           email_not_received: "Negavote el. laiško? Galite pakartotinai išsiųsti laišką naudodami nuorodą dešinėje."
@@ -198,7 +198,7 @@ lt:
           status_confirmed: "patvirtinta"
           status_waiting: "laiškas išsiųstas -- laukiame patvirtinimo"
           test_ee: "Išbandykite Enterprise Edition 14 dienų nemokamai"
-          quick_overview: "Gaukite greitą apžvalgą apie projektų valdymą ir komandos bendradarbiavimą naudojant OpenProject Enterprise Edition."
+          quick_overview: "Gaukite greitą apžvalgą apie projektų valdymą ir komandos bendradarbiavimą naudojant ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Tapkite didvyriu!"
           benefits:
@@ -210,14 +210,14 @@ lt:
             premium_features: "„Premium“ funkcijos"
             premium_features_text: "Agile lentos, savo tema ir logotipas, grafai, protingi darbo scenarijai su apibrėžtais veiksmais, pilna teksto paieška darbo paketų prieduose ir galimybė pasirinkti daugiau nei vieną reikšmę pritaikytuose laukuose."
             professional_support: "Profesionali pagalba"
-            professional_support_text: "Gaukite patikimą, artimą pagalbą iš patyrusių pagalbos inžinierių su ekspertinėmis žiniomis apie OpenProject naudojimą verslui kritinėse aplinkose."
+            professional_support_text: "Gaukite patikimą, artimą pagalbą iš patyrusių pagalbos inžinierių su ekspertinėmis žiniomis apie ProyeksiApp naudojimą verslui kritinėse aplinkose."
           button_start_trial: "Pradėti bandomąjį laikotarpį"
           button_book_now: "Užsakyti dabar"
           confidence: >
             Mes duodame patikrintos ir palaikomas korporacijos-lygio projektų valdymo programos užtikrintumą -- su atviru kodu ir plačiomis pažiūromis.
           link_quote: "Gauti pasiūlymą"
           text: >
-            OpenProject Enterprise Edition yra pastatyta virš Community Edition. Papildomai įdėta „premium“ savybės ir profesionalus aptarnavimas, pagrinde orientuotas į organizacijas su daugiau nei 10 vartotojų, kurie naudodami OpenProject valdo verslui kritinius projektus.
+            ProyeksiApp Enterprise Edition yra pastatyta virš Community Edition. Papildomai įdėta „premium“ savybės ir profesionalus aptarnavimas, pagrinde orientuotas į organizacijas su daugiau nei 10 vartotojų, kurie naudodami ProyeksiApp valdo verslui kritinius projektus.
           unlimited: "Neribota"
           you_contribute: "Kūrėjams taip pat reikia apmokėti savo sąskaitas. Su „Enterprise Edition“ jūs iš esmės prisidėsite prie atviro kodo bendruomenės darbo."
     custom_actions:
@@ -275,7 +275,7 @@ lt:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                Laidoje yra įvairios naujos funkcijos ir patobulinimai: <br> <ul class="%{list_styling_class}"> <li>Pranešimų centras: Sumažinkite gaunamų e-laiškų skaičių. Vietoje to veikite pagal momentinius pranešimus vienoje centralizuotoje vietoje.</li> <li>Visus įkeltus IFC failus dabar galima ir atsisiųsti.</li> <li>IFC įkėlimas ir apdorojimas pagreitėjo ir gaunami geresni klaidos pranešimai.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit priedas</a> buvo gerokai sutvarkytas.</li> </ul>
+                Laidoje yra įvairios naujos funkcijos ir patobulinimai: <br> <ul class="%{list_styling_class}"> <li>Pranešimų centras: Sumažinkite gaunamų e-laiškų skaičių. Vietoje to veikite pagal momentinius pranešimus vienoje centralizuotoje vietoje.</li> <li>Visus įkeltus IFC failus dabar galima ir atsisiųsti.</li> <li>IFC įkėlimas ir apdorojimas pagreitėjo ir gaunami geresni klaidos pranešimai.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit priedas</a> buvo gerokai sutvarkytas.</li> </ul>
     label_activate: "Aktyvuoti"
     label_add_column_after: "Pridėti stulpelį po"
     label_add_column_before: "Pridėti stulpelį prieš"
@@ -464,7 +464,7 @@ lt:
         next: 'Kitas'
         got_it: 'Supratau'
       steps:
-        help_menu: 'Pagalbos (?) meniu yra <b>papildomi pagalbos resursai</b>. Čia jūs galite rasti naudotojo vadovą, naudingus video kaip atlikti veiksmus ir dar daugiau. <br>Sėkmės naudojant OpenProject!'
+        help_menu: 'Pagalbos (?) meniu yra <b>papildomi pagalbos resursai</b>. Čia jūs galite rasti naudotojo vadovą, naudingus video kaip atlikti veiksmus ir dar daugiau. <br>Sėkmės naudojant ProyeksiApp!'
         members: 'Pakvieskite naujus <b>narius</b> prisijungti prie projekto.'
         project_selection: 'Prašome paspausti ant vieno iš mūsų paruoštų demonstracinių projektų. Demonstraciniai duomenys yra tik anglų kalba. <br> <b>Demo project</b> geriausiai tinka klasikiniam projektų valdymui, o <b>Scrum project</b> labiau tinka Agile projektų valdymui.'
         quick_add_button: 'Paspauskite pliuso (+) ženklą navigacijos antraštėje ir <b>sukursite naują projektą</b> arba </b>pakviesite bendradarbius</b>.'

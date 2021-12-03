@@ -107,9 +107,9 @@ class Authorization::ProjectQuery < Authorization::AbstractQuery
 
   def self.permissions(action)
     if action.is_a?(Hash)
-      OpenProject::AccessControl.allow_actions(action)
+      ProyeksiApp::AccessControl.allow_actions(action)
     else
-      [OpenProject::AccessControl.permission(action)].compact
+      [ProyeksiApp::AccessControl.permission(action)].compact
     end
   end
 

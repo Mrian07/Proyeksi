@@ -6,9 +6,9 @@ require 'spec_helper'
 require_relative './shared_examples'
 
 describe WorkPackageMailer, type: :mailer do
-  include OpenProject::ObjectLinking
+  include ProyeksiApp::ObjectLinking
   include ActionView::Helpers::UrlHelper
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 
   let(:work_package) do
     FactoryBot.build_stubbed(:work_package,
@@ -43,22 +43,22 @@ describe WorkPackageMailer, type: :mailer do
     end
 
     it 'has a project header' do
-      expect(mail['X-OpenProject-Project'].value)
+      expect(mail['X-ProyeksiApp-Project'].value)
         .to eql project.identifier
     end
 
     it 'has a work package id header' do
-      expect(mail['X-OpenProject-WorkPackage-Id'].value)
+      expect(mail['X-ProyeksiApp-WorkPackage-Id'].value)
         .to eql work_package.id.to_s
     end
 
     it 'has a work package author header' do
-      expect(mail['X-OpenProject-WorkPackage-Author'].value)
+      expect(mail['X-ProyeksiApp-WorkPackage-Author'].value)
         .to eql work_package.author.login
     end
 
     it 'has a type header' do
-      expect(mail['X-OpenProject-Type'].value)
+      expect(mail['X-ProyeksiApp-Type'].value)
         .to eql 'WorkPackage'
     end
 
@@ -78,7 +78,7 @@ describe WorkPackageMailer, type: :mailer do
     end
 
     it 'has a work package assignee header' do
-      expect(mail['X-OpenProject-WorkPackage-Assignee'].value)
+      expect(mail['X-ProyeksiApp-WorkPackage-Assignee'].value)
         .to eql work_package.assigned_to.login
     end
   end

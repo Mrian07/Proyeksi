@@ -7,4 +7,4 @@
 # the DB, the null db gem is used to fake the existence of a database in cases where
 # the db has not been created yet.
 
-OpenProject::NullDbFallback.fallback
+ProyeksiApp::NullDbFallback.fallback

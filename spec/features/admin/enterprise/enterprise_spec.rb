@@ -7,7 +7,7 @@ describe 'Enterprise token', type: :feature, js: true do
 
   shared_let(:admin) { FactoryBot.create :admin }
   let(:token_object) do
-    token = OpenProject::Token.new
+    token = ProyeksiApp::Token.new
     token.subscriber = 'Foobar'
     token.mail = 'foo@example.org'
     token.starts_at = Date.today
@@ -43,7 +43,7 @@ describe 'Enterprise token', type: :feature, js: true do
 
     context 'assuming valid input' do
       before do
-        allow(OpenProject::Token).to receive(:import).and_return(token_object)
+        allow(ProyeksiApp::Token).to receive(:import).and_return(token_object)
       end
 
       it 'allows token import flow', js: true do

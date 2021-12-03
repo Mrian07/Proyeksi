@@ -1,14 +1,14 @@
 ---
-title: OpenProject 9.0.3
+title: ProyeksiApp 9.0.3
 sidebar_navigation:
     title: 9.0.3
 release_version: 9.0.3
 release_date: 2019-07-23
 ---
 
-# OpenProject 9.0.3
+# ProyeksiApp 9.0.3
 
-We released [OpenProject 9.0.3](https://community.openproject.com/versions/1376).
+We released [ProyeksiApp 9.0.3](https://community.openproject.com/versions/1376).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 

@@ -469,10 +469,10 @@ describe SysController, type: :controller, with_settings: { sys_api_enabled: tru
 
   describe '#cached_user_login' do
     let(:cache_key) do
-      OpenProject::RepositoryAuthentication::CACHE_PREFIX +
+      ProyeksiApp::RepositoryAuthentication::CACHE_PREFIX +
         Digest::SHA1.hexdigest("#{valid_user.login}#{valid_user_password}")
     end
-    let(:cache_expiry) { OpenProject::RepositoryAuthentication::CACHE_EXPIRES_AFTER }
+    let(:cache_expiry) { ProyeksiApp::RepositoryAuthentication::CACHE_EXPIRES_AFTER }
 
     it 'should call user_login only once when called twice' do
       expect(controller).to receive(:user_login).once.and_return(valid_user)

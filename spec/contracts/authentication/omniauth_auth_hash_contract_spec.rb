@@ -76,7 +76,7 @@ describe Authentication::OmniauthAuthHashContract do
     let(:auth_double) { double('Authorization', approve?: authorized, message: message) }
 
     before do
-      allow(OpenProject::OmniAuth::Authorization)
+      allow(ProyeksiApp::OmniAuth::Authorization)
         .to(receive(:authorized?))
         .with(auth_hash)
         .and_return(auth_double)

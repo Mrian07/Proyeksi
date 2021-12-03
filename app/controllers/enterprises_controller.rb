@@ -83,8 +83,8 @@ class EnterprisesController < ApplicationController
   end
 
   def write_augur_to_gon
-    gon.augur_url = OpenProject::Configuration.enterprise_trial_creation_host
-    gon.token_version = OpenProject::Token::VERSION
+    gon.augur_url = ProyeksiApp::Configuration.enterprise_trial_creation_host
+    gon.token_version = ProyeksiApp::Token::VERSION
   end
 
   def default_breadcrumb
@@ -96,21 +96,21 @@ class EnterprisesController < ApplicationController
   end
 
   def check_user_limit
-    if OpenProject::Enterprise.user_limit_reached?
+    if ProyeksiApp::Enterprise.user_limit_reached?
       flash.now[:warning] = I18n.t(
         "warning_user_limit_reached_instructions",
-        current: OpenProject::Enterprise.active_user_count,
-        max: OpenProject::Enterprise.user_limit
+        current: ProyeksiApp::Enterprise.active_user_count,
+        max: ProyeksiApp::Enterprise.user_limit
       )
     end
   end
 
   def check_domain
-    if OpenProject::Enterprise.token.try(:invalid_domain?)
+    if ProyeksiApp::Enterprise.token.try(:invalid_domain?)
       flash.now[:error] = I18n.t(
         "error_enterprise_token_invalid_domain",
         expected: Setting.host_name,
-        actual: OpenProject::Enterprise.token.domain
+        actual: ProyeksiApp::Enterprise.token.domain
       )
     end
   end

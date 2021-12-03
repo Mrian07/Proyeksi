@@ -24,7 +24,7 @@ sv:
     label_synchronize: 'Synchronize'
     settings:
       name_attribute: 'LDAP groups name attribute'
-      name_attribute_text: 'The LDAP attribute used for naming the OpenProject group when created by a filter'
+      name_attribute_text: 'The LDAP attribute used for naming the ProyeksiApp group when created by a filter'
     synchronized_filters:
       add_new: 'Add synchronized LDAP filter'
       singular: 'LDAP Group synchronization filter'
@@ -36,11 +36,11 @@ sv:
       destroy:
         title: 'Remove synchronized filter %{name}'
         confirmation: "If you continue, the synchronized filter %{name} and all groups %{groups_count} created through it will be removed."
-        removed_groups: "Warning: This will remove the following groups from OpenProject and remove it from all projects!"
+        removed_groups: "Warning: This will remove the following groups from ProyeksiApp and remove it from all projects!"
         verification: "Enter the filter name %{name} to verify the deletion."
       form:
-        group_name_attribute_text: 'Enter the attribute of the LDAP group used for setting the OpenProject group name.'
-        filter_string_text: 'Enter the RFC4515 LDAP filter that returns groups in your LDAP to synchronize with OpenProject.'
+        group_name_attribute_text: 'Enter the attribute of the LDAP group used for setting the ProyeksiApp group name.'
+        filter_string_text: 'Enter the RFC4515 LDAP filter that returns groups in your LDAP to synchronize with ProyeksiApp.'
         base_dn_text: >
           Enter the search base DN to use for this filter. It needs to be below the base DN of the selected LDAP connection.
           Leave this option empty to reuse the base DN of the connection
@@ -49,14 +49,14 @@ sv:
       destroy:
         title: 'Ta bort synkroniserad grupp %{name}'
         confirmation: "Om du fortsätter kommer den synkroniserade gruppen %{name} och alla %{users_count} användare som synkroniserats genom den att tas bort."
-        info: "Obs: OpenProject-gruppen själv och medlemmar som lagts till utanför denna LDAP-synkronisering kommer inte att tas bort."
+        info: "Obs: ProyeksiApp-gruppen själv och medlemmar som lagts till utanför denna LDAP-synkronisering kommer inte att tas bort."
         verification: "Ange gruppens namn %{name} för att verifiera raderingen."
       help_text_html: |
-        Modulen låter dig konfigurera en synkronisering mellan LDAP och OpenProject-grupper.
-        Det beror på LDAP-grupper måste använda <em>groupOfNames / memberOf</em> attributset för att arbeta med OpenProject.
+        Modulen låter dig konfigurera en synkronisering mellan LDAP och ProyeksiApp-grupper.
+        Det beror på LDAP-grupper måste använda <em>groupOfNames / memberOf</em> attributset för att arbeta med ProyeksiApp.
         <br/>
         Grupper synkroniseras varje timme genom ett cron-jobb.
-        <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Se vår dokumentation om detta ämne</a>.
+        <a href="https://www.proyeksiapp.org/help/administration/manage-ldap-authentication/">Se vår dokumentation om detta ämne</a>.
       no_results: 'Inga synkroniserade grupper hittades.'
       no_members: 'Denna grupp har inga synkroniserade medlemmar ännu.'
       plural: 'Synkroniserade LDAP-grupper'
@@ -64,7 +64,7 @@ sv:
       form:
         auth_source_text: 'Select which LDAP connection should be used.'
         sync_users_text: >
-          If you enable this option, found users will also be automatically created in OpenProject. Without it, only existing accounts in OpenProject will be added to groups.
+          If you enable this option, found users will also be automatically created in ProyeksiApp. Without it, only existing accounts in ProyeksiApp will be added to groups.
         dn_text: 'Enter the full DN of the group in LDAP'
-        group_text: 'Välj en befintlig OpenProject-grupp som medlemmar i LDAP-gruppen ska synkroniseras med'
+        group_text: 'Välj en befintlig ProyeksiApp-grupp som medlemmar i LDAP-gruppen ska synkroniseras med'
 

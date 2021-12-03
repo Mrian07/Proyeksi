@@ -5,11 +5,11 @@ def register_chrome(language, name: :"chrome_#{language}")
   Capybara.register_driver name do |app|
     options = Selenium::WebDriver::Chrome::Options.new
 
-    if ActiveRecord::Type::Boolean.new.cast(ENV['OPENPROJECT_TESTING_NO_HEADLESS'])
+    if ActiveRecord::Type::Boolean.new.cast(ENV['PROYEKSIAPP_TESTING_NO_HEADLESS'])
       # Maximize the window however large the available space is
       options.add_argument('--start-maximized')
       # Open dev tools for quick access
-      if ActiveRecord::Type::Boolean.new.cast(ENV['OPENPROJECT_TESTING_AUTO_DEVTOOLS'])
+      if ActiveRecord::Type::Boolean.new.cast(ENV['PROYEKSIAPP_TESTING_AUTO_DEVTOOLS'])
         options.add_argument('--auto-open-devtools-for-tabs')
       end
     else

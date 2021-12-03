@@ -3,7 +3,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe CostReportsController, type: :controller do
-  include OpenProject::Reporting::PluginSpecHelper
+  include ProyeksiApp::Reporting::PluginSpecHelper
 
   let(:user) { FactoryBot.build(:user) }
   let(:project) { FactoryBot.build(:valid_project) }

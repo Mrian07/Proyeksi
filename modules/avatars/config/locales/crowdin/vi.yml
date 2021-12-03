@@ -24,11 +24,11 @@ vi:
       Tải lên hình đại diện tùy chỉnh của bạn, kích thước 128x128 điểm ảnh. Kích thước lớn hơn sẽ bị giảm chất lượng và thu nhỏ để phù hợp. Ảnh xem trước của hình đại diện sẽ hiện lên trước khi tải lên khi mà bạn chọn ảnh.
     text_change_gravatar_html: 'Để thay đổi hoặc thêm Gravatar cho địa chỉ thư điện tử, đi đến  %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject chấp thuận hình đại diện được tùy chỉnh.
+      ProyeksiApp chấp thuận hình đại diện được tùy chỉnh.
     text_local_avatar_over_gravatar: |
       Nếu bạn đặt một, hình đại diện tùy chỉnh này sẽ được ưu tiên hơn so với gravatar ở trên.
     text_your_current_gravatar: |
-      OpenProject sử dụng gravatar của bạn nếu bạn đã đăng ký hoặc một hình ảnh hoặc biểu tượng mặc định nếu có.
+      ProyeksiApp sử dụng gravatar của bạn nếu bạn đã đăng ký hoặc một hình ảnh hoặc biểu tượng mặc định nếu có.
       Gravatar hiện tại như sau:
     settings:
       enable_gravatars: 'Bật gravatars của người dùng'

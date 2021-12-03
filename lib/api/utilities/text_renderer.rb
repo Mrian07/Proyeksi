@@ -6,8 +6,8 @@ module API
   module Utilities
     class TextRenderer
       include ActionView::Helpers::UrlHelper
-      include OpenProject::StaticRouting::UrlHelpers
-      include OpenProject::TextFormatting
+      include ProyeksiApp::StaticRouting::UrlHelpers
+      include ProyeksiApp::TextFormatting
       include WorkPackagesHelper
 
       def initialize(text, format: nil, object: nil)

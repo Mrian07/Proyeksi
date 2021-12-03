@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.0.1
+  title: ProyeksiApp 8.0.1
   sidebar_navigation:
       title: 8.0.1
   release_version: 8.0.1
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 8.0.1
+# ProyeksiApp 8.0.1
 
 We released
-[OpenProject 8.0.1](https://community.openproject.com/versions/1154).
+[ProyeksiApp 8.0.1](https://community.openproject.com/versions/1154).
 The release contains bug fixes from the 8.0 release. We recommend
 updating to the newest version.
 
@@ -30,7 +30,7 @@ updating to the newest version.
     Content-Security-Policy forbidding SVG elements \[\#28612\]
   - Fixed: Regression that did not detect work package links within
     braces \[[\#28578](https://community.openproject.com/wp/28578)\]
-  - Fixed: Long-running databases of OpenProject run into PostgreSQL
+  - Fixed: Long-running databases of ProyeksiApp run into PostgreSQL
     index error while migrating *planning\_element\_type\_colors*
     indexes to 8.0.0
     \[[\#28556](https://community.openproject.com/wp/28556)\]

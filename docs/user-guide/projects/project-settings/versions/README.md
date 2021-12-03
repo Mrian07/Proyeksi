@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Versions
   priority: 600
-description: Manage versions in OpenProject.
+description: Manage versions in ProyeksiApp.
 robots: index, follow
 keywords: manage versions
 ---
@@ -10,7 +10,7 @@ keywords: manage versions
 
 Versions will be used, e.g. for roadmap planning to track certain product versions or releases. Work packages can be assigned to a version. They will be displayed in the [Roadmap](../../../roadmap).
 
-Also, version will  be used to enable the Backlogs module, i.e. to create a product backlog and sprints in OpenProject.
+Also, version will  be used to enable the Backlogs module, i.e. to create a product backlog and sprints in ProyeksiApp.
 
 [Read here how to create a new backlogs version](../../../backlogs-scrum/manage-sprints).
 

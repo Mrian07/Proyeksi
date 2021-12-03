@@ -1,4 +1,4 @@
-OpenProject::Application.configure do |application|
+ProyeksiApp::Application.configure do |application|
   application.config.to_prepare do
     ::Exports::Register.register do
       list WorkPackage, WorkPackage::Exports::CSV

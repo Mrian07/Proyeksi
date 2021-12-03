@@ -7,15 +7,15 @@ if (db_config = ActiveRecord::Base.configurations.configs_for(env_name: env)[0])
   warn <<~ERROR
     ======= INCOMPATIBLE DATABASE DETECTED =======
     Your database is set up for use with a MySQL or MySQL-compatible variant.
-    This installation of OpenProject no longer supports these variants.
+    This installation of ProyeksiApp no longer supports these variants.
 
     The following guides provide extensive documentation for migrating
     your installation to a PostgreSQL database:
 
-    https://www.openproject.org/migration-guides/
+    https://www.proyeksiapp.org/migration-guides/
 
     This process is mostly automated so you can continue using your
-    OpenProject installation within a few minutes!
+    ProyeksiApp installation within a few minutes!
 
     ==============================================
   ERROR

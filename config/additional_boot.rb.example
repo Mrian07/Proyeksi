@@ -3,6 +3,6 @@
 #
 # Example:
 #
-# Silence Hashie warnings in OpenProject 7.0.x
+# Silence Hashie warnings in ProyeksiApp 7.0.x
 # require 'hashie'
 # Hashie.logger = Logger.new(nil)

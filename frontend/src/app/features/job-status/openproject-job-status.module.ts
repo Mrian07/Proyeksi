@@ -34,5 +34,5 @@ export const JOB_STATUS_ROUTE:Ng2StateDeclaration[] = [
     JobStatusModalComponent,
   ],
 })
-export class OpenProjectJobStatusModule {
+export class ProyeksiAppJobStatusModule {
 }

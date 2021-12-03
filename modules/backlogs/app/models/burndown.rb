@@ -6,7 +6,7 @@ class Burndown
 
     make_date_series sprint
 
-    series_data = OpenProject::Backlogs::Burndown::SeriesRawData.new(project,
+    series_data = ProyeksiApp::Backlogs::Burndown::SeriesRawData.new(project,
                                                                      sprint,
                                                                      points: ['story_points'])
 
@@ -58,7 +58,7 @@ class Burndown
 
   def make_series(name, units, data)
     @available_series ||= {}
-    s = OpenProject::Backlogs::Burndown::Series.new(data, name, units)
+    s = ProyeksiApp::Backlogs::Burndown::Series.new(data, name, units)
     @available_series[name] = s
     instance_variable_set("@#{name}", s)
   end

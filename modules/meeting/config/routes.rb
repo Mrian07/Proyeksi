@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   scope 'projects/:project_id' do
     resources :meetings, only: %i[new create index]
   end

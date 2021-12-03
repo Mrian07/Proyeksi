@@ -8,7 +8,7 @@ module API
       ##
       # We need this to be able to use `Grape::Middleware::Error#error_response`
       # outside of the Grape context. We use it outside of the Grape context because
-      # OpenProject authentication happens in a middleware upstream of Grape.
+      # ProyeksiApp authentication happens in a middleware upstream of Grape.
       class GrapeError < Grape::Middleware::Error
         def initialize(env)
           @env = env
@@ -46,7 +46,7 @@ module API
           env['api.format'] = error_content_type
 
           if log == true
-            OpenProject.logger.error original_exception, reference: :APIv3
+            ProyeksiApp.logger.error original_exception, reference: :APIv3
           elsif log.respond_to?(:call)
             log.call(original_exception)
           end

@@ -35,7 +35,7 @@ function registerListener(
 }
 
 export function registerRequestForConfirmation($:JQueryStatic) {
-  window.OpenProject
+  window.ProyeksiApp
     .getPluginContext()
     .then((context) => {
       const { opModalService } = context.services;

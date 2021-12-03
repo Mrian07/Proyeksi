@@ -15,7 +15,7 @@ class SeedCustomStyleWithBimTheme < ActiveRecord::Migration[6.0]
     #   add a custom style with the BIM theme set. This will write the theme's colors
     #   as DesignColor entries to the DB which is necessary for the theme to actually
     #   have an effect.
-    if OpenProject::Configuration.bim? &&
+    if ProyeksiApp::Configuration.bim? &&
        (CustomStyle.current.nil? ||
            (DesignColor.count == 0 &&
                CustomStyle.current.favicon.nil? &&
@@ -56,7 +56,7 @@ class SeedCustomStyleWithBimTheme < ActiveRecord::Migration[6.0]
 
   def theme
     {
-      theme: 'OpenProject BIM',
+      theme: 'ProyeksiApp BIM',
       colors: {
         'primary-color' => "#3270DB",
         'primary-color-dark' => "#163473",
@@ -68,7 +68,7 @@ class SeedCustomStyleWithBimTheme < ActiveRecord::Migration[6.0]
         'main-menu-bg-selected-background' => "#3270DB",
         'main-menu-bg-hover-background' => "#163473"
       },
-      logo: 'bim/logo_openproject_bim_big.png'
+      logo: 'bim/logo_proyeksiapp_bim_big.png'
     }
   end
 end

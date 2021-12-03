@@ -24,11 +24,11 @@ sl:
       Naložite avatarja velikosti 128 x 128 pikslov. Večje datoteke bodo ustrezno prilagojene. Po tem ko izberete sliko, bo pred končno naložitvijo prikazan predogled avatarja.
     text_change_gravatar_html: 'Za spremembo ali dodajanje Gravatarja za vaš mail naslov, pojdite na %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject vam dovoljuje nalaganje avatarja po meri.
+      ProyeksiApp vam dovoljuje nalaganje avatarja po meri.
     text_local_avatar_over_gravatar: |
       Če ga naložite, bo ta avatar pa meri uporabljen pred gravatarjem zgoraj.
     text_your_current_gravatar: |
-      OpenProject uporabi vašega gravatarja, če ga registrirate ali pa privzeto sliko ali ikono, če ta obstaja. Vaš trenutni gravatar je takšen:
+      ProyeksiApp uporabi vašega gravatarja, če ga registrirate ali pa privzeto sliko ali ikono, če ta obstaja. Vaš trenutni gravatar je takšen:
     settings:
       enable_gravatars: 'Omogoči uporabniškega gravatarja'
       gravatar_default: "Privzeta Gravatar slika"

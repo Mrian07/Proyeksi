@@ -99,9 +99,9 @@ describe News, type: :model do
 
   describe '#to_param' do
     it 'includes includes id and title for a nicer url' do
-      title = 'OpenProject now has a Twitter Account'
+      title = 'ProyeksiApp now has a Twitter Account'
       news  = FactoryBot.create(:news, title: title)
-      slug  = "#{news.id}-openproject-now-has-a-twitter-account"
+      slug  = "#{news.id}-proyeksiapp-now-has-a-twitter-account"
 
       expect(news.to_param).to eq slug
     end

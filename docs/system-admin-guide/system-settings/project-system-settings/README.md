@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Project system settings
   priority: 800
-description: Project system settings in OpenProject.
+description: Project system settings in ProyeksiApp.
 robots: index, follow
 keywords: project system settings
 ---

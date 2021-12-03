@@ -3,7 +3,7 @@
 module API
   module V3
     module Activities
-      class ActivitiesAPI < ::API::OpenProjectAPI
+      class ActivitiesAPI < ::API::ProyeksiAppAPI
         resources :activities do
           route_param :id, type: Integer, desc: 'Activity ID' do
             after_validation do

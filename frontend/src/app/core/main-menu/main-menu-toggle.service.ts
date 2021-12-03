@@ -51,8 +51,8 @@ export class MainMenuToggleService {
       return;
     }
 
-    this.elementWidth = parseInt(window.OpenProject.guardedLocalStorage(this.localStorageKey) as string);
-    const menuCollapsed = window.OpenProject.guardedLocalStorage(this.localStorageStateKey) as string;
+    this.elementWidth = parseInt(window.ProyeksiApp.guardedLocalStorage(this.localStorageKey) as string);
+    const menuCollapsed = window.ProyeksiApp.guardedLocalStorage(this.localStorageStateKey) as string;
 
     if (!this.elementWidth) {
       this.saveWidth(this.mainMenu.offsetWidth);
@@ -82,7 +82,7 @@ export class MainMenuToggleService {
       if (this.deviceService.isMobile) { // mobile version
         this.setWidth(window.innerWidth);
       } else { // desktop version
-        const savedWidth = parseInt(window.OpenProject.guardedLocalStorage(this.localStorageKey) as string);
+        const savedWidth = parseInt(window.ProyeksiApp.guardedLocalStorage(this.localStorageKey) as string);
         const widthToSave = savedWidth >= this.elementMinWidth ? savedWidth : this.defaultWidth;
 
         this.saveWidth(widthToSave);
@@ -101,21 +101,21 @@ export class MainMenuToggleService {
 
   public closeMenu():void {
     this.setWidth(0);
-    window.OpenProject.guardedLocalStorage(this.localStorageStateKey, 'true');
+    window.ProyeksiApp.guardedLocalStorage(this.localStorageStateKey, 'true');
     jQuery('.searchable-menu--search-input').blur();
   }
 
   public closeWhenOnMobile():void {
     if (this.deviceService.isMobile) {
       this.closeMenu();
-      window.OpenProject.guardedLocalStorage(this.localStorageStateKey, 'false');
+      window.ProyeksiApp.guardedLocalStorage(this.localStorageStateKey, 'false');
     }
   }
 
   public saveWidth(width?:number):void {
     this.setWidth(width);
-    window.OpenProject.guardedLocalStorage(this.localStorageKey, String(this.elementWidth));
-    window.OpenProject.guardedLocalStorage(this.localStorageStateKey, String(this.elementWidth === 0));
+    window.ProyeksiApp.guardedLocalStorage(this.localStorageKey, String(this.elementWidth));
+    window.ProyeksiApp.guardedLocalStorage(this.localStorageStateKey, String(this.elementWidth === 0));
   }
 
   public setWidth(width?:any):void {

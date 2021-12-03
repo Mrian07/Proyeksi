@@ -56,4 +56,4 @@ ro:
           title: 'Proiecte selectate'
         secret:
           description: >
-            Dacă este setată, această valoare secretă este utilizată de OpenProject pentru a semna încărcătura utilă a webhook-ului.
+            Dacă este setată, această valoare secretă este utilizată de ProyeksiApp pentru a semna încărcătura utilă a webhook-ului.

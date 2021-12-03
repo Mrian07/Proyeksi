@@ -15,4 +15,4 @@ ko:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA는 해당 OpenProject 인스턴스에 대해 활성화할 수 있는 Google의 무료 서비스입니다. 활성화하면, 캡차를 아직 확인하지 않은 모든 사용자가 로그인할 때 캡차 양식이 렌더링됩니다. <br/> reCAPTCHA와 해당 버전 관련 세부 정보 및 웹사이트 키와 비밀 키를 생성하는 방법은 다음 링크를 참조하십시오: %{recaptcha_link}
+        reCAPTCHA는 해당 ProyeksiApp 인스턴스에 대해 활성화할 수 있는 Google의 무료 서비스입니다. 활성화하면, 캡차를 아직 확인하지 않은 모든 사용자가 로그인할 때 캡차 양식이 렌더링됩니다. <br/> reCAPTCHA와 해당 버전 관련 세부 정보 및 웹사이트 키와 비밀 키를 생성하는 방법은 다음 링크를 참조하십시오: %{recaptcha_link}

@@ -36,7 +36,7 @@ module ::Avatars
     end
 
     def ensure_enabled
-      unless ::OpenProject::Avatars::AvatarManager.avatars_enabled?
+      unless ::ProyeksiApp::Avatars::AvatarManager.avatars_enabled?
         render_404
       end
     end

@@ -40,7 +40,7 @@ COPY Gemfile ./Gemfile
 COPY Gemfile.* ./
 COPY modules ./modules
 COPY vendor ./vendor
-# some gemspec files of plugins require files in there, notably OpenProject::Version
+# some gemspec files of plugins require files in there, notably ProyeksiApp::Version
 COPY lib ./lib
 
 RUN bundle install --quiet --deployment --path vendor/bundle --no-cache \
@@ -55,7 +55,7 @@ RUN ./docker/prod/setup/postinstall.sh
 # Expose ports for apache and postgres
 EXPOSE 80 5432
 
-# Expose the postgres data directory and OpenProject data directory as volumes
+# Expose the postgres data directory and ProyeksiApp data directory as volumes
 VOLUME ["$PGDATA", "$APP_DATA_PATH"]
 
 # Set a custom entrypoint to allow for privilege dropping and one-off commands

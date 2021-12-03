@@ -5,9 +5,9 @@
 require 'spec_helper'
 
 describe DigestMailer, type: :mailer do
-  include OpenProject::ObjectLinking
+  include ProyeksiApp::ObjectLinking
   include ActionView::Helpers::UrlHelper
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
   include Redmine::I18n
 
   let(:recipient) do
@@ -55,7 +55,7 @@ describe DigestMailer, type: :mailer do
 
     it 'notes the day and the number of notifications in the subject' do
       expect(mail.subject)
-        .to eql "OpenProject - 1 unread notification"
+        .to eql "ProyeksiApp - 1 unread notification"
     end
 
     it 'sends to the recipient' do
@@ -72,8 +72,8 @@ describe DigestMailer, type: :mailer do
         .to eql "op.digest.#{Time.current.strftime('%Y%m%d%H%M%S')}.#{recipient.id}@example.net"
     end
 
-    it 'sets the expected openproject headers' do
-      expect(mail['X-OpenProject-User']&.value)
+    it 'sets the expected proyeksiapp headers' do
+      expect(mail['X-ProyeksiApp-User']&.value)
         .to eql recipient.name
     end
 

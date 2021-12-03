@@ -23,7 +23,7 @@ describe ::API::V3::RootRepresenter do
 
     before do
       allow(Setting).to receive(:app_title).and_return app_title
-      allow(OpenProject::VERSION).to receive(:to_semver).and_return version
+      allow(ProyeksiApp::VERSION).to receive(:to_semver).and_return version
     end
 
     describe '_links' do
@@ -130,7 +130,7 @@ describe ::API::V3::RootRepresenter do
         context 'for an admin user' do
           let(:user) { FactoryBot.build_stubbed(:admin) }
 
-          it 'indicates the OpenProject version number' do
+          it 'indicates the ProyeksiApp version number' do
             is_expected
               .to be_json_eql(version.to_json)
               .at_path('coreVersion')

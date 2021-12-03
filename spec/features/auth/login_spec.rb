@@ -109,7 +109,7 @@ describe 'Login', type: :feature, clear_cache: true do
               autologin: 1
             } do
       def fake_browser_closed
-        page.driver.browser.set_cookie(OpenProject::Configuration['session_cookie_name'])
+        page.driver.browser.set_cookie(ProyeksiApp::Configuration['session_cookie_name'])
       end
 
       before do

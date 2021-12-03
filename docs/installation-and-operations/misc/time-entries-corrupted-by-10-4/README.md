@@ -1,10 +1,10 @@
 # Fixing time entries corrupted by upgrading to 10.4.0
 
 <div class="alert alert-info" role="alert">
-**Note**: This guide only concerns installations having upgraded exactly to the OpenProject version 10.4.0. Installations having upgraded to 10.4.1 directly are not affected.
+**Note**: This guide only concerns installations having upgraded exactly to the ProyeksiApp version 10.4.0. Installations having upgraded to 10.4.1 directly are not affected.
 </div>
 
-The migration scripts that ran as part of the OpenProject 10.4.0 upgrade includes an unfortunate bug that leads to some installations suffering data loss. 
+The migration scripts that ran as part of the ProyeksiApp 10.4.0 upgrade includes an unfortunate bug that leads to some installations suffering data loss. 
 Installations, that had time entry activities enabled/disabled per project, will have all their time entries assigned to a single time entry activity.
 
 This guide describes how to fix the data once this has happened.
@@ -12,21 +12,21 @@ This guide describes how to fix the data once this has happened.
 ## Preconditions
 
 * A backup file of a database state prior to 10.4.0.
-* Credentials with the permission to create a database in the database server the OpenProject installation is running against.
-* Console access to the OpenProject server.
+* Credentials with the permission to create a database in the database server the ProyeksiApp installation is running against.
+* Console access to the ProyeksiApp server.
 
 ## 1. Create a second database from the backup
 
-Backup scripts are by default created via the [built in OpenProject command](../../operation/backing-up). 
-When not following the default, the database or the OpenProject server itself may have been backed up. 
+Backup scripts are by default created via the [built in ProyeksiApp command](../../operation/backing-up). 
+When not following the default, the database or the ProyeksiApp server itself may have been backed up. 
 This guide only covers the proceedings for the the built in backup command. 
 But the reader might deduce the steps necessary to restore accordingly for a custom backup from this guide.
 
-As a result of this step, a second database, not the database OpenProject is currently connecting to, will contain the data of the backup.
+As a result of this step, a second database, not the database ProyeksiApp is currently connecting to, will contain the data of the backup.
 
 ### 1.1 Get necessary database information
 
-First, connect to the OpenProject server and get the necessary details about your current database:
+First, connect to the ProyeksiApp server and get the necessary details about your current database:
 
 ```bash
 $ openproject config:get DATABASE_URL

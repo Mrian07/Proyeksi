@@ -56,4 +56,4 @@ zh-CN:
           title: '选定项目'
         secret:
           description: >
-            如果设置，OpenProject 将使用此密钥值对 Webhook 有效载荷进行签名。
+            如果设置，ProyeksiApp 将使用此密钥值对 Webhook 有效载荷进行签名。

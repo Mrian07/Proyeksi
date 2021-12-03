@@ -59,7 +59,7 @@ class ApplicationJob < ::ActiveJob::Base
   # make sure that any changes to the configuration is correctly picked up
   # by the background jobs at runtime.
   def reload_mailer_configuration!
-    OpenProject::Configuration.reload_mailer_configuration!
+    ProyeksiApp::Configuration.reload_mailer_configuration!
   end
 
   private

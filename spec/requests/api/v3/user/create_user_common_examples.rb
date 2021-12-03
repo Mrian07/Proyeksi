@@ -46,7 +46,7 @@ shared_examples 'create user request flow' do
         .to contain_exactly('password', 'login', 'firstName', 'lastName', 'email')
 
       expect(last_response.body)
-        .to be_json_eql('urn:openproject-org:api:v3:errors:MultipleErrors'.to_json)
+        .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:MultipleErrors'.to_json)
               .at_path('errorIdentifier')
     end
   end
@@ -62,7 +62,7 @@ shared_examples 'create user request flow' do
 
     describe 'invitation successful' do
       before do
-        expect(OpenProject::Notifications).to receive(:send) do |event, _|
+        expect(ProyeksiApp::Notifications).to receive(:send) do |event, _|
           expect(event).to eq 'user_invited'
         end
       end
@@ -98,7 +98,7 @@ shared_examples 'create user request flow' do
         send_request
 
         expect(last_response.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:MultipleErrors'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:MultipleErrors'.to_json)
                 .at_path('errorIdentifier')
 
         expect(errors.count).to eq 4
@@ -119,7 +119,7 @@ shared_examples 'create user request flow' do
 
       expect(errors).not_to be_empty
       expect(last_response.body)
-        .to be_json_eql('urn:openproject-org:api:v3:errors:MultipleErrors'.to_json)
+        .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:MultipleErrors'.to_json)
               .at_path('errorIdentifier')
 
       expect(errors.collect { |el| el['message'] })

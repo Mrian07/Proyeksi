@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.17
+  title: ProyeksiApp 3.0.17
   sidebar_navigation:
       title: 3.0.17
   release_version: 3.0.17
@@ -7,13 +7,13 @@
 ---
 
 
-# OpenProject 3.0.17
+# ProyeksiApp 3.0.17
 
-A new patch release for OpenProject 3.0 (3.0.17) has been released which
+A new patch release for ProyeksiApp 3.0 (3.0.17) has been released which
 updates several gems and contains a bug fix.
 
 Namely, syntax highlighting (e.g. in the wiki and the repository) is
-working again with OpenProject 3.0.17
+working again with ProyeksiApp 3.0.17
 ([\#17817](https://community.openproject.org/work_packages/17817 "Syntax highlighting not working properly  (closed)")):
 
 ![SyntaxHighlighting](SyntaxHighlighting.png)

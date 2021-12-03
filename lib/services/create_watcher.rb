@@ -14,7 +14,7 @@ class Services::CreateWatcher
     elsif @watcher.valid?
       @work_package.watchers << @watcher
       success.(created: true)
-      OpenProject::Notifications.send(OpenProject::Events::WATCHER_ADDED,
+      ProyeksiApp::Notifications.send(ProyeksiApp::Events::WATCHER_ADDED,
                                       watcher: @watcher,
                                       watcher_setter: User.current,
                                       send_notifications: send_notifications)

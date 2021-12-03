@@ -4,9 +4,9 @@ sidebar_navigation:
   priority: 400
 ---
 
-# Install OpenProject with DEB/RPM packages
+# Install ProyeksiApp with DEB/RPM packages
 
-The packaged installation of OpenProject is the recommended way to install and maintain OpenProject using DEB or RPM packages.
+The packaged installation of ProyeksiApp is the recommended way to install and maintain ProyeksiApp using DEB or RPM packages.
 
 The package will:
 
@@ -46,7 +46,7 @@ x86_64
 ```
 
 <div class="alert alert-info" role="alert">
-**Important note:** Please note that the packaged installation works best when running on a dedicated server or virtual machine, as we cannot ensure that the components installed and configured by the OpenProject installer will work on systems that have been already customized. If you must install OpenProject on a server where other software is running, or with an already configured Apache or NginX server, then you should have a look at the Docker-based installation instead.
+**Important note:** Please note that the packaged installation works best when running on a dedicated server or virtual machine, as we cannot ensure that the components installed and configured by the ProyeksiApp installer will work on systems that have been already customized. If you must install ProyeksiApp on a server where other software is running, or with an already configured Apache or NginX server, then you should have a look at the Docker-based installation instead.
 
 </div>
 
@@ -60,14 +60,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/20.04.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -86,14 +86,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/18.04.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -110,14 +110,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/16.04.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -136,14 +136,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/11.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -160,14 +160,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/10.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -184,14 +184,14 @@ Import the PGP key used to sign our packages:
 wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
 ```
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/apt/sources.list.d/openproject.list \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/9.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
@@ -204,7 +204,7 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 
 ### CentOS 8 / RHEL 8
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/yum.repos.d/openproject.repo \
@@ -217,7 +217,7 @@ If it is not already enabled, make sure to enable [Extra Packages for Enterprise
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo yum install openproject
@@ -229,14 +229,14 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 
 ### CentOS 7 / RHEL 7
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 sudo wget -O /etc/yum.repos.d/openproject.repo \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/el/7.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo yum install openproject
@@ -250,14 +250,14 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 
 ### SLES 12
 
-Add the OpenProject package source:
+Add the ProyeksiApp package source:
 
 ```bash
 wget -O /etc/zypp/repos.d/openproject.repo \
   https://dl.packager.io/srv/opf/openproject/stable/12/installer/sles/12.repo
 ```
 
-Download the OpenProject package:
+Download the ProyeksiApp package:
 
 ```bash
 sudo zypper install openproject
@@ -271,11 +271,11 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 
 # Full-text extraction not supported
 
-For some distributions we do not provide the required dependencies for full-text extraction of attachments. If you need this feature, please install the required dependencies (`catdoc unrtf poppler-utils tesseract-ocr`) manually. For more information, [please see the plaintext gem](https://github.com/planio-gmbh/plaintext). Once installed, check `Administration > Information` to see if OpenProject is able to pick up these dependencies.
+For some distributions we do not provide the required dependencies for full-text extraction of attachments. If you need this feature, please install the required dependencies (`catdoc unrtf poppler-utils tesseract-ocr`) manually. For more information, [please see the plaintext gem](https://github.com/planio-gmbh/plaintext). Once installed, check `Administration > Information` to see if ProyeksiApp is able to pick up these dependencies.
 
 # Initial Configuration
 
-After you have successfully installed the OpenProject package, you can now perform the initial configuration of OpenProject, using the wizard that ships with the OpenProject package.
+After you have successfully installed the ProyeksiApp package, you can now perform the initial configuration of ProyeksiApp, using the wizard that ships with the ProyeksiApp package.
 
 ## Prerequisites
 
@@ -295,13 +295,13 @@ sudo openproject configure
 
 * In case you mistype or need to correct a configuration option, you can always safely cancel the configuration wizard by pressing `CTRL+C` and restart it by running `sudo openproject reconfigure`.
 
-* Every time you will run the OpenProject wizard, your choices will be persisted in a configuration file at `/etc/openproject/installer.dat` and subsequent executions of `sudo openproject configure` will re-use these values, only showing you the wizard steps for options you have not yet been asked for.
+* Every time you will run the ProyeksiApp wizard, your choices will be persisted in a configuration file at `/etc/openproject/installer.dat` and subsequent executions of `sudo openproject configure` will re-use these values, only showing you the wizard steps for options you have not yet been asked for.
 
 * In case you want to run through all the wizard options again, you can do so by executing `sudo openproject reconfigure`. This will show all wizard steps, but again keep values you entered before showing in the input fields. You can skip dialogs you do not want to change simply by confirming them with `ENTER`.
 
-## Step 1: Select your OpenProject Edition
+## Step 1: Select your ProyeksiApp Edition
 
-OpenProject comes in two editions:
+ProyeksiApp comes in two editions:
 
 * the default edition, which is targeted at general project management.
 
@@ -325,7 +325,7 @@ On older distributions, this wizard step won't be displayed, and the installatio
 
 ## Step 2: PostgreSQL database configuration
 
-OpenProject requires a PostgreSQL database to store your data. This wizard step allows you to choose an option for the PostgreSQL database connection: 
+ProyeksiApp requires a PostgreSQL database to store your data. This wizard step allows you to choose an option for the PostgreSQL database connection: 
 
 ![01-postgres](01-postgres.png)
 
@@ -333,11 +333,11 @@ The dialog allows you to choose from three options:
 
 ### Install a new PostgreSQL server and database locally (default)
 
-Choose this option if you want OpenProject to set up and configure a local database server manually. This is the best choice if you are unfamiliar with administering databases, or do not have a separate PostgreSQL database server installed that you want to connect to.
+Choose this option if you want ProyeksiApp to set up and configure a local database server manually. This is the best choice if you are unfamiliar with administering databases, or do not have a separate PostgreSQL database server installed that you want to connect to.
 
 ### Use an existing PostgreSQL database
 
-Choose this option if you have a PostgreSQL database server installed either on the same host as the OpenProject package is being installed on, or on another server you can connect to from this machine.
+Choose this option if you have a PostgreSQL database server installed either on the same host as the ProyeksiApp package is being installed on, or on another server you can connect to from this machine.
 
 The wizard will show you multiple additional steps in this case to enter the hostname, username & password as well as the database name for the PostgreSQL database.
 
@@ -353,7 +353,7 @@ sudo openproject config:set DATABASE_URL="postgresql://[user[:password]@][host][
 
 ## Step 3: Apache2 web server
 
-OpenProject comes with an internal ruby application server, but this server only listens on a local interface. To receive connections from the outside world, it needs a web server that will act as a proxy to forward incoming connections to the OpenProject application server.
+ProyeksiApp comes with an internal ruby application server, but this server only listens on a local interface. To receive connections from the outside world, it needs a web server that will act as a proxy to forward incoming connections to the ProyeksiApp application server.
 
 This wizard step allows you to auto-install an Apache2 web server to function as that proxy.
 
@@ -363,25 +363,25 @@ The available options are:
 
 ### **Install Apache2 web server** (default)
 
-We recommend that you let OpenProject install and configure the outer web server, in which case we will install an Apache2 web server with a VirtualHost listening to the domain name you specify, optionally providing SSL/TLS termination.
+We recommend that you let ProyeksiApp install and configure the outer web server, in which case we will install an Apache2 web server with a VirtualHost listening to the domain name you specify, optionally providing SSL/TLS termination.
 
 In case you select to auto-install Apache2, multiple dialogs will request the parameters for setting it up:
 
 **Domain name**
 
-Enter the fully qualified domain where your OpenProject installation will be reached at. This will become the `ServerName` of your apache VirtualHost and is also used to generate full links from OpenProject, such as in emails.
+Enter the fully qualified domain where your ProyeksiApp installation will be reached at. This will become the `ServerName` of your apache VirtualHost and is also used to generate full links from ProyeksiApp, such as in emails.
 
 ![02b-hostname](02b-hostname.png)
 
 **Server path prefix**
 
-If you wish to install OpenProject under a server path prefix, such as `yourdomain.example.com/openproject`, please specify that prefix here with a leading slash. For example: `/openproject`. If OpenProject should respond to `http(s)://yourdomain.example.com` as specified in the previous dialog, simply leave this dialog empty and confirm by pressing `ENTER`.
+If you wish to install ProyeksiApp under a server path prefix, such as `yourdomain.example.com/openproject`, please specify that prefix here with a leading slash. For example: `/openproject`. If ProyeksiApp should respond to `http(s)://yourdomain.example.com` as specified in the previous dialog, simply leave this dialog empty and confirm by pressing `ENTER`.
 
 ![02c-prefix](02c-prefix.png)
 
 **SSL/TLS configuration**
 
-OpenProject can configure Apache to support HTTPS (SSL/TLS). If you have SSL certificates and want to use SSL/TLS (recommended), select **Yes**.
+ProyeksiApp can configure Apache to support HTTPS (SSL/TLS). If you have SSL certificates and want to use SSL/TLS (recommended), select **Yes**.
 
 In that case, you will be shown three additional dialogs to enter the certificate details:
 
@@ -397,20 +397,20 @@ In that case, you will be shown three additional dialogs to enter the certificat
 
 <div class="alert alert-warning" role="alert">
 
-If you terminate SSL externally before the request hits the OpenProject server, you need to follow the following instructions to avoid errors in routing. If you want to use SSL on the server running OpenProject, skip this section.
+If you terminate SSL externally before the request hits the ProyeksiApp server, you need to follow the following instructions to avoid errors in routing. If you want to use SSL on the server running ProyeksiApp, skip this section.
 
 </div>
 
-If you have a separate server that is terminating SSL and only forwarding/proxying to the OpenProject server, you must select "No" in this dialog. However, there are some parameters you need to put into your outer configuration.
+If you have a separate server that is terminating SSL and only forwarding/proxying to the ProyeksiApp server, you must select "No" in this dialog. However, there are some parameters you need to put into your outer configuration.
 
-- If you're proxying to the openproject server, you need to forward the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that OpenProject is running on.
+- If you're proxying to the openproject server, you need to forward the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that ProyeksiApp is running on.
   - In Apache2, set the `ProxyPreserveHost On`directive 
   - In NginX, use the following value: `proxy_set_header X-Forwarded-Host $host:$server_port;`
-- If you're terminating SSL on the outer server, you need to set the `X-Forwarded-Proto https`header to let OpenProject know that the request is HTTPS, even though its been terminated earlier in the request on the outer server.
+- If you're terminating SSL on the outer server, you need to set the `X-Forwarded-Proto https`header to let ProyeksiApp know that the request is HTTPS, even though its been terminated earlier in the request on the outer server.
   - In Apache2, use `RequestHeader set "X-Forwarded-Proto" https`
   - In Nginx, use `proxy_set_header X-Forwarded-Proto https;`
 
-- Finally, to let OpenProject know that it should create links with 'https' when no request is available (for example, when sending emails), you need to set the following setting: `openproject config:set SERVER_PROTOCOL_FORCE_HTTPS="true"` followed by an `openproject configure`. This ensures that OpenProject responds correctly with secure cookies even though it was not configured for https in the server configuration.
+- Finally, to let ProyeksiApp know that it should create links with 'https' when no request is available (for example, when sending emails), you need to set the following setting: `openproject config:set SERVER_PROTOCOL_FORCE_HTTPS="true"` followed by an `openproject configure`. This ensures that ProyeksiApp responds correctly with secure cookies even though it was not configured for https in the server configuration.
 
 
 
@@ -418,7 +418,7 @@ If you have a separate server that is terminating SSL and only forwarding/proxyi
 
 The installer will not set up an external web server for accessing. You will need to either install and set up a web server such as Apache2 or Nginx to function as the web server forwarding to our internal server listening at `localhost:6000` by proxying.
 
-Only choose this option if you have a local Apache2 installed that the OpenProject package may not control, or need to use a different web server such as Nginx. Please note that not all functionality (especially regarding Repositories) are supported on Nginx. 
+Only choose this option if you have a local Apache2 installed that the ProyeksiApp package may not control, or need to use a different web server such as Nginx. Please note that not all functionality (especially regarding Repositories) are supported on Nginx. 
 
 When installing with an existing Apache2, you can take a look at the source of our [installation  templates](https://github.com/pkgr/addon-apache2/tree/master/conf) for guidance on how to set up the integration. 
 
@@ -426,7 +426,7 @@ When installing with an existing Apache2, you can take a look at the source of o
 
 [For a minimal nginx config, please see this gist](https://gist.github.com/seLain/375d16ccd4542e3727e97a7478187d3a) as as starting point.
 
-**Please note:** If you reconfigure the OpenProject application and switch to `skip`, you might run into errors with the Apache configuration file, as that will not be automatically remove. Please double-check you removed references to the `openproject.conf` if you do reconfigure.
+**Please note:** If you reconfigure the ProyeksiApp application and switch to `skip`, you might run into errors with the Apache configuration file, as that will not be automatically remove. Please double-check you removed references to the `openproject.conf` if you do reconfigure.
 
 ## Step 4: SVN/Git integration server
 
@@ -438,7 +438,7 @@ For more information, [see our help on repositories](../../../user-guide/reposit
 
 ## Step 5: Outgoing email configuration
 
-OpenProject requires a setup for sending outgoing emails for notifications, such as updates on work packages, password resets, or other notifications you and your users receive.
+ProyeksiApp requires a setup for sending outgoing emails for notifications, such as updates on work packages, password resets, or other notifications you and your users receive.
 
 ![04-mail](04-mail.png)
 
@@ -452,11 +452,11 @@ Easiest setup as it does not require an SMTP configuration, but your Mails may n
 
 ### **SMTP** (recommended for production systems)
 
-Allows you to connect to a SMTP host through authentication types `NONE`,  `PLAIN,` `LOGIN`, or `CRAM-MD5`. Use this if you have a dedicated mail account to use for delivering OpenProject mail, or when sendmail does not work due to your local firewall / mail relay setup.
+Allows you to connect to a SMTP host through authentication types `NONE`,  `PLAIN,` `LOGIN`, or `CRAM-MD5`. Use this if you have a dedicated mail account to use for delivering ProyeksiApp mail, or when sendmail does not work due to your local firewall / mail relay setup.
 
 ### **Skip** (not recommended)
 
-Does not set up mail configuration. You can configure the mail setup in OpenProject by visiting `openproject.example.com/settings?tab=notifications` in your installation. For more information, [visit our help page on this topic](../../../system-admin-guide/system-settings/).
+Does not set up mail configuration. You can configure the mail setup in ProyeksiApp by visiting `openproject.example.com/settings?tab=notifications` in your installation. For more information, [visit our help page on this topic](../../../system-admin-guide/system-settings/).
 
 ## Step 6: Administrator email
 
@@ -466,19 +466,19 @@ The wizard will ask you for an administrative email address so that it can creat
 
 ## Step 7: Memcached server
 
-OpenProject heavily relies on caching, which is why the wizard suggests you to install a local memcached server the OpenProject instances can connect to. You should always set this to `install` unless you have a reason to configure another caching mechanism - for example when configuring multiple shared instances of OpenProject.
+ProyeksiApp heavily relies on caching, which is why the wizard suggests you to install a local memcached server the ProyeksiApp instances can connect to. You should always set this to `install` unless you have a reason to configure another caching mechanism - for example when configuring multiple shared instances of ProyeksiApp.
 
 ![06-cache](06-cache.png)
 
 ## Result
 
-With this last step confirmed, the OpenProject wizard will complete, and apply all the configuration options that you have just selected. This might take a few minutes depending on your machine and internet connection, as OpenProject might need to install additional packages (such as the web server, database) depending on your selections.
+With this last step confirmed, the ProyeksiApp wizard will complete, and apply all the configuration options that you have just selected. This might take a few minutes depending on your machine and internet connection, as ProyeksiApp might need to install additional packages (such as the web server, database) depending on your selections.
 
 In case this process crashes or exits with an obvious error, please keep the output and send your configuration from`/etc/openproject/installer.dat` (removing any passwords from it) to us at support@openproject.com , or [reach out to the community forums](https://community.openproject.com/projects/openproject/forums). 
 
 When this process completes, it will have started the internal application and web servers, the background jobs to process work-intensive jobs, and set up the connection to the database.
 
-You should be able to reach the OpenProject instance by visiting your installation at `http://<openproject.example.com>/<server prefix>`.
+You should be able to reach the ProyeksiApp instance by visiting your installation at `http://<openproject.example.com>/<server prefix>`.
 
 You can then log in using the default user/password combination:
 

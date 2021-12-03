@@ -78,13 +78,13 @@ describe Attachments::FinishDirectUploadJob, 'integration', type: :job do
       let(:attachment_ids) { [] }
 
       let!(:subscription) do
-        OpenProject::Notifications.subscribe(OpenProject::Events::ATTACHMENT_CREATED) do |payload|
+        ProyeksiApp::Notifications.subscribe(ProyeksiApp::Events::ATTACHMENT_CREATED) do |payload|
           attachment_ids << payload[:attachment].id
         end
       end
 
       after do
-        OpenProject::Notifications.unsubscribe(OpenProject::Events::ATTACHMENT_CREATED, subscription)
+        ProyeksiApp::Notifications.unsubscribe(ProyeksiApp::Events::ATTACHMENT_CREATED, subscription)
       end
 
       it "is triggered" do
@@ -116,12 +116,12 @@ describe Attachments::FinishDirectUploadJob, 'integration', type: :job do
 
     it "Does not save the attachment" do
       allow(pending_attachment).to receive(:save!)
-      allow(OpenProject.logger).to receive(:error)
+      allow(ProyeksiApp.logger).to receive(:error)
 
       job.perform(pending_attachment.id)
 
       expect(pending_attachment).not_to have_received(:save!)
-      expect(OpenProject.logger).to have_received(:error)
+      expect(ProyeksiApp.logger).to have_received(:error)
 
       container.reload
 

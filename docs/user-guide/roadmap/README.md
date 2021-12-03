@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Roadmap
   priority: 880
-description: Find out about the Product Roadmap and Release planning in OpenProject
+description: Find out about the Product Roadmap and Release planning in ProyeksiApp
 robots: index, follow
 keywords: roadmap, release planning
 ---
@@ -13,7 +13,7 @@ keywords: roadmap, release planning
 **Roadmap** is defined as an overview page displaying the versions sorted alphabetically and the work packages assigned to them. The roadmap is displayed in the project navigation when the work package module is activated and a version has been created (project settings).
 </div>
 
-Plan and manage your product roadmap in OpenProject. Visualize, and communicate your product roadmap. Share your product roadmap with your stakeholders, get feedback about your ideas and break it down into a detailed release plan.
+Plan and manage your product roadmap in ProyeksiApp. Visualize, and communicate your product roadmap. Share your product roadmap with your stakeholders, get feedback about your ideas and break it down into a detailed release plan.
 
 In the roadmap, you can see all work packages and their status listed by versions at a glance.
 

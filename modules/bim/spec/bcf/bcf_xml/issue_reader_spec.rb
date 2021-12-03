@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe ::OpenProject::Bim::BcfXml::IssueReader do
+describe ::ProyeksiApp::Bim::BcfXml::IssueReader do
   let(:absolute_file_path) { "63E78882-7C6A-4BF7-8982-FC478AFB9C97/markup.bcf" }
   let(:type) { FactoryBot.create :type, name: 'Issue', is_standard: true, is_default: true }
   let(:project) do
@@ -61,7 +61,7 @@ describe ::OpenProject::Bim::BcfXml::IssueReader do
       .new(absolute_file_path, entry_stream)
   end
   let(:entry_stream) { StringIO.new(markup) }
-  let(:import_options) { OpenProject::Bim::BcfXml::Importer::DEFAULT_IMPORT_OPTIONS }
+  let(:import_options) { ProyeksiApp::Bim::BcfXml::Importer::DEFAULT_IMPORT_OPTIONS }
 
   subject do
     described_class.new(project,

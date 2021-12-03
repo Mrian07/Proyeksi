@@ -1,14 +1,14 @@
 ---
 sidebar_navigation:
   title: Rich text editor
-description: Find out about the CKEditor5 WYSIWYG editor in OpenProject
+description: Find out about the CKEditor5 WYSIWYG editor in ProyeksiApp
 robots: index, follow
-keywords: WYSIWYG, CKEditor, Links to OpenProject resources
+keywords: WYSIWYG, CKEditor, Links to ProyeksiApp resources
 ---
 
-# Rich text (WYSIWYG) editor in OpenProject
+# Rich text (WYSIWYG) editor in ProyeksiApp
 
-Starting with version 8.0.0, OpenProject features a quasi-WYSIWYG editor, powered by [CKSource CKEditor5](https://ckeditor5.github.io/). The underlying format is GitHub-flavored CommonMark ([GFM](https://github.github.com/gfm/)). All previous textile-based content will be migrated when upgrading to OpenProject 8.0.
+Starting with version 8.0.0, ProyeksiApp features a quasi-WYSIWYG editor, powered by [CKSource CKEditor5](https://ckeditor5.github.io/). The underlying format is GitHub-flavored CommonMark ([GFM](https://github.github.com/gfm/)). All previous textile-based content will be migrated when upgrading to ProyeksiApp 8.0.
 
 <div class="alert alert-info" role="alert">
 **Please note:** 
@@ -24,12 +24,12 @@ In the work package split screen view (details view) you may have to use the thr
 | [Basic formatting](#basic-formatting)                        | Basic formatting elements in the WYSIWYG editor          |
 | [Image handling](#image-handling)                            | How to add images in the WYSIWYG editor?                 |
 | [Macros](#macros)                                            | Available macros in the WYSIWYG editor                   |
-| [Links to OpenProject resources](#links-to-openproject-resources) | How to link to resources like wikis, projects, meetings? |
+| [Links to ProyeksiApp resources](#links-to-openproject-resources) | How to link to resources like wikis, projects, meetings? |
 | [Embedding of work package attributes and project attributes](#embedding-of-work-package-attributes-and-project-attributes) | How to embed attributes and attribute help texts?        |
 
 ## Basic formatting
 
-The CKEditor5 build in OpenProject supports basic text styles, such as bold and italic formatting, headings,
+The CKEditor5 build in ProyeksiApp supports basic text styles, such as bold and italic formatting, headings,
 strike-through, inline code, and quotes as well as inline image handling. Pasting content such as images or rich text is also supported, while unsupported styling will be stripped by the editor.
 
 ### Line breaks
@@ -49,11 +49,11 @@ When you have a widget selected, you can remove or cut it. You can create a newl
 
 ### Code Blocks
 
-As CKEditor5 currently does not provide support for code blocks, OpenProject can display, but not edit code blocks within the CKEditor instance. A code block can be edited through a modal window within a `CodeMirror` editor instance. This has the advantage of providing syntax highlighting and code sensing ([for supported languages](https://codemirror.net/mode/)).
+As CKEditor5 currently does not provide support for code blocks, ProyeksiApp can display, but not edit code blocks within the CKEditor instance. A code block can be edited through a modal window within a `CodeMirror` editor instance. This has the advantage of providing syntax highlighting and code sensing ([for supported languages](https://codemirror.net/mode/)).
 
 ### Tables
 
-The GFM extension of the CommonMark specs adds a definition for table syntax which the CKEditor build of OpenProject supports. This definition requires all tables to have a heading row. For tables created with CKEditor without heading rows, a HTML table is output instead. This matches the behavior of, e.g., GitHub.
+The GFM extension of the CommonMark specs adds a definition for table syntax which the CKEditor build of ProyeksiApp supports. This definition requires all tables to have a heading row. For tables created with CKEditor without heading rows, a HTML table is output instead. This matches the behavior of, e.g., GitHub.
 
 ### Autoformatting
 
@@ -67,7 +67,7 @@ CKEditor5 allows certain CommonMark-like [autoformatting keyboard strokes](https
 
 ## Image handling
 
-In supported resources of OpenProject where attachments are allowed, you can add images to the page by either
+In supported resources of ProyeksiApp where attachments are allowed, you can add images to the page by either
 
 - using the toolbar button,
 - pasting an image from your clipboard,
@@ -81,7 +81,7 @@ The image will be automatically uploaded and stored as an attachment. You can ad
 
 ## Macros
 
-OpenProject has supported macros on textile formatted pages and continues to do so with the WYSIWYG editor. Note that macros are not expanded while editing the page, instead a placeholder is shown.
+ProyeksiApp has supported macros on textile formatted pages and continues to do so with the WYSIWYG editor. Note that macros are not expanded while editing the page, instead a placeholder is shown.
 
 You can find the macros here in the text editor:
 ![Macros text editor](image-20201109183018255.png) 
@@ -119,9 +119,9 @@ Use it to embed views in other pages, create reporting of multiple results, or t
 
 
 
-## Links to OpenProject resources
+## Links to ProyeksiApp resources
 
-As with the textile formatting syntax, you can link to other resources within OpenProject using the same shortcuts as before. Create links to a:
+As with the textile formatting syntax, you can link to other resources within ProyeksiApp using the same shortcuts as before. Create links to a:
 
 
 

@@ -3,7 +3,7 @@
 module API
   module V3
     module Grids
-      class GridsAPI < ::API::OpenProjectAPI
+      class GridsAPI < ::API::ProyeksiAppAPI
         resources :grids do
           helpers do
             include API::Utilities::PageSizeHelper

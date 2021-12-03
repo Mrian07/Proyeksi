@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.2
+  title: ProyeksiApp 5.0.2
   sidebar_navigation:
       title: 5.0.2
   release_version: 5.0.2
@@ -7,12 +7,12 @@
 ---
 
 
-# OpenProject 5.0.2
+# ProyeksiApp 5.0.2
 
-OpenProject 5.0.2 contains several bug fixes and additional translations
-for the OpenProject core and plugins.
+ProyeksiApp 5.0.2 contains several bug fixes and additional translations
+for the ProyeksiApp core and plugins.
 
-The following bugs have been fixed with OpenProject 5.0.2:
+The following bugs have been fixed with ProyeksiApp 5.0.2:
 
   - The link to create new forum boards was incorrect. It has been fixed
     ([\#22142](https://community.openproject.org/work_packages/22142/activity)).
@@ -29,12 +29,12 @@ The following bugs have been fixed with OpenProject 5.0.2:
 Additionally, the order of default roles has been changed
 ([\#22044](https://community.openproject.org/work_packages/22044)).
 
-In addition, new translations have been added to OpenProject and the
+In addition, new translations have been added to ProyeksiApp and the
 plugins.
 
-Thanks to everyone who helped to translate and proof read OpenProject\!
+Thanks to everyone who helped to translate and proof read ProyeksiApp\!
 
-To help translate OpenProject, please take a look at the [OpenProject
+To help translate ProyeksiApp, please take a look at the [ProyeksiApp
 CrowdIn projects](https://crowdin.com/projects/opf).
 
 For further information on the release, please refer to the [Changelog

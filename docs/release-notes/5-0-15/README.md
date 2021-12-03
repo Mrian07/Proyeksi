@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.15
+  title: ProyeksiApp 5.0.15
   sidebar_navigation:
       title: 5.0.15
   release_version: 5.0.15
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.15
+# ProyeksiApp 5.0.15
 
-OpenProject 5.0.15 contains several bug fixes:
+ProyeksiApp 5.0.15 contains several bug fixes:
 
   - The date on the project activity was based on UTC+0 and therefore
     showed the wrong date when being in a different time zone

@@ -19,7 +19,7 @@ class SCM::CreateRemoteRepositoryJob < SCM::RemoteRepositoryJob
     repository.url = response['url']
 
     unless repository.save
-      raise OpenProject::SCM::Exceptions::SCMError.new(
+      raise ProyeksiApp::SCM::Exceptions::SCMError.new(
         I18n.t('repositories.errors.remote_save_failed')
       )
     end

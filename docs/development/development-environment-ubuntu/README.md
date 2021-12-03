@@ -1,19 +1,19 @@
-# OpenProject development Setup on Debian / Ubuntu
+# ProyeksiApp development Setup on Debian / Ubuntu
 
-To develop OpenProject a setup similar to that for using OpenProject in production is needed.
+To develop ProyeksiApp a setup similar to that for using ProyeksiApp in production is needed.
 
 This guide assumes that you have a Ubuntu 18.04 installation with administrative rights. This guide will work
 analogous with all other distributions, but may require slight changes in the required packages. _Please, help us to extend this guide with information on other distributions should there be required changes._
 
-OpenProject will be installed with a PostgreSQL database.
+ProyeksiApp will be installed with a PostgreSQL database.
 
 **Please note**: This guide is NOT suitable for a production setup, but only for developing with it!
 
-If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [OpenProject forums](https://community.openproject.org/projects/openproject/boards).
+If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards).
 
 # Prepare your environment
 
-We need an active Ruby and Node JS environment to run OpenProject. To this end, we need some packages installed on the system.o
+We need an active Ruby and Node JS environment to run ProyeksiApp. To this end, we need some packages installed on the system.o
 
 ```bash
 sudo apt-get update
@@ -87,7 +87,7 @@ Next, install a PostgreSQL database.
 [dev@debian]# sudo apt-get install postgresql postgresql-client
 ```
 
-Create the OpenProject database user and accompanied database.
+Create the ProyeksiApp database user and accompanied database.
 
 ```bash
 sudo su postgres
@@ -167,9 +167,9 @@ npm --version
 7.15.1
 ```
 
-# Install OpenProject
+# Install ProyeksiApp
 
-In order to create a pull request to the core OpenProject repository, you will want to fork it to your own GitHub account.
+In order to create a pull request to the core ProyeksiApp repository, you will want to fork it to your own GitHub account.
 This allows you to create branches and push changes and finally opening a pull request for us to review.
 
 To do that, go to https://github.com/opf/openproject and press "Fork" on the upper right corner.
@@ -181,10 +181,10 @@ git clone https://github.com/opf/openproject.git
 cd openproject
 ```
 
-Note that we have checked out the `dev` branch of the OpenProject repository. Development in OpenProject happens in the `dev` branch (there is no `master` branch).
+Note that we have checked out the `dev` branch of the ProyeksiApp repository. Development in ProyeksiApp happens in the `dev` branch (there is no `master` branch).
 So, if you want to develop a feature, create a feature branch from a current `dev` branch.
 
-## Configure OpenProject
+## Configure ProyeksiApp
 
 Create and configure the database configuration file in `config/database.yml` (relative to the openproject-directory.
 
@@ -212,7 +212,7 @@ test:
   database: openproject_test
 ```
 
-## Finish the Installation of OpenProject
+## Finish the Installation of ProyeksiApp
 
 Install code dependencies, link plugin modules and export translation files.
 - gem dependencies (If you get errors here, you're likely missing a development dependency for your distribution)
@@ -230,9 +230,9 @@ Now, run the following tasks to seed the dev database, and prepare the test setu
 RAILS_ENV=development bin/rails db:seed
 ```
 
-## Run OpenProject through foreman
+## Run ProyeksiApp through foreman
 
-You can run all required workers of OpenProject through `foreman`, which combines them in a single tab. This is useful for starting out,
+You can run all required workers of ProyeksiApp through `foreman`, which combines them in a single tab. This is useful for starting out,
 however most developers end up running the tasks in separate shells for better understanding of the log output, since foreman will combine all of them.
 
 ```bash
@@ -254,9 +254,9 @@ You can access the application with the admin-account having the following crede
     Username: admin
     Password: admin
 
-## Run OpenProject manually
+## Run ProyeksiApp manually
 
-To run OpenProject manually, you need to run the rails server and the webpack frontend bundler to:
+To run ProyeksiApp manually, you need to run the rails server and the webpack frontend bundler to:
 
 ### Rails web server
 
@@ -281,19 +281,19 @@ You can then access the application either through `localhost:3000` (Rails serve
 
 ## Start Coding
 
-Please have a look at [our development guidelines](../code-review-guidelines/) for tips and guides on how to start coding. We have advice on how to get your changes back into the OpenProject core as smooth as possible.
+Please have a look at [our development guidelines](../code-review-guidelines/) for tips and guides on how to start coding. We have advice on how to get your changes back into the ProyeksiApp core as smooth as possible.
 Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/openproject/tree/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
 
 ## Troubleshooting
 
-The OpenProject logfile can be found in `log/development.log`.
+The ProyeksiApp logfile can be found in `log/development.log`.
 
 If an error occurs, it should be logged there (as well as in the output to STDOUT/STDERR of the rails server process).
 
 ## Questions, Comments, and Feedback
 
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow OpenProject on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
 
 [foreman-defaults]:http://ddollar.github.io/foreman/#DEFAULT-OPTIONS
 [foreman-env]:http://ddollar.github.io/foreman/#ENVIRONMENT

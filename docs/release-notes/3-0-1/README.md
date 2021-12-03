@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.1
+  title: ProyeksiApp 3.0.1
   sidebar_navigation:
       title: 3.0.1
   release_version: 3.0.1
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 3.0.1
+# ProyeksiApp 3.0.1
 
 This release mostly fixed the bugs for [3.0.0 major
 release](/release-notes/3-0-0/).

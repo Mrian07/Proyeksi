@@ -1,6 +1,6 @@
 
 
-airbrake = OpenProject::Configuration['airbrake']
+airbrake = ProyeksiApp::Configuration['airbrake']
 
 if airbrake && airbrake['api_key']
   # airbrake isn't loaded by default, so let's do that now

@@ -3,7 +3,7 @@
 module API
   module V3
     module Groups
-      class GroupsAPI < ::API::OpenProjectAPI
+      class GroupsAPI < ::API::ProyeksiAppAPI
         resources :groups do
           after_validation do
             authorize_any %i[view_members manage_members], global: true

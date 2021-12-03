@@ -8,7 +8,7 @@ keywords: development concepts, HAL, JSON, hal resources, API requests
 
 # Development concept: HAL resources
 
-HAL resources are the frontend counterpart to the `HAL+JSON` API of OpenProject. They are class instance of the JSON resources with action links being turned into callable functions to perform requests.
+HAL resources are the frontend counterpart to the `HAL+JSON` API of ProyeksiApp. They are class instance of the JSON resources with action links being turned into callable functions to perform requests.
 
 ## Key takeaways
 
@@ -82,7 +82,7 @@ The following is an example HAL JSON for a work package as it is retrieved by th
     },
     "project": {
       "href": "/api/v3/projects/14",
-      "title": "OpenProject"
+      "title": "ProyeksiApp"
     },
     "status": {
       "href": "/api/v3/statuses/7",
@@ -95,7 +95,7 @@ The following is an example HAL JSON for a work package as it is retrieved by th
       "_type": "Project",
       "id": 14,
       "identifier": "openproject",
-      "name": "OpenProject",
+      "name": "ProyeksiApp",
       "active": true,
       "public": true,
       "description": {
@@ -106,7 +106,7 @@ The following is an example HAL JSON for a work package as it is retrieved by th
       "_links": {
         "self": {
           "href": "/api/v3/projects/14",
-          "title": "OpenProject"
+          "title": "ProyeksiApp"
         }
         ...
       }

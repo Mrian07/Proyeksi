@@ -43,8 +43,8 @@ module Users
     ##
     # Ensure the user limit is not reached
     def ensure_user_limit_not_reached!
-      if OpenProject::Enterprise.user_limit_reached?
-        OpenProject::Enterprise.send_activation_limit_notification_about user
+      if ProyeksiApp::Enterprise.user_limit_reached?
+        ProyeksiApp::Enterprise.send_activation_limit_notification_about user
         ServiceResult.new(success: false, result: user, message: I18n.t(:error_enterprise_activation_user_limit))
       end
     end

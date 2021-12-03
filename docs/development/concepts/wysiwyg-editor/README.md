@@ -1,14 +1,14 @@
 # WYSIWYG editor
 
-OpenProject uses the ckEditor WYSIWYG editor. ckEditor is a great WYSIWYG framework with a lot of functionalities and great flexibility (custom builds, plugins...). All the OpenProject code related to ckEditor is hosted on a separate [repository](https://github.com/opf/commonmark-ckeditor-build).
+ProyeksiApp uses the ckEditor WYSIWYG editor. ckEditor is a great WYSIWYG framework with a lot of functionalities and great flexibility (custom builds, plugins...). All the ProyeksiApp code related to ckEditor is hosted on a separate [repository](https://github.com/opf/commonmark-ckeditor-build).
 
-ckEditor is used in OpenProject as an input for string fields that require formatting, for example the description of a task, a comment or a wiki page.
+ckEditor is used in ProyeksiApp as an input for string fields that require formatting, for example the description of a task, a comment or a wiki page.
 
 ## MarkDown
 
 All formatted string field values are saved in the backend in [Markdown](https://guides.github.com/features/mastering-markdown/) format.
 
-In order to convert the backend markdown into the HTML that ckEditor needs, and the other way around, to convert the HTML that ckEditor outputs into the markdown that the backend is expecting, OpenProject uses [Turndown](https://github.com/domchristie/turndown).
+In order to convert the backend markdown into the HTML that ckEditor needs, and the other way around, to convert the HTML that ckEditor outputs into the markdown that the backend is expecting, ProyeksiApp uses [Turndown](https://github.com/domchristie/turndown).
 
 The CommonMarkDataProcessor class (```commonmarkdataprocessor.js```) is in charge of this conversion, making all the tasks needed in order to turn markdown into HTML inside its "toView" method, and placing all the tasks needed to turn HTML into markdown within its "toData" method.
 
@@ -40,7 +40,7 @@ In ckEditor the Model is considered to be above the controllers, while the Views
 
 ## Plugins: Adding functionality
 
-Because OpenProject is using some functionality/elements that are not the HTML standards, we need to extend the functionality of the CkEditor. This is done by adding Plugins that hook into the editor's operations which are the following:
+Because ProyeksiApp is using some functionality/elements that are not the HTML standards, we need to extend the functionality of the CkEditor. This is done by adding Plugins that hook into the editor's operations which are the following:
 
 ### Data Upcast
 
@@ -245,4 +245,4 @@ This is defined in the CommonMarkDataProcessor class (```commonmarkdataprocessor
 
 For more details about CkEditor, checkout its [documentation](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html).
 
-If you're looking for instructions on how to use the WYSIWYG editor on OpenProject please look at [this page](../../../user-guide/wysiwyg).
+If you're looking for instructions on how to use the WYSIWYG editor on ProyeksiApp please look at [this page](../../../user-guide/wysiwyg).

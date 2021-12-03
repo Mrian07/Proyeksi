@@ -56,4 +56,4 @@ pl:
           title: 'Wybrane projekty'
         secret:
           description: >
-            W razie ustawienia ta wartość tajnego klucza jest używana przez OpenProject do podpisywania zawartości webhooka.
+            W razie ustawienia ta wartość tajnego klucza jest używana przez ProyeksiApp do podpisywania zawartości webhooka.

@@ -8,7 +8,7 @@ class MakeSynchronizedGroupDn < ActiveRecord::Migration[6.0]
                null: false
 
     LdapGroups::SynchronizedGroup.find_each do |group|
-      dn = ::OpenProject::LdapGroups.group_dn(Net::LDAP::DN.escape(group.entry))
+      dn = ::ProyeksiApp::LdapGroups.group_dn(Net::LDAP::DN.escape(group.entry))
       group.update_column(:dn, dn)
     end
 

@@ -9,7 +9,7 @@ class ApplicationMailer < ActionMailer::Base
          :work_packages, # for css classes
          :custom_fields # for show_value
 
-  include OpenProject::LocaleHelper
+  include ProyeksiApp::LocaleHelper
 
   # Send all delayed mails with the following job
   self.delivery_job = ::Mails::MailerJob
@@ -28,7 +28,7 @@ class ApplicationMailer < ActionMailer::Base
     end
 
     def host
-      if OpenProject::Configuration.rails_relative_url_root.blank?
+      if ProyeksiApp::Configuration.rails_relative_url_root.blank?
         Setting.host_name
       else
         Setting.host_name.to_s.gsub(%r{/.*\z}, '')
@@ -41,8 +41,8 @@ class ApplicationMailer < ActionMailer::Base
 
     def default_url_options
       options = super.merge host: host, protocol: protocol
-      if OpenProject::Configuration.rails_relative_url_root.present?
-        options[:script_name] = OpenProject::Configuration.rails_relative_url_root
+      if ProyeksiApp::Configuration.rails_relative_url_root.present?
+        options[:script_name] = ProyeksiApp::Configuration.rails_relative_url_root
       end
 
       options
@@ -60,7 +60,7 @@ class ApplicationMailer < ActionMailer::Base
   # their own message id overwriting the value calculated in here.
   #
   # Because of this, the message id and the value affected by it (In-Reply-To) is not relied upon when an email response
-  # is handled by OpenProject.
+  # is handled by ProyeksiApp.
   def message_id(object, user)
     headers['Message-ID'] = "<#{message_id_value(object, user)}>"
   end
@@ -83,9 +83,9 @@ class ApplicationMailer < ActionMailer::Base
     headers['References'] = refs.join(' ')
   end
 
-  # Prepends given fields with 'X-OpenProject-' to save some duplication
+  # Prepends given fields with 'X-ProyeksiApp-' to save some duplication
   def open_project_headers(hash)
-    hash.each { |key, value| headers["X-OpenProject-#{key}"] = value.to_s }
+    hash.each { |key, value| headers["X-ProyeksiApp-#{key}"] = value.to_s }
   end
 
   private
@@ -145,7 +145,7 @@ class ApplicationMailer < ActionMailer::Base
 
   def header_host_value
     host = Setting.mail_from.to_s.gsub(%r{\A.*@}, '')
-    host = "#{::Socket.gethostname}.openproject" if host.empty?
+    host = "#{::Socket.gethostname}.proyeksiapp" if host.empty?
     host
   end
 end
@@ -165,9 +165,9 @@ class DefaultHeadersInterceptor
 
   def self.default_headers
     {
-      'X-Mailer' => 'OpenProject',
-      'X-OpenProject-Host' => Setting.host_name,
-      'X-OpenProject-Site' => Setting.app_title,
+      'X-Mailer' => 'ProyeksiApp',
+      'X-ProyeksiApp-Host' => Setting.host_name,
+      'X-ProyeksiApp-Site' => Setting.app_title,
       'Precedence' => 'bulk',
       'Auto-Submitted' => 'auto-generated'
     }

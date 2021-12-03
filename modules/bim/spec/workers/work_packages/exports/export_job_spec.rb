@@ -31,10 +31,10 @@ describe WorkPackages::ExportJob do
   describe '#perform' do
     context 'with the bcf mime type' do
       let(:mime_type) { :bcf }
-      let(:exporter) { OpenProject::Bim::BcfXml::Exporter }
+      let(:exporter) { ProyeksiApp::Bim::BcfXml::Exporter }
       let(:exporter_instance) { instance_double(exporter) }
 
-      it 'issues an OpenProject::Bim::BcfXml::Exporter export' do
+      it 'issues an ProyeksiApp::Bim::BcfXml::Exporter export' do
         result = Exports::Result.new(format: 'blubs',
                                      title: "some_title.#{mime_type}",
                                      content: 'some content',

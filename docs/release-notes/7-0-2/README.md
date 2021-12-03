@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.0.2
+  title: ProyeksiApp 7.0.2
   sidebar_navigation:
       title: 7.0.2
   release_version: 7.0.2
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 7.0.2
+# ProyeksiApp 7.0.2
 
 The release contains several bug fixes and an urgent fix for a
 regression concerning the display of the subject attribute in Firefox.

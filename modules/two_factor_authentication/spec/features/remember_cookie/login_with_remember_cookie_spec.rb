@@ -18,7 +18,7 @@ describe 'Login with 2FA remember cookie',
     page.driver.browser.manage.delete_all_cookies
 
     sms_token = nil
-    allow_any_instance_of(::OpenProject::TwoFactorAuthentication::TokenStrategy::Developer)
+    allow_any_instance_of(::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Developer)
         .to receive(:create_mobile_otp).and_wrap_original do |m|
       sms_token = m.call
     end
@@ -85,7 +85,7 @@ describe 'Login with 2FA remember cookie',
       login_with_cookie
 
       # Disable functionality
-      allow(::OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+      allow(::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
         .to receive(:allow_remember_for_days)
         .and_return(0)
 
@@ -94,7 +94,7 @@ describe 'Login with 2FA remember cookie',
       expect_no_autologin
 
       # Enable functionality
-      allow(::OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+      allow(::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
           .to receive(:allow_remember_for_days)
           .and_return(1)
 

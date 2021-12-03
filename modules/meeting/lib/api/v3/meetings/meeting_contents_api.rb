@@ -3,7 +3,7 @@
 module API
   module V3
     module Meetings
-      class MeetingContentsAPI < ::API::OpenProjectAPI
+      class MeetingContentsAPI < ::API::ProyeksiAppAPI
         resources :meeting_contents do
           helpers do
             def meeting_content

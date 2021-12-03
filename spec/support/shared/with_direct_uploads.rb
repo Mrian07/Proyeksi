@@ -68,7 +68,7 @@ class WithDirectUploads
   end
 
   def stub_frontend(redirect: false)
-    proxy.stub("https://" + OpenProject::Configuration.remote_storage_upload_host + ":443/", method: 'options').and_return(
+    proxy.stub("https://" + ProyeksiApp::Configuration.remote_storage_upload_host + ":443/", method: 'options').and_return(
       headers: {
         'Access-Control-Allow-Methods' => 'POST',
         'Access-Control-Allow-Origin' => '*'
@@ -85,7 +85,7 @@ class WithDirectUploads
 
   def stub_with_redirect
     proxy
-      .stub("https://" + OpenProject::Configuration.remote_storage_upload_host + ":443/", method: 'post')
+      .stub("https://" + ProyeksiApp::Configuration.remote_storage_upload_host + ":443/", method: 'post')
       .and_return(Proc.new do |_params, _headers, body, _url, _method|
         key = body.scan(/key"\s*([^\s]+)\s/m).flatten.first
         redirect_url = body.scan(/success_action_redirect"\s*(http[^\s]+)\s/m).flatten.first
@@ -104,7 +104,7 @@ class WithDirectUploads
 
   def stub_with_status
     proxy
-      .stub("https://" + OpenProject::Configuration.remote_storage_upload_host + ":443/", method: 'post')
+      .stub("https://" + ProyeksiApp::Configuration.remote_storage_upload_host + ":443/", method: 'post')
       .and_return(Proc.new do |_params, _headers, body, _url, _method|
         {
           code: body =~ /X-Amz-Signature/ ? 201 : 403, # check that the expected post to AWS was made with the form fields
@@ -127,7 +127,7 @@ class WithDirectUploads
     allow_any_instance_of(FogFileUploader).to receive(:region).and_return creds[:region]
     allow_any_instance_of(FogFileUploader).to receive(:directory).and_return config[:fog][:directory]
 
-    allow(OpenProject::Configuration).to receive(:direct_uploads?).and_return(true)
+    allow(ProyeksiApp::Configuration).to receive(:direct_uploads?).and_return(true)
   end
 
   def stub_config(example)

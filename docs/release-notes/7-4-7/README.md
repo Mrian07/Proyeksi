@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.7
+  title: ProyeksiApp 7.4.7
   sidebar_navigation:
       title: 7.4.7
   release_version: 7.4.7
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 7.4.7
+# ProyeksiApp 7.4.7
 
-We released OpenProject 7.4.7. The release contains some minor fixes
+We released ProyeksiApp 7.4.7. The release contains some minor fixes
 regarding MessageBird adapter for Two-factor authentication.
 
 #### Work packages PDF export with images

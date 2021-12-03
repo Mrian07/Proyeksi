@@ -177,7 +177,7 @@ module ::TwoFactorAuthentication
     end
 
     def manager
-      ::OpenProject::TwoFactorAuthentication::TokenStrategyManager
+      ::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager
     end
 
     ##

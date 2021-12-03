@@ -55,18 +55,18 @@ module OpenIDConnect
     def save
       return false unless valid?
 
-      config = Setting.plugin_openproject_openid_connect || Hash.new
+      config = Setting.plugin_proyeksiapp_openid_connect || Hash.new
       config["providers"] ||= Hash.new
       config["providers"][name] = omniauth_provider.to_h.stringify_keys
-      Setting.plugin_openproject_openid_connect = config
+      Setting.plugin_proyeksiapp_openid_connect = config
       true
     end
 
     def destroy
-      config = Setting.plugin_openproject_openid_connect
+      config = Setting.plugin_proyeksiapp_openid_connect
       config["providers"] ||= {}
       config["providers"].delete(name)
-      Setting.plugin_openproject_openid_connect = config
+      Setting.plugin_proyeksiapp_openid_connect = config
       true
     end
 

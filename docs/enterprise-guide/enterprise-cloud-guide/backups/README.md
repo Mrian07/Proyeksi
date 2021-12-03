@@ -14,7 +14,7 @@ Within those 30 days we can restore your data to any point in time with a precis
 
 ## Download
 
-You can yourself create backups of your OpenProject installation. Go to *Administration* and *Backup* to get started.
+You can yourself create backups of your ProyeksiApp installation. Go to *Administration* and *Backup* to get started.
 
 ![administration-backup](administration-backup-2034314.png)
 

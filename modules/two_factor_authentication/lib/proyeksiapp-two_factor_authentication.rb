@@ -1,0 +1,1 @@
+require 'proyeksi_app/two_factor_authentication'

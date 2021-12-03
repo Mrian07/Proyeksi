@@ -77,7 +77,7 @@ example:
       title: Parent (Descending)
     user:
       href: "/api/v3/users/1"
-      title: OpenProject Admin
+      title: ProyeksiApp Admin
     project:
       href: "/api/v3/projects/42"
       title: Lorem ipsum project

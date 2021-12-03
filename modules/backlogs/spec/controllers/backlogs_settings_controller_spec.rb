@@ -40,7 +40,7 @@ describe BacklogsSettingsController, type: :controller do
       it 'does not update the settings' do
         expect(Setting)
           .not_to(receive(:[]=))
-          .with('plugin_openproject_backlogs')
+          .with('plugin_proyeksiapp_backlogs')
 
         subject
 
@@ -56,7 +56,7 @@ describe BacklogsSettingsController, type: :controller do
       it 'does update the settings' do
         expect(Setting)
           .to(receive(:[]=))
-          .with('plugin_openproject_backlogs', { story_types: ['5555'], task_type: '1234' })
+          .with('plugin_proyeksiapp_backlogs', { story_types: ['5555'], task_type: '1234' })
 
         subject
 
@@ -71,7 +71,7 @@ describe BacklogsSettingsController, type: :controller do
         it 'does not update the settings' do
           expect(Setting)
             .not_to(receive(:[]=))
-            .with('plugin_openproject_backlogs')
+            .with('plugin_proyeksiapp_backlogs')
 
           subject
 

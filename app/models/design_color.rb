@@ -22,14 +22,14 @@ class DesignColor < ApplicationRecord
   class << self
     def setables
       overwritten_values = overwritten
-      OpenProject::CustomStyles::Design.customizable_variables.map do |varname|
+      ProyeksiApp::CustomStyles::Design.customizable_variables.map do |varname|
         overwritten_value = overwritten_values.detect { |var| var.variable == varname }
         overwritten_value || new(variable: varname)
       end
     end
 
     def overwritten
-      overridable = OpenProject::CustomStyles::Design.customizable_variables
+      overridable = ProyeksiApp::CustomStyles::Design.customizable_variables
 
       all.to_a.select do |color|
         overridable.include?(color.variable) && color.hexcode.present?

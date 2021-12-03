@@ -17,7 +17,7 @@ module Actions::Scopes
       private
 
       def action_map
-        OpenProject::AccessControl
+        ProyeksiApp::AccessControl
           .contract_actions_map
           .map { |permission, v| map_actions(permission, v[:actions], v[:global], v[:module]) }
           .flatten

@@ -56,4 +56,4 @@ zh-TW:
           title: 'Selected projects'
         secret:
           description: >
-            If set, this secret value is used by OpenProject to sign the webhook payload.
+            If set, this secret value is used by ProyeksiApp to sign the webhook payload.

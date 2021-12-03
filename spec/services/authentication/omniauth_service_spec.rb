@@ -73,7 +73,7 @@ describe Authentication::OmniauthService do
         # should update the user attributes
         allow(user).to receive(:save)
 
-        expect(OpenProject::OmniAuth::Authorization)
+        expect(ProyeksiApp::OmniAuth::Authorization)
           .to(receive(:after_login!))
           .with(user, auth_hash, instance)
 
@@ -128,7 +128,7 @@ describe Authentication::OmniauthService do
         # should update the user attributes
         allow(user).to receive(:save)
 
-        expect(OpenProject::OmniAuth::Authorization)
+        expect(ProyeksiApp::OmniAuth::Authorization)
           .to(receive(:after_login!))
           .with(user, auth_hash, instance)
 

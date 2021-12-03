@@ -90,7 +90,7 @@ module LdapGroups
         # Update the group name
         Group.where(id: sync.group_id).update_all(lastname: name)
       else
-        # Create an OpenProject group
+        # Create an ProyeksiApp group
         sync.group = Group.find_or_create_by!(name: name)
       end
     end

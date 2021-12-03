@@ -20,7 +20,7 @@ shared_examples_for 'error response' do |code, id, provided_message = nil|
   describe 'response body' do
     subject { JSON.parse(last_response.body) }
 
-    it { expect(subject['errorIdentifier']).to eq("urn:openproject-org:api:v3:errors:#{id}") }
+    it { expect(subject['errorIdentifier']).to eq("urn:proyeksiapp-org:api:v3:errors:#{id}") }
 
     describe 'message' do
       it { expect(subject['message']).to include(expected_message) }
@@ -98,7 +98,7 @@ shared_examples_for 'param validation error' do
 
   it 'results in a validation error' do
     expect(last_response.status).to eq(400)
-    expect(subject['errorIdentifier']).to eq("urn:openproject-org:api:v3:errors:BadRequest")
+    expect(subject['errorIdentifier']).to eq("urn:proyeksiapp-org:api:v3:errors:BadRequest")
     expect(subject['message']).to match /Bad request: .+? is invalid/
   end
 end
@@ -150,7 +150,7 @@ shared_examples_for 'multiple errors of the same type' do |error_count, id|
 
   it 'has child errors of expected type' do
     subject.each do |error|
-      expect(error['errorIdentifier']).to eq("urn:openproject-org:api:v3:errors:#{id}")
+      expect(error['errorIdentifier']).to eq("urn:proyeksiapp-org:api:v3:errors:#{id}")
     end
   end
 end

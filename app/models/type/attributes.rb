@@ -50,7 +50,7 @@ module Type::Attributes
         WorkPackageCustomField.pluck(Arel.sql('max(updated_at), count(id)')).flatten
       end
 
-      OpenProject::Cache.fetch('all_work_package_form_attributes',
+      ProyeksiApp::Cache.fetch('all_work_package_form_attributes',
                                *wp_cf_cache_parts,
                                merge_date) do
         calculate_all_work_package_form_attributes(merge_date)

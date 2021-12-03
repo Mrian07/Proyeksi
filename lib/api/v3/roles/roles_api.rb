@@ -5,7 +5,7 @@
 module API
   module V3
     module Roles
-      class RolesAPI < ::API::OpenProjectAPI
+      class RolesAPI < ::API::ProyeksiAppAPI
         resources :roles do
           after_validation do
             authorize_any(%i[view_members manage_members], global: true)

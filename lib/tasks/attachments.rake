@@ -16,8 +16,8 @@ namespace :attachments do
     end
 
     storage_name = args[:to].to_sym
-    current_uploader = OpenProject::Configuration.file_uploader
-    target_uploader = OpenProject::Configuration.available_file_uploaders[storage_name]
+    current_uploader = ProyeksiApp::Configuration.file_uploader
+    target_uploader = ProyeksiApp::Configuration.available_file_uploaders[storage_name]
 
     if target_uploader.nil?
       puts "unknown storage: #{args[:to]}"
@@ -30,8 +30,8 @@ namespace :attachments do
     end
 
     if target_uploader == :fog && (
-         OpenProject::Configuration.fog_credentials.empty? ||
-         OpenProject::Configuration.fog_directory.nil?)
+         ProyeksiApp::Configuration.fog_credentials.empty? ||
+         ProyeksiApp::Configuration.fog_directory.nil?)
       puts 'the fog storage is not configured'
       exit 1
     end

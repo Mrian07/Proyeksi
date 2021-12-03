@@ -53,7 +53,7 @@ describe 'Invite user modal', type: :feature, js: true do
           .to match_array [recipient.mail]
 
         expect(ActionMailer::Base.deliveries[index].body.encoded)
-          .to include "Welcome to OpenProject"
+          .to include "Welcome to ProyeksiApp"
       end
 
       mail_membership_recipients.each_with_index do |recipient, index|
@@ -63,7 +63,7 @@ describe 'Invite user modal', type: :feature, js: true do
           .to match_array [recipient.mail]
 
         expect(ActionMailer::Base.deliveries[overall_index].body.encoded)
-          .to include OpenProject::TextFormatting::Renderer.format_text(invite_message)
+          .to include ProyeksiApp::TextFormatting::Renderer.format_text(invite_message)
 
         expect(ActionMailer::Base.deliveries[overall_index].body.encoded)
           .to include role.name

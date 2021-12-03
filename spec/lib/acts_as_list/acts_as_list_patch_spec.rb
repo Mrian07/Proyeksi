@@ -4,13 +4,13 @@ require 'spec_helper'
 
 describe 'Models acting as list (acts_as_list)' do
   it 'should include the patch' do
-    expect(ActiveRecord::Acts::List::InstanceMethods.included_modules).to include(OpenProject::Patches::ActsAsList)
+    expect(ActiveRecord::Acts::List::InstanceMethods.included_modules).to include(ProyeksiApp::Patches::ActsAsList)
   end
 
   describe '#move_to=' do
     let(:includer) do
       class ActsAsListPatchIncluder
-        include OpenProject::Patches::ActsAsList
+        include ProyeksiApp::Patches::ActsAsList
       end
 
       ActsAsListPatchIncluder.new

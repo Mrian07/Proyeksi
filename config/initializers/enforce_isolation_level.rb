@@ -19,7 +19,7 @@ module ConnectionIsolationLevel
 
   def self.set_connection_isolation_level(connection)
     isolation_level = 'ISOLATION LEVEL READ COMMITTED'
-    if OpenProject::Database.postgresql?(connection)
+    if ProyeksiApp::Database.postgresql?(connection)
       connection.execute("SET SESSION CHARACTERISTICS AS TRANSACTION #{isolation_level}")
     end
   end

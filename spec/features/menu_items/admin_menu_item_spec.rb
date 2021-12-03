@@ -10,7 +10,7 @@ feature 'Admin menu items' do
   end
 
   after do
-    OpenProject::Configuration['hidden_menu_items'] = []
+    ProyeksiApp::Configuration['hidden_menu_items'] = []
   end
 
   describe 'displaying all the menu items' do
@@ -25,7 +25,7 @@ feature 'Admin menu items' do
 
   describe 'hiding menu items' do
     before do
-      OpenProject::Configuration['hidden_menu_items'] = { 'admin_menu' => ['roles', 'types'] }
+      ProyeksiApp::Configuration['hidden_menu_items'] = { 'admin_menu' => ['roles', 'types'] }
     end
 
     it 'hides the specified admin menu items' do

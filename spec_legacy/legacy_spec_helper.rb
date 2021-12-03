@@ -53,7 +53,7 @@ RSpec.configure do |config|
   config.before(:suite) do |_example|
     Delayed::Worker.delay_jobs = false
 
-    OpenProject::Configuration['attachments_storage_path'] = 'tmp/files'
+    ProyeksiApp::Configuration['attachments_storage_path'] = 'tmp/files'
   end
 
   config.before(:each) do

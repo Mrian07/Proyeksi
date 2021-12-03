@@ -1,7 +1,7 @@
 
 
 class Impediment < Task
-  extend OpenProject::Backlogs::Mixins::PreventIssueSti
+  extend ProyeksiApp::Backlogs::Mixins::PreventIssueSti
 
   after_save :update_blocks_list
 

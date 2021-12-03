@@ -25,8 +25,8 @@ import { IsolatedQuerySpace } from 'core-app/features/work-packages/directives/q
 import { HalEventsService } from 'core-app/features/hal/services/hal-events.service';
 import { WorkPackageChangeset } from 'core-app/features/work-packages/components/wp-edit/work-package-changeset';
 import { WorkPackageNotificationService } from 'core-app/features/work-packages/services/notifications/work-package-notification.service';
-import { OpenProjectFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
-import { OpenProjectDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
+import { ProyeksiAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiAppDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
 import { TimezoneService } from 'core-app/core/datetime/timezone.service';
 
 describe('WorkPackageFilterValues', () => {
@@ -56,8 +56,8 @@ describe('WorkPackageFilterValues', () => {
         ConfigurationService,
         CurrentUserService,
         HookService,
-        OpenProjectFileUploadService,
-        OpenProjectDirectFileUploadService,
+        ProyeksiAppFileUploadService,
+        ProyeksiAppDirectFileUploadService,
         LoadingIndicatorService,
         HalResourceService,
         ToastService,

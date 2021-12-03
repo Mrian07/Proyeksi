@@ -3,10 +3,10 @@
 require 'date'
 
 class Task < WorkPackage
-  extend OpenProject::Backlogs::Mixins::PreventIssueSti
+  extend ProyeksiApp::Backlogs::Mixins::PreventIssueSti
 
   def self.type
-    task_type = Setting.plugin_openproject_backlogs['task_type']
+    task_type = Setting.plugin_proyeksiapp_backlogs['task_type']
     task_type.blank? ? nil : task_type.to_i
   end
 

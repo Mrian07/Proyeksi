@@ -4,11 +4,11 @@
 
 module SecurityBadgeHelper
   def security_badge_url(args = {})
-    uri = URI.parse(OpenProject::Configuration[:security_badge_url])
+    uri = URI.parse(ProyeksiApp::Configuration[:security_badge_url])
     info = {
       uuid: Setting.installation_uuid,
-      type: OpenProject::Configuration[:installation_type],
-      version: OpenProject::VERSION.to_semver,
+      type: ProyeksiApp::Configuration[:installation_type],
+      version: ProyeksiApp::VERSION.to_semver,
       db: ActiveRecord::Base.connection.adapter_name.downcase,
       lang: User.current.try(:language),
       ee: EnterpriseToken.current.present?
@@ -18,6 +18,6 @@ module SecurityBadgeHelper
   end
 
   def display_security_badge_graphic?
-    OpenProject::Configuration.security_badge_displayed? && Setting.security_badge_displayed?
+    ProyeksiApp::Configuration.security_badge_displayed? && Setting.security_badge_displayed?
   end
 end

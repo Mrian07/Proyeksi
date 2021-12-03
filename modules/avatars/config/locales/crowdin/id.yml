@@ -26,11 +26,11 @@ id:
     text_change_gravatar_html: "\nUntuk mengubah atau menambahkan Gravatar untuk alamat email Anda, buka %{gravatar_url}"
     text_your_local_avatar: |
 
-      OpenProject memungkinkan Anda untuk mengunggah avatar khusus Anda sendiri.
+      ProyeksiApp memungkinkan Anda untuk mengunggah avatar khusus Anda sendiri.
     text_local_avatar_over_gravatar: |
       Jika Anda menyetelnya, avatar khusus ini digunakan lebih dulu daripada gravatar di atas.
     text_your_current_gravatar: |
-      OpenProject menggunakan gravatar Anda jika Anda mendaftar, atau gambar atau ikon default jika ada.
+      ProyeksiApp menggunakan gravatar Anda jika Anda mendaftar, atau gambar atau ikon default jika ada.
       Gravatar saat ini adalah sebagai berikut:
     settings:
       enable_gravatars: 'Aktifkan gravatar pengguna'

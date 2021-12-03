@@ -18,7 +18,7 @@ module Groups
     def modify_members_and_roles(params)
       member = params.fetch(:member)
 
-      sql_query = ::OpenProject::SqlSanitization
+      sql_query = ::ProyeksiApp::SqlSanitization
                     .sanitize update_roles_cte,
                               group_id: model.id,
                               member_id: member.id,

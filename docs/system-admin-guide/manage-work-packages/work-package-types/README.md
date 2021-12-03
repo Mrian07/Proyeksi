@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Types
   priority: 980
-description: Configure work package types in OpenProject.
+description: Configure work package types in ProyeksiApp.
 robots: index, follow
 keywords: work package types
 ---
@@ -48,7 +48,7 @@ You can then decide for each attribute which group it should be assigned to (usi
 
 Inactive attributes shown in the grey color on the right. Attributes which have been removed are shown in the *Inactive* column on the right *(3)*. This column also includes [custom fields](../../custom-fields) which have been created. The custom fields also can be added with drag and drop to the active form (the blue part on the left) to be displayed in the form.
 
-To add additional group, click the **+ Group** button *(4)* and select **Add attribute group**. Give the new group a name. You can then assign attributes (e.g. custom fields) via drag and drop. Note that adding attribute groups is only possible  with the [OpenProject Enterprise Edition](https://www.openproject.org/enterprise-edition/) and the [OpenProject Cloud Edition](https://www.openproject.org/hosting/).
+To add additional group, click the **+ Group** button *(4)* and select **Add attribute group**. Give the new group a name. You can then assign attributes (e.g. custom fields) via drag and drop. Note that adding attribute groups is only possible  with the [ProyeksiApp Enterprise Edition](https://www.openproject.org/enterprise-edition/) and the [ProyeksiApp Cloud Edition](https://www.openproject.org/hosting/).
 
 In case you made a mistake, click the *Reset to defaults (5)* button to reset all settings to the original state.
 
@@ -64,7 +64,7 @@ In this case, all attributes in the blue area on the left are displayed under th
 
 Watch the following video to see how you can customize your work packages with custom fields and configure the work package forms:
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Add table of related work packages to a work package form
 

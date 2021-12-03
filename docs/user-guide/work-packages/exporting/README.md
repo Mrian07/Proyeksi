@@ -9,7 +9,7 @@ keywords: work package exports, CSV, Excel, XLS, PDF
 
 # Exporting work packages
 
-You can export work packages from your OpenProject instance to other formats using the export functionality. 
+You can export work packages from your ProyeksiApp instance to other formats using the export functionality. 
 
 
 
@@ -34,7 +34,7 @@ From the work packages module, all work packages that are included in the filter
 <div class="alert alert-info" role="alert">
 **Note**: If you need to export more than 500 items, filter the work packages appropriately to export multiple files.
 </div>
-For self-hosted versions of OpenProject you can change this limit in the [work package settings](../../../system-admin-guide/manage-work-packages/work-package-settings/) in the system administration.
+For self-hosted versions of ProyeksiApp you can change this limit in the [work package settings](../../../system-admin-guide/manage-work-packages/work-package-settings/) in the system administration.
 
 
 **Columns**
@@ -47,7 +47,7 @@ Some formats such as PDF will limit the number of columns available due to limit
 
 ## PDF export
 
-OpenProject has multiple options of exporting the results to PDF:
+ProyeksiApp has multiple options of exporting the results to PDF:
 
 
 
@@ -60,9 +60,9 @@ OpenProject has multiple options of exporting the results to PDF:
 
 ## Excel (XLS) export
 
-OpenProject can export the table for Microsoft Excel with the following options:
+ProyeksiApp can export the table for Microsoft Excel with the following options:
 
-- **XLS** a plain sheet that matches the OpenProject work packages table with its columns and work packages as rows matching the selected filter(s).
+- **XLS** a plain sheet that matches the ProyeksiApp work packages table with its columns and work packages as rows matching the selected filter(s).
 - **XLS with descriptions** same as above, but with an additional column for work package descriptions, which cannot be selected in the table
 - **XLS with relations** Same as XLS, but with additional columns to list each work package relation in a separate row with the relation target and its ID and relation type included in the export
 
@@ -74,7 +74,7 @@ OpenProject can export the table for Microsoft Excel with the following options:
 
 ## CSV export
 
-OpenProject can export the table into a comma-separated CSV. This file will be UTF-8 encoded.
+ProyeksiApp can export the table into a comma-separated CSV. This file will be UTF-8 encoded.
 
 
 
@@ -86,4 +86,4 @@ OpenProject can export the table into a comma-separated CSV. This file will be U
 
 ## Atom (XML) export
 
-OpenProject can export the table into a XML-based atom format. This file will be UTF-8 encoded.
+ProyeksiApp can export the table into a XML-based atom format. This file will be UTF-8 encoded.

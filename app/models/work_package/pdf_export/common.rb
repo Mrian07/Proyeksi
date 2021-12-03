@@ -7,7 +7,7 @@ module WorkPackage::PDFExport::Common
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::NumberHelper
   include CustomFieldsHelper
-  include OpenProject::TextFormatting
+  include ProyeksiApp::TextFormatting
 
   private
 

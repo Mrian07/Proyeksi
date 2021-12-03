@@ -34,11 +34,11 @@
                                         container_class: '-middle' %>
     </div>
     <%
-    available_scms = OpenProject::SCM::Manager.registered
-      .map {|vendor, klass| [klass.vendor_name, vendor.to_s] }
+    available_scms = ProyeksiApp::SCM::Manager.registered
+                                              .map {|vendor, klass| [klass.vendor_name, vendor.to_s] }
 
-    manageable_scms = OpenProject::SCM::Manager.manageable
-      .map {|vendor, klass| [klass.vendor_name, vendor.to_s, { disabled: !klass.enabled? }]}
+    manageable_scms = ProyeksiApp::SCM::Manager.manageable
+                                               .map {|vendor, klass| [klass.vendor_name, vendor.to_s, { disabled: !klass.enabled? }]}
     %>
     <div class="form--field">
 

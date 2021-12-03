@@ -56,4 +56,4 @@ pt:
           title: 'Projetos selecionados'
         secret:
           description: >
-            Se definido, este valor secreto é usado pelo OpenProject para assinar o payload webhook.
+            Se definido, este valor secreto é usado pelo ProyeksiApp para assinar o payload webhook.

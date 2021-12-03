@@ -169,7 +169,7 @@ module LegacyAssertionsAndHelpers
           it { should_respond_with_content_type_based_on_url(url) }
           it 'include correct www_authenticate_header' do
             assert response.headers.has_key?('WWW-Authenticate')
-            assert_equal 'Session realm="OpenProject API"', response.headers['WWW-Authenticate']
+            assert_equal 'Session realm="ProyeksiApp API"', response.headers['WWW-Authenticate']
           end
         end
       end
@@ -324,11 +324,11 @@ module LegacyAssertionsAndHelpers
         end
       end
 
-      context "should allow key based auth using X-OpenProject-API-Key header for #{http_method} #{url}" do
+      context "should allow key based auth using X-ProyeksiApp-API-Key header for #{http_method} #{url}" do
         before do
           @user = FactoryBot.create(:user, admin: true)
           @token = FactoryBot.create(:api_token, user: @user)
-          send(http_method, url, params: {}, headers: { 'X-OpenProject-API-Key' => @token.plain_value.to_s })
+          send(http_method, url, params: {}, headers: { 'X-ProyeksiApp-API-Key' => @token.plain_value.to_s })
         end
         it { should respond_with success_code }
         it { should_respond_with_content_type_based_on_url(url) }

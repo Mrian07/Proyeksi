@@ -2,7 +2,7 @@
 
 
 
-require 'open_project/plugins/auth_plugin'
+require 'proyeksi_app/plugins/auth_plugin'
 
 module OmniAuth
   module FlexibleStrategy
@@ -28,8 +28,8 @@ module OmniAuth
     end
 
     def omniauth_hash_to_user_attributes(auth)
-      if options.key?(:openproject_attribute_map)
-        options[:openproject_attribute_map].call(auth)
+      if options.key?(:proyeksiapp_attribute_map)
+        options[:proyeksiapp_attribute_map].call(auth)
       else
         {}
       end
@@ -47,7 +47,7 @@ module OmniAuth
     end
 
     def providers
-      @providers ||= OpenProject::Plugins::AuthPlugin.providers_for(self.class)
+      @providers ||= ProyeksiApp::Plugins::AuthPlugin.providers_for(self.class)
     end
 
     def provider

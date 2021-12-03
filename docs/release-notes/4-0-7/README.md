@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.7
+  title: ProyeksiApp 4.0.7
   sidebar_navigation:
       title: 4.0.7
   release_version: 4.0.7
@@ -7,16 +7,16 @@
 ---
 
 
-# OpenProject 4.0.7
+# ProyeksiApp 4.0.7
 
-OpenProject 4.0.7 has been released which contains important security
+ProyeksiApp 4.0.7 has been released which contains important security
 and bug fixes.
 
-We advise everyone to update their OpenProject installation.
+We advise everyone to update their ProyeksiApp installation.
 
-In the previous OpenProject version it was possible to see some work
+In the previous ProyeksiApp version it was possible to see some work
 package information without authorization. This error has been fixed
-with OpenProject 4.0.7.
+with ProyeksiApp 4.0.7.
 
 Additionally, several errors on the work package list have been fixed:
 

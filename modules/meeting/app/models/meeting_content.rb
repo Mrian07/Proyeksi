@@ -2,7 +2,7 @@
 #
 
 class MeetingContent < ApplicationRecord
-  include OpenProject::Journal::AttachmentHelper
+  include ProyeksiApp::Journal::AttachmentHelper
 
   belongs_to :meeting
   belongs_to :author, class_name: 'User'

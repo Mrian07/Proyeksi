@@ -163,7 +163,7 @@ describe DocumentsController do
   end
 
   def file_attachment
-    test_document = "#{OpenProject::Documents::Engine.root}/spec/assets/attachments/testfile.txt"
+    test_document = "#{ProyeksiApp::Documents::Engine.root}/spec/assets/attachments/testfile.txt"
     Rack::Test::UploadedFile.new(test_document, "text/plain")
   end
 end

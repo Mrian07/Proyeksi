@@ -54,10 +54,10 @@ describe Repository::Subversion, type: :model do
 
     context 'with string disabled types' do
       before do
-        allow(OpenProject::Configuration).to receive(:default_override_source)
-          .and_return('OPENPROJECT_SCM_SUBVERSION_DISABLED__TYPES' => '[managed,unknowntype]')
+        allow(ProyeksiApp::Configuration).to receive(:default_override_source)
+          .and_return('PROYEKSIAPP_SCM_SUBVERSION_DISABLED__TYPES' => '[managed,unknowntype]')
 
-        OpenProject::Configuration.load
+        ProyeksiApp::Configuration.load
         allow(instance.class).to receive(:scm_config).and_call_original
       end
 
@@ -344,7 +344,7 @@ describe Repository::Subversion, type: :model do
 
   describe 'ciphering' do
     it 'password is encrypted' do
-      OpenProject::Configuration.with 'database_cipher_key' => 'secret' do
+      ProyeksiApp::Configuration.with 'database_cipher_key' => 'secret' do
         r = FactoryBot.create(:repository_subversion, password: 'foo')
         expect(r.password)
           .to eql('foo')
@@ -355,7 +355,7 @@ describe Repository::Subversion, type: :model do
     end
 
     it 'password is unencrypted with blank key' do
-      OpenProject::Configuration.with 'database_cipher_key' => '' do
+      ProyeksiApp::Configuration.with 'database_cipher_key' => '' do
         r = FactoryBot.create(:repository_subversion, password: 'foo')
         expect(r.password)
           .to eql('foo')
@@ -365,7 +365,7 @@ describe Repository::Subversion, type: :model do
     end
 
     it 'password is unencrypted with nil key' do
-      OpenProject::Configuration.with 'database_cipher_key' => nil do
+      ProyeksiApp::Configuration.with 'database_cipher_key' => nil do
         r = FactoryBot.create(:repository_subversion, password: 'foo')
 
         expect(r.password)
@@ -376,11 +376,11 @@ describe Repository::Subversion, type: :model do
     end
 
     it 'unciphered password is readable if activating cipher later' do
-      OpenProject::Configuration.with 'database_cipher_key' => nil do
+      ProyeksiApp::Configuration.with 'database_cipher_key' => nil do
         FactoryBot.create(:repository_subversion, password: 'clear')
       end
 
-      OpenProject::Configuration.with 'database_cipher_key' => 'secret' do
+      ProyeksiApp::Configuration.with 'database_cipher_key' => 'secret' do
         r = Repository.last
 
         expect(r.password)
@@ -391,12 +391,12 @@ describe Repository::Subversion, type: :model do
     context '#encrypt_all' do
       it 'encrypts formerly unencrypted passwords' do
         Repository.delete_all
-        OpenProject::Configuration.with 'database_cipher_key' => nil do
+        ProyeksiApp::Configuration.with 'database_cipher_key' => nil do
           FactoryBot.create(:repository_subversion, password: 'foo')
           FactoryBot.create(:repository_subversion, password: 'bar')
         end
 
-        OpenProject::Configuration.with 'database_cipher_key' => 'secret' do
+        ProyeksiApp::Configuration.with 'database_cipher_key' => 'secret' do
           expect(Repository.encrypt_all(:password))
             .to be_truthy
 
@@ -420,7 +420,7 @@ describe Repository::Subversion, type: :model do
     context '#decrypt_all' do
       it 'removes cyphering from all passwords' do
         Repository.delete_all
-        OpenProject::Configuration.with 'database_cipher_key' => 'secret' do
+        ProyeksiApp::Configuration.with 'database_cipher_key' => 'secret' do
           foo = FactoryBot.create(:repository_subversion, password: 'foo')
           bar = FactoryBot.create(:repository_subversion, password: 'bar')
 

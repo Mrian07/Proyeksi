@@ -3,7 +3,7 @@
 module API
   module V3
     module Queries
-      class QueriesByProjectAPI < ::API::OpenProjectAPI
+      class QueriesByProjectAPI < ::API::ProyeksiAppAPI
         namespace :queries do
           helpers ::API::V3::Queries::Helpers::QueryRepresenterResponse
 

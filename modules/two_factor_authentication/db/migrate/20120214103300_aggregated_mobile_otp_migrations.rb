@@ -1,6 +1,6 @@
 require Rails.root.to_s + '/db/migrate/migration_utils/migration_squasher'
 require Rails.root.to_s + '/db/migrate/migration_utils/setting_renamer'
-require 'open_project/plugins/migration_mapping'
+require 'proyeksi_app/plugins/migration_mapping'
 
 # This migration aggregates the migrations detailed in MIGRATION_FILES
 class AggregatedMobileOtpMigrations < ActiveRecord::Migration[5.0]
@@ -14,14 +14,14 @@ class AggregatedMobileOtpMigrations < ActiveRecord::Migration[5.0]
   OLD_PLUGIN_NAME = "redmine_two_factor_authentication_authentication"
 
   def up
-    migration_names = OpenProject::Plugins::MigrationMapping.migration_files_to_migration_names(MIGRATION_FILES, OLD_PLUGIN_NAME)
+    migration_names = ProyeksiApp::Plugins::MigrationMapping.migration_files_to_migration_names(MIGRATION_FILES, OLD_PLUGIN_NAME)
     Migration::MigrationSquasher.squash(migration_names) do
       add_column :users, :verified_phone, :string
       add_column :users, :unverified_phone, :string
       User.reset_column_information
     end
     Migration::MigrationUtils::SettingRenamer.rename("plugin_redmine_two_factor_authentication_authentication",
-                                                     "plugin_openproject_two_factor_authentication")
+                                                     "plugin_proyeksiapp_two_factor_authentication")
   end
 
   def down

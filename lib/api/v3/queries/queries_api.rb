@@ -6,7 +6,7 @@ require 'api/v3/queries/query_representer'
 module API
   module V3
     module Queries
-      class QueriesAPI < ::API::OpenProjectAPI
+      class QueriesAPI < ::API::ProyeksiAppAPI
         resources :queries do
           mount API::V3::Queries::Columns::QueryColumnsAPI
           mount API::V3::Queries::GroupBys::QueryGroupBysAPI

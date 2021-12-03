@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-module OpenProject
+module ProyeksiApp
   describe I18n, type: :helper do
     include Redmine::I18n
 
@@ -135,7 +135,7 @@ module OpenProject
     describe 'link_translation' do
       let(:locale) { :en }
       let(:urls) do
-        { url_1: 'http://openproject.com/foobar', url_2: '/baz' }
+        { url_1: 'http://proyeksiapp.com/foobar', url_2: '/baz' }
       end
 
       before do
@@ -149,7 +149,7 @@ module OpenProject
         translated = link_translate :translation_with_a_link, links: urls
 
         expect(translated).to eq(
-          "There is a <a href=\"http://openproject.com/foobar\">link</a> in this translation!" +
+          "There is a <a href=\"http://proyeksiapp.com/foobar\">link</a> in this translation!" +
           " Maybe even <a href=\"/baz\">two</a>?"
         )
       end
@@ -160,7 +160,7 @@ module OpenProject
           translated = link_translate :translation_with_a_link, links: urls, locale: locale
 
           expect(translated).to eq(
-            "There is a <a href=\"http://openproject.com/foobar\">link</a> in this translation!" +
+            "There is a <a href=\"http://proyeksiapp.com/foobar\">link</a> in this translation!" +
             " Maybe even <a href=\"/baz\">two</a>?"
           )
         end

@@ -10,7 +10,7 @@ class Queries::WorkPackages::Filter::AttachmentBaseFilter < Queries::WorkPackage
   end
 
   def available?
-    EnterpriseToken.allows_to?(:attachment_filters) && OpenProject::Database.allows_tsv?
+    EnterpriseToken.allows_to?(:attachment_filters) && ProyeksiApp::Database.allows_tsv?
   end
 
   protected
@@ -29,7 +29,7 @@ class Queries::WorkPackages::Filter::AttachmentBaseFilter < Queries::WorkPackage
   end
 
   def tsv_condition
-    OpenProject::FullTextSearch.tsv_where(attachment_table,
+    ProyeksiApp::FullTextSearch.tsv_where(attachment_table,
                                           search_column,
                                           values.first,
                                           normalization: normalization_type)

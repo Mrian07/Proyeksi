@@ -2,7 +2,7 @@
 
 ## 0.1.0
 
-* `#5558` use openproject-auth_plugins as basis
+* `#5558` use proyeksiapp-auth_plugins as basis
 
 ## 0.0.1
 

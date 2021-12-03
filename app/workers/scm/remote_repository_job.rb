@@ -36,7 +36,7 @@ class SCM::RemoteRepositoryJob < ApplicationJob
     info = try_to_parse_response(response.body)
 
     unless response.is_a? ::Net::HTTPSuccess
-      raise OpenProject::SCM::Exceptions::SCMError.new(
+      raise ProyeksiApp::SCM::Exceptions::SCMError.new(
         I18n.t('repositories.errors.remote_call_failed',
                code: response.code,
                message: info['message'])
@@ -49,7 +49,7 @@ class SCM::RemoteRepositoryJob < ApplicationJob
   def try_to_parse_response(body)
     JSON.parse(body)
   rescue JSON::JSONError => e
-    raise OpenProject::SCM::Exceptions::SCMError.new(
+    raise ProyeksiApp::SCM::Exceptions::SCMError.new(
       I18n.t('repositories.errors.remote_invalid_response')
     )
   end

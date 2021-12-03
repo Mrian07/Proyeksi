@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Grids::Query, type: :model do
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 
   shared_let(:project) { FactoryBot.create(:project) }
   shared_let(:other_project) { FactoryBot.create(:project) }

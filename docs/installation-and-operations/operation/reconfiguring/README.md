@@ -4,11 +4,11 @@ sidebar_navigation:
   priority: 10
 ---
 
-# (Re)configuring OpenProject
+# (Re)configuring ProyeksiApp
 
 ## Packaged installation
 
-For packaged installations, you can restart the configuration process by issuing the following command on the server where OpenProject runs:
+For packaged installations, you can restart the configuration process by issuing the following command on the server where ProyeksiApp runs:
 
 ```bash
 sudo openproject reconfigure
@@ -18,7 +18,7 @@ This will restart the installation wizard, and allow you to modify any of the ch
 
 The wizard configuration is stored in `/etc/openproject/installer.dat`.
 
-The wizard will automatically set environment variables to be used by OpenProject. Those variables can be manipulated with the CLI tool that ships with OpenProject:
+The wizard will automatically set environment variables to be used by ProyeksiApp. Those variables can be manipulated with the CLI tool that ships with ProyeksiApp:
 
 * `sudo openproject config` will display the list of environment variables set.
 * `sudo openproject config:get KEY` allows you to get the value of single environment variable.

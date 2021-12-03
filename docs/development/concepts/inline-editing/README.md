@@ -46,7 +46,7 @@ In order to understand the different modes of the inline edition functionality, 
 
 The display fields handle showing read-only representation of a resource's attribute. For example, the work package table may contain very different kinds of attributes: A progress bar, bare text fields, formatted date fields and the like.
 
-Since OpenProject can also have dynamic custom fields with varying formats, the frontend cannot know all potential attribute names and their types. Instead, the available attributes of a resource are retrieved from its associated [schema resource](../resource-schemas/). For display fields, the important part of the schema definition for an attribute is its `type` attribute. Take a look at the JSON schema response for projects at the community: https://community.openproject.com/api/v3/projects/schema. For the sake of brevity, the following JSON will only show two of the returned attributes: The name and status attribute description:
+Since ProyeksiApp can also have dynamic custom fields with varying formats, the frontend cannot know all potential attribute names and their types. Instead, the available attributes of a resource are retrieved from its associated [schema resource](../resource-schemas/). For display fields, the important part of the schema definition for an attribute is its `type` attribute. Take a look at the JSON schema response for projects at the community: https://community.openproject.com/api/v3/projects/schema. For the sake of brevity, the following JSON will only show two of the returned attributes: The name and status attribute description:
 
 ```json
 "name": {
@@ -189,9 +189,9 @@ The EditableAttributeField basically contains only two HTML elements that it wra
 
 #### Editing portals
 
-OpenProject often renders Angular components in manually rendered DOM, prominently so in the work package table for improved rendering time. This is from the time the project was still using AngularJS and large scale rendering components was quite slow.
+ProyeksiApp often renders Angular components in manually rendered DOM, prominently so in the work package table for improved rendering time. This is from the time the project was still using AngularJS and large scale rendering components was quite slow.
 
-To easily mount an edit field over a manually rendered `DisplayField` (such as from the `DisplayFieldRenderer` above), OpenProject uses the `EditingPortalService` to create an [Angular CDK portal](https://material.angular.io/cdk/portal/overview). 
+To easily mount an edit field over a manually rendered `DisplayField` (such as from the `DisplayFieldRenderer` above), ProyeksiApp uses the `EditingPortalService` to create an [Angular CDK portal](https://material.angular.io/cdk/portal/overview). 
 
 The `EditingPortalService` will render a `EditFormPortalComponent` with some HTML form wrapping for correct handling of submit events and labels. This portal will in turn render the actual `EditFieldComponent`. The service will wire up these components automatically.
 
@@ -300,7 +300,7 @@ The Bug has three attribute groups defined with a set of attributes in it. These
 
 If we take a look at the XHR requests on the bug page, we see that a request is being made to the schema `https://community.openproject.com/api/v3/work_packages/schemas/14-1`, which is the work package schema for project ID=14 (openproject on community), and the type ID=1 (Bug type). It contains the attribute definitions of the [work package schema](../resource-schemas/) and the enabled attribute groups with their attribute definitions:
 
-![Attribute groups of type Bug in OpenProject project](schema-attribute-groups.png)
+![Attribute groups of type Bug in ProyeksiApp project](schema-attribute-groups.png)
 
 We can see the three groups as defined in the administration are being transmitted to the frontend through the `_attributeGroups` property.
 

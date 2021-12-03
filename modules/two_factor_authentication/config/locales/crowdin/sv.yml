@@ -120,13 +120,13 @@ sv:
         text_cannot_scan: |
           Om du inte kan skanna koden kan du ange den manuellt med följande uppgifter:
         description: |
-          Registrera en app-autentiserare för användning med OpenProject med hjälp av den tidsbaserade engångsautentiserings-standarden. Vanliga exempel är Google Authenticator eller Authy.
+          Registrera en app-autentiserare för användning med ProyeksiApp med hjälp av den tidsbaserade engångsautentiserings-standarden. Vanliga exempel är Google Authenticator eller Authy.
       sms:
         title: 'Använd din mobiltelefon'
         redacted_identifier: 'Mobiltelefon (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, vi skickade en autentiseringskod till dig via %{delivery_channel}'
         description: |
-          Registrera ditt mobiltelefonnummer för leverans av OpenProject engångslösenord.
+          Registrera ditt mobiltelefonnummer för leverans av ProyeksiApp engångslösenord.
     sns:
       delivery_failed: 'SNS leverans misslyckades:'
     message_bird:

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.10
+  title: ProyeksiApp 5.0.10
   sidebar_navigation:
       title: 5.0.10
   release_version: 5.0.10
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.10
+# ProyeksiApp 5.0.10
 
-OpenProject 5.0.10 contains several bug and accessibility fixes:
+ProyeksiApp 5.0.10 contains several bug and accessibility fixes:
 
   - An internal error has been fixed which occurred accessing a group
     with an assigned custom field

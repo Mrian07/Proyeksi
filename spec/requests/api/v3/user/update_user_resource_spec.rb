@@ -64,7 +64,7 @@ describe ::API::V3::Users::UsersAPI, type: :request do
                 .at_path('_embedded/details/attribute')
 
         expect(last_response.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyConstraintViolation'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation'.to_json)
                 .at_path('errorIdentifier')
       end
     end
@@ -119,7 +119,7 @@ describe ::API::V3::Users::UsersAPI, type: :request do
                 .at_path('_embedded/details/attribute')
 
         expect(last_response.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyIsReadOnly'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyIsReadOnly'.to_json)
                 .at_path('errorIdentifier')
       end
     end

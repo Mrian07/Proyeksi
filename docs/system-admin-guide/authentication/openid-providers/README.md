@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: OpenID providers
   priority: 800
-description: OpenID providers for OpenProject.
+description: OpenID providers for ProyeksiApp.
 robots: index, follow
 keywords: OpenID providers
 ---
 # OpenID providers
 
-To activate and configure OpenID providers in OpenProject, navigate to -> *Administration* -> *Authentication* and choose -> *OpenID providers*.
+To activate and configure OpenID providers in ProyeksiApp, navigate to -> *Administration* -> *Authentication* and choose -> *OpenID providers*.
 
 ## Add a new authentication application for oauth
 
@@ -18,7 +18,7 @@ To add a new OpenID provider, click the green **+ OpenID provider** button.
 
 You can configure the following options.
 
-1. Choose **Google** or **Azure** to add as an OpenID provider to OpenProject.
+1. Choose **Google** or **Azure** to add as an OpenID provider to ProyeksiApp.
 2. Optionally enter a **display name**.
 3. Enter the **Identifier**.
 4. Enter the **Secret**.
@@ -30,7 +30,7 @@ You can configure the following options.
 
 ### Step 1: Registering an App in Azure Active Directory
 
-If your organization currently has an Azure Active Directory to manage users, and you want to use that to log in to OpenProject, you will need to register a new *App*.
+If your organization currently has an Azure Active Directory to manage users, and you want to use that to log in to ProyeksiApp, you will need to register a new *App*.
 
 The steps are as follows:
 
@@ -56,9 +56,9 @@ Click on "New registration".
 
 You are now asked for a few settings:
 
-* For "Name", enter "OpenProject".
+* For "Name", enter "ProyeksiApp".
 * For "Supported account types", select "Accounts in this organization directory only".
-* For "Redirect URI", select the "Web" type, and enter the URL to your OpenProject installation, followed by "/auth/azure/callback". For instance: "https://myserver.com/auth/azure/callback".
+* For "Redirect URI", select the "Web" type, and enter the URL to your ProyeksiApp installation, followed by "/auth/azure/callback". For instance: "https://myserver.com/auth/azure/callback".
 
 When you are done, click on the "Register" button at the end of the page. You are redirected to your new App registration, be sure to save the "Application (client) ID" that is now displayed. You will need it later.
 
@@ -80,9 +80,9 @@ A secret should have been generated and is now displayed on the page. Be sure to
 
 At the end of this step, you should have a copy of the Application client ID as well as the client Secret you just generated.
 
-### Step 2: Configure OpenProject
+### Step 2: Configure ProyeksiApp
 
-Now, head over to OpenProject > Administration > OpenID providers. Click on "New OpenID provider", select the Azure type, enter the client ID and client Secret and then Save.
+Now, head over to ProyeksiApp > Administration > OpenID providers. Click on "New OpenID provider", select the Azure type, enter the client ID and client Secret and then Save.
 
 You can now log out, and see that the login form displays a badge for authenticating with Azure. If you click on that badge, you will be redirected to Azure to enter your credentials and allow the App to access your Azure profile, and you should then be automatically logged in.
 
@@ -99,9 +99,9 @@ But you can do it via the console as described [here](/installation-and-operatio
 
 Q: After clicking on a provider badge, I am redirected to a signup form that says a user already exists with that login.
 
-A: This can happen if you previously created user accounts in OpenProject with the same email than what is stored in the OpenID provider. In this case, if you want to allow existing users to be automatically remapped to the OpenID provider, you should do the following:
+A: This can happen if you previously created user accounts in ProyeksiApp with the same email than what is stored in the OpenID provider. In this case, if you want to allow existing users to be automatically remapped to the OpenID provider, you should do the following:
 
-Spawn an interactive console in OpenProject. The following example shows the command for the packaged installation.
+Spawn an interactive console in ProyeksiApp. The following example shows the command for the packaged installation.
 See [our process control guide](../../../installation-and-operations/operation/control/) for information on other installation types.
 
 ```

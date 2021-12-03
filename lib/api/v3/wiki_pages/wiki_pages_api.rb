@@ -3,7 +3,7 @@
 module API
   module V3
     module WikiPages
-      class WikiPagesAPI < ::API::OpenProjectAPI
+      class WikiPagesAPI < ::API::ProyeksiAppAPI
         resources :wiki_pages do
           helpers do
             def wiki_page

@@ -5,7 +5,7 @@
 module API
   module V3
     module Budgets
-      class BudgetsByProjectAPI < ::API::OpenProjectAPI
+      class BudgetsByProjectAPI < ::API::ProyeksiAppAPI
         resources :budgets do
           after_validation do
             authorize(:view_budgets, context: @project)

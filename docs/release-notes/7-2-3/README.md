@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.2.3
+  title: ProyeksiApp 7.2.3
   sidebar_navigation:
       title: 7.2.3
   release_version: 7.2.3
@@ -10,7 +10,7 @@
 ## Bug: Assigned to filter returns work packages set to assignee’s group.
 
 When filtering by *Assigned to* with a single user selected, the filter
-returns work packages assigned to that user. Since OpenProject 7.0,  it
+returns work packages assigned to that user. Since ProyeksiApp 7.0,  it
 also returns work packages assigned to any of the groups the user is a
 member of. This is a side effect of a deliberate change made in 7.0.
 Some customers depend on returning only the work packages assigned to

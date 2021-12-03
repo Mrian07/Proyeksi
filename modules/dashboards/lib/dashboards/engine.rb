@@ -1,12 +1,12 @@
-# Prevent load-order problems in case openproject-plugins is listed after a plugin in the Gemfile
+# Prevent load-order problems in case proyeksiapp-plugins is listed after a plugin in the Gemfile
 # or not at all
-require 'open_project/plugins'
+require 'proyeksi_app/plugins'
 
 module Dashboards
   class Engine < ::Rails::Engine
     engine_name :dashboards
 
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     initializer 'dashboards.menu' do
       ::Redmine::MenuManager.map(:project_menu) do |menu|
@@ -24,7 +24,7 @@ module Dashboards
       # deactivate for now
       next unless Rails.env == 'test'
 
-      OpenProject::AccessControl.map do |ac_map|
+      ProyeksiApp::AccessControl.map do |ac_map|
         ac_map.project_module(:dashboards) do |pm_map|
           pm_map.permission(:view_dashboards, 'dashboards/dashboards': ['show'])
           pm_map.permission(:manage_dashboards, 'dashboards/dashboards': ['show'])

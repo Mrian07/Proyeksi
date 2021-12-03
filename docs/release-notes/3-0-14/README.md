@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.14
+  title: ProyeksiApp 3.0.14
   sidebar_navigation:
       title: 3.0.14
   release_version: 3.0.14
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 3.0.14
+# ProyeksiApp 3.0.14
 
-The release of 3.0.14 of OpenProject contains several bug fixes.  
-We advise everybody to update their OpenProject installation.
+The release of 3.0.14 of ProyeksiApp contains several bug fixes.  
+We advise everybody to update their ProyeksiApp installation.
 
 Most notably, copying projects works properly again. In the previous
 version it was not possible to properly copy projects either from the
@@ -23,7 +23,7 @@ displayed twice
 This has been reported and fixed by [Björn
 Blissing](https://github.com/bjornblissing). Many thanks\!
 
-For a complete list of changes, please refer to the [OpenProject 3.0.14
+For a complete list of changes, please refer to the [ProyeksiApp 3.0.14
 query](https://community.openproject.org/versions/490).
 
 

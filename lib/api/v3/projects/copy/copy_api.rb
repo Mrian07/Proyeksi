@@ -6,7 +6,7 @@ module API
   module V3
     module Projects
       module Copy
-        class CopyAPI < ::API::OpenProjectAPI
+        class CopyAPI < ::API::ProyeksiAppAPI
           resource :copy do
             after_validation do
               authorize(:copy_projects, context: @project)

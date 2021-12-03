@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Budgets
   priority: 780
-description: Find out how to create and manage budgets for a project in OpenProject.
+description: Find out how to create and manage budgets for a project in ProyeksiApp.
 robots: index, follow
 keywords: budgets, project budget, costs
 ---
 
 # Budgets
 
-You can create and manage a **project budget** in OpenProject to keep track of your available and spent costs in a project.
+You can create and manage a **project budget** in ProyeksiApp to keep track of your available and spent costs in a project.
 
 You can add planned **unit costs** as well as **labor costs** for the project.
 
@@ -17,7 +17,7 @@ Then, you will assign work packages to a budgets. If you log time or costs to th
 
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Create a project budget](#create-a-project-budget)          | How to set up a project budget in OpenProject?               |
+| [Create a project budget](#create-a-project-budget)          | How to set up a project budget in ProyeksiApp?               |
 | [Add planned unit costs](#add-planned-unit-costs)            | How to add planned unit costs to a budget?                   |
 | [Add planned labor costs](#add-planned-labor-costs)          | How to add planned labor costs to a budget?                  |
 | [Assign a work package to a budget](#assign-a-work-package-to-a-budget) | How to assign a work package to book time and costs to a project budget? |
@@ -28,7 +28,7 @@ Then, you will assign work packages to a budgets. If you log time or costs to th
 
 In order to create a budget in your project, please activate the **Budgets module** in the [project settings](../projects/).
 
-To create your first budget in OpenProject, click the green **+ Budget** button on the top right of the page.
+To create your first budget in ProyeksiApp, click the green **+ Budget** button on the top right of the page.
 
 ![Budgets_create-new](Budgets_create-new.png)
 
@@ -115,7 +115,7 @@ You will get and overview of planned as well as spent costs and the available co
 
 ## Frequently asked questions (FAQ)
 
-### How do I prepare a budget in OpenProject?
+### How do I prepare a budget in ProyeksiApp?
 
 Budgets are currently limited to a single project. They cannot be shared across multiple projects.
 This means that you would have to set up a separate budget for the different main and sub projects.

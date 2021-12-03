@@ -1,20 +1,20 @@
 ---
-title: OpenProject 10.1.0
+title: ProyeksiApp 10.1.0
 sidebar_navigation:
     title: 10.1.0
 release_version: 10.1.0
 release_date: 2019-10-28
 ---
 
-# OpenProject 10.1.0
+# ProyeksiApp 10.1.0
 
-One of the big improvements of the new release of OpenProject 10.1 is the project overview dashboard page with a new project status widget for online project status reporting.
+One of the big improvements of the new release of ProyeksiApp 10.1 is the project overview dashboard page with a new project status widget for online project status reporting.
 
-Furthermore, we have included a lot of bug fixes and code maintenance to improve the overall condition of OpenProject.
+Furthermore, we have included a lot of bug fixes and code maintenance to improve the overall condition of ProyeksiApp.
 
 ![Project status reporting](project-status-reporting.png)
 
-Read below to get a detailed overview of what is new in OpenProject 10.1.
+Read below to get a detailed overview of what is new in ProyeksiApp 10.1.
 
 ## Project status reporting
 
@@ -32,7 +32,7 @@ This way, the project overview page can be extended to a detailed reporting dash
 
 ![Dashboards](dashboards.png)
 
-[Find out more about the new project status reporting in OpenProject]().
+[Find out more about the new project status reporting in ProyeksiApp]().
 
 ## CRUD operations for projects in API v3
 
@@ -42,11 +42,11 @@ The API v3 now also enables CRUD on Projects.
 
 ### Consolidate work package edit field implementation
 
-OpenProject contains a new consolidated look and feel for work package edit fields. The different edit fields now have a harmonized technical base and now look alike.
+ProyeksiApp contains a new consolidated look and feel for work package edit fields. The different edit fields now have a harmonized technical base and now look alike.
 
 ### Upgrade to Rails 6.0.0
 
-OpenProject has been updated to Rails 6.0.0.
+ProyeksiApp has been updated to Rails 6.0.0.
 
 #### Bug fixes and changes
 
@@ -88,26 +88,26 @@ OpenProject has been updated to Rails 6.0.0.
 
 ## Support
 
-You will find useful information in the OpenProject [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
+You will find useful information in the ProyeksiApp [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
 
-### Upgrading your installation to OpenProject 10.1.
+### Upgrading your installation to ProyeksiApp 10.1.
 
-If you’re using the OpenProject Cloud Edition, you will be automatically updated to the latest version of OpenProject 10.1 in the next days. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
+If you’re using the ProyeksiApp Cloud Edition, you will be automatically updated to the latest version of ProyeksiApp 10.1 in the next days. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
 
 [Please visit our upgrade guides for more information]().
 
 ## Credits
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject.
+- All the developers, designers, project managers who have contributed to ProyeksiApp.
 - Every dedicated user who has [reported bugs]() and supported the community by asking and answering questions in the [forum](https://community.openproject.org/projects/openproject/boards).
 - All the engaged users who provided translations on [CrowdIn](https://crowdin.com/projects/opf).
 
 ## What’s next?
 
-We are continuously developing new features and improvements for OpenProject.
+We are continuously developing new features and improvements for ProyeksiApp.
 The next release will contain a multi-project portfolio view which provides a quick overview of your most important projects.
 Take a look at the [release timeline](https://community.openproject.com/projects/openproject/work_packages?query_id=918) to see the upcoming features and releases.
 
-To stay up to date with the recent development, feel free to follow OpenProject on [Twitter](https://twitter.com/openproject) and like OpenProject on [Facebook](https://www.facebook.com/openprojectfoundation).
+To stay up to date with the recent development, feel free to follow ProyeksiApp on [Twitter](https://twitter.com/openproject) and like ProyeksiApp on [Facebook](https://www.facebook.com/openprojectfoundation).

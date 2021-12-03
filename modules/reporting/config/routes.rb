@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   scope 'projects/:project_id' do
     resources :cost_reports, except: :create do
       collection do

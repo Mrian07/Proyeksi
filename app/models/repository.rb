@@ -4,7 +4,7 @@
 
 class Repository < ApplicationRecord
   include Redmine::Ciphering
-  include OpenProject::SCM::ManageableRepository
+  include ProyeksiApp::SCM::ManageableRepository
 
   belongs_to :project
   has_many :changesets, -> {
@@ -30,7 +30,7 @@ class Repository < ApplicationRecord
 
   # Checks if the SCM is enabled when creating a repository
   def validate_enabled_scm
-    errors.add(:type, :not_available) unless OpenProject::SCM::Manager.enabled?(vendor)
+    errors.add(:type, :not_available) unless ProyeksiApp::SCM::Manager.enabled?(vendor)
   end
 
   # Removes leading and trailing whitespace
@@ -126,7 +126,7 @@ class Repository < ApplicationRecord
     entries = scm.entries(path, identifier)
 
     if limit && limit < entries.size
-      result = OpenProject::SCM::Adapters::Entries.new entries.take(limit)
+      result = ProyeksiApp::SCM::Adapters::Entries.new entries.take(limit)
       result.truncated = entries.size - result.size
 
       result
@@ -281,7 +281,7 @@ class Repository < ApplicationRecord
       if project.repository
         begin
           project.repository.fetch_changesets
-        rescue OpenProject::SCM::Exceptions::CommandFailed => e
+        rescue ProyeksiApp::SCM::Exceptions::CommandFailed => e
           logger.error "scm: error during fetching changesets: #{e.message}"
         end
       end
@@ -303,7 +303,7 @@ class Repository < ApplicationRecord
   #
   # @param [Symbol] type     SCM tag to determine the type this repository should be built as
   #
-  # @raise [OpenProject::SCM::RepositoryBuildError]
+  # @raise [ProyeksiApp::SCM::RepositoryBuildError]
   #                                  Raised when the instance could not be built
   #                                  given the parameters.
   # @raise [::NameError] Raised when the given +vendor+ could not be resolved to a class.
@@ -330,10 +330,10 @@ class Repository < ApplicationRecord
   # Build a temporary model instance of the given vendor for temporary use in forms.
   # Will not receive any args.
   def self.build_scm_class(vendor)
-    klass = OpenProject::SCM::Manager.registered[vendor]
+    klass = ProyeksiApp::SCM::Manager.registered[vendor]
 
     if klass.nil?
-      raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+      raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
         I18n.t('repositories.errors.disabled_or_unknown_vendor', vendor: vendor)
       )
     else
@@ -347,7 +347,7 @@ class Repository < ApplicationRecord
     if repository.class.available_types.include? type
       repository.scm_type = type
     else
-      raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+      raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
         I18n.t('repositories.errors.disabled_or_unknown_type',
                type: type,
                vendor: repository.vendor)
@@ -366,7 +366,7 @@ class Repository < ApplicationRecord
   end
 
   def self.enabled?
-    OpenProject::SCM::Manager.enabled?(vendor)
+    ProyeksiApp::SCM::Manager.enabled?(vendor)
   end
 
   ##
@@ -403,13 +403,13 @@ class Repository < ApplicationRecord
 
   ##
   # Create local managed repository request when the built instance
-  # is managed by OpenProject
+  # is managed by ProyeksiApp
   def create_managed_repository
     service = SCM::CreateManagedRepositoryService.new(self)
     if service.call
       true
     else
-      raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+      raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
         service.localized_rejected_reason
       )
     end
@@ -417,7 +417,7 @@ class Repository < ApplicationRecord
 
   ##
   # Destroy local managed repository request when the built instance
-  # is managed by OpenProject
+  # is managed by ProyeksiApp
   def delete_managed_repository
     service = SCM::DeleteManagedRepositoryService.new(self)
     if service.call

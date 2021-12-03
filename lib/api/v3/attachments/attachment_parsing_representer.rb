@@ -35,7 +35,7 @@ module API
         property :file,
                  setter: ->(fragment:, represented:, doc:, **) {
                    filename = represented.filename || doc.dig('metadata', 'fileName')
-                   self.file = OpenProject::Files.build_uploaded_file fragment[:tempfile],
+                   self.file = ProyeksiApp::Files.build_uploaded_file fragment[:tempfile],
                                                                       fragment[:type],
                                                                       file_name: filename
                  }

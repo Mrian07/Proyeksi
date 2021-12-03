@@ -104,7 +104,7 @@ description: |-
         "values": [
           {
             "href": "/api/v3/users/1",
-            "title": "OpenProject Admin"
+            "title": "ProyeksiApp Admin"
           }
         ]
       }

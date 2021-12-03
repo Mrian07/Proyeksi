@@ -2,39 +2,39 @@
 sidebar_navigation:
   title: Gantt charts introduction
   priority: 600
-description: Introduction to Gantt charts to OpenProject.
+description: Introduction to Gantt charts to ProyeksiApp.
 robots: index, follow
 keywords: Gantt charts introduction
 ---
 
 # Introduction to Gantt charts
 
-In this document you will get a first introduction to the Gantt charts in OpenProject, i.e. to create and manage a project plan.
+In this document you will get a first introduction to the Gantt charts in ProyeksiApp, i.e. to create and manage a project plan.
 
 <div class="glossary">
-**Gantt charts** in OpenProject are defined as a type of bar chart that shows all the tasks constituting a project. Tasks are listed vertically, with the horizontal axis marking time. The lengths of task bars are to scale with task durations.
+**Gantt charts** in ProyeksiApp are defined as a type of bar chart that shows all the tasks constituting a project. Tasks are listed vertically, with the horizontal axis marking time. The lengths of task bars are to scale with task durations.
 </div>
 
 To find out more about the functionalities for Gantt charts, please visit our [user guide for Gantt charts](../../user-guide/gantt-chart).
 
 | Feature                                                    | Documentation for                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------- |
-| [What is a Gantt chart?](#what-is-a-gantt-chart)           | Find out what is a Gantt chart in OpenProject.       |
-| [Activate the Gantt chart](#activate-the-gantt-chart-view) | How to activate the Gantt chart view in OpenProject? |
+| [What is a Gantt chart?](#what-is-a-gantt-chart)           | Find out what is a Gantt chart in ProyeksiApp.       |
+| [Activate the Gantt chart](#activate-the-gantt-chart-view) | How to activate the Gantt chart view in ProyeksiApp? |
 | [Create a project plan](#create-a-project-plan)            | How to create a project plan with the Gantt charts?  |
-| [Edit a project plan](#edit-a-project-plan)                | How to edit a project plan in OpenProject?           |
+| [Edit a project plan](#edit-a-project-plan)                | How to edit a project plan in ProyeksiApp?           |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Project-Plan-and-Timelines-Gantt-charts.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Plan-and-Timelines-Gantt-charts.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## What is a Gantt chart?
 
-With Gantt charts in OpenProject you can create and manage a project plan and share the information with your team. You can schedule your tasks and visualize the required steps to complete your project. As a project manager you are directly informed about delays in your project and can act accordingly.
+With Gantt charts in ProyeksiApp you can create and manage a project plan and share the information with your team. You can schedule your tasks and visualize the required steps to complete your project. As a project manager you are directly informed about delays in your project and can act accordingly.
 
-The dynamic Gantt chart in OpenProject displays the phases and milestones in your project as well as relationships between them. Each element in the timeline has both a start as well as a finish date so you are always informed about the current status.
+The dynamic Gantt chart in ProyeksiApp displays the phases and milestones in your project as well as relationships between them. Each element in the timeline has both a start as well as a finish date so you are always informed about the current status.
 
 ## Activate the Gantt chart view
 
-To open the Gantt chart view in OpenProject, the [work packages module needs to be activated](../projects/#advanced-project-settings) in the project settings.
+To open the Gantt chart view in ProyeksiApp, the [work packages module needs to be activated](../projects/#advanced-project-settings) in the project settings.
 
 Within your project menu, navigate to the work packages module. Select the **Gantt chart view** in the work package list with the button on the top right.
 
@@ -48,7 +48,7 @@ It shows dependencies between different work packages as well as additional info
 
 ## Create a project plan
 
-To create a project plan in OpenProject, activate the work package module and select the [Gantt chart view](#activate-the-gantt-chart-view).
+To create a project plan in ProyeksiApp, activate the work package module and select the [Gantt chart view](#activate-the-gantt-chart-view).
 
 You can create new work packages directly in the list by clicking on the **create new work package** link at the bottom of the list. You can change the work package type or other attributes directly in the list view.
 

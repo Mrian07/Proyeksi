@@ -25,11 +25,11 @@ it:
       Una volta selezionata un'immagine, verrà mostrata un'anteprima del tuo avatar prima del caricamento.
     text_change_gravatar_html: 'Per cambiare o aggiungere il Gravatar per il tuo indirizzo email, vai su %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject ti permette di caricare il tuo avatar personalizzato.
+      ProyeksiApp ti permette di caricare il tuo avatar personalizzato.
     text_local_avatar_over_gravatar: |
       Se ne selezioni uno, questo avatar personalizzato viene utilizzato in precedenza rispetto al gravatar sopra.
     text_your_current_gravatar: |
-      OpenProject utilizza il tuo gravatar se ne hai registrato uno, o un'immagine o un'icona predefinita se esiste.
+      ProyeksiApp utilizza il tuo gravatar se ne hai registrato uno, o un'immagine o un'icona predefinita se esiste.
       Il gravatar corrente è il seguente:
     settings:
       enable_gravatars: 'Abilita i gravatars dell''utente'

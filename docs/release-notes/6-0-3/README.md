@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.0.3
+  title: ProyeksiApp 6.0.3
   sidebar_navigation:
       title: 6.0.3
   release_version: 6.0.3
@@ -7,16 +7,16 @@
 ---
 
 
-# OpenProject 6.0.3
+# ProyeksiApp 6.0.3
 
-OpenProject 6.0.3 contains an important security fix. It upgrades the
+ProyeksiApp 6.0.3 contains an important security fix. It upgrades the
 Rails version to 4.2.7.1 to address the following
 CVEs:
 
 [CVE-2016-6317](https://groups.google.com/forum/#!topic/ruby-security-ann/WccgKSKiPZA)  
 [CVE-2016-6316](https://groups.google.com/forum/#!topic/ruby-security-ann/8B2iV2tPRSE)
 
-**The following bugs have been fixed in OpenProject 6.0.3:**
+**The following bugs have been fixed in ProyeksiApp 6.0.3:**
 
   - The help and profile dropdown changed rapidly when hovering over
     them ([\#23745](https://community.openproject.com/work_packages/23745/activity)).

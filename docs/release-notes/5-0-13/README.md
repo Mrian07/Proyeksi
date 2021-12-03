@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.13
+  title: ProyeksiApp 5.0.13
   sidebar_navigation:
       title: 5.0.13
   release_version: 5.0.13
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.13
+# ProyeksiApp 5.0.13
 
-OpenProject 5.0.13 resolves an installation issue for the packaged
+ProyeksiApp 5.0.13 resolves an installation issue for the packaged
 installation.
 
 For further information, please take a look at

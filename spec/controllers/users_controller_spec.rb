@@ -41,12 +41,12 @@ describe UsersController, type: :controller do
 
     context "with user limit reached" do
       before do
-        allow(OpenProject::Enterprise).to receive(:user_limit_reached?).and_return(true)
+        allow(ProyeksiApp::Enterprise).to receive(:user_limit_reached?).and_return(true)
       end
 
       context "with fail fast" do
         before do
-          allow(OpenProject::Enterprise).to receive(:fail_fast?).and_return(true)
+          allow(ProyeksiApp::Enterprise).to receive(:fail_fast?).and_return(true)
 
           as_logged_in_user admin do
             get :new
@@ -424,7 +424,7 @@ describe UsersController, type: :controller do
       let(:user_limit_reached) { false }
 
       before do
-        allow(OpenProject::Enterprise).to receive(:user_limit_reached?).and_return(user_limit_reached)
+        allow(ProyeksiApp::Enterprise).to receive(:user_limit_reached?).and_return(user_limit_reached)
 
         as_logged_in_user admin do
           post :change_status,
@@ -742,7 +742,7 @@ describe UsersController, type: :controller do
 
     context 'with disabled_password_choice' do
       before do
-        expect(OpenProject::Configuration).to receive(:disable_password_choice?).and_return(true)
+        expect(ProyeksiApp::Configuration).to receive(:disable_password_choice?).and_return(true)
       end
 
       it 'ignores password parameters and leaves the password unchanged' do

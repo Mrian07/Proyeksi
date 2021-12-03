@@ -53,7 +53,7 @@
                           <%= content_tag(role.builtin? ? 'em' : 'span', h(role.name)) %>
                           <%= link_to_function(
                                 icon_wrapper('icon-context icon-checkmark',"#{t(:button_check_all)}/#{t(:button_uncheck_all)}"),
-                                "OpenProject.helpers.toggleCheckboxesBySelector('input.role-#{role.id}')",
+                                "ProyeksiApp.helpers.toggleCheckboxesBySelector('input.role-#{role.id}')",
                                 class: 'no-decoration-on-hover',
                                 title: "#{t(:button_check_all)}/#{t(:button_uncheck_all)}") %>
                         </span>
@@ -69,7 +69,7 @@
                   <td>
                     <%= link_to_function(
                           icon_wrapper('icon-context icon-checkmark',"#{t(:button_check_all)}/#{t(:button_uncheck_all)}"),
-                          "OpenProject.helpers.toggleCheckboxesBySelector('.permission-#{permission.name} input')",
+                          "ProyeksiApp.helpers.toggleCheckboxesBySelector('.permission-#{permission.name} input')",
                           class: 'no-decoration-on-hover',
                           title: "#{t(:button_check_all)}/#{t(:button_uncheck_all)}") %>
                     <%= l_or_humanize(permission.name, prefix: 'permission_') %>

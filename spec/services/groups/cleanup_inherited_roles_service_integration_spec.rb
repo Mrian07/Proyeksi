@@ -39,7 +39,7 @@ describe Groups::CleanupInheritedRolesService, 'integration', type: :model do
     allow(Notifications::GroupMemberAlteredJob)
       .to receive(:perform_later)
 
-    allow(::OpenProject::Notifications)
+    allow(::ProyeksiApp::Notifications)
       .to receive(:send)
   end
 
@@ -62,9 +62,9 @@ describe Groups::CleanupInheritedRolesService, 'integration', type: :model do
       service_call
 
       user_members.each do |user_member|
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .to have_received(:send)
-          .with(OpenProject::Events::MEMBER_DESTROYED, member: user_member)
+          .with(ProyeksiApp::Events::MEMBER_DESTROYED, member: user_member)
       end
     end
 

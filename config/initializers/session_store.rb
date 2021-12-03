@@ -4,7 +4,7 @@
 
 # Be sure to restart your server when you modify this file.
 
-module OpenProject
+module ProyeksiApp
   ##
   # `expire_store_after` option specifically for the cache store.
   #
@@ -42,7 +42,7 @@ module OpenProject
   end
 end
 
-config = OpenProject::Configuration
+config = ProyeksiApp::Configuration
 
 # Enforce session storage for testing
 if Rails.env.test?
@@ -60,7 +60,7 @@ session_options = {
 }
 
 if session_store == :cache_store
-  # env OPENPROJECT_CACHE__STORE__SESSION__USER__TTL__DAYS
+  # env PROYEKSIAPP_CACHE__STORE__SESSION__USER__TTL__DAYS
   session_ttl = config['cache_store_session_user_ttl_days']&.to_i&.days || 3.days
 
   # Extend session cache entry TTL so that they can stay logged in when their
@@ -83,10 +83,10 @@ if session_store == :cache_store
     )
   end
 
-  ActionDispatch::Session::CacheStore.prepend OpenProject::ExpireStoreAfterOption
+  ActionDispatch::Session::CacheStore.prepend ProyeksiApp::ExpireStoreAfterOption
 end
 
-OpenProject::Application.config.session_store session_store, **session_options
+ProyeksiApp::Application.config.session_store session_store, **session_options
 
 ##
 # We use our own decorated session model to note the user_id

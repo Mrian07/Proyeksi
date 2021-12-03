@@ -13,19 +13,19 @@ Change your personal settings in My account. Here you can adapt, e.g. the langua
 
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Open My account settings](#open-my-account-settings)        | How to open your personal settings in OpenProject            |
+| [Open My account settings](#open-my-account-settings)        | How to open your personal settings in ProyeksiApp            |
 | [Change password](#change-password)                          | How to change my password                                    |
-| [Edit your user information](#edit-your-user-information)    | How to change the name or email address in OpenProject       |
-| [Profile settings: change your language, time zone or display of comments](#profile-settings) | How to change the language, time zone or display of comments in OpenProject |
+| [Edit your user information](#edit-your-user-information)    | How to change the name or email address in ProyeksiApp       |
+| [Profile settings: change your language, time zone or display of comments](#profile-settings) | How to change the language, time zone or display of comments in ProyeksiApp |
 | [Two-factor authentication](#two-factor-authentication-premium-feature) | How to set up a two-factor authentication                    |
-| [Notifications settings](#notifications-settings)            | How to change in-app notifications in OpenProject            |
-| [Email reminders](#email-reminders)                          | How to change email reminders sent by OpenProject            |
-| [Set an Avatar](#set-an-avatar)                              | How to set an avatar in OpenProject and change the profile picture |
+| [Notifications settings](#notifications-settings)            | How to change in-app notifications in ProyeksiApp            |
+| [Email reminders](#email-reminders)                          | How to change email reminders sent by ProyeksiApp            |
+| [Set an Avatar](#set-an-avatar)                              | How to set an avatar in ProyeksiApp and change the profile picture |
 | [Delete account](#delete-account)                            | How to delete my own account                                 |
 
 ## Open My account settings
 
-To open your personal settings in OpenProject, click on your user icon in the top right corner in the header of the application.
+To open your personal settings in ProyeksiApp, click on your user icon in the top right corner in the header of the application.
 
 Choose **My account**.
 
@@ -44,7 +44,7 @@ Press the blue **Save** button in order to confirm the password changes.
 ![change password](1572880507527.png)
 
 <div class="alert alert-info" role="alert">
-Note: You cannot reset your Google password in OpenProject. If you authenticate with a Google/Gmail account, please go to your Google account administration in order to change your password.
+Note: You cannot reset your Google password in ProyeksiApp. If you authenticate with a Google/Gmail account, please go to your Google account administration in order to change your password.
 </div>
 
 ## Edit your user information
@@ -55,7 +55,7 @@ Here you can adapt the information and **save** your changes with the blue butto
 
 ## Profile settings
 
-Within the My account settings you can change the language of OpenProject, adapt the time zone and change the order how comments are displayed in the Activity list for work packages.
+Within the My account settings you can change the language of ProyeksiApp, adapt the time zone and change the order how comments are displayed in the Activity list for work packages.
 
 Also, you can activate a **warning if you are leaving a work package with unsaved changes**.
 
@@ -65,13 +65,13 @@ Additionally, you can activate to **auto-hide success notifications** from the s
 
 ### Change your language
 
-To change the language in OpenProject, navigate to the **My account** settings and choose the menu point **Settings**.
+To change the language in ProyeksiApp, navigate to the **My account** settings and choose the menu point **Settings**.
 
 Here you can choose between multiple languages.
 
 ![select a language](1572882728878.png)
 
-OpenProject is translated to more than 30 languages, like German, Chinese, French, Italian, Korean, Latvian, Lithuanian, Polish, Portuguese, Russian, Spanish, Turkish and many more. If you do not see your preferred language in the My account settings, the language needs to be activated by your system administrator in the [system's settings](../../system-admin-guide/system-settings/display-settings).
+ProyeksiApp is translated to more than 30 languages, like German, Chinese, French, Italian, Korean, Latvian, Lithuanian, Polish, Portuguese, Russian, Spanish, Turkish and many more. If you do not see your preferred language in the My account settings, the language needs to be activated by your system administrator in the [system's settings](../../system-admin-guide/system-settings/display-settings).
 
 Pressing the blue **Save** button will save your changes.
 
@@ -101,7 +101,7 @@ There are two personal settings available for the [Backlogs module](../../user-g
 
 ## Two-factor authentication (Premium feature)
 
-In order to activate the two-factor authentication for your OpenProject installation, navigate to your **My account** and choose the **Two-factor authentication** in the menu.
+In order to activate the two-factor authentication for your ProyeksiApp installation, navigate to your **My account** and choose the **Two-factor authentication** in the menu.
 
 ![Two-factor authentication](1571992032476.png)
 
@@ -111,7 +111,7 @@ You can either use your mobile phone number to receive the second factor via SMS
 
 ![add new 2fa device](1572876883531.png)
 
-### Register your mobile phone number for delivery of OpenProject one-time passwords.
+### Register your mobile phone number for delivery of ProyeksiApp one-time passwords.
 
 To register your phone number to receive a one time password via SMS, click on the **Register device** button under the **Use your mobile phone** section.
 
@@ -130,7 +130,7 @@ If you have created backup codes before, they will be invalidated and will no lo
 
 ### Use your app-based authenticator
 
-Register an application authenticator for use with OpenProject using the time-based one-time password authentication standard. Common examples are Google Authenticator or Authy.
+Register an application authenticator for use with ProyeksiApp using the time-based one-time password authentication standard. Common examples are Google Authenticator or Authy.
 
 Click the grey **Register device** button to register an authentication app. Open your app and follow the instructions to add a new application. The easiest way is to scan the barcode. Otherwise, you can register the application manually by entering the displayed details.
 
@@ -175,9 +175,9 @@ You can also opt-in to receive **email alerts for other items (that are not work
 
 ## Set an avatar
 
-To change your profile picture in OpenProject you can set an avatar in your My account settings. Navigate to **Avatar** in the menu.
+To change your profile picture in ProyeksiApp you can set an avatar in your My account settings. Navigate to **Avatar** in the menu.
 
-OpenProject uses Gravatar as default profile image. It displays a preview of your avatar.
+ProyeksiApp uses Gravatar as default profile image. It displays a preview of your avatar.
 
 Also, you can upload a **Custom Avatar** by choosing a Avatar to be uploaded from a file. Press the blue **Update** button to change your profile picture.
 

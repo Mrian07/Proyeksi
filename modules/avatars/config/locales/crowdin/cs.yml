@@ -25,11 +25,11 @@ cs:
       Náhled avataru bude zobrazen před odesláním, jakmile jste vybrali obrázek.
     text_change_gravatar_html: 'Chcete-li změnit nebo přidat Gravatar pro vaši e-mailovou adresu, přejděte na %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject vám umožňuje nahrát vlastní avatar.
+      ProyeksiApp vám umožňuje nahrát vlastní avatar.
     text_local_avatar_over_gravatar: |
       Pokud ho nastavíte, tento vlastní avatar se používá v předstihu před gravatarem výše.
     text_your_current_gravatar: |
-      OpenProject používá váš gravatar, pokud jste ho zaregistrovali, nebo výchozí obrázek nebo ikonu, pokud existuje.
+      ProyeksiApp používá váš gravatar, pokud jste ho zaregistrovali, nebo výchozí obrázek nebo ikonu, pokud existuje.
       Aktuální gravatar je následující:
     settings:
       enable_gravatars: 'Povolit uživatelské gravatary'

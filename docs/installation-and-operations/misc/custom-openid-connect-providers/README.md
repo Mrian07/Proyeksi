@@ -1,6 +1,6 @@
 # Custom OpenID Connect providers
 
-OpenProject's admin interface only allows you to configure providers from a pre-defined list.
+ProyeksiApp's admin interface only allows you to configure providers from a pre-defined list.
 This includes Google and Azure right now.
 
 You can still use an arbitrary provider. But for the time being there is no user interface for this.
@@ -104,7 +104,7 @@ You have to check with your identity provider how these values must be called.
 
 In the following example we request a list of ACR values. One of which must be satisfied
 (i.e. returned in the ID token by the identity provider, meaning that the requested authentication mechanism was used)
-for the login in OpenProject to succeed. If none of the requested claims are present, authentication will fail.
+for the login in ProyeksiApp to succeed. If none of the requested claims are present, authentication will fail.
 
 ```ruby
 options = { ... }
@@ -122,7 +122,7 @@ options["claims"] = {
 #### Non-essential claims
 
 You may also request non-essential claims. In the example above this indicates that users should preferably be authenticated using
-those mechanisms but it's not strictly required. The login into OpenProject will then work even if none of the claims
+those mechanisms but it's not strictly required. The login into ProyeksiApp will then work even if none of the claims
 are returned by the identity provider.
 
 **The acr_values option**

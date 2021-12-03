@@ -2,7 +2,7 @@
 
 
 
-require Rails.root.join('config/constants/open_project/activity')
+require Rails.root.join('config/constants/proyeksi_app/activity')
 
 module Redmine #:nodoc:
   class PluginError < StandardError
@@ -163,27 +163,27 @@ module Redmine #:nodoc:
       id.to_s <=> other.id.to_s
     end
 
-    # Sets a requirement on the OpenProject version.
+    # Sets a requirement on the ProyeksiApp version.
     # Raises a PluginRequirementError exception if the requirement is not met.
     #
     # It uses the same syntax as rubygems requirements.
     # Examples
-    #   # Requires exactly OpenProject 1.1.1
-    #   requires_openproject "1.1.1"
-    #   requires_openproject "= 1.1.1"
+    #   # Requires exactly ProyeksiApp 1.1.1
+    #   requires_proyeksiapp "1.1.1"
+    #   requires_proyeksiapp "= 1.1.1"
 
-    #   # Requires OpenProject 1.1.x
-    #   requires_openproject "~> 1.1.0"
+    #   # Requires ProyeksiApp 1.1.x
+    #   requires_proyeksiapp "~> 1.1.0"
 
-    #   # Requires OpenProject between 1.1.0 and 1.1.5 or higher
-    #   requires_openproject ">= 1.1.0", "<= 1.1.5"
+    #   # Requires ProyeksiApp between 1.1.0 and 1.1.5 or higher
+    #   requires_proyeksiapp ">= 1.1.0", "<= 1.1.5"
 
-    def requires_openproject(*args)
+    def requires_proyeksiapp(*args)
       required_version = Gem::Requirement.new(*args)
-      op_version = Gem::Version.new(OpenProject::VERSION.to_semver)
+      op_version = Gem::Version.new(ProyeksiApp::VERSION.to_semver)
 
       unless required_version.satisfied_by? op_version
-        raise PluginRequirementError.new("#{id} plugin requires OpenProject version #{required_version} but current version is #{op_version}.")
+        raise PluginRequirementError.new("#{id} plugin requires ProyeksiApp version #{required_version} but current version is #{op_version}.")
       end
 
       true
@@ -287,13 +287,13 @@ module Redmine #:nodoc:
     def permission(name, actions, options = {})
       if @project_scope
         mod, mod_options = @project_scope
-        OpenProject::AccessControl.map do |map|
+        ProyeksiApp::AccessControl.map do |map|
           map.project_module(mod, mod_options) do |map|
             map.permission(name, actions, options)
           end
         end
       else
-        OpenProject::AccessControl.map { |map| map.permission(name, actions, options) }
+        ProyeksiApp::AccessControl.map { |map| map.permission(name, actions, options) }
       end
     end
 
@@ -334,7 +334,7 @@ module Redmine #:nodoc:
     # Note that :view_scrums permission is required to view these events in the activity view.
     def activity_provider(*args)
       ActiveSupport::Deprecation.warn('Use ActsAsOpEngine#activity_provider instead.')
-      OpenProject::Activity.register(*args)
+      ProyeksiApp::Activity.register(*args)
     end
 
     # Registers a wiki formatter.

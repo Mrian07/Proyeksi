@@ -1,6 +1,6 @@
 
 
-class Budgets::Hooks::WorkPackageHook < OpenProject::Hook::ViewListener
+class Budgets::Hooks::WorkPackageHook < ProyeksiApp::Hook::ViewListener
   # Updates the cost object after a move
   #
   # Context:

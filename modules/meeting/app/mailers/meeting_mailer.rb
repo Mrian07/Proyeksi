@@ -9,7 +9,7 @@ class MeetingMailer < UserMailer
     @meeting = content.meeting
     @content_type = content_type
 
-    open_project_headers 'Project' => @meeting.project.identifier,
+    proyeksi_app_headers 'Project' => @meeting.project.identifier,
                          'Meeting-Id' => @meeting.id
 
     User.execute_as(user) do
@@ -22,7 +22,7 @@ class MeetingMailer < UserMailer
     @meeting = content.meeting
     @content_type = content_type
 
-    open_project_headers 'Project' => @meeting.project.identifier,
+    proyeksi_app_headers 'Project' => @meeting.project.identifier,
                          'Meeting-Id' => @meeting.id
     headers['Content-Type'] = 'text/calendar; charset=utf-8; method="PUBLISH"; name="meeting.ics"'
     headers['Content-Transfer-Encoding'] = '8bit'

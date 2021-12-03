@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe AccountController, type: :controller do
-  class UserHook < OpenProject::Hook::ViewListener
+  class UserHook < ProyeksiApp::Hook::ViewListener
     attr_reader :registered_user, :first_login_user
 
     def user_registered(context)
@@ -181,12 +181,12 @@ describe AccountController, type: :controller do
 
       context 'with a relative url root' do
         before do
-          @old_relative_url_root = OpenProject::Configuration['rails_relative_url_root']
-          OpenProject::Configuration['rails_relative_url_root'] = '/openproject'
+          @old_relative_url_root = ProyeksiApp::Configuration['rails_relative_url_root']
+          ProyeksiApp::Configuration['rails_relative_url_root'] = '/proyeksiapp'
         end
 
         after do
-          OpenProject::Configuration['rails_relative_url_root'] = @old_relative_url_root
+          ProyeksiApp::Configuration['rails_relative_url_root'] = @old_relative_url_root
         end
 
         it 'should redirect to the same subdirectory with an absolute path' do
@@ -194,9 +194,9 @@ describe AccountController, type: :controller do
                params: {
                  username: admin.login,
                  password: 'adminADMIN!',
-                 back_url: 'http://test.host/openproject/work_packages/show/1'
+                 back_url: 'http://test.host/proyeksiapp/work_packages/show/1'
                }
-          expect(response).to redirect_to '/openproject/work_packages/show/1'
+          expect(response).to redirect_to '/proyeksiapp/work_packages/show/1'
         end
 
         it 'should redirect to the same subdirectory with a relative path' do
@@ -204,9 +204,9 @@ describe AccountController, type: :controller do
                params: {
                  username: admin.login,
                  password: 'adminADMIN!',
-                 back_url: '/openproject/work_packages/show/1'
+                 back_url: '/proyeksiapp/work_packages/show/1'
                }
-          expect(response).to redirect_to '/openproject/work_packages/show/1'
+          expect(response).to redirect_to '/proyeksiapp/work_packages/show/1'
         end
 
         it 'should not redirect to another subdirectory with an absolute path' do
@@ -234,7 +234,7 @@ describe AccountController, type: :controller do
                params: {
                  username: admin.login,
                  password: 'adminADMIN!',
-                 back_url: 'http://test.host/openproject/../foo/work_packages/show/1'
+                 back_url: 'http://test.host/proyeksiapp/../foo/work_packages/show/1'
                }
           expect(response).to redirect_to my_page_path
         end
@@ -270,7 +270,7 @@ describe AccountController, type: :controller do
         end
 
         before do
-          allow(::OpenProject::Plugins::AuthPlugin)
+          allow(::ProyeksiApp::Plugins::AuthPlugin)
             .to(receive(:login_provider_for))
             .and_return(sso_provider)
           login_as user
@@ -364,7 +364,7 @@ describe AccountController, type: :controller do
 
     context 'with disabled password login' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
         post :login
       end
@@ -382,7 +382,7 @@ describe AccountController, type: :controller do
           login: 's.scallywag',
           firstname: 'Scarlet',
           lastname: 'Scallywag',
-          mail: 's.scallywag@openproject.com',
+          mail: 's.scallywag@proyeksiapp.com',
           auth_source_id: auth_source_id
         }
       end
@@ -402,7 +402,7 @@ describe AccountController, type: :controller do
         render_views
 
         before do
-          allow(OpenProject::Enterprise).to receive(:user_limit_reached?).and_return(true)
+          allow(ProyeksiApp::Enterprise).to receive(:user_limit_reached?).and_return(true)
 
           post :login, params: { username: 'foo', password: 'bar' }
         end
@@ -494,7 +494,7 @@ describe AccountController, type: :controller do
   describe 'POST #change_password' do
     context 'with disabled password login' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
         post :change_password
       end
 
@@ -538,7 +538,7 @@ describe AccountController, type: :controller do
 
       context 'and password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
           get :register
         end
@@ -580,7 +580,7 @@ describe AccountController, type: :controller do
   context 'POST #register' do
     context 'with self registration on automatic' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
         allow(Setting).to receive(:self_registration).and_return('3')
       end
 
@@ -649,7 +649,7 @@ describe AccountController, type: :controller do
           end
 
           before do
-            allow(OpenProject::Enterprise).to receive(:user_limit_reached?).and_return(true)
+            allow(ProyeksiApp::Enterprise).to receive(:user_limit_reached?).and_return(true)
 
             post :register, params: params
           end
@@ -677,7 +677,7 @@ describe AccountController, type: :controller do
 
       context 'with password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
           post :register
         end
@@ -728,7 +728,7 @@ describe AccountController, type: :controller do
 
       context 'with password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
           post :register
         end
@@ -793,7 +793,7 @@ describe AccountController, type: :controller do
 
       context 'with password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
           post :register
         end
@@ -861,7 +861,7 @@ describe AccountController, type: :controller do
 
       context 'with password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
         end
 
         describe 'login' do
@@ -900,7 +900,7 @@ describe AccountController, type: :controller do
     let(:token) { Token::Invitation.create!(user_id: user.id) }
 
     before do
-      allow(OpenProject::Enterprise).to receive(:user_limit_reached?).and_return(true)
+      allow(ProyeksiApp::Enterprise).to receive(:user_limit_reached?).and_return(true)
 
       post :activate, params: { token: token.value }
     end

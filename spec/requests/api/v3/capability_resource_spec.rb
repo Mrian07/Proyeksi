@@ -62,7 +62,7 @@ describe 'API v3 capabilities resource', type: :request, content_type: :json do
           .at_path('_type')
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end
@@ -213,7 +213,7 @@ describe 'API v3 capabilities resource', type: :request, content_type: :json do
           .at_path('_type')
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end
@@ -237,7 +237,7 @@ describe 'API v3 capabilities resource', type: :request, content_type: :json do
           .at_path('_type')
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end

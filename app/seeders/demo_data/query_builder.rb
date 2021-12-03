@@ -139,7 +139,7 @@ module DemoData
     end
 
     def backlogs_present?
-      @backlogs_present = defined? OpenProject::Backlogs if @backlogs_present.nil?
+      @backlogs_present = defined? ProyeksiApp::Backlogs if @backlogs_present.nil?
 
       @backlogs_present
     end

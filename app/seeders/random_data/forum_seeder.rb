@@ -8,8 +8,8 @@ module RandomData
       print_status ' ↳ Creating forum with posts'
 
       forum = Forum.create! project: project,
-                            name: I18n.t("seeders.#{OpenProject::Configuration['edition']}.demo_data.board.name"),
-                            description: I18n.t("seeders.#{OpenProject::Configuration['edition']}.demo_data.board.description")
+                            name: I18n.t("seeders.#{ProyeksiApp::Configuration['edition']}.demo_data.board.name"),
+                            description: I18n.t("seeders.#{ProyeksiApp::Configuration['edition']}.demo_data.board.description")
 
       rand(30).times do
         print_status '.'

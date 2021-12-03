@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.20
+  title: ProyeksiApp 5.0.20
   sidebar_navigation:
       title: 5.0.20
   release_version: 5.0.20
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.20
+# ProyeksiApp 5.0.20
 
-OpenProject 5.0.20 contains a Rail security update. It upgrades Rails to
+ProyeksiApp 5.0.20 contains a Rail security update. It upgrades Rails to
 4.2.7.1 to address the following
 CVEs:
 

@@ -9,11 +9,11 @@ Content-Type: multipart/alternative;
  boundary="--==_mimepart_6050bdd0cb97_2257939a8755e5";
  charset=UTF-8
 Content-Transfer-Encoding: 7bit
-X-OpenProject-Project: test
-X-OpenProject-Issue-Id: 34540
-X-OpenProject-Issue-Author: admin
-X-OpenProject-Type: WorkPackage
-X-OpenProject-Issue-Assignee: reader
+X-ProyeksiApp-Project: test
+X-ProyeksiApp-Issue-Id: 34540
+X-ProyeksiApp-Issue-Author: admin
+X-ProyeksiApp-Type: WorkPackage
+X-ProyeksiApp-Issue-Assignee: reader
 
 
 ----==_mimepart_6050bdd0cb97_2257939a8755e5

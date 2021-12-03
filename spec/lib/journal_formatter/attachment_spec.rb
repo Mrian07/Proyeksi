@@ -2,7 +2,7 @@
 
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper.rb')
 
-describe OpenProject::JournalFormatter::Attachment do
+describe ProyeksiApp::JournalFormatter::Attachment do
   include ApplicationHelper
   include ActionView::Helpers::TagHelper
   # WARNING: the order of the modules is important to ensure that url_for of
@@ -14,7 +14,7 @@ describe OpenProject::JournalFormatter::Attachment do
     { only_path: true }
   end
 
-  let(:klass) { OpenProject::JournalFormatter::Attachment }
+  let(:klass) { ProyeksiApp::JournalFormatter::Attachment }
   let(:instance) { klass.new(journal) }
   let(:id) { 1 }
   let(:journal) do
@@ -39,7 +39,7 @@ describe OpenProject::JournalFormatter::Attachment do
 
       context 'WITH a relative_url_root' do
         before do
-          allow(OpenProject::Configuration)
+          allow(ProyeksiApp::Configuration)
             .to receive(:rails_relative_url_root)
                   .and_return('/blubs')
         end

@@ -12,5 +12,5 @@ import { ProjectsResourceService } from './projects/projects.service';
     ProjectsResourceService,
   ],
 })
-export class OpenProjectStateModule {
+export class ProyeksiAppStateModule {
 }

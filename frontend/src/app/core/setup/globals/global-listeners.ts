@@ -51,7 +51,7 @@ import { performAnchorHijacking } from './global-listeners/link-hijacking';
     // Global submitting hook,
     // necessary to avoid a data loss warning on beforeunload
     $(document).on('submit', 'form', () => {
-      window.OpenProject.pageIsSubmitted = true;
+      window.ProyeksiApp.pageIsSubmitted = true;
     });
 
     // Add to content if warnings displayed
@@ -65,7 +65,7 @@ import { performAnchorHijacking } from './global-listeners/link-hijacking';
     // Global beforeunload hook
     $(window).on('beforeunload', (e:JQuery.TriggeredEvent) => {
       const event = e.originalEvent as BeforeUnloadEvent;
-      if (window.OpenProject.pageWasEdited && !window.OpenProject.pageIsSubmitted) {
+      if (window.ProyeksiApp.pageWasEdited && !window.ProyeksiApp.pageIsSubmitted) {
         // Cancel the event
         event.preventDefault();
         // Chrome requires returnValue to be set

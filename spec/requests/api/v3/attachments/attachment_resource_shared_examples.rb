@@ -312,7 +312,7 @@ shared_examples 'an APIv3 attachment resource', type: :request, content_type: :j
         allow(Redmine::Acts::Attachable)
           .to receive(:attachables)
           .and_return(Redmine::Acts::Attachable.attachables.select do |a|
-            permission = OpenProject::AccessControl.permission(a.attachable_options[:add_on_new_permission])
+            permission = ProyeksiApp::AccessControl.permission(a.attachable_options[:add_on_new_permission])
             !permission || !permission.public?
           end)
 
@@ -424,7 +424,7 @@ shared_examples 'an APIv3 attachment resource', type: :request, content_type: :j
           expect(subject.headers['Content-Type'])
             .to eql mock_file.content_type
 
-          max_age = OpenProject::Configuration.fog_download_url_expires_in.to_i - 10
+          max_age = ProyeksiApp::Configuration.fog_download_url_expires_in.to_i - 10
 
           expect(subject.headers["Cache-Control"]).to eq "public, max-age=#{max_age}"
           expect(subject.headers["Expires"]).to be_present
@@ -483,7 +483,7 @@ shared_examples 'an APIv3 attachment resource', type: :request, content_type: :j
           expect(subject.headers['Location'])
             .to eql external_url
 
-          max_age = OpenProject::Configuration.fog_download_url_expires_in.to_i - 10
+          max_age = ProyeksiApp::Configuration.fog_download_url_expires_in.to_i - 10
 
           expect(subject.headers["Cache-Control"]).to eq "public, max-age=#{max_age}"
           expect(subject.headers["Expires"]).to be_present

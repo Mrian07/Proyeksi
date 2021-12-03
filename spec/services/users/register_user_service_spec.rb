@@ -90,7 +90,7 @@ describe Users::RegisterUserService do
   describe 'ensure_user_limit_not_reached!',
            with_settings: { self_registration: 1 } do
     before do
-      expect(OpenProject::Enterprise)
+      expect(ProyeksiApp::Enterprise)
         .to(receive(:user_limit_reached?))
         .and_return(limit_reached)
     end

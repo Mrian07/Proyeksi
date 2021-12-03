@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   resources :projects, only: [] do
     resources :documents, only: %i[create new index]
   end

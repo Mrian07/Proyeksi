@@ -123,14 +123,14 @@ it:
         text_cannot_scan: |
           Se non puoi scansionare il codice, lo puoi inserire manualmente usando i seguenti dati:
         description: |
-          Registra un'applicazione di autenticazione da utilizzare con OpenProject usando una password standard monouso a tempo.
+          Registra un'applicazione di autenticazione da utilizzare con ProyeksiApp usando una password standard monouso a tempo.
           Gli esempi più comuni sono Google Authenticator o Authy.
       sms:
         title: 'Utilizza il tuo telefono cellulare'
         redacted_identifier: 'Dispositivo mobile (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, ti abbiamo inviato un codice di autenticazione via %{delivery_channel}'
         description: |
-          Registra il numero del tuo cellulare per ricevere le password monouso di OpenProject.
+          Registra il numero del tuo cellulare per ricevere le password monouso di ProyeksiApp.
     sns:
       delivery_failed: 'Consegna SNS non riuscita:'
     message_bird:

@@ -1,9 +1,9 @@
 module Budgets
   class Engine < ::Rails::Engine
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     register 'budgets',
-             author_url: 'https://www.openproject.org',
+             author_url: 'https://www.proyeksiapp.org',
              bundled: true,
              name: 'Budgets' do
       project_module :budgets do

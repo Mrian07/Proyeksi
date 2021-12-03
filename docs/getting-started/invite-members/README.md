@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Invite members
   priority: 800
-description: Invite team members to OpenProject.
+description: Invite team members to ProyeksiApp.
 robots: index, follow
 keywords: invite members, add users
 ---
@@ -24,11 +24,11 @@ In order to see a project and work in it, you have to be a member of a project. 
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [View members](#view-members)                                | View the list of members in your project.                    |
 | [Add existing users](#add-existing-users)                    | Add existing users, groups or placeholder users to a project. |
-| [Invite new members](#invite-new-members)                    | Invite new users to join a project in OpenProject.           |
+| [Invite new members](#invite-new-members)                    | Invite new users to join a project in ProyeksiApp.           |
 | [Groups as project members](#behavior-of-groups-as-project-members) | Understand the effects of adding groups as project members.  |
 | [Placeholder users as project members](#behavior-of-placeholder-users-as-project-members) | Understand how to differentiate between regular users and placeholder users. |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Invite-and-Manage-Members.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Invite-and-Manage-Members.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## View members
 
@@ -54,15 +54,15 @@ Please note that you will have to click on the new member's name or press the En
 
 ## Invite new members
 
-You can also invite users who do not have an OpenProject account, yet. There are different ways to do it.
+You can also invite users who do not have an ProyeksiApp account, yet. There are different ways to do it.
 
 **Invite in members module**
 
 [Select the project](../projects/#open-an-existing-project) for which you want to add members. In the project menu on the left, select the **Members** module.
 
-Type in the email address of the new member. If OpenProject does not find an existing user, the **Invite** information will automatically be put before the email address. Press the Enter key or select the text "Invite ...". Assign a role to this new member and click the blue **Add** button.
+Type in the email address of the new member. If ProyeksiApp does not find an existing user, the **Invite** information will automatically be put before the email address. Press the Enter key or select the text "Invite ...". Assign a role to this new member and click the blue **Add** button.
 
-An email invitation will be sent out to the user with a link to [create an account](../sign-in-registration/#create-a-new-account) for OpenProject.
+An email invitation will be sent out to the user with a link to [create an account](../sign-in-registration/#create-a-new-account) for ProyeksiApp.
 
 ![invite-new-members](1566224961670.png)
 
@@ -78,13 +78,13 @@ Once clicked on **Invite user**, a pop up comes up where you decide to which pro
 
 **Invite within a work package**
 
-When you are working in the work package list, you can also invite users from there. For example when you want to set an assignee for a work package that has not got access to OpenProject yet, you can select Invite from the drop down. The same applies to accountables or custom fields for your project.
+When you are working in the work package list, you can also invite users from there. For example when you want to set an assignee for a work package that has not got access to ProyeksiApp yet, you can select Invite from the drop down. The same applies to accountables or custom fields for your project.
 
 ![Invite-user-assignee](Invite-user-assignee.png)
 
 
 
-You can now collaborate with your team in OpenProject. Newly invited users will be shown with a letter symbol next to their name.
+You can now collaborate with your team in ProyeksiApp. Newly invited users will be shown with a letter symbol next to their name.
 
 Please note that removing a member who has not accepted the invite yet from a project will lead to the deletion of this user, which can't be reversed.
 

@@ -159,7 +159,7 @@ describe Admin::Settings::ProjectsSettingsController, type: :controller do
 
       describe 'PATCH #update with password login enabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
 
           patch 'update', params: { tab: 'authentication', settings: new_settings }
         end
@@ -195,7 +195,7 @@ describe Admin::Settings::ProjectsSettingsController, type: :controller do
 
       describe 'PATCH #update with password login disabled' do
         before do
-          allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+          allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
 
           patch 'update', params: { tab: 'authentication', settings: new_settings }
         end

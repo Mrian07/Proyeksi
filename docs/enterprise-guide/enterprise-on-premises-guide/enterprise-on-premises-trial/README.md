@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Enterprise on-premises trial
   priority: 999
-description: Create an OpenProject Enterprise Edition trial installation.
+description: Create an ProyeksiApp Enterprise Edition trial installation.
 robots: index, follow
 keywords: Enterprise Edition trial, EOP
 ---
 # Create an Enterprise on-premises edition trial
 
-You can **test the OpenProject Enterprise on-premises edition 14 days for free**. It will extend your current Community edition with the premium features so you can thoroughly test those premium functionalities.
+You can **test the ProyeksiApp Enterprise on-premises edition 14 days for free**. It will extend your current Community edition with the premium features so you can thoroughly test those premium functionalities.
 
 Please go to [our website](https://www.openproject.org/enterprise-edition/) and press the green **Get free trial license** button.
 

@@ -207,7 +207,7 @@ describe Capabilities::Scopes::Default, type: :model do
              global ? nil : project.id]
           }
 
-          OpenProject::AccessControl
+          ProyeksiApp::AccessControl
             .contract_actions_map
             .map { |_, v| v[:actions].map { |vk, vv| vv.map { |vvv| item.call(vk, vvv, v[:global], v[:module]) } } }
             .flatten(2)
@@ -234,7 +234,7 @@ describe Capabilities::Scopes::Default, type: :model do
              global ? nil : project.id]
           }
 
-          OpenProject::AccessControl
+          ProyeksiApp::AccessControl
             .contract_actions_map
             .map { |_, v| v[:actions].map { |vk, vv| vv.map { |vvv| item.call(vk, vvv, v[:global], v[:module]) } } }
             .flatten(2)

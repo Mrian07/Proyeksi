@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.8
+  title: ProyeksiApp 3.0.8
   sidebar_navigation:
       title: 3.0.8
   release_version: 3.0.8
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 3.0.8
+# ProyeksiApp 3.0.8
 
 The [3.0.8 bugfix release of
-OpenProject](https://github.com/opf/openproject/tree/v3.0.8) addresses a
+ProyeksiApp](https://github.com/opf/openproject/tree/v3.0.8) addresses a
 variety of bugs from filtering
 ([\#7169](https://community.openproject.org/work_packages/7169 "Filtering for assignee's role returns wrong results (closed)"))
 to accessibility
@@ -22,23 +22,23 @@ will still answer while large projects are copied. Please bear in mind
 that for this to happen you need to have [delayed job
 running](https://github.com/collectiveidea/delayed_job).
 
-For a complete list of changes to OpenProject, please refer to the
+For a complete list of changes to ProyeksiApp, please refer to the
 [version’s
 packages](https://community.openproject.com/projects/openproject/roadmap).
 
-However, this is only half of the truth. With the OpenProject 3.0.8
+However, this is only half of the truth. With the ProyeksiApp 3.0.8
 release we chose to alter our release process. While the changes for the
-release process of OpenProject itself are minor, you will notice that
+release process of ProyeksiApp itself are minor, you will notice that
 the [plugins listed on
-OpenProject.org](https://community.openproject.org/projects/plugins/) now all have
+ProyeksiApp.org](https://community.openproject.org/projects/plugins/) now all have
 3.0.8 as their most recent version. This was done with the intend of
 easing deployment. Subsequent releases will follow this schema as well.
 It is our commitment to ensure that plugins with a specific release
-number (e.g. 3.0.8) will work flawlessly with an OpenProject of the same
-number. We therefore encourage you to always update OpenProject and
+number (e.g. 3.0.8) will work flawlessly with an ProyeksiApp of the same
+number. We therefore encourage you to always update ProyeksiApp and
 installed plugins to the same release in synch. The most easy way of
 doing this is to follow the stable branches for every plugin and
-OpenProject.
+ProyeksiApp.
 
 We are aware that this change in versioning has some weird side effects.
 The most noticeable is the [costs

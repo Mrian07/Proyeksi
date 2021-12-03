@@ -24,7 +24,7 @@ lt:
     label_synchronize: 'Sinchronizuoti'
     settings:
       name_attribute: 'LDAP grupės pavadinimo atributas'
-      name_attribute_text: 'LDAP atributas, kuris bus naudojamas OpenProject grupės, sukurtos pagal filtrą, pavadinimui'
+      name_attribute_text: 'LDAP atributas, kuris bus naudojamas ProyeksiApp grupės, sukurtos pagal filtrą, pavadinimui'
     synchronized_filters:
       add_new: 'Pridėti sinchronizuotą LDAP filtrą'
       singular: 'LDAP grupių sinchronizavimo filtras'
@@ -36,11 +36,11 @@ lt:
       destroy:
         title: 'Panaikinti sinchronizavimo filtrą %{name}'
         confirmation: "Jei tęsite, sinchronizavimo filtras %{name} ir visos grupės (%{groups_count}), kurias jis sukūrė, bus panaikintos."
-        removed_groups: "Dėmesio: Tai OpenProjecte panaikins tokias grupes ir ištrins jas iš visų projektų!"
+        removed_groups: "Dėmesio: Tai ProyeksiAppe panaikins tokias grupes ir ištrins jas iš visų projektų!"
         verification: "Naikinimo patvirtinimui įveskite filtro vardą %{name}."
       form:
-        group_name_attribute_text: 'Įveskite LDAP grupės atributą, kuris bus naudojamas nustatant OpenProject grupės pavadinimą.'
-        filter_string_text: 'Įveskite RFC4515 LDAP filtrą, kuris iš jūsų LDAP grąžina sinchronizavimui su OpenProjectu reikalingas grupes.'
+        group_name_attribute_text: 'Įveskite LDAP grupės atributą, kuris bus naudojamas nustatant ProyeksiApp grupės pavadinimą.'
+        filter_string_text: 'Įveskite RFC4515 LDAP filtrą, kuris iš jūsų LDAP grąžina sinchronizavimui su ProyeksiAppu reikalingas grupes.'
         base_dn_text: >
           Įveskite paieškos pagrindo DN norėdami naudoti šį filtrą. Jis turi būti pasirinktos LDAP jungties pagrindo DN viduje.
           Palikite šį nustatymą tuščia, jei norite naudoti LDAP jungties pagrindo DN.
@@ -49,14 +49,14 @@ lt:
       destroy:
         title: 'Išimti sinchronizuotą grupę %{name}'
         confirmation: "Jei tęsite, sinchronizuota grupė %{name} ir visi %{users_count} per ją sinchronizuotų naudotojų bus pašalinti."
-        info: "Pastaba: OpenProject grupė pati ir nariai, pridėti už šios LDAP sinchronizacijos, nebus pašalinti."
+        info: "Pastaba: ProyeksiApp grupė pati ir nariai, pridėti už šios LDAP sinchronizacijos, nebus pašalinti."
         verification: "Įveskite grupės pavadinimą %{name}, kad patvirtintumėte naikinimą."
       help_text_html: |
-        Šis modulis leidžia jums nustatyti sinchronizavimą tarp LDAP ir OpenProject grupių.
-        Jis remiasi tuo, kad LDAP grupės turi naudoti <em>groupOfNames / memberOf</em> atributų rinkinį, kad dirbtų su OpenProject.
+        Šis modulis leidžia jums nustatyti sinchronizavimą tarp LDAP ir ProyeksiApp grupių.
+        Jis remiasi tuo, kad LDAP grupės turi naudoti <em>groupOfNames / memberOf</em> atributų rinkinį, kad dirbtų su ProyeksiApp.
         <br/>
         Grupės yra sinchronizuojamos kas valandą naudojant cron užduotį.
-        <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Prašome pasiskaityti dokumentaciją šia tema (angliškai)</a>.
+        <a href="https://www.proyeksiapp.org/help/administration/manage-ldap-authentication/">Prašome pasiskaityti dokumentaciją šia tema (angliškai)</a>.
       no_results: 'Nerasta sinchronizuotų grupių.'
       no_members: 'Grupė dar neturi sinchronizuotų narių.'
       plural: 'Sinchronizuotos LDAP grupės'
@@ -64,7 +64,7 @@ lt:
       form:
         auth_source_text: 'Pasirinkite kuri LDAP jungtis turėtų būti naudojama.'
         sync_users_text: >
-          Jei jūs įjungsite šį nustatymą, visiems rastiems naudotojams bus automatiškai sukurti OpenProject naudotojai. Neįjungus, tik dabar esantys OpenProject naudotojai bus pridėti į grupes.
+          Jei jūs įjungsite šį nustatymą, visiems rastiems naudotojams bus automatiškai sukurti ProyeksiApp naudotojai. Neįjungus, tik dabar esantys ProyeksiApp naudotojai bus pridėti į grupes.
         dn_text: 'Įveskite LDAP grupės pilną DN.'
-        group_text: 'Parinkite esamą OpenProject grupę, su kuria būtų sinchronizuojami LDAP grupės nariai'
+        group_text: 'Parinkite esamą ProyeksiApp grupę, su kuria būtų sinchronizuojami LDAP grupės nariai'
 

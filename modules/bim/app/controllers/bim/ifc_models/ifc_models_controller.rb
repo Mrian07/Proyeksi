@@ -151,7 +151,7 @@ module Bim
       private
 
       def prepare_form(ifc_model)
-        return unless OpenProject::Configuration.direct_uploads?
+        return unless ProyeksiApp::Configuration.direct_uploads?
 
         call = ::Attachments::PrepareUploadService
                  .bypass_whitelist(user: current_user)

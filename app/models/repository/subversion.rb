@@ -2,20 +2,20 @@
 
 
 
-require 'open_project/scm/adapters/subversion'
+require 'proyeksi_app/scm/adapters/subversion'
 
 class Repository::Subversion < Repository
   validates_presence_of :url
   validates_format_of :url, with: /\A(http|https|svn(\+[^\s:\/\\]+)?|file):\/\/.+\z/i
 
   def self.scm_adapter_class
-    OpenProject::SCM::Adapters::Subversion
+    ProyeksiApp::SCM::Adapters::Subversion
   end
 
   def configure(scm_type, _args)
     if scm_type == self.class.managed_type
       unless manageable?
-        raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+        raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
           I18n.t('repositories.managed.error_not_manageable')
         )
       end

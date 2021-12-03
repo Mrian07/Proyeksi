@@ -108,7 +108,7 @@ export class CkeditorAugmentedTextareaComponent extends UntilDestroyedMixin impl
   }
 
   public markEdited() {
-    window.OpenProject.pageWasEdited = true;
+    window.ProyeksiApp.pageWasEdited = true;
   }
 
   public setup(editor:ICKEditorInstance) {

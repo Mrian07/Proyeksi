@@ -4,7 +4,7 @@ module API
   module V3
     module Projects
       module Statuses
-        class StatusesAPI < ::API::OpenProjectAPI
+        class StatusesAPI < ::API::ProyeksiAppAPI
           resources :project_statuses do
             params do
               requires :id, desc: 'Project status identifier'

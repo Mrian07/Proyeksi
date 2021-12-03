@@ -19,7 +19,7 @@ module TextFormattingHelper
 
   # TODO remove
   def current_formatting_helper
-    helper_class = OpenProject::TextFormatting::Formats.rich_helper
+    helper_class = ProyeksiApp::TextFormatting::Formats.rich_helper
     helper_class.new(self)
   end
 

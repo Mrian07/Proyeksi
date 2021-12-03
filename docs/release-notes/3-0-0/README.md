@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.0
+  title: ProyeksiApp 3.0.0
   sidebar_navigation:
       title: 3.0.0
   release_version: 3.0.0
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 3.0.0
+# ProyeksiApp 3.0.0
 
 ## New Design
 
@@ -81,16 +81,16 @@
 
 ## Substantial Number of Bug Fixes
 
-Many bugs have been fixed with the release of OpenProject 3.0.  
+Many bugs have been fixed with the release of ProyeksiApp 3.0.  
  
 
 ## Migration to Ruby 2.1 and Rails 3.2
 
-To ensure better performance, security and support OpenProject has been
+To ensure better performance, security and support ProyeksiApp has been
 updated to a new version of Ruby (2.1) and Rails (3.2).
 
 The update fixes some important security vulnerabilities. For those
-vulnerabilities alone, you should no longer use OpenProject 2.4.
+vulnerabilities alone, you should no longer use ProyeksiApp 2.4.
 
 For an extensive overview of new features in Ruby 2.1 and Rails 3.2
 please refer to the release notes:
@@ -101,5 +101,5 @@ notes](https://www.ruby-lang.org/en/news/2013/12/25/ruby-2-1-0-is-released/)
 [Rails 3.2 release
 notes](http://guides.rubyonrails.org/v3.2.14/3_2_release_notes.html)
 
-If you have an older version of OpenProject, please follow the
+If you have an older version of ProyeksiApp, please follow the
 [migration guideline](../../installation-and-operations/operation/upgrading/).

@@ -29,4 +29,4 @@ docker-compose down
 docker-compose up -d
 ```
 
-In both cases the seeder will be run when you (re)launch OpenProject to make sure that the database gets the migrations and demo data as well.
+In both cases the seeder will be run when you (re)launch ProyeksiApp to make sure that the database gets the migrations and demo data as well.

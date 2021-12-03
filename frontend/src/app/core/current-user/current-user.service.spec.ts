@@ -27,7 +27,7 @@ const globalCapability = {
     },
     principal: {
       href: '/api/v3/users/1',
-      title: 'OpenProject Admin',
+      title: 'ProyeksiApp Admin',
     },
   },
 };
@@ -48,7 +48,7 @@ const projectCapabilityp63Update = {
     },
     principal: {
       href: '/api/v3/users/1',
-      title: 'OpenProject Admin',
+      title: 'ProyeksiApp Admin',
     },
   },
 };
@@ -69,7 +69,7 @@ const projectCapabilityp63Read = {
     },
     principal: {
       href: '/api/v3/users/1',
-      title: 'OpenProject Admin',
+      title: 'ProyeksiApp Admin',
     },
   },
 };
@@ -90,7 +90,7 @@ const projectCapabilityp53Update = {
     },
     principal: {
       href: '/api/v3/users/1',
-      title: 'OpenProject Admin',
+      title: 'ProyeksiApp Admin',
     },
   },
 };

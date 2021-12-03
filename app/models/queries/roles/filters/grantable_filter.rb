@@ -9,7 +9,7 @@ class Queries::Roles::Filters::GrantableFilter < Queries::Roles::Filters::RoleFi
   end
 
   def where
-    db_values = if values.first == OpenProject::Database::DB_VALUE_TRUE
+    db_values = if values.first == ProyeksiApp::Database::DB_VALUE_TRUE
                   [Role::NON_BUILTIN]
                 else
                   [Role::BUILTIN_ANONYMOUS, Role::BUILTIN_NON_MEMBER]
@@ -23,7 +23,7 @@ class Queries::Roles::Filters::GrantableFilter < Queries::Roles::Filters::RoleFi
   end
 
   def allowed_values
-    [[I18n.t(:general_text_yes), OpenProject::Database::DB_VALUE_TRUE],
-     [I18n.t(:general_text_no), OpenProject::Database::DB_VALUE_FALSE]]
+    [[I18n.t(:general_text_yes), ProyeksiApp::Database::DB_VALUE_TRUE],
+     [I18n.t(:general_text_no), ProyeksiApp::Database::DB_VALUE_FALSE]]
   end
 end

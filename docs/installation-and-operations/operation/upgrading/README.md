@@ -4,27 +4,27 @@ sidebar_navigation:
   priority: 7
 ---
 
-# Upgrading your OpenProject installation
+# Upgrading your ProyeksiApp installation
 
 <div class="alert alert-warning" role="alert">
-**Note**: In the rest of this guide, we assume that you have taken the necessary steps to [backup](../backing-up) your OpenProject installation before upgrading.
+**Note**: In the rest of this guide, we assume that you have taken the necessary steps to [backup](../backing-up) your ProyeksiApp installation before upgrading.
 </div>
 
 | Topic                                                        | Content                                                     |
 | ------------------------------------------------------------ | ----------------------------------------------------------- |
-| [Package-based installation](#package-based-installation-debrpm) | How to upgrade a package-based installation of OpenProject. |
-| [Docker-based installation](#compose-based-installation)      | How to upgrade a Docker-based installation of OpenProject.  |
-| [Upgrade notes for 8.x to 9.x](#upgrade-notes-for-8x-to-9x)  | How to upgrade from OpenProject 8.x to OpenProject 9.x.     |
-| [Upgrade notes for 7.x to 8.x](#upgrade-notes-for-openproject-7x-to-8x) | How to upgrade from OpenProject 7.x to OpenProject 8.x.     |
+| [Package-based installation](#package-based-installation-debrpm) | How to upgrade a package-based installation of ProyeksiApp. |
+| [Docker-based installation](#compose-based-installation)      | How to upgrade a Docker-based installation of ProyeksiApp.  |
+| [Upgrade notes for 8.x to 9.x](#upgrade-notes-for-8x-to-9x)  | How to upgrade from ProyeksiApp 8.x to ProyeksiApp 9.x.     |
+| [Upgrade notes for 7.x to 8.x](#upgrade-notes-for-openproject-7x-to-8x) | How to upgrade from ProyeksiApp 7.x to ProyeksiApp 8.x.     |
 
 ## Package-based installation (DEB/RPM)
 
-Upgrading OpenProject is as easy as installing a newer OpenProject package and
+Upgrading ProyeksiApp is as easy as installing a newer ProyeksiApp package and
 running the `openproject configure` command.
 
 <div class="alert alert-info" role="alert">
 
-Please note that the package-based installation uses different release channels for each MAJOR version of OpenProject. This means that if you want to switch from (e.g.) 9.x to 10.x, you will need to perform the steps described in the [installation section](../../installation/packaged) to update your package sources to point to the newer release channel. The rest of this section is only applicable if you want to upgrade a (e.g.) 10.x version to a 10.y version.
+Please note that the package-based installation uses different release channels for each MAJOR version of ProyeksiApp. This means that if you want to switch from (e.g.) 9.x to 10.x, you will need to perform the steps described in the [installation section](../../installation/packaged) to update your package sources to point to the newer release channel. The rest of this section is only applicable if you want to upgrade a (e.g.) 10.x version to a 10.y version.
 
 </div>
 
@@ -70,7 +70,7 @@ docker-compose pull
 docker-compose up -d
 ```
 
-Please note that you can override the `TAG` that is used to pull the OpenProject image from the [Docker Hub](https://hub.docker.com/r/openproject/community).
+Please note that you can override the `TAG` that is used to pull the ProyeksiApp image from the [Docker Hub](https://hub.docker.com/r/openproject/community).
 
 ### All-in-one container
 
@@ -97,7 +97,7 @@ This time, it will use the new image:
 docker run -d ... openproject/community:VERSION
 ```
 
-#### I have already started OpenProject without mounted volumes. How do I save my data during an update?
+#### I have already started ProyeksiApp without mounted volumes. How do I save my data during an update?
 
 You can extract your data from the existing container and mount it in a new one with the correct configuration.
 
@@ -130,46 +130,46 @@ These following points are some known issues regarding the update to 9.0.
 
 ### MySQL is being deprecated
 
-OpenProject 9.0. is deprecating MySQL support. You can expect full MySQL support for the course of 9.0 releases, but we are likely going to be dropping MySQL completely in one of the following releases.
+ProyeksiApp 9.0. is deprecating MySQL support. You can expect full MySQL support for the course of 9.0 releases, but we are likely going to be dropping MySQL completely in one of the following releases.
 
 For more information regarding motivation behind this and migration steps, please see [this blog post](https://www.openproject.org/blog/deprecating-mysql-support/). In the post, you will find documentation for a mostly-automated migration script to PostgreSQL to help you get up and running with PostgreSQL.
 
 ### Package repository moved into opf/openproject
 
-The OpenProject community installation is now using the same repository as the OpenProject development core.
+The ProyeksiApp community installation is now using the same repository as the ProyeksiApp development core.
 
 Please update your package source according to our [installation section](../../installation/packaged).
 
 You will need to replace `opf/openproject-ce` with `opf/openproject` together with a change from `stable/8` to `stable/9` in order to perform the update.
 
-If you have currently installed the stable 8.x release of OpenProject by using the `stable/8` package source,
+If you have currently installed the stable 8.x release of ProyeksiApp by using the `stable/8` package source,
 you will need to adjust that package source.
 
 #### APT-based systems (Debian, Ubuntu)
 
  - Update the reference to `opf/openproject-ce` in `/etc/apt/sources.list.d/openproject.list` to `opf/openproject`.
  - Update the reference to `stable/8` in `/etc/apt/sources.list.d/openproject.list` to `stable/9`.
- - Perform the Upgrade steps as mentioned above in *Upgrading your OpenProject installation*
+ - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
 #### YUM-based systems (CentOS, RHEL)
 
  - Update the reference to `opf/openproject-ce` in `/etc/yum.repos.d/openproject.repo` to `opf/openproject`.
  - Update the reference to `stable/8` in `/etc/yum.repos.d/openproject.repo` to `stable/9`.
- - Perform the Upgrade steps as mentioned above in *Upgrading your OpenProject installation*
+ - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
 #### SUSE Linux Enterprise Server 12
 
  - Update the reference to `opf/openproject-ce` in `/etc/zypp/repos.d/openproject.repo` to `opf/openproject`.
  - Update the reference to `stable/8` in `/etc/zypp/repos.d/openproject.repo` to `stable/9`.
- - Perform the Upgrade steps as mentioned above in *Upgrading your OpenProject installation*
+ - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
-## Upgrade notes for OpenProject 7.x to 8.x
+## Upgrade notes for ProyeksiApp 7.x to 8.x
 
 These following points are some known issues around the update to 8.0. It does not contain the entire list of changes. To see all changes, [please browse the release notes](../../../release-notes/8-0-0/).
 
 ### Upgrades in NPM may result in package inconsistencies
 
-As has been reported from the community, [there appear to be issues with NPM leftover packages](https://community.openproject.com/projects/openproject/work_packages/28571) upgrading to OpenProject 8.0.0. This is due to the packages applying a delta between your installed version and the to-be-installed 8.0. package. In some cases such as SLES12 and Centos 7, the `frontend/node_modules` folder is not fully correctly replaced. This appears to hint at an issue with yum, the package manager behind both.
+As has been reported from the community, [there appear to be issues with NPM leftover packages](https://community.openproject.com/projects/openproject/work_packages/28571) upgrading to ProyeksiApp 8.0.0. This is due to the packages applying a delta between your installed version and the to-be-installed 8.0. package. In some cases such as SLES12 and Centos 7, the `frontend/node_modules` folder is not fully correctly replaced. This appears to hint at an issue with yum, the package manager behind both.
 
 To ensure the package's node_modules folder matches your local version, we recommend you simply remove `/opt/openproject/frontend/node_modules` entirely **before** installing the package
 
@@ -180,6 +180,6 @@ rm -rf /opt/openproject/frontend/node_modules
 
 ### Migration from Textile to Markdown
 
-OpenProject 8.0. has removed Textile, all previous content is migrated to GFM Markdown using [pandoc](https://pandoc.org). This will happen automatically during the migration run. A recent pandoc version will be downloaded by OpenProject.
+ProyeksiApp 8.0. has removed Textile, all previous content is migrated to GFM Markdown using [pandoc](https://pandoc.org). This will happen automatically during the migration run. A recent pandoc version will be downloaded by ProyeksiApp.
 
 For more information, please visit [this separate guide](../../misc/textile-migration).

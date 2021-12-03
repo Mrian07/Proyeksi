@@ -24,7 +24,7 @@ The respective feature request can be found [here](https://community.openproject
 
 ## How can I build in a "buffer" (e.g. two weeks gap) between two consecutive work packages, so that even if the first one is postponed the second one always starts e.g. two weeks later?
 
-Adding a buffer directly is currently not possible in OpenProject. When you create a follows-precedes relationship between a preceding and a following work package and leave a gap between the finish date of the preceding and the start date of the following work package, and then postpone the preceding work package, the "buffer" will be used up. Only when the finish date of the preceding work package is moved past the start date of the following work package, will the following work package be postponed.
+Adding a buffer directly is currently not possible in ProyeksiApp. When you create a follows-precedes relationship between a preceding and a following work package and leave a gap between the finish date of the preceding and the start date of the following work package, and then postpone the preceding work package, the "buffer" will be used up. Only when the finish date of the preceding work package is moved past the start date of the following work package, will the following work package be postponed.
 As a workaround you could create a separate work package (type) which acts as a buffer. You can then create a precedes-follows relationship between the first item and the "buffer work package" and the "buffer work package" and the second item. To avoid cluttering up your view you could use the filter to not display the buffer work packages.
 
 ## Is there a critical path feature?

@@ -15,7 +15,7 @@ describe 'account/login', type: :view do
 
   context 'with password login disabled' do
     before do
-      allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+      allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
       render
     end
 

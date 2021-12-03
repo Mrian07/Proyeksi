@@ -10,7 +10,7 @@ keywords: work package workflows
 
 # Manage work package workflows
 
-A **workflow** in OpenProject is defined as the allowed transitions between status for a role and a type, i.e. which status changes can a certain role implement depending on the work package type.
+A **workflow** in ProyeksiApp is defined as the allowed transitions between status for a role and a type, i.e. which status changes can a certain role implement depending on the work package type.
 
 This means, a certain type of work package, e.g. a Task, can have the following workflows: News -> In Progress -> Closed -> On Hold -> Rejected -> Closed. This workflow can be different depending on the [role in a project](../../users-permissions/roles-permissions).
 

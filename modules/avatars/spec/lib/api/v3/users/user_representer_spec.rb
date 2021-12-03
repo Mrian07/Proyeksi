@@ -12,7 +12,7 @@ describe ::API::V3::Users::UserRepresenter do
 
     describe 'avatar', with_settings: { protocol: 'http' } do
       before do
-        allow(Setting).to receive(:plugin_openproject_avatars)
+        allow(Setting).to receive(:plugin_proyeksiapp_avatars)
           .and_return(enable_gravatars: true)
 
         user.mail = 'foo@bar.com'
@@ -24,7 +24,7 @@ describe ::API::V3::Users::UserRepresenter do
 
       it 'should be blank if gravatar is disabled' do
         allow(Setting)
-          .to receive(:plugin_openproject_avatars)
+          .to receive(:plugin_proyeksiapp_avatars)
           .and_return(enable_gravatars: false)
 
         expect(parse_json(subject, 'avatar')).to be_blank

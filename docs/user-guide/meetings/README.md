@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Meetings
   priority: 760
-description: Manage meetings with agenda and meeting minutes in OpenProject.
+description: Manage meetings with agenda and meeting minutes in ProyeksiApp.
 robots: index, follow
 keywords: meetings
 ---
 
 # Meeting management
 
-Meetings in OpenProject allow you to manage and document your project meetings at one central place, prepare a meeting agenda together with your team and document and share meeting minutes with your meeting attendees at one central place.
+Meetings in ProyeksiApp allow you to manage and document your project meetings at one central place, prepare a meeting agenda together with your team and document and share meeting minutes with your meeting attendees at one central place.
 
 <div class="glossary">**Meetings** is defined as a module that allows the organization of meetings. The module has to be activated in the project settings in order to be displayed in the side navigation.
 </div>
@@ -18,14 +18,14 @@ Meetings in OpenProject allow you to manage and document your project meetings a
 
 | Topic                                                        | Content                                     |
 | ------------------------------------------------------------ | ------------------------------------------- |
-| [Meetings in OpenProject](#meetings-in-openproject)          | How to open meetings in OpenProject?        |
-| [Create a new meeting](#create-a-new-meeting)                | How to create a new meeting in OpenProject? |
+| [Meetings in ProyeksiApp](#meetings-in-openproject)          | How to open meetings in ProyeksiApp?        |
+| [Create a new meeting](#create-a-new-meeting)                | How to create a new meeting in ProyeksiApp? |
 | [Edit a meeting](#edit-a-meeting)                            | How to edit an existing meeting?            |
 | [Add meeting participants](#add-meeting-participants)        | How to invite people to a meeting?          |
 | [Create or edit the meeting agenda](#create-or-edit-the-meeting-agenda) | How to create or edit the agenda?           |
 | [Copy a meeting (recurring meetings)](#copy-a-meeting-recurring-meetings) | How to create recurring meetings?           |
 
-## Meetings in OpenProject
+## Meetings in ProyeksiApp
 
 By selecting **Meetings** in the project menu on the left, you get an overview of all project meetings sorted by date. By clicking on a meeting name you can view further details of the meeting.
 

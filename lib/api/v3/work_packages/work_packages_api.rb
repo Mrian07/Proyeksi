@@ -5,7 +5,7 @@ require 'api/v3/work_packages/work_package_representer'
 module API
   module V3
     module WorkPackages
-      class WorkPackagesAPI < ::API::OpenProjectAPI
+      class WorkPackagesAPI < ::API::ProyeksiAppAPI
         resources :work_packages do
           helpers ::API::V3::WorkPackages::WorkPackagesSharedHelpers
 

@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Backup
   priority: 501
-description: Backing up OpenProject.
+description: Backing up ProyeksiApp.
 robots: index, follow
 keywords: system backup
 ---
 # Backup
 
 Unless disabled via the [configuration](/installation-and-operations/configuration/#backup-enabled)
-users can make backups of the OpenProject installation from within the administration area.
+users can make backups of the ProyeksiApp installation from within the administration area.
 They either need to be an administrator or have the global permission to do so.
 
 ![System-admin-guide-backup-11.3](openproject-backup.png)

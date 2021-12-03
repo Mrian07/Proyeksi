@@ -3,7 +3,7 @@
 module API
   module V3
     module News
-      class NewsAPI < ::API::OpenProjectAPI
+      class NewsAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         resources :news do

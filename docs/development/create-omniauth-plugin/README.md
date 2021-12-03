@@ -1,16 +1,16 @@
 # Create an OmniAuth plugin
 
-The OpenProject core integrates OmniAuth. This means that OmniAuth providers can be used to authenticate OpenProject users. For the time being this is not possible for existing users but only for new users who register using that particular provider.
+The ProyeksiApp core integrates OmniAuth. This means that OmniAuth providers can be used to authenticate ProyeksiApp users. For the time being this is not possible for existing users but only for new users who register using that particular provider.
 
-This page describes how to create an OpenProject plugin to authenticate users via an Omniauth strategy.
+This page describes how to create an ProyeksiApp plugin to authenticate users via an Omniauth strategy.
 
 ## Warning
 
-This howto is in a preliminary state and explains a low-level way to create an OmniAuth authentication plugin for OpenProject. We will provide a more high-level API and update this howto soon.
+This howto is in a preliminary state and explains a low-level way to create an OmniAuth authentication plugin for ProyeksiApp. We will provide a more high-level API and update this howto soon.
 
 ## OpenID Connect
 
-There is a bare minimum [plugin](https://github.com/machisuji/openproject-mock_auth) implementing a mock strategy for OpenProject using the provided OmniAuth infrastructure. You can refer to this plugin and compare to see how things can be done.
+There is a bare minimum [plugin](https://github.com/machisuji/openproject-mock_auth) implementing a mock strategy for ProyeksiApp using the provided OmniAuth infrastructure. You can refer to this plugin and compare to see how things can be done.
 
 ## Terminology
 
@@ -33,7 +33,7 @@ Any authentication plugin has to do at least the following things:
 
 ## Authentication Plugin How-to
 
-In the following section we will go through the basic steps required to create an authentication plugin for OpenProject.
+In the following section we will go through the basic steps required to create an authentication plugin for ProyeksiApp.
 
 ### Generate a plugin
 
@@ -41,8 +41,8 @@ First off you can use the [plugin generator](https://github.com/opf/openproject-
 How to do that is described [here](../create-openproject-plugin/). In short it’s the following command:
 
 ```bash
-# in OpenProject directory
-rails generate open_project:plugin my_auth_plugin path/to/where/you/want/to/have/it
+# in ProyeksiApp directory
+rails generate proyeksi_app:plugin my_auth_plugin path/to/where/you/want/to/have/it
 ```
 
 Let’s assume that the plugin you generated is called `openproject-my_auth_plugin`.
@@ -72,7 +72,7 @@ server_addr = Setting.plugin_openproject_my_auth_plugin["auth_server_address"]
 
 ### Register the provider(s)
 
-For this you can use the [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins) plugin, which provides you with an easy way to integrate a new authentication plugin into OpenProject.
+For this you can use the [openproject-auth_plugins](https://github.com/opf/openproject-auth_plugins) plugin, which provides you with an easy way to integrate a new authentication plugin into ProyeksiApp.
 As described in the plugin’s readme file you just add the following bit to the class body of Engine:
 
 ```ruby
@@ -81,7 +81,7 @@ register_auth_providers do
     [
       {
         name: 'my_provider',
-        display_name: 'Optional Label', # (optional) provider's name as shown in OpenProject
+        display_name: 'Optional Label', # (optional) provider's name as shown in ProyeksiApp
         icon: 'my_auth_plugin/optional_provider_icon.png', # (optional) provider icon
         # example options depending on your strategy:
         host: Setting.plugin_openproject_my_auth_plugin["auth_server_address"]
@@ -105,7 +105,7 @@ For instance you could configure two OpenID Connect providers using the same str
 
 ### Add your plugin to Gemfile.plugins
 
-All that’s that left to do is declaring your plugin in the file `Gemfile.plugins` in your OpenProject application’s root directory.
+All that’s that left to do is declaring your plugin in the file `Gemfile.plugins` in your ProyeksiApp application’s root directory.
 If you haven’t published it as a gem yet you can also use a local copy:
 
 ```

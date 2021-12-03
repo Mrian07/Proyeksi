@@ -3,7 +3,7 @@
 module API
   module V3
     module Posts
-      class PostsAPI < ::API::OpenProjectAPI
+      class PostsAPI < ::API::ProyeksiAppAPI
         resources :posts do
           helpers do
             def post

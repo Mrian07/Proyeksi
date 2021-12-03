@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.9
+  title: ProyeksiApp 5.0.9
   sidebar_navigation:
       title: 5.0.9
   release_version: 5.0.9
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.9
+# ProyeksiApp 5.0.9
 
-OpenProject 5.0.9 contains several bug fixes:
+ProyeksiApp 5.0.9 contains several bug fixes:
 
   - An error prevented work packages from sometimes being updated when
     edited and edited the previously updated work package instead

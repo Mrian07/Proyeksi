@@ -1,16 +1,16 @@
 ---
-title: OpenProject 11.3.5
+title: ProyeksiApp 11.3.5
 sidebar_navigation:
     title: 11.3.5
 release_version: 11.3.5
 release_date: 2021-09-13
 ---
 
-# OpenProject 11.3.5
+# ProyeksiApp 11.3.5
 
 Release date: 2021-09-13
 
-We released [OpenProject 11.3.5](https://community.openproject.com/versions/1490).
+We released [ProyeksiApp 11.3.5](https://community.openproject.com/versions/1490).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->

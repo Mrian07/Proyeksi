@@ -4,11 +4,11 @@
 
 require ::File.expand_path('config/environment', __dir__)
 
-subdir = OpenProject::Configuration.rails_relative_url_root.presence
+subdir = ProyeksiApp::Configuration.rails_relative_url_root.presence
 
 map (subdir || '/') do
   use Rack::Protection::JsonCsrf
   use Rack::Protection::FrameOptions
 
-  run OpenProject::Application
+  run ProyeksiApp::Application
 end

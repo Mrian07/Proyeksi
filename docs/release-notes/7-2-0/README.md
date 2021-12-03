@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.2.0
+  title: ProyeksiApp 7.2.0
   sidebar_navigation:
       title: 7.2.0
   release_version: 7.2.0
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 7.2
+# ProyeksiApp 7.2
 
-OpenProject 7.2 includes several improvements: Relations can be
+ProyeksiApp 7.2 includes several improvements: Relations can be
 displayed as a column in the work package page, the Gantt chart can be
 expanded to full width, weekends are shown in the Gantt chart and it is
 possible to use copy / paste to add screenshots from the clipboard.
@@ -49,7 +49,7 @@ on the activity tab to hide all other activity entries.
 
 ### Relations in the work package list (Enterprise Edition / Cloud Edition)
 
-With OpenProject 7.2 you can show relation columns in the work package
+With ProyeksiApp 7.2 you can show relation columns in the work package
 list. A label shows how many related elements a work package has. By
 clicking on the label, the related work packages are shown.
 
@@ -65,7 +65,7 @@ fields).
 
 ## Improved usability and design
 
-OpenProject 7.2 includes several usability improvements.
+ProyeksiApp 7.2 includes several usability improvements.
 
 For example, we removed the *Show all* button.
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-45">Project</span>
@@ -74,7 +74,7 @@ at the label shown next to the *Relations* tab.
 
 ## Substantial number of bug fixes
 
-OpenProject 7.2 contains a large number of bugs fixes.
+ProyeksiApp 7.2 contains a large number of bugs fixes.
 
 For an extensive overview of bug fixes please refer to the [following
 list](https://community.openproject.com/projects/openproject/work_packages?query_props=%7B%22c%22:%5B%22id%22,%22subject%22,%22type%22,%22status%22,%22assignee%22%5D,%22tzl%22:%22days%22,%22hi%22:true,%22t%22:%22parent:desc%22,%22f%22:%5B%7B%22n%22:%22version%22,%22o%22:%22%253D%22,%22v%22:%5B%22824%22%5D%7D,%7B%22n%22:%22type%22,%22o%22:%22%253D%22,%22v%22:%5B%221%22%5D%7D,%7B%22n%22:%22subprojectId%22,%22o%22:%22*%22,%22v%22:%5B%5D%7D%5D,%22pa%22:1,%22pp%22:20%7D).

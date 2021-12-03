@@ -23,7 +23,7 @@ class SCM::RepositoryFactoryService
       if repository.save
         repository
       else
-        raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+        raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
           repository.errors.full_messages.join("\n")
         )
       end
@@ -49,7 +49,7 @@ class SCM::RepositoryFactoryService
 
   ##
   # Helper to actually build the repository and return it.
-  # May raise +OpenProject::SCM::Exceptions::RepositoryBuildError+ internally.
+  # May raise +ProyeksiApp::SCM::Exceptions::RepositoryBuildError+ internally.
   #
   # @param [Symbol] scm_type Type to build the repository with. May be nil
   #                          during temporary build
@@ -65,7 +65,7 @@ class SCM::RepositoryFactoryService
   def build_guarded
     @repository = yield
     @repository.present?
-  rescue OpenProject::SCM::Exceptions::RepositoryBuildError => e
+  rescue ProyeksiApp::SCM::Exceptions::RepositoryBuildError => e
     @build_failed_msg = e.message
     nil
   end

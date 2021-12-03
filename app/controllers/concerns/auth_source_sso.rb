@@ -1,6 +1,6 @@
 ##
-# If OPENPROJECT_AUTH__SOURCE__SSO_HEADER and OPENPROJECT_AUTH__SOURCE__SSO_SECRET are
-# configured OpenProject will login the user given in the HTTP header with the given name
+# If PROYEKSIAPP_AUTH__SOURCE__SSO_HEADER and PROYEKSIAPP_AUTH__SOURCE__SSO_SECRET are
+# configured ProyeksiApp will login the user given in the HTTP header with the given name
 # together with the secret in the form of `login:$secret`.
 module AuthSourceSSO
   def find_current_user
@@ -49,7 +49,7 @@ module AuthSourceSSO
   end
 
   def sso_config
-    @sso_config ||= OpenProject::Configuration.auth_source_sso.try(:with_indifferent_access)
+    @sso_config ||= ProyeksiApp::Configuration.auth_source_sso.try(:with_indifferent_access)
   end
 
   def auth_source_sso_enabled?

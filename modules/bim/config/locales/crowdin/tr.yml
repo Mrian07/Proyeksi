@@ -71,7 +71,7 @@ tr:
   oauth:
     scopes:
       bcf_v2_1: "BCF v2.1 API'sine tam erişim"
-      bcf_v2_1_text: "Uygulama, sizin adınıza işlem yapmak için OpenProject BCF API v2.1'e tam okuma ve yazma erişimi alacaktır."
+      bcf_v2_1_text: "Uygulama, sizin adınıza işlem yapmak için ProyeksiApp BCF API v2.1'e tam okuma ve yazma erişimi alacaktır."
   activerecord:
     models:
       bim/ifc_models/ifc_model: "IFC model"

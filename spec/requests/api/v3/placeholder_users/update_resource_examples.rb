@@ -9,7 +9,7 @@ shared_examples 'updates the placeholder' do
     it 'returns an error' do
       expect(last_response.status).to eq(422)
       expect(last_response.body)
-        .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyConstraintViolation'.to_json)
+        .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation'.to_json)
               .at_path('errorIdentifier')
 
       expect(parsed_response['_embedded']['details']['attribute'])

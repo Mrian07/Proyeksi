@@ -56,4 +56,4 @@ lt:
           title: 'Parinkti projektai'
         secret:
           description: >
-            Jei nustatyta, OpenProject naudos šią slaptą reikšmę „krovinio“ pasirašymui.
+            Jei nustatyta, ProyeksiApp naudos šią slaptą reikšmę „krovinio“ pasirašymui.

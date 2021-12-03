@@ -10,14 +10,14 @@ describe API::V3, type: :request do
     let(:response_401) do
       {
         '_type' => 'Error',
-        'errorIdentifier' => 'urn:openproject-org:api:v3:errors:Unauthenticated',
+        'errorIdentifier' => 'urn:proyeksiapp-org:api:v3:errors:Unauthenticated',
         'message' => expected_message
       }
     end
 
     let(:expected_message) { 'You need to be authenticated to access this resource.' }
 
-    strategies = OpenProject::Authentication::Strategies::Warden
+    strategies = ProyeksiApp::Authentication::Strategies::Warden
 
     def set_basic_auth_header(user, password)
       credentials = ActionController::HttpAuthentication::Basic.encode_credentials user, password
@@ -53,7 +53,7 @@ describe API::V3, type: :request do
 
           it 'should return the WWW-Authenticate header' do
             expect(last_response.header['WWW-Authenticate'])
-              .to include 'Basic realm="OpenProject API"'
+              .to include 'Basic realm="ProyeksiApp API"'
           end
         end
 
@@ -79,7 +79,7 @@ describe API::V3, type: :request do
 
           it 'should return the WWW-Authenticate header' do
             expect(last_response.header['WWW-Authenticate'])
-              .to include 'Basic realm="OpenProject API"'
+              .to include 'Basic realm="ProyeksiApp API"'
           end
         end
 
@@ -104,7 +104,7 @@ describe API::V3, type: :request do
 
           it 'should return the WWW-Authenticate header' do
             expect(last_response.header['WWW-Authenticate'])
-              .to include 'Basic realm="OpenProject API"'
+              .to include 'Basic realm="ProyeksiApp API"'
           end
         end
 
@@ -131,7 +131,7 @@ describe API::V3, type: :request do
 
           it 'should return the WWW-Authenticate header' do
             expect(last_response.header['WWW-Authenticate'])
-              .to include 'Session realm="OpenProject API"'
+              .to include 'Session realm="ProyeksiApp API"'
           end
         end
 

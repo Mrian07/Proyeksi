@@ -1,25 +1,25 @@
 ---
-title: OpenProject 10.6.0
+title: ProyeksiApp 10.6.0
 sidebar_navigation:
     title: 10.6.0
 release_version: 10.6.0
 release_date: 2020-06-02
 ---
 
-# Release notes OpenProject 10.6.0
+# Release notes ProyeksiApp 10.6.0
 
 | Release notes                                                | Description                                                  |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| [OpenProject 10.6.0](#openproject-1060)                      | What is new for OpenProject 10.6.0?                          |
-| [OpenProject 10.6.0 BIM Edition for construction project management](#openproject-1060-bim-edition) | What is new for the construction project management for the building industry in OpenProject 10.5.0? |
+| [ProyeksiApp 10.6.0](#openproject-1060)                      | What is new for ProyeksiApp 10.6.0?                          |
+| [ProyeksiApp 10.6.0 BIM Edition for construction project management](#openproject-1060-bim-edition) | What is new for the construction project management for the building industry in ProyeksiApp 10.5.0? |
 
-# OpenProject 10.6.0
+# ProyeksiApp 10.6.0
 
 The new release of the open source project management software brings improved table formatting, quicker time logging, the Slovenian translation, better overview over activities and  much more usability improvements and bug fixes.
 
 ### Better styling of tables with improved table formatting options
 
-With the new release of OpenProject you can now customize your tables in the text editor even more. When integrating a table in a work  package description, a meeting, the wiki or news, format it the way you  want to. The new additional options are:
+With the new release of ProyeksiApp you can now customize your tables in the text editor even more. When integrating a table in a work  package description, a meeting, the wiki or news, format it the way you  want to. The new additional options are:
 
 - limiting of the table’s and cell’s width,
 - choose a color for the grid and the cell’s background (HEX/XSL or standard color palette),
@@ -43,13 +43,13 @@ Also, you can log time to a work package directly from your work  package list v
 
 ### Support of Slovenian language
 
-We are very happy that OpenProject is now 100% translated into Slovenian.  Zabavaj se!
+We are very happy that ProyeksiApp is now 100% translated into Slovenian.  Zabavaj se!
 
 ![flag-slovenia](flag-slovenia-300x200.jpg)
 
 ### Attribution of cards to a project
 
-OpenProject 10.6 will upgrade the card view of work packages. To make clear what card belongs to what project, the project name will be shown on the card.
+ProyeksiApp 10.6 will upgrade the card view of work packages. To make clear what card belongs to what project, the project name will be shown on the card.
 
 ![card-view-subproject](card-view-subproject.png)
 
@@ -77,7 +77,7 @@ Furthermore, the **styling of the news widget** on the project overview page as 
 - Fixed: Assignee board breaks in sub url \[[#33202](https://community.openproject.com/wp/33202)\]
 - Fixed: Logged time widget does not update correctly \[[#33217](https://community.openproject.com/wp/33217)\]
 - Fixed: OAuth settings and docs both do not provide information for endpoints \[[#33241](https://community.openproject.com/wp/33241)\]
-- Fixed: Time Tracking Issue After update OpenProject 10.5.2 (PostgreSQL) \[[#33310](https://community.openproject.com/wp/33310)\]
+- Fixed: Time Tracking Issue After update ProyeksiApp 10.5.2 (PostgreSQL) \[[#33310](https://community.openproject.com/wp/33310)\]
 - Fixed: Timeout / error 500 when setting current unit cost rate \[[#33319](https://community.openproject.com/wp/33319)\]
 - Fixed: Form misplaced after error \[[#33324](https://community.openproject.com/wp/33324)\]
 - Fixed: Create child in work package list does not create parent-child relationship \[[#33329](https://community.openproject.com/wp/33329)\]
@@ -103,9 +103,9 @@ Furthermore, the **styling of the news widget** on the project overview page as 
 
 
 
-## OpenProject 10.6.0 BIM Edition
+## ProyeksiApp 10.6.0 BIM Edition
 
-OpenProject BIM 10.6 released with improved BCF Management. We released OpenProject BIM 10.6. The new release contains improvements  for BIM project management for the building industry, especially with  improved features for BCF Management.
+ProyeksiApp BIM 10.6 released with improved BCF Management. We released ProyeksiApp BIM 10.6. The new release contains improvements  for BIM project management for the building industry, especially with  improved features for BCF Management.
 
 ### Improved BCF XML Import
 
@@ -127,11 +127,11 @@ We introduced a separate permission for deleting BCF issues.
 - Changed: Redirect loop for viewpoint URL when no IFC in project.
 - Changed: On boarding tour: Non-admins can't complete onboarding as they lack permissions for viewing boards.
 
-#### How can you try the OpenProject BIM Edition?
+#### How can you try the ProyeksiApp BIM Edition?
 
-Please note that the OpenProject BIM Edition is under continuous  development. The current version is only a first state, which will be  continuously enhanced with important build specific functions.
+Please note that the ProyeksiApp BIM Edition is under continuous  development. The current version is only a first state, which will be  continuously enhanced with important build specific functions.
 
-Test OpenProject BIM 10.6 immediately, [create a free test instance](https://start.openproject.com/go/bim) for the OpenProject BIM Edition.
+Test ProyeksiApp BIM 10.6 immediately, [create a free test instance](https://start.openproject.com/go/bim) for the ProyeksiApp BIM Edition.
 
 ### Credits and contributions
 
@@ -142,7 +142,7 @@ Marc Vollmer, Ricardo Vigatti, Sébastien VITA, Tino Breddin, Lukas Zeil, Rajesh
 
 - DBI AG for sponsoring the BCF Management.
 - Lindsay Kay for the integration of the 3D Modell viewer, [xeokit](https://xeokit.io/), as well as for improving the camera control in the IFC viewer.
-- [Georg Dangl](https://blog.dangl.me/categories/BIM) for developing the Revit Integration in OpenProject.
-- All the developers, designers, project managers who have contributed to OpenProject.
+- [Georg Dangl](https://blog.dangl.me/categories/BIM) for developing the Revit Integration in ProyeksiApp.
+- All the developers, designers, project managers who have contributed to ProyeksiApp.
 - Every dedicated user who has reported bugs and supported the community by asking and answering questions in the [forum](https://community.openproject.org/projects/openproject/boards).
 - All the engaged users who provided translations on [CrowdIn](https://crowdin.com/projects/opf).

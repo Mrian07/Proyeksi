@@ -3,12 +3,12 @@
 module Redmine::MenuManager::TopMenu::HelpMenu
   def render_help_top_menu_node(item = help_menu_item)
     cache_key = ['help_top_menu_node',
-                 OpenProject::Static::Links.links,
+                 ProyeksiApp::Static::Links.links,
                  I18n.locale,
-                 OpenProject::Static::Links.help_link]
+                 ProyeksiApp::Static::Links.help_link]
 
-    OpenProject::Cache.fetch(cache_key) do
-      if OpenProject::Static::Links.help_link_overridden?
+    ProyeksiApp::Cache.fetch(cache_key) do
+      if ProyeksiApp::Static::Links.help_link_overridden?
         content_tag('li',
                     render_single_menu_node(item, nil, 'op-app-menu'),
                     class: 'op-app-menu--item op-app-help op-app-help_overridden')
@@ -69,7 +69,7 @@ module Redmine::MenuManager::TopMenu::HelpMenu
     result << static_link_item(:user_guides)
     result << content_tag(:li, class: 'op-menu--item') do
       link_to I18n.t('label_videos'),
-              OpenProject::Configuration.youtube_channel,
+              ProyeksiApp::Configuration.youtube_channel,
               title: I18n.t('label_videos'),
               class: 'op-menu--item-action',
               target: '_blank'
@@ -88,7 +88,7 @@ module Redmine::MenuManager::TopMenu::HelpMenu
                   title: I18n.t('top_menu.additional_resources')
     end
 
-    if OpenProject::Static::Links.has? :impressum
+    if ProyeksiApp::Static::Links.has? :impressum
       result << static_link_item(:impressum)
     end
 
@@ -110,7 +110,7 @@ module Redmine::MenuManager::TopMenu::HelpMenu
   end
 
   def static_link_item(key, options = {})
-    link = OpenProject::Static::Links.links[key]
+    link = ProyeksiApp::Static::Links.links[key]
     label = I18n.t(link[:label])
     content_tag(:li, class: 'op-menu--item') do
       link_to label,

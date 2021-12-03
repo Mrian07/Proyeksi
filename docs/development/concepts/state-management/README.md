@@ -8,13 +8,13 @@ keywords: state management, stores, input states
 
 # Development concept: State management
 
-State management in complex frontend applications is a topic that has been heavily evolving over the past years. Redux and stores, one-way data flow are all the rage nowadays. OpenProject is an old application, so its frontend exists way before these concepts were introduced and became popular.
+State management in complex frontend applications is a topic that has been heavily evolving over the past years. Redux and stores, one-way data flow are all the rage nowadays. ProyeksiApp is an old application, so its frontend exists way before these concepts were introduced and became popular.
 
 
 
 ## Key takeaways
 
-*State management in OpenProject frontend...*
+*State management in ProyeksiApp frontend...*
 
 - is mainly controlled by `RxJs` and the reactivestates library
 - `State` and `InputState` are mostly syntactic sugar over RXJS `Subject` and `BehaviorSubject`
@@ -97,7 +97,7 @@ state
 
 ## MultiInputState
 
-The `MultiInputState` is basically a map with a string key and an `InputState` as its value. It is used for most of the cache stores in OpenProject.
+The `MultiInputState` is basically a map with a string key and an `InputState` as its value. It is used for most of the cache stores in ProyeksiApp.
 
 
 
@@ -162,5 +162,5 @@ This might then look like the following, with green color for added objects, and
 
 ## Discussions
 
-- In contrast to a `Store` concept of redux, the States and state groups do not have any concept of data immutability. As a caller you will need to ensure that. In OpenProject, many of the states are in fact mutable due to historic reasons and the fact that complex class instances are passed around that cannot be easily shallow copied. This will need to be refactored in the future.
+- In contrast to a `Store` concept of redux, the States and state groups do not have any concept of data immutability. As a caller you will need to ensure that. In ProyeksiApp, many of the states are in fact mutable due to historic reasons and the fact that complex class instances are passed around that cannot be easily shallow copied. This will need to be refactored in the future.
 - As the reactivestates library was primarily developed for us, we may need to take over its code or move to a different state management concept altogether. The recent developments in `ngxs` look very promising.

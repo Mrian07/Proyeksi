@@ -76,9 +76,9 @@ describe 'account/register', type: :view do
       expect(rendered).to include(footer)
     end
 
-    context 'with a registration footer in the OpenProject configuration' do
+    context 'with a registration footer in the ProyeksiApp configuration' do
       before do
-        allow(OpenProject::Configuration).to receive(:registration_footer).and_return("en" => footer.reverse)
+        allow(ProyeksiApp::Configuration).to receive(:registration_footer).and_return("en" => footer.reverse)
       end
 
       it 'should render the registration footer from the configuration, overriding the settings' do

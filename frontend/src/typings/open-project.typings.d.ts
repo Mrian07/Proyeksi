@@ -39,7 +39,7 @@ declare namespace api {
 }
 
 /**
- * OpenProject interfaces
+ * ProyeksiApp interfaces
  */
 
 interface Function {

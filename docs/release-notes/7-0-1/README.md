@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.0.1
+  title: ProyeksiApp 7.0.1
   sidebar_navigation:
       title: 7.0.1
   release_version: 7.0.1
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 7.0.1
+# ProyeksiApp 7.0.1
 
 This patch release contains several bug fixes. We recommend to update
-your OpenProject installation to this version.
+your ProyeksiApp installation to this version.
 
 ## Bug fixes (15)
 

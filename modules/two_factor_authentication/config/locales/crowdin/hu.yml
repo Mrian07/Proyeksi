@@ -124,14 +124,14 @@ hu:
           Ha nem tudja beolvasni a kódot, akkor az alábbi adatok segítségével manuálisan is megadhatja a bejegyzést:
 
         description: |
-          Regisztráljon egy alkalmazás-hitelesítőt az OpenProject-hez való használatra az időalapú egyszeri jelszavas hitelesítési szabvány használatával.
+          Regisztráljon egy alkalmazás-hitelesítőt az ProyeksiApp-hez való használatra az időalapú egyszeri jelszavas hitelesítési szabvány használatával.
           Gyakori példák a Google Authenticator vagy az Authy.
       sms:
         title: 'Használja  a mobiltelefonját.'
         redacted_identifier: 'Mobiltelefon (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier} azonosító kód elküldve %{delivery_channel}'
         description: |
-          Regisztrálja mobiltelefonszámát az egyszeri OpenProject jelszavak kézbesítéséhez.
+          Regisztrálja mobiltelefonszámát az egyszeri ProyeksiApp jelszavak kézbesítéséhez.
     sns:
       delivery_failed: 'SNS kézbesítés sikertelen'
     message_bird:

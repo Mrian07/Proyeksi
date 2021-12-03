@@ -24,7 +24,7 @@ tr:
     label_synchronize: 'Senkronize et'
     settings:
       name_attribute: 'LDAP grupları ad özelliği'
-      name_attribute_text: 'Bir filtre tarafından oluşturulduğunda OpenProject grubunu adlandırmak için kullanılan LDAP özelliği'
+      name_attribute_text: 'Bir filtre tarafından oluşturulduğunda ProyeksiApp grubunu adlandırmak için kullanılan LDAP özelliği'
     synchronized_filters:
       add_new: 'Senkronize LDAP filtresi ekle'
       singular: 'LDAP Grubu senkronizasyon filtresi'
@@ -36,11 +36,11 @@ tr:
       destroy:
         title: '%{name} senkronize filtresini kaldır'
         confirmation: "Devam ederseniz, senkronize edilmiş %{name} filtresi ve bu kanaldan oluşturulan %{groups_count} tüm gruplar kaldırılacak."
-        removed_groups: "Uyarı: Bu işlem aşağıdaki grupları OpenProject'ten kaldıracak ve tüm projelerden kaldıracaktır!"
+        removed_groups: "Uyarı: Bu işlem aşağıdaki grupları ProyeksiApp'ten kaldıracak ve tüm projelerden kaldıracaktır!"
         verification: "Silme işlemini doğrulamak için %{name} filtre adını girin."
       form:
-        group_name_attribute_text: 'OpenProject grup adını ayarlamak için kullanılan LDAP grubunun niteliğini girin.'
-        filter_string_text: 'OpenProject ile senkronize etmek için LDAP''nizdeki grupları döndüren RFC4515 LDAP filtresini girin.'
+        group_name_attribute_text: 'ProyeksiApp grup adını ayarlamak için kullanılan LDAP grubunun niteliğini girin.'
+        filter_string_text: 'ProyeksiApp ile senkronize etmek için LDAP''nizdeki grupları döndüren RFC4515 LDAP filtresini girin.'
         base_dn_text: >
           Bu filtre için kullanmak üzere arama tabanı DN'sini girin. Seçilen LDAP bağlantısının temel DN'sinin altında olması gerekir.
           Bağlantının temel DN'sini yeniden kullanmak için bu seçeneği boş bırakın
@@ -49,14 +49,14 @@ tr:
       destroy:
         title: '%{name} adlı senkronize grubu kaldır'
         confirmation: "Devam ederseniz, %{name}} ile senkronize edilmiş grup ve içinden senkronize olan tüm %{users_count} kullanıcısı kaldırılacak."
-        info: "Not: OpenProject grubunun kendisi ve bu LDAP senkronizasyonunun dışına eklenen üyeler kaldırılmaz."
+        info: "Not: ProyeksiApp grubunun kendisi ve bu LDAP senkronizasyonunun dışına eklenen üyeler kaldırılmaz."
         verification: "Silme işlemini doğrulamak için grubun adını %{name} girin."
       help_text_html: |
-        Bu modül, LDAP ve OpenProject grupları arasında bir senkronizasyon ayarlamanıza izin verir.
-        Bu, LDAP gruplarının OpenProject ile çalışmak için ayarlanmış <em> groupOfNames / memberOf </em> özelliğini kullanması gerektiğine bağlıdır.
+        Bu modül, LDAP ve ProyeksiApp grupları arasında bir senkronizasyon ayarlamanıza izin verir.
+        Bu, LDAP gruplarının ProyeksiApp ile çalışmak için ayarlanmış <em> groupOfNames / memberOf </em> özelliğini kullanması gerektiğine bağlıdır.
         <br/>
         Gruplar bir cron işi aracılığıyla saatlik olarak senkronize edilir.
-        <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/"> Lütfen bu konudaki belgelere bakın </a>.
+        <a href="https://www.proyeksiapp.org/help/administration/manage-ldap-authentication/"> Lütfen bu konudaki belgelere bakın </a>.
       no_results: 'Senkronize edilmiş grup bulunamadı.'
       no_members: 'Bu grubun henüz senkronize edilmiş üyesi yok.'
       plural: 'Senkronize LDAP grupları'
@@ -64,7 +64,7 @@ tr:
       form:
         auth_source_text: 'Hangi LDAP bağlantısının kullanılması gerektiğini seçin.'
         sync_users_text: >
-          Bu seçeneği etkinleştirirseniz, bulunan kullanıcılar da otomatik olarak OpenProject'te oluşturulur. Bu olmadan, yalnızca OpenProject'teki mevcut hesaplar gruplara eklenecektir.
+          Bu seçeneği etkinleştirirseniz, bulunan kullanıcılar da otomatik olarak ProyeksiApp'te oluşturulur. Bu olmadan, yalnızca ProyeksiApp'teki mevcut hesaplar gruplara eklenecektir.
         dn_text: 'LDAP''ye grubun tam DN''sini girin'
-        group_text: 'LDAP grubunun üyelerinin senkronize edileceği mevcut bir OpenProject grubunu seçin.'
+        group_text: 'LDAP grubunun üyelerinin senkronize edileceği mevcut bir ProyeksiApp grubunu seçin.'
 

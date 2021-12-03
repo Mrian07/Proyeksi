@@ -1,6 +1,6 @@
 ---
 description: |-
-  The configuration endpoint allows to read certain configuration parameters of the OpenProject instance.
+  The configuration endpoint allows to read certain configuration parameters of the ProyeksiApp instance.
   Note that there is no 1:1 relationship between this endpoint and the settings you can find in your settings.yml.
 
   For now this endpoint will only allow access to settings deemed useful for a client to know in general.

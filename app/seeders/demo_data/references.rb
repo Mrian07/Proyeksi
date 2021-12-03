@@ -5,7 +5,7 @@ module DemoData
     module_function
 
     def url_helpers
-      @url_helpers ||= OpenProject::StaticRouting::StaticRouter.new.url_helpers
+      @url_helpers ||= ProyeksiApp::StaticRouting::StaticRouter.new.url_helpers
     end
 
     def api_url_helpers
@@ -20,7 +20,7 @@ module DemoData
 
     ##
     # Replaces occurrences of `##child:n` with a link to the given
-    # work package's nth child using the standard OpenProject work package
+    # work package's nth child using the standard ProyeksiApp work package
     # link syntax `##<id>`.
     def link_children(str, work_package)
       return str unless str.present? && str.include?("##child:")
@@ -89,7 +89,7 @@ module DemoData
     end
 
     def link_sprints(str, project)
-      return str unless defined? OpenProject::Backlogs
+      return str unless defined? ProyeksiApp::Backlogs
 
       link_reference(
         str,

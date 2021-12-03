@@ -1,16 +1,16 @@
 ---
-title: OpenProject 11.0.0
+title: ProyeksiApp 11.0.0
 sidebar_navigation:
     title: 11.0.0
 release_version: 11.0.0
 release_date: 2020-10-12
 ---
 
-# OpenProject 11.0.0
+# ProyeksiApp 11.0.0
 
-We released [OpenProject 11.0.0](https://community.openproject.org/versions/1429).
+We released [ProyeksiApp 11.0.0](https://community.openproject.org/versions/1429).
 
-This new release will bring all sorts of features that will improve classical as well as agile project management. We have implemented a top-down scheduling which introduces the option to schedule tasks manually in OpenProject. Also, we have done a lot of improvements to the agile boards, e.g. to create a work breakdown structure for your projects. Furthermore, we have developed project templates as well as better project portfolio management.
+This new release will bring all sorts of features that will improve classical as well as agile project management. We have implemented a top-down scheduling which introduces the option to schedule tasks manually in ProyeksiApp. Also, we have done a lot of improvements to the agile boards, e.g. to create a work breakdown structure for your projects. Furthermore, we have developed project templates as well as better project portfolio management.
 
 As always, the release contains many more improvements and bug fixes and we recommend updating to the newest version promptly.
 
@@ -18,13 +18,13 @@ As always, the release contains many more improvements and bug fixes and we reco
 
 ## Top-down project scheduling with new manual planning mode
 
-Top-down scheduling enables the project team to define all tasks involved in a project, starting with a fixed start and finish date, and breaking it down into smaller work packages. The new manual scheduling mode in OpenProject allows to set a start and finish date of the parent without being affected by the start and finish dates of its children. You can now plan a project top-down without knowing all tasks at the start of the project.
+Top-down scheduling enables the project team to define all tasks involved in a project, starting with a fixed start and finish date, and breaking it down into smaller work packages. The new manual scheduling mode in ProyeksiApp allows to set a start and finish date of the parent without being affected by the start and finish dates of its children. You can now plan a project top-down without knowing all tasks at the start of the project.
 
 ![top-down-scheduling](top-down-scheduling.png)
 
 Moving a child element in the manual scheduling mode will not move the dates of the parent element. It will now indicate the scheduling differences with a black or red bracket underneath (e.g. when a child is shorter or longer than the parent phase). Also, we have added a grey background on hover to indicate the parent-child-relationships.
 
-Now, in OpenProject you can rely on both, top-down and bottom-up planning or even a combination of both. The approach you choose depends on your specific planning goal.
+Now, in ProyeksiApp you can rely on both, top-down and bottom-up planning or even a combination of both. The approach you choose depends on your specific planning goal.
 
 ![Top-down-scheduling](Top-down-scheduling.gif)
 
@@ -160,7 +160,7 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 - Fixed: Gantt chart: phases doesn't have background color on hover \[[#34074](https://community.openproject.com/wp/34074)\]
 - Fixed: Gantt chart: children not allowed to move out of its parent's date range  \[[#34076](https://community.openproject.com/wp/34076)\]
 - Fixed: Filters does not accept user id for principal in API memberships \[[#34108](https://community.openproject.com/wp/34108)\]
-- Fixed: Order of work packages in XLS, PDF, CSV export differs from order in OpenProject \[[#34112](https://community.openproject.com/wp/34112)\]
+- Fixed: Order of work packages in XLS, PDF, CSV export differs from order in ProyeksiApp \[[#34112](https://community.openproject.com/wp/34112)\]
 - Fixed: Checkboxes in table not displayed correctly in WYSIWYG editor \[[#34113](https://community.openproject.com/wp/34113)\]
 - Fixed: Archived projects not available via the API \[[#34120](https://community.openproject.com/wp/34120)\]
 - Fixed: Gantt charts: rows misaligned when scrolling to bottom \[[#34127](https://community.openproject.com/wp/34127)\]
@@ -201,7 +201,7 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 - Fixed: Default value of a custom field not passed \[[#34420](https://community.openproject.com/wp/34420)\]
 - Fixed: Focus not set on project name when creating new project \[[#34424](https://community.openproject.com/wp/34424)\]
 - Fixed: Low contrast for filter icon \[[#34425](https://community.openproject.com/wp/34425)\]
-- Fixed: Broken success message shown when logging into OpenProject \[[#34427](https://community.openproject.com/wp/34427)\]
+- Fixed: Broken success message shown when logging into ProyeksiApp \[[#34427](https://community.openproject.com/wp/34427)\]
 - Fixed: Project members not added when selecting multiple users from "Members" menu \[[#34428](https://community.openproject.com/wp/34428)\]
 - Fixed: Assignee and author field cut off even though there is enough space \[[#34431](https://community.openproject.com/wp/34431)\]
 - Fixed: When changing booked time entry, entry is no longer displayed in time and costs report \[[#34432](https://community.openproject.com/wp/34432)\]
@@ -221,7 +221,7 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 - Fixed: Onboarding tour on edge broken \[[#34507](https://community.openproject.com/wp/34507)\]
 - Fixed: Custom fields of type long text are wrongly formatted in project list \[[#34509](https://community.openproject.com/wp/34509)\]
 - Fixed: Wrong default settings for Gantt chart query in project \[[#34511](https://community.openproject.com/wp/34511)\]
-- Fixed: OpenProject Logo in header missing \[[#34529](https://community.openproject.com/wp/34529)\]
+- Fixed: ProyeksiApp Logo in header missing \[[#34529](https://community.openproject.com/wp/34529)\]
 - Fixed: Cost report filtered by custom field list does return an empty list \[[#34530](https://community.openproject.com/wp/34530)\]
 - Fixed: With global subproject filter disabled, subproject boards do not work \[[#34535](https://community.openproject.com/wp/34535)\]
 - Fixed: Clicking with modifier on global search results no longer works \[[#34544](https://community.openproject.com/wp/34544)\]
@@ -283,7 +283,7 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 - Changed: Combine time and cost tracking and reporting module \[[#33918](https://community.openproject.com/wp/33918)\]
 - Changed: Prevent losing dates when adding the first child work package to an automatically scheduled work package \[[#33925](https://community.openproject.com/wp/33925)\]
 - Changed: Calculate work packages group sums in database so we can re-enable performant group sums \[[#33935](https://community.openproject.com/wp/33935)\]
-- Changed: Re-Add ## and ### capability to OpenProject \[[#33962](https://community.openproject.com/wp/33962)\]
+- Changed: Re-Add ## and ### capability to ProyeksiApp \[[#33962](https://community.openproject.com/wp/33962)\]
 - Changed: Allow rescheduling of manually scheduled parent work package (clamps) in gantt view \[[#34014](https://community.openproject.com/wp/34014)\]
 - Changed: http redirect_uri from localhost domain \[[#34025](https://community.openproject.com/wp/34025)\]
 - Changed: Gantt chart: Make row's background translucent when hovered \[[#34028](https://community.openproject.com/wp/34028)\]
@@ -294,7 +294,7 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 - Changed: [all projects overview] (Add option to) show status-text in expanded view. \[[#34191](https://community.openproject.com/wp/34191)\]
 - Changed: Map board subtasks columns when copying projects \[[#34238](https://community.openproject.com/wp/34238)\]
 - Changed: Having meetings as a linkable resource \[[#34256](https://community.openproject.com/wp/34256)\]
-- Changed: What's new teaser OpenProject BIM 11.0 \[[#34514](https://community.openproject.com/wp/34514)\]
+- Changed: What's new teaser ProyeksiApp BIM 11.0 \[[#34514](https://community.openproject.com/wp/34514)\]
 - Changed: New seed data for demo project - boards \[[#34526](https://community.openproject.com/wp/34526)\]
 - Changed: Change text in the Action board creation modal \[[#34847](https://community.openproject.com/wp/34847)\]
 - Epic: Switch between automatic and manual scheduling mode \[[#25624](https://community.openproject.com/wp/25624)\]
@@ -305,25 +305,25 @@ There are lots and lots of new things we packed into 11.0 to tell you about.
 
 ## Installation and Updates
 
-To use OpenProject 11.0 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
+To use ProyeksiApp 11.0 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
 
-Prefer to run OpenProject 11.0 in your own infrastructure?
-Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 11.0 in your own infrastructure?
+Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from your self-managed Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/blog/enterprise-edition-upgrade-test-free/) 
 Navigate to the -> *Administration*-> *Enterprise Edition* and request your trial token.
 
-## Migrating to OpenProject 11.0
+## Migrating to ProyeksiApp 11.0
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 11.0. Please note the blue box on top of the page.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 11.0. Please note the blue box on top of the page.
 
-We update the hosted OpenProject environments (Enterprise Cloud) automatically.
+We update the hosted ProyeksiApp environments (Enterprise Cloud) automatically.
 
 ## Credits and contributions
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject 11.0.
+- All the developers, designers, project managers who have contributed to ProyeksiApp 11.0.
 
 - The City of Cologne for sponsoring some of the open source features and thus contributing them to the Community.
 
@@ -337,4 +337,4 @@ Special thanks go to all OpenProject contributors without whom this release woul
 
 ## What’s next?
 
-We are continuously developing new features and improvements for OpenProject. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.openproject.org/projects/openproject/work_packages?query_id=918).
+We are continuously developing new features and improvements for ProyeksiApp. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.openproject.org/projects/openproject/work_packages?query_id=918).

@@ -8,7 +8,7 @@ module LegacyFileHelpers
                          content: 'test content',
                          binary: false)
 
-    tmp = ::OpenProject::Files.create_temp_file name: name, content: content, binary: binary
+    tmp = ::ProyeksiApp::Files.create_temp_file name: name, content: content, binary: binary
     Rack::Test::UploadedFile.new tmp.path, content_type, binary
   end
 end

@@ -4,7 +4,7 @@ sidebar_navigation: false
 
 # Manual installation guide
 
-**IMPORTANT: We strongly recommend to use one of the officially supported [installation methods](../../installation). This guide is simply provided as a reference, and is most likely NOT up to date with relation to the latest OpenProject releases.**
+**IMPORTANT: We strongly recommend to use one of the officially supported [installation methods](../../installation). This guide is simply provided as a reference, and is most likely NOT up to date with relation to the latest ProyeksiApp releases.**
 
 Please be aware that:
 
@@ -14,9 +14,9 @@ the installation guide on an Ubuntu Server image, but it should work on any
 derivative. You may need to alter some of the commands to match your
 derivative.
 
-* OpenProject will be installed with a PostgreSQL database.
+* ProyeksiApp will be installed with a PostgreSQL database.
 
-* OpenProject will be served in a production environment with the Apache server
+* ProyeksiApp will be served in a production environment with the Apache server
 (this guide should work similarly with other servers, like nginx and others)
 
 Note: We have highlighted commands to execute like this
@@ -31,7 +31,7 @@ In our case it will be `root` for most of the time or `openproject`.
 If you find any bugs or you have any recommendations for improving this
 tutorial, please, feel free to create a pull request against this guide.
 
-## Create a dedicated OpenProject user
+## Create a dedicated ProyeksiApp user
 
 ```bash
 sudo groupadd openproject
@@ -61,7 +61,7 @@ sudo passwd openproject #(enter desired password)
 
 ## Install and setup the database server (PostgreSQL)
 
-OpenProject requires PostgreSQL v9.5+. If you system package is too old, you can check https://www.postgresql.org/download/ to get a newer version installed. In our case, Ubuntu 18.04 comes with a recent-enough version so we can use the system packages:
+ProyeksiApp requires PostgreSQL v9.5+. If you system package is too old, you can check https://www.postgresql.org/download/ to get a newer version installed. In our case, Ubuntu 18.04 comes with a recent-enough version so we can use the system packages:
 
 ```bash
 [root@host] apt-get install postgresql postgresql-contrib libpq-dev
@@ -73,7 +73,7 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the database user for OpenProject. This will prompt you for a password. We are going to assume in the following guide that this password is 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the database user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that this password is 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
 [postgres@host] createuser -W openproject
@@ -145,10 +145,10 @@ To check our Node installation we run `node --version`. It should output somethi
 v14.16.0
 ```
 
-## Installation of OpenProject
+## Installation of ProyeksiApp
 
-We will install the OpenProject Community Edition. It contains the recommended set of plugins for use
-with OpenProject. For more information, see https://github.com/opf/openproject.
+We will install the ProyeksiApp Community Edition. It contains the recommended set of plugins for use
+with ProyeksiApp. For more information, see https://github.com/opf/openproject.
 
 
 ```bash
@@ -163,7 +163,7 @@ with OpenProject. For more information, see https://github.com/opf/openproject.
 [openproject@host] npm install
 ```
 
-## Configure OpenProject
+## Configure ProyeksiApp
 
 Create and configure the database configuration file in config/database.yml
 (relative to the openproject directory).
@@ -207,7 +207,7 @@ production:                          #main level
 ```
 
 Add this line into `configuration.yml` file at the end of the file for
-a better performance of OpenProject:
+a better performance of ProyeksiApp:
 
 ```yaml
 rails_cache_store: :memcache
@@ -220,7 +220,7 @@ invalid `yml` files without seeing the error. Validating those files
 prevents you from such errors.
 
 
-## Finish the installation of OpenProject
+## Finish the installation of ProyeksiApp
 
 ```bash
 [openproject@host] cd ~/openproject
@@ -239,14 +239,14 @@ will seed the database in the french language.
 ### Secret token
 
 You need to generate a secret key base for the production environment with `./bin/rake secret` and make that available through the environment variable `SECRET_KEY_BASE`.
-In this installation guide, we will use the local `.profile` of the OpenProject user. You may alternatively set the environment variable in `/etc/environment` or pass it to the server upon start manually in `/etc/apache2/envvars`.
+In this installation guide, we will use the local `.profile` of the ProyeksiApp user. You may alternatively set the environment variable in `/etc/environment` or pass it to the server upon start manually in `/etc/apache2/envvars`.
 
 ```bash
 [openproject@host] echo "export SECRET_KEY_BASE=$(./bin/rake secret)" >> ~/.profile
 [openproject@host] source ~/.profile
 ```
 
-## Serve OpenProject with Apache and Passenger
+## Serve ProyeksiApp with Apache and Passenger
 
 First, we exit the current bash session with the openproject user,
 so that we are again in a root shell.
@@ -348,7 +348,7 @@ Now, we (re-)start Apache:
 [root@host] service apache2 restart
 ```
 
-Your OpenProject installation should be accessible on port 80 (http). A default admin-account is created for you having the following credentials:
+Your ProyeksiApp installation should be accessible on port 80 (http). A default admin-account is created for you having the following credentials:
 
 Username: `admin`
 Password: `admin`
@@ -357,7 +357,7 @@ Please, change the password on the first login. Also, we highly recommend to con
 
 ## Activate background jobs
 
-OpenProject sends (some) mails asynchronously by using background jobs. All such jobs are collected in a queue, so that a separate process can work on them. This means that we have to start the background worker. To automate this, we put the background worker into a cronjob.
+ProyeksiApp sends (some) mails asynchronously by using background jobs. All such jobs are collected in a queue, so that a separate process can work on them. This means that we have to start the background worker. To automate this, we put the background worker into a cronjob.
 
 ```bash
 [root@all] su - openproject -c "bash -l"
@@ -374,23 +374,23 @@ This will start the worker job every minute.
 
 ## Follow-Ups
 
-Your OpenProject installation is ready to run. Please refer to the [Operation guides](../../operation) or the [Advanced configuration guides](../../configuration) for more details on how to operate and configure OpenProject.
+Your ProyeksiApp installation is ready to run. Please refer to the [Operation guides](../../operation) or the [Advanced configuration guides](../../configuration) for more details on how to operate and configure ProyeksiApp.
 
 ## Plug-In installation (Optional)
 
 This step is optional.
 
-OpenProject can be extended by various plug-ins, which extend OpenProject's capabilities.
-For general information and a list of all plug-ins known to us, refer to to the [plug-in page](https://community.openproject.org/projects/openproject/wiki/OpenProject_Plug-Ins).
+ProyeksiApp can be extended by various plug-ins, which extend ProyeksiApp's capabilities.
+For general information and a list of all plug-ins known to us, refer to to the [plug-in page](https://community.openproject.org/projects/openproject/wiki/ProyeksiApp_Plug-Ins).
 
-OpenProject plug-ins are separated in ruby gems. You can install them by listing them in a file called `Gemfile.plugins`. An example `Gemfile.plugins` file looks like this:
+ProyeksiApp plug-ins are separated in ruby gems. You can install them by listing them in a file called `Gemfile.plugins`. An example `Gemfile.plugins` file looks like this:
 
 ```ruby
 # Required by backlogs
 gem "openproject-meeting", git: "https://github.com/finnlabs/openproject-meeting.git", :tag => "v4.2.2"
 ```
 
-If you have modified the `Gemfile.plugin` file, always repeat the following steps of the OpenProject installation:
+If you have modified the `Gemfile.plugin` file, always repeat the following steps of the ProyeksiApp installation:
 
 ```bash
 [openproject@all] cd ~/openproject
@@ -401,7 +401,7 @@ If you have modified the `Gemfile.plugin` file, always repeat the following step
 [openproject@all] RAILS_ENV="production" ./bin/rake assets:precompile
 ```
 
-Restart the OpenProject server afterwards:
+Restart the ProyeksiApp server afterwards:
 
 ```bash
 [openproject@all] touch ~/openproject/tmp/restart.txt
@@ -409,14 +409,14 @@ Restart the OpenProject server afterwards:
 
 The next web-request to the server will take longer (as the application is restarted). All subsequent request should be as fast as always.
 
-We encourage you to extend OpenProject yourself by writing a plug-in. Please, read the [plugin-contributions](https://community.openproject.org/projects/openproject/wiki/Developing_Plugins) guide for more information.
+We encourage you to extend ProyeksiApp yourself by writing a plug-in. Please, read the [plugin-contributions](https://community.openproject.org/projects/openproject/wiki/Developing_Plugins) guide for more information.
 
 ## Troubleshooting
 
 You can find the error logs for apache here:
 <pre>/var/log/apache2/error.log</pre>
 
-The OpenProject logfile can be found here:
+The ProyeksiApp logfile can be found here:
 <pre>/home/openproject/openproject/log/production.log</pre>
 
 If an error occurs, it should be logged there.
@@ -429,7 +429,7 @@ If you need to restart the server (for example after a configuration change), do
 
 ## Frequently asked questions (FAQ)
 
-* **I followed the installation guide faithfully and OpenProject is running. Now, how do I log in?**
+* **I followed the installation guide faithfully and ProyeksiApp is running. Now, how do I log in?**
 
   The `db:seed` command listed above creates a default admin-user. The username is `admin` and the default password is `admin`. You are forced to change the admin password on the first login.
   If you cannot login as the admin user, make sure that you have executed the `db:seed` command.
@@ -438,24 +438,24 @@ If you need to restart the server (for example after a configuration change), do
   [openproject@all] RAILS_ENV="production" ./bin/rake db:seed
   ```
 
-* **When accessing OpenProject, I get an error page. How do I find out what went wrong?**
+* **When accessing ProyeksiApp, I get an error page. How do I find out what went wrong?**
 
   Things can go wrong on different levels. You can find the apache error logs here:
   <pre>/var/log/apache2/error.log</pre>
-  The OpenProject log can be found here:
+  The ProyeksiApp log can be found here:
   <pre>/home/openproject/openproject/log/production.log</pre>
 
 * **I cannot solve an error, not even with the log files. How do I get help?**
 
-  You can find help in [the OpenProject forums](https://community.openproject.org/projects/openproject/boards). Please tell us, if possible, what you have done (e.g. which guide you have used to install OpenProject), how to reproduce the error, and provide the appropriate error logs.
+  You can find help in [the ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards). Please tell us, if possible, what you have done (e.g. which guide you have used to install ProyeksiApp), how to reproduce the error, and provide the appropriate error logs.
   It often helps to have a look at the already answered questions, or to search the Internet for the error. Most likely someone else has already solved the same problem.
 
-* **I get errors, since I have installed an OpenProject plug-in**
+* **I get errors, since I have installed an ProyeksiApp plug-in**
 
-  With each new OpenProject core version, the plug-ins might need to be updated. Please make sure that the plug-in versions of all you plug-ins works with the OpenProject version you use.
-  Many plug-ins follow the OpenProject version with their version number (So, if you have installed OpenProject version 4.1.0, the plug-in should also have the version 4.1.0).
+  With each new ProyeksiApp core version, the plug-ins might need to be updated. Please make sure that the plug-in versions of all you plug-ins works with the ProyeksiApp version you use.
+  Many plug-ins follow the ProyeksiApp version with their version number (So, if you have installed ProyeksiApp version 4.1.0, the plug-in should also have the version 4.1.0).
 
 ## Questions, comments, and feedback
 
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow OpenProject on twitter](https://twitter.com/openproject), and follow the news on [openproject.org](http://openproject.org) to stay up to date.
+[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow the news on [openproject.org](http://openproject.org) to stay up to date.

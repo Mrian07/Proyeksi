@@ -35,7 +35,7 @@ additional_footer_content:
   default: ''
 # The instance name
 app_title:
-  default: OpenProject
+  default: ProyeksiApp
 app_subtitle:
   default: Project management
 brute_force_block_minutes:
@@ -52,7 +52,7 @@ consent_time:
 consent_info:
   serialized: true
   default:
-    en: "## Consent\n\nYou need to agree to the [privacy and security policy](https://www.openproject.org/data-privacy-and-security/) of this OpenProject instance."
+    en: "## Consent\n\nYou need to agree to the [privacy and security policy](https://www.openproject.org/data-privacy-and-security/) of this ProyeksiApp instance."
 # Indicates whether or not users need to consent to something such as privacy policy.
 consent_required:
   default: 0
@@ -96,7 +96,7 @@ password_days_valid:
   format: int
   default: 0
 software_name:
-  default: OpenProject
+  default: ProyeksiApp
 software_url:
   default: 'https://www.openproject.org/'
 attachment_max_size:

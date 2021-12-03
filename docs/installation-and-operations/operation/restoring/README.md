@@ -4,11 +4,11 @@ sidebar_navigation:
   priority: 8
 ---
 
-# Restoring an OpenProject backup
+# Restoring an ProyeksiApp backup
 
 ## Package-based installation (DEB/RPM)
 
-Assuming you have a backup of all the OpenProject files at hand (see the [Backing up](../backing-up) guide), here is how you would restore your OpenProject installation from that backup.
+Assuming you have a backup of all the ProyeksiApp files at hand (see the [Backing up](../backing-up) guide), here is how you would restore your ProyeksiApp installation from that backup.
 
 As a reference, we will assume you have the following dumps on your server, located in `/var/db/openproject/backup`:
 
@@ -26,7 +26,7 @@ drwxr-xr-x 6 openproject openproject    4096 Nov 19 21:00 ..
 
 ### Stop the processes
 
-First, it is a good idea to stop the OpenProject instance:
+First, it is a good idea to stop the ProyeksiApp instance:
 
 ```bash
 sudo service openproject stop
@@ -63,7 +63,7 @@ Note: in this section, the `<dbusername>`, `<dbhost>` and `<dbname>` variables t
 the values that are contained in the `DATABASE_URL` setting of your
 installation.
 
-> _If you are moving OpenProject to a new server and want to import the backup there, this
+> _If you are moving ProyeksiApp to a new server and want to import the backup there, this
 will be the `DATABASE_URL` of your **new** installation on that server._
 
 First, ensure the connection details about your database is the one you want to restore
@@ -75,7 +75,7 @@ sudo openproject config:get DATABASE_URL
 
 Then, to restore the PostgreSQL dump please use the `pg_restore` command utility. **WARNING:** The command `--clean --if-exists` is used and it will drop objects in the database and you will lose all changes in this database! Double-check that the database URL above is the database you want to restore to. 
 
-This is necessary since the backups of OpenProject does not clean statements to remove existing options and will lead to duplicate index errors when trying to restore to an existing database. The alternative is to drop/recreate the database manually (see below), if you have the permissions to do so.
+This is necessary since the backups of ProyeksiApp does not clean statements to remove existing options and will lead to duplicate index errors when trying to restore to an existing database. The alternative is to drop/recreate the database manually (see below), if you have the permissions to do so.
 
 ```bash
 sudo pg_restore --clean --if-exists --dbname $(sudo openproject config:get DATABASE_URL) postgresql-dump-20200804094017.pgdump
@@ -105,7 +105,7 @@ DROP DATABASE openproject; CREATE DATABASE openproject OWNER openproject;
 Once done you can exit the psql console by entering `\q`.
 Now you can restore the database as seen above.
 
-### Restart the OpenProject processes
+### Restart the ProyeksiApp processes
 
 Finally, restart all your processes as follows:
 
@@ -115,7 +115,7 @@ sudo service openproject restart
 
 ## Docker-based installation
 
-For Docker-based installations, assuming you have a backup as per the procedure described in the [Backing up](../backing-up) guide, you simply need to restore files into the correct folders (when using the all-in-one container), or restore the docker volumes (when using the Compose file), then start OpenProject using the normal docker or docker-compose command.
+For Docker-based installations, assuming you have a backup as per the procedure described in the [Backing up](../backing-up) guide, you simply need to restore files into the correct folders (when using the all-in-one container), or restore the docker volumes (when using the Compose file), then start ProyeksiApp using the normal docker or docker-compose command.
 
 ### Using docker-compose
 
@@ -123,7 +123,7 @@ Let's assume you want to restore a database dump given in a file, say `openproje
 
 If you are using docker-compose this is what you do after you started everything for the first time using `docker-compose up -d`:
 
-1. Stop the OpenProject container using `docker-compose stop web worker`.
+1. Stop the ProyeksiApp container using `docker-compose stop web worker`.
 2. Drop the existing, seeded database using `docker exec -it db_1 psql -U postgres -c 'drop database openproject;'`
 3. Recreate the database using `docker exec -it db_1 psql -U postgres -c 'create database openproject owner openproject;'`<sup>*</sup>
 4. Copy the dump onto the container: `docker cp openproject.sql db_1:/`
@@ -131,7 +131,7 @@ If you are using docker-compose this is what you do after you started everything
 6. Delete the dump on the container: `docker exec -it db_1 rm openproject.sql`
 7. Restart the web and worker processes: `docker-compose start web worker`
 
-_\* If your database doesn't have an OpenProject user you either have to create one or use which ever user you used before._
+_\* If your database doesn't have an ProyeksiApp user you either have to create one or use which ever user you used before._
 
 * * *
 
@@ -139,16 +139,16 @@ This assumes that the database container is called `db_1`. Find out the actual n
 
 ### Using the all-in-one container
 
-Given a SQL dump `openproject.sql` (or a `.pgdump` file) we can create a new OpenProject container using it with the following steps.
+Given a SQL dump `openproject.sql` (or a `.pgdump` file) we can create a new ProyeksiApp container using it with the following steps.
 
-1. Create the pgdata folder to be mounted in the OpenProject container.
+1. Create the pgdata folder to be mounted in the ProyeksiApp container.
 2. Initialize the database.
 3. Restore the dump.
-4. Start the OpenProject container mounting the pgdata folder.
+4. Start the ProyeksiApp container mounting the pgdata folder.
 
 #### 1) Create the folders to be mounted
 
-First we create the folder to be mounted by our OpenProject container.
+First we create the folder to be mounted by our ProyeksiApp container.
 While we're at we also create the assets folder which should be mounted too.
 
 ```
@@ -197,7 +197,7 @@ Once this has finished you can quit `psql` (using `\q`) and the container (`exit
 
 **Importing backups from a package-based installation**
 
-If  you have a `.pgdump` file instead, for instance from a backup of a package-based OpenProject installation,
+If  you have a `.pgdump` file instead, for instance from a backup of a package-based ProyeksiApp installation,
 the process works almost the same. You still just copy the file into the container as shown above,
 but then you use `pg_restore` instead to restore it.
 
@@ -215,19 +215,19 @@ docker exec -it postgres pg_restore -U postgres postgresql-dump-20211119210038.p
 **Dump restored**
 
 Once the dump is restored yuo can stop the postgres container using `docker stop postgres`.
-Now you have to fix the permissions that were changed by the postgres container so OpenProject
+Now you have to fix the permissions that were changed by the postgres container so ProyeksiApp
 can use the files again.
 
 ```
 chown -R 102:102 /var/lib/openproject/pgdata
 ```
 
-Your `pgdata` directory is now ready to be mounted by your final OpenProject container.
+Your `pgdata` directory is now ready to be mounted by your final ProyeksiApp container.
 
 **Restoring attachments**
 
 If you also have file attachments to restore you can simply copy them into the attachments folder on the docker
-host which is mounted into the OpenProject container. For instance:
+host which is mounted into the ProyeksiApp container. For instance:
 
 ```
 # 1. extract files
@@ -239,7 +239,7 @@ chown -R 1000:1000 /var/lib/openproject/files
 
 You may need to create the `files` directory if it doesn't exist yet.
 
-#### 4) Start OpenProject
+#### 4) Start ProyeksiApp
 
 Start the container as described in the [installation section](../../installation/docker/#one-container-per-process-recommended)
 mounting `/var/lib/openproject/pgdata` (and `/var/lib/openproject/assets/` for attachments).

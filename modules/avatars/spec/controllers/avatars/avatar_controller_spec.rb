@@ -6,7 +6,7 @@ describe ::Avatars::AvatarController, type: :controller do
   let(:enabled) { true }
 
   before do
-    allow(::OpenProject::Avatars::AvatarManager).to receive(:local_avatars_enabled?).and_return enabled
+    allow(::ProyeksiApp::Avatars::AvatarManager).to receive(:local_avatars_enabled?).and_return enabled
   end
 
   describe ':show' do

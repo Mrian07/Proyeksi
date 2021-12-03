@@ -48,7 +48,7 @@ describe Story, type: :model do
   before(:each) do
     ActionController::Base.perform_caching = false
 
-    allow(Setting).to receive(:plugin_openproject_backlogs).and_return({ 'points_burn_direction' => 'down',
+    allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return({ 'points_burn_direction' => 'down',
                                                                          'wiki_template' => '',
                                                                          'card_spec' => 'Sattleford VM-5040',
                                                                          'story_types' => [type_feature.id.to_s],

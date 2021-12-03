@@ -6,20 +6,20 @@
 # This is the place for all API wide configuration, helper methods, exceptions
 # rescuing, mounting of different API versions etc.
 
-require 'open_project/authentication'
+require 'proyeksi_app/authentication'
 
 module API
   class RootAPI < Grape::API
-    include OpenProject::Authentication::Scope
+    include ProyeksiApp::Authentication::Scope
     extend API::Utilities::GrapeHelper
 
     insert_before Grape::Middleware::Error,
                   ::GrapeLogging::Middleware::RequestLogger,
-                  { instrumentation_key: 'openproject_grape_logger' }
+                  { instrumentation_key: 'proyeksiapp_grape_logger' }
 
     content_type :json, 'application/json; charset=utf-8'
 
-    use OpenProject::Authentication::Manager
+    use ProyeksiApp::Authentication::Manager
 
     helpers API::Caching::Helpers
     helpers do
@@ -162,7 +162,7 @@ module API
 
     def self.auth_headers
       lambda do
-        header = OpenProject::Authentication::WWWAuthenticate
+        header = ProyeksiApp::Authentication::WWWAuthenticate
                    .response_header(scope: authentication_scope, request_headers: env)
 
         { 'WWW-Authenticate' => header }
@@ -201,8 +201,8 @@ module API
     error_response ActiveRecord::ConnectionTimeoutError,
                    ::API::Errors::InternalError,
                    log: ->(exception) do
-                     payload = ::OpenProject::Logging::ThreadPoolContextBuilder.build!
-                     ::OpenProject.logger.error exception, reference: :APIv3, payload: payload
+                     payload = ::ProyeksiApp::Logging::ThreadPoolContextBuilder.build!
+                     ::ProyeksiApp.logger.error exception, reference: :APIv3, payload: payload
                    end
 
     # hide internal errors behind the same JSON response as all other errors

@@ -30,7 +30,7 @@ describe AdminController, type: :controller do
         Redmine::Plugin.register name.to_sym do
           menu :admin_menu,
                :"#{name}_settings",
-               { controller: '/admin/settings', action: :show_plugin, id: :"openproject_#{name}" },
+               { controller: '/admin/settings', action: :show_plugin, id: :"proyeksiapp_#{name}" },
                caption: name.capitalize,
                icon: 'icon2 icon-arrow',
                if: ->(*) { show }

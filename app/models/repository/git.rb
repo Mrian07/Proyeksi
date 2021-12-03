@@ -2,20 +2,20 @@
 
 
 
-require 'open_project/scm/adapters/git'
+require 'proyeksi_app/scm/adapters/git'
 
 class Repository::Git < Repository
   validates_presence_of :url
   validate :validity_of_local_url
 
   def self.scm_adapter_class
-    OpenProject::SCM::Adapters::Git
+    ProyeksiApp::SCM::Adapters::Git
   end
 
   def configure(scm_type, _args)
     if scm_type == self.class.managed_type
       unless manageable?
-        raise OpenProject::SCM::Exceptions::RepositoryBuildError.new(
+        raise ProyeksiApp::SCM::Exceptions::RepositoryBuildError.new(
           I18n.t('repositories.managed.error_not_manageable')
         )
       end
