@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UsersController < ApplicationController
   layout 'admin'
 
@@ -57,9 +55,9 @@ class UsersController < ApplicationController
     @events_by_day = events.group_by { |e| e.event_datetime.to_date }
 
     if !current_user.allowed_to_globally?(:manage_user) &&
-       (!(@user.active? ||
-       @user.registered?) ||
-       (@user != User.current && @memberships.empty? && events.empty?))
+      (!(@user.active? ||
+        @user.registered?) ||
+        (@user != User.current && @memberships.empty? && events.empty?))
       render_404
     else
       respond_to do |format|
@@ -74,8 +72,8 @@ class UsersController < ApplicationController
 
   def create
     call = Users::CreateService
-           .new(user: current_user)
-           .call(create_params)
+             .new(user: current_user)
+             .call(create_params)
 
     @user = call.result
 
@@ -236,13 +234,13 @@ class UsersController < ApplicationController
 
   def authorize_for_user
     if (User.current != @user ||
-        User.current == User.anonymous) &&
-       !User.current.admin?
+      User.current == User.anonymous) &&
+      !User.current.admin?
 
       respond_to do |format|
         format.html { render_403 }
-        format.xml  { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
-        format.js   { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
+        format.xml { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
+        format.js { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
         format.json { head :unauthorized, 'WWW-Authenticate' => 'Basic realm="ProyeksiApp API"' }
       end
 
@@ -285,9 +283,9 @@ class UsersController < ApplicationController
   def build_user_update_params
     pref_params = permitted_params.pref.to_h
     update_params = permitted_params
-      .user_create_as_admin(@user.uses_external_authentication?, @user.change_password_allowed?)
-      .to_h
-      .merge(pref: pref_params)
+                      .user_create_as_admin(@user.uses_external_authentication?, @user.change_password_allowed?)
+                      .to_h
+                      .merge(pref: pref_params)
 
     return update_params unless @user.change_password_allowed?
 

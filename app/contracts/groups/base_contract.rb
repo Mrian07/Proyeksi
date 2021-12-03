@@ -1,5 +1,3 @@
-
-
 module Groups
   class BaseContract < ::ModelContract
     include RequiresAdminGuard

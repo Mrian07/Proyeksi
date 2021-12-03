@@ -1,5 +1,3 @@
-
-
 module Notifications::Scopes
   module Visible
     extend ActiveSupport::Concern

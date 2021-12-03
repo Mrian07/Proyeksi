@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module OAuth
   class ApplicationContract < ::ModelContract
     def self.model

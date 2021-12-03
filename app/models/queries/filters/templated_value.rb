@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Filters::TemplatedValue
   KEY = '{id}'.freeze
   DEPRECATED_KEY = 'templated'.freeze

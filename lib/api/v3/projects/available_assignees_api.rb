@@ -1,5 +1,3 @@
-
-
 require 'api/v3/users/user_collection_representer'
 
 module API

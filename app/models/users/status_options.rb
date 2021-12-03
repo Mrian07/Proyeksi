@@ -21,13 +21,13 @@ module Users
         .merge(extra)
         .reject { |_, v| v.nil? } # remove nil counts to support dropping counts via extra
         .map do |k, v|
-          known_status = Principal.statuses.detect { |_, i| i == k }
-          if known_status
-            [known_status.first.to_sym, v]
-          else
-            [k.to_sym, v]
-          end
+        known_status = Principal.statuses.detect { |_, i| i == k }
+        if known_status
+          [known_status.first.to_sym, v]
+        else
+          [k.to_sym, v]
         end
+      end
         .to_h
     end
 

@@ -162,7 +162,8 @@ module AuthSourceSSO
   def handle_sso_for!(user, login)
     if sso_login_failed?(user)
       handle_sso_failure!({ user: user, login: login })
-    else # valid user
+    else
+      # valid user
       # If a user is invited, ensure it gets activated
       activated = user.invited?
       activate_user_if_invited! user

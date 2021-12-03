@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'list_optional'
 
 module Queries::Filters::Shared
@@ -14,8 +12,8 @@ module Queries::Filters::Shared
 
       def allowed_values
         @allowed_values ||= begin
-          me_allowed_value + super
-        end
+                              me_allowed_value + super
+                            end
       end
     end
   end

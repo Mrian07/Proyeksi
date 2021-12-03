@@ -1,5 +1,3 @@
-
-
 module CustomActions::Actions::Strategies::Boolean
   include CustomActions::ValidateAllowedValue
 

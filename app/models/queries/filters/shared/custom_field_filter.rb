@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared::CustomFieldFilter
   def self.included(base)
     base.extend(ClassMethods)

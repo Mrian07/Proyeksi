@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackagesFilterHelper
   # Links for project overview
   def project_work_packages_closed_version_path(version, options = {})

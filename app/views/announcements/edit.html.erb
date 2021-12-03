@@ -5,8 +5,8 @@
 <%= toolbar title: "#{t(:label_announcement)} (#{notice_annoucement_active})" %>
 
 <%= labelled_tabular_form_for @announcement,
-             :url => {:action => :update},
-             :html => {:method => :put} do |f|%>
+                              :url => { :action => :update },
+                              :html => { :method => :put } do |f| %>
   <div class="form--field">
     <%= f.text_area :text,
                     :cols => 80,

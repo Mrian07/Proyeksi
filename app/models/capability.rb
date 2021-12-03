@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Capability < ApplicationRecord
   include Tableless
   include Scopes::Scoped

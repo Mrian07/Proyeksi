@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Exports
   class Result
     attr_accessor :format,

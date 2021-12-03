@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     class ParseQueryParamsService
@@ -99,7 +97,7 @@ module API
 
       def filter_from_params(filter)
         attribute = filter.keys.first # there should only be one attribute per filter
-        operator =  filter[attribute]['operator']
+        operator = filter[attribute]['operator']
         values = Array(filter[attribute]['values'])
         ar_attribute = convert_filter_attribute attribute, append_id: true
 

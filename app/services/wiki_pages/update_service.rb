@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WikiPages::UpdateService < ::BaseServices::Update
   include Attachments::ReplaceAttachments
 

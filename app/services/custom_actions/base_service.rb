@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::BaseService
   include Shared::BlockService
 

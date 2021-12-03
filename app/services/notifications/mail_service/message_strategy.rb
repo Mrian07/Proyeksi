@@ -1,5 +1,3 @@
-
-
 module Notifications::MailService::MessageStrategy
   class << self
     def send_mail(notification)

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Orders::CustomFieldOrder < Queries::Orders::Base
   self.model = Project.all
 
@@ -13,10 +11,10 @@ class Queries::Projects::Orders::CustomFieldOrder < Queries::Orders::Base
 
   def custom_field
     @custom_field ||= begin
-      id = self.class.key.match(attribute)[1]
+                        id = self.class.key.match(attribute)[1]
 
-      ProjectCustomField.visible.find_by_id(id)
-    end
+                        ProjectCustomField.visible.find_by_id(id)
+                      end
   end
 
   def scope

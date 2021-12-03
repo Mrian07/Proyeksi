@@ -1,4 +1,3 @@
-
 require_relative './migration_utils/utils'
 
 class RebuildDag < ActiveRecord::Migration[5.0]
@@ -66,7 +65,7 @@ class RebuildDag < ActiveRecord::Migration[5.0]
                 AND relations.includes = 0
                 AND relations.requires = 0
                 AND (hierarchy + relates + duplicates + follows + blocks + includes + requires > 0)
-              SQL
+    SQL
 
     add_index :relations,
               %i(from_id to_id hierarchy),
@@ -78,7 +77,7 @@ class RebuildDag < ActiveRecord::Migration[5.0]
                 AND relations.blocks = 0
                 AND relations.includes = 0
                 AND relations.requires = 0
-              SQL
+    SQL
 
     add_index :relations,
               %i(to_id follows from_id),
@@ -90,7 +89,7 @@ class RebuildDag < ActiveRecord::Migration[5.0]
                 AND blocks = 0
                 AND includes = 0
                 AND requires = 0
-              SQL
+    SQL
   end
 
   def add_non_hierarchy_index

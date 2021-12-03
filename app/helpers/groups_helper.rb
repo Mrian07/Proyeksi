@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module GroupsHelper
   def group_settings_tabs
     [

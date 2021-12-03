@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::GroupBys::GroupByProject < Queries::GroupBys::Base
   self.model = Notification
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AugmentingHelper
   ##
   # Create a collapsible section and yield to render the block

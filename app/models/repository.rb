@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Repository < ApplicationRecord
   include Redmine::Ciphering
   include ProyeksiApp::SCM::ManageableRepository
@@ -178,7 +176,7 @@ class Repository < ApplicationRecord
     if scm.storage_available?
       oldest_cachable_time = Setting.repository_storage_cache_minutes.to_i.minutes.ago
       if storage_updated_at.nil? ||
-         storage_updated_at < oldest_cachable_time
+        storage_updated_at < oldest_cachable_time
 
         ::SCM::StorageUpdaterJob.perform_later(self)
         return true
@@ -205,14 +203,14 @@ class Repository < ApplicationRecord
   def latest_changesets(path, _rev, limit = 10)
     if path.blank?
       changesets.includes(:user)
-        .order("#{Changeset.table_name}.committed_on DESC, #{Changeset.table_name}.id DESC")
-        .limit(limit)
+                .order("#{Changeset.table_name}.committed_on DESC, #{Changeset.table_name}.id DESC")
+                .limit(limit)
     else
       changesets.includes(changeset: :user)
-        .where(['path = ?', path.with_leading_slash])
-        .order("#{Changeset.table_name}.committed_on DESC, #{Changeset.table_name}.id DESC")
-        .limit(limit)
-        .map(&:changeset)
+                .where(['path = ?', path.with_leading_slash])
+                .order("#{Changeset.table_name}.committed_on DESC, #{Changeset.table_name}.id DESC")
+                .limit(limit)
+                .map(&:changeset)
     end
   end
 
@@ -233,7 +231,7 @@ class Repository < ApplicationRecord
         if new_user_id && (new_user_id.to_i != user_id.to_i)
           new_user_id = (new_user_id.to_i > 0 ? new_user_id.to_i : nil)
           Changeset.where(['repository_id = ? AND committer = ?', id, committer])
-            .update_all("user_id = #{new_user_id.nil? ? 'NULL' : new_user_id}")
+                   .update_all("user_id = #{new_user_id.nil? ? 'NULL' : new_user_id}")
         end
       end
       @committers = nil

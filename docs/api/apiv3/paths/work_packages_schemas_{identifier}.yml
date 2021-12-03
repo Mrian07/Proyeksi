@@ -20,7 +20,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified schema does not exist.
       description: |-
         Returned if the schema does not exist or the client does not have sufficient permissions

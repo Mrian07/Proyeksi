@@ -1,7 +1,5 @@
-
-
 <% html_title t(:label_administration), t(:label_work_package_status_new) %>
-<% local_assigns[:additional_breadcrumb] =  t(:label_work_package_status_new) %>
+<% local_assigns[:additional_breadcrumb] = t(:label_work_package_status_new) %>
 <%= breadcrumb_toolbar t(:label_work_package_status_new) %>
 
 <%= labelled_tabular_form_for(@status) do |f| %>

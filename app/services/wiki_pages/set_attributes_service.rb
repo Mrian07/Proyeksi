@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Handles setting the attributes of a wiki page.
 # The wiki page is treated as one single entity although the data layer separates
 # between the page and the content.

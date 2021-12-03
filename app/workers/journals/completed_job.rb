@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Journals::CompletedJob < ApplicationJob
   queue_with_priority :notification
 

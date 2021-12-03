@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Relations::CreateService < Relations::BaseService
   def initialize(user:)
     @user = user

@@ -1,4 +1,3 @@
-
 module RandomData
   class NewsSeeder
     def self.seed!(project)

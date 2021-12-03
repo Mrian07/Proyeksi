@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class CastedGreaterOrEqual < Base
     label 'greater_or_equal'

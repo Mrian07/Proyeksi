@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # A custom option is a possible value for a given custom field
 # which is restricted to a set of specific values.

@@ -1,5 +1,3 @@
-
-
 class BasePolicy
   attr_accessor :user
 

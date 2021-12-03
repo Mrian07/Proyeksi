@@ -1,5 +1,3 @@
-
-
 class CustomActions::Actions::Responsible < CustomActions::Actions::Base
   include CustomActions::Actions::Strategies::Associated
 

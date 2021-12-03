@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     module PayloadRepresenter
@@ -72,19 +70,19 @@ module API
 
       def writeable_attributes
         @writeable_attributes ||= begin
-          contract = contract_class(represented)
+                                    contract = contract_class(represented)
 
-          if contract
-            contract
-              .new(represented, current_user)
-              .writable_attributes
-              .map { |name| ::API::Utilities::PropertyNameConverter.from_ar_name(name) }
-          else
-            representable_attrs.map do |property|
-              property[:as].()
-            end
-          end
-        end
+                                    if contract
+                                      contract
+                                        .new(represented, current_user)
+                                        .writable_attributes
+                                        .map { |name| ::API::Utilities::PropertyNameConverter.from_ar_name(name) }
+                                    else
+                                      representable_attrs.map do |property|
+                                        property[:as].()
+                                      end
+                                    end
+                                  end
       end
 
       module ClassMethods

@@ -1,5 +1,3 @@
-
-
 module PlaceholderUsers
   class TableCell < ::TableCell
     options :current_user # adds this option to those of the base class

@@ -1,5 +1,3 @@
-
-
 module API
   module Utilities
     module Endpoints

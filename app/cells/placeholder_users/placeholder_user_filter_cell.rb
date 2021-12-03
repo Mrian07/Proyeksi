@@ -1,5 +1,3 @@
-
-
 module PlaceholderUsers
   class PlaceholderUserFilterCell < IndividualPrincipalBaseFilterCell
     options :roles, :clear_url, :project

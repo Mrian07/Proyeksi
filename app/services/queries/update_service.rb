@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::UpdateService < Queries::BaseService
   def initialize(**args)
     super(**args)
@@ -39,7 +37,7 @@ class Queries::UpdateService < Queries::BaseService
 
   def prepare_menu_item(query)
     if query.changes.include?('name') &&
-       query.query_menu_item
+      query.query_menu_item
 
       menu_item = query.query_menu_item
 

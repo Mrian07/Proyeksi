@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Admin::Settings
   class UsersSettingsController < ::Admin::SettingsController
     menu_item :user_settings

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::UserRolesQuery < Authorization::AbstractUserQuery
   self.model = Role
   self.base_table = users_table

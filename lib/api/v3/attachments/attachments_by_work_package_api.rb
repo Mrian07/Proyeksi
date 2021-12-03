@@ -1,5 +1,3 @@
-
-
 require 'api/v3/attachments/attachment_collection_representer'
 
 module API

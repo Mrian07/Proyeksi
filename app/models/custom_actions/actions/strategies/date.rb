@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module CustomActions::Actions::Strategies::Date
   def values=(values)
     super(Array(values).map { |v| to_date_or_nil(v) }.uniq)

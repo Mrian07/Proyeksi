@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::CopyService
   include ::Shared::ServiceContext
   include Contracted

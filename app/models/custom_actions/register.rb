@@ -1,5 +1,3 @@
-
-
 module CustomActions::Register
   class << self
     def action(action)

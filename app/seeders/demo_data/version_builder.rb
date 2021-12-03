@@ -1,4 +1,3 @@
-
 module DemoData
   class VersionBuilder
     include ::DemoData::References

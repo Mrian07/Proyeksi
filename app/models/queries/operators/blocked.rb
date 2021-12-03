@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class Blocked < Base
     label ::Relation::TYPE_BLOCKED

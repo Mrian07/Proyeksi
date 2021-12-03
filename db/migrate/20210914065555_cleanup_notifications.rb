@@ -56,5 +56,6 @@ class CleanupNotifications < ActiveRecord::Migration[6.1]
               name: 'index_notification_settings_unique_project'
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

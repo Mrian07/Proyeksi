@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::PDFExport::Formattable
   ##
   # Writes the formatted work package description into the document.
@@ -15,7 +13,7 @@ module WorkPackage::PDFExport::Formattable
     height = write_formattable_content(work_package, markdown: markdown, label: label)
 
     data = make_formattable_label_row(label) +
-           make_formattable_border_rows(height, label)
+      make_formattable_border_rows(height, label)
 
     pdf.table(data, column_widths: column_widths)
   end

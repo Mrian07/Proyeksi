@@ -1,5 +1,3 @@
-
-
 module Token
   class Base < ApplicationRecord
     self.table_name = 'tokens'

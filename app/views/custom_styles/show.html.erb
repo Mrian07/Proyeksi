@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_administration), t(:label_custom_style) %>
 
 <%= toolbar title: t(:label_custom_style) %>
@@ -19,7 +17,7 @@
       </div>
 
       <%= styled_button_tag t(:button_save),
-                            data:({ confirm: t('admin.custom_styles.theme_warning') } unless @current_theme.present?) %>
+                            data: ({ confirm: t('admin.custom_styles.theme_warning') } unless @current_theme.present?) %>
     </fieldset>
   </section>
 <% end %>
@@ -34,9 +32,9 @@
           <%# Don't use image_tag here due to asset host %>
           <%= tag('img', src: custom_style_logo_path(digest: @custom_style.digest, filename: @custom_style.logo_identifier), class: 'custom-logo-preview') %>
           <%= link_to t(:button_delete),
-          custom_style_logo_delete_path,
-          method: :delete,
-          class: 'icon icon-delete confirm-form-submit' %>
+                      custom_style_logo_delete_path,
+                      method: :delete,
+                      class: 'icon icon-delete confirm-form-submit' %>
         </div>
       <% end %>
 
@@ -130,10 +128,10 @@
 
 <%= form_tag update_design_colors_path, method: :post, class: "form" do %>
   <section class="form--section">
-    <fieldset class="form--fieldset -collapsible <%= 'collapsed' if @current_theme.present?  %> ">
+    <fieldset class="form--fieldset -collapsible <%= 'collapsed' if @current_theme.present? %> ">
       <legend class="form--fieldset-legend"><%= I18n.t(:label_advanced_settings) %></legend>
 
-      <% DesignColor.setables.each do |design_color|  %>
+      <% DesignColor.setables.each do |design_color| %>
         <div class="form--field -required">
           <label class="form--label"><%= I18n.t("admin.custom_styles.colors.#{design_color.variable}") %>:</label>
           <span class="form--field-container">
@@ -146,7 +144,7 @@
               <%= styled_text_field_tag "design_colors[]" + design_color.variable,
                                         design_color.hexcode,
                                         class: 'design-color--variable-input',
-                                        data: {  'variable-name': design_color.variable }
+                                        data: { 'variable-name': design_color.variable }
               %>
             </span>
           </span>
@@ -169,11 +167,11 @@
     var computedStyle = getComputedStyle(document.documentElement);
 
     document
-      .querySelectorAlt('.design-color--variable-input')
-      .forEach(function(el) {
-      if (!el.value || el.value === '') {
-        el.placeholder = computedStyle.getPropertyValue('--' + el.dataset.variableName).trim();
-      }
+    .querySelectorAlt('.design-color--variable-input')
+    .forEach(function(el) {
+    if (!el.value || el.value === '') {
+    el.placeholder = computedStyle.getPropertyValue('--' + el.dataset.variableName).trim();
+    }
     });
   <% end %>
 <% end %>

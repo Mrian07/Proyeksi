@@ -1,7 +1,7 @@
 Rails plugins with Frontends
 ====================
 
-ProyeksiApp Community Edition has some plugins that contain a frontend,
+Proyeksiapp Community Edition has some plugins that contain a frontend,
 e.g., [Costs](https://github.com/finnlabs/openproject-costs/) or [My Project Page](https://github.com/finnlabs/openproject-my_project_page/).
 
 For developing these plugins, they need to be linked so either the Legacy or Angular frontend can see and process them.
@@ -24,12 +24,12 @@ end
 
 After that you first need to bundle the application with `bundle install`.
 
-The plugin is now known in the ProyeksiApp application, but their frontends are not linked. For development, before you run any `webpack`  or `CLI` commands, execute this rake task:
+The plugin is now known in the Proyeksiapp application, but their frontends are not linked. For development, before you run any `webpack`  or `CLI` commands, execute this rake task:
 
 
 
 ```
-./bin/rake proyeksiapp:plugins:register_frontend
+./bin/rake openproject:plugins:register_frontend
 ```
 
 
@@ -38,7 +38,7 @@ This will ensure those plugins with a frontend are symlinked to `frontend/src/ap
 
 
 
-### Example: ProyeksiApp Costs plugin
+### Example: Proyeksiapp Costs plugin
 
 The [Costs](https://github.com/finnlabs/openproject-costs/) plugin has both legacy components that are still used by Rails templates as well as an entry module file to register to the Angular frontend.
 
@@ -56,7 +56,7 @@ The Angular frontend entry point is `frontend/module/main.ts` and should export 
 
 ```typescript
 export function initializeCostsPlugin() {
-        window.ProyeksiApp.getPluginContext()
+        window.Proyeksiapp.getPluginContext()
             .then((pluginContext:ProyeksiAppPluginContext) => {
     		// Register a field type to the core EditField functionality
             pluginContext.services.editField.extendFieldType('select', ['Budget']);

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue < ApplicationRecord
   belongs_to :custom_field
   belongs_to :customized, polymorphic: true

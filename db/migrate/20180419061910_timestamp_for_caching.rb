@@ -1,5 +1,3 @@
-
-
 class TimestampForCaching < ActiveRecord::Migration[5.1]
   def change
     [Enumeration, Status, Category, AuthSource].each do |model|

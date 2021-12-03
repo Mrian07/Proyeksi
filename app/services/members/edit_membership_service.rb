@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Members
   class EditMembershipService
     attr_reader :current_user, :member, :do_save

@@ -1,7 +1,6 @@
-
 <% groups = @user.groups.pluck(:id, :lastname) %>
 
-<%= labelled_tabular_form_for(:user, url: { action: 'update' }, html: {method: :put}) do %>
+<%= labelled_tabular_form_for(:user, url: { action: 'update' }, html: { method: :put }) do %>
   <section class="form--section">
     <% if groups.empty? %>
       <%= no_results_box action_url: groups_path,

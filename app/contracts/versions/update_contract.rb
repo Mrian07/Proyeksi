@@ -1,5 +1,3 @@
-
-
 module Versions
   class UpdateContract < BaseContract
     private

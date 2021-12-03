@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module PlaceholderUsersHelper
   ##
   # Determine whether the given actor can delete the placeholder user

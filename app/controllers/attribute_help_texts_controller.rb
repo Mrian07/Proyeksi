@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AttributeHelpTextsController < ApplicationController
   layout 'admin'
   menu_item :attribute_help_texts
@@ -21,8 +19,8 @@ class AttributeHelpTextsController < ApplicationController
 
   def update
     call = ::AttributeHelpTexts::UpdateService
-      .new(user: current_user, model: @attribute_help_text)
-      .call(permitted_params_with_attachments)
+             .new(user: current_user, model: @attribute_help_text)
+             .call(permitted_params_with_attachments)
 
     if call.success?
       flash[:notice] = t(:notice_successful_update)
@@ -35,8 +33,8 @@ class AttributeHelpTextsController < ApplicationController
 
   def create
     call = ::AttributeHelpTexts::CreateService
-      .new(user: current_user)
-      .call(permitted_params_with_attachments)
+             .new(user: current_user)
+             .call(permitted_params_with_attachments)
 
     if call.success?
       flash[:notice] = t(:notice_successful_create)

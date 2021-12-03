@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::EnterpriseService
   attr_accessor :token
 

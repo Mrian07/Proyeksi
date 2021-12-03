@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module News
@@ -9,8 +7,8 @@ module API
         resources :news do
           get do
             query = ParamsToQueryService
-                    .new(::News, current_user)
-                    .call(params)
+                      .new(::News, current_user)
+                      .call(params)
 
             if query.valid?
               NewsCollectionRepresenter.new(query.results,
@@ -26,8 +24,8 @@ module API
           route_param :id, type: Integer, desc: 'News ID' do
             after_validation do
               @news = ::News
-                      .visible
-                      .find(params[:id])
+                        .visible
+                        .find(params[:id])
             end
 
             get do

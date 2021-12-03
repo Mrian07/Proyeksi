@@ -1,5 +1,3 @@
-
-
 module UserInvitation
   module Events
     class << self

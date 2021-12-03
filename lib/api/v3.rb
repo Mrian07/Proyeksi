@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     URN_PREFIX = 'urn:proyeksiapp-org:api:v3:'.freeze

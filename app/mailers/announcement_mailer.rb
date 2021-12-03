@@ -1,5 +1,3 @@
-
-
 # Sends mails for announcements.
 # For now, it cannot handle sending events on any Announcement model but is rather focused
 # on handing very simple mails where only the recipient, subject and body is provided.

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::Exports::ScheduleService
   attr_accessor :user
 

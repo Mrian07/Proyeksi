@@ -1,5 +1,3 @@
-
-
 module CustomActions::ValuesToInteger
   def values=(values)
     super(Array(values).map { |v| to_integer_or_nil(v) }.uniq)

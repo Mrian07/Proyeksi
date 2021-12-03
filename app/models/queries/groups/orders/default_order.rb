@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Groups::Orders::DefaultOrder < Queries::Orders::Base
   self.model = Group
 

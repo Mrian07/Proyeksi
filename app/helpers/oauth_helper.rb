@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module OAuthHelper
   ##
   # Output the translated scope names for the given application

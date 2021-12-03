@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -87,7 +85,7 @@ module API
 
         link :customFields do
           if project.present? &&
-             current_user_allowed_to(:select_custom_fields, context: project)
+            current_user_allowed_to(:select_custom_fields, context: project)
             {
               href: project_settings_custom_fields_path(project.identifier),
               type: 'text/html',
@@ -166,9 +164,9 @@ module API
 
         def all_cfs_of_project
           @all_cfs_of_project ||= represented
-                                  .group_by(&:project_id)
-                                  .map { |id, wps| [id, wps.map(&:available_custom_fields).flatten.uniq] }
-                                  .to_h
+                                    .group_by(&:project_id)
+                                    .map { |id, wps| [id, wps.map(&:available_custom_fields).flatten.uniq] }
+                                    .to_h
         end
 
         def paged_models(models)

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AngularHelper
   ##
   # Create a component element tag with the given attributes

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Member < ApplicationRecord
   include ::Scopes::Scoped
 
@@ -66,9 +64,9 @@ class Member < ApplicationRecord
 
   def validate_presence_of_role
     if (member_roles.empty? && roles.empty?) ||
-       member_roles.all? do |member_role|
-         member_role.marked_for_destruction? || member_role.destroyed?
-       end
+      member_roles.all? do |member_role|
+        member_role.marked_for_destruction? || member_role.destroyed?
+      end
 
       errors.add :roles, :role_blank
     end

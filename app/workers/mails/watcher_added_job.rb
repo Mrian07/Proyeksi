@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Mails::WatcherAddedJob < Mails::WatcherJob
   private
 

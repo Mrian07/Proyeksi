@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Backups
   class CreateService < ::BaseServices::Create
     def initialize(user:, backup_token:, include_attachments: true, contract_class: ::Backups::CreateContract)

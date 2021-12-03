@@ -13,7 +13,7 @@ end
 shared_examples 'principal membership management flows' do
   scenario 'handles role modification flow' do
     principal_page.visit!
-    principal_page.open_projects_tab!
+    principal_page.proyeksi_app_tab!
 
     principal_page.add_to_project! project.name, as: 'Manager'
 
@@ -71,7 +71,7 @@ shared_examples 'global user principal membership management flows' do |permissi
     context 'when the user cannot see the two projects' do
       it 'does not show them' do
         principal_page.visit!
-        principal_page.open_projects_tab!
+        principal_page.proyeksi_app_tab!
 
         expect(page).to have_no_selector('#membership_project_id option', text: project.name, visible: :all)
         expect(page).to have_no_selector('#membership_project_id option', text: project2.name, visible: :all)
@@ -85,7 +85,7 @@ shared_examples 'global user principal membership management flows' do |permissi
                 roles: [developer])
 
         principal_page.visit!
-        principal_page.open_projects_tab!
+        principal_page.proyeksi_app_tab!
 
         expect(page).to have_no_selector('tr.member')
         expect(page).to have_text 'There is currently nothing to display.'
@@ -105,7 +105,7 @@ shared_examples 'global user principal membership management flows' do |permissi
 
     it 'does not allow to select that project' do
       principal_page.visit!
-      principal_page.open_projects_tab!
+      principal_page.proyeksi_app_tab!
 
       expect(page).to have_no_selector('tr.member')
       expect(page).to have_text 'There is currently nothing to display.'

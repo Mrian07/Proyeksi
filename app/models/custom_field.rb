@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomField < ApplicationRecord
   include CustomField::OrderStatements
 
@@ -43,7 +41,7 @@ class CustomField < ApplicationRecord
   validates :min_length, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :max_length, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :min_length, numericality: { less_than_or_equal_to: :max_length, message: :smaller_than_or_equal_to_max_length },
-                         unless: Proc.new { |cf| cf.max_length.blank? }
+            unless: Proc.new { |cf| cf.max_length.blank? }
 
   before_validation :check_searchability
   after_destroy :destroy_help_text
@@ -163,7 +161,11 @@ class CustomField < ApplicationRecord
       when 'string', 'text', 'list'
         casted = value
       when 'date'
-        casted = begin; value.to_date; rescue StandardError; nil end
+        casted = begin
+                   ; value.to_date;
+                 rescue StandardError;
+                   nil
+                 end
       when 'bool'
         casted = ActiveRecord::Type::Boolean.new.cast(value)
       when 'int'

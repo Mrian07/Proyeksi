@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UpdateProjectsTypesService < BaseProjectService
   def call(type_ids)
     type_ids = standard_types if type_ids.nil? || type_ids.empty?

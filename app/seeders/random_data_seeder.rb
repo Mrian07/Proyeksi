@@ -1,4 +1,3 @@
-
 class RandomDataSeeder
   def self.seed!
     puts ' ########################################################'

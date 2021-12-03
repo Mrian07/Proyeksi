@@ -1,5 +1,3 @@
-
-
 module Projects
   class CopyContract < BaseContract
     protected

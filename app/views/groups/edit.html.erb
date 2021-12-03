@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_administration), "#{t(:label_edit)} #{Group.model_name.human} #{h @group.name}" %>
 
 <% local_assigns[:additional_breadcrumb] = @group.name %>
@@ -22,5 +20,5 @@
       <% end %>
     </li>
   <% end %>
-<% end  %>
+<% end %>
 <%= render_tabs group_settings_tabs %>

@@ -3,7 +3,7 @@ Styling the frontend
 
 Frontend styling is coupled to the Living Styleguide. The guide implements the same CSS that the application does. It takes the very same Sass files used in the Asset pipeline to build a second css file that is then used for diplaying the guide.
 
-All styles for ProyeksiApp are found in `./app/assets/stylesheets`. The frontend folder contains no styling, besides rendered files and some styling for the styleguide itself.
+All styles for Proyeksiapp are found in `./app/assets/stylesheets`. The frontend folder contains no styling, besides rendered files and some styling for the styleguide itself.
 
 ## Using the styleguide
 

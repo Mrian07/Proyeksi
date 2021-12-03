@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MailHandler < ActionMailer::Base
   include ActionView::Helpers::SanitizeHelper
   include Redmine::I18n
@@ -253,8 +251,8 @@ class MailHandler < ActionMailer::Base
     )
 
     call = ::Attachments::CreateService
-      .new(user: user)
-      .call(container: container, filename: attachment.filename, file: file)
+             .new(user: user)
+             .call(container: container, filename: attachment.filename, file: file)
 
     call.on_failure do
       log "Failed to add attachment #{attachment.filename} for [#{sender_email}]: #{call.message}"
@@ -267,7 +265,7 @@ class MailHandler < ActionMailer::Base
   # appropriate permission
   def add_watchers(obj)
     if user.allowed_to?("add_#{obj.class.name.underscore}_watchers".to_sym, obj.project) ||
-       user.allowed_to?("add_#{obj.class.lookup_ancestors.last.name.underscore}_watchers".to_sym, obj.project)
+      user.allowed_to?("add_#{obj.class.lookup_ancestors.last.name.underscore}_watchers".to_sym, obj.project)
       addresses = [email.to, email.cc].flatten.compact.uniq.map { |a| a.strip.downcase }
       unless addresses.empty?
         User
@@ -293,14 +291,14 @@ class MailHandler < ActionMailer::Base
       @keywords[attr]
     else
       @keywords[attr] = begin
-        if (options[:override] || self.options[:allow_override].include?(attr)) &&
-           (v = extract_keyword!(plain_text_body, attr, options[:format]))
-          v
-        else
-          # Return either default or nil
-          self.options[:issue][attr]
-        end
-      end
+                          if (options[:override] || self.options[:allow_override].include?(attr)) &&
+                            (v = extract_keyword!(plain_text_body, attr, options[:format]))
+                            v
+                          else
+                            # Return either default or nil
+                            self.options[:issue][attr]
+                          end
+                        end
     end
   end
 
@@ -461,8 +459,8 @@ class MailHandler < ActionMailer::Base
 
   def ignored_filenames
     @ignored_filenames ||= begin
-      Setting.mail_handler_ignore_filenames.to_s.split(/[\r\n]+/).reject(&:blank?)
-    end
+                             Setting.mail_handler_ignore_filenames.to_s.split(/[\r\n]+/).reject(&:blank?)
+                           end
   end
 
   def ignored_filename?(filename)
@@ -476,9 +474,9 @@ class MailHandler < ActionMailer::Base
     attributes = collect_wp_attributes_from_email_on_create(work_package)
 
     service_call = WorkPackages::CreateService
-                   .new(user: user,
-                        contract_class: work_package_create_contract_class)
-                   .call(**attributes.merge(work_package: work_package).symbolize_keys)
+                     .new(user: user,
+                          contract_class: work_package_create_contract_class)
+                     .call(**attributes.merge(work_package: work_package).symbolize_keys)
 
     if service_call.success?
       work_package = service_call.result
@@ -505,10 +503,10 @@ class MailHandler < ActionMailer::Base
     attributes[:attachment_ids] = work_package.attachment_ids + add_attachments(work_package).map(&:id)
 
     service_call = WorkPackages::UpdateService
-                   .new(user: user,
-                        model: work_package,
-                        contract_class: work_package_update_contract_class)
-                   .call(**attributes.symbolize_keys)
+                     .new(user: user,
+                          model: work_package,
+                          contract_class: work_package_update_contract_class)
+                     .call(**attributes.symbolize_keys)
 
     if service_call.success?
       service_call.result

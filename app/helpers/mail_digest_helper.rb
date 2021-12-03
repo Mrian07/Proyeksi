@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module MailDigestHelper
   def digest_summary_text(notification_count, mentioned_count)
     mentioned = mentioned_count > 1 ? 'plural' : 'singular'

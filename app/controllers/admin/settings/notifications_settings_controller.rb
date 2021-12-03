@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Admin::Settings
   class NotificationsSettingsController < ::Admin::SettingsController
     current_menu_item [:show] do

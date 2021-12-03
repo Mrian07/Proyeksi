@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Schedules the deletion of a project if allowed. As the deletion can be
 # a lengthy process, the project is archived first

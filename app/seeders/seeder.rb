@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Seeder
   def seed!
     if applicable?

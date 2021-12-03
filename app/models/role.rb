@@ -1,14 +1,12 @@
 #-- encoding: UTF-8
 
-
-
 class Role < ApplicationRecord
   extend Pagination::Model
 
   # Built-in roles
   NON_BUILTIN = 0
   BUILTIN_NON_MEMBER = 1
-  BUILTIN_ANONYMOUS  = 2
+  BUILTIN_ANONYMOUS = 2
 
   scope :builtin, ->(*args) {
     compare = 'not' if args.first == true

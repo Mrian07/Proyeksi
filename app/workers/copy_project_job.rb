@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CopyProjectJob < ApplicationJob
   queue_with_priority :low
   include ProyeksiApp::LocaleHelper
@@ -22,11 +20,11 @@ class CopyProjectJob < ApplicationJob
               send_mails: false)
     # Needs refactoring after moving to activejob
 
-    @user_id               = user_id
-    @source_project_id     = source_project_id
+    @user_id = user_id
+    @source_project_id = source_project_id
     @target_project_params = target_project_params.with_indifferent_access
-    @associations_to_copy  = associations_to_copy
-    @send_mails            = send_mails
+    @associations_to_copy = associations_to_copy
+    @send_mails = send_mails
 
     User.current = user
     @target_project_name = target_project_params[:name]

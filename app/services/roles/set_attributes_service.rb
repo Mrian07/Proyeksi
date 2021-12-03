@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Roles
   class SetAttributesService < ::BaseServices::SetAttributes
     def set_default_attributes(*)

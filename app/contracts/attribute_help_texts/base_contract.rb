@@ -1,5 +1,3 @@
-
-
 module AttributeHelpTexts
   class BaseContract < ::ModelContract
     include RequiresAdminGuard

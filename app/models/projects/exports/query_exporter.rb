@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module Projects::Exports
   class QueryExporter < Exports::Exporter
     self.model = Project
@@ -17,12 +16,12 @@ module Projects::Exports
 
     def projects
       @projects ||= query
-        .results
-        .with_required_storage
-        .with_latest_activity
-        .includes(:custom_values, :status)
-        .page(page)
-        .per_page(Setting.work_packages_export_limit.to_i)
+                      .results
+                      .with_required_storage
+                      .with_latest_activity
+                      .includes(:custom_values, :status)
+                      .page(page)
+                      .per_page(Setting.work_packages_export_limit.to_i)
     end
 
     private

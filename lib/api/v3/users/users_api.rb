@@ -1,5 +1,3 @@
-
-
 require 'api/v3/users/user_representer'
 require 'api/v3/users/paginated_user_collection_representer'
 

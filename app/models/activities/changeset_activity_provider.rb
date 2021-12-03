@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Activities::ChangesetActivityProvider < Activities::BaseActivityProvider
   activity_provider_for type: 'changesets',
                         permission: :view_changesets

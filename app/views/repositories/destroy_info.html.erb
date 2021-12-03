@@ -1,4 +1,3 @@
-
 <% if @repository.managed? %>
   <%= styled_form_tag(project_repository_path(@project), method: :delete, class: 'danger-zone') do %>
     <section class="form--section">
@@ -6,7 +5,8 @@
         <%= t('repositories.destroy.title', repository_type: "<em>#{h(@repository.repository_type)} - #{t(:project_module_repository)}</em>").html_safe %>
       </h3>
       <p>
-        <%= t('repositories.destroy.subtitle', repository_type: "#{h(@repository.repository_type)} - #{t(:project_module_repository)}", project_name: h(@project.identifier)).html_safe %> <br />
+        <%= t('repositories.destroy.subtitle', repository_type: "#{h(@repository.repository_type)} - #{t(:project_module_repository)}", project_name: h(@project.identifier)).html_safe %>
+        <br/>
         <%= t('repositories.destroy.confirmation') %>
         <br/>
         <%= t('repositories.destroy.managed_path_note', path: @repository.root_url) %>
@@ -21,17 +21,17 @@
       <div class="danger-zone--verification">
         <input type="text"></input>
         <%= styled_button_tag project_repository_path(@project),
-          method: :delete,
-          title: t(:button_delete),
-          disabled: true,
-          class: '-highlight' do %>
-            <%= op_icon('button--icon icon-delete') %>
-            <span class="button--text"><%= t(:button_delete) %></span>
+                              method: :delete,
+                              title: t(:button_delete),
+                              disabled: true,
+                              class: '-highlight' do %>
+          <%= op_icon('button--icon icon-delete') %>
+          <span class="button--text"><%= t(:button_delete) %></span>
         <% end %>
         <%= link_to project_settings_repository_path(@project),
-          title: t(:button_cancel),
-          class: 'button -with-icon icon-cancel' do %>
-            <%= t(:button_cancel) %>
+                    title: t(:button_cancel),
+                    class: 'button -with-icon icon-cancel' do %>
+          <%= t(:button_cancel) %>
         <% end %>
       </div>
     </section>
@@ -39,28 +39,30 @@
 <% else %>
   <div class="op-toast -warning">
     <div class="op-toast--content">
-      <p><strong><%= t('repositories.destroy.title_not_managed', repository_type: "<em>#{h(@repository.repository_type)} - #{t(:project_module_repository)}</em>").html_safe %></strong><br /></p>
+      <p>
+        <strong><%= t('repositories.destroy.title_not_managed', repository_type: "<em>#{h(@repository.repository_type)} - #{t(:project_module_repository)}</em>").html_safe %></strong><br/>
+      </p>
       <p>
         <%= t('repositories.destroy.subtitle_not_managed',
-            repository_type: "#{h(@repository.repository_type)} - #{t(:project_module_repository)}",
-            project_name: h(@project.identifier),
-            url: h(@repository.url)).html_safe %> <br />
+              repository_type: "#{h(@repository.repository_type)} - #{t(:project_module_repository)}",
+              project_name: h(@project.identifier),
+              url: h(@repository.url)).html_safe %> <br/>
       </p>
       <p>
         <span><%= t('repositories.destroy.info_not_managed') %></span>
       </p>
       <p>
         <%= link_to project_repository_path(@project),
-          title: t(:button_delete),
-          method: :delete,
-          class: 'button' do %>
+                    title: t(:button_delete),
+                    method: :delete,
+                    class: 'button' do %>
           <%= op_icon('button--icon icon-remove') %>
           <span class="button--text"><%= t(:button_remove) %></span>
         <% end %>
         <%= link_to project_settings_repository_path(@project),
-          title: t(:button_cancel),
-          class: 'button -with-icon icon-cancel' do %>
-            <%= t(:button_cancel) %>
+                    title: t(:button_cancel),
+                    class: 'button -with-icon icon-cancel' do %>
+          <%= t(:button_cancel) %>
         <% end %>
       </p>
     </div>

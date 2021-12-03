@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Temporarily solution!
 # Using customized version of Representable gem (git@github.com:finnlabs/representable.git)
 # we can specify strategy to take place during the data serialization

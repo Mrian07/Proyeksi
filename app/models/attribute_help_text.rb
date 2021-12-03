@@ -1,5 +1,3 @@
-
-
 class AttributeHelpText < ApplicationRecord
   acts_as_attachable viewable_by_all_users: true
 

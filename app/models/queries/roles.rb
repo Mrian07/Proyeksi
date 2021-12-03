@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Roles
   register = ::Queries::Register
   filters = ::Queries::Roles::Filters

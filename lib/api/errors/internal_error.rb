@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Errors
     class InternalError < ErrorBase

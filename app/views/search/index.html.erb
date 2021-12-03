@@ -1,5 +1,3 @@
-
-
 <% content_for :header_tags do %>
   <%= call_hook :search_index_head %>
   <%= include_gon(nonce: content_security_policy_script_nonce) %>
@@ -17,7 +15,7 @@
 
   <% if @results.present? %>
 
-    <%= render partial: 'pagination', locals: {pagination_previous_date: @pagination_previous_date, pagination_next_date: @pagination_next_date } %>
+    <%= render partial: 'pagination', locals: { pagination_previous_date: @pagination_previous_date, pagination_next_date: @pagination_next_date } %>
 
     <dl id="search-results">
       <% @results.each do |e| %>
@@ -45,5 +43,5 @@
   <% end %>
 <% end %>
 
-<%= render partial: 'pagination', locals: {pagination_previous_date: @pagination_previous_date, pagination_next_date: @pagination_next_date } unless params[:work_packages].present? %>
+<%= render partial: 'pagination', locals: { pagination_previous_date: @pagination_previous_date, pagination_next_date: @pagination_next_date } unless params[:work_packages].present? %>
 <% html_title(t(:label_search)) -%>

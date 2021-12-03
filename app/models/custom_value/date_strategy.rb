@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::DateStrategy < CustomValue::FormatStrategy
   include Redmine::I18n
 

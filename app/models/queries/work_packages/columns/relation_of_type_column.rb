@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Columns::RelationOfTypeColumn < Queries::WorkPackages::Columns::RelationColumn
   def initialize(type)
     super
@@ -16,6 +14,7 @@ class Queries::WorkPackages::Columns::RelationOfTypeColumn < Queries::WorkPackag
   def sym
     type[:sym]
   end
+
   alias :relation_type :sym
 
   def caption

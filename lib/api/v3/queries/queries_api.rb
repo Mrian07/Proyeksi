@@ -1,5 +1,3 @@
-
-
 require 'securerandom'
 require 'api/v3/queries/query_representer'
 
@@ -122,8 +120,8 @@ module API
               # Normalizing the query name can result in conflicts and empty names in case all
               # characters are filtered out. A random name doesn't have these problems.
               query_menu_item = MenuItems::QueryMenuItem
-                                .find_or_initialize_by(navigatable_id: @query.id) do |item|
-                item.name  = SecureRandom.uuid
+                                  .find_or_initialize_by(navigatable_id: @query.id) do |item|
+                item.name = SecureRandom.uuid
                 item.title = @query.name
               end
               query_menu_item.save!

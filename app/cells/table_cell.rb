@@ -67,7 +67,7 @@ class TableCell < RailsCell
       raise(
         NameError,
         "#{mod}::#{class_name} required by #{mod}::TableCell not defined. " +
-        "Expected to be defined in `app/cells/#{mod.underscore}/#{class_name.underscore}.rb`."
+          "Expected to be defined in `app/cells/#{mod.underscore}/#{class_name.underscore}.rb`."
       )
     end
 

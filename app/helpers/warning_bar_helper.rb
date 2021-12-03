@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WarningBarHelper
   def render_pending_migrations_warning?
     current_user.admin? &&

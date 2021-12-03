@@ -1,5 +1,3 @@
-
-
 module Actions::Scopes
   module Default
     extend ActiveSupport::Concern

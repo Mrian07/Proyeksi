@@ -1,5 +1,3 @@
-
-
 module Backups
   class CreateContract < ::ModelContract
     include SingleTableInheritanceModelContract

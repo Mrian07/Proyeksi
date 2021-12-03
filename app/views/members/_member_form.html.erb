@@ -1,60 +1,58 @@
-
-
 <%= labelled_tabular_form_for(:member, url: main_app.project_members_path,
                               method: :post,
                               html: { id: "members_add_form", class: "form -vertical -bordered -medium-compressed" }) do |f| %>
-    <a title="<%= t('js.close_form_title') %>" class="hide-member-form-button form--close icon-context icon-close"></a>
-    <div id="new-member-message"></div>
-    <div class="grid-block">
-      <div class="grid-content medium-5 small-12 collapse -flex">
-        <div class="form--field">
-          <%
-            user_id_title = I18n.t(:label_principal_search)
+  <a title="<%= t('js.close_form_title') %>" class="hide-member-form-button form--close icon-context icon-close"></a>
+  <div id="new-member-message"></div>
+  <div class="grid-block">
+    <div class="grid-content medium-5 small-12 collapse -flex">
+      <div class="form--field">
+        <%
+          user_id_title = I18n.t(:label_principal_search)
 
-            if current_user.admin?
-              user_id_title += I18n.t(:label_principal_invite_via_email)
-            end
-          %>
-          <%= styled_label_tag :member_user_ids, user_id_title %>
+          if current_user.admin?
+            user_id_title += I18n.t(:label_principal_invite_via_email)
+          end
+        %>
+        <%= styled_label_tag :member_user_ids, user_id_title %>
 
-          <%= hidden_field_tag "member[user_ids][]", nil  %>
-          <members-autocompleter data-update-input="member[user_ids][]"
-                                 data-url="<%= autocomplete_for_member_project_members_path +  '.json' %>"
-                                 data-append-to="body"
-                                 data-multiple="true">
-          </members-autocompleter>
-        </div>
-      </div>
-      <div class="grid-content medium-8 small-12 -flex -with-button">
-        <div class="form--field">
-          <%= styled_label_tag :member_role_ids, t(:label_role_search) %>
-          <div class="form--field-container">
-            <div class="form--select-container -auto">
-              <% options = roles.collect { |obj| [obj.name, obj.id] } %>
-              <%= select_tag 'member[role_ids][]', options_for_select(options),
-                             multiple: false,
-                             no_label: true,
-                             title:    t(:label_role_search),
-                             tabIndex: 0,
-                             class:    'form--select',
-                             id:       'member_role_ids' %>
-            </div>
-          </div>
-        </div>
-        <div id="member-add-submit-button--container">
-          <%= f.button t(:button_add),
-                       class: 'button -highlight -with-icon icon-checkmark',
-                       id: 'add-member--submit-button' %>
-        </div>
+        <%= hidden_field_tag "member[user_ids][]", nil %>
+        <members-autocompleter data-update-input="member[user_ids][]"
+                               data-url="<%= autocomplete_for_member_project_members_path + '.json' %>"
+                               data-append-to="body"
+                               data-multiple="true">
+        </members-autocompleter>
       </div>
     </div>
-    <% if ProyeksiApp::Enterprise.user_limit_reached? %>
-        <div class="op-toast -warning icon-warning" id="member-user-limit-warning" style="display: none;">
-          <div class="op-toast--content">
-            <p><%= I18n.t(:warning_user_limit_reached, upgrade_url: ProyeksiApp::Enterprise.upgrade_path).html_safe %></p>
+    <div class="grid-content medium-8 small-12 -flex -with-button">
+      <div class="form--field">
+        <%= styled_label_tag :member_role_ids, t(:label_role_search) %>
+        <div class="form--field-container">
+          <div class="form--select-container -auto">
+            <% options = roles.collect { |obj| [obj.name, obj.id] } %>
+            <%= select_tag 'member[role_ids][]', options_for_select(options),
+                           multiple: false,
+                           no_label: true,
+                           title: t(:label_role_search),
+                           tabIndex: 0,
+                           class: 'form--select',
+                           id: 'member_role_ids' %>
           </div>
         </div>
-    <% end %>
+      </div>
+      <div id="member-add-submit-button--container">
+        <%= f.button t(:button_add),
+                     class: 'button -highlight -with-icon icon-checkmark',
+                     id: 'add-member--submit-button' %>
+      </div>
+    </div>
+  </div>
+  <% if ProyeksiApp::Enterprise.user_limit_reached? %>
+    <div class="op-toast -warning icon-warning" id="member-user-limit-warning" style="display: none;">
+      <div class="op-toast--content">
+        <p><%= I18n.t(:warning_user_limit_reached, upgrade_url: ProyeksiApp::Enterprise.upgrade_path).html_safe %></p>
+      </div>
+    </div>
+  <% end %>
 <% end %>
 
 

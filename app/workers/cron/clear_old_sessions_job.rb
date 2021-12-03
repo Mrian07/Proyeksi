@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Cron
   class ClearOldSessionsJob < CronJob
     include ::RakeJob

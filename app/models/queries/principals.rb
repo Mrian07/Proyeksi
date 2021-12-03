@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Principals
   register = ::Queries::Register
   filters = ::Queries::Principals::Filters

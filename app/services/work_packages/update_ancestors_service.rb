@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::UpdateAncestorsService
   attr_accessor :user,
                 :work_package
@@ -161,7 +159,7 @@ class WorkPackages::UpdateAncestorsService
 
   def related_for_work_package(work_package, relation_type)
     scope = work_package
-            .send(relation_type)
+              .send(relation_type)
 
     if send("#{relation_type}_joins")
       scope = scope.joins(send("#{relation_type}_joins"))

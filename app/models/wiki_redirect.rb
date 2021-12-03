@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WikiRedirect < ApplicationRecord
   belongs_to :wiki
 

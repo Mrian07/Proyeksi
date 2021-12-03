@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Decorators
     class SchemaRepresenter < Single
@@ -270,14 +268,14 @@ module API
                                  description)
         name = call_or_translate(name_source)
         schema = ::API::Decorators::PropertySchemaRepresenter
-                 .new(type: call_or_use(type),
-                      name: name,
-                      location: location,
-                      description: call_or_use(description),
-                      required: call_or_use(required),
-                      has_default: call_or_use(has_default),
-                      writable: call_or_use(writable),
-                      attribute_group: call_or_use(attribute_group))
+                   .new(type: call_or_use(type),
+                        name: name,
+                        location: location,
+                        description: call_or_use(description),
+                        required: call_or_use(required),
+                        has_default: call_or_use(has_default),
+                        writable: call_or_use(writable),
+                        attribute_group: call_or_use(attribute_group))
         schema.min_length = min_length
         schema.max_length = max_length
         schema.regular_expression = regular_expression
@@ -294,13 +292,13 @@ module API
                                                    attribute_group,
                                                    href_callback)
         representer = ::API::Decorators::AllowedValuesByLinkRepresenter
-                      .new(type: call_or_use(type),
-                           name: call_or_translate(name_source),
-                           location: :link,
-                           required: call_or_use(required),
-                           has_default: call_or_use(has_default),
-                           writable: call_or_use(writable),
-                           attribute_group: call_or_use(attribute_group))
+                        .new(type: call_or_use(type),
+                             name: call_or_translate(name_source),
+                             location: :link,
+                             required: call_or_use(required),
+                             has_default: call_or_use(has_default),
+                             writable: call_or_use(writable),
+                             attribute_group: call_or_use(attribute_group))
 
         if form_embedded
           representer.allowed_values_href = instance_eval(&href_callback)
@@ -340,7 +338,7 @@ module API
         attributes[:allowed_values_getter] = allowed_values_getter if allowed_values_getter
 
         representer = ::API::Decorators::AllowedValuesByCollectionRepresenter
-                      .new(**attributes)
+                        .new(**attributes)
 
         if form_embedded
           representer.allowed_values = instance_exec(&values_callback)

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ProjectStatusHelper
   def project_status_css_class(status)
     code = project_status_ensure_default_code(status)

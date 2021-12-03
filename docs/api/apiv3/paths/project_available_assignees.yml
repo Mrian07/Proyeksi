@@ -79,7 +79,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to see the assignable users for this
                   project.
       description: |-
@@ -96,7 +96,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified project does not exist.
       description: |-
         Returned if the project does not exist or the client does not have sufficient permissions to see it.

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::WorkPackages::Filter::FilterForWpMixin
   def type
     :list

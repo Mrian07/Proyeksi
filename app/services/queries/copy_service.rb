@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries
   class CopyService < ::BaseServices::Copy
     def self.copy_dependencies

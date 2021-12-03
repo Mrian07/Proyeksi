@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::CommentFilter < Queries::WorkPackages::Filter::WorkPackageFilter
   include Queries::WorkPackages::Filter::TextFilterOnJoinMixin
 

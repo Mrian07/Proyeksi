@@ -82,7 +82,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to see the watchers of this work package.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -98,7 +98,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified work package does not exist.
       description: |-
         Returned if the work package does not exist or the client does not have sufficient permissions to see it.
@@ -135,7 +135,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: |-
         Occurs when the client did not send a valid JSON object in the request body.
@@ -155,7 +155,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to add watchers to this work package.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -175,7 +175,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified work package does not exist.
       description: |-
         Returned if the work package does not exist or the client does not have sufficient permissions to see it.

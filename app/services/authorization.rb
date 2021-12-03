@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization
   # Returns all users having a certain permission within a project
   def self.users(action, project)

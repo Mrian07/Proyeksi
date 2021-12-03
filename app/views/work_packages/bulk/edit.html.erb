@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_bulk_edit_selected_work_packages) %>
 
 <% if @bulk_errors.present? %>
@@ -9,12 +7,12 @@
       <p><strong><%= t('work_packages.bulk.could_not_be_saved') %></strong></p>
 
       <ul>
-      <% @bulk_errors.each do |wpid, messages| %>
-        <li>
-          <%= link_to "##{wpid}", work_package_path(wpid) %>:
-          <%= safe_join messages, ', ' %>
-        </li>
-      <% end %>
+        <% @bulk_errors.each do |wpid, messages| %>
+          <li>
+            <%= link_to "##{wpid}", work_package_path(wpid) %>:
+            <%= safe_join messages, ', ' %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -31,7 +29,7 @@
 </ul>
 
 <%= styled_form_tag(url_for(controller: '/work_packages/bulk', action: :update),
-             method: :put, class: '-wide-labels') do %>
+                    method: :put, class: '-wide-labels') do %>
   <% @work_packages.each do |wp| %>
     <%= hidden_field_tag 'ids[]', wp.id %>
   <% end %>
@@ -72,16 +70,16 @@
             <label class="form--label" for='work_package_assigned_to_id'><%= WorkPackage.human_attribute_name(:assigned_to) %></label>
             <div class="form--field-container">
               <%= styled_select_tag('work_package[assigned_to_id]', content_tag('option', t(:label_no_change_option), value: '') +
-                                     content_tag('option', t(:label_nobody), value: 'none') +
-                                     options_from_collection_for_select(@assignables, :id, :name)) %>
+                content_tag('option', t(:label_nobody), value: 'none') +
+                options_from_collection_for_select(@assignables, :id, :name)) %>
             </div>
           </div>
           <div class="form--field">
             <label class="form--label" for='work_package_responsible_id'><%= WorkPackage.human_attribute_name(:responsible) %></label>
             <div class="form--field-container">
               <%= styled_select_tag('work_package[responsible_id]', content_tag('option', t(:label_no_change_option), value: '') +
-                                     content_tag('option', t(:label_nobody), value: 'none') +
-                                     options_from_collection_for_select(@responsibles, :id, :name)) %>
+                content_tag('option', t(:label_nobody), value: 'none') +
+                options_from_collection_for_select(@responsibles, :id, :name)) %>
             </div>
           </div>
           <% if @project %>
@@ -89,8 +87,8 @@
               <label class="form--label" for='category_id'><%= WorkPackage.human_attribute_name(:category) %></label>
               <div class="form--field-container">
                 <%= styled_select_tag('work_package[category_id]', content_tag('option', t(:label_no_change_option), value: '') +
-                                    content_tag('option', t(:label_none), value: 'none') +
-                                    options_from_collection_for_select(@project.categories, :id, :name)) %>
+                  content_tag('option', t(:label_none), value: 'none') +
+                  options_from_collection_for_select(@project.categories, :id, :name)) %>
               </div>
             </div>
           <% end %>
@@ -100,8 +98,8 @@
               <label class="form--label" for='work_package_version_id'><%= WorkPackage.human_attribute_name(:version) %></label>
               <div class="form--field-container">
                 <%= styled_select_tag('work_package[version_id]', content_tag('option', t(:label_no_change_option), value: '') +
-                                       content_tag('option', t(:label_none), value: 'none') +
-                                       version_options_for_select(@project.shared_versions.with_status_open.order_by_semver_name)) %>
+                  content_tag('option', t(:label_none), value: 'none') +
+                  version_options_for_select(@project.shared_versions.with_status_open.order_by_semver_name)) %>
               </div>
             </div>
           <% end %>
@@ -153,7 +151,7 @@
             <div class="form--field">
               <label class="form--label" for='work_package_done_ratio'><%= WorkPackage.human_attribute_name(:done_ratio) %></label>
               <div class="form--field-container">
-                <%= styled_select_tag 'work_package[done_ratio]', options_for_select([[t(:label_no_change_option), '']] + (0..10).to_a.collect {|r| ["#{r*10} %", r*10] }) %>
+                <%= styled_select_tag 'work_package[done_ratio]', options_for_select([[t(:label_no_change_option), '']] + (0..10).to_a.collect { |r| ["#{r * 10} %", r * 10] }) %>
               </div>
             </div>
           <% end %>

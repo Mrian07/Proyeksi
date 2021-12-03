@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class RolesController < ApplicationController
   include PaginationHelper
   include Roles::NotifyMixin
@@ -12,8 +10,8 @@ class RolesController < ApplicationController
 
   def index
     @roles = roles_scope
-             .page(page_param)
-             .per_page(per_page_param)
+               .page(page_param)
+               .per_page(per_page_param)
 
     render action: 'index', layout: false if request.xhr?
   end

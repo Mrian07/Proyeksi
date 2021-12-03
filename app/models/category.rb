@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Category < ApplicationRecord
   belongs_to :project
   belongs_to :assigned_to, class_name: 'Principal', foreign_key: 'assigned_to_id'
@@ -33,5 +31,7 @@ class Category < ApplicationRecord
     name <=> other.name
   end
 
-  def to_s; name end
+  def to_s
+    name
+  end
 end

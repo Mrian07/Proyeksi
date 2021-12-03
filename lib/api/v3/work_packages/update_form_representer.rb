@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -29,7 +27,7 @@ module API
 
         link :commit do
           if current_user.allowed_to?(:edit_work_packages, represented.project) &&
-             @errors.empty?
+            @errors.empty?
             {
               href: api_v3_paths.work_package(represented.id),
               method: :patch

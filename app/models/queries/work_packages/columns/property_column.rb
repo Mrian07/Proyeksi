@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Columns::PropertyColumn < Queries::WorkPackages::Columns::WorkPackageColumn
   def caption
     WorkPackage.human_attribute_name(name)

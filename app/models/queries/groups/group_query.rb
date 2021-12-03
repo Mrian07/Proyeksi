@@ -1,5 +1,3 @@
-
-
 class Queries::Groups::GroupQuery < Queries::BaseQuery
   def self.model
     Group

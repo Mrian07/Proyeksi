@@ -1,4 +1,3 @@
-
 <% html_title t(:label_administration), t(:label_authentication) -%>
 
 <%= toolbar title: t(:label_authentication) %>
@@ -10,10 +9,10 @@
       <div class="form--field"><%= setting_check_box :login_required %></div>
 
       <div class="form--field"><%= setting_select :self_registration, [[t(:label_disabled), Setting::SelfRegistration.disabled.to_s],
-                                                [t(:label_registration_activation_by_email), Setting::SelfRegistration.by_email.to_s],
-                                                [t(:label_registration_manual_activation), Setting::SelfRegistration.manual.to_s],
-                                                [t(:label_registration_automatic_activation), Setting::SelfRegistration.automatic.to_s]],
-                                                container_class: '-middle' %>
+                                                                       [t(:label_registration_activation_by_email), Setting::SelfRegistration.by_email.to_s],
+                                                                       [t(:label_registration_manual_activation), Setting::SelfRegistration.manual.to_s],
+                                                                       [t(:label_registration_automatic_activation), Setting::SelfRegistration.automatic.to_s]],
+                                                  container_class: '-middle' %>
       </div>
 
       <div class="form--field">
@@ -81,12 +80,12 @@
     <fieldset class="form--fieldset">
       <legend class="form--fieldset-legend"><%= I18n.t(:session, scope: [:settings]) %></legend>
       <div class="form--field -wide-label"><%= setting_select :autologin,
-                 ([[t(:label_disabled), 0]] +
-                  [1, 7, 30, 365].collect do |days|
-                    [t('datetime.distance_in_words.x_days', count: days),
-                    days.to_s]
-                  end),
-                  container_class: '-xslim' %>
+                                                              ([[t(:label_disabled), 0]] +
+                                                                [1, 7, 30, 365].collect do | days |
+                                                              [t('datetime.distance_in_words.x_days', count: days),
+                                                               days.to_s]
+                                                              end),
+                                                              container_class: '-xslim' %>
       </div>
       <div class="form--field -wide-label"><%= setting_check_box :session_ttl_enabled %></div>
       <div class="form--field -wide-label" id="settings_session_ttl_container" style="display:none;">
@@ -105,7 +104,7 @@
   </section>
   <% unless ProyeksiApp::Configuration.disable_password_login? %>
     <div style="float:right;">
-      <%= link_to t(:label_ldap_authentication), {controller: '/ldap_auth_sources', action: 'index'}, class: 'icon icon-server-key' %>
+      <%= link_to t(:label_ldap_authentication), { controller: '/ldap_auth_sources', action: 'index' }, class: 'icon icon-server-key' %>
     </div>
   <% end %>
   <%= styled_button_tag t(:button_save), class: '-highlight -with-icon icon-checkmark' %>

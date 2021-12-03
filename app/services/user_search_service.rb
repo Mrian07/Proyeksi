@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UserSearchService
   attr_accessor :params
   attr_reader :users_only, :project

@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 #
 module Query::Highlighting
   extend ActiveSupport::Concern

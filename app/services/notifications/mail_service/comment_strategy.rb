@@ -1,5 +1,3 @@
-
-
 module Notifications::MailService::CommentStrategy
   class << self
     def send_mail(notification)

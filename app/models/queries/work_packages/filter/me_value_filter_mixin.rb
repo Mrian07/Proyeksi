@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Mixin to a filter or strategy
 module Queries::WorkPackages::Filter::MeValueFilterMixin

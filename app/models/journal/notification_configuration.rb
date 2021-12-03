@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Journal::NotificationConfiguration
   class << self
     # Allows controlling whether notifications are sent out for created journals.

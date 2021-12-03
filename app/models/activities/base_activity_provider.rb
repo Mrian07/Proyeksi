@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ###############################################################################
 # The base activity provider class provides a default implementation for the  #
 # most common activity jobs. You may implement the following methods to set   #

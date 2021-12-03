@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module BasicData
   class BuiltinRolesSeeder < Seeder
     def seed_data!
@@ -17,7 +16,7 @@ module BasicData
     def data
       [
         { name: I18n.t(:default_role_non_member), position: 0, builtin: Role::BUILTIN_NON_MEMBER },
-        { name: I18n.t(:default_role_anonymous),  position: 1, builtin: Role::BUILTIN_ANONYMOUS  }
+        { name: I18n.t(:default_role_anonymous), position: 1, builtin: Role::BUILTIN_ANONYMOUS }
       ]
     end
   end

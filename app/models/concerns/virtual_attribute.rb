@@ -1,5 +1,3 @@
-
-
 module VirtualAttribute
   extend ActiveSupport::Concern
 

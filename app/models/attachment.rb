@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'digest/md5'
 
 class Attachment < ApplicationRecord
@@ -132,6 +130,7 @@ class Attachment < ApplicationRecord
   def is_diff?
     is_text? && filename =~ /\.(patch|diff)\z/i
   end
+
   # rubocop:enable Naming/PredicateName
 
   # Returns true if the file is readable

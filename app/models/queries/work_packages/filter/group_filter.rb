@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::GroupFilter < Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values
     all_groups.map { |g| [g.name, g.id.to_s] }

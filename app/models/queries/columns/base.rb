@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Columns::Base
   attr_reader :groupable,
               :sortable
@@ -49,7 +47,7 @@ class Queries::Columns::Base
   end
 
   def sortable=(value)
-    @sortable =  name_or_value_or_false(value)
+    @sortable = name_or_value_or_false(value)
   end
 
   # Returns true if the column is sortable, otherwise false

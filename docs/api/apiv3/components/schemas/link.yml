@@ -31,4 +31,4 @@ examples:
   method: POST
 - href: "/api/v3/examples/{example_id}"
   templated: true
-- href: urn:openproject-org:api:v3:undisclosed
+- href: urn:proyeksi-app:api:v3:undisclosed

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Project < ApplicationRecord
   extend Pagination::Model
   extend FriendlyId
@@ -56,8 +54,8 @@ class Project < ApplicationRecord
   has_and_belongs_to_many :work_package_custom_fields, -> {
     order("#{CustomField.table_name}.position")
   }, class_name: 'WorkPackageCustomField',
-     join_table: "#{table_name_prefix}custom_fields_projects#{table_name_suffix}",
-     association_foreign_key: 'custom_field_id'
+                          join_table: "#{table_name_prefix}custom_fields_projects#{table_name_suffix}",
+                          association_foreign_key: 'custom_field_id'
   has_one :status, class_name: 'Projects::Status', dependent: :destroy
   has_many :budgets, dependent: :destroy
   has_many :notification_settings, dependent: :destroy
@@ -323,7 +321,7 @@ class Project < ApplicationRecord
     #
     def build_projects_hierarchy(projects)
       ancestors = []
-      result    = []
+      result = []
 
       projects.sort_by(&:lft).each do |project|
         while ancestors.any? && !project.is_descendant_of?(ancestors.last[:project])
@@ -333,7 +331,7 @@ class Project < ApplicationRecord
         end
 
         current_hierarchy = { project: project, children: [] }
-        current_tree      = ancestors.any? ? ancestors.last[:children] : result
+        current_tree = ancestors.any? ? ancestors.last[:children] : result
 
         current_tree << current_hierarchy
         ancestors << current_hierarchy
@@ -389,16 +387,16 @@ class Project < ApplicationRecord
 
   def allowed_permissions
     @allowed_permissions ||= begin
-      names = enabled_modules.loaded? ? enabled_module_names : enabled_modules.pluck(:name)
+                               names = enabled_modules.loaded? ? enabled_module_names : enabled_modules.pluck(:name)
 
-      ProyeksiApp::AccessControl.modules_permissions(names).map(&:name)
-    end
+                               ProyeksiApp::AccessControl.modules_permissions(names).map(&:name)
+                             end
   end
 
   def allowed_actions
     @actions_allowed ||= allowed_permissions
-                         .map { |permission| ProyeksiApp::AccessControl.allowed_actions(permission) }
-                         .flatten
+                           .map { |permission| ProyeksiApp::AccessControl.allowed_actions(permission) }
+                           .flatten
   end
 
   def remove_white_spaces_from_project_name

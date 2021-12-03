@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Exports
   class CSV < QueryExporter
     include ::Exports::Concerns::CSV

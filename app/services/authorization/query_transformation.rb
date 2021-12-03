@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::QueryTransformation
   attr_accessor :on, :name, :after, :before, :block
 

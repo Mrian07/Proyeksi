@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Relations::UpdateService < Relations::BaseService
   attr_accessor :model
 

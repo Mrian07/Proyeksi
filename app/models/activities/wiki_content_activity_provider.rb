@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Activities::WikiContentActivityProvider < Activities::BaseActivityProvider
   activity_provider_for type: 'wiki_edits',
                         permission: :view_wiki_edits

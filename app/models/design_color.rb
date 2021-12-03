@@ -1,5 +1,3 @@
-
-
 class DesignColor < ApplicationRecord
   after_commit -> do
     # CustomStyle.current.updated_at determines the cache key for inline_css

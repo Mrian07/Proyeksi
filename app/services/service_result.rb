@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ServiceResult
   attr_accessor :success,
                 :result,

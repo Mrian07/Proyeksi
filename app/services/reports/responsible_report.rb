@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Reports::ResponsibleReport < Reports::Report
   def self.report_type
     'responsible'

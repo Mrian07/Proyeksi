@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared::MeValueFilter
   ##
   # Return the values object with the me value

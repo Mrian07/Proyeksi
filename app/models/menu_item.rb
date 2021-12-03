@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MenuItem < ApplicationRecord
   belongs_to :parent, class_name: 'MenuItem'
   has_many :children, -> {

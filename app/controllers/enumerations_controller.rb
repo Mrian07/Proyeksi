@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class EnumerationsController < ApplicationController
   layout 'admin'
 

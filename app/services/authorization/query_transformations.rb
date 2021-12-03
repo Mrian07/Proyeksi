@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::QueryTransformations
   def for?(on)
     !!transformations[transformation_key(on)]

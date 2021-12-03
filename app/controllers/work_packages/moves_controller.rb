@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackages::MovesController < ApplicationController
   default_search_scope :work_packages
   before_action :find_work_packages, :check_project_uniqueness
@@ -29,12 +27,12 @@ class WorkPackages::MovesController < ApplicationController
                 copy: !!@copy)
 
       service_call = WorkPackages::MoveService
-                     .new(work_package, current_user)
-                     .call(@target_project,
-                           new_type,
-                           copy: @copy,
-                           attributes: permitted_create_params,
-                           journal_note: @notes)
+                       .new(work_package, current_user)
+                       .call(@target_project,
+                             new_type,
+                             copy: @copy,
+                             attributes: permitted_create_params,
+                             journal_note: @notes)
 
       if service_call.success?
         moved_work_packages << service_call.result
@@ -73,9 +71,9 @@ class WorkPackages::MovesController < ApplicationController
   # When copying, add work package ids that are failing
   def dependent_error_ids(parent_id, service_call)
     ids = service_call
-      .results_with_errors(include_self: false)
-      .map { |result| result.state.copied_from_work_package_id }
-      .compact
+            .results_with_errors(include_self: false)
+            .map { |result| result.state.copied_from_work_package_id }
+            .compact
 
     if ids.present?
       joined = ids.map { |id| "##{id}" }.join(" ")

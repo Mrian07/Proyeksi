@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Columns::RelationColumn < Queries::WorkPackages::Columns::WorkPackageColumn
   attr_accessor :type
 

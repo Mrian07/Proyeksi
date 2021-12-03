@@ -1,5 +1,3 @@
-
-
 require 'carrierwave/storage/fog'
 
 class FogFileUploader < CarrierWave::Uploader::Base

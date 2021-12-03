@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::AskBeforeDestruction
   extend ActiveSupport::Concern
 
@@ -22,8 +20,8 @@ module WorkPackage::AskBeforeDestruction
       cleanup_required = cleanup_action_required_before_destructing?(work_packages)
 
       (!cleanup_required ||
-       (cleanup_required &&
-        cleanup_each_associated_class(work_packages, user, to_do)))
+        (cleanup_required &&
+          cleanup_each_associated_class(work_packages, user, to_do)))
     end
 
     def associated_classes_to_address_before_destruction_of(work_packages)

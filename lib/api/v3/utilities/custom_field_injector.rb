@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module Utilities
@@ -210,8 +208,8 @@ module API
             # Do not embed list or multi values as their links contain all the
             # information needed (title and href) already.
             next if !represented.available_custom_fields.include?(custom_field) ||
-                    custom_field.list? ||
-                    custom_field.multi_value?
+              custom_field.list? ||
+              custom_field.multi_value?
 
             value = represented.send custom_field.accessor_name
 
@@ -368,12 +366,12 @@ module API
             custom_field_sha = ProyeksiApp::Cache::CacheKey.expand(custom_fields.sort_by(&:id))
 
             cached_custom_field_classes[custom_field_sha] ||= begin
-              injector_class = custom_field_injector_config[:injector_class]
+                                                                injector_class = custom_field_injector_config[:injector_class]
 
-              method_name = :"create_#{custom_field_injector_config[:type]}"
+                                                                method_name = :"create_#{custom_field_injector_config[:type]}"
 
-              injector_class.send(method_name, custom_fields, self)
-            end
+                                                                injector_class.send(method_name, custom_fields, self)
+                                                              end
           end
 
           def cached_custom_field_classes

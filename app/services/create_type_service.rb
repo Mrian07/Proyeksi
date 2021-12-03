@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CreateTypeService < BaseTypeService
   def initialize(user)
     super Type.new, user

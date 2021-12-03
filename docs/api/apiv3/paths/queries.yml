@@ -135,7 +135,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to see the queries.
       description: |-
         Returned if the client does not have sufficient permissions to see queries.
@@ -263,7 +263,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: Occurs when the client did not send a valid JSON object in the
         request body.
@@ -278,7 +278,7 @@ post:
                   details:
                     attribute: project
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: Project not found
       description: |-
         Returned if:

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::UserStrategy < CustomValue::ARObjectStrategy
   private
 

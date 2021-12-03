@@ -1,5 +1,3 @@
-
-
 <% html_title t(:label_administration), t(:label_type_new) %>
 
 
@@ -8,6 +6,6 @@
 
 <%= error_messages_for 'type' %>
 
-<%= form_for controller.type, builder: TabularFormBuilder, lang: current_language  do |f| %>
+<%= form_for controller.type, builder: TabularFormBuilder, lang: current_language do |f| %>
   <%= render partial: 'types/form/settings', locals: { f: f } %>
 <% end %>

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class UnarchiveService < ::BaseServices::BaseContracted
     include Contracted

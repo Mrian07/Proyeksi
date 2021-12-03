@@ -20,4 +20,4 @@ import { PrincipalRendererService } from './principal-renderer.service';
     OpPrincipalListComponent,
   ],
 })
-export class OpenprojectPrincipalRenderingModule { }
+export class ProyeksiappPrincipalRenderingModule { }

@@ -1,4 +1,3 @@
-
 <%= breadcrumb_toolbar(@user.name) do %>
   <li class="toolbar-item">
     <%= link_to user_path(@user), class: 'button' do %>
@@ -7,16 +6,16 @@
     <% end %>
   </li>
   <% if current_user.allowed_to_globally?(:manage_user) %>
-  <li class="toolbar-item hidden-for-mobile">
-    <%= form_for(@user, html: { class: 'toolbar-item' },
-                 url: { action: :resend_invitation },
-                 method: :post) do |_form| %>
-      <button class="button" title="<%= t(:tooltip_resend_invitation) %>">
-        <%= op_icon('button--icon icon-mail1') %>
-        <span class="button--text"><%= t(:label_send_invitation) %></span>
-      </button>
-    <% end %>
-  </li>
+    <li class="toolbar-item hidden-for-mobile">
+      <%= form_for(@user, html: { class: 'toolbar-item' },
+                   url: { action: :resend_invitation },
+                   method: :post) do |_form| %>
+        <button class="button" title="<%= t(:tooltip_resend_invitation) %>">
+          <%= op_icon('button--icon icon-mail1') %>
+          <span class="button--text"><%= t(:label_send_invitation) %></span>
+        </button>
+      <% end %>
+    </li>
   <% end %>
 
   <% if current_user.admin? %>

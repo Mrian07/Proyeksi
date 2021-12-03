@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module SearchHelper
   def highlight_tokens(text, tokens, text_on_not_found: false)
     split_text = text_split_by_token(text, tokens)

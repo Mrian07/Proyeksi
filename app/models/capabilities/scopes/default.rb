@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Capabilities::Scopes
   module Default
     extend ActiveSupport::Concern

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Members::Scopes
   module Assignable
     extend ActiveSupport::Concern

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Decorators
     module DateProperty
@@ -53,10 +51,10 @@ module API
         def default_date_setter(name)
           ->(fragment:, decorator:, **) {
             date = decorator
-                   .datetime_formatter
-                   .parse_date(fragment,
-                               name.to_s.camelize(:lower),
-                               allow_nil: true)
+                     .datetime_formatter
+                     .parse_date(fragment,
+                                 name.to_s.camelize(:lower),
+                                 allow_nil: true)
 
             send(:"#{name}=", date)
           }

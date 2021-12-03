@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Provides helper methods for a project's calendar view.
 module CalendarsHelper
   # Generates a html link to a calendar of the previous month.
@@ -36,8 +34,8 @@ module CalendarsHelper
     name = ::I18n.l date, format: options.delete(:display_year) ? '%B %Y' : '%B'
 
     merged_params = permitted_params
-                    .calendar_filter
-                    .merge(year: date.year, month: date.month)
+                      .calendar_filter
+                      .merge(year: date.year, month: date.month)
 
     link_to_content_update(name, merged_params, options)
   end

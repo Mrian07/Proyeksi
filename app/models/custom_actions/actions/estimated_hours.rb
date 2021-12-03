@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::EstimatedHours < CustomActions::Actions::Base
   include CustomActions::Actions::Strategies::Float
 

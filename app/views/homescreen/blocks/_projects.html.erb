@@ -4,14 +4,14 @@
   <p class="widget-box--additional-info">
     <%= t('homescreen.additional.no_visible_projects') %>
   </p>
-<% else  %>
+<% else %>
   <p class="widget-box--additional-info"><%= t('homescreen.additional.projects') %></p>
   <ul class="widget-box--arrow-links">
     <% @newest_projects.each do |project| %>
-    <li>
-      <%= link_to project, project_path(project), title: short_project_description(project) %>
-      <small>(<%= format_date(project.created_at) %>)</small>
-    </li>
+      <li>
+        <%= link_to project, project_path(project), title: short_project_description(project) %>
+        <small>(<%= format_date(project.created_at) %>)</small>
+      </li>
     <% end %>
   </ul>
 <% end %>
@@ -19,9 +19,9 @@
 <div class="widget-box--blocks--buttons">
   <% if User.current.allowed_to?(:add_project, nil, global: true) %>
     <%= link_to new_project_path,
-          { class: 'button -alt-highlight',
-            aria: {label: t(:label_project_new)},
-            title: t(:label_project_new)} do %>
+                { class: 'button -alt-highlight',
+                  aria: { label: t(:label_project_new) },
+                  title: t(:label_project_new) } do %>
       <%= op_icon('button--icon icon-add') %>
       <span class="button--text"><%= Project.model_name.human %></span>
     <% end %>

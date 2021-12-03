@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class PlaceholderUsers::DeleteService < ::BaseServices::Delete
   def destroy(placeholder)
     placeholder.locked!

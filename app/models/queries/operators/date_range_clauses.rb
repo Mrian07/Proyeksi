@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   module DateRangeClauses
     # Returns a SQL clause for a date or datetime field for a relative range from

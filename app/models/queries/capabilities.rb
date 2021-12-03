@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Capabilities
   query = Queries::Capabilities::CapabilityQuery
   filter_ns = Queries::Capabilities::Filters

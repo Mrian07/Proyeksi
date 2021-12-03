@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Relation < ApplicationRecord
   include VirtualAttribute
 
@@ -27,19 +25,19 @@ class Relation < ApplicationRecord
     end
   end
 
-  TYPE_RELATES      = 'relates'.freeze
-  TYPE_DUPLICATES   = 'duplicates'.freeze
-  TYPE_DUPLICATED   = 'duplicated'.freeze
-  TYPE_BLOCKS       = 'blocks'.freeze
-  TYPE_BLOCKED      = 'blocked'.freeze
-  TYPE_PRECEDES     = 'precedes'.freeze
-  TYPE_FOLLOWS      = 'follows'.freeze
-  TYPE_INCLUDES     = 'includes'.freeze
-  TYPE_PARTOF       = 'partof'.freeze
-  TYPE_REQUIRES     = 'requires'.freeze
-  TYPE_REQUIRED     = 'required'.freeze
-  TYPE_HIERARCHY    = 'hierarchy'.freeze
-  TYPE_MIXED        = 'mixed'.freeze
+  TYPE_RELATES = 'relates'.freeze
+  TYPE_DUPLICATES = 'duplicates'.freeze
+  TYPE_DUPLICATED = 'duplicated'.freeze
+  TYPE_BLOCKS = 'blocks'.freeze
+  TYPE_BLOCKED = 'blocked'.freeze
+  TYPE_PRECEDES = 'precedes'.freeze
+  TYPE_FOLLOWS = 'follows'.freeze
+  TYPE_INCLUDES = 'includes'.freeze
+  TYPE_PARTOF = 'partof'.freeze
+  TYPE_REQUIRES = 'requires'.freeze
+  TYPE_REQUIRED = 'required'.freeze
+  TYPE_HIERARCHY = 'hierarchy'.freeze
+  TYPE_MIXED = 'mixed'.freeze
 
   TYPES = {
     TYPE_RELATES => {
@@ -123,9 +121,9 @@ class Relation < ApplicationRecord
 
   def self.from_work_package_or_ancestors(work_package)
     ancestor_or_self_ids = work_package
-                           .ancestors_relations
-                           .or(where(from_id: work_package.id))
-                           .select(:from_id)
+                             .ancestors_relations
+                             .or(where(from_id: work_package.id))
+                             .select(:from_id)
 
     where(from_id: ancestor_or_self_ids)
   end
@@ -169,7 +167,7 @@ class Relation < ApplicationRecord
 
   def self.tree_of(work_package)
     root_id = to_root(work_package)
-              .select(:from_id)
+                .select(:from_id)
 
     hierarchy
       .where(from_id: root_id)
@@ -228,7 +226,7 @@ class Relation < ApplicationRecord
 
   def self.canonical_type(relation_type)
     if TYPES.key?(relation_type) &&
-       TYPES[relation_type][:reverse]
+      TYPES[relation_type][:reverse]
       TYPES[relation_type][:reverse]
     else
       relation_type
@@ -251,7 +249,7 @@ class Relation < ApplicationRecord
 
     errors.add :to_id, :invalid if from_id == to_id
     errors.add :to_id, :not_same_project unless from.project_id == to.project_id ||
-                                                Setting.cross_project_work_package_relations?
+      Setting.cross_project_work_package_relations?
     errors.add :base, :cant_link_a_work_package_with_a_descendant if shared_hierarchy?
   end
 

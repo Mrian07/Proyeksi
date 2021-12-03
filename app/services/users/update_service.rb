@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class UpdateService < ::BaseServices::Update
     include ::HookHelper

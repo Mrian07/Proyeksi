@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class LogoutService
     attr_accessor :controller

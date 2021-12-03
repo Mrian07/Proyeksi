@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ExtractFulltextJob < ApplicationJob
   queue_with_priority :low
 

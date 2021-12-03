@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class GroupsController < ApplicationController
   include GroupsHelper
   layout 'admin'
@@ -42,7 +40,7 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render xml: @group }
+      format.xml { render xml: @group }
     end
   end
 
@@ -66,10 +64,10 @@ class GroupsController < ApplicationController
       if service_call.success?
         flash[:notice] = I18n.t(:notice_successful_create)
         format.html { redirect_to(groups_path) }
-        format.xml  { render xml: @group, status: :created, location: @group }
+        format.xml { render xml: @group, status: :created, location: @group }
       else
         format.html { render action: :new }
-        format.xml  { render xml: service_call.errors, status: :unprocessable_entity }
+        format.xml { render xml: service_call.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -78,17 +76,17 @@ class GroupsController < ApplicationController
   # PUT /groups/1.xml
   def update
     service_call = Groups::UpdateService
-                   .new(user: current_user, model: @group)
-                   .call(permitted_params.group)
+                     .new(user: current_user, model: @group)
+                     .call(permitted_params.group)
 
     respond_to do |format|
       if service_call.success?
         flash[:notice] = I18n.t(:notice_successful_update)
         format.html { redirect_to(groups_path) }
-        format.xml  { head :ok }
+        format.xml { head :ok }
       else
         format.html { render action: 'edit' }
-        format.xml  { render xml: service_call.errors, status: :unprocessable_entity }
+        format.xml { render xml: service_call.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -111,8 +109,8 @@ class GroupsController < ApplicationController
 
   def add_users
     service_call = Groups::UpdateService
-                   .new(user: current_user, model: @group)
-                   .call(user_ids: @group.user_ids + Array(params[:user_ids]).map(&:to_i))
+                     .new(user: current_user, model: @group)
+                     .call(user_ids: @group.user_ids + Array(params[:user_ids]).map(&:to_i))
 
     respond_users_altered(service_call)
   end
@@ -121,8 +119,8 @@ class GroupsController < ApplicationController
     @group = Group.includes(:group_users).find(params[:id])
 
     service_call = Groups::UpdateService
-                   .new(user: current_user, model: @group)
-                   .call(user_ids: @group.user_ids - Array(params[:user_id]).map(&:to_i))
+                     .new(user: current_user, model: @group)
+                     .call(user_ids: @group.user_ids - Array(params[:user_id]).map(&:to_i))
 
     respond_users_altered(service_call)
   end
@@ -131,8 +129,8 @@ class GroupsController < ApplicationController
     membership_params = permitted_params.group_membership[:new_membership]
 
     service_call = Members::CreateService
-                   .new(user: current_user)
-                   .call(membership_params.merge(principal: @group))
+                     .new(user: current_user)
+                     .call(membership_params.merge(principal: @group))
 
     respond_membership_altered(service_call)
   end
@@ -143,8 +141,8 @@ class GroupsController < ApplicationController
     @membership = Member.find(membership_params[:membership_id])
 
     service_call = Members::UpdateService
-                   .new(model: @membership, user: current_user)
-                   .call(membership_params[:membership])
+                     .new(model: @membership, user: current_user)
+                     .call(membership_params[:membership])
 
     respond_membership_altered(service_call)
   end

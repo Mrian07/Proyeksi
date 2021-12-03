@@ -1,4 +1,3 @@
-
 module DemoData
   class CustomFieldSeeder < Seeder
     attr_reader :project, :key

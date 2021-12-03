@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 API::V3::Utilities::DateTimeFormatter
 
 module API

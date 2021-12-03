@@ -1,5 +1,3 @@
-
-
 require 'work_packages/create_contract'
 
 # Can be used to copy all of a project's work packages. As the

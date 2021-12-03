@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # This does filter for whether a role can be assigned to a member.
 class Queries::Roles::Filters::GrantableFilter < Queries::Roles::Filters::RoleFilter
   def type

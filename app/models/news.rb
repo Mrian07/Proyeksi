@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class News < ApplicationRecord
   belongs_to :project
   belongs_to :author, class_name: 'User'
@@ -47,8 +45,8 @@ class News < ApplicationRecord
 
   def self.latest_for(user, count: 5)
     scope = newest_first
-            .includes(:author)
-            .visible(user)
+              .includes(:author)
+              .visible(user)
 
     if count > 0
       scope.limit(count)

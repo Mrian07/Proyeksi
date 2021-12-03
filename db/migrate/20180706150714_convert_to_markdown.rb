@@ -1,5 +1,3 @@
-
-
 class ConvertToMarkdown < ActiveRecord::Migration[5.1]
   def up
     setting = Setting.where(name: 'text_formatting').pluck(:value)

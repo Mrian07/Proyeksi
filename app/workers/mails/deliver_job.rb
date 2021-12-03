@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Mails::DeliverJob < ApplicationJob
   queue_with_priority :notification
 

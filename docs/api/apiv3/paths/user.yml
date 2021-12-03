@@ -24,7 +24,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to delete the account of this user.
       description: |-
         Returned if the client does not have sufficient permissions or if deletion of users was disabled in the instance wide settings.
@@ -38,7 +38,7 @@ delete:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified user does not exist.
       description: Returned if the user does not exist.
       headers: {}
@@ -102,7 +102,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified user does not exist or you do not have permission
                   to view them.
       description: |-
@@ -139,7 +139,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: Occurs when the client did not send a valid JSON object in the
         request body.
@@ -151,7 +151,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to update the account of this user.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -165,7 +165,7 @@ patch:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The specified user does not exist or you do not have permission
                   to view them.
       description: |-
@@ -183,7 +183,7 @@ patch:
                   details:
                     attribute: email
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: The email address is already taken.
       description: |-
         Returned if:

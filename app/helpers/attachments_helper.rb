@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AttachmentsHelper
   def to_utf8_for_attachments(str)
     forced_str = str.dup

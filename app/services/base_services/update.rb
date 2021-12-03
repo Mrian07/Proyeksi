@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module BaseServices
   class Update < Write
     def initialize(user:, model:, contract_class: nil, contract_options: {})

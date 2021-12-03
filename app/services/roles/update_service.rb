@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Roles::UpdateService < ::BaseServices::Update
   include Roles::NotifyMixin
 

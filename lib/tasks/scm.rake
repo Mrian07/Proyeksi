@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'pathname'
 
 def scan_repositories(path)

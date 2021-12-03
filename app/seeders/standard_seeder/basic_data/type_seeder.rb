@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module StandardSeeder
   module BasicData
     class TypeSeeder < ::BasicData::TypeSeeder

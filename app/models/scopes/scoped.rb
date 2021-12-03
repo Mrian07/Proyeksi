@@ -1,5 +1,3 @@
-
-
 module Scopes::Scoped
   extend ActiveSupport::Concern
 

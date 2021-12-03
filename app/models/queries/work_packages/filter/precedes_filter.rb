@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Filter for all work packages that are (or are not) predecessor of the provided values
 
 class Queries::WorkPackages::Filter::PrecedesFilter <

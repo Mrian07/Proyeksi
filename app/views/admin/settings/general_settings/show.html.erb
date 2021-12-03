@@ -1,4 +1,3 @@
-
 <%= toolbar title: t(:label_general) %>
 
 <%= styled_form_tag(admin_settings_update_general_path, method: :patch) do %>
@@ -30,15 +29,15 @@
     <div class="form--field"><%= setting_text_field :diff_max_lines_displayed, size: 6, container_class: '-xslim' %></div>
 
     <% if ProyeksiApp::Configuration.security_badge_displayed? %>
-    <div class="form--field">
-      <%= setting_check_box :security_badge_displayed %>
-      <span class="form--field-instructions">
+      <div class="form--field">
+        <%= setting_check_box :security_badge_displayed %>
+        <span class="form--field-instructions">
         <%= t(:text_notice_security_badge_displayed_html,
               information_panel_label: t(:label_information),
               more_info_url: ::ProyeksiApp::Static::Links[:security_badge_documentation][:href],
               information_panel_path: info_admin_index_path) %>
       </span>
-    </div>
+      </div>
     <% end %>
     <%= call_hook(:view_settings_general_form) %>
     <fieldset class="form--fieldset">

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::Serializer
   def self.load(value)
     return [] unless value

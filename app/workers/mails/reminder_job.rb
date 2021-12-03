@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Mails::ReminderJob < Mails::DeliverJob
   include ::Notifications::WithMarkedNotifications
 

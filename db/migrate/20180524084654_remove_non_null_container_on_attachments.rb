@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class RemoveNonNullContainerOnAttachments < ActiveRecord::Migration[5.1]
   def change
     change_column_null :attachments, :container_id, true

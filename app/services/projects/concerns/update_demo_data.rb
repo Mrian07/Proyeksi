@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Concerns
   module UpdateDemoData
     private

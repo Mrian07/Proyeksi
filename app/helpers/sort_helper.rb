@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Helpers to sort tables using clickable column headers.
 #
 # Author:  Stuart Rackham <srackham@methods.co.nz>, March 2005.

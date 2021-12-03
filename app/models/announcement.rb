@@ -1,5 +1,5 @@
 class Announcement < ApplicationRecord
-  scope :active,  -> { where(active: true) }
+  scope :active, -> { where(active: true) }
   scope :current, -> { where('show_until >= ?', Date.today) }
 
   validates :show_until, presence: true

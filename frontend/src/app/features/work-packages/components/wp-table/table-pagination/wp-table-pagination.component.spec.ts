@@ -1,4 +1,30 @@
-
+// -- copyright
+// ProyeksiApp is an open source project management software.
+// Copyright (C) 2012-2021 the ProyeksiApp GmbH
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License version 3.
+//
+// ProyeksiApp is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+// Copyright (C) 2006-2013 Jean-Philippe Lang
+// Copyright (C) 2010-2013 the ChiliProject Team
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+//
+// See COPYRIGHT and LICENSE files for more details.
+//++
 
 import { HttpClientModule } from '@angular/common/http';
 import { IsolatedQuerySpace } from 'core-app/features/work-packages/directives/query-space/isolated-query-space';
@@ -8,7 +34,7 @@ import { WorkPackageViewPaginationService } from 'core-app/features/work-package
 import { WorkPackageTablePaginationComponent } from 'core-app/features/work-packages/components/wp-table/table-pagination/wp-table-pagination.component';
 import { PathHelperService } from 'core-app/core/path-helper/path-helper.service';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
-import { ProyeksiApp } from 'core-app/core/setup/globals/openproject';
+import { Proyeksiapp } from 'core-app/core/setup/globals/proyeksiapp';
 import { WorkPackageViewSortByService } from 'core-app/features/work-packages/routing/wp-view-base/view-services/wp-view-sort-by.service';
 import { ConfigurationService } from 'core-app/core/config/configuration.service';
 import { OpIconComponent } from 'core-app/shared/components/icon/icon.component';
@@ -37,7 +63,7 @@ function pageString(element:JQuery) {
 
 describe('wpTablePagination Directive', () => {
   beforeEach(waitForAsync(() => {
-    window.ProyeksiApp = new ProyeksiApp();
+    window.ProyeksiApp = new Proyeksiapp();
 
     // noinspection JSIgnoredPromiseFromCall
     TestBed.configureTestingModule({

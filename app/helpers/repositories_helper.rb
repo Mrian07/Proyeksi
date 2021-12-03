@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module RepositoriesHelper
   def format_revision(revision)
     if revision.respond_to? :format_identifier
@@ -177,7 +175,7 @@ module RepositoriesHelper
       str.force_encoding('UTF-8')
       if !str.valid_encoding?
         str = str.encode("US-ASCII", invalid: :replace,
-                                     undef: :replace, replace: '?').encode("UTF-8")
+                         undef: :replace, replace: '?').encode("UTF-8")
       end
     else
       # removes invalid UTF8 sequences

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class BaseTypeService
   include Shared::BlockService
   include Contracted

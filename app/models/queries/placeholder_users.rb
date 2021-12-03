@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::PlaceholderUsers
   Queries::Register.filter Queries::PlaceholderUsers::PlaceholderUserQuery,
                            Queries::PlaceholderUsers::Filters::NameFilter

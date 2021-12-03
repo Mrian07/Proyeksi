@@ -1,4 +1,3 @@
-
 <%= error_messages_for 'category' %>
 
 <div class="form--field -required">
@@ -8,9 +7,9 @@
 <div class="form--field">
   <%= f.select :assigned_to_id,
                Principal
-                   .possible_assignee(@project)
-                   .ordered_by_name
-                   .collect{|u| [u.name, u.id]},
+                 .possible_assignee(@project)
+                 .ordered_by_name
+                 .collect { |u| [u.name, u.id] },
                include_blank: true,
                container_class: '-slim' %>
 </div>

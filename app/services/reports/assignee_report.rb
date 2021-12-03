@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Reports::AssigneeReport < Reports::Report
   def self.report_type
     'assigned_to'

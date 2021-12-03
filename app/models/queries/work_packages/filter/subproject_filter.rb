@@ -1,13 +1,11 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::SubprojectFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values
     @allowed_values ||= begin
-      visible_subproject_array.map { |id, name| [name, id.to_s] }
-    end
+                          visible_subproject_array.map { |id, name| [name, id.to_s] }
+                        end
   end
 
   def default_operator
@@ -63,7 +61,8 @@ class Queries::WorkPackages::Filter::SubprojectFilter <
       visible_subproject_ids
     when ::Queries::Operators::NotEquals.symbol
       visible_subproject_ids - value_ints
-    else # None
+    else
+      # None
       []
     end
   end
@@ -75,12 +74,12 @@ class Queries::WorkPackages::Filter::SubprojectFilter <
   def visible_subprojects
     # This can be accessed even when `available?` is false
     @visible_subprojects ||= begin
-      if project.nil?
-        []
-      else
-        project.descendants.visible
-      end
-    end
+                               if project.nil?
+                                 []
+                               else
+                                 project.descendants.visible
+                               end
+                             end
   end
 
   def visible_subproject_ids

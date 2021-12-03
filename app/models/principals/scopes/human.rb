@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Only return Principals that are, direct or indirect humans.
 # Includes
 #   * User

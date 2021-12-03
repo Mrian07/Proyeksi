@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class DeleteProjectJob < UserJob
     queue_with_priority :low

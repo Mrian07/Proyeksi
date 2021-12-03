@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Sessions
   class BaseService
     class << self

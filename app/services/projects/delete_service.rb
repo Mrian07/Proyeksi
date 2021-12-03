@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class DeleteService < ::BaseServices::Delete
     include Projects::Concerns::UpdateDemoData

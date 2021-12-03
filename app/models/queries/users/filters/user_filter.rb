@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Users::Filters::UserFilter < Queries::Filters::Base
   self.model = User.user
 

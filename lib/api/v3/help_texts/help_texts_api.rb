@@ -1,5 +1,3 @@
-
-
 require_dependency 'api/v3/help_texts/help_text_representer'
 require_dependency 'api/v3/help_texts/help_text_collection_representer'
 

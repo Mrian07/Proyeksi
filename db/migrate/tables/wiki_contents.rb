@@ -1,5 +1,3 @@
-
-
 require_relative 'base'
 
 class Tables::WikiContents < Tables::Base

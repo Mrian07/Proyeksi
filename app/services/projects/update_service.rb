@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class UpdateService < ::BaseServices::Update
     private

@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Queries
@@ -31,7 +29,7 @@ module API
             route_param :id, type: String, regexp: /\A\w+\z/, desc: 'Filter schema ID' do
               get do
                 ar_name = ::API::Utilities::QueryFiltersNameConverter
-                          .to_ar_name(params[:id], refer_to_ids: true)
+                            .to_ar_name(params[:id], refer_to_ids: true)
                 filter_class = Query.find_registered_filter(ar_name)
 
                 raise ::API::Errors::NotFound.new if filter_class.nil?

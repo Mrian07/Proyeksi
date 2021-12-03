@@ -1,5 +1,3 @@
-
-
 module Members::Concerns::CleanedUp
   extend ActiveSupport::Concern
 

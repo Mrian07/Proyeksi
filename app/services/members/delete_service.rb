@@ -1,5 +1,3 @@
-
-
 class Members::DeleteService < ::BaseServices::Delete
   include Members::Concerns::CleanedUp
 

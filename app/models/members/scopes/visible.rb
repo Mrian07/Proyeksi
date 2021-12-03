@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Members::Scopes
   module Visible
     extend ActiveSupport::Concern

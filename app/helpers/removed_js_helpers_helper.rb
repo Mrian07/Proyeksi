@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Contains tag helpers still existing in the OP code but already
 # removed from rails. Please consider removing the occurrences in
 # the code rather than adding additional helpers here.

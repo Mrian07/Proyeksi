@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/utilities/property_name_converter'
 require 'api/utilities/query_filters_name_converter_context'
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module UserPreferences
   class ParamsContract < ::ParamsContract
     validate :only_one_global_setting,

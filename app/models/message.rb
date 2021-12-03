@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Message < ApplicationRecord
   include ProyeksiApp::Journal::AttachmentHelper
 
@@ -21,13 +19,13 @@ class Message < ApplicationRecord
                 description: :content,
                 type: Proc.new { |o| o.parent_id.nil? ? 'message' : 'reply' },
                 url: (Proc.new do |o|
-                        msg = o
-                        if msg.parent_id.nil?
-                          { id: msg.id }
-                        else
-                          { id: msg.parent_id, r: msg.id, anchor: "message-#{msg.id}" }
-                        end.reverse_merge controller: '/messages', action: 'show', forum_id: msg.forum_id
-                      end)
+                  msg = o
+                  if msg.parent_id.nil?
+                    { id: msg.id }
+                  else
+                    { id: msg.parent_id, r: msg.id, anchor: "message-#{msg.id}" }
+                  end.reverse_merge controller: '/messages', action: 'show', forum_id: msg.forum_id
+                end)
 
   acts_as_searchable columns: ['subject', 'content'],
                      include: { forum: :project },

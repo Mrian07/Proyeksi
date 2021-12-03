@@ -1,5 +1,3 @@
-
-
 class AttributeHelpText::WorkPackage < AttributeHelpText
   def self.available_attributes
     attributes = ::Type.translated_work_package_form_attributes
@@ -23,9 +21,9 @@ class AttributeHelpText::WorkPackage < AttributeHelpText
 
   def self.visible_condition(user)
     visible_cf_names = WorkPackageCustomField
-                       .visible_by_user(user)
-                       .pluck(:id)
-                       .map { |id| "custom_field_#{id}" }
+                         .visible_by_user(user)
+                         .pluck(:id)
+                         .map { |id| "custom_field_#{id}" }
 
     ::AttributeHelpText
       .where(attribute_name: visible_cf_names)

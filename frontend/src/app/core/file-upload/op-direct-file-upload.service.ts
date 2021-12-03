@@ -1,5 +1,3 @@
-
-
 import { Injectable } from '@angular/core';
 import { HttpEvent, HttpResponse } from '@angular/common/http';
 import { from, Observable, of } from 'rxjs';
@@ -7,7 +5,7 @@ import { share, switchMap } from 'rxjs/operators';
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 import { getType } from 'mime';
 import {
-  ProyeksiAppFileUploadService, UploadBlob, UploadFile, UploadInProgress,
+  ProyeksiaAppFileUploadService, UploadBlob, UploadFile, UploadInProgress,
 } from './op-file-upload.service';
 
 interface PrepareUploadResult {
@@ -23,7 +21,7 @@ interface PrepareUploadResult {
 }
 
 @Injectable()
-export class ProyeksiAppDirectFileUploadService extends ProyeksiAppFileUploadService {
+export class ProyeksiAppDirectFileUploadService extends ProyeksiaAppFileUploadService {
   /**
    * Upload a single file, get an UploadResult observable
    * @param {string} url

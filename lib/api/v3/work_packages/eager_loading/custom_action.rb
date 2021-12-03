@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -23,8 +21,8 @@ module API
 
           def custom_actions
             @custom_actions ||= ::CustomAction
-                                .available_conditions
-                                .inject(::CustomAction.all) do |scope, condition|
+                                  .available_conditions
+                                  .inject(::CustomAction.all) do |scope, condition|
               scope.merge(condition.custom_action_scope(work_packages, User.current))
             end
           end

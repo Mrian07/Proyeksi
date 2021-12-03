@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 class Tables::CustomFields < Tables::Base
@@ -29,5 +27,6 @@ class Tables::CustomFields < Tables::Base
       t.index %i[id type], name: 'index_custom_fields_on_id_and_type'
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

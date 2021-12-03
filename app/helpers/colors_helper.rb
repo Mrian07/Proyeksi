@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ColorsHelper
   def options_for_colors(colored_thing)
     colors = []

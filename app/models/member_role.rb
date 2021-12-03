@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MemberRole < ApplicationRecord
   belongs_to :member, touch: true
   belongs_to :role

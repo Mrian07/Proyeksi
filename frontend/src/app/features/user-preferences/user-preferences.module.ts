@@ -6,7 +6,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { OPSharedModule } from 'core-app/shared/shared.module';
-import { OpenprojectAutocompleterModule } from 'core-app/shared/components/autocompleter/openproject-autocompleter.module';
+import { ProyeksiappAutocompleterModule } from 'core-app/shared/components/autocompleter/proyeksiapp-autocompleter.module';
 import { UserPreferencesService } from 'core-app/features/user-preferences/state/user-preferences.service';
 import { NotificationsSettingsPageComponent } from 'core-app/features/user-preferences/notifications-settings/page/notifications-settings-page.component';
 import { NotificationSettingInlineCreateComponent } from 'core-app/features/user-preferences/notifications-settings/inline-create/notification-setting-inline-create.component';
@@ -39,7 +39,7 @@ import { PauseRemindersComponent } from './reminder-settings/pause-reminders/pau
   imports: [
     CommonModule,
     OPSharedModule,
-    OpenprojectAutocompleterModule,
+    ProyeksiappAutocompleterModule,
     FormsModule,
     ReactiveFormsModule,
     // Routes for /my/*

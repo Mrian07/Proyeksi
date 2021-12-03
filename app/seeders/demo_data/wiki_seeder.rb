@@ -1,4 +1,3 @@
-
 module DemoData
   class WikiSeeder < Seeder
     attr_reader :project, :key

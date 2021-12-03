@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Find a user account by matching case-insensitive.
 module Users::Scopes
   module FindByLogin

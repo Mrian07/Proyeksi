@@ -1,5 +1,3 @@
-
-
 # Validates both the wiki page as well as its associated wiki content. The two are
 # considered to be one outside of this contract.
 module WikiPages
@@ -21,7 +19,7 @@ module WikiPages
 
     def validate_user_edit_allowed
       if model.project && !user.allowed_to?(:edit_wiki_pages, model.project) ||
-         (model.protected_was && !user.allowed_to?(:protect_wiki_pages, model.project))
+        (model.protected_was && !user.allowed_to?(:protect_wiki_pages, model.project))
         errors.add :base, :error_unauthorized
       end
     end

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Principals::Filters::IdFilter < Queries::Principals::Filters::PrincipalFilter
   def allowed_values
     [["me", "me"]] # Not the whole truth but performs better than checking all IDs

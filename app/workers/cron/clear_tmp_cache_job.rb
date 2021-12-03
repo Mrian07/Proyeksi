@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Cron
   class ClearTmpCacheJob < CronJob
     include ::RakeJob

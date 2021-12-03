@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class News::CommentsController < ApplicationController
   default_search_scope :news
   model_object Comment, scope: [News => :commented]

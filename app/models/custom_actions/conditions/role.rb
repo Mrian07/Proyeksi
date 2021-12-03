@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Conditions::Role < CustomActions::Conditions::Base
   def fulfilled_by?(work_package, user)
     values.empty? ||

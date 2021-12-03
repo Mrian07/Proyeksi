@@ -1,5 +1,3 @@
-
-
 class UpdateQueryFromParamsService
   def initialize(query, user)
     self.query = query

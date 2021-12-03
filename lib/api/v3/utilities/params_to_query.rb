@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Utilities
@@ -9,8 +7,8 @@ module API
             model = model_class(scope)
 
             query = ParamsToQueryService
-                    .new(model, current_user)
-                    .call(params)
+                      .new(model, current_user)
+                      .call(params)
 
             if query.valid?
               send_collection_response(model,
@@ -31,8 +29,8 @@ module API
             model_name_plural = model_name.pluralize
 
             representer = provided_representer ||
-                          "::API::V3::#{model_name_plural}::#{model_name}CollectionRepresenter"
-                          .constantize
+              "::API::V3::#{model_name_plural}::#{model_name}CollectionRepresenter"
+                .constantize
 
             link = if self_link_base
                      append_params_to_link(self_link_base, params)

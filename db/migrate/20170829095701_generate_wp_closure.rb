@@ -1,5 +1,3 @@
-
-
 class GenerateWpClosure < ActiveRecord::Migration[5.0]
   def up
     add_relation_type_column

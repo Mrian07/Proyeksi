@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::SchedulingRules
   extend ActiveSupport::Concern
 

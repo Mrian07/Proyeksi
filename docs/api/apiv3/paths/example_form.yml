@@ -65,7 +65,7 @@ post:
                   validationErrors:
                     subject:
                       _type: Error
-                      errorIdentifier: urn:openproject-org:api:v3:errors:BadExampleError
+                      errorIdentifier: urn:proyeksi-app:api:v3:errors:BadExampleError
                       message: For the purpose of this example we need a validation
                         error. The remainder of the response pretends there were no
                         errors.
@@ -93,7 +93,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was neither empty, nor did it contain a
                   single JSON object.
       description: |-
@@ -110,7 +110,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to edit example resources.
       description: Returned if the client does not have sufficient permissions to
         modify the associated resource.
@@ -122,7 +122,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:UpdateConflict
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:UpdateConflict
                 message: The resource you are about to edit was changed in the meantime.
       description: Returned if underlying resource was changed since the client requested
         the form. This is determined using the `lockVersion` property.

@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 class AdminUserSeeder < Seeder
   def seed_data!
     user = new_admin

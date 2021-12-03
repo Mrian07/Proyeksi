@@ -1,5 +1,3 @@
-
-
 require_dependency 'token/base'
 
 module Token
@@ -34,6 +32,7 @@ module Token
       # so we need to determine the hash without knowing the associated user (and thus its salt) first.
       Digest::SHA256.hexdigest(input + Rails.application.secrets.fetch(:secret_key_base))
     end
+
     delegate :hash_function, to: :class
 
     private

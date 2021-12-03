@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::ProjectQuery < Authorization::AbstractQuery
   self.model = Project
 
@@ -80,8 +78,8 @@ class Authorization::ProjectQuery < Authorization::AbstractQuery
     role_has_permission_condition(action)
       .and(project_active_condition)
       .and(assigned_roles_table[:id]
-           .eq(member_roles_table[:role_id])
-           .or(project_public_and_builtin_role_condition(user)))
+             .eq(member_roles_table[:role_id])
+             .or(project_public_and_builtin_role_condition(user)))
   end
 
   def self.role_has_permission_condition(action)

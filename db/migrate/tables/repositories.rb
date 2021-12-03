@@ -1,5 +1,3 @@
-
-
 require_relative 'base'
 
 class Tables::Repositories < Tables::Base

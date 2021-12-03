@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/decorators/single'
 
 module API

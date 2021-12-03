@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ReorderLinksHelper
   def reorder_links(name, url, options = {})
     method = options[:method] || :post

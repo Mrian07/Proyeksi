@@ -1,4 +1,3 @@
-
 <%= breadcrumb_toolbar link_to(t(@enumeration.option_name), enumerations_path), @enumeration %>
 <%= styled_form_tag({}, method: :delete) do %>
   <section class="form--section">
@@ -12,5 +11,5 @@
   </section>
   <%= styled_submit_tag t(:button_apply), class: '-highlight' %>
   <%= link_to t(:button_cancel), { controller: '/enumerations', action: 'index' },
-      class: 'button' %>
+              class: 'button' %>
 <% end %>

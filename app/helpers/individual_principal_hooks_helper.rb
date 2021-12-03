@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module IndividualPrincipalHooksHelper
   def call_individual_principals_memberships_hook(individual_principal, suffix, context = {})
     call_context = { individual_principal_key(individual_principal) => individual_principal }.merge(context)

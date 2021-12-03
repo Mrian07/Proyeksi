@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module RolesHelper
   def setable_permissions(role)
     # Use the base contract for now as we are only interested in the setable permissions

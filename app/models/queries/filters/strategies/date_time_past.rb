@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Strategies
   class DateTimePast < Queries::Filters::Strategies::Integer
     self.supported_operators = ['>t-', '<t-', 't-', 't', 'w', '=d', '<>d']
@@ -9,7 +7,7 @@ module Queries::Filters::Strategies
 
     def validate
       if operator == Queries::Operators::OnDateTime ||
-         operator == Queries::Operators::BetweenDateTime
+        operator == Queries::Operators::BetweenDateTime
         validate_values_all_datetime
       else
         super

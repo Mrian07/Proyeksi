@@ -1,5 +1,3 @@
-
-
 module Token
   module ExpirableToken
     extend ActiveSupport::Concern

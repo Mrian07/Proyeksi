@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Shared
   module ServiceContext
     private

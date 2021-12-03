@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -30,9 +28,9 @@ module API
 
         link :commit do
           if represented.project &&
-             current_user.allowed_to?(:edit_work_packages,
-                                      represented.project) &&
-             @errors.empty?
+            current_user.allowed_to?(:edit_work_packages,
+                                     represented.project) &&
+            @errors.empty?
             {
               href: api_v3_paths.work_packages,
               method: :post
@@ -42,8 +40,8 @@ module API
 
         link :customFields do
           if represented.project &&
-             current_user_allowed_to(:select_custom_fields,
-                                     context: represented.project)
+            current_user_allowed_to(:select_custom_fields,
+                                    context: represented.project)
             {
               href: project_settings_custom_fields_path(represented.project.identifier),
               type: 'text/html',
@@ -54,8 +52,8 @@ module API
 
         link :configureForm do
           if current_user.admin? &&
-             represented.type_id &&
-             represented.type_id != 0
+            represented.type_id &&
+            represented.type_id != 0
             {
               href: edit_type_path(represented.type_id, tab: 'form_configuration'),
               type: 'text/html',

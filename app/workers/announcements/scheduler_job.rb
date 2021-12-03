@@ -1,5 +1,3 @@
-
-
 module Announcements
   class SchedulerJob < ::ApplicationJob
     queue_with_priority :low

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Copy
   class WorkPackagesDependentService < Dependency
     def self.human_name
@@ -22,10 +20,10 @@ module Projects::Copy
       # Get work_packages sorted by their depth in the hierarchy tree
       # so that parents get copied before their children.
       to_copy = source
-        .work_packages
-        .includes(:custom_values, :version, :assigned_to, :responsible)
-        .order_by_ancestors('asc')
-        .order('id ASC')
+                  .work_packages
+                  .includes(:custom_values, :version, :assigned_to, :responsible)
+                  .order_by_ancestors('asc')
+                  .order('id ASC')
 
       user_cf_ids = WorkPackageCustomField.where(field_format: 'user').pluck(:id)
 
@@ -52,10 +50,10 @@ module Projects::Copy
       overrides = copy_work_package_attribute_overrides(source_work_package, parent_id, user_cf_ids)
 
       service_call = WorkPackages::CopyService
-        .new(user: user,
-             work_package: source_work_package,
-             contract_class: WorkPackages::CopyProjectContract)
-        .call(**overrides)
+                       .new(user: user,
+                            work_package: source_work_package,
+                            contract_class: WorkPackages::CopyProjectContract)
+                       .call(**overrides)
 
       if service_call.success?
         service_call.result

@@ -1,14 +1,13 @@
-
 <% name = @placeholder_user.name %>
 <% html_title(t(:label_administration), "#{ t('placeholder_users.deletion_info.heading', name: name)}") -%>
 
 <%= labelled_tabular_form_for(
-        :placeholder_user,
-        url: placeholder_user_path(@placeholder_user),
-        html: {
-            method: :delete,
-            class: 'form danger-zone',
-        }) do %>
+      :placeholder_user,
+      url: placeholder_user_path(@placeholder_user),
+      html: {
+        method: :delete,
+        class: 'form danger-zone',
+      }) do %>
   <div class='wiki'>
     <section class="form--section">
       <h3 class="form--section-title">

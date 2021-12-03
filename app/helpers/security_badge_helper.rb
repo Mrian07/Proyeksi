@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module SecurityBadgeHelper
   def security_badge_url(args = {})
     uri = URI.parse(ProyeksiApp::Configuration[:security_badge_url])

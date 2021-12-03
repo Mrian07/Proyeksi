@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Workflow < ApplicationRecord
   belongs_to :role
   belongs_to :old_status, class_name: 'Status', foreign_key: 'old_status_id'
@@ -13,7 +11,7 @@ class Workflow < ApplicationRecord
   # Returns workflow transitions count by type and role
   def self.count_by_type_and_role
     counts = connection
-             .select_all("SELECT role_id, type_id, count(id) AS c FROM #{Workflow.table_name} GROUP BY role_id, type_id")
+               .select_all("SELECT role_id, type_id, count(id) AS c FROM #{Workflow.table_name} GROUP BY role_id, type_id")
     roles = Role.order(Arel.sql('builtin, position'))
     types = ::Type.order(Arel.sql('position'))
 
@@ -39,7 +37,7 @@ class Workflow < ApplicationRecord
   # such a case, those work flows are additionally returned.
   def self.from_status(old_status_id, type_id, role_ids, author = false, assignee = false)
     workflows = Workflow
-                .where(old_status_id: old_status_id, type_id: type_id, role_id: role_ids)
+                  .where(old_status_id: old_status_id, type_id: type_id, role_id: role_ids)
 
     if author && assignee
       workflows
@@ -89,9 +87,9 @@ class Workflow < ApplicationRecord
   # Copies a single set of workflows from source to target
   def self.copy_one(source_type, source_role, target_type, target_role)
     unless source_type.is_a?(::Type) && !source_type.new_record? &&
-           source_role.is_a?(Role) && !source_role.new_record? &&
-           target_type.is_a?(::Type) && !target_type.new_record? &&
-           target_role.is_a?(Role) && !target_role.new_record?
+      source_role.is_a?(Role) && !source_role.new_record? &&
+      target_type.is_a?(::Type) && !target_type.new_record? &&
+      target_role.is_a?(Role) && !target_role.new_record?
 
       raise ArgumentError.new('arguments can not be nil or unsaved objects')
     end

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::StringStrategy < CustomValue::FormatStrategy
   def typed_value
     value

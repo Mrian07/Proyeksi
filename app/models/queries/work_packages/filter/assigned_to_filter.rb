@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::AssignedToFilter <
   Queries::WorkPackages::Filter::PrincipalBaseFilter
   def type

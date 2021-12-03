@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # This filters for the type of role (project or global)
 class Queries::Roles::Filters::UnitFilter < Queries::Roles::Filters::RoleFilter
   def type

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ::Query::Results
   include ::Query::Results::GroupBy
   include ::Query::Results::Sums
@@ -38,7 +36,7 @@ class ::Query::Results
 
   def versions
     scope = Version
-            .visible
+              .visible
 
     if query.project && (limiting_filter = query.project_limiting_filter)
       scope.where(limiting_filter.where)

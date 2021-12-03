@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AuthSource < ApplicationRecord
   include Redmine::Ciphering
 
@@ -14,9 +12,12 @@ class AuthSource < ApplicationRecord
   def self.unique_attribute
     :name
   end
+
   prepend ::Mixins::UniqueFinder
 
-  def authenticate(_login, _password); end
+  def authenticate(_login, _password)
+    ;
+  end
 
   def find_user(_login)
     raise "subclass repsonsiblity"

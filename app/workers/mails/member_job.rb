@@ -1,5 +1,3 @@
-
-
 class Mails::MemberJob < ApplicationJob
   queue_with_priority :notification
 

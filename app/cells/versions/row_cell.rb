@@ -1,5 +1,3 @@
-
-
 module Versions
   class RowCell < ::RowCell
     include VersionsHelper

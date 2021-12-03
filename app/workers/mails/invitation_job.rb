@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Mails::InvitationJob < ApplicationJob
   queue_with_priority :high
 

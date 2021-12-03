@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module RequiresEnterpriseGuard
   extend ActiveSupport::Concern
 

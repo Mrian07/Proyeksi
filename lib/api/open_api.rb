@@ -4,14 +4,14 @@ module API
 
     def spec
       @spec ||= begin
-        spec_path = Rails.application.root.join("docs/api/apiv3/openapi-spec.yml")
+                  spec_path = Rails.application.root.join("docs/api/apiv3/openapi-spec.yml")
 
-        if spec_path.exist?
-          assemble_spec spec_path
-        else
-          raise "Could not find openapi-spec.yml under #{spec_path}"
-        end
-      end
+                  if spec_path.exist?
+                    assemble_spec spec_path
+                  else
+                    raise "Could not find openapi-spec.yml under #{spec_path}"
+                  end
+                end
 
       @spec["servers"] = [
         {

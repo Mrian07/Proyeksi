@@ -1,27 +1,25 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages
   module Shared
     module UpdateAncestors
       def update_ancestors(changed_work_packages)
         changes = changed_work_packages
-                  .map { |wp| wp.previous_changes.keys }
-                  .flatten
-                  .uniq
-                  .map(&:to_sym)
+                    .map { |wp| wp.previous_changes.keys }
+                    .flatten
+                    .uniq
+                    .map(&:to_sym)
 
         update_each_ancestor(changed_work_packages, changes)
       end
 
       def update_ancestors_all_attributes(work_packages)
         changes = work_packages
-                  .first
-                  .attributes
-                  .keys
-                  .uniq
-                  .map(&:to_sym)
+                    .first
+                    .attributes
+                    .keys
+                    .uniq
+                    .map(&:to_sym)
 
         update_each_ancestor(work_packages, changes)
       end

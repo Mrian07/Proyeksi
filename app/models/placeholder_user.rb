@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class PlaceholderUser < Principal
   alias_attribute(:name, :lastname)
 

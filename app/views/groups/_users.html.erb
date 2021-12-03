@@ -1,5 +1,3 @@
-
-
 <div class="grid-block -visible-overflow">
 
   <div class="grid-content medium-6">
@@ -24,9 +22,9 @@
       <%= styled_form_tag(members_of_group_path(@group), method: :post) do %>
 
         <fieldset class="form--fieldset">
-          <legend class="form--fieldset-legend"><%=t(:label_user_new)%></legend>
+          <legend class="form--fieldset-legend"><%= t(:label_user_new) %></legend>
           <div class="form--field -vertical">
-            <%= hidden_field_tag :user_ids, nil  %>
+            <%= hidden_field_tag :user_ids, nil %>
             <user-autocompleter data-update-input="user_ids"
                                 data-additional-filter="<%= @autocompleter_filters&.to_json %>"
                                 class="new-group-members--autocomplete">

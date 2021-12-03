@@ -1,5 +1,3 @@
-
-
 <% if @related_page %>
   <% breadcrumb_for_page(@related_page, t(:label_table_of_contents)) %>
 <% else %>
@@ -18,11 +16,11 @@
 
 <% unless @pages.empty? %>
   <%= other_formats_links do |f| %>
-    <%= f.link_to 'Atom', url: {controller: '/activities', action: 'index', show_wiki_edits: 1, key: User.current.rss_key} %>
-    <%= f.link_to('HTML', url: {action: 'export'}) if User.current.allowed_to?(:export_wiki_pages, @project) %>
+    <%= f.link_to 'Atom', url: { controller: '/activities', action: 'index', show_wiki_edits: 1, key: User.current.rss_key } %>
+    <%= f.link_to('HTML', url: { action: 'export' }) if User.current.allowed_to?(:export_wiki_pages, @project) %>
   <% end %>
 <% else %>
-  <%= no_results_box(action_url:     new_project_wiki_path(@project),
+  <%= no_results_box(action_url: new_project_wiki_path(@project),
                      display_action: authorize_for('wiki', 'new')) %>
 <% end %>
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'proyeksi_app/repository_authentication'
 
 class SysController < ActionController::Base
@@ -12,9 +10,9 @@ class SysController < ActionController::Base
 
   def projects
     p = Project.active.has_module(:repository)
-        .includes(:repository)
-        .references(:repositories)
-        .order(Arel.sql('identifier'))
+               .includes(:repository)
+               .references(:repositories)
+               .order(Arel.sql('identifier'))
     respond_to do |format|
       format.json do
         render json: p.to_json(include: :repository)
@@ -36,7 +34,7 @@ class SysController < ActionController::Base
       projects << Project.active.has_module(:repository).find_by!(identifier: params[:id])
     else
       projects = Project.active.has_module(:repository)
-                 .includes(:repository).references(:repositories)
+                        .includes(:repository).references(:repositories)
     end
     projects.each do |project|
       if project.repository

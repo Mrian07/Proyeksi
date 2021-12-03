@@ -1,5 +1,3 @@
-
-
 require 'api/v3/projects/project_collection_representer'
 
 module API
@@ -16,8 +14,8 @@ module API
             current_user.preload_projects_allowed_to(checked_permissions)
 
             available_projects = WorkPackage
-                                 .allowed_target_projects_on_move(current_user)
-                                 .includes(Projects::ProjectCollectionRepresenter.to_eager_load)
+                                   .allowed_target_projects_on_move(current_user)
+                                   .includes(Projects::ProjectCollectionRepresenter.to_eager_load)
             self_link = api_v3_paths.available_projects_on_edit(@work_package.id)
             Projects::ProjectCollectionRepresenter.new(available_projects,
                                                        self_link: self_link,

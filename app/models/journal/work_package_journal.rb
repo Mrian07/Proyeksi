@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Journal::WorkPackageJournal < Journal::BaseJournal
   self.table_name = 'work_package_journals'
 

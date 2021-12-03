@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # CORS helper methods for the API v3
 module API
   module V3

@@ -1,5 +1,3 @@
-
-
 module API
   class ParseResourceParamsService
     attr_accessor :model,
@@ -43,7 +41,7 @@ module API
 
     def parse_attributes(request_body)
       struct = parsing_representer
-               .from_hash(request_body)
+                 .from_hash(request_body)
 
       deep_to_h(struct)
     end

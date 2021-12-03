@@ -1,5 +1,3 @@
-
-
 module Projects
   class EnabledModulesContract < ModelContract
     validate :validate_permission

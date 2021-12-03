@@ -1,5 +1,3 @@
-
-
 module WorkPackages::SkipAuthorizationChecks
   def user_allowed_to_add; end
 

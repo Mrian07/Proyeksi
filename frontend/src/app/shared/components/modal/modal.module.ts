@@ -19,4 +19,4 @@ import { OpModalHeaderComponent } from './modal-header.component';
   ],
   declarations: [OpModalHeaderComponent],
 })
-export class OpenprojectModalModule { }
+export class ProyeksiappModalModule { }

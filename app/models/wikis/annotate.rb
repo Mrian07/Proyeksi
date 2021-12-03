@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Wikis::Annotate
   attr_reader :lines, :content
 

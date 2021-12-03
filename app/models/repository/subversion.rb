@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'proyeksi_app/scm/adapters/subversion'
 
 class Repository::Subversion < Repository

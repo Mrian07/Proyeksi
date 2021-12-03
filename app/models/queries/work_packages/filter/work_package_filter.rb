@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::WorkPackageFilter < ::Queries::Filters::Base
   include ::Queries::Filters::Serializable
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'roar/decorator'
 require 'roar/hypermedia'
 require 'roar/json/hal'

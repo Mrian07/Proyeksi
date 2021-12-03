@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module UnchangedProject
   extend ActiveSupport::Concern
 

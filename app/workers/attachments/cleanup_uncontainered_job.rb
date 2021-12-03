@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Attachments::CleanupUncontaineredJob < ::Cron::CronJob
   queue_with_priority :low
 

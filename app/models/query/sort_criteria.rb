@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ::Query::SortCriteria < ::SortHelper::SortCriteria
   attr_reader :available_columns
 

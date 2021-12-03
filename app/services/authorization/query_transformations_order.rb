@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::QueryTransformationsOrder
   def initialize
     self.array = []

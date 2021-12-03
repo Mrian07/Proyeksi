@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module WorkPackages
@@ -36,8 +34,8 @@ module API
 
           get do
             service = WorkPackageCollectionFromQueryParamsService
-                      .new(current_user)
-                      .call(combined_params)
+                        .new(current_user)
+                        .call(combined_params)
 
             if service.success?
               service.result

@@ -1,5 +1,3 @@
-
-
 class UserFilterCell < IndividualPrincipalBaseFilterCell
   options :groups, :status, :roles, :clear_url, :project
 

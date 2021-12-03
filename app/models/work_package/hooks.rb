@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackage::Hooks
   extend ActiveSupport::Concern
 

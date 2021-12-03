@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages
   class UpdateContract < BaseContract
     include UnchangedProject
@@ -27,9 +25,9 @@ module WorkPackages
     def user_allowed_to_edit
       with_unchanged_project_id do
         next if @can.allowed?(model, :edit) ||
-                @can.allowed?(model, :assign_version) ||
-                @can.allowed?(model, :manage_subtasks) ||
-                @can.allowed?(model, :move)
+          @can.allowed?(model, :assign_version) ||
+          @can.allowed?(model, :manage_subtasks) ||
+          @can.allowed?(model, :move)
         next if allowed_journal_addition?
 
         errors.add :base, :error_unauthorized

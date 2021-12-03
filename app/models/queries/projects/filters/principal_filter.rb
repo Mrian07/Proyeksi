@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Filters::PrincipalFilter < Queries::Projects::Filters::ProjectFilter
   def type
     :list_optional
@@ -9,8 +7,8 @@ class Queries::Projects::Filters::PrincipalFilter < Queries::Projects::Filters::
 
   def allowed_values
     @allowed_values ||= begin
-      ::Principal.pluck(:id).map { |id| [id, id.to_s] }
-    end
+                          ::Principal.pluck(:id).map { |id| [id, id.to_s] }
+                        end
   end
 
   def scope

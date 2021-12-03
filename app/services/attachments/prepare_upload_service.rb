@@ -1,5 +1,3 @@
-
-
 module Attachments
   class PrepareUploadService < BaseService
     def persist(call)

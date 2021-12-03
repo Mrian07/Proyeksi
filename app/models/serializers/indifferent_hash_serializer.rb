@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module Serializers
   class IndifferentHashSerializer
     def self.dump(hash)

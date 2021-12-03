@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class LdapAuthSourcesController < AuthSourcesController
   menu_item :ldap_authentication
 

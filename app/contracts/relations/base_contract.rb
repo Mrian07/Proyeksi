@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'model_contract'
 
 module Relations
@@ -110,8 +108,8 @@ module Relations
         .hierarchy_or_reflexive
         .where(to_id: model.to_id)
         .where.not(from_id: Relation.hierarchy_or_reflexive
-                              .where(to_id: model.from_id)
-                              .select(:from_id))
+                                    .where(to_id: model.from_id)
+                                    .select(:from_id))
     end
 
     def follows_relations_to_ancestors(to_set)

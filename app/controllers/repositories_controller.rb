@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'SVG/Graph/Bar'
 require 'SVG/Graph/BarHorizontal'
 require 'digest/sha1'
@@ -58,10 +56,10 @@ class RepositoriesController < ApplicationController
     if request.post? && params.key?(:committers)
       # Build a hash with repository usernames as keys and corresponding user ids as values
       @repository.committer_ids = params[:committers].values
-        .inject({}) do |h, c|
-          h[c.first] = c.last
-          h
-        end
+                                                     .inject({}) do |h, c|
+        h[c.first] = c.last
+        h
+      end
       flash[:notice] = I18n.t(:notice_successful_update)
       redirect_to action: 'committers', project_id: @project
     end
@@ -121,16 +119,16 @@ class RepositoriesController < ApplicationController
                                                 @rev,
                                                 Setting.repository_log_display_limit.to_i)
     @properties = @repository.properties(@path, @rev)
-    @changeset  = @repository.find_changeset_by_name(@rev)
+    @changeset = @repository.find_changeset_by_name(@rev)
 
     render 'changes', formats: [:html]
   end
 
   def revisions
     @changesets = @repository.changesets
-                  .includes(:user, :repository)
-                  .page(page_param)
-                  .per_page(per_page_param)
+                             .includes(:user, :repository)
+                             .page(page_param)
+                             .per_page(per_page_param)
 
     respond_to do |format|
       format.html do
@@ -179,7 +177,7 @@ class RepositoriesController < ApplicationController
     if ent.respond_to?('is_binary_data?') && ent.is_binary_data? # Ruby 1.8.x and <1.9.2
       return false
     elsif ent.respond_to?(:force_encoding) &&
-          (ent.dup.force_encoding('UTF-8') != ent.dup.force_encoding('BINARY')) # Ruby 1.9.2
+      (ent.dup.force_encoding('UTF-8') != ent.dup.force_encoding('BINARY')) # Ruby 1.9.2
       # TODO: need to handle edge cases of non-binary content that isn't UTF-8
       return false
     end
@@ -197,7 +195,7 @@ class RepositoriesController < ApplicationController
       return
     end
 
-    @annotate  = @repository.scm.annotate(@path, @rev)
+    @annotate = @repository.scm.annotate(@path, @rev)
     @changeset = @repository.find_changeset_by_name(@rev)
 
     render 'annotate', formats: [:html]
@@ -243,7 +241,7 @@ class RepositoriesController < ApplicationController
       end
 
       @cache_key = "repositories/diff/#{@repository.id}/" +
-                   Digest::MD5.hexdigest("#{@path}-#{@rev}-#{@rev_to}-#{@diff_type}")
+        Digest::MD5.hexdigest("#{@path}-#{@rev}-#{@rev_to}-#{@diff_type}")
 
       unless read_fragment(@cache_key)
         @diff = @repository.diff(@path, @rev, @rev_to)
@@ -352,12 +350,12 @@ class RepositoriesController < ApplicationController
     end
 
     changes_by_day = Change.includes(:changeset)
-                     .where(["#{Changeset.table_name}.repository_id = ? "\
+                           .where(["#{Changeset.table_name}.repository_id = ? "\
                              "AND #{Changeset.table_name}.commit_date BETWEEN ? AND ?",
-                             repository.id, @date_from, @date_to])
-                     .references(:changesets)
-                     .group(:commit_date)
-                     .size
+                                   repository.id, @date_from, @date_to])
+                           .references(:changesets)
+                           .group(:commit_date)
+                           .size
     changes_by_month = [0] * 12
     changes_by_day.each do |c|
       changes_by_month[(@date_to.month - c.first.to_date.month) % 12] += c.last
@@ -400,10 +398,10 @@ class RepositoriesController < ApplicationController
     end
 
     changes_by_author = Change.includes(:changeset)
-                        .where(["#{Changeset.table_name}.repository_id = ?", repository.id])
-                        .references(:changesets)
-                        .group(:committer)
-                        .size
+                              .where(["#{Changeset.table_name}.repository_id = ?", repository.id])
+                              .references(:changesets)
+                              .group(:committer)
+                              .size
     h = changes_by_author.inject({}) do |o, i|
       o[i.first] = i.last
       o

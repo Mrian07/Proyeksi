@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # TODO: this is to be removed or rather the UserCollectionRepresenter is
 # to be turned into an OffsetPaginatedCollection representer.
 # It is not possible to do that right now as we do not have a

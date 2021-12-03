@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared::UserNameFilter
   def self.included(base)
     base.include(InstanceMethods)

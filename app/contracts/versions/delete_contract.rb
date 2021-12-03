@@ -1,5 +1,3 @@
-
-
 module Versions
   class DeleteContract < ::DeleteContract
     delete_permission :manage_versions

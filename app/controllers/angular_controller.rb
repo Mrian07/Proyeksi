@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class AngularController < ApplicationController
   before_action :require_login
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Watcher < ApplicationRecord
   belongs_to :watchable, polymorphic: true
   belongs_to :user
@@ -41,8 +39,8 @@ class Watcher < ApplicationRecord
       watchers = watchers_in_projects(projects, user_ids)
 
       watchers_by_watchable_class = watchers
-                                    .includes({ watchable: :project }, :user)
-                                    .group_by(&:watchable_type)
+                                      .includes({ watchable: :project }, :user)
+                                      .group_by(&:watchable_type)
 
       watchers_by_watchable_class.each do |watchable_class_string, class_candidates|
         watchable_class = watchable_class_string.constantize
@@ -79,9 +77,9 @@ class Watcher < ApplicationRecord
     def prune_by_users(watchers_by_users, watchable_class)
       watchers_by_users.each do |user, watchers|
         allowed_project_ids = Project
-                              .allowed_to(user,
-                                          watchable_class.acts_as_watchable_permission)
-                              .pluck(:id)
+                                .allowed_to(user,
+                                            watchable_class.acts_as_watchable_permission)
+                                .pluck(:id)
         watchers
           .select { |w| !allowed_project_ids.include?(w.watchable.project.id) }
           .each(&:destroy)
@@ -91,9 +89,9 @@ class Watcher < ApplicationRecord
     def prune_by_projects(watchers_by_projects, watchable_class)
       watchers_by_projects.each do |project, watchers|
         allowed_user_ids = User
-                           .allowed(watchable_class.acts_as_watchable_permission,
-                                    project)
-                           .pluck(:id)
+                             .allowed(watchable_class.acts_as_watchable_permission,
+                                      project)
+                             .pluck(:id)
 
         watchers
           .select { |c| !allowed_user_ids.include?(c.user_id) }
@@ -110,10 +108,10 @@ class Watcher < ApplicationRecord
       # project_id on the watchable class and those on a class associated to
       # the watchable class (using :through).
       id_subquery = watchable
-                    .joins(:watchers)
-                    .joins(:project)
-                    .where(projects: { id: projects.map(&:id) })
-                    .select('watchers.id')
+                      .joins(:watchers)
+                      .joins(:project)
+                      .where(projects: { id: projects.map(&:id) })
+                      .select('watchers.id')
 
       id_subquery = id_subquery.where(watchers: { user_id: user_ids }) unless user_ids.empty?
 

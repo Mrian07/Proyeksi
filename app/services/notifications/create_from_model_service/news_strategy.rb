@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Notifications::CreateFromModelService::NewsStrategy
   def self.reasons
     %i(subscribed)

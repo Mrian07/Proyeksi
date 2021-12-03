@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module Queries
@@ -17,8 +15,8 @@ module API
               # Upsert with old rails ways, use +UPSERT+ once available.
               def upsert_order(wp_id, position)
                 record = @query
-                  .ordered_work_packages
-                  .find_or_initialize_by(work_package_id: wp_id)
+                           .ordered_work_packages
+                           .find_or_initialize_by(work_package_id: wp_id)
 
                 if record.persisted?
                   record.update_column(:position, position)
@@ -38,13 +36,13 @@ module API
               SQL
 
               sql_query = ::ProyeksiApp::SqlSanitization
-                .sanitize sql, query_id: @query.id
+                            .sanitize sql, query_id: @query.id
 
               ActiveRecord::Base.connection
-                .exec_query(sql_query)
-                .rows
-                .first # first row
-                .first || {}.to_json # first column (json object or null)
+                                .exec_query(sql_query)
+                                .rows
+                                .first # first row
+                                .first || {}.to_json # first column (json object or null)
             end
 
             params do

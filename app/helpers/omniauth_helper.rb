@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module OmniauthHelper
   def omniauth_direct_login?
     direct_login_provider.is_a? String

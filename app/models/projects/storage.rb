@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects::Storage
   def self.included(base)
     base.send :extend, StorageMethods

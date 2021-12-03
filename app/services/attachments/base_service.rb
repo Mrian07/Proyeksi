@@ -1,5 +1,3 @@
-
-
 module Attachments
   class BaseService < ::BaseServices::Create
     ##

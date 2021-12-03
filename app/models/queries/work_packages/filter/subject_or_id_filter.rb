@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::SubjectOrIdFilter <
   Queries::WorkPackages::Filter::WorkPackageFilter
   include Queries::WorkPackages::Filter::OrFilterForWpMixin

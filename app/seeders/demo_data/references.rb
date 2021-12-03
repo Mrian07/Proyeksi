@@ -1,5 +1,3 @@
-
-
 module DemoData
   module References
     module_function

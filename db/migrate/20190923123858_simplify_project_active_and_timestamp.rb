@@ -1,6 +1,6 @@
 class SimplifyProjectActiveAndTimestamp < ActiveRecord::Migration[6.0]
-  STATUS_ACTIVE     = 1
-  STATUS_ARCHIVED   = 9
+  STATUS_ACTIVE = 1
+  STATUS_ARCHIVED = 9
 
   class Project < ActiveRecord::Base; end
 

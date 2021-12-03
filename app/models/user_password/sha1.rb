@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # LEGACY password hashing method using salted SHA-1
 # This is only included for testing hashed passwords and will raise when trying

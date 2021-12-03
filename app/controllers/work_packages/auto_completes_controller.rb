@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'rack/utils'
 
 class WorkPackages::AutoCompletesController < ::ApplicationController

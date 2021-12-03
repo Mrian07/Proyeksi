@@ -1,6 +1,3 @@
-#-- encoding: UTF-8
-
-
 module Bim
   module BasicData
     class SettingSeeder < ::BasicData::SettingSeeder

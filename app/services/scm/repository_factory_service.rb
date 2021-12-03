@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Implements a repository factory for building temporary and permanent repositories.
 class SCM::RepositoryFactoryService

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackage::PDFExport::WorkPackageToPdf < ::Exports::Exporter
   include WorkPackage::PDFExport::Common
   include WorkPackage::PDFExport::Formattable
@@ -229,8 +227,8 @@ class WorkPackage::PDFExport::WorkPackageToPdf < ::Exports::Exporter
       pdf.font style: :italic, size: 8
       journal.details.each do |detail|
         text = journal
-          .render_detail(detail, no_html: true, only_path: false)
-          .gsub(/\((https?[^)]+)\)$/, "(<link href='\\1'>\\1</link>)")
+                 .render_detail(detail, no_html: true, only_path: false)
+                 .gsub(/\((https?[^)]+)\)$/, "(<link href='\\1'>\\1</link>)")
 
         pdf.text('- ' + text, inline_format: true)
         newline!

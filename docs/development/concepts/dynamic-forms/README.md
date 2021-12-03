@@ -59,7 +59,7 @@ With an [access token or other means of API authentication](../../../api/introdu
         "validationErrors": {
             "name": {
                 "_type": "Error",
-                "errorIdentifier": "urn:openproject-org:api:v3:errors:PropertyConstraintViolation",
+                "errorIdentifier": "urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation",
                 "message": "Name can't be blank.",
                 "_embedded": {
                     "details": {

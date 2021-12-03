@@ -1,5 +1,3 @@
-
-
 <%= call_hook(:view_repositories_show_contextual, { repository: @repository, project: @project }) %>
 <%= render partial: 'repository_header', locals: { empty: false } %>
 
@@ -14,6 +12,6 @@
 <%= render_properties(@properties) %>
 
 <%= render(partial: 'revisions',
-           locals: {project: @project, path: @path, revisions: @changesets, entry: @entry }) unless @changesets.empty? %>
+           locals: { project: @project, path: @path, revisions: @changesets, entry: @entry }) unless @changesets.empty? %>
 
 <% html_title(t(:label_change_plural)) -%>

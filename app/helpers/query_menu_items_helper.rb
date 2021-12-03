@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module QueryMenuItemsHelper
   def update_query_menu_item_path(project, query_menu_item)
     if query_menu_item.persisted?

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ContentForHelper
   # Thanks to http://blog.plataformatec.com.br/2012/07/flushing-content-blocks-with-rails-4/
   # TODO: This method becomes obsolete with Rails 4 and the 'flush' parameter

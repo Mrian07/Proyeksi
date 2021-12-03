@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DemoData
   class GlobalQuerySeeder < Seeder
     def initialize; end

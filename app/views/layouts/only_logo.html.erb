@@ -8,13 +8,13 @@
   <%= render partial: 'layouts/common_head' %>
 </head>
 <body>
-  <div id="wrapper">
-    <header class="op-app-header">
-      <div class="op-app-header--center op-logo">
-        <%= link_to(I18n.t('label_home'), home_url, class: 'op-logo--link') %>
-      </div>
-    </header>
-    <%= yield %>
-  </div>
+<div id="wrapper">
+  <header class="op-app-header">
+    <div class="op-app-header--center op-logo">
+      <%= link_to(I18n.t('label_home'), home_url, class: 'op-logo--link') %>
+    </div>
+  </header>
+  <%= yield %>
+</div>
 </body>
 </html>

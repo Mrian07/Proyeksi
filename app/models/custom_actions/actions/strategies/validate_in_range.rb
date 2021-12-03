@@ -1,5 +1,3 @@
-
-
 module CustomActions::Actions::Strategies::ValidateInRange
   def minimum
     nil

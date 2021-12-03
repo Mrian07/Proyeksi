@@ -1,5 +1,3 @@
-
-
 <div class="generic-table--container">
   <div class="generic-table--results-container">
     <table class="generic-table types">
@@ -11,71 +9,71 @@
         <col opHighlightCol>
       </colgroup>
       <thead>
-        <tr>
-          <th>
-            <div class="generic-table--sort-header-outer">
-              <div class="generic-table--sort-header">
+      <tr>
+        <th>
+          <div class="generic-table--sort-header-outer">
+            <div class="generic-table--sort-header">
                 <span>
                   <%= Type.human_attribute_name(:active) %>
                 </span>
-              </div>
             </div>
-          </th>
-          <th>
-            <div class="generic-table--sort-header-outer">
-              <div class="generic-table--sort-header">
+          </div>
+        </th>
+        <th>
+          <div class="generic-table--sort-header-outer">
+            <div class="generic-table--sort-header">
                 <span>
                   <%= Type.human_attribute_name(:name) %>
                 </span>
-              </div>
             </div>
-          </th>
-          <th>
-            <div class="generic-table--sort-header-outer">
-              <div class="generic-table--sort-header">
+          </div>
+        </th>
+        <th>
+          <div class="generic-table--sort-header-outer">
+            <div class="generic-table--sort-header">
                 <span>
                   <%= Type.human_attribute_name(:is_in_roadmap) %>
                 </span>
-              </div>
             </div>
-          </th>
-          <th>
-            <div class="generic-table--sort-header-outer">
-              <div class="generic-table--sort-header">
+          </div>
+        </th>
+        <th>
+          <div class="generic-table--sort-header-outer">
+            <div class="generic-table--sort-header">
                 <span>
                   <%= Type.human_attribute_name(:is_milestone) %>
                 </span>
-              </div>
             </div>
-          </th>
-        </tr>
+          </div>
+        </th>
+      </tr>
       </thead>
       <tbody>
-        <% projects_types_id = project.types.pluck(:id) %>
-        <% Type.includes(:color).each do |type| %>
-          <tr>
-            <td class='center'>
-              <% type_id = "project_planning_element_type_ids_#{type.id}" %>
-              <%= label_tag type_id, t('timelines.enable_type_in_project', type: type.name), class: 'hidden-for-sighted' %>
-              <%= check_box_tag "project[type_ids][]",
-                                type.id,
-                                projects_types_id.include?(type.id),
-                                id: type_id,
-                                :'data-standard' => type.is_standard %>
-              <%= hidden_field_tag 'project[type_ids][]', '', :'data-for' => type_id %>
-            </td>
-            <td>
-              <%= icon_for_type(type) %>
-              <%=h type.name %>
-            </td>
-            <td class='center'>
-              <%= checked_image(type.is_in_roadmap) %>
-            </td>
-            <td class='center'>
-              <%= checked_image(type.is_milestone) %>
-            </td>
-          </tr>
-        <% end %>
+      <% projects_types_id = project.types.pluck(:id) %>
+      <% Type.includes(:color).each do |type| %>
+        <tr>
+          <td class='center'>
+            <% type_id = "project_planning_element_type_ids_#{type.id}" %>
+            <%= label_tag type_id, t('timelines.enable_type_in_project', type: type.name), class: 'hidden-for-sighted' %>
+            <%= check_box_tag "project[type_ids][]",
+                              type.id,
+                              projects_types_id.include?(type.id),
+                              id: type_id,
+                              :'data-standard' => type.is_standard %>
+            <%= hidden_field_tag 'project[type_ids][]', '', :'data-for' => type_id %>
+          </td>
+          <td>
+            <%= icon_for_type(type) %>
+            <%= h type.name %>
+          </td>
+          <td class='center'>
+            <%= checked_image(type.is_in_roadmap) %>
+          </td>
+          <td class='center'>
+            <%= checked_image(type.is_milestone) %>
+          </td>
+        </tr>
+      <% end %>
       </tbody>
     </table>
 

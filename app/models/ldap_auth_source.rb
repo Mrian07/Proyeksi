@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'net/ldap'
 
 class LdapAuthSource < AuthSource

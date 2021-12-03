@@ -10,13 +10,13 @@
 <div class="widget-box--blocks--buttons">
   <% if current_user.admin? %>
     <%= link_to t('js.admin.enterprise.upsale.button_start_trial'), enterprise_path, class: 'button -alt-highlight' %>
-  <% end  %>
+  <% end %>
 
   <%= link_to "#{ProyeksiApp::Static::Links.links[:upsale][:href]}/?utm_source=unknown&utm_medium=community-edition&utm_campaign=home-screen",
-        { class: 'button -highlight-inverted',
-          aria: {label: t('homescreen.blocks.upsale.more_info')},
-          target: '_blank',
-          title: t('homescreen.blocks.upsale.more_info')} do %>
+              { class: 'button -highlight-inverted',
+                aria: { label: t('homescreen.blocks.upsale.more_info') },
+                target: '_blank',
+                title: t('homescreen.blocks.upsale.more_info') } do %>
     <span class="button--text"><%= t('homescreen.blocks.upsale.more_info') %></span>
     <%= op_icon('button--icon icon-external-link') %>
   <% end %>

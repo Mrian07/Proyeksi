@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackagesHelper
   include AccessibilityHelper
   extend DeprecatedAlias

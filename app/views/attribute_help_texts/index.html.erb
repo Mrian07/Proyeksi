@@ -1,5 +1,3 @@
-
-
 <% tabs = [
   {
     name: 'WorkPackage',
@@ -20,8 +18,8 @@
   <li class="toolbar-item">
     <%= link_to new_attribute_help_text_path(name: selected_tab(tabs)[:name]),
                 { class: 'attribute-help-texts--create-button button -alt-highlight',
-                  aria: {label: t(:'attribute_help_texts.add_new')},
-                  title: t(:'attribute_help_texts.add_new')} do %>
+                  aria: { label: t(:'attribute_help_texts.add_new') },
+                  title: t(:'attribute_help_texts.add_new') } do %>
       <%= op_icon('button--icon icon-add') %>
       <span class="button--text"><%= t('activerecord.models.attribute_help_text') %></span>
     <% end %>

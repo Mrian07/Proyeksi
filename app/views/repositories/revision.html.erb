@@ -1,5 +1,3 @@
-
-
 <%= toolbar title: "#{t(:label_revision)} #{format_revision(@changeset)}" do %>
   <li class="toolbar-item">
     <% if @changeset.previous.nil? %>
@@ -16,12 +14,13 @@
     <% end %>
   </li>
   <li class="toolbar-item">
-    <%= form_tag({controller: '/repositories', action: 'revision', project_id: @project}, method: :get) do %>
+    <%= form_tag({ controller: '/repositories', action: 'revision', project_id: @project }, method: :get) do %>
       <%= text_field_tag :rev, @rev, placeholder: t(:label_revision) %>
     <% end %>
   </li>
 <% end %>
-<p><% if @changeset.scmid %>ID: <%= h(@changeset.scmid) %><br />
+<p>
+  <% if @changeset.scmid %>ID: <%= h(@changeset.scmid) %><br/>
   <% end %>
   <span class="author"><%= authoring(@changeset.committed_on, @changeset.author) %></span></p>
 <%= format_revision_text @changeset.comments %>

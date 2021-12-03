@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::UpdateWorkPackageService
   include Shared::BlockService
   include Contracted
@@ -19,9 +17,9 @@ class CustomActions::UpdateWorkPackageService
     apply_actions(work_package, action.actions)
 
     result = ::WorkPackages::UpdateService
-             .new(user: user,
-                  model: work_package)
-             .call(**{})
+               .new(user: user,
+                    model: work_package)
+               .call(**{})
 
     block_with_result(result, &block)
   end

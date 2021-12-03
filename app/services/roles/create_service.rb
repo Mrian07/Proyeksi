@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Roles::CreateService < ::BaseServices::Create
   include Roles::NotifyMixin
 

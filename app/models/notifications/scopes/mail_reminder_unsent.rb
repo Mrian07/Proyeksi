@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Return digest mail notifications that are unread (have read_digest_mail: false)
 module Notifications::Scopes
   module MailReminderUnsent

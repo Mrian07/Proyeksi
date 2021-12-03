@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # This job gets called when internally using
 #

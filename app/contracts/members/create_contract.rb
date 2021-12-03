@@ -1,5 +1,3 @@
-
-
 module Members
   class CreateContract < BaseContract
     include AssignableValuesContract

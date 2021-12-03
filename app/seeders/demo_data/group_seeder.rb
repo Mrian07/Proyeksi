@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module DemoData
   class GroupSeeder < Seeder
     attr_accessor :user

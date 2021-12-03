@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Versions
   class SetAttributesService < ::BaseServices::SetAttributes
     private

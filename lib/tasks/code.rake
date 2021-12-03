@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 namespace :code do
   desc 'Fix line endings of all source files'
   task :fix_line_endings do
@@ -36,7 +34,7 @@ namespace :code do
         file_content.gsub!(magic_regex, "\\1#{magic_comment}")
       elsif file_content.start_with?('#!')
         file_content.sub!(/(\n|\r\n)/, "\\1#{magic_comment}\\1")
-      # We have a shebang. Encoding comment is to put on the second line
+        # We have a shebang. Encoding comment is to put on the second line
       else
         file_content = magic_comment + "\n" + file_content
       end

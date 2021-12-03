@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::ARObjectStrategy < CustomValue::FormatStrategy
   def typed_value
     return memoized_typed_value if memoized_typed_value

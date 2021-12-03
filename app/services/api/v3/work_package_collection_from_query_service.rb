@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     class WorkPackageCollectionFromQueryService
@@ -14,8 +12,8 @@ module API
 
       def call(params = {}, valid_subset: false)
         update = UpdateQueryFromV3ParamsService
-                 .new(query, current_user)
-                 .call(params, valid_subset: valid_subset)
+                   .new(query, current_user)
+                   .call(params, valid_subset: valid_subset)
 
         if update.success?
           representer = results_to_representer(params)

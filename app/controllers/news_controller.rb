@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class NewsController < ApplicationController
   include PaginationHelper
   include Layout

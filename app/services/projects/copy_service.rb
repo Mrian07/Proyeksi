@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Projects
   class CopyService < ::BaseServices::Copy
     include Projects::Concerns::NewProjectService
@@ -62,12 +60,12 @@ module Projects
 
       # Assign additional params from user
       call = Projects::SetAttributesService
-        .new(user: user,
-             model: target,
-             contract_class: Projects::CopyContract,
-             contract_options: { copy_source: source, validate_model: true })
-        .with_state(state)
-        .call(target_project_params)
+               .new(user: user,
+                    model: target,
+                    contract_class: Projects::CopyContract,
+                    contract_options: { copy_source: source, validate_model: true })
+               .with_state(state)
+               .call(target_project_params)
 
       # Retain values after the set attributes service
       retain_attributes(source, target, target_project_params)

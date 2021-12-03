@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Attachments::FinishDirectUploadJob < ApplicationJob
   queue_with_priority :high
 

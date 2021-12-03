@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module ErrorsHelper
   def render_400(options = {})
     @project = nil

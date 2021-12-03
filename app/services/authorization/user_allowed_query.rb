@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Authorization::UserAllowedQuery < Authorization::AbstractUserQuery
   self.model = User
 
@@ -55,8 +53,8 @@ class Authorization::UserAllowedQuery < Authorization::AbstractUserQuery
     else
       statement.outer_join(role_permissions_table)
                .on(roles_table[:id]
-                   .eq(role_permissions_table[:role_id])
-                   .and(role_permissions_table[:permission].eq(action.to_s)))
+                     .eq(role_permissions_table[:role_id])
+                     .and(role_permissions_table[:permission].eq(action.to_s)))
     end
   end
 
@@ -73,8 +71,8 @@ class Authorization::UserAllowedQuery < Authorization::AbstractUserQuery
   def self.no_membership_and_non_member_role_condition
     roles_table
       .grouping(member_roles_table[:role_id]
-                .eq(nil)
-                .and(roles_table[:builtin].eq(Role::BUILTIN_NON_MEMBER)))
+                  .eq(nil)
+                  .and(roles_table[:builtin].eq(Role::BUILTIN_NON_MEMBER)))
   end
 
   def self.anonymous_user_condition
@@ -86,8 +84,8 @@ class Authorization::UserAllowedQuery < Authorization::AbstractUserQuery
   def self.member_or_public_project_condition(id_equal)
     roles_table
       .grouping(users_table[:type]
-                .eq('User')
-                .and(id_equal.or(no_membership_and_non_member_role_condition)))
+                  .eq('User')
+                  .and(id_equal.or(no_membership_and_non_member_role_condition)))
       .or(anonymous_user_condition)
   end
 end

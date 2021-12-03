@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomAction < ApplicationRecord
   validates :name, length: { maximum: 255, minimum: 1 }
   serialize :actions, CustomActions::Actions::Serializer

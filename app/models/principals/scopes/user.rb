@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Only return Principals that are of type User
 module Principals::Scopes
   module User

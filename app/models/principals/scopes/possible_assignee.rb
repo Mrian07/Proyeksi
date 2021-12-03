@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Principals::Scopes
   module PossibleAssignee
     extend ActiveSupport::Concern

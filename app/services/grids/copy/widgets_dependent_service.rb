@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Grids::Copy
   class WidgetsDependentService < ::Copy::Dependency
     protected

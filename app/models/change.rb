@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Change < ApplicationRecord
   belongs_to :changeset
 

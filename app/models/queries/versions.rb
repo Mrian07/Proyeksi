@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Versions
   register = ::Queries::Register
   filters = ::Queries::Versions::Filters

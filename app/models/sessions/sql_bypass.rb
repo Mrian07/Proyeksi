@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # An extension to the SqlBypass class to store
 # sessions in database without going through ActiveRecord

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class Equals < Base
     label 'equals'
@@ -19,7 +17,7 @@ module Queries::Operators
         end
 
         sql += "#{db_table}.#{db_field} IN (" +
-               values.map { |val| "'#{connection.quote_string(val)}'" }.join(',') + ')'
+          values.map { |val| "'#{connection.quote_string(val)}'" }.join(',') + ')'
       else
         # empty set of allowed values produces no result
         sql = '0=1'

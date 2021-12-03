@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Mails::WatcherJob < Mails::DeliverJob
   include Mails::WithSender
 
@@ -32,10 +30,10 @@ class Mails::WatcherJob < Mails::DeliverJob
     return false unless UserMailer.perform_deliveries
 
     settings = watcher
-               .user
-               .notification_settings
-               .applicable(watcher.watchable.project)
-               .first
+                 .user
+                 .notification_settings
+                 .applicable(watcher.watchable.project)
+                 .first
 
     settings.watched
   end

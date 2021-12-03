@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Admin
   class SettingsController < ApplicationController
     layout 'admin'
@@ -29,8 +27,8 @@ module Admin
       return unless params[:settings]
 
       call = ::Settings::UpdateService
-        .new(user: current_user)
-        .call(settings_params)
+               .new(user: current_user)
+               .call(settings_params)
 
       call.on_success { flash[:notice] = t(:notice_successful_update) }
       call.on_failure { flash[:error] = call.message || I18n.t(:notice_internal_server_error) }

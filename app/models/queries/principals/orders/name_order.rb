@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Principals::Orders::NameOrder < Queries::Orders::Base
   self.model = Principal
 

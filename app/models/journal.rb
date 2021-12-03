@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Journal < ApplicationRecord
   self.table_name = 'journals'
 
@@ -88,10 +86,10 @@ class Journal < ApplicationRecord
                        nil
                      else
                        self.class
-                         .where(journable_type: journable_type, journable_id: journable_id)
-                         .where("#{self.class.table_name}.version < ?", version)
-                         .order(version: :desc)
-                         .first
+                           .where(journable_type: journable_type, journable_id: journable_id)
+                           .where("#{self.class.table_name}.version < ?", version)
+                           .order(version: :desc)
+                           .first
                      end
   end
 end

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared::BooleanFilter
   def allowed_values
     [

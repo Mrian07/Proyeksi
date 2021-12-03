@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Provides an asynchronous job to relocate a managed repository on the local or remote system
 class SCM::RelocateRepositoryJob < SCM::RemoteRepositoryJob
@@ -23,9 +21,9 @@ class SCM::RelocateRepositoryJob < SCM::RemoteRepositoryJob
   # POST to the remote managed repository a request to relocate the repository
   def relocate_remote
     response = send_request(repository_request.merge(
-                              action: :relocate,
-                              old_identifier: File.basename(repository.root_url)
-                            ))
+      action: :relocate,
+      old_identifier: File.basename(repository.root_url)
+    ))
     repository.root_url = response['path']
     repository.url = response['url']
 

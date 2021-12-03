@@ -1,5 +1,3 @@
-
-
 module Attachments
   class PrepareUploadContract < CreateContract
     validate :validate_direct_uploads_active

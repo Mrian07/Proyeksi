@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Shared
   module CustomFields
     class Base < Queries::Filters::Base

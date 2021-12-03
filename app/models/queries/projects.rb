@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Projects
   filters = ::Queries::Projects::Filters
   orders = ::Queries::Projects::Orders

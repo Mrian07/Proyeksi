@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ProjectCustomField < CustomField
   def type_name
     :label_project_plural

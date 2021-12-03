@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Notifications::CreateFromModelService::CommentStrategy
   def self.reasons
     %i(watched subscribed)

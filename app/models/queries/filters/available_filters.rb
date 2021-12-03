@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_dependency 'queries/filters'
 
 module Queries

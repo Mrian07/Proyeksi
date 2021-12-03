@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'work_packages/create_contract'
 require 'concerns/user_invitation'
 

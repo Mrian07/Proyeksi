@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module UserPreferences
   class BaseContract < ::BaseContract
     property :settings
@@ -70,7 +68,7 @@ module UserPreferences
 
     def time_zone_correctness
       if model.time_zone.present? &&
-         assignable_time_zones.none? { |tz| tz.tzinfo.canonical_identifier == model.time_zone }
+        assignable_time_zones.none? { |tz| tz.tzinfo.canonical_identifier == model.time_zone }
         errors.add(:time_zone, :inclusion)
       end
     end

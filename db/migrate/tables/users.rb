@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require_relative 'base'
 
 class Tables::Users < Tables::Base
@@ -34,5 +32,6 @@ class Tables::Users < Tables::Base
       t.index %i[type status]
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

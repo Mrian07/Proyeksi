@@ -1,5 +1,3 @@
-
-
 <%= attachments.select { |a| a.readable? and a.visible? }
                .map { |a| { content_type: CGI::escape_html(a.content_type),
                             filename:     CGI::escape_html(a.filename),

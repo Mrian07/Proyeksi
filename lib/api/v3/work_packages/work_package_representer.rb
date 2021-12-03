@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module V3
     module WorkPackages
@@ -327,10 +325,10 @@ module API
                         next unless doc.key?('date')
 
                         date = decorator
-                               .datetime_formatter
-                               .parse_date(doc['date'],
-                                           name.to_s.camelize(:lower),
-                                           allow_nil: true)
+                                 .datetime_formatter
+                                 .parse_date(doc['date'],
+                                             name.to_s.camelize(:lower),
+                                             allow_nil: true)
 
                         self.due_date = self.start_date = date
                       },
@@ -449,10 +447,10 @@ module API
 
                               new_parent = if href
                                              id = ::API::Utilities::ResourceLinkParser
-                                                  .parse_id href,
-                                                            property: 'parent',
-                                                            expected_version: '3',
-                                                            expected_namespace: 'work_packages'
+                                                    .parse_id href,
+                                                              property: 'parent',
+                                                              expected_version: '3',
+                                                              expected_namespace: 'work_packages'
 
                                              WorkPackage.find_by(id: id) ||
                                                ::WorkPackage::InexistentWorkPackage.new(id: id)
@@ -512,10 +510,10 @@ module API
         def relations
           self_path = api_v3_paths.work_package_relations(represented.id)
           visible_relations = represented
-                              .visible_relations(current_user)
-                              .direct
-                              .non_hierarchy
-                              .includes(::API::V3::Relations::RelationCollectionRepresenter.to_eager_load)
+                                .visible_relations(current_user)
+                                .direct
+                                .non_hierarchy
+                                .includes(::API::V3::Relations::RelationCollectionRepresenter.to_eager_load)
 
           ::API::V3::Relations::RelationCollectionRepresenter.new(visible_relations,
                                                                   self_link: self_path,
@@ -538,7 +536,7 @@ module API
 
         def derived_estimated_time=(value)
           represented.derived_estimated_hours = datetime_formatter
-            .parse_duration_to_hours(value, 'derivedEstimatedTime', allow_nil: true)
+                                                  .parse_duration_to_hours(value, 'derivedEstimatedTime', allow_nil: true)
         end
 
         def spent_time=(value)

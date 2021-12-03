@@ -1,5 +1,3 @@
-
-
 class Groups::DeleteService < ::BaseServices::Delete
   protected
 

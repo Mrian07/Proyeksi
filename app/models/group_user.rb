@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class GroupUser < ApplicationRecord
   belongs_to :group,
              touch: true

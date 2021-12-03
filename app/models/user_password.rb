@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UserPassword < ApplicationRecord
   belongs_to :user, inverse_of: :passwords
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Creates scopes for the :status enums but ensuring that not_builtin is used at the same time
 # Excludes
 #   * DeletedUser

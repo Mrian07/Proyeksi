@@ -1,13 +1,11 @@
 #-- encoding: UTF-8
 
-
-
 class Color < ApplicationRecord
   self.table_name = 'colors'
 
   has_many :planning_element_types, class_name: 'Type',
-                                    foreign_key: 'color_id',
-                                    dependent: :nullify
+           foreign_key: 'color_id',
+           dependent: :nullify
 
   before_validation :normalize_hexcode
 
@@ -80,7 +78,7 @@ class Color < ApplicationRecord
         self.hexcode = '#' + hexcode
       end
 
-      if hexcode.size == 4  # =~ /#.../
+      if hexcode.size == 4 # =~ /#.../
         self.hexcode = hexcode.gsub(/([^#])/, '\1\1')
       end
     end

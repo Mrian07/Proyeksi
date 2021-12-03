@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Groups
   class AddUsersService < ::BaseServices::BaseContracted
     include Groups::Concerns::MembershipManipulation
@@ -17,9 +15,9 @@ module Groups
 
     def modify_members_and_roles(params)
       sql_query = ::ProyeksiApp::SqlSanitization
-                  .sanitize add_to_user_and_projects_cte,
-                            group_id: model.id,
-                            user_ids: params[:ids]
+                    .sanitize add_to_user_and_projects_cte,
+                              group_id: model.id,
+                              user_ids: params[:ids]
 
       execute_query(sql_query)
     end

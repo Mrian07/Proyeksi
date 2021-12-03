@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Action < ApplicationRecord
   include Tableless
   include Scopes::Scoped

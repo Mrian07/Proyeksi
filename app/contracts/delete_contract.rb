@@ -1,5 +1,3 @@
-
-
 class DeleteContract < ModelContract
   class << self
     def delete_permission(permission = nil)

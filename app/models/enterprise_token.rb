@@ -1,4 +1,3 @@
-
 class EnterpriseToken < ApplicationRecord
   class << self
     def current

@@ -102,7 +102,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidQuery
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidQuery
                 message: Unknown sort column.
       description: Returned if the client sends an unknown sort column.
       headers: {}
@@ -113,7 +113,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to list users.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -142,7 +142,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:InvalidRequestBody
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:InvalidRequestBody
                 message: The request body was not a single JSON object.
       description: Occurs when the client did not send a valid JSON object in the
         request body.
@@ -154,7 +154,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not allowed to create new users.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -171,7 +171,7 @@ post:
                   details:
                     attribute: email
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                 message: The email address is already taken.
       description: |-
         Returned if:

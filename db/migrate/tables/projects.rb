@@ -1,5 +1,3 @@
-
-
 require_relative 'base'
 
 class Tables::Projects < Tables::Base
@@ -25,5 +23,6 @@ class Tables::Projects < Tables::Base
       t.index :identifier
     end
   end
+
   # rubocop:enable Metrics/AbcSize
 end

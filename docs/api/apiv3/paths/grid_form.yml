@@ -94,16 +94,16 @@ post:
                             details:
                               attribute: widgets
                           _type: Error
-                          errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                          errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                           message: Widgets is outside of the grid.
                         - _embedded:
                             details:
                               attribute: widgets
                           _type: Error
-                          errorIdentifier: urn:openproject-org:api:v3:errors:PropertyConstraintViolation
+                          errorIdentifier: urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation
                           message: Widgets is outside of the grid.
                       _type: Error
-                      errorIdentifier: urn:openproject-org:api:v3:errors:MultipleErrors
+                      errorIdentifier: urn:proyeksi-app:api:v3:errors:MultipleErrors
                       message: Multiple field constraints have been violated.
                 _links:
                   self:
@@ -122,7 +122,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:MissingPermission
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:MissingPermission
                 message: You are not authorized to access this resource.
       description: |-
         Returned if the client does not have sufficient permissions.
@@ -138,7 +138,7 @@ post:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The requested resource could not be found.
       description: |-
         Returned if the grid does not exist or the client does not have sufficient permissions to see it.

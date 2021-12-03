@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module StaticLinksHelper
   ##
   # Create a static link to the given key entry

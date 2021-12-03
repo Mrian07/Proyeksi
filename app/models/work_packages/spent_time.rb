@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages::SpentTime
   # Returns the total number of hours spent on this work package and its descendants.
   # The result can be a subset of the actual spent time in cases where the user's permissions
@@ -26,7 +24,7 @@ module WorkPackages::SpentTime
 
   def compute_spent_hours(user)
     WorkPackage.include_spent_time(user, self)
-      .pluck(Arel.sql('SUM(hours)'))
-      .first
+               .pluck(Arel.sql('SUM(hours)'))
+               .first
   end
 end

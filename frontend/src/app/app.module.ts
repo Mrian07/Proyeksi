@@ -1,3 +1,31 @@
+// -- copyright
+// ProyeksiApp is an open source project management software.
+// Copyright (C) 2012-2021 the ProyeksiApp GmbH
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License version 3.
+//
+// ProyeksiApp is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+// Copyright (C) 2006-2013 Jean-Philippe Lang
+// Copyright (C) 2010-2013 the ChiliProject Team
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+//
+// See COPYRIGHT and LICENSE files for more details.
+//++
+
 import {
   APP_INITIALIZER,
   ApplicationRef,
@@ -7,34 +35,34 @@ import {
 import { ReactiveFormsModule } from '@angular/forms';
 import { OpContextMenuTrigger } from 'core-app/shared/components/op-context-menu/handlers/op-context-menu-trigger.directive';
 import { States } from 'core-app/core/states/states.service';
-import { OpenprojectFieldsModule } from 'core-app/shared/components/fields/openproject-fields.module';
+import { ProyeksiappFieldsModule } from 'core-app/shared/components/fields/proyeksiapp-fields.module';
 import { OPSharedModule } from 'core-app/shared/shared.module';
 import { OpDragScrollDirective } from 'core-app/shared/directives/op-drag-scroll/op-drag-scroll.directive';
 import { DynamicBootstrapper } from 'core-app/core/setup/globals/dynamic-bootstrapper';
-import { OpenprojectWorkPackagesModule } from 'core-app/features/work-packages/openproject-work-packages.module';
-import { OpenprojectAttachmentsModule } from 'core-app/shared/components/attachments/openproject-attachments.module';
-import { OpenprojectEditorModule } from 'core-app/shared/components/editor/openproject-editor.module';
-import { OpenprojectGridsModule } from 'core-app/shared/components/grids/openproject-grids.module';
-import { OpenprojectRouterModule } from 'core-app/core/routing/openproject-router.module';
-import { OpenprojectWorkPackageRoutesModule } from 'core-app/features/work-packages/openproject-work-package-routes.module';
+import { ProyeksiappWorkPackagesModule } from 'core-app/features/work-packages/proyeksiapp-work-packages.module';
+import { ProyeksiappAttachmentsModule } from 'core-app/shared/components/attachments/proyeksiapp-attachments.module';
+import { ProyeksiappEditorModule } from 'core-app/shared/components/editor/proyeksiapp-editor.module';
+import { ProyeksiappGridsModule } from 'core-app/shared/components/grids/proyeksiapp-grids.module';
+import { ProyeksiappRouterModule } from 'core-app/core/routing/proyeksiapp-router.module';
+import { ProyeksiappWorkPackageRoutesModule } from 'core-app/features/work-packages/proyeksiapp-work-package-routes.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { OpenprojectCalendarModule } from 'core-app/shared/components/calendar/openproject-calendar.module';
-import { OpenprojectGlobalSearchModule } from 'core-app/core/global_search/openproject-global-search.module';
-import { OpenprojectDashboardsModule } from 'core-app/features/dashboards/openproject-dashboards.module';
-import { OpenprojectWorkPackageGraphsModule } from 'core-app/shared/components/work-package-graphs/openproject-work-package-graphs.module';
+import { ProyeksiappCalendarModule } from 'core-app/shared/components/calendar/proyeksiapp-calendar.module';
+import { ProyeksiappGlobalSearchModule } from 'core-app/core/global_search/proyeksiapp-global-search.module';
+import { ProyeksiappDashboardsModule } from 'core-app/features/dashboards/proyeksiapp-dashboards.module';
+import { ProyeksiappWorkPackageGraphsModule } from 'core-app/shared/components/work-package-graphs/proyeksiapp-work-package-graphs.module';
 import { PreviewTriggerService } from 'core-app/core/setup/globals/global-listeners/preview-trigger.service';
-import { OpenprojectOverviewModule } from 'core-app/features/overview/openproject-overview.module';
-import { OpenprojectMyPageModule } from 'core-app/features/my-page/openproject-my-page.module';
-import { OpenprojectProjectsModule } from 'core-app/features/projects/openproject-projects.module';
+import { ProyeksiappOverviewModule } from 'core-app/features/overview/proyeksiapp-overview.module';
+import { ProyeksiappMyPageModule } from 'core-app/features/my-page/proyeksiapp-my-page.module';
+import { ProyeksiappProjectsModule } from 'core-app/features/projects/proyeksiapp-projects.module';
 import { KeyboardShortcutService } from 'core-app/shared/directives/a11y/keyboard-shortcut.service';
-import { OpenprojectMembersModule } from 'core-app/shared/components/autocompleter/members-autocompleter/members.module';
-import { OpenprojectAugmentingModule } from 'core-app/core/augmenting/openproject-augmenting.module';
-import { OpenprojectInviteUserModalModule } from 'core-app/features/invite-user-modal/invite-user-modal.module';
-import { OpenprojectModalModule } from 'core-app/shared/components/modal/modal.module';
+import { ProyeksiapptMembersModule } from 'core-app/shared/components/autocompleter/members-autocompleter/members.module';
+import { ProyeksiappAugmentingModule } from 'core-app/core/augmenting/proyeksiapp-augmenting.module';
+import { ProyeksiappInviteUserModalModule } from 'core-app/features/invite-user-modal/invite-user-modal.module';
+import { ProyeksiappModalModule } from 'core-app/shared/components/modal/modal.module';
 import { RevitAddInSettingsButtonService } from 'core-app/features/bim/revit_add_in/revit-add-in-settings-button.service';
-import { OpenprojectAutocompleterModule } from 'core-app/shared/components/autocompleter/openproject-autocompleter.module';
-import { ProyeksiAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
-import { OpenprojectEnterpriseModule } from 'core-app/features/enterprise/openproject-enterprise.module';
+import { ProyeksiappAutocompleterModule } from 'core-app/shared/components/autocompleter/proyeksiapp-autocompleter.module';
+import { ProyeksiaAppFileUploadService } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiappEnterpriseModule } from 'core-app/features/enterprise/proyeksiapp-enterprise.module';
 import { MainMenuToggleComponent } from 'core-app/core/main-menu/main-menu-toggle.component';
 import { MainMenuNavigationService } from 'core-app/core/main-menu/main-menu-navigation.service';
 import { ConfirmDialogService } from 'core-app/shared/components/modals/confirm-dialog/confirm-dialog.service';
@@ -47,17 +75,17 @@ import { ProjectMenuAutocompleteComponent } from 'core-app/shared/components/aut
 import { PaginationService } from 'core-app/shared/components/table-pagination/pagination-service';
 import { MainMenuResizerComponent } from 'core-app/shared/components/resizer/resizer/main-menu-resizer.component';
 import { CommentService } from 'core-app/features/work-packages/components/wp-activity/comment-service';
-import { OpenprojectTabsModule } from 'core-app/shared/components/tabs/openproject-tabs.module';
-import { OpenprojectAdminModule } from 'core-app/features/admin/openproject-admin.module';
-import { OpenprojectHalModule } from 'core-app/features/hal/openproject-hal.module';
+import { ProyeksiappTabsModule } from 'core-app/shared/components/tabs/proyeksiapp-tabs.module';
+import { ProyeksiappAdminModule } from 'core-app/features/admin/proyeksiapp-admin.module';
+import { ProyeksiappHalModule } from 'core-app/features/hal/proyeksiapp-hal.module';
 import { globalDynamicComponents } from 'core-app/core/setup/global-dynamic-components.const';
 import { HookService } from 'core-app/features/plugins/hook-service';
-import { OpenprojectPluginsModule } from 'core-app/features/plugins/openproject-plugins.module';
+import { ProyeksiappPluginsModule } from 'core-app/features/plugins/proyeksiapp-plugins.module';
 import { LinkedPluginsModule } from 'core-app/features/plugins/linked-plugins.module';
 import { ProyeksiAppInAppNotificationsModule } from 'core-app/features/in-app-notifications/in-app-notifications.module';
 import { ProyeksiAppBackupService } from './core/backup/op-backup.service';
 import { ProyeksiAppDirectFileUploadService } from './core/file-upload/op-direct-file-upload.service';
-import { ProyeksiAppStateModule } from 'core-app/core/state/openproject-state.module';
+import { ProyeksiappStateModule } from 'core-app/core/state/proyeksiapp-state.module';
 
 export function initializeServices(injector:Injector) {
   return () => {
@@ -82,73 +110,73 @@ export function initializeServices(injector:Injector) {
     // Commons
     OPSharedModule,
     // State module
-    ProyeksiAppStateModule,
+    ProyeksiappStateModule,
     // Router module
-    OpenprojectRouterModule,
+    ProyeksiappRouterModule,
     // Hal Module
-    OpenprojectHalModule,
+    ProyeksiappHalModule,
 
     // CKEditor
-    OpenprojectEditorModule,
+    ProyeksiappEditorModule,
     // Display + Edit field functionality
-    OpenprojectFieldsModule,
-    OpenprojectGridsModule,
-    OpenprojectAttachmentsModule,
+    ProyeksiappFieldsModule,
+    ProyeksiappGridsModule,
+    ProyeksiappAttachmentsModule,
 
     // Project module
-    OpenprojectProjectsModule,
+    ProyeksiappProjectsModule,
 
     // Work packages and their routes
-    OpenprojectWorkPackagesModule,
-    OpenprojectWorkPackageRoutesModule,
+    ProyeksiappWorkPackagesModule,
+    ProyeksiappWorkPackageRoutesModule,
 
     // Work packages in graph representation
-    OpenprojectWorkPackageGraphsModule,
+    ProyeksiappWorkPackageGraphsModule,
 
     // Calendar module
-    OpenprojectCalendarModule,
+    ProyeksiappCalendarModule,
 
     // Dashboards
-    OpenprojectDashboardsModule,
+    ProyeksiappDashboardsModule,
 
     // Overview
-    OpenprojectOverviewModule,
+    ProyeksiappOverviewModule,
 
     // MyPage
-    OpenprojectMyPageModule,
+    ProyeksiappMyPageModule,
 
     // Global Search
-    OpenprojectGlobalSearchModule,
+    ProyeksiappGlobalSearchModule,
 
     // Admin module
-    OpenprojectAdminModule,
-    OpenprojectEnterpriseModule,
+    ProyeksiappAdminModule,
+    ProyeksiappEnterpriseModule,
 
     // Plugin hooks and modules
-    OpenprojectPluginsModule,
+    ProyeksiappPluginsModule,
     // Linked plugins dynamically generated by bundler
     LinkedPluginsModule,
 
     // Members
-    OpenprojectMembersModule,
+    ProyeksiapptMembersModule,
 
     // Angular Forms
     ReactiveFormsModule,
 
     // Augmenting Module
-    OpenprojectAugmentingModule,
+    ProyeksiappAugmentingModule,
 
     // Modals
-    OpenprojectModalModule,
+    ProyeksiappModalModule,
 
     // Invite user modal
-    OpenprojectInviteUserModalModule,
+    ProyeksiappInviteUserModalModule,
 
     // Autocompleters
-    OpenprojectAutocompleterModule,
+    ProyeksiappAutocompleterModule,
 
     // Tabs
-    OpenprojectTabsModule,
+    ProyeksiappTabsModule,
 
     // Notifications
     ProyeksiAppInAppNotificationsModule,
@@ -160,7 +188,7 @@ export function initializeServices(injector:Injector) {
     },
     PaginationService,
     ProyeksiAppBackupService,
-    ProyeksiAppFileUploadService,
+    ProyeksiaAppFileUploadService,
     ProyeksiAppDirectFileUploadService,
     // Split view
     CommentService,
@@ -204,7 +232,7 @@ export class ProyeksiAppModule {
     // We can't use ngDoBootstrap in nested modules since they are not called.
     const hookService = (appRef as any)._injector.get(HookService);
     hookService
-      .call('openProjectAngularBootstrap')
+      .call('proyeksiApptAngularBootstrap')
       .forEach((results:{ selector:string, cls:any }[]) => {
         DynamicBootstrapper.bootstrapOptionalDocument(appRef, document, results);
       });

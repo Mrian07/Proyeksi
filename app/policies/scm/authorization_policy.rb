@@ -1,5 +1,3 @@
-
-
 class SCM::AuthorizationPolicy
   attr_reader :project, :user
 

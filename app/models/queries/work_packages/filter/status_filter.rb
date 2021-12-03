@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::WorkPackages::Filter::StatusFilter < Queries::WorkPackages::Filter::WorkPackageFilter
   def allowed_values
     all_statuses.values.map { |s| [s.name, s.id.to_s] }

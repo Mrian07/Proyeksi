@@ -100,13 +100,13 @@ describe('FormsService', () => {
     const backEndErrorResponse = {
       error: {
         _type: 'Error',
-        errorIdentifier: 'urn:openproject-org:api:v3:errors:MultipleErrors',
+        errorIdentifier: 'urn:proyeksi-app:api:v3:errors:MultipleErrors',
         message: 'Multiple field constraints have been violated.',
         _embedded: {
           errors: [
             {
               _type: 'Error',
-              errorIdentifier: 'urn:openproject-org:api:v3:errors:PropertyConstraintViolation',
+              errorIdentifier: 'urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation',
               message: "Name can't be blank.",
               _embedded: {
                 details: {
@@ -116,7 +116,7 @@ describe('FormsService', () => {
             },
             {
               _type: 'Error',
-              errorIdentifier: 'urn:openproject-org:api:v3:errors:PropertyConstraintViolation',
+              errorIdentifier: 'urn:proyeksi-app:api:v3:errors:PropertyConstraintViolation',
               message: "Identifier can't be blank.",
               _embedded: {
                 details: {

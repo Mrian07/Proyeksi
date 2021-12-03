@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class UserPreference < ApplicationRecord
   belongs_to :user
   delegate :notification_settings, to: :user

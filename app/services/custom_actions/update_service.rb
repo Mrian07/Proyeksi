@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::UpdateService < CustomActions::BaseService
   attr_accessor :user,
                 :action

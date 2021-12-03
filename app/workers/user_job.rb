@@ -1,5 +1,3 @@
-
-
 class UserJob < ApplicationJob
   attr_reader :user
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomValue::BoolStrategy < CustomValue::FormatStrategy
   def value_present?
     present?(value)

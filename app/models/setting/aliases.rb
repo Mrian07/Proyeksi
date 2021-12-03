@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Setting
   ##
   # Shorthand to common setting aliases to avoid checking values

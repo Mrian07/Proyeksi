@@ -1,4 +1,3 @@
-
 module RandomData
   class ForumSeeder
     def self.seed!(project)

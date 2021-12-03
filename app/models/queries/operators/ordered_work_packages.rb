@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class OrderedWorkPackages < Base
     label 'open_work_packages'

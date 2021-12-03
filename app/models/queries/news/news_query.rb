@@ -1,5 +1,3 @@
-
-
 class Queries::News::NewsQuery < Queries::BaseQuery
   def self.model
     News

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Principals::DeleteJob < ApplicationJob
   queue_with_priority :low
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Versions::ProjectSharing
   # Returns all projects the version is available in
   def projects
@@ -82,8 +80,8 @@ module Versions::ProjectSharing
 
   def project_sharing_tree_root_join_condition(roots_table, hierarchy_table)
     roots_table[:lft].lteq(hierarchy_table[:lft])
-      .and(roots_table[:rgt].gteq(hierarchy_table[:rgt]))
-      .and(roots_table[:parent_id].eq(nil))
+                     .and(roots_table[:rgt].gteq(hierarchy_table[:rgt]))
+                     .and(roots_table[:parent_id].eq(nil))
   end
 
   def project_sharing_join_condition(sharing_table, projects_table)
@@ -103,7 +101,7 @@ module Versions::ProjectSharing
 
   def project_sharing_tree_join_condition(sharing_table, projects_table)
     projects_table[:lft].gteq(sharing_table[:lft])
-      .and(projects_table[:rgt].lteq(sharing_table[:rgt]))
+                        .and(projects_table[:rgt].lteq(sharing_table[:rgt]))
   end
 
   def project_sharing_descendants_join_condition(sharing_table, projects_table)
@@ -122,11 +120,11 @@ module Versions::ProjectSharing
 
   def project_sharing_above_condition(sharing_table, projects_table)
     projects_table[:lft].lt(sharing_table[:lft])
-      .and(projects_table[:rgt].gt(sharing_table[:rgt]))
+                        .and(projects_table[:rgt].gt(sharing_table[:rgt]))
   end
 
   def project_sharing_below_condition(sharing_table, projects_table)
     projects_table[:lft].gt(sharing_table[:lft])
-      .and(projects_table[:rgt].lt(sharing_table[:rgt]))
+                        .and(projects_table[:rgt].lt(sharing_table[:rgt]))
   end
 end

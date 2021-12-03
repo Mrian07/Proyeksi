@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Notifications
   class CleanupJob < ::Cron::CronJob
     DEFAULT_RETENTION ||= 30

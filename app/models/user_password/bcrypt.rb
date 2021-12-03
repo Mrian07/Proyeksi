@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Password hashing method using bcrypt
 class UserPassword::Bcrypt < UserPassword

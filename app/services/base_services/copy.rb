@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module BaseServices
   class Copy < ::BaseServices::BaseContracted
     alias_attribute(:source, :model)

@@ -64,7 +64,7 @@ get:
             response:
               value:
                 _type: Error
-                errorIdentifier: urn:openproject-org:api:v3:errors:NotFound
+                errorIdentifier: urn:proyeksi-app:api:v3:errors:NotFound
                 message: The requested resource could not be found.
       description: |-
         Returned if the Grid does not exist or if the user does not have permission to view it.

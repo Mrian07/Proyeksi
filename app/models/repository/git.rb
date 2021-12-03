@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'proyeksi_app/scm/adapters/git'
 
 class Repository::Git < Repository
@@ -154,7 +152,7 @@ class Repository::Git < Repository
     return [] if revisions.nil? || revisions.empty?
 
     changesets.where(['scmid IN (?)', revisions.map!(&:scmid)])
-      .order(Arel.sql('committed_on DESC'))
+              .order(Arel.sql('committed_on DESC'))
   end
 
   private

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Operators
   class InMoreThan < Base
     label 'in_more_than'

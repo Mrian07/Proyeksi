@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Attachments
   module TouchContainer
     extend ActiveSupport::Concern

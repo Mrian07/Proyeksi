@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Type::AttributeGroups
   extend ActiveSupport::Concern
 
@@ -63,10 +61,10 @@ module Type::AttributeGroups
   # Otherwise, return +default_attribute_groups+
   def attribute_groups
     self.attribute_groups_objects ||= begin
-      groups = custom_attribute_groups || default_attribute_groups
+                                        groups = custom_attribute_groups || default_attribute_groups
 
-      to_attribute_group_class(groups)
-    end
+                                        to_attribute_group_class(groups)
+                                      end
 
     attribute_groups_objects
   end
@@ -202,8 +200,8 @@ module Type::AttributeGroups
     old_groups = attribute_groups_was
 
     ids = (old_groups.map(&:last).flatten - new_groups.map(&:last).flatten)
-          .map { |k| ::Type::QueryGroup.query_attribute_id(k) }
-          .compact
+            .map { |k| ::Type::QueryGroup.query_attribute_id(k) }
+            .compact
 
     Query.where(id: ids).destroy_all
   end

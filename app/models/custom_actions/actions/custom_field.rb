@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class CustomActions::Actions::CustomField < CustomActions::Actions::Base
   def self.key
     :"custom_field_#{custom_field.id}"
@@ -27,8 +25,8 @@ class CustomActions::Actions::CustomField < CustomActions::Actions::Base
     WorkPackageCustomField
       .order(:name)
       .map do |cf|
-        create_subclass(cf)
-      end
+      create_subclass(cf)
+    end
   end
 
   def self.for(key)
@@ -48,6 +46,7 @@ class CustomActions::Actions::CustomField < CustomActions::Actions::Base
     klass.include(strategy(custom_field))
     klass
   end
+
   private_class_method :create_subclass
 
   def self.strategy(custom_field)

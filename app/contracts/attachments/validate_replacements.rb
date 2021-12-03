@@ -1,5 +1,3 @@
-
-
 require 'model_contract'
 
 module Attachments

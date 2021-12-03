@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Utilities
     module GrapeHelper

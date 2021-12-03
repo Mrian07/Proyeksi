@@ -1,7 +1,3 @@
-#-- encoding: UTF-8
-
-
-
 module API
   module V3
     module Utilities
@@ -65,7 +61,7 @@ module API
 
           embed_for(stack).each_key do |key|
             representer = current_representer
-                          .embed_map[key]
+                            .embed_map[key]
 
             up_map[key] = embedded_depth_first(stack.dup << key, representer, &block)
           end

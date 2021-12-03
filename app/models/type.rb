@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class ::Type < ApplicationRecord
   extend Pagination::Model
 
@@ -50,7 +48,9 @@ class ::Type < ApplicationRecord
       .order(:position)
   }
 
-  def to_s; name end
+  def to_s
+    name
+  end
 
   def <=>(other)
     name <=> other.name

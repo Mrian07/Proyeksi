@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AvatarHelper
   # Returns the avatar image tag for the given +user+ if avatars are enabled
   # +user+ can be a User or a string that will be scanned for an email address (eg. 'joe <joe@foo.bar>')

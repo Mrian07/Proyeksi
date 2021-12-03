@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class ChangePasswordService
     attr_accessor :current_user, :session

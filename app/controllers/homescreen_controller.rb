@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class HomescreenController < ApplicationController
   skip_before_action :check_if_login_required, only: [:robots]
 

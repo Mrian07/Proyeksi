@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module Exports
   class Exporter
     include Redmine::I18n

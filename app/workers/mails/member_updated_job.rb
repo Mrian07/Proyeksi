@@ -1,5 +1,3 @@
-
-
 class Mails::MemberUpdatedJob < Mails::MemberJob
   private
 

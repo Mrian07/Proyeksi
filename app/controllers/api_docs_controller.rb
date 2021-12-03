@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class APIDocsController < ApplicationController
   before_action :require_login
 

@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 module WorkPackage::Exports
   module Formatters
     class EstimatedHours < ::Exports::Formatters::Default

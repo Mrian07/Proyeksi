@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Users
   class BaseContract < ::ModelContract
     include AssignableCustomFieldValues

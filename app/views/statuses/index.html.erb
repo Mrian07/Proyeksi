@@ -1,12 +1,10 @@
-
-
 <% html_title t(:label_administration), t(:label_work_package_status_plural) -%>
 <%= toolbar title: t(:label_work_package_status_plural) do %>
   <li class="toolbar-item">
     <%= link_to new_status_path,
-          { class: 'button -alt-highlight',
-            aria: {label: t(:label_work_package_status_new)},
-            title: t(:label_work_package_status_new)} do %>
+                { class: 'button -alt-highlight',
+                  aria: { label: t(:label_work_package_status_new) },
+                  title: t(:label_work_package_status_new) } do %>
       <%= op_icon('button--icon icon-add') %>
       <span class="button--text"><%= t(:label_status) %></span>
     <% end %>

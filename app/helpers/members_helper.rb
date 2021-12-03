@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module MembersHelper
   # Adds a link that either:
   # * sends a delete request to memberships in case only one role is assigned to the member

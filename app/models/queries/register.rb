@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Register
   class << self
     def filter(query, filter)

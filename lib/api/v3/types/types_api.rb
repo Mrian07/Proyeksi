@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/v3/types/type_collection_representer'
 require 'api/v3/types/type_representer'
 

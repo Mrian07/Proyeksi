@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Activities::MessageActivityProvider < Activities::BaseActivityProvider
   activity_provider_for type: 'messages',
                         permission: :view_messages

@@ -1,6 +1,5 @@
 #-- encoding: UTF-8
 
-
 class Queries::IndividualPrincipals::Orders::GroupOrder < Queries::Orders::Base
   self.model = Principal
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::Filters::Strategies
   class Date < Queries::Filters::Strategies::Integer
     self.supported_operators = ['<t+', '>t+', 't+', 't', 'w', '>t-', '<t-', 't-', '=d', '<>d']
@@ -9,7 +7,7 @@ module Queries::Filters::Strategies
 
     def validate
       if operator == Queries::Operators::OnDate ||
-         operator == Queries::Operators::BetweenDate
+        operator == Queries::Operators::BetweenDate
         validate_values_all_date
       else
         super

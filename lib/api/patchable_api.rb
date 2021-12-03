@@ -1,5 +1,3 @@
-
-
 module API
   module PatchableAPI
     def self.included(base)

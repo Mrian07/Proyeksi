@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Type::AttributeGroup < Type::FormGroup
   def members
     # The attributes might not be present anymore, for instance when you remove

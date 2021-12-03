@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Members::Orders::EmailOrder < Queries::Orders::Base
   self.model = Member
 

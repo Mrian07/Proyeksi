@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class TypesController < ApplicationController
   include PaginationHelper
 
@@ -46,9 +44,9 @@ class TypesController < ApplicationController
       redirect_to tab: :settings
     else
       type = ::Type
-             .includes(:projects,
-                       :custom_fields)
-             .find(params[:id])
+               .includes(:projects,
+                         :custom_fields)
+               .find(params[:id])
 
       render_edit_tab(type)
     end

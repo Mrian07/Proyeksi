@@ -1,5 +1,3 @@
-
-
 class Queries::Users::UserQuery < Queries::BaseQuery
   def self.model
     User

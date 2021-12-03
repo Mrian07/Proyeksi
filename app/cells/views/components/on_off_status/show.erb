@@ -6,14 +6,14 @@
     <%= op_icon 'icon-yes' %>
     <%= model[:on_text] %>
   </span>
-      <p>
-        <%= model[:on_description] %>
-      </p>
+    <p>
+      <%= model[:on_description] %>
+    </p>
   <% else %>
   <span class="on-off-status -disabled">
     <%= op_icon 'icon-not-supported' %>
     <%= model[:off_text] %>
   </span>
-      <p><%= model[:off_description] %></p>
+    <p><%= model[:off_description] %></p>
   <% end %>
 </div>

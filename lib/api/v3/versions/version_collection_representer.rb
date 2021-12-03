@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'roar/decorator'
 require 'roar/json'
 require 'roar/json/collection'

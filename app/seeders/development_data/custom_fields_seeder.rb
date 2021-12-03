@@ -1,4 +1,3 @@
-
 module DevelopmentData
   class CustomFieldsSeeder < Seeder
     def seed_data!

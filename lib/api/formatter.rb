@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   class Formatter
     def call(object, _env)

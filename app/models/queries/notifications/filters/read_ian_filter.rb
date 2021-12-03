@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Filters::ReadIanFilter < Queries::Notifications::Filters::NotificationFilter
   include Queries::Filters::Shared::BooleanFilter
 

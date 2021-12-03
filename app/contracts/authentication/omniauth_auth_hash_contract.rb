@@ -1,5 +1,3 @@
-
-
 module Authentication
   class OmniauthAuthHashContract
     include ActiveModel::Validations

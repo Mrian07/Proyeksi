@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'securerandom'
 
 module SettingsHelper
@@ -37,7 +35,7 @@ module SettingsHelper
       },
       {
         name: 'repositories',
-        controller:'/admin/settings/repositories_settings',
+        controller: '/admin/settings/repositories_settings',
         label: :label_repository_plural
       }
     ]

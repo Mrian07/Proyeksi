@@ -1,5 +1,3 @@
-
-
 class Journal::BaseJournal < ApplicationRecord
   self.abstract_class = true
 
@@ -17,5 +15,6 @@ class Journal::BaseJournal < ApplicationRecord
   def self.excluded_attributes
     [primary_key.to_sym, inheritance_column.to_sym]
   end
+
   private_class_method :excluded_attributes
 end

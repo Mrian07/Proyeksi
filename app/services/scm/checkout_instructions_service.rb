@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 ##
 # Implements a repository service for building checkout instructions if supported
 class SCM::CheckoutInstructionsService
@@ -125,8 +123,8 @@ class SCM::CheckoutInstructionsService
 
   def checkout_settings
     @settings ||= begin
-      hash = Setting.repository_checkout_data[repository.vendor.to_s]
-      hash.presence || {}
-    end
+                    hash = Setting.repository_checkout_data[repository.vendor.to_s]
+                    hash.presence || {}
+                  end
   end
 end

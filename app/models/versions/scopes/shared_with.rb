@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Versions::Scopes
   module SharedWith
     extend ActiveSupport::Concern

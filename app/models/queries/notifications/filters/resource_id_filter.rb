@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Notifications::Filters::ResourceIdFilter < Queries::Notifications::Filters::NotificationFilter
   def allowed_values
     WorkPackage

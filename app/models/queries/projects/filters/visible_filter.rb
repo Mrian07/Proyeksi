@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Returns projects visible for a user.
 # This filter is only useful for admins which want to scope down the list of all the projects to those
 # visible by a user. For a non admin user, the vanilla project query is already limited to the visible projects.

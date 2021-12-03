@@ -1,5 +1,3 @@
-
-
 class SCM::GitAuthorizationPolicy < SCM::AuthorizationPolicy
   private
 

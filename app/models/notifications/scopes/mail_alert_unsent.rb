@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Return alert mail notifications that are unread (have mail_alert_sent: false)
 module Notifications::Scopes
   module MailAlertUnsent

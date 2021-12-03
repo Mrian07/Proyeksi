@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Groups
   class CreateContract < BaseContract
     attribute :type

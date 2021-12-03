@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module WorkPackages::Scopes::IncludeDerivedDates
   extend ActiveSupport::Concern
 

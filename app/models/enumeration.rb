@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Enumeration < ApplicationRecord
   default_scope { order("#{Enumeration.table_name}.position ASC") }
 
@@ -102,7 +100,9 @@ class Enumeration < ApplicationRecord
     position <=> other.position
   end
 
-  def to_s; name end
+  def to_s
+    name
+  end
 
   # Does the +new+ Hash override the previous Enumeration?
   def self.overridding_change?(new, previous)
@@ -117,8 +117,8 @@ class Enumeration < ApplicationRecord
   def self.same_custom_values?(new, previous)
     previous.custom_field_values.each do |custom_value|
       if new &&
-         new['custom_field_values'] &&
-         custom_value.value != new['custom_field_values'][custom_value.custom_field_id.to_s]
+        new['custom_field_values'] &&
+        custom_value.value != new['custom_field_values'][custom_value.custom_field_id.to_s]
         return false
       end
     end

@@ -1,5 +1,3 @@
-
-
 <%= render partial: 'repository_header', locals: { empty: false } %>
 
 <div class="repository-breadcrumbs">
@@ -8,7 +6,7 @@
 </div>
 
 <% if !@entries.nil? && authorize_for('repositories', 'browse') %>
-<%= render partial: 'dir_list' %>
+  <%= render partial: 'dir_list' %>
 <% end %>
 
 <%= render_properties(@properties) %>
@@ -23,7 +21,7 @@
                method: :get,
                id: 'revision_selector',
                class: 'form -vertical'
-              ) do %>
+      ) do %>
     <li class="toolbar-item toolbar-input-group hidden-for-mobile">
       <div>
         <%= label_tag 'rev', I18n.t('repositories.go_to_revision') %>
@@ -31,26 +29,26 @@
       <%= text_field_tag :rev, @rev, id: 'revision-identifier-input', placeholder: t(:label_revision) %>
     </li>
     <% if !@repository.branches.nil? && @repository.branches.length > 0 %>
-    <li class="toolbar-item toolbar-input-group hidden-for-mobile">
-      <div>
-        <%= label_tag 'branch', I18n.t(:label_branch) %>
-      </div>
-      <%= select_tag :branch,
-                     options_for_select(@repository.branches, @rev),
-                     include_blank: "--- #{t(:actionview_instancetag_blank_option)} ---",
-                     id: 'revision-branch-select' %>
-    </li>
+      <li class="toolbar-item toolbar-input-group hidden-for-mobile">
+        <div>
+          <%= label_tag 'branch', I18n.t(:label_branch) %>
+        </div>
+        <%= select_tag :branch,
+                       options_for_select(@repository.branches, @rev),
+                       include_blank: "--- #{t(:actionview_instancetag_blank_option)} ---",
+                       id: 'revision-branch-select' %>
+      </li>
     <% end %>
     <% if !@repository.tags.nil? && @repository.tags.length > 0 %>
-    <li class="toolbar-item toolbar-input-group hidden-for-mobile">
-      <div>
-        <%= label_tag 'tag', I18n.t(:label_tag) %>
-      </div>
-      <%= select_tag :tag,
-                     options_for_select(@repository.tags, @rev),
-                     include_blank: "--- #{t(:actionview_instancetag_blank_option)} ---",
-                     id: 'revision-tag-select' %>
-    </li>
+      <li class="toolbar-item toolbar-input-group hidden-for-mobile">
+        <div>
+          <%= label_tag 'tag', I18n.t(:label_tag) %>
+        </div>
+        <%= select_tag :tag,
+                       options_for_select(@repository.tags, @rev),
+                       include_blank: "--- #{t(:actionview_instancetag_blank_option)} ---",
+                       id: 'revision-tag-select' %>
+      </li>
     <% end %>
     <li class="toolbar-item -icon-only">
       <%= link_to({ url: { action: 'revisions', project_id: @project,
@@ -63,22 +61,22 @@
 <% end %>
 
 <% if authorize_for('repositories', 'revisions') %>
-<%   if @changesets && !@changesets.empty? %>
-<%=    render partial: 'revisions',
-              locals: {project: @project, path: @path,
-                          revisions: @changesets, entry: nil }%>
-<%   end %>
-<p>
-<%
-     has_branches = (!@repository.branches.nil? && @repository.branches.length > 0)
-     sep = ''
- %>
+  <% if @changesets && !@changesets.empty? %>
+    <%= render partial: 'revisions',
+               locals: { project: @project, path: @path,
+                         revisions: @changesets, entry: nil } %>
+  <% end %>
+  <p>
+    <%
+      has_branches = (!@repository.branches.nil? && @repository.branches.length > 0)
+      sep = ''
+    %>
 
-<%   if @repository.supports_all_revisions? && @path.blank? %>
-<%= link_to t(:label_view_all_revisions), revisions_project_repository_path(@project) %>
-<%   sep = '|' %>
-<%   end %>
-</p>
+    <% if @repository.supports_all_revisions? && @path.blank? %>
+      <%= link_to t(:label_view_all_revisions), revisions_project_repository_path(@project) %>
+      <% sep = '|' %>
+    <% end %>
+  </p>
 <% end %>
 
 <% html_title(t(:label_repository)) -%>

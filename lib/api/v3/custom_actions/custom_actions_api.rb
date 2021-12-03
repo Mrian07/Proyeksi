@@ -1,5 +1,3 @@
-
-
 module API
   module V3
     module CustomActions
@@ -27,12 +25,12 @@ module API
               helpers do
                 def parsed_params
                   @parsed_params ||= begin
-                    struct = OpenStruct.new
+                                       struct = OpenStruct.new
 
-                    representer = ::API::V3::CustomActions::CustomActionExecuteRepresenter.new(struct,
-                                                                                               current_user: current_user)
-                    representer.from_hash(Hash(request_body))
-                  end
+                                       representer = ::API::V3::CustomActions::CustomActionExecuteRepresenter.new(struct,
+                                                                                                                  current_user: current_user)
+                                       representer.from_hash(Hash(request_body))
+                                     end
                 end
               end
 
@@ -57,10 +55,10 @@ module API
 
                     status 200
                     body(::API::V3::WorkPackages::WorkPackageRepresenter.create(
-                           work_package,
-                           current_user: current_user,
-                           embed_links: true
-                         ))
+                      work_package,
+                      current_user: current_user,
+                      embed_links: true
+                    ))
                   end
 
                   call.on_failure do

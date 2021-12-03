@@ -1,5 +1,5 @@
 <section class="form--section">
-  <h3 class="form--section-title"><%=t('consent.title')%></h3>
+  <h3 class="form--section-title"><%= t('consent.title') %></h3>
   <%= rails_cell ::Components::OnOffStatusCell,
                  {
                    is_on: @user.consented_at.present?,

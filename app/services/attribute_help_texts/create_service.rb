@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module AttributeHelpTexts
   class CreateService < ::BaseServices::Create
     include Attachments::ReplaceAttachments

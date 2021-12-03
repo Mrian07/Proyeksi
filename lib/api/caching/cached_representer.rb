@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module API
   module Caching
     module CachedRepresenter
@@ -66,8 +64,8 @@ module API
 
         def apply_link_cache_ifs(hash_rep)
           link_conditions = representable_attrs['links']
-                            .link_configs
-                            .select { |config, _block| config[:cache_if] }
+                              .link_configs
+                              .select { |config, _block| config[:cache_if] }
 
           link_conditions.each do |(config, _block)|
             condition = config[:cache_if]
@@ -81,7 +79,7 @@ module API
 
         def apply_property_cache_ifs(hash_rep)
           attrs = representable_attrs
-                  .select { |_name, config| config[:cache_if] }
+                    .select { |_name, config| config[:cache_if] }
 
           attrs.each do |name, config|
             condition = config[:cache_if]
@@ -95,8 +93,8 @@ module API
 
         def add_uncacheable_links(hash_rep)
           link_conditions = representable_attrs['links']
-                            .link_configs
-                            .select { |config, _block| config[:uncacheable] }
+                              .link_configs
+                              .select { |config, _block| config[:uncacheable] }
 
           link_conditions.each do |config, block|
             name = config[:rel]

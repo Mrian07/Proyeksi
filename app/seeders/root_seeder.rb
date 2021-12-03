@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Seeds the minimum data required to run ProyeksiApp (BasicDataSeeder, AdminUserSeeder)
 # as well as optional demo data (DemoDataSeeder) to give a user some orientation.
 

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class MessagesController < ApplicationController
   menu_item :forums
   default_search_scope :messages
@@ -26,11 +24,11 @@ class MessagesController < ApplicationController
     end
 
     @replies = @topic
-               .children
-               .includes(:author, :attachments, forum: :project)
-               .order(created_at: :asc)
-               .page(page)
-               .per_page(per_page_param)
+                 .children
+                 .includes(:author, :attachments, forum: :project)
+                 .order(created_at: :asc)
+                 .page(page)
+                 .per_page(per_page_param)
 
     @reply = Message.new(subject: "RE: #{@message.subject}", parent: @topic, forum: @topic.forum)
     render action: 'show', layout: !request.xhr?
@@ -39,11 +37,11 @@ class MessagesController < ApplicationController
   # new topic
   def new
     @message = Messages::SetAttributesService
-      .new(user: current_user,
-           model: Message.new,
-           contract_class: EmptyContract)
-      .call(forum: @forum)
-      .result
+                 .new(user: current_user,
+                      model: Message.new,
+                      contract_class: EmptyContract)
+                 .call(forum: @forum)
+                 .result
   end
 
   # Create a new topic
@@ -133,7 +131,7 @@ class MessagesController < ApplicationController
       .new(user: current_user,
            model: message)
       .call(permitted_params.message(@project)
-            .merge(attachment_params))
+                            .merge(attachment_params))
   end
 
   def create_message(forum, message_params = permitted_params.message(forum.project))

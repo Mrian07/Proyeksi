@@ -1,7 +1,5 @@
-
-
 <% html_title t(:label_administration), t(:label_enumeration_new) %>
-<% local_assigns[:additional_breadcrumb] =  t(:label_enumeration_new) %>
+<% local_assigns[:additional_breadcrumb] = t(:label_enumeration_new) %>
 <%= breadcrumb_toolbar t(:label_enumeration_new) %>
 <%= labelled_tabular_form_for @enumeration do |f| %>
   <%= render partial: 'form', locals: { f: f } %>

@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Queries::Projects::Filters::CustomFieldFilter <
   Queries::Projects::Filters::ProjectFilter
   include Queries::Filters::Shared::CustomFieldFilter

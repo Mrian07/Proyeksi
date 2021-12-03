@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module PlaceholderUsers
   class DeleteContract < ::DeleteContract
     delete_permission -> {

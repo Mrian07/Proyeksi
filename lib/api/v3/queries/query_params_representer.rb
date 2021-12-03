@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Other than the Roar based representers of the api v3, this
 # representer is only responsible for transforming a query's
 # attributes into a hash which in turn can be used e.g. to be displayed

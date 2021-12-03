@@ -1,5 +1,3 @@
-
-
 module Notifications
   class ScheduleReminderMailsJob < Cron::CronJob
     # runs every quarter of an hour, so 00:00, 00:15...

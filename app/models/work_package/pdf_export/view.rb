@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class WorkPackage::PDFExport::View
   include Prawn::View
   include Redmine::I18n

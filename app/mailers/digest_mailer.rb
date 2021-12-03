@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 # Sends digest mails. Digest mails contain the combined information of multiple updates to
 # resources.
 # Currently, this is limited to work packages

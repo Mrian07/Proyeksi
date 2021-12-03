@@ -1,5 +1,3 @@
-
-
 module API
   module Decorators
     class SqlCollectionRepresenter

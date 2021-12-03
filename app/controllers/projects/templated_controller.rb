@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 class Projects::TemplatedController < ApplicationController
   before_action :find_project_by_project_id
   before_action :authorize

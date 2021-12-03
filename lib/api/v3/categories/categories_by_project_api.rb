@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 require 'api/v3/categories/category_collection_representer'
 
 module API

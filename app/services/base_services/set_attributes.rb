@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module BaseServices
   class SetAttributes < BaseCallable
     include Contracted

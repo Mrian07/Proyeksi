@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Queries::WorkPackages::Filter::FilterOnDirectedRelationsMixin
   include ::Queries::WorkPackages::Filter::FilterForWpMixin
 
@@ -10,10 +8,10 @@ module Queries::WorkPackages::Filter::FilterOnDirectedRelationsMixin
     # the `Relation`'s association `includes` is overwritten with the method `includes`
     # otherwise.
     relations_subselect = Relation
-                          .send(normalized_relation_type)
-                          .direct
-                          .where(relation_filter)
-                          .select(relation_select)
+                            .send(normalized_relation_type)
+                            .direct
+                            .where(relation_filter)
+                            .select(relation_select)
 
     operator = if operator_class == Queries::Operators::Equals
                  'IN'

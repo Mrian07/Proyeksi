@@ -1,5 +1,3 @@
-
-
 module Members
   class BaseContract < ::ModelContract
     delegate :principal,

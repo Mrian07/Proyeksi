@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module MetaTagsHelper
   ##
   # Use meta-tags to output title and site name
@@ -22,7 +20,7 @@ module MetaTagsHelper
           firstDayOfWeek: locale_first_day_of_week,
           environment: Rails.env,
           edition: ProyeksiApp::Configuration.edition
-    }
+        }
   end
 
   ##

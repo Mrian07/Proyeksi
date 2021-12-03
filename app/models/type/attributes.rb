@@ -1,7 +1,5 @@
 #-- encoding: UTF-8
 
-
-
 module Type::Attributes
   extend ActiveSupport::Concern
 
@@ -89,7 +87,7 @@ module Type::Attributes
 
     def calculate_default_work_package_form_attributes
       representable_config = API::V3::WorkPackages::Schema::WorkPackageSchemaRepresenter
-                             .representable_attrs
+                               .representable_attrs
 
       # For reasons beyond me, Representable::Config contains the definitions
       #  * nested in [:definitions] in some envs, e.g. development
@@ -139,7 +137,7 @@ module Type::Attributes
       else
         key = attr_i18n_key(name)
         I18n.t("activerecord.attributes.work_package.#{key}", fallback: false, default: '')
-          .presence || I18n.t("attributes.#{key}")
+            .presence || I18n.t("attributes.#{key}")
       end
     end
   end
