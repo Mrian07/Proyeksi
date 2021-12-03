@@ -51,7 +51,7 @@ describe ::API::V3::Queries::SortBys::QuerySortByRepresenter, clear_cache: true 
 
     it_behaves_like 'has a titled link' do
       let(:link) { 'direction' }
-      let(:href) { "urn:openproject-org:api:v3:queries:directions:#{direction}" }
+      let(:href) { "urn:proyeksiapp-org:api:v3:queries:directions:#{direction}" }
       let(:title) { 'Descending' }
     end
 

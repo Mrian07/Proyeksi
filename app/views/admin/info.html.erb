@@ -7,7 +7,7 @@
 <div class="attributes-group">
   <div class="attributes-key-value">
     <%= call_hook(:view_admin_info_top) %>
-    <% if (product_version = OpenProject::VERSION.product_version).present? %>
+    <% if (product_version = ProyeksiApp::VERSION.product_version).present? %>
       <div class="attributes-key-value--key"><%= t(:label_product_version) %></div>
       <div class="attributes-key-value--value-container">
         <div class="attributes-key-value--value -text">
@@ -18,7 +18,7 @@
     <div class="attributes-key-value--key"><%= t(:label_core_version) %></div>
     <div class="attributes-key-value--value-container">
       <div class="attributes-key-value--value -text">
-        <span><strong><%= OpenProject::Info.versioned_name %></strong> </span>
+        <span><strong><%= ProyeksiApp::Info.versioned_name %></strong> </span>
       </div>
     </div>
     <div class="attributes-key-value--key"><%= t(:label_database_version) %></div>
@@ -27,7 +27,7 @@
         <span><%= @db_version %></span>
       </div>
     </div>
-    <% if OpenProject::Database.version_deprecated? %>
+    <% if ProyeksiApp::Database.version_deprecated? %>
       <div class="attributes-key-value--key"></div>
       <div class="attributes-key-value--value-container">
         <div class="attributes-key-value--value -text">
@@ -36,11 +36,11 @@
             Deprecation warning:
           </strong>
           <p>
-            The next major release of OpenProject will update the requirements
+            The next major release of ProyeksiApp will update the requirements
             on the required PostgreSQL database version.
             <br/>
-            Starting with OpenProject 12.0, anticipated end of 2021, PostgreSQL 13 will be required
-            to use OpenProject.
+            Starting with ProyeksiApp 12.0, anticipated end of 2021, PostgreSQL 13 will be required
+            to use ProyeksiApp.
             <br/>
             We have prepared <%= static_link_to :postgres_13_upgrade,
                                                 label: 'upgrade guides for all installation methods' %>.
@@ -56,7 +56,7 @@
           <div class="security-badge--container">
             <%= content_tag :object, nil, data: security_badge_url, type: "image/svg+xml" %>
             <%= link_to '',
-                        ::OpenProject::Static::Links[:security_badge_documentation][:href],
+                        ::ProyeksiApp::Static::Links[:security_badge_documentation][:href],
                         title: t(:label_what_is_this),
                         class: 'security-badge--help-icon icon-context icon-help1',
                         target: '_blank' %>
@@ -64,7 +64,7 @@
         </div>
       </div>
     <% end %>
-    <% if (updated_on = OpenProject::VERSION.updated_on).present? %>
+    <% if (updated_on = ProyeksiApp::VERSION.updated_on).present? %>
       <div class="attributes-key-value--key"><%= t(:label_last_change_on) %></div>
       <div class="attributes-key-value--value-container">
         <div class="attributes-key-value--value -text">

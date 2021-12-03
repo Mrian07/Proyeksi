@@ -23,7 +23,7 @@ describe Grids::CreateContract, 'for Grids::Overview' do
     end
   end
   let(:grid) do
-    scope = OpenProject::StaticRouting::StaticUrlHelpers.new.project_overview_path(project)
+    scope = ProyeksiApp::StaticRouting::StaticUrlHelpers.new.project_overview_path(project)
     ::Grids::Factory.build(scope, current_user)
   end
   include_context 'model contract'

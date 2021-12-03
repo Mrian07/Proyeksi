@@ -1,14 +1,14 @@
 ---
-title: OpenProject 10.5.1
+title: ProyeksiApp 10.5.1
 sidebar_navigation:
     title: 10.5.1
 release_version: 10.5.1
 release_date: 2020-05-06
 ---
 
-# OpenProject 10.5.1
+# ProyeksiApp 10.5.1
 
-We released [OpenProject 10.5.1](https://community.openproject.com/versions/1426).
+We released [ProyeksiApp 10.5.1](https://community.openproject.com/versions/1426).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->

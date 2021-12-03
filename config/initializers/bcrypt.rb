@@ -2,8 +2,8 @@
 
 
 
-if OpenProject::Configuration.override_bcrypt_cost_factor?
-  cost_factor = OpenProject::Configuration.override_bcrypt_cost_factor.to_i
+if ProyeksiApp::Configuration.override_bcrypt_cost_factor?
+  cost_factor = ProyeksiApp::Configuration.override_bcrypt_cost_factor.to_i
   current = BCrypt::Engine.cost
 
   if cost_factor < 8

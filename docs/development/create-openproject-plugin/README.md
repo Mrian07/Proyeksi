@@ -1,13 +1,13 @@
-# Create an OpenProject plugin
+# Create an ProyeksiApp plugin
 
-OpenProject plugins are special ruby gems. You may include them in your `Gemfile.plugins` file like you would do for any other gem. Fortunately, this gives us plugin version management and dependency resolution for free.
+ProyeksiApp plugins are special ruby gems. You may include them in your `Gemfile.plugins` file like you would do for any other gem. Fortunately, this gives us plugin version management and dependency resolution for free.
 
 ## Generate the plugin
 
-You can generate a new plugin directly from OpenProject. Think of a good name and a place (in your filesystem) where the plugin should go. In this example, we have a `plugins` directory right next to the `openproject` directory. Then do
+You can generate a new plugin directly from ProyeksiApp. Think of a good name and a place (in your filesystem) where the plugin should go. In this example, we have a `plugins` directory right next to the `openproject` directory. Then do
 
 ```bash
-bundle exec rails generate open_project:plugin my_plugin ../plugins/
+bundle exec rails generate proyeksi_app:plugin my_plugin ../plugins/
 ```
 
 This generates the plugins `openproject-my_plugin` into the directory `../plugins/openproject-my_plugin`. The new plugin is a rails engine, which can be published as a gem.
@@ -20,9 +20,9 @@ There is an [example plugin](https://github.com/opf/openproject-proto_plugin) wh
 
 Instead of generating a new plugin you can also just clone the example plugin and adapt it.
 
-## Hook the new plugin into OpenProject
+## Hook the new plugin into ProyeksiApp
 
-To include the new plugin into OpenProject, we have to add it into `Gemfile.plugins` like any other OpenProject plugin. Add the following lines to `Gemfile.plugins`:
+To include the new plugin into ProyeksiApp, we have to add it into `Gemfile.plugins` like any other ProyeksiApp plugin. Add the following lines to `Gemfile.plugins`:
 
 ```
 group :opf_plugins do
@@ -44,7 +44,7 @@ To use your plugin in production you have to add it to your [docker](../../insta
 
 ## Start coding
 
-You may have a look at some existing OpenProject plugins to get inspiration. It is possible to add new routes, views, models, … and/or overwrite existing ones.
+You may have a look at some existing ProyeksiApp plugins to get inspiration. It is possible to add new routes, views, models, … and/or overwrite existing ones.
 
 Feel free to ask for help in our [Development Forum](https://www.proyeksi.id/projects/openproject/forums/7).
 
@@ -108,7 +108,7 @@ It is probably best to use READMEs of already released plugins as a template.
 3. Check authors and email point to the right authors.
 4. The homepage should be the homepage of the plugin.
 5. Check if summary and description are there.
-6. Check if all dependencies are listed (this might be difficult, I know): There should be a sentence in the README, that this is an OpenProject-Plugin and requires the core to run. Apart from that, state only dependencies that are not already present in core.
+6. Check if all dependencies are listed (this might be difficult, I know): There should be a sentence in the README, that this is an ProyeksiApp-Plugin and requires the core to run. Apart from that, state only dependencies that are not already present in core.
 7. While you are at it, also check if there is any wiring to core versions necessary in engine.rb; also check, that the url of the plugin is wired correctly.
 8. Push the version of the plugin, mostly by just removing any .preX specials at the end.
 9. Don’t forget to add a changelog entry.
@@ -148,7 +148,7 @@ images, styles and I18n translations.
 
 Translations are processed by I18n.js through Rails and will be picked up from `config/locales/js-<locale>.js`.
 
-Pure frontend plugins are currently not possible without modifications to the OpenProject core `package.json`.
+Pure frontend plugins are currently not possible without modifications to the ProyeksiApp core `package.json`.
 We instead recommend to create a hybrid gem plugin instead (see below).
 
 ## Hybrid plugins

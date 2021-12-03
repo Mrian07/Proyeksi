@@ -19,7 +19,7 @@ module Acts::Journalized
                       .call(notes: @journal_notes)
 
         if create_call.success? && create_call.result
-          OpenProject::Notifications.send(OpenProject::Events::JOURNAL_CREATED,
+          ProyeksiApp::Notifications.send(ProyeksiApp::Events::JOURNAL_CREATED,
                                           journal: create_call.result,
                                           send_notification: Journal::NotificationConfiguration.active?)
         end

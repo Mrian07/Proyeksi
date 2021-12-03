@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.12
+  title: ProyeksiApp 4.0.12
   sidebar_navigation:
       title: 4.0.12
   release_version: 4.0.12
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.0.12
+# ProyeksiApp 4.0.12
 
-OpenProject 4.0.12 contains a bug fix and a security fix.
+ProyeksiApp 4.0.12 contains a bug fix and a security fix.
 
 The following bugs have been fixed:
 

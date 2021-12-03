@@ -1,7 +1,7 @@
 
 
 module Redmine::MenuManager::TopMenu::QuickAddMenu
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
 
   def render_quick_add_menu
     return unless show_quick_add_menu?

@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: System settings
   priority: 770
-description: System settings in OpenProject.
+description: System settings in ProyeksiApp.
 robots: index, follow
 keywords: system settings
 ---

@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module Order
-        class QueryOrderAPI < ::API::OpenProjectAPI
+        class QueryOrderAPI < ::API::ProyeksiAppAPI
           resource :order do
             helpers do
               ##
@@ -37,7 +37,7 @@ module API
                 ) sub;
               SQL
 
-              sql_query = ::OpenProject::SqlSanitization
+              sql_query = ::ProyeksiApp::SqlSanitization
                 .sanitize sql, query_id: @query.id
 
               ActiveRecord::Base.connection

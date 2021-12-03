@@ -15,11 +15,11 @@ describe ApplicationController, type: :controller do
 
   describe 'logging requesting users' do
     let(:user_message) do
-      "OpenProject User: #{user.firstname} Crazy! Name with \#\# " +
+      "ProyeksiApp User: #{user.firstname} Crazy! Name with \#\# " +
         "Newline (#{user.login} ID: #{user.id} <#{user.mail}>)"
     end
 
-    let(:anonymous_message) { 'OpenProject User: Anonymous' }
+    let(:anonymous_message) { 'ProyeksiApp User: Anonymous' }
 
     describe 'with log_requesting_user enabled' do
       before do
@@ -77,7 +77,7 @@ describe ApplicationController, type: :controller do
 
         expect(cookies_double)
           .to receive(:delete)
-          .with(OpenProject::Configuration['autologin_cookie_name'])
+          .with(ProyeksiApp::Configuration['autologin_cookie_name'])
 
         post :index
       end

@@ -16,8 +16,8 @@ describe SCM::CreateLocalRepositoryJob do
   before do
     allow(Setting).to receive(:enabled_scm).and_return(enabled_scms)
 
-    allow(OpenProject::Configuration).to receive(:[]).and_call_original
-    allow(OpenProject::Configuration).to receive(:[]).with('scm').and_return(config)
+    allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
+    allow(ProyeksiApp::Configuration).to receive(:[]).with('scm').and_return(config)
   end
 
   describe 'with a managed repository' do

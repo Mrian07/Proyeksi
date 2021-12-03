@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.3.1
+  title: ProyeksiApp 7.3.1
   sidebar_navigation:
       title: 7.3.1
   release_version: 7.3.1
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 7.3.1
+# ProyeksiApp 7.3.1
 
 ## Bug fixes (7)
 

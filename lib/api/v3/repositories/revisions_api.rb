@@ -2,7 +2,7 @@
 module API
   module V3
     module Repositories
-      class RevisionsAPI < ::API::OpenProjectAPI
+      class RevisionsAPI < ::API::ProyeksiAppAPI
         resources :revisions do
           route_param :id, type: Integer, desc: 'Revision ID' do
             helpers do

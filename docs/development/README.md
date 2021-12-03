@@ -5,9 +5,9 @@ sidebar_navigation:
 robots: index, follow
 ---
 
-# Develop OpenProject
+# Develop ProyeksiApp
 
-We are pleased that you are thinking about contributing to OpenProject! This guide details how to contribute to OpenProject.
+We are pleased that you are thinking about contributing to ProyeksiApp! This guide details how to contribute to ProyeksiApp.
 
 ## Get in touch
 
@@ -17,7 +17,7 @@ Please get in touch with us using our [development forum](https://community.open
 
 ## Issue tracking and coordination
 
-We eat our own ice cream so we use OpenProject for roadmap planning and team collaboration. Please have a look at the following pages:
+We eat our own ice cream so we use ProyeksiApp for roadmap planning and team collaboration. Please have a look at the following pages:
 
 - [Development roadmap](https://community.openproject.com/projects/openproject/work_packages?query_id=1993)
 
@@ -45,13 +45,13 @@ Please see this separate guide for the [git branching model and core development
 
 ## Development concepts
 
-We prepared a set of documentation concepts for an introduction into various backend and frontend related topics of OpenProject. Please see the [concepts main page](concepts/) for more.
+We prepared a set of documentation concepts for an introduction into various backend and frontend related topics of ProyeksiApp. Please see the [concepts main page](concepts/) for more.
 
 
 
 ## Translations
 
-If you want to contribute to the localization of OpenProject and its plugins you can do so on the [Crowdin OpenProject page](https://crowdin.com/project/openproject). Once a day we fetch those locales and automatically them to GitHub. Contributing there will ensure your language will be up to date for the next release!
+If you want to contribute to the localization of ProyeksiApp and its plugins you can do so on the [Crowdin ProyeksiApp page](https://crowdin.com/project/openproject). Once a day we fetch those locales and automatically them to GitHub. Contributing there will ensure your language will be up to date for the next release!
 
 More on this topic can be found in our [blog post](https://www.openproject.org/blog/help-translate-openproject-into-your-language/).
 
@@ -71,7 +71,7 @@ We want to keep the Pull request list as cleaned up as possible - we will aim cl
 
 ## Security
 
-If you notice a security issue in OpenProject, please send us a GPG encrypted email to security@openproject.com and describe the issue you found. Download our public GPG key BDCF E01E DE84 EA19 9AE1 72CE 7D66 9C6D 4753 3958 [here](https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D47533958).
+If you notice a security issue in ProyeksiApp, please send us a GPG encrypted email to security@openproject.com and describe the issue you found. Download our public GPG key BDCF E01E DE84 EA19 9AE1 72CE 7D66 9C6D 4753 3958 [here](https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D47533958).
 
 Please include a description on how to reproduce the issue if possible. Our security team will get your email and will attempt to reproduce and fix the issue as soon as possible.
 
@@ -91,9 +91,9 @@ This code of conduct is adapted from the [Contributor Covenant](https://www.cont
 
 
 
-## OpenProject Contributor License Agreement (CLA)
+## ProyeksiApp Contributor License Agreement (CLA)
 
-If you want to contribute to OpenProject, please make sure to accept our Contributor License Agreement first. The contributor license agreement documents the rights granted by contributors to OpenProject.
+If you want to contribute to ProyeksiApp, please make sure to accept our Contributor License Agreement first. The contributor license agreement documents the rights granted by contributors to ProyeksiApp.
 
 [Read and accept the Contributor License Agreement here.](https://www.openproject.org/contributor-license-agreement/)
 

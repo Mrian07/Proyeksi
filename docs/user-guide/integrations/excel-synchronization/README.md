@@ -2,35 +2,35 @@
 sidebar_navigation:
   title: Excel synchronization
   priority: 599
-description: Excel synchronization with OpenProject
+description: Excel synchronization with ProyeksiApp
 robots: index, follow
 keywords: Excel
 ---
-# Excel synchronization with OpenProject
+# Excel synchronization with ProyeksiApp
 
 ## Video tutorials
 
 ### Download and upload
 
-See how to set up the synchronization between OpenProject work packages and MS Excel.
+See how to set up the synchronization between ProyeksiApp work packages and MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Excel-synchronization-1.-download-and-upload.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-1.-download-and-upload.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize custom queries (views)
 
-See how to synchronize custom work package queries from OpenProject in MS Excel.
+See how to synchronize custom work package queries from ProyeksiApp in MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Excel-Synchronization-2.-custom-queries.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Synchronization-2.-custom-queries.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize hierarchies
 
-See how to synchronize work package hierarchies in OpenProject with MS Excel.
+See how to synchronize work package hierarchies in ProyeksiApp with MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Excel-synchronization-3.-hierarchies.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-3.-hierarchies.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize relations
 
-The OpenProject Excel synchronization also supports relations. To update the relations try the following steps:
+The ProyeksiApp Excel synchronization also supports relations. To update the relations try the following steps:
 
 1. Open the Excel file.
 2. Prepare the headline (choose "*Relations" from drop-down).
@@ -49,14 +49,14 @@ Unfortunately, there is no way to create relation with translated terms via API 
 
 ![allowd-values](image-20211014153150017.png)
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Excel-Relations.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Relations.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 
 ## Step-by-step guide
 
 ### Setting-up the Excel list
 
-1. In order to upload your tasks from an existing Excel list to OpenProject, you need to go to [OpenProjectExcel on GitHub.](https://github.com/opf/OpenProjectExcel)
+1. In order to upload your tasks from an existing Excel list to ProyeksiApp, you need to go to [ProyeksiAppExcel on GitHub.](https://github.com/opf/ProyeksiAppExcel)
 
 2. Click on the green **Clone or download** button.
 
@@ -64,7 +64,7 @@ Unfortunately, there is no way to create relation with translated terms via API 
 
    ![Download-Excel](Download-Excel.png)
 
-4. Then, you need to extract the ZIP file and open the **OpenProjectAPI** Excel document.
+4. Then, you need to extract the ZIP file and open the **ProyeksiAppAPI** Excel document.
 
 ![Open-Excel-900x479@2x](Open-Excel-900x479@2x-1594297430589.png)
 
@@ -82,8 +82,8 @@ Unfortunately, there is no way to create relation with translated terms via API 
 
 
 
-**URL**: the URL of your OpenProject instance.
- **API-Token**: can be generated within your OpenProject installation ->*My Account* -> *Access token*. Generate a new API token and copy & paste it to this form.
+**URL**: the URL of your ProyeksiApp instance.
+ **API-Token**: can be generated within your ProyeksiApp installation ->*My Account* -> *Access token*. Generate a new API token and copy & paste it to this form.
  **Project**: this is the project identifier which can be found within the project you want to synchronize -> *Project settings* -> *Information*. It is also shown in the URL if you open a project.
  Query ID (this field is optional): enter the ID of a work package query  within a project with that you want to synchronize your Excel list.
 
@@ -99,8 +99,8 @@ Unfortunately, there is no way to create relation with translated terms via API 
 
 Additionally, you can select as many other columns that should be  synchronized – always by clicking in the header and selecting the drop  down icon which appears next to the regular icon. You will have all  fields available, incl. custom fields.
 
-**Important**: make sure you have all fields that need to be synchronized from your Excel list also available in OpenProject. **Some might be [created beforehand as custom fields](../../../system-admin-guide/custom-fields/) in OpenProject.**
- Attributes that do not exist in the selected project within OpenProject  are NOT available in the headline. They cannot be selected in the header (via the drop-down). Neither can you just create a new column with an  attribute that does not exist in OpenProject. This will generate an  error message.
+**Important**: make sure you have all fields that need to be synchronized from your Excel list also available in ProyeksiApp. **Some might be [created beforehand as custom fields](../../../system-admin-guide/custom-fields/) in ProyeksiApp.**
+ Attributes that do not exist in the selected project within ProyeksiApp  are NOT available in the headline. They cannot be selected in the header (via the drop-down). Neither can you just create a new column with an  attribute that does not exist in ProyeksiApp. This will generate an  error message.
 
 Copy and paste all data accordingly from your existing Excel list to this sheet.
 
@@ -118,9 +118,9 @@ Copy and paste all data accordingly from your existing Excel list to this sheet.
  **Upload / update work packages**: makes changes to the  work packages, e.g. adding new work packages or changing any information. This option needs to be chosen in order to initially import and  existing Excel list.
  **Show chosen project**: Opens the settings to adapt URL, API key, project or query ID.
 
-Congratulations! You can now synchronize your data between Excel and OpenProject.
+Congratulations! You can now synchronize your data between Excel and ProyeksiApp.
 
-![Excel-OpenProject-synch-900x630@2x](Excel-OpenProject-synch-900x630@2x.png)
+![Excel-ProyeksiApp-synch-900x630@2x](Excel-ProyeksiApp-synch-900x630@2x.png)
 
 
 
@@ -132,7 +132,7 @@ To add or edit a new parent-child relation, you have two possibilities:
 
 ![insert-children](Insert-children-1024x605.png)
 
-**Expert tip**: it does not have to be empty spaces  (default 4 empty spaces) to separate the next hierarchy. You can also  take a „-“ and for the next hierarchy „—“. But the disadvantage is that  the hyphen will also be displayed in the work package subject. Therefore we recommend the spaces, because they will not appear in OpenProject.
+**Expert tip**: it does not have to be empty spaces  (default 4 empty spaces) to separate the next hierarchy. You can also  take a „-“ and for the next hierarchy „—“. But the disadvantage is that  the hyphen will also be displayed in the work package subject. Therefore we recommend the spaces, because they will not appear in ProyeksiApp.
 
 13. Pressing **Ctrl + B** and selecting **Upload / update work packages** will open a window to define a new character for setting a parent-child-relationship (default is 4 empty spaces).
 
@@ -146,10 +146,10 @@ Pressing **Cancel** will ignore the Hierarchy – no matter what has been insert
 
 **B)** you can edit the IDs in the parent column manually. If you have edited the IDs manually in the parent column, just click *Cancel* when the above Search character option (screen 13) appears. Then, the  hierarchy will be updated according to the IDs in the column *Parent*.
 
-14. The parent-child-relation will be displayed in OpenProject.
+14. The parent-child-relation will be displayed in ProyeksiApp.
 
-![Parent-child-OpenProject](Parent-child-OpenProject.png)
+![Parent-child-ProyeksiApp](Parent-child-ProyeksiApp.png)
 
 
 
-Hopefully, this will save you lots of time to import all your old  Excel To-Do lists and get started with OpenProject for project  management.
+Hopefully, this will save you lots of time to import all your old  Excel To-Do lists and get started with ProyeksiApp for project  management.

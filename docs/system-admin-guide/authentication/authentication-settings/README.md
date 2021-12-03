@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Settings
   priority: 990
-description: Authentication settings in OpenProject.
+description: Authentication settings in ProyeksiApp.
 robots: index, follow
 keywords: authentication settings
 ---
@@ -14,7 +14,7 @@ You can adapt the following under the authentication settings:
 
 ## General authentication settings
 
-1. Select if the **authentication is required** to access OpenProject. **Watch out**: If you un-tick this box your OpenProject instance will be visible to the general public without logging in. The visibility of individual projects depends on [this setting](../../../user-guide/projects/#set-a-project-to-public). 
+1. Select if the **authentication is required** to access ProyeksiApp. **Watch out**: If you un-tick this box your ProyeksiApp instance will be visible to the general public without logging in. The visibility of individual projects depends on [this setting](../../../user-guide/projects/#set-a-project-to-public). 
 
 2. Select an option for **self-registration**. Self-registration can either be **disabled**, or it can be allowed with the following criteria:
 
@@ -41,7 +41,7 @@ You can define a footer for your registration emails under -> *Administration* -
 
 ## Configure password settings
 
-You can change various settings to configure password preferences in OpenProject.
+You can change various settings to configure password preferences in ProyeksiApp.
 
 1. Define the **minimum password length**.
 2. Define the password strength and select what **character classes are a mandatory part of the password**.

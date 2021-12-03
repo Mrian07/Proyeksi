@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
-describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::Restdt, with_2fa_ee: true do
+describe ::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Restdt, with_2fa_ee: true do
   describe 'sending messages' do
     let!(:user) { FactoryBot.create :user }
     let!(:device) { FactoryBot.create :two_factor_authentication_device_sms, user: user, channel: channel }
@@ -26,11 +26,11 @@ describe ::OpenProject::TwoFactorAuthentication::TokenStrategy::Restdt, with_2fa
     end
 
     before do
-      allow(OpenProject::Configuration)
+      allow(ProyeksiApp::Configuration)
         .to receive(:[]).with('2fa')
         .and_return(active_strategies: [:restdt], restdt: params)
 
-      allow_any_instance_of(::OpenProject::TwoFactorAuthentication::TokenStrategy::Restdt)
+      allow_any_instance_of(::ProyeksiApp::TwoFactorAuthentication::TokenStrategy::Restdt)
         .to receive(:create_mobile_otp)
         .and_return('1234')
     end

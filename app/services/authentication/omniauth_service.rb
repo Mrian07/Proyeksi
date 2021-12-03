@@ -55,7 +55,7 @@ module Authentication
     def inspect_response(log_level)
       case strategy
       when ::OmniAuth::Strategies::SAML
-        ::OpenProject::AuthSaml::Inspector.inspect_response(auth_hash) do |message|
+        ::ProyeksiApp::AuthSaml::Inspector.inspect_response(auth_hash) do |message|
           Rails.logger.add log_level, message
         end
       else
@@ -65,14 +65,14 @@ module Authentication
         end
       end
     rescue StandardError => e
-      OpenProject.logger.error "[OmniAuth strategy #{strategy.name}] Failed to inspect OmniAuth response: #{e.message}"
+      ProyeksiApp.logger.error "[OmniAuth strategy #{strategy.name}] Failed to inspect OmniAuth response: #{e.message}"
     end
 
     ##
     # After login flow
     def tap_service_result(call)
       if call.success? && user.active?
-        OpenProject::OmniAuth::Authorization.after_login! user, auth_hash, self
+        ProyeksiApp::OmniAuth::Authorization.after_login! user, auth_hash, self
       end
 
       call

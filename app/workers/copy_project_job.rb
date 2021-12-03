@@ -4,7 +4,7 @@
 
 class CopyProjectJob < ApplicationJob
   queue_with_priority :low
-  include OpenProject::LocaleHelper
+  include ProyeksiApp::LocaleHelper
 
   attr_reader :user_id,
               :source_project_id,
@@ -141,6 +141,6 @@ class CopyProjectJob < ApplicationJob
   end
 
   def url_helpers
-    @url_helpers ||= OpenProject::StaticRouting::StaticUrlHelpers.new
+    @url_helpers ||= ProyeksiApp::StaticRouting::StaticUrlHelpers.new
   end
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    openproject-ldap_groups (8.0.0)
+    proyeksiapp-ldap_groups (8.0.0)
 
 GEM
   remote: https://www.rubygems.org/
@@ -15,7 +15,7 @@ PLATFORMS
 
 DEPENDENCIES
   ladle
-  openproject-ldap_groups!
+  proyeksiapp-ldap_groups!
 
 BUNDLED WITH
    1.16.1

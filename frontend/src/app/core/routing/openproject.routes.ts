@@ -103,7 +103,7 @@ export const OPENPROJECT_ROUTES:Ng2StateDeclaration[] = [
     name: 'job-statuses.**',
     parent: 'optional_project',
     url: '/job_statuses',
-    loadChildren: () => import('../../features/job-status/openproject-job-status.module').then((m) => m.OpenProjectJobStatusModule),
+    loadChildren: () => import('../../features/job-status/openproject-job-status.module').then((m) => m.ProyeksiAppJobStatusModule),
   },
   {
     name: 'project_settings.**',

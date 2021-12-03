@@ -5,7 +5,7 @@
 module API
   module V3
     module Versions
-      class VersionsAPI < ::API::OpenProjectAPI
+      class VersionsAPI < ::API::ProyeksiAppAPI
         resources :versions do
           get &::API::V3::Utilities::Endpoints::Index.new(model: Version,
                                                           scope: -> {

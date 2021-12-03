@@ -12,7 +12,7 @@ describe 'layouts/base', type: :view do
       allow(view).to receive(:current_menu_item).and_return('overview')
       allow(view).to receive(:default_breadcrumb)
       allow(view).to receive(:current_user).and_return anonymous
-      allow(OpenProject::Plugins::AuthPlugin).to receive(:providers).and_return([provider])
+      allow(ProyeksiApp::Plugins::AuthPlugin).to receive(:providers).and_return([provider])
     end
 
     context 'with an authenticator with given icon' do

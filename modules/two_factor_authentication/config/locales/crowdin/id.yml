@@ -120,13 +120,13 @@ id:
         text_cannot_scan: |
           Jika Anda tidak dapat memindai kode, Anda dapat memasukkan entri manual menggunakan rincian berikut:
         description: |
-          Mendaftar otentikasi aplikasi untuk digunakan dengan OpenProject yang menggunakan standar otentikasi berbasis waktu kata sandi satu-kali. Contoh umum adalah Google Authenticator atau Authy.
+          Mendaftar otentikasi aplikasi untuk digunakan dengan ProyeksiApp yang menggunakan standar otentikasi berbasis waktu kata sandi satu-kali. Contoh umum adalah Google Authenticator atau Authy.
       sms:
         title: 'Menggunakan ponsel Anda'
         redacted_identifier: 'Perangkat mobile (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, kami mengirimkan kode otentikasi melalui %{delivery_channel}'
         description: |
-          Mendaftarkan nomor ponsel Anda untuk pengiriman sandi satu kali OpenProject.
+          Mendaftarkan nomor ponsel Anda untuk pengiriman sandi satu kali ProyeksiApp.
     sns:
       delivery_failed: 'Pengiriman SNS gagal:'
     message_bird:

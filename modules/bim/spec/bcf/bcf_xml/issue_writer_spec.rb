@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe ::OpenProject::Bim::BcfXml::IssueWriter do
+describe ::ProyeksiApp::Bim::BcfXml::IssueWriter do
   let(:project) { FactoryBot.create(:project) }
   let(:markup) do
     <<-MARKUP
@@ -162,6 +162,6 @@ describe ::OpenProject::Bim::BcfXml::IssueWriter do
   end
 
   def url_helpers
-    @url_helpers ||= OpenProject::StaticRouting::StaticUrlHelpers.new
+    @url_helpers ||= ProyeksiApp::StaticRouting::StaticUrlHelpers.new
   end
 end

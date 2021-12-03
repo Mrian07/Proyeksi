@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module GroupBys
-        class QueryGroupBysAPI < ::API::OpenProjectAPI
+        class QueryGroupBysAPI < ::API::ProyeksiAppAPI
           resource :group_bys do
             helpers do
               def convert_to_ar(attribute)

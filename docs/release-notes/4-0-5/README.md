@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.5
+  title: ProyeksiApp 4.0.5
   sidebar_navigation:
       title: 4.0.5
   release_version: 4.0.5
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 4.0.5
+# ProyeksiApp 4.0.5
 
-OpenProject 4.0.5 has been released which contains several bug fixes.  
-We advise everyone to update their OpenProject installations.
+ProyeksiApp 4.0.5 has been released which contains several bug fixes.  
+We advise everyone to update their ProyeksiApp installations.
 
 The following bugs have been fixed in the core:
 

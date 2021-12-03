@@ -1,5 +1,5 @@
 ---
-title: OpenProject 11.1.0
+title: ProyeksiApp 11.1.0
 sidebar_navigation:
     title: 11.1.0
 release_version: 11.1.0
@@ -7,11 +7,11 @@ release_date: 2020-12-17
 ---
 
 
-# OpenProject 11.1.0
+# ProyeksiApp 11.1.0
 
 Release date: 2020-12-17
 
-We released [OpenProject 11.1.0](https://community.openproject.com/versions/1424).
+We released [ProyeksiApp 11.1.0](https://community.openproject.com/versions/1424).
 This new release will bring many new features and bug fixes that will improve classical as well as agile project management. 
 
 ## Improved styling of the WYSIWYG text editor
@@ -28,7 +28,7 @@ While editing a work package comment and @-notify someone, the user  name will n
 
 ## Display project milestones aggregated for projects in a single row in Gantt chart
 
-With OpenProject 11.1 users are now able to **aggregate milestones for projects in the Gantt chart in one single row**. When grouped by projects, the rows can be collapsed with the collapse  all button and the project milestones are still visible in one row. This way, you easily get a high level overview of all important due dates in a project.
+With ProyeksiApp 11.1 users are now able to **aggregate milestones for projects in the Gantt chart in one single row**. When grouped by projects, the rows can be collapsed with the collapse  all button and the project milestones are still visible in one row. This way, you easily get a high level overview of all important due dates in a project.
 
 ![Aggregated-milestones](Aggregated-milestones.png)
 
@@ -44,7 +44,7 @@ For EU customers it is required by the GDPR to sign a data processing agreement 
 
 Luckily, we now automated this process in order to reduce manual effort on both sides. This way, it is even easier to comply with GDPR. Within -> Administration -> GDPR you can now online review and sign your DPA document with us.
 
-![DPA-OpenProject](DPA-OpenProject.png)
+![DPA-ProyeksiApp](DPA-ProyeksiApp.png)
 
 
 
@@ -78,35 +78,35 @@ There are a lot more things we packed into 11.1 to tell you about.
 - Fixed: 500 on accessing user specific activity page \[[#35621](https://community.openproject.com/wp/35621)\]
 - Fixed: "no end date" instead of "no finish date" in work package form \[[#35624](https://community.openproject.com/wp/35624)\]
 - Fixed: Code-Snippets are shown nested within each other after update to 11.1 \[[#35628](https://community.openproject.com/wp/35628)\]
-- Fixed: Images are left-aligned after update to OpenProject 11.1 \[[#35629](https://community.openproject.com/wp/35629)\]
+- Fixed: Images are left-aligned after update to ProyeksiApp 11.1 \[[#35629](https://community.openproject.com/wp/35629)\]
 - Fixed: Internal error when selecting user link on qa-edge \[[#35640](https://community.openproject.com/wp/35640)\]
 - Fixed: Line breaks within words in table cells \[[#35644](https://community.openproject.com/wp/35644)\]
 - Fixed: Typo in DPA email \[[#35653](https://community.openproject.com/wp/35653)\]
-- Fixed: Typo in DPA text in OpenProject \[[#35654](https://community.openproject.com/wp/35654)\]
+- Fixed: Typo in DPA text in ProyeksiApp \[[#35654](https://community.openproject.com/wp/35654)\]
 - Fixed: Cannot set nummerated headings without duplicating nummeration in table of contents \[[#35656](https://community.openproject.com/wp/35656)\]
 
 ## Installation and Updates
 
-To use OpenProject 11.1 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
+To use ProyeksiApp 11.1 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
 
-Prefer to run OpenProject 11.1 in your own infrastructure?
-Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 11.1 in your own infrastructure?
+Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from your self-managed Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/blog/enterprise-edition-upgrade-test-free/)
 
 Navigate to the -> *Administration*-> *Enterprise Edition* and request your trial token.
 
-## Migrating to OpenProject 11.0
+## Migrating to ProyeksiApp 11.0
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 11.0. Please note the blue box on top of the page.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 11.0. Please note the blue box on top of the page.
 
-We update the hosted OpenProject environments (Enterprise Cloud) automatically.
+We update the hosted ProyeksiApp environments (Enterprise Cloud) automatically.
 
 ## Credits and contributions
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject 11.1.
+- All the developers, designers, project managers who have contributed to ProyeksiApp 11.1.
 
 - The City of Cologne for sponsoring some of the open source features and thus contributing them to the Community.
 
@@ -120,4 +120,4 @@ Special thanks go to all OpenProject contributors without whom this release woul
 
 ## What’s next?
 
-We are continuously developing new features and improvements for  OpenProject. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.openproject.com/projects/openproject/work_packages?query_id=918).
+We are continuously developing new features and improvements for  ProyeksiApp. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.openproject.com/projects/openproject/work_packages?query_id=918).

@@ -3,6 +3,6 @@ class AddThemeNameToCustomStyles < ActiveRecord::Migration[6.0]
     add_column :custom_styles,
                :theme,
                :string,
-               default: OpenProject::CustomStyles::ColorThemes::DEFAULT_THEME_NAME
+               default: ProyeksiApp::CustomStyles::ColorThemes::DEFAULT_THEME_NAME
   end
 end

@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Backlogs
   priority: 670
-description: Configure backlogs in OpenProject.
+description: Configure backlogs in ProyeksiApp.
 robots: index, follow
 keywords: configure backlogs, backlogs settings
 ---
 # Backlogs configuration
 
-Configure your backlogs settings in OpenProject.
+Configure your backlogs settings in ProyeksiApp.
 
 Navigate to *Administration* -> *Backlogs* -> *Settings* to set up your backlogs.
 

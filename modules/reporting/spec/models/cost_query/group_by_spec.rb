@@ -230,7 +230,7 @@ describe CostQuery, type: :model, reporting_query_helper: true do
         check_cache
       end
 
-      include OpenProject::Reporting::SpecHelper::CustomFieldFilterHelper
+      include ProyeksiApp::Reporting::SpecHelper::CustomFieldFilterHelper
 
       it "should create classes for custom fields" do
         # Would raise a name error

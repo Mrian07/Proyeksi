@@ -3,7 +3,7 @@
 module API
   module V3
     module Memberships
-      class MembershipsAPI < ::API::OpenProjectAPI
+      class MembershipsAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         resources :memberships do

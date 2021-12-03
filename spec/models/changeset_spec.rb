@@ -342,7 +342,7 @@ describe Changeset, type: :model do
     end
   end
 
-  describe 'assign_openproject user' do
+  describe 'assign_proyeksiapp user' do
     describe 'w/o user' do
       before do
         changeset.save!

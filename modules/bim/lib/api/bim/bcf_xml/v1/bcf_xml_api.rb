@@ -4,7 +4,7 @@ module API
   module Bim
     module BcfXml
       module V1
-        class BcfXmlAPI < ::API::OpenProjectAPI
+        class BcfXmlAPI < ::API::ProyeksiAppAPI
           prefix :bcf_xml_api
 
           resources :projects do
@@ -44,7 +44,7 @@ module API
                   query = Query.new_default(name: '_', project: project)
                   updated_query = ::API::V3::UpdateQueryFromV3ParamsService.new(query, User.current).call(params)
 
-                  exporter = ::OpenProject::Bim::BcfXml::Exporter.new(updated_query.result)
+                  exporter = ::ProyeksiApp::Bim::BcfXml::Exporter.new(updated_query.result)
                   header['Content-Disposition'] = "attachment; filename=\"#{exporter.bcf_filename}\""
                   env['api.format'] = :binary
                   exporter.export!.content.read
@@ -59,13 +59,13 @@ module API
 
                   begin
                     file = params[:bcf_xml_file][:tempfile]
-                    importer = ::OpenProject::Bim::BcfXml::Importer.new(file,
+                    importer = ::ProyeksiApp::Bim::BcfXml::Importer.new(file,
                                                                         project,
                                                                         current_user: User.current)
 
                     unless importer.bcf_version_valid?
                       error_message = I18n.t('bcf.bcf_xml.import_failed_unsupported_bcf_version',
-                                             minimal_version: OpenProject::Bim::BcfXml::Importer::MINIMUM_BCF_VERSION)
+                                             minimal_version: ProyeksiApp::Bim::BcfXml::Importer::MINIMUM_BCF_VERSION)
 
                       raise API::Errors::UnsupportedMediaType.new(error_message)
                     end

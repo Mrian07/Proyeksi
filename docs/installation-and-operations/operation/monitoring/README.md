@@ -4,7 +4,7 @@ sidebar_navigation:
   priority: 6
 ---
 
-# Monitoring your OpenProject installation
+# Monitoring your ProyeksiApp installation
 
 ## Show logs
 
@@ -41,7 +41,7 @@ docker logs -f --tail 1000 openproject
 
 ### Raising the log level
 
-OpenProject can log at different service levels, the default being `info`. You can set the [environment variable](../../configuration/environment/#environment-variables) `OPENPROJECT_LOG__LEVEL` to any of the following values:
+ProyeksiApp can log at different service levels, the default being `info`. You can set the [environment variable](../../configuration/environment/#environment-variables) `OPENPROJECT_LOG__LEVEL` to any of the following values:
 
 - debug, info, warn, error
 

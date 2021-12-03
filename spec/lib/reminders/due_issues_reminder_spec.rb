@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OpenProject::Reminders::DueIssuesReminder do
+describe ProyeksiApp::Reminders::DueIssuesReminder do
   subject do
     described_class.new(days: days, user_ids: user_ids).tap do |instance|
       instance.remind_users

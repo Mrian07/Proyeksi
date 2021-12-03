@@ -3,7 +3,7 @@
 module API
   module V3
     module UserPreferences
-      class PreferencesByUserAPI < ::API::OpenProjectAPI
+      class PreferencesByUserAPI < ::API::ProyeksiAppAPI
         resource :preferences do
           # The empty namespaces are added so that anonymous users can receive a 401 response
           namespace '' do

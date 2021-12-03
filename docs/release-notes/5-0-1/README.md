@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.1
+  title: ProyeksiApp 5.0.1
   sidebar_navigation:
       title: 5.0.1
   release_version: 5.0.1
@@ -7,12 +7,12 @@
 ---
 
 
-# OpenProject 5.0.1
+# ProyeksiApp 5.0.1
 
-OpenProject 5.0.1 contains several bug fixes and additional translations
-for the OpenProject core and plugins.
+ProyeksiApp 5.0.1 contains several bug fixes and additional translations
+for the ProyeksiApp core and plugins.
 
-The following bugs have been fixed with OpenProject 5.0.1:
+The following bugs have been fixed with ProyeksiApp 5.0.1:
 
   - An error in the documents plugin caused an error on the enumeration
     page
@@ -38,12 +38,12 @@ The following bugs have been fixed with OpenProject 5.0.1:
   - A wrong English translation has been adjusted
     ([\#22092](https://community.openproject.org/work_packages/22092/activity)).
 
-In addition, new translations have been added to OpenProject and the
+In addition, new translations have been added to ProyeksiApp and the
 plugins.
 
-Thanks to everyone who helped to translate and proof read OpenProject\!
+Thanks to everyone who helped to translate and proof read ProyeksiApp\!
 
-To help translate OpenProject, please take a look at the [OpenProject
+To help translate ProyeksiApp, please take a look at the [ProyeksiApp
 CrowdIn projects](https://crowdin.com/projects/opf).
 
 For further information on the release, please refer to the [Changelog

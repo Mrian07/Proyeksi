@@ -56,4 +56,4 @@ ja:
           title: '選択したプロジェクト'
         secret:
           description: >
-            設定されている場合、OpenProjectによってこのシークレットの値がWebhookペイロードに署名するために使用されます。
+            設定されている場合、ProyeksiAppによってこのシークレットの値がWebhookペイロードに署名するために使用されます。

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.0
+  title: ProyeksiApp 4.2.0
   sidebar_navigation:
       title: 4.2.0
   release_version: 4.2.0
@@ -7,20 +7,20 @@
 ---
 
 
-# **OpenProject 4.2.0**
+# **ProyeksiApp 4.2.0**
 
-## **Language support for OpenProject plugins**
+## **Language support for ProyeksiApp plugins**
 
-OpenProject 4.2.0 includes language support for OpenProject core and
+ProyeksiApp 4.2.0 includes language support for ProyeksiApp core and
 plugins
 ([\#14922](https://community.openproject.org/work_packages/14922)) and
-creates the foundation for a complete translation of OpenProject.
+creates the foundation for a complete translation of ProyeksiApp.
 
-In total, more than 30 languages exist for OpenProject for which
+In total, more than 30 languages exist for ProyeksiApp for which
 translations can be added or changed via CrowdIn.
 
-To help translate OpenProject in additional languages take a look at the
-[OpenProject projects on CrowdIn](https://crowdin.com/projects/opf).
+To help translate ProyeksiApp in additional languages take a look at the
+[ProyeksiApp projects on CrowdIn](https://crowdin.com/projects/opf).
 
 To request additional languages, please contact the project managers via
 CrowdIn.
@@ -33,7 +33,7 @@ core (Gemfile).
 
 ## **Improved navigation**
 
-A couple of changes have been made to the OpenProject navigation
+A couple of changes have been made to the ProyeksiApp navigation
 ([\#20530](https://community.openproject.org/work_packages/20530)).
 
 Navigation entries which previously were quite hidden (such as viewing
@@ -56,7 +56,7 @@ The option “Spent time” has been renamed “Time sheet”
 
 ## **Improved design**
 
-OpenProject 4.2 contains various design improvements to provide a better
+ProyeksiApp 4.2 contains various design improvements to provide a better
 and cleaner user interface.
 
 For instance, the search and help icon (which now opens in a new window
@@ -74,7 +74,7 @@ standardized use of UI elements.
 
 ## **Usability improvements**
 
-A number of usability improvements have been included with OpenProject
+A number of usability improvements have been included with ProyeksiApp
 4.2.
 
 For example, users email addresses are no longer displayed in the user
@@ -87,7 +87,7 @@ the project overview to the project settings
 
 ## **Additional functionalities for API v3**
 
-Several new features have been included in the future OpenProject API.
+Several new features have been included in the future ProyeksiApp API.
 The [API v3](../../api/) now enables
 work package creation
 ([\#19987](https://community.openproject.org/work_packages/19987)), CRUD
@@ -100,5 +100,5 @@ Please note that the API v3 is still a draft.
 
 ## **Substantial number of bug fixes**
 
-A large number of bugs have been fixed with the release of OpenProject
+A large number of bugs have been fixed with the release of ProyeksiApp
 4.2.

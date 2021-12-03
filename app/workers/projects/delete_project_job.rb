@@ -5,7 +5,7 @@
 module Projects
   class DeleteProjectJob < UserJob
     queue_with_priority :low
-    include OpenProject::LocaleHelper
+    include ProyeksiApp::LocaleHelper
 
     attr_reader :project
 

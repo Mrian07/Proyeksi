@@ -28,8 +28,8 @@ vi:
         main-menu-hover-font-color: "Phông chữ menu chính khi trỏ chuột"
         main-menu-border-color: "Đường viền menu chính"
       custom_colors: "Tùy chỉnh màu sắc"
-      customize: "Tùy chỉnh cài đặt OpenProject của bạn với logo của riêng bạn: Ghi chú: Logo này sẽ được truy cập công khai."
-      enterprise_notice: "As a special 'Thank you!' for their financial contribution to develop OpenProject, this tiny feature is only available for Enterprise Edition support subscribers."
+      customize: "Tùy chỉnh cài đặt ProyeksiApp của bạn với logo của riêng bạn: Ghi chú: Logo này sẽ được truy cập công khai."
+      enterprise_notice: "As a special 'Thank you!' for their financial contribution to develop ProyeksiApp, this tiny feature is only available for Enterprise Edition support subscribers."
       manage_colors: "Chỉnh sửa màu sắc trong select option"
       instructions:
         alternative-color: "Màu nhấn mạnh, thường được sử dụng cho nút quan trọng nhất trên màn hình."
@@ -81,8 +81,8 @@ vi:
       name: Tên tùy ý của kết nối LDAP
       host: Tên máy chủ LDAP hoặc địa chỉ IP
       login_map: Khóa thuộc tính trong LDAP được sử dụng để xác định thông tin đăng nhập người dùng duy nhất. Thông thường, đây sẽ là `uid` hoặc` samAccountName`.
-      generic_map: "84/5000\nKhóa thuộc tính trong LDAP được ánh xạ tới thuộc tính `%{attribute}` của OpenProject"
-      admin_map_html: "Tùy chọn: Khóa thuộc tính trong LDAP mà <strong>nếu có</strong> đánh dấu người dùng OpenProject là quản trị viên. Để trống khi nghi ngờ."
+      generic_map: "84/5000\nKhóa thuộc tính trong LDAP được ánh xạ tới thuộc tính `%{attribute}` của ProyeksiApp"
+      admin_map_html: "Tùy chọn: Khóa thuộc tính trong LDAP mà <strong>nếu có</strong> đánh dấu người dùng ProyeksiApp là quản trị viên. Để trống khi nghi ngờ."
       system_user_dn_html: |
 
         58/5000
@@ -91,29 +91,29 @@ vi:
         Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Nhập mật khẩu liên kết của người dùng hệ thống
       base_dn: |
-        Enter the Base DN of the subtree in LDAP you want OpenProject to look for users and groups.
-        OpenProject will filter for provided usernames in this subtree only.
+        Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
+        ProyeksiApp will filter for provided usernames in this subtree only.
         Example: ou=users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        If you check this box, OpenProject will automatically create new users from their LDAP entries
-        when they first authenticate with OpenProject.
-        Leave this unchecked to only allow existing accounts in OpenProject to authenticate through LDAP!
+        If you check this box, ProyeksiApp will automatically create new users from their LDAP entries
+        when they first authenticate with ProyeksiApp.
+        Leave this unchecked to only allow existing accounts in ProyeksiApp to authenticate through LDAP!
     connection_encryption: 'Mã hóa kết nối'
     system_account: 'Tài khoản hệ thống'
     system_account_legend: |
-      OpenProject requires read-only access through a system account to lookup users and groups in your LDAP tree.
+      ProyeksiApp requires read-only access through a system account to lookup users and groups in your LDAP tree.
       Please specify the bind credentials for that system user in the following section.
     ldap_details: 'Chi tiết LDAP '
     user_settings: 'Attribute mapping'
     user_settings_legend: |
-      The following fields are related to how users are created in OpenProject from LDAP entries and
-      what LDAP attributes are used to define the attributes of an OpenProject user (attribute mapping).
+      The following fields are related to how users are created in ProyeksiApp from LDAP entries and
+      what LDAP attributes are used to define the attributes of an ProyeksiApp user (attribute mapping).
     tls_mode:
       plain: 'không'
       simple_tls: 'simple_tls'
@@ -523,7 +523,7 @@ vi:
         confirmation: "không khớp %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "không tồn tại"
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "Có thể không được truy cập."
         error_readonly: "was attempted to be written but is not writable."
         email: "is not a valid email address."
@@ -1174,7 +1174,7 @@ vi:
   error_can_not_unarchive_project: "Dự án này không thể lưu trữ: %{errors}"
   error_check_user_and_role: "Hãy chọn người dùng và một vai trò."
   error_code: "Lỗi %{code}"
-  error_cookie_missing: 'The OpenProject cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without.'
+  error_cookie_missing: 'The ProyeksiApp cookie is missing. Please ensure that cookies are enabled, as this application will not properly function without.'
   error_custom_option_not_found: "Tùy chọn không tồn tại."
   error_enterprise_activation_user_limit: "Không thể kích hoạt tài khoản của bạn (đã đạt đến giới hạn người dùng). Vui lòng liên hệ với quản trị viên của bạn để có quyền truy cập."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1188,7 +1188,7 @@ vi:
   error_work_package_done_ratios_not_updated: "Tỉ lệ hoàn thành Work package không được cập nhật."
   error_work_package_not_found_in_project: "Work package không được tìm thấy hoặc không thuộc về dự án này"
   error_must_be_project_member: "phải là thành viên dự án"
-  error_migrations_are_pending: "Your OpenProject installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
+  error_migrations_are_pending: "Your ProyeksiApp installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
   error_migrations_visit_upgrade_guides: "Please visit our upgrade guide documentation"
   error_no_default_work_package_status: "Không có tình trạng mặc định được định nghĩa cho work package. Vui lòng kiểm tra cấu hình của bạn (đi đến \"Quản lý-> các trạng thái của work package\")."
   error_no_type_in_project: "Không có kiểu được liên kết với dự án này. Hãy kiểm tra lại phần \"Thiết Lập Dự Án\"."
@@ -1262,7 +1262,7 @@ vi:
       no_visible_projects: "Không có không có thể nhìn thấy các dự án trong trường hợp này."
       users: "Newest registered users in this instance."
     blocks:
-      community: "Cộng đồng OpenProject"
+      community: "Cộng đồng ProyeksiApp"
       upsale:
         title: "Nâng cấp lên Ultimate Edition"
         more_info: "More information"
@@ -1273,7 +1273,7 @@ vi:
       faq: "FAQ"
       glossary: "Glossary"
       shortcuts: "Shortcuts"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Diễn đàn cộng đồng"
       newsletter: "Security alerts / Newsletter"
   image_conversion:
@@ -1314,9 +1314,9 @@ vi:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1325,7 +1325,7 @@ vi:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Tin tức'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1638,7 +1638,7 @@ vi:
   label_open_menu: "Mở trình đơn"
   label_open_work_packages: "mở"
   label_open_work_packages_plural: "mở"
-  label_openproject_website: "Trang web OpenProject"
+  label_openproject_website: "Trang web ProyeksiApp"
   label_optional_description: "Mô tả"
   label_options: "Tuỳ chọn"
   label_other: "Khác"
@@ -1937,17 +1937,17 @@ vi:
   mail_body_backup_token_reset_user_info: Token sao lưu của bạn đã được thiết lập lại.
   mail_body_backup_token_info: Token trước đó không còn hiệu lực.
   mail_body_backup_waiting_period: Mã token sao lưu sẽ được kích hoạt trong %{hours} giờ.
-  mail_body_backup_token_warning: Nếu đây không phải là bạn, hãy đăng nhập vào OpenProject ngay lập tức và thiết lập lại lại.
+  mail_body_backup_token_warning: Nếu đây không phải là bạn, hãy đăng nhập vào ProyeksiApp ngay lập tức và thiết lập lại lại.
   mail_body_lost_password: "To change your password, click on the following link:"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} work package(s) that are assigned to you are due in the next %{days} days:"
   mail_body_group_reminder: "%{count}  gói công việc được gán cho nhóm \"%{group}\" là do %{days} ngày tiếp theo:"
@@ -1986,14 +1986,14 @@ vi:
   mail_user_activation_limit_reached:
     subject: User activation limit reached
     message: |
-      A new user (%{email}) tried to create an account on an OpenProject environment that you manage (%{host}).
+      A new user (%{email}) tried to create an account on an ProyeksiApp environment that you manage (%{host}).
       The user cannot activate their account since the user limit has been reached.
     steps:
       label: "To allow the user to sign in you can either: "
       a: "Upgrade your payment plan ([here](upgrade_url))" #here turned into a link
       b: "Lock or delete an existing user ([here](users_url))" #here turned into a link
   more_actions: "More functions"
-  noscript_description: "You need to activate JavaScript in order to use OpenProject!"
+  noscript_description: "You need to activate JavaScript in order to use ProyeksiApp!"
   noscript_heading: "JavaScript disabled"
   noscript_learn_more: "Learn more"
   notice_accessibility_mode: Chế độ tiếp cận có thể được kích hoạt trong [tài khoản settings](url) của bạn.
@@ -2057,7 +2057,7 @@ vi:
   notice_wont_delete_auth_source: Chế độ xác thực không thể bị xóa trong khi người dùng vẫn đang sử dụng nó.
   notice_project_cannot_update_custom_fields: "Bạn không thể cập nhật các mục tùy chỉnh có sẵn của dự án. Dự án không hợp lệ: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Trang này được tạo ra tự động trong quá trình Cập Nhật của OpenProject. Nó chứa tất cả các tập tin đính kèm trước đó liên kết với %{container_type} "%{container_name}".
+    Trang này được tạo ra tự động trong quá trình Cập Nhật của ProyeksiApp. Nó chứa tất cả các tập tin đính kèm trước đó liên kết với %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2079,9 +2079,9 @@ vi:
           tb: "TB"
   onboarding:
     heading_getting_started: "Get an overview"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with ProyeksiApp."
     text_show_again: "Bạn có thể khởi động lại video này từ trình đơn trợ giúp"
-    welcome: "Welcome to OpenProject"
+    welcome: "Welcome to ProyeksiApp"
     select_language: "Please select your language"
   permission_add_work_package_notes: "Add notes"
   permission_add_work_packages: "Thêm mới Gói công việc"
@@ -2140,7 +2140,7 @@ vi:
   permission_select_project_modules: "Select project modules"
   permission_manage_types: "Select types"
   permission_view_calendar: "View calendar"
-  permission_view_changesets: "View repository revisions in OpenProject"
+  permission_view_changesets: "View repository revisions in ProyeksiApp"
   permission_view_commit_author_statistics: "View commit author statistics"
   permission_view_work_package_watchers: "View watchers list"
   permission_view_work_packages: "View work packages"
@@ -2222,7 +2222,7 @@ vi:
     destroy:
       confirmation: "If you continue, this will permanently delete the managed repository."
       info: "Deleting the repository is an irreversible action."
-      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by OpenProject."
+      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by ProyeksiApp."
       managed_path_note: "The following directory will be erased: %{path}"
       repository_verification: "Enter the project's identifier %{identifier} to verify the deletion of its repository."
       subtitle: "Do you really want to delete the %{repository_type} of the project %{project_name}?"
@@ -2236,8 +2236,8 @@ vi:
       empty_repository: "The repository exists, but is empty. It does not contain any revisions yet."
       exists_on_filesystem: "The repository directory already exists in the filesystem."
       filesystem_access_failed: "An error occurred while accessing the repository in the filesystem: %{message}"
-      not_manageable: "This repository vendor cannot be managed by OpenProject."
-      path_permission_failed: "An error occurred trying to create the following path: %{path}. Please ensure that OpenProject may write to that folder."
+      not_manageable: "This repository vendor cannot be managed by ProyeksiApp."
+      path_permission_failed: "An error occurred trying to create the following path: %{path}. Please ensure that ProyeksiApp may write to that folder."
       unauthorized: "You're not authorized to access the repository or the credentials are invalid."
       unavailable: "The repository is unavailable."
       exception_title: "Cannot access the repository: %{message}"
@@ -2254,9 +2254,9 @@ vi:
         path_encoding: "Override Git path encoding (Default: UTF-8)"
       local_title: "Link existing local Git repository"
       local_url: "Local URL"
-      local_introduction: "If you have an existing local Git repository, you can link it with OpenProject to access it from within the application."
-      managed_introduction: "Let OpenProject create and integrate a local Git repository automatically."
-      managed_title: "Git repository integrated into OpenProject"
+      local_introduction: "If you have an existing local Git repository, you can link it with ProyeksiApp to access it from within the application."
+      managed_introduction: "Let ProyeksiApp create and integrate a local Git repository automatically."
+      managed_title: "Git repository integrated into ProyeksiApp"
       managed_url: "Managed URL"
       path: "Path to Git repository"
       path_encoding: "Mã hóa đường dẫn"
@@ -2273,19 +2273,19 @@ vi:
     scm_types:
       local: "Link existing local repository"
       existing: "Link existing repository"
-      managed: "Create new repository in OpenProject"
+      managed: "Create new repository in ProyeksiApp"
     storage:
       not_available: "Disk storage consumption is not available for this repository."
       update_timeout: "Keep the last required disk space information for a repository for N minutes.\nAs counting the required disk space of a repository may be costly, increase this value to reduce performance impact."
     subversion:
       existing_title: "Existing Subversion repository"
-      existing_introduction: "If you have an existing Subversion repository, you can link it with OpenProject to access it from within the application."
+      existing_introduction: "If you have an existing Subversion repository, you can link it with ProyeksiApp to access it from within the application."
       existing_url: "Existing URL"
       instructions:
         managed_url: "This is the URL of the managed (local) Subversion repository."
         url: "Enter the repository URL. This may either target a local repository (starting with %{local_proto} ), or a remote repository.\nThe following URL schemes are supported:"
-      managed_title: "Subversion repository integrated into OpenProject"
-      managed_introduction: "Let OpenProject create and integrate a local Subversion repository automatically."
+      managed_title: "Subversion repository integrated into ProyeksiApp"
+      managed_introduction: "Let ProyeksiApp create and integrate a local Subversion repository automatically."
       managed_url: "Managed URL"
       password: "Repository Password"
       username: "Repository username"
@@ -2302,7 +2302,7 @@ vi:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Documentation"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2462,7 +2462,7 @@ vi:
       sentence_connector: "and"
       skip_last_comma: "false"
   text_accessibility_hint: "The accessibility mode is designed for users who are blind, motorically handicaped or have a bad eyesight. For the latter focused elements are specially highlighted. Please notice, that the Backlogs module is not available in this mode."
-  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in OpenProject."
+  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in ProyeksiApp."
   text_analyze: "Further analyze: %{subject}"
   text_are_you_sure: "Are you sure?"
   text_are_you_sure_with_children: "Delete work package and all child work packages?"
@@ -2531,7 +2531,7 @@ vi:
   text_no_notes: "There are no comments available for this work package."
   text_notice_too_many_values_are_inperformant: "Note: Displaying more than 100 items per page can increase the page load time."
   text_notice_security_badge_displayed_html: >
-    Lưu ý: nếu được kích hoạt, một bảng thông báo về tình trạng của phần mềm sẽ được hiển thị tại trang quản trị <a href="%{information_panel_path}">%{information_panel_label}</a>, và tại trang chủ. Thông tin này chỉ được thấy bởi Quản trị viên. <br/> Bảng thông báo sẽ kiểm tra các thông tin cập nhật từ OpenProject và thông báo về các cập nhật mới hay các lỗi được phát hiện. Để biết thêm chi tiết, vui lòng tham khảo <a href="%{more_info_url}">tài liệu cấu hình</a>.
+    Lưu ý: nếu được kích hoạt, một bảng thông báo về tình trạng của phần mềm sẽ được hiển thị tại trang quản trị <a href="%{information_panel_path}">%{information_panel_label}</a>, và tại trang chủ. Thông tin này chỉ được thấy bởi Quản trị viên. <br/> Bảng thông báo sẽ kiểm tra các thông tin cập nhật từ ProyeksiApp và thông báo về các cập nhật mới hay các lỗi được phát hiện. Để biết thêm chi tiết, vui lòng tham khảo <a href="%{more_info_url}">tài liệu cấu hình</a>.
   text_own_membership_delete_confirmation: "You are about to remove some or all of your permissions and may no longer be able to edit this project after that.\nAre you sure you want to continue?"
   text_plugin_assets_writable: "Plugin assets directory writable"
   text_powered_by: "Powered by %{link}"
@@ -2539,7 +2539,7 @@ vi:
   text_reassign: "Reassign to work package:"
   text_regexp_info: "eg. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Biểu thức được áp dụng ở chế độ đa dòng. Ví dụ: ^---\s+'
-  text_repository_usernames_mapping: "Select or update the OpenProject user mapped to each username found in the repository log.\nUsers with the same OpenProject and repository username or email are automatically mapped."
+  text_repository_usernames_mapping: "Select or update the ProyeksiApp user mapped to each username found in the repository log.\nUsers with the same ProyeksiApp and repository username or email are automatically mapped."
   text_status_changed_by_changeset: "Applied in changeset %{value}."
   text_table_difference_description: "In this table the single %{entries} are shown. You can view the difference between any two entries by first selecting the according checkboxes in the table. When clicking on the button below the table the differences are shown."
   text_time_logged_by_changeset: "Applied in changeset %{value}."
@@ -2743,7 +2743,7 @@ vi:
     activate_and_reset_failed_logins: "Activate and reset failed logins"
     authentication_provider: "Authentication Provider"
     authentication_settings_disabled_due_to_external_authentication: >
-      This user authenticates via an external authentication provider, so there is no password in OpenProject to be changed.
+      This user authenticates via an external authentication provider, so there is no password in ProyeksiApp to be changed.
     authorization_rejected: "You are not allowed to sign in."
     assign_random_password: "Assign random password (sent to user via email)"
     blocked: "locked temporarily"
@@ -2773,7 +2773,7 @@ vi:
   warning: Warning
   warning_attachments_not_saved: "%{count} file(s) could not be saved."
   warning_imminent_user_limit: >
-    You invited more users than are supported by your current plan. Invited users may not be able to join your OpenProject environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
+    You invited more users than are supported by your current plan. Invited users may not be able to join your ProyeksiApp environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
   warning_registration_token_expired: |
     Mail kích hoạt đã hết hạn. Sẽ gửi mail mới tới %{email}.
   warning_user_limit_reached: >
@@ -2906,21 +2906,21 @@ vi:
         confidential: "Kiểm tra xem ứng dụng sẽ được sử dụng trong khi thông tin mật của khách hàng vẫn được đảm bảo. Các ứng dụng di động và Ứng dụng web được cho là không bảo mật."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "ID người dùng tùy chọn để mạo danh khi khách hàng sử dụng ứng dụng này. Để trống để chỉ cho phép truy cập công cộng"
-        register_intro: "If you are developing an OAuth API client application for OpenProject, you can register it using this form for all users to use."
+        register_intro: "If you are developing an OAuth API client application for ProyeksiApp, you can register it using this form for all users to use."
         default_scopes: ""
     client_id: "ID Khách hàng"
     client_secret_notice: >
-      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by OpenProject at a later time.
+      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by ProyeksiApp at a later time.
     authorization_dialog:
       authorize: "Xác thực"
       cancel: "Hủy bỏ và từ chối xác thực."
       prompt_html: "Authorize <strong>%{application_name}</strong> to use your account <em>%{login}</em>?"
       title: "Authorize %{application_name}"
       wants_to_access_html: >
-        This application requests access to your OpenProject account. <br/> <strong>It has requested the following permissions:</strong>
+        This application requests access to your ProyeksiApp account. <br/> <strong>It has requested the following permissions:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the ProyeksiApp API v3 to perform actions on your behalf."
     grants:
       created_date: "Đã duyệt"
       scopes: "Phân Quyền"
@@ -2935,7 +2935,7 @@ vi:
     client_credentials_impersonation_set_to: "Client credentials user set to"
     client_credentials_impersonation_warning: "Note: Clients using the 'Client credentials' flow in this application will have the rights of this user"
     client_credentials_impersonation_html: >
-      By default, OpenProject provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
+      By default, ProyeksiApp provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
     authorization_error: "An authorization error has occurred."
     revoke_my_application_confirmation: "Do you really want to remove this application? This will revoke %{token_count} active for it."
     my_registered_applications: "Registered OAuth applications"

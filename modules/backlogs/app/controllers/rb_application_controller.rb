@@ -28,7 +28,7 @@ class RbApplicationController < ApplicationController
   end
 
   def check_if_plugin_is_configured
-    settings = Setting.plugin_openproject_backlogs
+    settings = Setting.plugin_proyeksiapp_backlogs
     if settings['story_types'].blank? || settings['task_type'].blank?
       respond_to do |format|
         format.html { render template: 'shared/not_configured' }

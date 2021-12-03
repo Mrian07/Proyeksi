@@ -1,7 +1,7 @@
 
 
 class RbExportCardConfigurationsController < RbApplicationController
-  include OpenProject::PDFExport::ExportCard
+  include ProyeksiApp::PDFExport::ExportCard
 
   before_action :load_project_and_sprint
 
@@ -12,7 +12,7 @@ class RbExportCardConfigurationsController < RbApplicationController
   def show
     config = ExportCardConfiguration.find(params[:id])
 
-    cards_document = OpenProject::PDFExport::ExportCard::DocumentGenerator.new(config, @sprint.stories(@project))
+    cards_document = ProyeksiApp::PDFExport::ExportCard::DocumentGenerator.new(config, @sprint.stories(@project))
 
     filename = "#{@project}-#{@sprint}-#{Time.now.strftime('%B-%d-%Y')}.pdf"
     respond_to do |format|

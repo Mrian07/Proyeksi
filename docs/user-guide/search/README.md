@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Search
   priority: 000
-description: How to use the search bar and search feature in OpenProject
+description: How to use the search bar and search feature in ProyeksiApp
 robots: index, follow
 keywords: search, find, filter, search bar
 ---
 
 # Search features
 
-There are two ways to search for work packages, documents, projects, etc. in OpenProject: The search bar and the advanced search. 
+There are two ways to search for work packages, documents, projects, etc. in ProyeksiApp: The search bar and the advanced search. 
 
 ## Search bar
 
@@ -27,7 +27,7 @@ To access the more detailed, advanced search, choose one of the options shown be
 
 If you do not have a project open at the moment, the first two options won't be shown.
 
-Now, you can find the results for your search term from different categories/parts of OpenProject. In the work packages section you can click on **Advanced filter** to access additional filter options (the same as in other work package lists).
+Now, you can find the results for your search term from different categories/parts of ProyeksiApp. In the work packages section you can click on **Advanced filter** to access additional filter options (the same as in other work package lists).
 
 ![search-result-categories](image-20210412205730857.png)
 

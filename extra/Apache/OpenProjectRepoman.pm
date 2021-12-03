@@ -1,4 +1,4 @@
-package Apache::OpenProjectRepoman;
+package Apache::ProyeksiAppRepoman;
 
 use strict;
 use warnings FATAL => 'all', NONFATAL => 'redefine';

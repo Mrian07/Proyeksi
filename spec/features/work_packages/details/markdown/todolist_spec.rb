@@ -132,10 +132,10 @@ describe 'Todolists in CKEditor', js: true do
       ckeditor.click_toolbar_button 'To-do List'
       ckeditor.type_slowly 'Todo item 1'
       ckeditor.type_slowly :enter
-      ckeditor.insert_link 'https://community.openproject.com'
+      ckeditor.insert_link 'https://community.proyeksiapp.com'
       ckeditor.type_slowly :enter
       ckeditor.type_slowly :tab
-      ckeditor.insert_link 'https://community.openproject.com/nested'
+      ckeditor.insert_link 'https://community.proyeksiapp.com/nested'
 
       # Update the link text, no idea how to do this differently
       ckeditor.in_editor do |_container, editable|
@@ -158,15 +158,15 @@ describe 'Todolists in CKEditor', js: true do
       expect(page).to have_selector('.op-uc-list--task-checkbox', count: 3)
       expect(page).to have_selector('.op-uc-list--task-checkbox[checked]', count: 1)
 
-      expect(page).to have_selector('.op-uc-list--item a[href="https://community.openproject.com/"]')
-      nested_link = page.find('.op-uc-list--item .op-uc-list--item a[href="https://community.openproject.com/nested"]')
+      expect(page).to have_selector('.op-uc-list--item a[href="https://community.proyeksiapp.com/"]')
+      nested_link = page.find('.op-uc-list--item .op-uc-list--item a[href="https://community.proyeksiapp.com/nested"]')
       expect(nested_link.text).to eq 'This is a link'
 
       description = WorkPackage.last.description
       expected = <<~EOS
         *   [ ] Todo item 1
-        *   [ ] [https://community.openproject.com](https://community.openproject.com/)
-            *   [x] [This is a link](https://community.openproject.com/nested)
+        *   [ ] [https://community.proyeksiapp.com](https://community.proyeksiapp.com/)
+            *   [x] [This is a link](https://community.proyeksiapp.com/nested)
       EOS
 
       expect(description.strip).to eq expected.strip

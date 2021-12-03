@@ -28,8 +28,8 @@ sv:
         main-menu-hover-font-color: "Main menu font on hover"
         main-menu-border-color: "Main menu border"
       custom_colors: "Anpassade färger"
-      customize: "Anpassa din OpenProject-installation med din egna logotyp. OBS: Denna logotyp kommer att vara allmänt tillgänglig."
-      enterprise_notice: "Som ett särskilt Tack! för det ekonomiska bidraget till utvecklingen av OpenProject, är denna lilla funktion endast tillgänglig för Enterprise Edition support-prenumeranter."
+      customize: "Anpassa din ProyeksiApp-installation med din egna logotyp. OBS: Denna logotyp kommer att vara allmänt tillgänglig."
+      enterprise_notice: "Som ett särskilt Tack! för det ekonomiska bidraget till utvecklingen av ProyeksiApp, är denna lilla funktion endast tillgänglig för Enterprise Edition support-prenumeranter."
       manage_colors: "Redigera alternativ för valbara färger"
       instructions:
         alternative-color: "Strong accent color, typically used for the most important button on a screen."
@@ -81,37 +81,37 @@ sv:
       name: Ett godtyckligt namn på LDAP-anslutningen
       host: LDAP-värdnamn eller IP-adress
       login_map: Attributnyckeln i LDAP som används för att identifiera den unika användarinloggningen. Vanligtvis kommer detta att vara `uid` eller `samAccountName`.
-      generic_map: Attributnyckeln i LDAP som är mappad till attributet OpenProject `%{attribute}`
-      admin_map_html: "Valfritt: Attributnyckeln i LDAP som <strong>om den finns</strong> markerar OpenProject-användaren en administratör. Lämna tomt när du är osäker."
+      generic_map: Attributnyckeln i LDAP som är mappad till attributet ProyeksiApp `%{attribute}`
+      admin_map_html: "Valfritt: Attributnyckeln i LDAP som <strong>om den finns</strong> markerar ProyeksiApp-användaren en administratör. Lämna tomt när du är osäker."
       system_user_dn_html: |
         Ange DN för systemanvändaren som används för skrivskyddad åtkomst.
         <br/>
         Exempel: uid=openproject,ou=system,dc=exempel,dc=com
       system_user_password: Ange bindlösenord för systemanvändaren
       base_dn: |
-        Ange bas-DN för underträdet i LDAP som du vill att OpenProject ska leta efter användare och grupper.
-        OpenProject filtrerar endast angivna användarnamn i detta underträd.
+        Ange bas-DN för underträdet i LDAP som du vill att ProyeksiApp ska leta efter användare och grupper.
+        ProyeksiApp filtrerar endast angivna användarnamn i detta underträd.
         Exempel: ou=users,dc=exempel,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        Om du kryssar i den här rutan kommer OpenProject automatiskt att skapa nya användare från sina LDAP-poster
-        när de först autentiserar med OpenProject.
-        Lämna detta avmarkerat för att endast tillåta befintliga konton i OpenProject att autentisera via LDAP!
+        Om du kryssar i den här rutan kommer ProyeksiApp automatiskt att skapa nya användare från sina LDAP-poster
+        när de först autentiserar med ProyeksiApp.
+        Lämna detta avmarkerat för att endast tillåta befintliga konton i ProyeksiApp att autentisera via LDAP!
     connection_encryption: 'Kryptering av anslutning'
     system_account: 'Systemkonto'
     system_account_legend: |
-      OpenProject kräver skrivskyddad åtkomst via ett systemkonto för att söka upp användare och grupper i ditt LDAP-träd.
+      ProyeksiApp kräver skrivskyddad åtkomst via ett systemkonto för att söka upp användare och grupper i ditt LDAP-träd.
       Vänligen ange bindningsuppgifter för den systemanvändaren i följande avsnitt.
     ldap_details: 'LDAP-detaljer'
     user_settings: 'Attributmappning'
     user_settings_legend: |
-      Följande fält är relaterade till hur användare skapas i OpenProject från LDAP-poster och
-      vilka LDAP-attribut som används för att definiera attributen för en OpenProject-användare (attributmappning).
+      Följande fält är relaterade till hur användare skapas i ProyeksiApp från LDAP-poster och
+      vilka LDAP-attribut som används för att definiera attributen för en ProyeksiApp-användare (attributmappning).
     tls_mode:
       plain: 'inga'
       simple_tls: 'simple_tls'
@@ -521,7 +521,7 @@ sv:
         confirmation: "matchar inte %{attribute}."
         could_not_be_copied: "%{dependency} could not be (fully) copied."
         does_not_exist: "finns inte."
-        error_enterprise_only: "is only available in the OpenProject Enterprise Edition"
+        error_enterprise_only: "is only available in the ProyeksiApp Enterprise Edition"
         error_unauthorized: "åtkomst nekas."
         error_readonly: "försökte skrivas men är inte skrivbart."
         email: "is not a valid email address."
@@ -868,7 +868,7 @@ sv:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1188,7 +1188,7 @@ sv:
   error_can_not_unarchive_project: "Det här projektet kan inte avarkiveras: %{errors}"
   error_check_user_and_role: "Välj en användare och en roll."
   error_code: "Fel %{code}"
-  error_cookie_missing: 'OpenProject cookie saknas. Vänligen kontrollera att cookies är aktiverade, eftersom detta program inte fungerar korrekt annars.'
+  error_cookie_missing: 'ProyeksiApp cookie saknas. Vänligen kontrollera att cookies är aktiverade, eftersom detta program inte fungerar korrekt annars.'
   error_custom_option_not_found: "Alternativet finns inte."
   error_enterprise_activation_user_limit: "Ditt konto kunde inte aktiveras (begränsning för antal användare har uppnåtts). Kontakta administratören för att få tillgång."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1202,7 +1202,7 @@ sv:
   error_work_package_done_ratios_not_updated: "Arbetspaketets andel avklarat är inte uppdaterat."
   error_work_package_not_found_in_project: "Arbetspaketet hittades inte eller hör inte till detta projekt"
   error_must_be_project_member: "måste vara projektmedlem"
-  error_migrations_are_pending: "Din OpenProject-installation har väntande databasmigreringar. Du har sannolikt missat att köra migreringarna på din senaste uppgradering. Kontrollera uppgraderingsguiden för att uppgradera din installation ordentligt."
+  error_migrations_are_pending: "Din ProyeksiApp-installation har väntande databasmigreringar. Du har sannolikt missat att köra migreringarna på din senaste uppgradering. Kontrollera uppgraderingsguiden för att uppgradera din installation ordentligt."
   error_migrations_visit_upgrade_guides: "Besök dokumentationen för vår uppgraderingsguide"
   error_no_default_work_package_status: "Inget standardvärde för status för arbetspaket har definieras. Vänligen kontrollera din konfiguration (gå till \"Administration-> arbetspaket status\")."
   error_no_type_in_project: "Ingen typ associerad till detta projekt. Kontrollera projektinställningarna."
@@ -1276,7 +1276,7 @@ sv:
       no_visible_projects: "Det finns inga synliga projekt i denna instans."
       users: "De senast registrerade användarna just nu."
     blocks:
-      community: "OpenProject community"
+      community: "ProyeksiApp community"
       upsale:
         title: "Uppgradera till Enterprise Edition"
         more_info: "Mer information"
@@ -1287,7 +1287,7 @@ sv:
       faq: "Vanliga frågor (FAQ)"
       glossary: "Ordlista"
       shortcuts: "Genvägar"
-      blog: "OpenProject blogg"
+      blog: "ProyeksiApp blogg"
       forums: "Community forum"
       newsletter: "Säkerhetsnotifieringar / Nyhetsbrev"
   image_conversion:
@@ -1328,9 +1328,9 @@ sv:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1339,7 +1339,7 @@ sv:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Nyheter'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1652,7 +1652,7 @@ sv:
   label_open_menu: "Öppna meny"
   label_open_work_packages: "öppna"
   label_open_work_packages_plural: "öppna"
-  label_openproject_website: "OpenProject hemsida"
+  label_openproject_website: "ProyeksiApp hemsida"
   label_optional_description: "Beskrivning"
   label_options: "Alternativ"
   label_other: "Andra"
@@ -1952,17 +1952,17 @@ sv:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "För att ändra ditt lösenord, klicka på följande länk:"
-  mail_body_register: "Welcome to OpenProject. Please activate your account by clicking on this link:"
+  mail_body_register: "Welcome to ProyeksiApp. Please activate your account by clicking on this link:"
   mail_body_register_header_title: "Project member invitation email"
   mail_body_register_user: "Dear %{name}, "
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Your OpenProject team"
+  mail_body_register_closing: "Your ProyeksiApp team"
   mail_body_register_ending: "Stay connected! Kind regards,"
   mail_body_reminder: "%{count} arbetspaket som är tilldelade till dig förfaller de närmaste %{days} dagarna:"
   mail_body_group_reminder: "%{count} arbetspaket som är tilldelade till gruppen \"%{group}\" ska vara klara inom de närmaste %{days} dagarna:"
@@ -2008,7 +2008,7 @@ sv:
       a: "Utöka din betalplan ([here](upgrade_url))" #here turned into a link
       b: "Låsa eller radera en existerande användare ([here](users_url))" #here turned into a link
   more_actions: "Fler funktioner"
-  noscript_description: "Du måste aktivera JavaScript för att använda OpenProject!"
+  noscript_description: "Du måste aktivera JavaScript för att använda ProyeksiApp!"
   noscript_heading: "JavaScript inaktiverat"
   noscript_learn_more: "Lär dig mer"
   notice_accessibility_mode: Hjälpmedelsläget kan aktiveras i dina [kontoinställningar](url).
@@ -2072,7 +2072,7 @@ sv:
   notice_wont_delete_auth_source: Autentiseringsläget kan inte tas bort så länge det finns användare som använder det.
   notice_project_cannot_update_custom_fields: "Du kan inte uppdatera projektets anpassade fält. Projektet är ogiltig: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Denna sida genererades automatiskt under uppdateringen av OpenProject. Den innehåller alla bilagor som tidigare associerats med %{container_type} "%{container_name}".
+    Denna sida genererades automatiskt under uppdateringen av ProyeksiApp. Den innehåller alla bilagor som tidigare associerats med %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2095,9 +2095,9 @@ sv:
           tb: "TB"
   onboarding:
     heading_getting_started: "Få en översikt"
-    text_getting_started_description: "Få en snabb överblick över projektledning och samarbete med OpenProject."
+    text_getting_started_description: "Få en snabb överblick över projektledning och samarbete med ProyeksiApp."
     text_show_again: "Du kan starta om denna video från hjälpmenyn"
-    welcome: "Välkommen till OpenProject"
+    welcome: "Välkommen till ProyeksiApp"
     select_language: "Välj ditt språk"
   permission_add_work_package_notes: "Lägg till anteckningar"
   permission_add_work_packages: "Lägg till arbetspaket"
@@ -2156,7 +2156,7 @@ sv:
   permission_select_project_modules: "Välj projektmoduler"
   permission_manage_types: "Välj typer"
   permission_view_calendar: "Visa kalender"
-  permission_view_changesets: "Visa databasrevisioner i OpenProject"
+  permission_view_changesets: "Visa databasrevisioner i ProyeksiApp"
   permission_view_commit_author_statistics: "Visa statistik över incheckningar per författare"
   permission_view_work_package_watchers: "Visa lista med bevakare"
   permission_view_work_packages: "Visa arbetspaket"
@@ -2236,7 +2236,7 @@ sv:
     destroy:
       confirmation: "Om du fortsätter kommer den hanterade databasen att raderas permanent."
       info: "Att radera databasen går inte att ångra."
-      info_not_managed: "Observera: Detta kommer INTE att radera innehållet i den här databasen eftersom den inte hanteras av OpenProject."
+      info_not_managed: "Observera: Detta kommer INTE att radera innehållet i den här databasen eftersom den inte hanteras av ProyeksiApp."
       managed_path_note: "Följande katalog kommer raderas: %{path}"
       repository_verification: "Ange projektets identifierare %{identifier} för att verifiera raderingen av dess databas."
       subtitle: "Vill du verkligen radera %{repository_type} för projektet %{project_name}?"
@@ -2250,8 +2250,8 @@ sv:
       empty_repository: "Verionsarkivet finns, men är tomt. Det innehåller inte några revisioner ännu."
       exists_on_filesystem: "Databaskatalogen finns redan på filsystemet."
       filesystem_access_failed: "Ett fel inträffade vid åtkomst till databasen på filsystemet: %{message}"
-      not_manageable: "Denna leverantör av versionsarkiv kan inte hanteras av OpenProject."
-      path_permission_failed: "Ett fel uppstod vid försök att skapa följande sökväg: %{path}. Se till att OpenProject kan skriva till mappen."
+      not_manageable: "Denna leverantör av versionsarkiv kan inte hanteras av ProyeksiApp."
+      path_permission_failed: "Ett fel uppstod vid försök att skapa följande sökväg: %{path}. Se till att ProyeksiApp kan skriva till mappen."
       unauthorized: "Du är inte behörig att komma åt versionsarkivet eller autentiseringsuppgifterna är ogiltiga."
       unavailable: "Versionsarkivet är inte tillgängligt."
       exception_title: "Kan inte komma åt versionsarkivet: %{message}"
@@ -2268,9 +2268,9 @@ sv:
         path_encoding: "Åsidosätt Git sökvägskodning (standard: UTF-8)"
       local_title: "Länka befintligt lokalt Git-versionsarkiv"
       local_url: "Lokal URL"
-      local_introduction: "Om du har ett existerande lokalt Git-versionsarkiv, så kan du länka till det ifrån OpenProject för att nå det inifrån applikationen."
-      managed_introduction: "Låt OpenProject automatiskt skapa och integrera ett lokalt Git-versionsarkiv."
-      managed_title: "Git-versionsarkivet integreras i OpenProject"
+      local_introduction: "Om du har ett existerande lokalt Git-versionsarkiv, så kan du länka till det ifrån ProyeksiApp för att nå det inifrån applikationen."
+      managed_introduction: "Låt ProyeksiApp automatiskt skapa och integrera ett lokalt Git-versionsarkiv."
+      managed_title: "Git-versionsarkivet integreras i ProyeksiApp"
       managed_url: "URL för hantering"
       path: "Sökväg till Git-versionsarkiv"
       path_encoding: "Sökvägskodning"
@@ -2287,19 +2287,19 @@ sv:
     scm_types:
       local: "Länka befintligt lokalt arkiv"
       existing: "Länka befintligt arkiv"
-      managed: "Skapa nytt arkiv i OpenProject"
+      managed: "Skapa nytt arkiv i ProyeksiApp"
     storage:
       not_available: "Hårddiskanvändning är inte tillgängligt för den här databasen."
       update_timeout: "Behåll den senaste informationen om hårddiskanvändning för den här databasen i N minuter.\nEftersom beräkningen av detta är resurskrävande kan prestandan förbättras genom att öka det här värdet."
     subversion:
       existing_title: "Befintligt Subversion-arkiv"
-      existing_introduction: "Om du har ett befintlig Subversion-arkiv, kan du länka det med OpenProject för att komma åt den inifrån programmet."
+      existing_introduction: "Om du har ett befintlig Subversion-arkiv, kan du länka det med ProyeksiApp för att komma åt den inifrån programmet."
       existing_url: "Befintlig URL"
       instructions:
         managed_url: "Detta är URL:n till det hanterade (lokala) Subversion-arkivet."
         url: "Ange URL för arkivet. Detta kan antingen ange ett lokalt arkiv (utgående från %{local_proto}), eller ett fjärrarkiv. Följande URL-scheman stöds:"
-      managed_title: "Subversion-arkiv integrerade i OpenProject"
-      managed_introduction: "Låt OpenProject skapa och integrera ett lokalt Subversion-arkiv automatiskt."
+      managed_title: "Subversion-arkiv integrerade i ProyeksiApp"
+      managed_introduction: "Låt ProyeksiApp skapa och integrera ett lokalt Subversion-arkiv automatiskt."
       managed_url: "URL för hantering"
       password: "Lösenord för arkiv"
       username: "Användarnamn för arkiv"
@@ -2316,7 +2316,7 @@ sv:
   setting_apiv3_cors_enabled: "Enable CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) allowed origins"
   setting_apiv3_cors_origins_text_html: >
-    If CORS is enabled, these are the origins that are allowed to access OpenProject API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
+    If CORS is enabled, these are the origins that are allowed to access ProyeksiApp API. <br/> Please check the <a href="%{origin_link}" target="_blank">Documentation on the Origin header</a> on how to specify the expected values.
   setting_apiv3_docs: "Dokumentation"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2476,7 +2476,7 @@ sv:
       sentence_connector: "och"
       skip_last_comma: "falsk"
   text_accessibility_hint: "Hjälpmedelsläget är utformat för användare som är blinda, motoriskt handikappade eller har nedsatt syn. För den senare gruppen syns element i fokus extra tydligt. Vänligen notera att Backlogs-modulen inte är tillgänglig i det här läget."
-  text_access_token_hint: "Åtkomstnycklar gör det möjligt för externa applikationer att komma åt OpenProject-resurser."
+  text_access_token_hint: "Åtkomstnycklar gör det möjligt för externa applikationer att komma åt ProyeksiApp-resurser."
   text_analyze: "Vidare analys: %{subject}"
   text_are_you_sure: "Är du säker?"
   text_are_you_sure_with_children: "Ta bort arbetspaket och alla underarbetspaket?"
@@ -2545,7 +2545,7 @@ sv:
   text_no_notes: "Det finns inga kommentarer för detta arbetspaket."
   text_notice_too_many_values_are_inperformant: "Observera: Att visa mer än 100 poster per sida kan öka sidans laddningstid."
   text_notice_security_badge_displayed_html: >
-    Obs: om aktiverad, kommer detta att visa ett märke med din installationsstatus i administrationspanelen <a href="%{information_panel_path}">%{information_panel_label}</a> och på startsidan. Det visas endast för administratörer. <br/> Emblemet kommer att kontrollera din nuvarande OpenProject-version mot den officiella OpenProject-utgåvans databas för att varna dig om eventuella uppdateringar eller kända sårbarheter. För mer information om vad kontrollen ger, vilka uppgifter som behövs för att tillhandahålla tillgängliga uppdateringar, och hur du inaktiverar denna kontroll, besök <a href="%{more_info_url}">konfigurationsdokumentationen</a>.
+    Obs: om aktiverad, kommer detta att visa ett märke med din installationsstatus i administrationspanelen <a href="%{information_panel_path}">%{information_panel_label}</a> och på startsidan. Det visas endast för administratörer. <br/> Emblemet kommer att kontrollera din nuvarande ProyeksiApp-version mot den officiella ProyeksiApp-utgåvans databas för att varna dig om eventuella uppdateringar eller kända sårbarheter. För mer information om vad kontrollen ger, vilka uppgifter som behövs för att tillhandahålla tillgängliga uppdateringar, och hur du inaktiverar denna kontroll, besök <a href="%{more_info_url}">konfigurationsdokumentationen</a>.
   text_own_membership_delete_confirmation: "Du håller på att ta bort några eller alla av dina behörigheter och kommer därefter inte längre att kunna redigera detta projekt. Är du säker på att du vill fortsätta?"
   text_plugin_assets_writable: "Katalogen \"Plugin assets\" skrivbar"
   text_powered_by: "Drivs av %{link}"
@@ -2553,7 +2553,7 @@ sv:
   text_reassign: "Tilldela till arbetspaket:"
   text_regexp_info: "t.ex. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Regex appliceras i flerradsläge. t.ex. ^---\s+'
-  text_repository_usernames_mapping: "Välj eller uppdatera OpenProject användaren koppling till varje användarnamn i versionsarkivloggen. Användare med samma användarnamn eller E-post i OpenProject och versionsarkivet kopplas automatiskt."
+  text_repository_usernames_mapping: "Välj eller uppdatera ProyeksiApp användaren koppling till varje användarnamn i versionsarkivloggen. Användare med samma användarnamn eller E-post i ProyeksiApp och versionsarkivet kopplas automatiskt."
   text_status_changed_by_changeset: "Tillämpad i uppdatering %{value}."
   text_table_difference_description: "I den här tabellen visas %{entries}. Genom att markera två poster och sedan klicka på knappen nedanför tabellen kan du jämföra dessa och titta på eventuella skillnader."
   text_time_logged_by_changeset: "Tillämpad i uppdatering %{value}."
@@ -2758,7 +2758,7 @@ sv:
     activate_and_reset_failed_logins: "Aktivera och nollställ misslyckade inloggningsförsök"
     authentication_provider: "Autentiseringstjänst"
     authentication_settings_disabled_due_to_external_authentication: >
-      Användaren autentiseras via en extern autentiseringstjänst, så det finns inget lösenord i OpenProject som kan ändras.
+      Användaren autentiseras via en extern autentiseringstjänst, så det finns inget lösenord i ProyeksiApp som kan ändras.
     authorization_rejected: "Du är inte tillåten att logga in."
     assign_random_password: "Generera ett lösenord (skickas till användaren med e-post)"
     blocked: "tillfälligt låst"
@@ -2789,7 +2789,7 @@ sv:
   warning: Varning
   warning_attachments_not_saved: "%{count} fil(er) kunde inte sparas."
   warning_imminent_user_limit: >
-    Du bjöd in fler användare än vad som stöds av din nuvarande plan. Inbjudna användare kanske inte kan gå med i din OpenProject-miljö. Vänligen <a href="%{upgrade_url}">uppgradera ditt abonnemang</a> eller blockera befintliga användare för att tillåta inbjudna och registrerade användare att gå med.
+    Du bjöd in fler användare än vad som stöds av din nuvarande plan. Inbjudna användare kanske inte kan gå med i din ProyeksiApp-miljö. Vänligen <a href="%{upgrade_url}">uppgradera ditt abonnemang</a> eller blockera befintliga användare för att tillåta inbjudna och registrerade användare att gå med.
   warning_registration_token_expired: |
     Aktiveringsmailet har löpt ut. Vi skickade ett nytt till %{email}. Klicka på länken inne i mailet för att aktivera ditt konto.
   warning_user_limit_reached: >
@@ -2922,21 +2922,21 @@ sv:
         confidential: "Kontrollera om programmet kommer att användas där klienthemligheten kan hållas konfidentiell. Mobilappar och Single Page Apps antas vara icke-konfidentiella."
         scopes: "Markera de omfång som du vill att programmet ska ge åtkomst till. Om inget omfång är markerat, antas."
         client_credential_user_id: "Valfritt användar-ID att efterlikna när klienter använder det här programmet. Lämna tomt för att endast tillåta publik åtkomst"
-        register_intro: "Om du utvecklar en OAuth API-klientapplikation för OpenProject, kan du registrera den med hjälp av detta formulär för alla användare att använda."
+        register_intro: "Om du utvecklar en OAuth API-klientapplikation för ProyeksiApp, kan du registrera den med hjälp av detta formulär för alla användare att använda."
         default_scopes: ""
     client_id: "Client ID"
     client_secret_notice: >
-      Detta är den enda gången vi kan skriva ut klienten hemligt, notera det och hålla det säkert. Det bör behandlas som ett lösenord och kan inte hämtas av OpenProject vid ett senare tillfälle.
+      Detta är den enda gången vi kan skriva ut klienten hemligt, notera det och hålla det säkert. Det bör behandlas som ett lösenord och kan inte hämtas av ProyeksiApp vid ett senare tillfälle.
     authorization_dialog:
       authorize: "Auktorisera"
       cancel: "Avbryt och neka auktorisering."
       prompt_html: "Auktorisera <strong>%{application_name}</strong> att använda ditt konto <em>%{login}</em>?"
       title: "Auktorisera %{application_name}"
       wants_to_access_html: >
-        Den här applikationen begär åtkomst till ditt OpenProject-konto. <br/> <strong>Den har begärt följande behörigheter:</strong>
+        Den här applikationen begär åtkomst till ditt ProyeksiApp-konto. <br/> <strong>Den har begärt följande behörigheter:</strong>
     scopes:
       api_v3: "Full API v3-åtkomst"
-      api_v3_text: "Applikationen kommer att få fullständig läs- och skrivåtkomst till OpenProject API v3 för att utföra åtgärder åt dig."
+      api_v3_text: "Applikationen kommer att få fullständig läs- och skrivåtkomst till ProyeksiApp API v3 för att utföra åtgärder åt dig."
     grants:
       created_date: "Godkänd den"
       scopes: "Behörigheter"
@@ -2952,7 +2952,7 @@ sv:
     client_credentials_impersonation_set_to: "Användare av klientuppgifter inställd på"
     client_credentials_impersonation_warning: "Obs: Klienter som använder flödet \"Klientuppgifter\" i denna applikation kommer att ha rättigheter för denna användare"
     client_credentials_impersonation_html: >
-      Som standard ger OpenProject OAuth 2.0-auktorisering via %{authorization_code_flow_link}. Du kan valfritt aktivera %{client_credentials_flow_link}, men du måste tillhandahålla en användare för vars räkning förfrågningar kommer att utföras.
+      Som standard ger ProyeksiApp OAuth 2.0-auktorisering via %{authorization_code_flow_link}. Du kan valfritt aktivera %{client_credentials_flow_link}, men du måste tillhandahålla en användare för vars räkning förfrågningar kommer att utföras.
     authorization_error: "Ett auktoriseringsfel har inträffat."
     revoke_my_application_confirmation: "Vill du verkligen ta bort denna applikation? Detta kommer att återkalla %{token_count} aktiv för den."
     my_registered_applications: "Registrerade OAuth applikationer"

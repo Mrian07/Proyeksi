@@ -3,7 +3,7 @@
 module API
   module V3
     module Attachments
-      class AttachmentsByHelpTextAPI < ::API::OpenProjectAPI
+      class AttachmentsByHelpTextAPI < ::API::ProyeksiAppAPI
         resources :attachments do
           helpers API::V3::Attachments::AttachmentsByContainerAPI::Helpers
 

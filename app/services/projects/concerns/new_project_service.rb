@@ -39,8 +39,8 @@ module Projects::Concerns
     end
 
     def notify_project_created(new_project)
-      OpenProject::Notifications.send(
-        OpenProject::Events::PROJECT_CREATED,
+      ProyeksiApp::Notifications.send(
+        ProyeksiApp::Events::PROJECT_CREATED,
         project: new_project
       )
     end

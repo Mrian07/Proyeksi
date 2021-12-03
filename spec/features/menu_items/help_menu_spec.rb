@@ -23,7 +23,7 @@ feature 'Help menu items' do
   describe 'When force_help_link is set', js: true do
     let(:custom_url) { 'https://mycustomurl.example.org/' }
     before do
-      allow(OpenProject::Configuration).to receive(:force_help_link)
+      allow(ProyeksiApp::Configuration).to receive(:force_help_link)
         .and_return custom_url
     end
     it 'renders a link' do

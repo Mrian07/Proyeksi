@@ -88,7 +88,7 @@ describe 'layouts/base', type: :view do
 
     context 'with password login disabled' do
       before do
-        allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+        allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
         render
       end
 
@@ -108,7 +108,7 @@ describe 'layouts/base', type: :view do
 
     it 'renders main favicon' do
       expect(rendered).to have_selector(
-        "link[type='image/x-icon'][href*='#{OpenProject::CustomStyles::Design.favicon_asset_path}']",
+        "link[type='image/x-icon'][href*='#{ProyeksiApp::CustomStyles::Design.favicon_asset_path}']",
         visible: false
       )
     end
@@ -241,9 +241,9 @@ describe 'layouts/base', type: :view do
     end
   end
 
-  describe 'openproject_initializer meta tag' do
+  describe 'proyeksiapp_initializer meta tag' do
     let(:current_user) { anonymous }
-    let(:base) { 'meta[name=openproject_initializer]' }
+    let(:base) { 'meta[name=proyeksiapp_initializer]' }
 
     before do
       render

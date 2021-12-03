@@ -24,7 +24,7 @@ class FlipBcfViewpointClippingDirectionSelectively < ActiveRecord::Migration[6.1
       (
         bcf_issues.markup IS NULL
         OR
-        XPATH_EXISTS('/comment()[contains(., ''Created by OpenProject'')]', bcf_issues.markup)
+        XPATH_EXISTS('/comment()[contains(., ''Created by ProyeksiApp'')]', bcf_issues.markup)
       )
     }
     ::Bim::Bcf::Viewpoint.joins(:issue).where(join_condition)

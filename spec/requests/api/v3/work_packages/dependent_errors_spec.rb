@@ -103,7 +103,7 @@ describe 'API v3 Work package resource', type: :request, content_type: :json do
       it 'should respond with an error' do
         expected_error = {
           "_type": "Error",
-          "errorIdentifier": "urn:openproject-org:api:v3:errors:PropertyConstraintViolation",
+          "errorIdentifier": "urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation",
           "message": "Error attempting to alter dependent object: Work package ##{parent.id} - #{parent.subject}: invalid",
           "_embedded": {
             "details": {
@@ -156,7 +156,7 @@ describe 'API v3 Work package resource', type: :request, content_type: :json do
       it 'should respond with an error' do
         expected_error = {
           "_type": "Error",
-          "errorIdentifier": "urn:openproject-org:api:v3:errors:PropertyConstraintViolation",
+          "errorIdentifier": "urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation",
           "message": "Error attempting to alter dependent object: Work package ##{parent.id} - #{parent.subject}: invalid",
           "_embedded": {
             "details": {

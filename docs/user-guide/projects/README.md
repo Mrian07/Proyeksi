@@ -2,20 +2,20 @@
 sidebar_navigation:
   title: Projects
   priority: 600
-description: Manage projects in OpenProject.
+description: Manage projects in ProyeksiApp.
 robots: index, follow
 keywords: projects
 ---
 # Manage projects
 
-In OpenProject you can create projects to collaborate with your team members, track issues, document and share information with stakeholders, organize things. A project is a way to structure and organize your work in OpenProject.
+In ProyeksiApp you can create projects to collaborate with your team members, track issues, document and share information with stakeholders, organize things. A project is a way to structure and organize your work in ProyeksiApp.
 
-Your projects can be available publicly or internally. OpenProject does not limit the number of projects, neither in the Community Edition nor in the Enterprise cloud or in Enterprise on-premises edition.
+Your projects can be available publicly or internally. ProyeksiApp does not limit the number of projects, neither in the Community Edition nor in the Enterprise cloud or in Enterprise on-premises edition.
 
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Select a project](../../getting-started/projects/)          | Open a project which you want to work at.                    |
-| [Create a new project](../../getting-started/projects/#create-a-new-project) | Find out how to create a new project in OpenProject.         |
+| [Create a new project](../../getting-started/projects/#create-a-new-project) | Find out how to create a new project in ProyeksiApp.         |
 | [Create a subproject](#create-a-subproject)                  | Create a subproject of an existing project.                  |
 | [Project structure](#project-structure)                      | Find out how to set up a project structure.                  |
 | [Project settings](#project-settings)                        | Configure further settings for your projects, such as description, project hierarchy structure, or setting it to public. |
@@ -30,15 +30,15 @@ Your projects can be available publicly or internally. OpenProject does not limi
 | [Export project list](#export-projects)                      | You can export the project list to XLS or CSV.               |
 | [Project overarching reports](#project-overarching-reports)  | How to create project overarching reports across multiple projects? |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Select a project
 
-Find out in our Getting started guide [how to open an existing project](../../getting-started/projects/) in OpenProject.
+Find out in our Getting started guide [how to open an existing project](../../getting-started/projects/) in ProyeksiApp.
 
 ## Create a new project
 
-Find out in our Getting started guide how to [create a new project](../../getting-started/projects/#create-a-new-project) in OpenProject.
+Find out in our Getting started guide how to [create a new project](../../getting-started/projects/#create-a-new-project) in ProyeksiApp.
 
 ## Create a subproject
 
@@ -52,7 +52,7 @@ Then follow the instructions to [create a new project](../../getting-started/pro
 
 ## Project structure
 
-Projects build a structure in OpenProject. You can have parent projects and sub-projects. A project can represent an organizational unit of a company, e.g. to have issues separated:
+Projects build a structure in ProyeksiApp. You can have parent projects and sub-projects. A project can represent an organizational unit of a company, e.g. to have issues separated:
 
 * Company (Parent project)
   * Marketing (Sub-project)
@@ -76,7 +76,7 @@ Or, a project can be to separate products or customers.
   * Customer C
 
 
-OpenProject, for example, uses the projects to structure the different modules/plugin development:
+ProyeksiApp, for example, uses the projects to structure the different modules/plugin development:
 
 ![project-structure](1566214944644.png)
 
@@ -99,7 +99,7 @@ You can specify further advanced settings for your project. Navigate to your pro
 </div>
 
 
-- You can set a project to **Public**. This means it can be accessed without signing in to OpenProject.
+- You can set a project to **Public**. This means it can be accessed without signing in to ProyeksiApp.
 - Click the blue **Create** button in order to save your new project. Or click the blue **Save** button to save your changes.
 - If you like, use the autocompleter to fill in the project attributes.
 
@@ -121,7 +121,7 @@ Press the blue **Save** button to apply your changes.
 
 If you want to set a project to public, you can do so by ticking the box next to "Public" in the [project settings](project-settings) *->Information*.
 
-Setting a project to public will make it accessible to all people within your OpenProject instance. 
+Setting a project to public will make it accessible to all people within your ProyeksiApp instance. 
 
 (Should your instance be [accessible without authentication](../../system-admin-guide/authentication/authentication-settings) this option will make the project visible to the general public outside your registered users, too)
 
@@ -129,7 +129,7 @@ Setting a project to public will make it accessible to all people within your Op
 
 ### Create a project template (Premium feature)
 
-You can create a project template in OpenProject by [creating a new project](../../getting-started/projects/#create-a-new-project) and configuring your project to your needs. Name the project so you can identify it as a template, e.g. "Project XY [template]".
+You can create a project template in ProyeksiApp by [creating a new project](../../getting-started/projects/#create-a-new-project) and configuring your project to your needs. Name the project so you can identify it as a template, e.g. "Project XY [template]".
 
 Set up everything that you want to have available for future projects.
 
@@ -150,10 +150,10 @@ Navigate to the [project settings](project-settings) and click **Set as template
 
 ### Use a project template (Premium feature)
 
-You can create a new project by using an existing template. This causes the properties of the project template to be copied to the new project. Find out in our Getting started guide how to [create a new project](../../getting-started/projects/#create-a-new-project) in OpenProject. 
+You can create a new project by using an existing template. This causes the properties of the project template to be copied to the new project. Find out in our Getting started guide how to [create a new project](../../getting-started/projects/#create-a-new-project) in ProyeksiApp. 
 Another way for using a template project would be to [copy it](#copy-a-project).
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Project-Templates.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Templates.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Copy a project
 
@@ -207,13 +207,13 @@ To get an overview of all your projects, select the **View all projects** option
 
 ![view all projects](1566293251039.png)
 
-You will then get a list of all your projects in OpenProject. You can use this projects overview to **create a multi project status dashboard** if you include your own [project custom fields](../../system-admin-guide/custom-fields/custom-fields-projects/), e.g. custom status options, Accountable, Project duration, and more.
+You will then get a list of all your projects in ProyeksiApp. You can use this projects overview to **create a multi project status dashboard** if you include your own [project custom fields](../../system-admin-guide/custom-fields/custom-fields-projects/), e.g. custom status options, Accountable, Project duration, and more.
 
 **Please note:** Project custom fields are a premium feature and will only be displayed here for Enterprise on-premises and Enterprise cloud.
 
 With the **arrow** on the right you can display the **project description**.
 
-With the horizontal **three dots** icon on the right side of the list you can open **further features**, such as [creating a new subproject](#create-a-subproject), [project settings](project-settings), [archiving a project](#archive-a-project), [copying](#copy-a-project) and [deleting a project](#delete-a-project). Please note that you have to be a System Administrator in OpenProject to access these features. Find out how to un-archive projects [here](#archive-a-project).
+With the horizontal **three dots** icon on the right side of the list you can open **further features**, such as [creating a new subproject](#create-a-subproject), [project settings](project-settings), [archiving a project](#archive-a-project), [copying](#copy-a-project) and [deleting a project](#delete-a-project). Please note that you have to be a System Administrator in ProyeksiApp to access these features. Find out how to un-archive projects [here](#archive-a-project).
 
 ![projects-overview-view-all-projects](image-20210204171811255.png)
 
@@ -250,7 +250,7 @@ It can be exported as .xls or .csv.
 
 Often you need to see information about more than one project at once and want to create project overarching reports.
 
-Click on the **Modules** icon with the dots in the header navigation. These are the project overarching modules in OpenProject.![overarching-modules](overarching-modules.png) 
+Click on the **Modules** icon with the dots in the header navigation. These are the project overarching modules in ProyeksiApp.![overarching-modules](overarching-modules.png) 
 
 Here you will find
 

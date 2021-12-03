@@ -2,26 +2,26 @@
 
 require File.expand_path('../spec_helper', __dir__)
 
-describe OpenProject::Webhooks do
+describe ProyeksiApp::Webhooks do
   describe '.register_hook' do
     after do
-      OpenProject::Webhooks.unregister_hook('testhook1')
+      ProyeksiApp::Webhooks.unregister_hook('testhook1')
     end
 
     it 'should succeed' do
-      OpenProject::Webhooks.register_hook('testhook1') {}
+      ProyeksiApp::Webhooks.register_hook('testhook1') {}
     end
   end
 
   describe '.find' do
-    let!(:hook) { OpenProject::Webhooks.register_hook('testhook3') {} }
+    let!(:hook) { ProyeksiApp::Webhooks.register_hook('testhook3') {} }
 
     after do
-      OpenProject::Webhooks.unregister_hook('testhook3')
+      ProyeksiApp::Webhooks.unregister_hook('testhook3')
     end
 
     it 'should succeed' do
-      expect(OpenProject::Webhooks.find('testhook3')).to equal(hook)
+      expect(ProyeksiApp::Webhooks.find('testhook3')).to equal(hook)
     end
   end
 
@@ -29,12 +29,12 @@ describe OpenProject::Webhooks do
     let(:probe) { lambda {} }
 
     before do
-      OpenProject::Webhooks.register_hook('testhook2', &probe)
+      ProyeksiApp::Webhooks.register_hook('testhook2', &probe)
     end
 
     it 'should result in the hook no longer being found' do
-      OpenProject::Webhooks.unregister_hook('testhook2')
-      expect(OpenProject::Webhooks.find('testhook2')).to be_nil
+      ProyeksiApp::Webhooks.unregister_hook('testhook2')
+      expect(ProyeksiApp::Webhooks.find('testhook2')).to be_nil
     end
   end
 end

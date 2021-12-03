@@ -14,14 +14,14 @@ module MetaTagsHelper
 
   def initializer_meta_tag
     tag :meta,
-        name: :openproject_initializer,
+        name: :proyeksiapp_initializer,
         data: {
           locale: I18n.locale,
           defaultLocale: I18n.default_locale,
           firstWeekOfYear: locale_first_week_of_year,
           firstDayOfWeek: locale_first_day_of_week,
           environment: Rails.env,
-          edition: OpenProject::Configuration.edition
+          edition: ProyeksiApp::Configuration.edition
     }
   end
 

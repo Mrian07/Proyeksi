@@ -24,11 +24,11 @@ ar:
       قم بتحميل الصورة الرمزية المخصصة بدقة 128×128 بكسل. يمكن تغيير حجم الملفات الكبيرة وقصها لتتطابق. عند تحديد الصورة، تظهر معاينة للصورة الرمزية قبل التحميل. 
     text_change_gravatar_html: 'انتقل إلى %{gravatar_url} لتغيير Gravatar في عنوان بريدك الإلكتروني.'
     text_your_local_avatar: |
-      تتيح لك OpenProject بتحميل صورتك الرمزية المخصصة.
+      تتيح لك ProyeksiApp بتحميل صورتك الرمزية المخصصة.
     text_local_avatar_over_gravatar: |
       إذا عينت واحدة، فإن هذه الصورة المخصصة مستخدمة مسبقًا على gravatar أعلاه.
     text_your_current_gravatar: |
-      يستخدم OpenProject الـ gravatar الخاص بك إذا قمت بتسجيل واحدة أو بتسجيل صورة افتراضية أو أيقونة إذا كانت موجودة. إن الـ gravatar الحالي هو كما يلي:
+      يستخدم ProyeksiApp الـ gravatar الخاص بك إذا قمت بتسجيل واحدة أو بتسجيل صورة افتراضية أو أيقونة إذا كانت موجودة. إن الـ gravatar الحالي هو كما يلي:
     settings:
       enable_gravatars: 'تفعيل مستخدم gravatars '
       gravatar_default: "الصورة الافتراضية Gravatar"

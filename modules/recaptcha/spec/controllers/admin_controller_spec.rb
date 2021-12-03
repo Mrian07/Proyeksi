@@ -37,7 +37,7 @@ describe ::Recaptcha::AdminController, type: :controller do
       expected = { recaptcha_type: 'v2', website_key: 'B', secret_key: 'A' }
 
       expect(Setting)
-        .to receive(:plugin_openproject_recaptcha=)
+        .to receive(:plugin_proyeksiapp_recaptcha=)
         .with(expected)
 
       post :update, params: expected

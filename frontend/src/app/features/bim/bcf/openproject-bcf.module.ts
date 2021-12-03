@@ -18,7 +18,7 @@ import { BcfWpAttributeGroupComponent } from 'core-app/features/bim/bcf/bcf-wp-a
 import { BcfNewWpAttributeGroupComponent } from 'core-app/features/bim/bcf/bcf-wp-attribute-group/bcf-new-wp-attribute-group.component';
 import { RevitBridgeService } from 'core-app/features/bim/revit_add_in/revit-bridge.service';
 import { WorkPackageResource } from 'core-app/features/hal/resources/work-package-resource';
-import { OpenProjectHeaderInterceptor } from 'core-app/features/hal/http/openproject-header-interceptor';
+import { ProyeksiAppHeaderInterceptor } from 'core-app/features/hal/http/openproject-header-interceptor';
 import isNewResource from 'core-app/features/hal/helpers/is-new-resource';
 import { RefreshButtonComponent } from 'core-app/features/bim/ifc_models/toolbar/import-export-bcf/refresh-button.component';
 
@@ -41,7 +41,7 @@ export const viewerBridgeServiceFactory = (injector:Injector) => {
     NgxGalleryModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: OpenProjectHeaderInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ProyeksiAppHeaderInterceptor, multi: true },
     {
       provide: ViewerBridgeService,
       useFactory: viewerBridgeServiceFactory,
@@ -89,7 +89,7 @@ export class OpenprojectBcfModule {
 
     const hookService = injector.get(HookService);
     hookService.register('prependedAttributeGroups', (workPackage:WorkPackageResource) => {
-      if (!window.OpenProject.isBimEdition) {
+      if (!window.ProyeksiApp.isBimEdition) {
         return;
       }
 

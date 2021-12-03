@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.18
+  title: ProyeksiApp 5.0.18
   sidebar_navigation:
       title: 5.0.18
   release_version: 5.0.18
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.18
+# ProyeksiApp 5.0.18
 
-OpenProject 5.0.18 contains several bug fixes:
+ProyeksiApp 5.0.18 contains several bug fixes:
 
   - The wiki toolbar did not work. This has been fixed
     ([\#23050](https://community.openproject.com/work_packages/23050/activity)).

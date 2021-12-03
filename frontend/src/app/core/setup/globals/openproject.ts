@@ -1,15 +1,15 @@
 
 
-import { OpenProjectPluginContext } from 'core-app/features/plugins/plugin-context';
+import { ProyeksiAppPluginContext } from 'core-app/features/plugins/plugin-context';
 import { input, InputState } from 'reactivestates';
 import { take } from 'rxjs/operators';
 import { GlobalHelpers } from 'core-app/core/setup/globals/global-helpers';
 
 /**
- * OpenProject instance methods
+ * ProyeksiApp instance methods
  */
-export class OpenProject {
-  public pluginContext:InputState<OpenProjectPluginContext> = input<OpenProjectPluginContext>();
+export class ProyeksiApp {
+  public pluginContext:InputState<ProyeksiAppPluginContext> = input<ProyeksiAppPluginContext>();
 
   public helpers = new GlobalHelpers();
 
@@ -27,7 +27,7 @@ export class OpenProject {
    * */
   public editFormsContainModelChanges:boolean;
 
-  public getPluginContext():Promise<OpenProjectPluginContext> {
+  public getPluginContext():Promise<ProyeksiAppPluginContext> {
     return this.pluginContext
       .values$()
       .pipe(take(1))
@@ -78,4 +78,4 @@ export class OpenProject {
   }
 }
 
-window.OpenProject = new OpenProject();
+window.ProyeksiApp = new ProyeksiApp();

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.0
+  title: ProyeksiApp 5.0.0
   sidebar_navigation:
       title: 5.0.0
   release_version: 5.0.0
@@ -7,11 +7,11 @@
 ---
 
 
-# **OpenProject 5.0.0**
+# **ProyeksiApp 5.0.0**
 
 ## **Work package creation via split screen**
 
-OpenProject 5.0 extends the work package split screen functionality and
+ProyeksiApp 5.0 extends the work package split screen functionality and
 allows users to create work packages from the work package list via the
 work package split screen
 ([\#17549](https://community.openproject.com/work_packages/17549/activity)).
@@ -53,7 +53,7 @@ package.
 
 ## **New home screen**
 
-With OpenProject 5.0, the new home screen of OpenProject instances
+With ProyeksiApp 5.0, the new home screen of ProyeksiApp instances
 displays important information (such as existing projects and registered
 users) as a dashboard. In addition, links to important resources and
 references have been added.
@@ -78,12 +78,12 @@ activities ([\#20694](https://community.openproject.com/work_packages/20694/act
 
 ## **Enhanced repository management**
 
-**Important:** When updating your existing OpenProject installation,
+**Important:** When updating your existing ProyeksiApp installation,
 please note that you need to adjust the repository configuration.
 Otherwise, repositories will not work properly. Details are included in
-the “OpenProject 5.0 upgrade guide”.
+the “ProyeksiApp 5.0 upgrade guide”.
 
-With OpenProject 5.0 the repository functionality has been significantly
+With ProyeksiApp 5.0 the repository functionality has been significantly
 improved
 ([\#20218](https://community.openproject.com/work_packages/20218/activity)):
 When deleting a project, the associated repository is deleted
@@ -98,13 +98,13 @@ repositories in order to get a better overview of the data usage.
 
 
 
-## **Invite project members to OpenProject and add to a project in one step**
+## **Invite project members to ProyeksiApp and add to a project in one step**
 
-With OpenProject 5.0 users can be invited to a project via email without
+With ProyeksiApp 5.0 users can be invited to a project via email without
 first creating an account for them in the admin settings.
 
 The user then receives an email notification and can create an account
-for OpenProject.
+for ProyeksiApp.
 
 Additionally, the member tab in projects has been removed from the
 project settings and has been added to the project side menu.
@@ -153,8 +153,8 @@ attributes.
 
 ## **Deprecated features**
 
-In order to reduce complexity, some rarely used OpenProject features
-have been deprecated and removed with OpenProject 5.0:
+In order to reduce complexity, some rarely used ProyeksiApp features
+have been deprecated and removed with ProyeksiApp 5.0:
 
   - The field “Homepage” in the project settings has been removed to
     reduce complexity. Instead a custom field or the project description
@@ -163,7 +163,7 @@ have been deprecated and removed with OpenProject 5.0:
   - The field “Summary” in the project settings has been removed to
     reduce complexity. Instead of the summary the first row of the
     project description is shown on the project list.
-  - Project dependencies have been removed from OpenProject since they
+  - Project dependencies have been removed from ProyeksiApp since they
     didn’t serve  a significant purpose. Additionally, the “second
     grouping criterion” has been removed from the timelines filters
     ([\#21509](https://community.openproject.com/work_packages/21509/activity)).
@@ -174,12 +174,12 @@ have been deprecated and removed with OpenProject 5.0:
 
 The **copy** and **duplicate** functionality on the work package
 fullscreen and split screen has been temporarily excluded. It will be
-re-implemented in the next OpenProject version.
+re-implemented in the next ProyeksiApp version.
 
 ## **Usability improvements**
 
 Aside from the main features, several smaller usability improvements are
-included in OpenProject 5.0:
+included in ProyeksiApp 5.0:
 
   - The custom fields have been moved to a separate tab in the project
     settings
@@ -190,7 +190,7 @@ included in OpenProject 5.0:
 
 ## **Improved design**
 
-OpenProject 5.0 includes several design improvements. For example, the
+ProyeksiApp 5.0 includes several design improvements. For example, the
 button styling has been improved
 ([\#19675](https://community.openproject.com/work_packages/19675/activity)).
 
@@ -201,7 +201,7 @@ and the layout has been improved in many other places as well.
 
 ## **Additional functionalities for API v3**
 
-The future OpenProject API (API v3) has been extended by several
+The future ProyeksiApp API (API v3) has been extended by several
 functionalities. For instance, the [API
 v3](../../api/) now includes an
 endpoint for the work package index-action.
@@ -210,7 +210,7 @@ Please note that the API v3 is still a draft.
 
 ## **Updated Rails version**
 
-Rails – the main framework used for OpenProject – has been updated to
+Rails – the main framework used for ProyeksiApp – has been updated to
 Rails 4.2
 ([\#20045](https://community.openproject.com/work_packages/20045/activity)).
 
@@ -219,24 +219,24 @@ This ensures the technical reliability and allows future improvements.
 ## **New plugins released (included in packager community edition)**
 
 Several new plugins have been published. They are included in the
-OpenProject Packager edition.
+ProyeksiApp Packager edition.
 
-  - OpenProject – Local Avatars ([Read more on
+  - ProyeksiApp – Local Avatars ([Read more on
     GitHub](https://www.github.com/finnlabs/openproject-local_avatars))
-  - OpenProject – Announcements ([Read more on
+  - ProyeksiApp – Announcements ([Read more on
     GitHub](https://www.github.com/finnlabs/openproject-announcements))
-  - OpenProject – XLS-Export ([Read more on
+  - ProyeksiApp – XLS-Export ([Read more on
     GitHub](https://www.github.com/finnlabs/openproject-xls_export))
-  - OpenProject – Dark-Theme ([Read more on
+  - ProyeksiApp – Dark-Theme ([Read more on
     GitHub](https://www.github.com/finnlabs/openproject-themes-dark))
-  - OpenProject – OpenID-Connect ([Read more on
+  - ProyeksiApp – OpenID-Connect ([Read more on
     GitHub](https://www.github.com/finnlabs/openproject-openid_connect))
-  - OpenProject – OmniAuth OpenID-Connect-Providers ([Read more on
+  - ProyeksiApp – OmniAuth OpenID-Connect-Providers ([Read more on
     GitHub](https://www.github.com/finnlabs/omniauth-openid-connect))
 
 ## **Substantial number of bug fixes**
 
-A large number of bugs have been fixed with the release of OpenProject
+A large number of bugs have been fixed with the release of ProyeksiApp
 5.0.
 
 

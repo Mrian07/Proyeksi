@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module Schemas
-        class QueryProjectSchemaAPI < ::API::OpenProjectAPI
+        class QueryProjectSchemaAPI < ::API::ProyeksiAppAPI
           resource :schema do
             helpers do
               def representer

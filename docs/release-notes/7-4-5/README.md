@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.5
+  title: ProyeksiApp 7.4.5
   sidebar_navigation:
       title: 7.4.5
   release_version: 7.4.5
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 7.4.5
+# ProyeksiApp 7.4.5
 
 <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-10">Version</span>
-7.4.5 of OpenProject has been released. The release contains several bug
+7.4.5 of ProyeksiApp has been released. The release contains several bug
 fixes. We recommend the update to the current version.
 
   - Fixed: Cookie *secure* flag was not applied in all cases even when
@@ -51,7 +51,7 @@ community](https://community.openproject.com/versions/990) or <span style="fon
 a look
 at </span>[GitHub](https://github.com/opf/openproject/tree/v7.4.5)<span style="font-size: 1.125rem;">.</span>
 
-Special thanks go to all OpenProject contributors for [reporting
+Special thanks go to all ProyeksiApp contributors for [reporting
 bugs](../../development/report-a-bug/) and helping
 us to reproduce them.
 

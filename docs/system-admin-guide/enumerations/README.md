@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Enumerations
   priority: 780
-description: Manage enumerations in OpenProject.
+description: Manage enumerations in ProyeksiApp.
 robots: index, follow
 keywords: enumerations, time tracking, priority, document categories
 ---

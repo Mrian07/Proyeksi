@@ -3,7 +3,7 @@
 module API
   module V3
     module WorkPackages
-      class AvailableRelationCandidatesAPI < ::API::OpenProjectAPI
+      class AvailableRelationCandidatesAPI < ::API::ProyeksiAppAPI
         helpers do
           def combined_params
             { filters: filters_param, pageSize: params[:pageSize] }.with_indifferent_access

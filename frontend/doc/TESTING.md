@@ -3,7 +3,7 @@ Running tests
 
 
 
-OpenProject is a hybrid application with most parts being Rails, along with some directives being used within Rails templates (the legacy application), and an Angular frontend for isolated SPA-like Modules such as the Work Packages module.
+ProyeksiApp is a hybrid application with most parts being Rails, along with some directives being used within Rails templates (the legacy application), and an Angular frontend for isolated SPA-like Modules such as the Work Packages module.
 
 
 

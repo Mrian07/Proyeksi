@@ -7,7 +7,7 @@ require 'api/v3/types/type_collection_representer'
 module API
   module V3
     module Types
-      class TypesByProjectAPI < ::API::OpenProjectAPI
+      class TypesByProjectAPI < ::API::ProyeksiAppAPI
         resources :types do
           after_validation do
             authorize_any %i[view_work_packages manage_types], projects: @project

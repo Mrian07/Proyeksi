@@ -1,7 +1,7 @@
-OpenProject::Application.configure do |application|
+ProyeksiApp::Application.configure do |application|
   # Ensure stage is entered when reloading in dev mode
   application.config.to_prepare do
-    OpenProject::Authentication::Stage
+    ProyeksiApp::Authentication::Stage
       .register(
         :consent,
         run_after_activation: true,

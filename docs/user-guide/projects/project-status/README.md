@@ -26,7 +26,7 @@ If the widget is not yet displayed on the project overview, you can add the proj
 
 ## Displaying the project status
 
-The project status is displayed in different OpenProject modules.
+The project status is displayed in different ProyeksiApp modules.
 
 ### Project list
 

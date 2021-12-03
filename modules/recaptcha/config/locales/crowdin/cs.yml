@@ -15,4 +15,4 @@ cs:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA je bezplatná služba Google, která může být povolena pro vaši instanci OpenProject. Je-li povolena, objeví se při přihlášení captcha formulář všem uživatelům, kteří ještě neověřili captchu. <br/> Více informací o reCAPTCHA, jejich verzích a jak vytvořit webovou stránku a tajné klíče naleznete v následujícím odkazu:  %{recaptcha_link}
+        reCAPTCHA je bezplatná služba Google, která může být povolena pro vaši instanci ProyeksiApp. Je-li povolena, objeví se při přihlášení captcha formulář všem uživatelům, kteří ještě neověřili captchu. <br/> Více informací o reCAPTCHA, jejich verzích a jak vytvořit webovou stránku a tajné klíče naleznete v následujícím odkazu:  %{recaptcha_link}

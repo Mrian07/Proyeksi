@@ -13,21 +13,21 @@ SecureHeaders::Configuration.default do |config|
 
   # Valid for assets
   assets_src = ["'self'"]
-  asset_host = OpenProject::Configuration.rails_asset_host
+  asset_host = ProyeksiApp::Configuration.rails_asset_host
   assets_src << asset_host if asset_host.present?
 
   # Valid for iframes
   frame_src = %w['self' https://player.vimeo.com]
-  frame_src << OpenProject::Configuration[:security_badge_url]
+  frame_src << ProyeksiApp::Configuration[:security_badge_url]
 
   # Default src
-  default_src = %w('self') + OpenProject::Configuration.remote_storage_hosts
+  default_src = %w('self') + ProyeksiApp::Configuration.remote_storage_hosts
 
   # Allow requests to CLI in dev mode
   connect_src = default_src
 
-  if OpenProject::Configuration.sentry_frontend_dsn.present?
-    connect_src += [OpenProject::Configuration.sentry_host]
+  if ProyeksiApp::Configuration.sentry_frontend_dsn.present?
+    connect_src += [ProyeksiApp::Configuration.sentry_host]
   end
 
   # Add proxy configuration for Angular CLI to csp
@@ -41,7 +41,7 @@ SecureHeaders::Configuration.default do |config|
   script_src = assets_src
 
   # Allow unsafe-eval for rack-mini-profiler
-  if Rails.env.development? && ENV['OPENPROJECT_RACK_PROFILER_ENABLED']
+  if Rails.env.development? && ENV['PROYEKSIAPP_RACK_PROFILER_ENABLED']
     script_src += %w('unsafe-eval')
   end
 
@@ -67,7 +67,7 @@ SecureHeaders::Configuration.default do |config|
     # Allow unsafe-inline styles
     style_src: assets_src + %w('unsafe-inline'),
     # Allow object-src from Release API
-    object_src: [OpenProject::Configuration[:security_badge_url]],
+    object_src: [ProyeksiApp::Configuration[:security_badge_url]],
 
     # Connect sources for CLI in dev mode
     connect_src: connect_src

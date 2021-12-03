@@ -1,6 +1,6 @@
 ---
 description: |-
-  Notifications are created through notifiable actions in OpenProject.
+  Notifications are created through notifiable actions in ProyeksiApp.
   This endpoint only returns in-app notifications.
 
   ## Actions

@@ -4,11 +4,11 @@ sidebar_navigation:
   priority: 100
 ---
 
-# OpenProject advanced configuration
+# ProyeksiApp advanced configuration
 
 
 
-OpenProject can be configured either via the `config/configuration.yml` file, [environment variables](environment/) or a mix of both.
+ProyeksiApp can be configured either via the `config/configuration.yml` file, [environment variables](environment/) or a mix of both.
 While the latter is probably a bad idea, the environment variable option is often helpful for automatically deploying production systems.
 Using the configuration file is probably the simplest way of configuration.
 
@@ -18,7 +18,7 @@ You can find a list of options below and an example file in [config/configuratio
 
 ## Environment variables
 
-Configuring OpenProject through environment variables is detailed [in this separate guide](environment/).
+Configuring ProyeksiApp through environment variables is detailed [in this separate guide](environment/).
 
 ## List of options
 
@@ -91,9 +91,9 @@ Example:
       # optional: true
 
 Can be used to automatically login a user defined through a custom header
-sent by a load balancer or reverse proxy in front of OpenProject,
+sent by a load balancer or reverse proxy in front of ProyeksiApp,
 for instance in a Kerberos Single Sign-On (SSO) setup via apache.
-The header with the given name has to be passed to OpenProject containing the logged in
+The header with the given name has to be passed to ProyeksiApp containing the logged in
 user and the defined global secret as in `$login:$secret`.
 
 ### omniauth direct login provider
@@ -114,7 +114,7 @@ omniauth provider if additional ones are configured.
 
 ### Gravatar images
 
-OpenProject uses gravatar images with a `404` fallback by default to render an internal, initials-based avatar.
+ProyeksiApp uses gravatar images with a `404` fallback by default to render an internal, initials-based avatar.
 You can override this behavior by setting `gravatar_fallback_image` to a different value to always render Gravatars
 
 For supported values, please see https://en.gravatar.com/site/implement/images/
@@ -183,12 +183,12 @@ for the migration.
 *default: true*
 
 When using fog attachments uploaded in the frontend will be posted directly
-to the cloud rather than going through the OpenProject servers. This allows large attachments to be uploaded
-without the need to increase the `client_max_body_size` for the proxy in front of OpenProject.
+to the cloud rather than going through the ProyeksiApp servers. This allows large attachments to be uploaded
+without the need to increase the `client_max_body_size` for the proxy in front of ProyeksiApp.
 Also it prevents web processes from being blocked through long uploads.
 
 If, for what ever reason, this is undesirable, you can disable this option.
-In that case attachments will be posted as usual to the OpenProject server which then uploads the file
+In that case attachments will be posted as usual to the ProyeksiApp server which then uploads the file
 to the remote storage in an extra step.
 
 **Note**: This only works for S3 right now. When using fog with another provider this configuration will be `false`. The same goes for when no fog storage is configured, or when the `use_iam_profile` option is used in the fog credentials when using S3.
@@ -210,12 +210,12 @@ allowed by S3 when using IAM roles for authentication.
 
 ### Overriding the help link
 
-You can override the default help menu of OpenProject by specifying a `force_help_link` option to
+You can override the default help menu of ProyeksiApp by specifying a `force_help_link` option to
 the configuration. This value is used for the href of the help link, and the default dropdown is removed.
 
 ### Setting an impressum (legal notice) link
 
-You can set a impressum link for your OpenProject instance by setting `impressum_link` to an absolute URL.
+You can set a impressum link for your ProyeksiApp instance by setting `impressum_link` to an absolute URL.
 
 ### hidden menu items
 
@@ -337,13 +337,13 @@ default:
 
 ## Security badge
 
-OpenProject now provides a release indicator (security badge) that will inform administrators of an OpenProject
+ProyeksiApp now provides a release indicator (security badge) that will inform administrators of an ProyeksiApp
 installation on whether new releases or security updates are available for your platform.
 
 If enabled, this option will display a badge with your installation status at Administration &gt; Information right next to the release version,
 and on the home screen. It is only displayed to administrators.
 
-The badge will match your current OpenProject version against the official OpenProject release database to alert you of any updates or known vulnerabilities.
+The badge will match your current ProyeksiApp version against the official ProyeksiApp release database to alert you of any updates or known vulnerabilities.
 To ensure the newest available update can be returned, the check will include your installation type, current version, database type, enterprise status and an anonymous unique ID of the instance.
 To localize the badge, the user's locale is sent. No personal information of your installation or any user within is transmitted, processed, or stored.
 
@@ -395,8 +395,8 @@ OPENPROJECT_ENTERPRISE_FAIL__FAST=true
 
 *default: true*
 
-If enabled, admins (or users with the necessary permission) can download backups of the OpenProject installation
-via OpenProject's web interface or via the API.
+If enabled, admins (or users with the necessary permission) can download backups of the ProyeksiApp installation
+via ProyeksiApp's web interface or via the API.
 
 There are further configurations you can use to adjust your backups.
 
@@ -421,7 +421,7 @@ OPENPROJECT_BACKUP__ATTACHMENT__SIZE__MAX__SUM__MB=1024
 
 ### Show community links
 
-If you would like to hide the homescreen links to the OpenProject community, you can do this with the following configuration:
+If you would like to hide the homescreen links to the ProyeksiApp community, you can do this with the following configuration:
 
 ```
 OPENPROJECT_SHOW__COMMUNITY__LINKS=false
@@ -456,7 +456,7 @@ OPENPROJECT_WEB_MAX__THREADS=16 # overriden by: RAILS_MAX_THREADS
 
 *default: { host: nil, port: 8125 }*
 
-OpenProject can push metrics to [statsd](https://github.com/statsd/statsd).
+ProyeksiApp can push metrics to [statsd](https://github.com/statsd/statsd).
 Currently these are simply the metrics for the puma server
 but this may include more in the future.
 
@@ -477,11 +477,11 @@ OPENPRJOECT_STATSD_PORT=8125 # overriden by: STATSD_PORT
 
 | ----------- | :---------- |
 | [List of supported environment variables](./environment) | The full list of environment variables you can use to override the default configuration |
-| [Configuring SSL](./ssl) | How to configure SSL so that your OpenProject installation is available over HTTPS |
+| [Configuring SSL](./ssl) | How to configure SSL so that your ProyeksiApp installation is available over HTTPS |
 | [Configuring outbound emails](./outbound-emails) | How to configure outbound emails for notifications, etc. |
 | [Configuring inbound emails](./incoming-emails) | How to configure inbound emails for work package updates directly from an email |
 | [Configuring a custom database](./database) | How to use an external database |
-| [Configuring a custom web server](./server) | How to use a custom web server (e.g. NginX) with your OpenProject installation |
-| Configuring a custom caching server | How to use a custom caching server with your OpenProject installation |
-| [Configuring Git and Subversion repositories](./repositories) | How to integrate Git and Subversion repositories into OpenProject |
-| [Adding plugins](./plugins) | How to add plugins to your OpenProject installation |
+| [Configuring a custom web server](./server) | How to use a custom web server (e.g. NginX) with your ProyeksiApp installation |
+| Configuring a custom caching server | How to use a custom caching server with your ProyeksiApp installation |
+| [Configuring Git and Subversion repositories](./repositories) | How to integrate Git and Subversion repositories into ProyeksiApp |
+| [Adding plugins](./plugins) | How to add plugins to your ProyeksiApp installation |

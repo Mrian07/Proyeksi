@@ -201,6 +201,6 @@ class GenerateWpClosure < ActiveRecord::Migration[5.0]
 
     acts_as_nested_set scope: 'root_id', dependent: :destroy
 
-    include OpenProject::NestedSet::RebuildPatch
+    include ProyeksiApp::NestedSet::RebuildPatch
   end
 end

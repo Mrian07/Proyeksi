@@ -87,7 +87,7 @@ module API
                     getter: ->(*) {
                       if represented_is_boolean_list?(represented)
                         represented.values.map do |value|
-                          value == OpenProject::Database::DB_VALUE_TRUE
+                          value == ProyeksiApp::Database::DB_VALUE_TRUE
                         end
                       else
                         represented.values
@@ -118,9 +118,9 @@ module API
             represented.values = if represented_is_boolean_list?(represented)
                                    vals.map do |value|
                                      if value
-                                       OpenProject::Database::DB_VALUE_TRUE
+                                       ProyeksiApp::Database::DB_VALUE_TRUE
                                      else
-                                       OpenProject::Database::DB_VALUE_FALSE
+                                       ProyeksiApp::Database::DB_VALUE_FALSE
                                      end
                                    end
                                  else

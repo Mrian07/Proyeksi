@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.5
+  title: ProyeksiApp 4.2.5
   sidebar_navigation:
       title: 4.2.5
   release_version: 4.2.5
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.5
+# ProyeksiApp 4.2.5
 
-OpenProject 4.2.5 contains bug fixes and updated translations.
+ProyeksiApp 4.2.5 contains bug fixes and updated translations.
 
 The following bugs have been fixed:
 
@@ -18,10 +18,10 @@ The following bugs have been fixed:
     were partly hidden
     ([\#21204](https://community.openproject.org/work_packages/21204)).
   - An error has been fixed which caused a random language to be
-    displayed when first logging into an OpenProject instance if no
+    displayed when first logging into an ProyeksiApp instance if no
     language has been configured
     ([\#21119](https://community.openproject.org/work_packages/21119)).
-  - For users of OpenProject-CE packager installation on CentOS, a bug
+  - For users of ProyeksiApp-CE packager installation on CentOS, a bug
     has been fixed which affects a wrong autostart configuration
     ([\#21126](https://community.openproject.org/work_packages/21126)).
 

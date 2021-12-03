@@ -43,7 +43,7 @@ module ::TwoFactorAuthentication
       end
 
       def strategy_manager
-        ::OpenProject::TwoFactorAuthentication::TokenStrategyManager
+        ::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager
       end
 
       def empty_row_message

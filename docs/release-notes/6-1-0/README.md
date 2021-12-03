@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.0
+  title: ProyeksiApp 6.1.0
   sidebar_navigation:
       title: 6.1.0
   release_version: 6.1.0
@@ -7,14 +7,14 @@
 ---
 
 
-# OpenProject 6.1.0
+# ProyeksiApp 6.1.0
 
-OpenProject 6.1.0 contains several new features, including an enhanced
+ProyeksiApp 6.1.0 contains several new features, including an enhanced
 project member table and improved work package relations.  
 
 ## Enhanced project member table
 
-OpenProject 6.1 improves the project member table and adds filters to
+ProyeksiApp 6.1 improves the project member table and adds filters to
 the project member
 list ([\#22859](https://community.openproject.com/work_packages/22859/activity)).
 
@@ -50,7 +50,7 @@ can therefore easily added to you calendar.
 
 ## API for users and relations
 
-The OpenProject API v3 has been extended by user endpoints. It is now
+The ProyeksiApp API v3 has been extended by user endpoints. It is now
 possible to create, read, update and delete user information.  
 In addition, we added the relations API.  
 For more information take a look at the [API
@@ -58,18 +58,18 @@ documentation](../../api/).
 
 ## Upgrade to Rails 5.0
 
-The technology underlying OpenProject (Ruby on Rails) has been updated
+The technology underlying ProyeksiApp (Ruby on Rails) has been updated
 to provide the highest level of security.
 
 ## Improved design
 
-OpenProject 6.1 includes several design improvements. For example work
+ProyeksiApp 6.1 includes several design improvements. For example work
 package attributes are now displayed in two columns instead of one if
 there is enough space.
 
 ## Substantial number of bug fixes
 
-OpenProject 6.1 contains a large number of bugs fixes.
+ProyeksiApp 6.1 contains a large number of bugs fixes.
 
 For an extensive overview of bug fixes please refer to the [following
 list](https://community.openproject.com/projects/openproject/work_packages?query_props=%7B%22c%22:%5B%22id%22,%22subject%22,%22type%22,%22status%22,%22assignee%22%5D,%22p%22:%22openproject%22,%22t%22:%22parent:desc%22,%22f%22:%5B%7B%22n%22:%22version%22,%22o%22:%22%253D%22,%22t%22:%22list_optional%22,%22v%22:%22667%22%7D,%7B%22n%22:%22type%22,%22o%22:%22%253D%22,%22t%22:%22list_model%22,%22v%22:%5B%221%22%5D%7D,%7B%22n%22:%22subprojectId%22,%22o%22:%22*%22,%22t%22:%22list_subprojects%22%7D%5D,%22pa%22:1,%22pp%22:20%7D).

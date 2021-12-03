@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.7
+  title: ProyeksiApp 4.2.7
   sidebar_navigation:
       title: 4.2.7
   release_version: 4.2.7
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.7
+# ProyeksiApp 4.2.7
 
-OpenProject 4.2.7 contains a security fix, a bug fix and updated
+ProyeksiApp 4.2.7 contains a security fix, a bug fix and updated
 translations.
 
 The security fix avoids redirecting to foreign host names for specific

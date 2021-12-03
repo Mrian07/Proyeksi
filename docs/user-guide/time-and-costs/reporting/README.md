@@ -9,7 +9,7 @@ keywords: time and cost reporting
 
 # Time and cost reporting
 
-You can easily report spent time and costs in OpenProject and filter, group and save the reports according to your needs.
+You can easily report spent time and costs in ProyeksiApp and filter, group and save the reports according to your needs.
 
 <div class="alert alert-info" role="alert">
 **Note**: To use the time tracking functionality, the **Time and costs module** needs to be activated in the [project settings](../../projects/project-settings/modules/).
@@ -18,7 +18,7 @@ You can easily report spent time and costs in OpenProject and filter, group and 
 
 | Topic                                                      | Content                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Time and costs report](#time-and-costs-reports)             | How to open time and costs reports in OpenProject?           |
+| [Time and costs report](#time-and-costs-reports)             | How to open time and costs reports in ProyeksiApp?           |
 | [Change time and costs reports](#change-time-and-costs-reports) | How to change the view of the reports, e.g. to filter, group by and select units to be displayed? |
 | [Filter cost reports](#filter-cost-reports)                  | How to filter time and cost reports?                         |
 | [Group by criteria for cost reports](#group-by-criteria-for-cost-reports) | How to group time and cost reports?                          |
@@ -27,7 +27,7 @@ You can easily report spent time and costs in OpenProject and filter, group and 
 
 ## Time and costs reports
 
-To open the time and costs reports in OpenProject, navigate to the **Time and costs** module in the project navigation.
+To open the time and costs reports in ProyeksiApp, navigate to the **Time and costs** module in the project navigation.
 
 <div class="glossary">**Time and costs** is a plugin to filter cost reports on individual or multiple users across individual or multiple projects. The plugin has to be activated as a module in the project settings to be displayed in the side navigation.
 </div>

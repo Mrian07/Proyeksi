@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe OpenProject::JournalFormatter::CustomField do
+describe ProyeksiApp::JournalFormatter::CustomField do
   include CustomFieldsHelper
   include ActionView::Helpers::TagHelper
 

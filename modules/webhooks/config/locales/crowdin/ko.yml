@@ -56,4 +56,4 @@ ko:
           title: '선택한 프로젝트'
         secret:
           description: >
-            설정한 경우 이 비밀번호 값은 OpenProject에 의해 Webhook 페이로드에 서명하는 데 사용됩니다.
+            설정한 경우 이 비밀번호 값은 ProyeksiApp에 의해 Webhook 페이로드에 서명하는 데 사용됩니다.

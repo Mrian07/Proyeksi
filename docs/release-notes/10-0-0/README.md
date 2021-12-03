@@ -1,24 +1,24 @@
 ---
-title: OpenProject 10.0.0
+title: ProyeksiApp 10.0.0
 sidebar_navigation:
     title: 10.0.0
 release_version: 10.0.0
 release_date: 2019-09-23
 ---
 
-# OpenProject 10.0
+# ProyeksiApp 10.0
 
-OpenProject 10 introduces drag and drop ordering of work packages in the work package table and Gantt view. The project overview dashboard has been completely rewritten to provide a modern and flexible overview of the project. In addition, work package description and custom fields now have task lists you can create and manage within the CKEditor5 WYSIWYG editor. A new card view on the work package page provides quick overview of the tasks. Users of the Cloud and Enterprise Edition benefit from graphs which can be included in the project overview page.
+ProyeksiApp 10 introduces drag and drop ordering of work packages in the work package table and Gantt view. The project overview dashboard has been completely rewritten to provide a modern and flexible overview of the project. In addition, work package description and custom fields now have task lists you can create and manage within the CKEditor5 WYSIWYG editor. A new card view on the work package page provides quick overview of the tasks. Users of the Cloud and Enterprise Edition benefit from graphs which can be included in the project overview page.
 
-Read below to get a detailed overview of what is new in OpenProject 10.
+Read below to get a detailed overview of what is new in ProyeksiApp 10.
 
-![OpenProject 10](release-teaser.jpg)
+![ProyeksiApp 10](release-teaser.jpg)
 
 
 
 ## Drag & drop (manual sorting) in work package table
 
-OpenProject 10 adds drag and drop to the work package list. You can easily change the work package order by simply dragging a work package to a desired place.
+ProyeksiApp 10 adds drag and drop to the work package list. You can easily change the work package order by simply dragging a work package to a desired place.
 
 This also allows you to change a work package's hierarchy (e.g. by dragging a work package from the first hierarchy level below an existing work package).
 
@@ -30,21 +30,21 @@ When you group the work package list based on an attribute (e.g. the assignee, p
 
 ## Card view for work packages
 
-The work package view is extended in OpenProject 10. In addition to the list view and the Gantt chart view, it is possible to display work packages in a card format.
+The work package view is extended in ProyeksiApp 10. In addition to the list view and the Gantt chart view, it is possible to display work packages in a card format.
 
 This provides an easy visual overview of the tasks in a project. Simply activate the details view to see more information about a work package.
 
-![OpenProject card view](card-view.png)
+![ProyeksiApp card view](card-view.png)
 
 
 
 ## Updated Project Overview
 
-OpenProject 10 introduces an updated project overview page. You can now easily add, edit and remove widgets - directly from the project overview page.
+ProyeksiApp 10 introduces an updated project overview page. You can now easily add, edit and remove widgets - directly from the project overview page.
 
 Freely configure how many columns are displayed on the project overview page.
 
-The overview pages of users upgrading from earlier versions to OpenProject 10 will be updated automatically.
+The overview pages of users upgrading from earlier versions to ProyeksiApp 10 will be updated automatically.
 
 ![Updated project overview](overview.png)
 
@@ -64,7 +64,7 @@ As a result, you quickly see your project's status and can act accordingly.
 
 ## Updated administration menu and structure
 
-The administration area is completely remodeled in OpenProject 10. Due to the changes, the administration menu is much more clearly structured.
+The administration area is completely remodeled in ProyeksiApp 10. Due to the changes, the administration menu is much more clearly structured.
 
 Additionally, the administration overview page now highlights the different admin entries for quick access.
 
@@ -90,7 +90,7 @@ The toolbar for wiki pages is now fixed at the top and no longer scrolls along w
 
 ## Performance improvements
 
-OpenProject 10 significantly improves the performance, especially for the work package page. Due to description caching work packages are loaded swiftly.
+ProyeksiApp 10 significantly improves the performance, especially for the work package page. Due to description caching work packages are loaded swiftly.
 
 #### Bug fixes and changes
 
@@ -222,11 +222,11 @@ OpenProject 10 significantly improves the performance, especially for the work p
 
 ## Support
 
-You will find useful information in the OpenProject [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
+You will find useful information in the ProyeksiApp [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
 
-### Upgrading your installation to OpenProject 10.0.
+### Upgrading your installation to ProyeksiApp 10.0.
 
-If you're using the OpenProject Cloud Edition, you are already running on the latest version of OpenProject 10.0. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
+If you're using the ProyeksiApp Cloud Edition, you are already running on the latest version of ProyeksiApp 10.0. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
 
 [Please visit our upgrade guides for more information](../../installation-and-operations/operation/upgrading).
 
@@ -234,9 +234,9 @@ If you're using the OpenProject Cloud Edition, you are already running on the la
 
 ## Credits
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject.
+- All the developers, designers, project managers who have contributed to ProyeksiApp.
 - Every dedicated user who has [reported bugs]() and supported the community by asking and answering questions in the [forum](https://community.openproject.org/projects/openproject/boards).
 - All the engaged users who provided translations on [CrowdIn](https://crowdin.com/projects/opf).
 
@@ -244,8 +244,8 @@ Special thanks go to all OpenProject contributors without whom this release woul
 
 ## What's next?
 
-We are continuously developing new features and improvements for OpenProject.
-The next release will contain a dashboard and reporting view for OpenProject and also allow to communicate the project status using a traffic light.
+We are continuously developing new features and improvements for ProyeksiApp.
+The next release will contain a dashboard and reporting view for ProyeksiApp and also allow to communicate the project status using a traffic light.
 Take a look at the [release timeline](https://community.openproject.com/projects/openproject/work_packages?query_id=918) to see the upcoming features and releases.
 
-To stay up to date with the recent development, feel free to follow OpenProject on [Twitter](https://twitter.com/openproject) and like OpenProject on [Facebook](https://www.facebook.com/openprojectfoundation).
+To stay up to date with the recent development, feel free to follow ProyeksiApp on [Twitter](https://twitter.com/openproject) and like ProyeksiApp on [Facebook](https://www.facebook.com/openprojectfoundation).

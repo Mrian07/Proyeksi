@@ -92,7 +92,7 @@ class Changeset < ApplicationRecord
   end
 
   before_create :sanitize_attributes
-  before_create :assign_openproject_user_from_comitter
+  before_create :assign_proyeksiapp_user_from_comitter
   after_create :scan_comment_for_work_package_ids
 
   TIMELOG_RE = /
@@ -215,7 +215,7 @@ class Changeset < ApplicationRecord
     unless Setting.commit_fix_done_ratio.blank?
       work_package.done_ratio = Setting.commit_fix_done_ratio.to_i
     end
-    OpenProject::Hook.call_hook(:model_changeset_scan_commit_for_issue_ids_pre_issue_update,
+    ProyeksiApp::Hook.call_hook(:model_changeset_scan_commit_for_issue_ids_pre_issue_update,
                                 changeset: self, issue: work_package)
     if !work_package.save(validate: false) && logger
       logger.warn("Work package ##{work_package.id} could not be saved by changeset #{id}: #{work_package.errors.full_messages}")
@@ -253,7 +253,7 @@ class Changeset < ApplicationRecord
     self.comments  = self.class.normalize_comments(comments, repository.repo_log_encoding)
   end
 
-  def assign_openproject_user_from_comitter
+  def assign_proyeksiapp_user_from_comitter
     self.user = repository.find_committer_user(committer)
     add_journal(user || User.anonymous, comments)
   end

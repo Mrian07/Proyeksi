@@ -155,12 +155,12 @@ class Role < ApplicationRecord
   private
 
   def allowed_permissions
-    @allowed_permissions ||= permissions + OpenProject::AccessControl.public_permissions.map(&:name)
+    @allowed_permissions ||= permissions + ProyeksiApp::AccessControl.public_permissions.map(&:name)
   end
 
   def allowed_actions
     @actions_allowed ||= allowed_permissions.map do |permission|
-      OpenProject::AccessControl.allowed_actions(permission)
+      ProyeksiApp::AccessControl.allowed_actions(permission)
     end.flatten
   end
 

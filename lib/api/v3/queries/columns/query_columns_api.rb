@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module Columns
-        class QueryColumnsAPI < ::API::OpenProjectAPI
+        class QueryColumnsAPI < ::API::ProyeksiAppAPI
           resource :columns do
             helpers do
               def convert_to_ar(attribute)

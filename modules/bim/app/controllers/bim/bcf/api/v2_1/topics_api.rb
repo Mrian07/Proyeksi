@@ -1,7 +1,7 @@
 
 
 module Bim::Bcf::API::V2_1
-  class TopicsAPI < ::API::OpenProjectAPI
+  class TopicsAPI < ::API::ProyeksiAppAPI
     resources :topics do
       helpers do
         def topics

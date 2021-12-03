@@ -6,16 +6,16 @@ require 'forwardable'
 require 'cgi'
 
 module ApplicationHelper
-  include OpenProject::TextFormatting
-  include OpenProject::ObjectLinking
-  include OpenProject::SafeParams
+  include ProyeksiApp::TextFormatting
+  include ProyeksiApp::ObjectLinking
+  include ProyeksiApp::SafeParams
   include I18n
   include ERB::Util
   include Redmine::I18n
   include HookHelper
   include IconsHelper
   include AdditionalUrlHelpers
-  include OpenProject::PageHierarchyHelper
+  include ProyeksiApp::PageHierarchyHelper
 
   # Return true if user is authorized for controller/action, otherwise false
   def authorize_for(controller, action, project: @project)
@@ -251,7 +251,7 @@ module ApplicationHelper
   end
 
   def syntax_highlight(name, content)
-    highlighted = OpenProject::SyntaxHighlighting.highlight_by_filename(content, name)
+    highlighted = ProyeksiApp::SyntaxHighlighting.highlight_by_filename(content, name)
     highlighted.each_line do |line|
       yield highlighted.html_safe? ? line.html_safe : line
     end
@@ -273,7 +273,7 @@ module ApplicationHelper
   # Returns the theme, controller name, and action as css classes for the
   # HTML body.
   def body_css_classes
-    css = ['theme-' + OpenProject::CustomStyles::Design.identifier.to_s]
+    css = ['theme-' + ProyeksiApp::CustomStyles::Design.identifier.to_s]
 
     if params[:controller] && params[:action]
       css << 'controller-' + params[:controller]
@@ -289,7 +289,7 @@ module ApplicationHelper
   end
 
   def accesskey(s)
-    OpenProject::AccessKeys.key_for s
+    ProyeksiApp::AccessKeys.key_for s
   end
 
   # Same as Rails' simple_format helper without using paragraphs
@@ -345,9 +345,9 @@ module ApplicationHelper
   end
 
   def check_all_links(form_name)
-    link_to_function(t(:button_check_all), "OpenProject.helpers.checkAll('#{form_name}', true)") +
+    link_to_function(t(:button_check_all), "ProyeksiApp.helpers.checkAll('#{form_name}', true)") +
       ' | ' +
-      link_to_function(t(:button_uncheck_all), "OpenProject.helpers.checkAll('#{form_name}', false)")
+      link_to_function(t(:button_uncheck_all), "ProyeksiApp.helpers.checkAll('#{form_name}', false)")
   end
 
   def current_layout
@@ -448,10 +448,10 @@ module ApplicationHelper
   #
   def footer_content
     elements = []
-    elements << I18n.t(:text_powered_by, link: link_to(OpenProject::Info.app_name,
-                                                       OpenProject::Info.url))
-    unless OpenProject::Footer.content.nil?
-      OpenProject::Footer.content.each do |name, value|
+    elements << I18n.t(:text_powered_by, link: link_to(ProyeksiApp::Info.app_name,
+                                                       ProyeksiApp::Info.url))
+    unless ProyeksiApp::Footer.content.nil?
+      ProyeksiApp::Footer.content.each do |name, value|
         content = value.respond_to?(:call) ? value.call : value
         if content
           elements << content_tag(:span, content, class: "footer_#{name}")
@@ -481,11 +481,11 @@ module ApplicationHelper
   end
 
   def password_complexity_requirements
-    rules = OpenProject::Passwords::Evaluator.rules_description
+    rules = ProyeksiApp::Passwords::Evaluator.rules_description
     # use 0..0, so this doesn't fail if rules is an empty string
     rules[0] = rules[0..0].upcase
 
-    s = raw '<em>' + OpenProject::Passwords::Evaluator.min_length_description + '</em>'
+    s = raw '<em>' + ProyeksiApp::Passwords::Evaluator.min_length_description + '</em>'
     s += raw '<br /><em>' + rules + '</em>' unless rules.empty?
     s
   end

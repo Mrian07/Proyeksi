@@ -359,13 +359,13 @@ shared_examples_for 'boolean query filter' do |scope: true|
     joins || model.table_name
   end
 
-  let(:valid_values) { [OpenProject::Database::DB_VALUE_TRUE] }
+  let(:valid_values) { [ProyeksiApp::Database::DB_VALUE_TRUE] }
 
   describe '#allowed_values' do
     it 'is list for a bool' do
       expect(instance.allowed_values)
-        .to match_array [[I18n.t(:general_text_yes), OpenProject::Database::DB_VALUE_TRUE],
-                         [I18n.t(:general_text_no), OpenProject::Database::DB_VALUE_FALSE]]
+        .to match_array [[I18n.t(:general_text_yes), ProyeksiApp::Database::DB_VALUE_TRUE],
+                         [I18n.t(:general_text_no), ProyeksiApp::Database::DB_VALUE_FALSE]]
     end
   end
 
@@ -390,7 +390,7 @@ shared_examples_for 'boolean query filter' do |scope: true|
         it 'is the same as handwriting the query' do
           sql = "#{expected_table_name}.#{attribute} IS NULL
                  OR #{expected_table_name}.#{attribute} IN (?)".squish
-          expected = expected_base_scope.where([sql, [OpenProject::Database::DB_VALUE_FALSE]])
+          expected = expected_base_scope.where([sql, [ProyeksiApp::Database::DB_VALUE_FALSE]])
 
           expect(instance.scope.to_sql).to eql expected.to_sql
         end

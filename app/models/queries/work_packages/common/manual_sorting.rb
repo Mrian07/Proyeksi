@@ -20,7 +20,7 @@ module Queries::WorkPackages
             AND ordered_work_packages.query_id = :query_id
         SQL
 
-        ::OpenProject::SqlSanitization
+        ::ProyeksiApp::SqlSanitization
           .sanitize join_sql, query_id: query.id
       end
     end

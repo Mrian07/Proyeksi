@@ -28,8 +28,8 @@ bg:
         main-menu-hover-font-color: "Main menu font on hover"
         main-menu-border-color: "Main menu border"
       custom_colors: "Custom colors"
-      customize: "Customize your OpenProject installation with your own logo. Note: This logo will be publicly accessible."
-      enterprise_notice: "As a special 'Thank you!' for their financial contribution to develop OpenProject, this tiny feature is only available for Enterprise Edition support subscribers."
+      customize: "Customize your ProyeksiApp installation with your own logo. Note: This logo will be publicly accessible."
+      enterprise_notice: "As a special 'Thank you!' for their financial contribution to develop ProyeksiApp, this tiny feature is only available for Enterprise Edition support subscribers."
       manage_colors: "Edit color select options"
       instructions:
         alternative-color: "Strong accent color, typically used for the most important button on a screen."
@@ -81,37 +81,37 @@ bg:
       name: Произволно име на LDAP връзката
       host: LDAP име на хост или IP адрес
       login_map: The attribute key in LDAP that is used to identify the unique user login. Usually, this will be `uid` or `samAccountName`.
-      generic_map: The attribute key in LDAP that is mapped to the OpenProject `%{attribute}` attribute
-      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the OpenProject user an admin. Leave empty when in doubt."
+      generic_map: The attribute key in LDAP that is mapped to the ProyeksiApp `%{attribute}` attribute
+      admin_map_html: "Optional: The attribute key in LDAP that <strong>if present</strong> marks the ProyeksiApp user an admin. Leave empty when in doubt."
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br/>
         Example: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Enter the bind password of the system user
       base_dn: |
-        Enter the Base DN of the subtree in LDAP you want OpenProject to look for users and groups.
-        OpenProject will filter for provided usernames in this subtree only.
+        Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
+        ProyeksiApp will filter for provided usernames in this subtree only.
         Example: ou=users,dc=example,dc=com
       filter_string: |
         Add an optional RFC4515 filter to apply to the results returned for users filtered in the LDAP.
-        This can be used to restrict the set of users that are found by OpenProject for authentication and group synchronization.
+        This can be used to restrict the set of users that are found by ProyeksiApp for authentication and group synchronization.
       filter_string_concat: |
-        OpenProject will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
+        ProyeksiApp will always filter for the login attribute provided by the user to identify the record. If you provide a filter here,
         it will be concatenated with an AND. By default, a catch-all (objectClass=*) will be used as a filter.
       onthefly_register: |
-        If you check this box, OpenProject will automatically create new users from their LDAP entries
-        when they first authenticate with OpenProject.
-        Leave this unchecked to only allow existing accounts in OpenProject to authenticate through LDAP!
+        If you check this box, ProyeksiApp will automatically create new users from their LDAP entries
+        when they first authenticate with ProyeksiApp.
+        Leave this unchecked to only allow existing accounts in ProyeksiApp to authenticate through LDAP!
     connection_encryption: 'Connection encryption'
     system_account: 'System account'
     system_account_legend: |
-      OpenProject requires read-only access through a system account to lookup users and groups in your LDAP tree.
+      ProyeksiApp requires read-only access through a system account to lookup users and groups in your LDAP tree.
       Please specify the bind credentials for that system user in the following section.
     ldap_details: 'LDAP details'
     user_settings: 'Attribute mapping'
     user_settings_legend: |
-      The following fields are related to how users are created in OpenProject from LDAP entries and
-      what LDAP attributes are used to define the attributes of an OpenProject user (attribute mapping).
+      The following fields are related to how users are created in ProyeksiApp from LDAP entries and
+      what LDAP attributes are used to define the attributes of an ProyeksiApp user (attribute mapping).
     tls_mode:
       plain: 'none'
       simple_tls: 'simple_tls'
@@ -522,7 +522,7 @@ bg:
         confirmation: "не съвпада с %{attribute}."
         could_not_be_copied: "%{dependency} не може да бъде (напълно) копирана."
         does_not_exist: "не съществува."
-        error_enterprise_only: "се предлага само в OpenProject Enterprise Edition"
+        error_enterprise_only: "се предлага само в ProyeksiApp Enterprise Edition"
         error_unauthorized: "may not be accessed."
         error_readonly: "was attempted to be written but is not writable."
         email: "is not a valid email address."
@@ -869,7 +869,7 @@ bg:
       heading_reset: "Reset backup token"
       heading_create: "Create backup token"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1189,7 +1189,7 @@ bg:
   error_can_not_unarchive_project: "This project cannot be unarchived: %{errors}"
   error_check_user_and_role: "Моля, изберете потребител и роля."
   error_code: "Error %{code}"
-  error_cookie_missing: '"Бисквитката" на OpenProject липсва. Моля уверете се че cookies са активирани, тъй като това приложение не функционира правилно без тях.'
+  error_cookie_missing: '"Бисквитката" на ProyeksiApp липсва. Моля уверете се че cookies са активирани, тъй като това приложение не функционира правилно без тях.'
   error_custom_option_not_found: "Опцията не съществува."
   error_enterprise_activation_user_limit: "Your account could not be activated (user limit reached). Please contact your administrator to gain access."
   error_enterprise_token_invalid_domain: "The Enterprise Edition is not active. Your Enterprise token's domain (%{actual}) does not match the system's host name (%{expected})."
@@ -1203,7 +1203,7 @@ bg:
   error_work_package_done_ratios_not_updated: "Не са актуализирани нивата на завършване в работният пакет."
   error_work_package_not_found_in_project: "Работен пакет не е намерен или не принадлежи на този проект"
   error_must_be_project_member: "трябва да бъде член проекта"
-  error_migrations_are_pending: "Your OpenProject installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
+  error_migrations_are_pending: "Your ProyeksiApp installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation."
   error_migrations_visit_upgrade_guides: "Please visit our upgrade guide documentation"
   error_no_default_work_package_status: "Не е дефиниран работен пакет по подразбиране. Моля проверете конфигурацията ( Отидете на Администрация -> Статуси на работни пакети)."
   error_no_type_in_project: "Няма тип свързан към този проект. Моля проверете проектните настройки."
@@ -1277,7 +1277,7 @@ bg:
       no_visible_projects: "There are no visible projects in this instance."
       users: "Най-новите регистрирани потребители в този случай."
     blocks:
-      community: "OpenProject Общността"
+      community: "ProyeksiApp Общността"
       upsale:
         title: "Upgrade to Enterprise Edition"
         more_info: "Повече информация"
@@ -1288,7 +1288,7 @@ bg:
       faq: "Често задавани въпроси"
       glossary: "Терминологичен речник"
       shortcuts: "Кратки клавишни комбинации"
-      blog: "OpenProject блог"
+      blog: "ProyeksiApp блог"
       forums: "Форум на Общността"
       newsletter: "Security alerts / Newsletter"
   image_conversion:
@@ -1329,9 +1329,9 @@ bg:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1340,7 +1340,7 @@ bg:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Новини'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1653,7 +1653,7 @@ bg:
   label_open_menu: "Open menu"
   label_open_work_packages: "open"
   label_open_work_packages_plural: "open"
-  label_openproject_website: "OpenProject website"
+  label_openproject_website: "ProyeksiApp website"
   label_optional_description: "Описание"
   label_options: "Опции"
   label_other: "Други"
@@ -1953,17 +1953,17 @@ bg:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "За да промените паролата си, използвайте следния линк:"
-  mail_body_register: "Добре дошли в OpenProject. Моля, активирайте акаунта си, като кликнете върху тази връзка:"
+  mail_body_register: "Добре дошли в ProyeksiApp. Моля, активирайте акаунта си, като кликнете върху тази връзка:"
   mail_body_register_header_title: "Имейл с покана за участник в проекта"
   mail_body_register_user: "Уважаеми %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Вашият екип на OpenProject"
+  mail_body_register_closing: "Вашият екип на ProyeksiApp"
   mail_body_register_ending: "Останете свързани! Поздрави,"
   mail_body_reminder: "%{count} work package(s) that are assigned to you are due in the next %{days} days:"
   mail_body_group_reminder: "%{count} work package(s) that are assigned to group \"%{group}\" are due in the next %{days} days:"
@@ -2002,14 +2002,14 @@ bg:
   mail_user_activation_limit_reached:
     subject: User activation limit reached
     message: |
-      A new user (%{email}) tried to create an account on an OpenProject environment that you manage (%{host}).
+      A new user (%{email}) tried to create an account on an ProyeksiApp environment that you manage (%{host}).
       The user cannot activate their account since the user limit has been reached.
     steps:
       label: "To allow the user to sign in you can either: "
       a: "Upgrade your payment plan ([here](upgrade_url))" #here turned into a link
       b: "Lock or delete an existing user ([here](users_url))" #here turned into a link
   more_actions: "Още функции"
-  noscript_description: "Трябва да активирате JavaScript за да ползвате OpenProject!"
+  noscript_description: "Трябва да активирате JavaScript за да ползвате ProyeksiApp!"
   noscript_heading: "JavaScript е изключен"
   noscript_learn_more: "Научете повече"
   notice_accessibility_mode: Режим на достъпност може да бъде активиран във вашия профил [settings](url).
@@ -2073,7 +2073,7 @@ bg:
   notice_wont_delete_auth_source: Режим на удостоверяване не може да бъде изтрит, докато все още има потребители, които го използват.
   notice_project_cannot_update_custom_fields: "Не можете да актуализирате наличните потребителски полета на проекта. Проектът е невалиден: %{errors}"
   notice_attachment_migration_wiki_page: >
-    This page was generated automatically during the update of OpenProject. It contains all attachments previously associated with the %{container_type} "%{container_name}".
+    This page was generated automatically during the update of ProyeksiApp. It contains all attachments previously associated with the %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2096,9 +2096,9 @@ bg:
           tb: "TB"
   onboarding:
     heading_getting_started: "Get an overview"
-    text_getting_started_description: "Get a quick overview of project management and team collaboration with OpenProject."
+    text_getting_started_description: "Get a quick overview of project management and team collaboration with ProyeksiApp."
     text_show_again: "Можете да рестартирате това видео от менюто помощ"
-    welcome: "Добре дошли в OpenProject"
+    welcome: "Добре дошли в ProyeksiApp"
     select_language: "Изберете езика си"
   permission_add_work_package_notes: "Добавяне на бележки"
   permission_add_work_packages: "Add work packages"
@@ -2157,7 +2157,7 @@ bg:
   permission_select_project_modules: "Select project modules"
   permission_manage_types: "Select types"
   permission_view_calendar: "Преглед на календара"
-  permission_view_changesets: "View repository revisions in OpenProject"
+  permission_view_changesets: "View repository revisions in ProyeksiApp"
   permission_view_commit_author_statistics: "View commit author statistics"
   permission_view_work_package_watchers: "View watchers list"
   permission_view_work_packages: "View work packages"
@@ -2239,7 +2239,7 @@ bg:
     destroy:
       confirmation: "If you continue, this will permanently delete the managed repository."
       info: "Deleting the repository is an irreversible action."
-      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by OpenProject."
+      info_not_managed: "Note: This will NOT delete the contents of this repository, as it is not managed by ProyeksiApp."
       managed_path_note: "The following directory will be erased: %{path}"
       repository_verification: "Enter the project's identifier %{identifier} to verify the deletion of its repository."
       subtitle: "Наистина ли искате да изтриете %{repository_type} на проекта %{project_name}?"
@@ -2253,8 +2253,8 @@ bg:
       empty_repository: "Хранилището съществува, но е празно. То не съдържа никакви корекции все още."
       exists_on_filesystem: "Директорията на хранилище вече съществува във файловата система."
       filesystem_access_failed: "Възникна грешка при достъп до хранилището в файловата система: %{message}"
-      not_manageable: "Този доставчик на хранилище не може да се управлява от OpenProject."
-      path_permission_failed: "Възникна грешка при опит да се създаде следния път: %{path}. Убедете се, че OpenProject има права за писане в тази папка."
+      not_manageable: "Този доставчик на хранилище не може да се управлява от ProyeksiApp."
+      path_permission_failed: "Възникна грешка при опит да се създаде следния път: %{path}. Убедете се, че ProyeksiApp има права за писане в тази папка."
       unauthorized: "Вие не сте упълномощени за достъп до хранилището или аутентикиращите данни са невалидни."
       unavailable: "Хранилището е недостъпно."
       exception_title: "Няма достъп до хранилището: %{message}"
@@ -2271,9 +2271,9 @@ bg:
         path_encoding: "Замени Git път кодиране (по подразбиране: UTF-8)"
       local_title: "Връзка към съществуващите локални хранилище Git"
       local_url: "Локален URL адрес"
-      local_introduction: "If you have an existing local Git repository, you can link it with OpenProject to access it from within the application."
-      managed_introduction: "Let OpenProject create and integrate a local Git repository automatically."
-      managed_title: "Git repository integrated into OpenProject"
+      local_introduction: "If you have an existing local Git repository, you can link it with ProyeksiApp to access it from within the application."
+      managed_introduction: "Let ProyeksiApp create and integrate a local Git repository automatically."
+      managed_title: "Git repository integrated into ProyeksiApp"
       managed_url: "Managed URL"
       path: "Path to Git repository"
       path_encoding: "Path encoding"
@@ -2290,19 +2290,19 @@ bg:
     scm_types:
       local: "Връзка към локални места за съхранение"
       existing: "Връзка към съществуващо място за съхранение"
-      managed: "Създаване на ново хранилище в OpenProject"
+      managed: "Създаване на ново хранилище в ProyeksiApp"
     storage:
       not_available: "Диск за съхранение на потреблението не е наличен за това хранилище."
       update_timeout: "Запази последният изисква информация за дисково пространство за хранилище за N минути. Като броим нужното пространство на хранилище може да бъде скъпо, увеличи тази стойност да се намали влиянието върху производителността."
     subversion:
       existing_title: "Съществуващо хранилище за подверсии"
-      existing_introduction: "Ако имате съществуваща хранилище за подверсии, можете да го свържете с OpenProject за достъп до него от приложението."
+      existing_introduction: "Ако имате съществуваща хранилище за подверсии, можете да го свържете с ProyeksiApp за достъп до него от приложението."
       existing_url: "Съществуващ URL адрес"
       instructions:
         managed_url: "Това е URL на управляваните (локални) хранилища за подпроекти."
         url: "Enter the repository URL. This may either target a local repository (starting with %{local_proto} ), or a remote repository.\nThe following URL schemes are supported:"
-      managed_title: "Subversion repository integrated into OpenProject"
-      managed_introduction: "Let OpenProject create and integrate a local Subversion repository automatically."
+      managed_title: "Subversion repository integrated into ProyeksiApp"
+      managed_introduction: "Let ProyeksiApp create and integrate a local Subversion repository automatically."
       managed_url: "Managed URL"
       password: "Repository Password"
       username: "Repository username"
@@ -2319,7 +2319,7 @@ bg:
   setting_apiv3_cors_enabled: "Активирайте CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) позволява разрешения"
   setting_apiv3_cors_origins_text_html: >
-    Ако CORS е активиран, това са източниците, на които е разрешен достъп до API на OpenProject. <br/> Моля, проверете <a href="%{origin_link}" target="_blank"> Документацията в заглавието Origin </a> за това как да посочите очакваните стойности.
+    Ако CORS е активиран, това са източниците, на които е разрешен достъп до API на ProyeksiApp. <br/> Моля, проверете <a href="%{origin_link}" target="_blank"> Документацията в заглавието Origin </a> за това как да посочите очакваните стойности.
   setting_apiv3_docs: "Документация"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2479,7 +2479,7 @@ bg:
       sentence_connector: "и"
       skip_last_comma: "false"
   text_accessibility_hint: "The accessibility mode is designed for users who are blind, motorically handicaped or have a bad eyesight. For the latter focused elements are specially highlighted. Please notice, that the Backlogs module is not available in this mode."
-  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in OpenProject."
+  text_access_token_hint: "Access tokens allow you to grant external applications access to resources in ProyeksiApp."
   text_analyze: "Further analyze: %{subject}"
   text_are_you_sure: "Сигурни ли сте?"
   text_are_you_sure_with_children: "Delete work package and all child work packages?"
@@ -2548,7 +2548,7 @@ bg:
   text_no_notes: "There are no comments available for this work package."
   text_notice_too_many_values_are_inperformant: "Note: Displaying more than 100 items per page can increase the page load time."
   text_notice_security_badge_displayed_html: >
-    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current OpenProject version against the official OpenProject release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
+    Note: if enabled, this will display a badge with your installation status in the <a href="%{information_panel_path}">%{information_panel_label}</a> administration panel, and on the home page. It is displayed to administrators only. <br/> The badge will check your current ProyeksiApp version against the official ProyeksiApp release database to alert you of any updates or known vulnerabilities. For more information on what the check provides, what data is needed to provide available updates, and how to disable this check, please visit <a href="%{more_info_url}">the configuration documentation</a>.
   text_own_membership_delete_confirmation: "You are about to remove some or all of your permissions and may no longer be able to edit this project after that.\nAre you sure you want to continue?"
   text_plugin_assets_writable: "Plugin assets directory writable"
   text_powered_by: "Powered by %{link}"
@@ -2556,7 +2556,7 @@ bg:
   text_reassign: "Reassign to work package:"
   text_regexp_info: "eg. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Уеднаквяването се прилага в многоредов режим. например ^---\s+'
-  text_repository_usernames_mapping: "Select or update the OpenProject user mapped to each username found in the repository log.\nUsers with the same OpenProject and repository username or email are automatically mapped."
+  text_repository_usernames_mapping: "Select or update the ProyeksiApp user mapped to each username found in the repository log.\nUsers with the same ProyeksiApp and repository username or email are automatically mapped."
   text_status_changed_by_changeset: "Applied in changeset %{value}."
   text_table_difference_description: "In this table the single %{entries} are shown. You can view the difference between any two entries by first selecting the according checkboxes in the table. When clicking on the button below the table the differences are shown."
   text_time_logged_by_changeset: "Applied in changeset %{value}."
@@ -2761,7 +2761,7 @@ bg:
     activate_and_reset_failed_logins: "Activate and reset failed logins"
     authentication_provider: "Authentication Provider"
     authentication_settings_disabled_due_to_external_authentication: >
-      This user authenticates via an external authentication provider, so there is no password in OpenProject to be changed.
+      This user authenticates via an external authentication provider, so there is no password in ProyeksiApp to be changed.
     authorization_rejected: "You are not allowed to sign in."
     assign_random_password: "Assign random password (sent to user via email)"
     blocked: "locked temporarily"
@@ -2792,7 +2792,7 @@ bg:
   warning: Предупреждение
   warning_attachments_not_saved: "%{count} file(s) could not be saved."
   warning_imminent_user_limit: >
-    You invited more users than are supported by your current plan. Invited users may not be able to join your OpenProject environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
+    You invited more users than are supported by your current plan. Invited users may not be able to join your ProyeksiApp environment. Please <a href="%{upgrade_url}">upgrade your plan</a> or block existing users in order to allow invited and registered users to join.
   warning_registration_token_expired: |
     The activation email has expired. We sent you a new one to %{email}.
     Please click the link inside of it to activate your account.
@@ -2926,21 +2926,21 @@ bg:
         confidential: "Check if the application will be used where the client secret can be kept confidential. Native mobile apps and Single Page Apps are assumed non-confidential."
         scopes: "Check the scopes you want the application to grant access to. If no scope is checked, api_v3 is assumed."
         client_credential_user_id: "Optional user ID to impersonate when clients use this application. Leave empty to allow public access only"
-        register_intro: "If you are developing an OAuth API client application for OpenProject, you can register it using this form for all users to use."
+        register_intro: "If you are developing an OAuth API client application for ProyeksiApp, you can register it using this form for all users to use."
         default_scopes: ""
     client_id: "№ на клиент"
     client_secret_notice: >
-      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by OpenProject at a later time.
+      This is the only time we can print the client secret, please note it down and keep it secure. It should be treated as a password and cannot be retrieved by ProyeksiApp at a later time.
     authorization_dialog:
       authorize: "Authorize"
       cancel: "Cancel and deny authorization."
       prompt_html: "Authorize <strong>%{application_name}</strong> to use your account <em>%{login}</em>?"
       title: "Authorize %{application_name}"
       wants_to_access_html: >
-        This application requests access to your OpenProject account. <br/> <strong>It has requested the following permissions:</strong>
+        This application requests access to your ProyeksiApp account. <br/> <strong>It has requested the following permissions:</strong>
     scopes:
       api_v3: "Full API v3 access"
-      api_v3_text: "Application will receive full read & write access to the OpenProject API v3 to perform actions on your behalf."
+      api_v3_text: "Application will receive full read & write access to the ProyeksiApp API v3 to perform actions on your behalf."
     grants:
       created_date: "Approved on"
       scopes: "Права"
@@ -2956,7 +2956,7 @@ bg:
     client_credentials_impersonation_set_to: "Client credentials user set to"
     client_credentials_impersonation_warning: "Note: Clients using the 'Client credentials' flow in this application will have the rights of this user"
     client_credentials_impersonation_html: >
-      By default, OpenProject provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
+      By default, ProyeksiApp provides OAuth 2.0 authorization via %{authorization_code_flow_link}. You can optionally enable %{client_credentials_flow_link}, but you must provide a user on whose behalf requests will be performed.
     authorization_error: "An authorization error has occurred."
     revoke_my_application_confirmation: "Do you really want to remove this application? This will revoke %{token_count} active for it."
     my_registered_applications: "Registered OAuth applications"

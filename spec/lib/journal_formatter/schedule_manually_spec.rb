@@ -2,7 +2,7 @@
 
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper.rb')
 
-describe OpenProject::JournalFormatter::ScheduleManually do
+describe ProyeksiApp::JournalFormatter::ScheduleManually do
   let(:klass) { described_class }
   let(:id) { 1 }
   let(:journal) do

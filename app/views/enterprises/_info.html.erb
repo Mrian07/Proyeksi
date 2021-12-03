@@ -1,7 +1,7 @@
 
 <% content_for :header_tags do %>
-  <script src="<%= OpenProject::Static::Links.links[:chargebee][:href] %>"
-          data-cb-site="<%= OpenProject::Configuration.enterprise_chargebee_site %>">
+  <script src="<%= ProyeksiApp::Static::Links.links[:chargebee][:href] %>"
+          data-cb-site="<%= ProyeksiApp::Configuration.enterprise_chargebee_site %>">
   </script>
 <% end %>
 
@@ -14,11 +14,11 @@
     <a href="#"
        class="button -highlight-inverted"
        data-cb-type="checkout"
-       data-cb-plan-id="<%= OpenProject::Configuration.enterprise_plan %>">
+       data-cb-plan-id="<%= ProyeksiApp::Configuration.enterprise_plan %>">
       <%= t('admin.enterprise.book_now') %>
     </a>
 
-    <% quote_link = OpenProject::Static::Links.links.fetch :upsale_get_quote %>
+    <% quote_link = ProyeksiApp::Static::Links.links.fetch :upsale_get_quote %>
     <%= link_to t(quote_link[:label]),
                 quote_link[:href],
                 target: '_blank',

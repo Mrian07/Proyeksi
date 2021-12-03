@@ -31,7 +31,7 @@ if [ "$(id -u)" = '0' ]; then
 	chown -R $APP_USER:$APP_USER $APP_DATA_PATH
 	if [ -d /etc/apache2/sites-enabled ]; then
 		chown -R $APP_USER:$APP_USER /etc/apache2/sites-enabled
-		echo "OpenProject currently expects to be reached on the following domain: ${SERVER_NAME:=localhost}, which does not seem to be how your installation is configured." > /var/www/html/index.html
+		echo "ProyeksiApp currently expects to be reached on the following domain: ${SERVER_NAME:=localhost}, which does not seem to be how your installation is configured." > /var/www/html/index.html
 		echo "If you are an administrator, please ensure you have correctly set the SERVER_NAME variable when launching your container." >> /var/www/html/index.html
 	fi
 

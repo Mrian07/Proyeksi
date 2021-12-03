@@ -56,10 +56,10 @@ class AdminController < ApplicationController
   end
 
   def info
-    @db_version = OpenProject::Database.version
+    @db_version = ProyeksiApp::Database.version
     @checklist = [
       [:text_default_administrator_account_changed, User.default_admin_account_changed?],
-      [:text_database_allows_tsv, OpenProject::Database.allows_tsv?]
+      [:text_database_allows_tsv, ProyeksiApp::Database.allows_tsv?]
     ]
 
     @checklist += file_storage_checks
@@ -67,7 +67,7 @@ class AdminController < ApplicationController
     @checklist += admin_information_hook_checks
     @checklist += image_conversion_checks
 
-    @storage_information = OpenProject::Storage.mount_information
+    @storage_information = ProyeksiApp::Storage.mount_information
   end
 
   def default_breadcrumb
@@ -86,7 +86,7 @@ class AdminController < ApplicationController
   private
 
   def plaintext_extraction_checks
-    if OpenProject::Database.allows_tsv?
+    if ProyeksiApp::Database.allows_tsv?
       [
         [:'extraction.available.pdftotext', Plaintext::PdfHandler.available?],
         [:'extraction.available.unrtf',     Plaintext::RtfHandler.available?],
@@ -112,8 +112,8 @@ class AdminController < ApplicationController
 
   def file_storage_checks
     # Add local directory test if we're not using fog
-    if OpenProject::Configuration.file_storage?
-      repository_writable = File.writable?(OpenProject::Configuration.attachments_storage_path)
+    if ProyeksiApp::Configuration.file_storage?
+      repository_writable = File.writable?(ProyeksiApp::Configuration.attachments_storage_path)
       [[:text_file_repository_writable, repository_writable]]
     else
       []

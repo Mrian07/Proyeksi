@@ -8,7 +8,7 @@ import { WorkPackageViewPaginationService } from 'core-app/features/work-package
 import { WorkPackageTablePaginationComponent } from 'core-app/features/work-packages/components/wp-table/table-pagination/wp-table-pagination.component';
 import { PathHelperService } from 'core-app/core/path-helper/path-helper.service';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
-import { OpenProject } from 'core-app/core/setup/globals/openproject';
+import { ProyeksiApp } from 'core-app/core/setup/globals/openproject';
 import { WorkPackageViewSortByService } from 'core-app/features/work-packages/routing/wp-view-base/view-services/wp-view-sort-by.service';
 import { ConfigurationService } from 'core-app/core/config/configuration.service';
 import { OpIconComponent } from 'core-app/shared/components/icon/icon.component';
@@ -37,7 +37,7 @@ function pageString(element:JQuery) {
 
 describe('wpTablePagination Directive', () => {
   beforeEach(waitForAsync(() => {
-    window.OpenProject = new OpenProject();
+    window.ProyeksiApp = new ProyeksiApp();
 
     // noinspection JSIgnoredPromiseFromCall
     TestBed.configureTestingModule({

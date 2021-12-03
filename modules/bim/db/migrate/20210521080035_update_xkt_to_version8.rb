@@ -15,7 +15,7 @@ class UpdateXktToVersion8 < ActiveRecord::Migration[6.1]
     # Only report an error if you really need the IFC models to be converted. If the BIM edition is not active then
     # you don't need the IFC models to get converted and even more important, you don't need the full conversion
     # pipeline to be installed.
-    unless ::OpenProject::Configuration.bim? && ::Bim::IfcModels::ViewConverterService.available?
+    unless ::ProyeksiApp::Configuration.bim? && ::Bim::IfcModels::ViewConverterService.available?
       Rails.logger.error("Cannot convert IFC models. Some or all IFC conversion tools are not installed on your server.")
       return
     end

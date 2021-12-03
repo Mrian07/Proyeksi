@@ -104,7 +104,7 @@ get:
                     href: "/api/v3/work_packages/1528/attachments"
                   author:
                     href: "/api/v3/users/1"
-                    title: OpenProject Admin - admin
+                    title: ProyeksiApp Admin - admin
                   availableWatchers:
                     href: "/api/v3/work_packages/1528/available_watchers"
                   category:
@@ -113,7 +113,7 @@ get:
                   changeParent:
                     href: "/api/v3/work_packages/694"
                     method: patch
-                    title: Change parent of Bug in OpenProject
+                    title: Change parent of Bug in ProyeksiApp
                   children:
                   - href: "/api/v3/work_packages/1529"
                     title: Write API documentation
@@ -198,8 +198,8 @@ get:
                 derivedStartDate: 
                 description:
                   format: markdown
-                  html: "<p>Develop super cool OpenProject API.</p>"
-                  raw: Develop super cool OpenProject API.
+                  html: "<p>Develop super cool ProyeksiApp API.</p>"
+                  raw: Develop super cool ProyeksiApp API.
                 dueDate: 
                 estimatedTime: PT2H
                 id: 1528
@@ -291,7 +291,7 @@ patch:
                     href: "/api/v3/work_packages/1528/attachments"
                   author:
                     href: "/api/v3/users/1"
-                    title: OpenProject Admin - admin
+                    title: ProyeksiApp Admin - admin
                   availableWatchers:
                     href: "/api/v3/work_packages/1528/available_watchers"
                   category:
@@ -300,7 +300,7 @@ patch:
                   changeParent:
                     href: "/api/v3/work_packages/694"
                     method: patch
-                    title: Change parent of Bug in OpenProject
+                    title: Change parent of Bug in ProyeksiApp
                   children:
                   - href: "/api/v3/work_packages/1529"
                     title: Write API documentation
@@ -385,8 +385,8 @@ patch:
                 derivedStartDate: 
                 description:
                   format: markdown
-                  html: "<p>Develop super cool OpenProject API.</p>"
-                  raw: Develop super cool OpenProject API.
+                  html: "<p>Develop super cool ProyeksiApp API.</p>"
+                  raw: Develop super cool ProyeksiApp API.
                 dueDate: 
                 estimatedTime: PT2H
                 id: 1528

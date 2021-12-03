@@ -27,7 +27,7 @@ en:
                   options:
                     name: 'Getting started'
                     text: |
-                      We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                      We are glad you joined! We suggest to try a few things to get started in ProyeksiApp.
 
                       But before you jump right into it, you should know that this exemplary project is split up into two different projects:
 
@@ -44,8 +44,8 @@ en:
                       6.  _Check out the tile view to get an overview of your BCF issues:_ → Go to [Work packages](%{base_url}/projects/demo-construction-project/work_packages?query_props=%7B%22c%22%3A%5B%22type%22%2C%22id%22%2C%22subject%22%2C%22status%22%2C%22assignee%22%2C%22priority%22%5D%2C%22hl%22%3A%22priority%22%2C%22hi%22%3Atrue%2C%22g%22%3A%22%22%2C%22t%22%3A%22id%3Aasc%22%2C%22f%22%3A%5B%5D%2C%22pa%22%3A1%2C%22pp%22%3A100%2C%22dr%22%3A%22card%22%7D)
                       7.  _Agile working? Check out our brand new boards:_ → Go to [Boards](%{base_url}/projects/demo-construction-project/boards)
 
-                      Here you will find our [User Guides](https://docs.openproject.org/user-guide/).
-                      Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                      Here you will find our [User Guides](https://docs.proyeksiapp.org/user-guide/).
+                      Please let us know if you have any questions or need support. Contact us: [support\[at\]proyeksiapp.com](mailto:support@proyeksiapp.com).
                 - identifier: 'project_status'
                   start_row: 2
                   end_row: 3
@@ -101,7 +101,7 @@ en:
                   options:
                     name: 'Getting started'
                     text: |
-                      We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                      We are glad you joined! We suggest to try a few things to get started in ProyeksiApp.
 
                       Here you will find the classical roles, some workflows and work packages for your construction project.
 
@@ -114,8 +114,8 @@ en:
                       5.  _Activate further modules:_ → Go to [Project settings → Modules](%{base_url}/projects/demo-planning-constructing-project/settings/modules).
                       6.  _Working agile? Create a new board:_ → Go to [Boards](%{base_url}/projects/demo-planning-constructing-project/boards)
 
-                      Here you will find our [User Guides](https://docs.openproject.org/user-guide/).
-                      Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                      Here you will find our [User Guides](https://docs.proyeksiapp.org/user-guide/).
+                      Please let us know if you have any questions or need support. Contact us: [support\[at\]proyeksiapp.com](mailto:support@proyeksiapp.com).
                 - identifier: 'project_status'
                   start_row: 2
                   end_row: 3
@@ -171,7 +171,7 @@ en:
                   options:
                     name: 'Getting started'
                     text: |
-                      We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                      We are glad you joined! We suggest to try a few things to get started in ProyeksiApp.
 
                       This demo project offers roles, workflows and work packages that are specificialized for BIM.
 
@@ -187,8 +187,8 @@ en:
                       8.  _Check out the tile view to get an overview of your BCF issues:_ → Go to [Work packages](%{base_url}/projects/demo-bim-project/work_packages?query_props=%7B%22c%22%3A%5B%22type%22%2C%22id%22%2C%22subject%22%2C%22status%22%2C%22assignee%22%2C%22priority%22%5D%2C%22hl%22%3A%22priority%22%2C%22hi%22%3Atrue%2C%22g%22%3A%22%22%2C%22t%22%3A%22id%3Aasc%22%2C%22f%22%3A%5B%5D%2C%22pa%22%3A1%2C%22pp%22%3A100%2C%22dr%22%3A%22card%22%7D)
                       9.  _Working agile? Create a new board:_ → Go to [Boards](%{base_url}/projects/demo-bim-project/boards)
 
-                      Here you will find our [User Guides](https://docs.openproject.org/user-guide/).
-                      Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                      Here you will find our [User Guides](https://docs.proyeksiapp.org/user-guide/).
+                      Please let us know if you have any questions or need support. Contact us: [support\[at\]proyeksiapp.com](mailto:support@proyeksiapp.com).
                 - identifier: 'project_status'
                   start_row: 2
                   end_row: 3
@@ -244,7 +244,7 @@ en:
                   options:
                     name: 'Getting started'
                     text: |
-                      We are glad you joined! We suggest to try a few things to get started in OpenProject.
+                      We are glad you joined! We suggest to try a few things to get started in ProyeksiApp.
 
                       This demo project shows BCF management functionalities.
 
@@ -259,8 +259,8 @@ en:
                       7.  _Activate further modules:_ → Go to [Project settings → Modules.](%{base_url}/projects/demo-bcf-management-project/settings/modules)
                       8.  _You love the agile approach? Create a board:_ → Go to [Boards](%{base_url}/projects/demo-bcf-management-project/boards).
 
-                      Here you will find our [User Guides](https://docs.openproject.org/user-guide/).
-                      Please let us know if you have any questions or need support. Contact us: [support\[at\]openproject.com](mailto:support@openproject.com).
+                      Here you will find our [User Guides](https://docs.proyeksiapp.org/user-guide/).
+                      Please let us know if you have any questions or need support. Contact us: [support\[at\]proyeksiapp.com](mailto:support@proyeksiapp.com).
                 - identifier: 'project_status'
                   start_row: 2
                   end_row: 3

@@ -1,28 +1,28 @@
 ---
-title: OpenProject 10.4.0
+title: ProyeksiApp 10.4.0
 sidebar_navigation:
     title: 10.4.0
 release_version: 10.4.0
 release_date: 2020-02-20
 ---
-# Release notes OpenProject 10.4.0
+# Release notes ProyeksiApp 10.4.0
 
 | Release notes                                                | Description                                                  |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| [OpenProject 10.4.0](#openproject-1040)                      | What is new for OpenProject 10.4.0?                          |
-| [OpenProject 10.4 BIM Edition for construction project management](#openproject-104-bim-edition-for-construction-project-management) | What is new for the construction project management for the building industry in OpenProject 10.4.0? |
+| [ProyeksiApp 10.4.0](#openproject-1040)                      | What is new for ProyeksiApp 10.4.0?                          |
+| [ProyeksiApp 10.4 BIM Edition for construction project management](#openproject-104-bim-edition-for-construction-project-management) | What is new for the construction project management for the building industry in ProyeksiApp 10.4.0? |
 
-## OpenProject 10.4.0
+## ProyeksiApp 10.4.0
 
-We released OpenProject 10.4. The new release of the open source project management software contains a new time tracking widget for the My page which facilitates visualizing and logging time spent on your tasks. Additionally, cost reports can now be exported to Excel.
+We released ProyeksiApp 10.4. The new release of the open source project management software contains a new time tracking widget for the My page which facilitates visualizing and logging time spent on your tasks. Additionally, cost reports can now be exported to Excel.
 
-Cloud and Enterprise Edition users can now choose between the default OpenProject theme, a light theme and a dark theme. This provides a good starting point for further design customization.
+Cloud and Enterprise Edition users can now choose between the default ProyeksiApp theme, a light theme and a dark theme. This provides a good starting point for further design customization.
 
-Read below to get a detailed overview of what is new in OpenProject 10.4.
+Read below to get a detailed overview of what is new in ProyeksiApp 10.4.
 
 ### Spent time widget on My page
 
-Tracking your own time is a lot easier with OpenProject 10.4. The release replaces the existing Spent time widget on your personal My page with a modern time tracking overview. You can now easily see your logged time in a comprehensive weekly calendar view.
+Tracking your own time is a lot easier with ProyeksiApp 10.4. The release replaces the existing Spent time widget on your personal My page with a modern time tracking overview. You can now easily see your logged time in a comprehensive weekly calendar view.
 
 The tasks you worked on are color-coded. Therefore, you see right away which tasks you spent the most time on in the current week. Viewing or changing your logged hours is also a lot easier - simply drag and drop the time block to the correct day to make a change.
 
@@ -30,15 +30,15 @@ The tasks you worked on are color-coded. Therefore, you see right away which tas
 
 ### Export cost reports to Excel
 
-Having the ability to export cost reports was one of the most requested features. With OpenProject 10.4 you can just that. From your cost report set the appropriate filters and export it as an Excel document.
+Having the ability to export cost reports was one of the most requested features. With ProyeksiApp 10.4 you can just that. From your cost report set the appropriate filters and export it as an Excel document.
 
 The Excel spreadsheet lists the tracked time, cost, as well as the different cost types. This makes it very easy to perform further computations or to forward the data to someone else, e.g. your accounting department.
 
 ![Export cost reports](Export-cost-report-1536x1065.png)
 
-### Light and dark theme for OpenProject (Premium feature)
+### Light and dark theme for ProyeksiApp (Premium feature)
 
-Cloud and Enterprise Edition users can now easily customize the look and feel of their OpenProject environment by using a custom logo and adjusting the color theme. With OpenProject 10.4 this gets a lot easier - thanks to default themes. Simply choose between the OpenProject theme, the light theme and the dark theme.
+Cloud and Enterprise Edition users can now easily customize the look and feel of their ProyeksiApp environment by using a custom logo and adjusting the color theme. With ProyeksiApp 10.4 this gets a lot easier - thanks to default themes. Simply choose between the ProyeksiApp theme, the light theme and the dark theme.
 
 These themes are optimized and fulfill accessibility requirements. You can further customize them by starting with one of the default themes and adjusting individual colors based on your needs.
 
@@ -46,51 +46,51 @@ These themes are optimized and fulfill accessibility requirements. You can furth
 
 ### Updated menus for project and system administration
 
-The menus in the project and system administration are updated with OpenProject 10.4. Wherever possible the tab navigation has been replaced with sub menus.
+The menus in the project and system administration are updated with ProyeksiApp 10.4. Wherever possible the tab navigation has been replaced with sub menus.
 
 The other tabs menus have been updated to a modern layout. Additionally, the email settings have moved out into their own menu item in the system administration.
 
 ![Layout admin settings](Layout_Project-admin-settings-1536x724.png)
 
-## OpenProject 10.4 BIM Edition for construction project management
+## ProyeksiApp 10.4 BIM Edition for construction project management
 
-What is new for the digital construction project management for the building industry in OpenProject?
+What is new for the digital construction project management for the building industry in ProyeksiApp?
 
-OpenProject contains a new IFC file model viewer to integrate 3D models in the IFC format in OpenProject. You can now upload IFC files and display the building models directly in your browser in OpenProject - withIFC model upload and viewer
+ProyeksiApp contains a new IFC file model viewer to integrate 3D models in the IFC format in ProyeksiApp. You can now upload IFC files and display the building models directly in your browser in ProyeksiApp - withIFC model upload and viewer
 
-Import of 3D building models directly in your OpenProject application. The supported format is IFC files.
+Import of 3D building models directly in your ProyeksiApp application. The supported format is IFC files.
 
-![OpenProject-BIM_upload-IFC-model](OpenProject-BIM_upload-IFC-model.png)
+![ProyeksiApp-BIM_upload-IFC-model](ProyeksiApp-BIM_upload-IFC-model.png)
 
-### Manage multiple IFC models in OpenProject
+### Manage multiple IFC models in ProyeksiApp
 
-In OpenProject you can now manage multiple building models in IFC format in parallel. **Browse through multiple models at the same time** and selectively activate models such as architecture and heating, ventilation and air conditioning (HVAC). Set "default" models to be displayed.
+In ProyeksiApp you can now manage multiple building models in IFC format in parallel. **Browse through multiple models at the same time** and selectively activate models such as architecture and heating, ventilation and air conditioning (HVAC). Set "default" models to be displayed.
 
-![OpenProject-BIM-manage-IFC-models](OpenProject-BIM-manage-IFC-models.png)
+![ProyeksiApp-BIM-manage-IFC-models](ProyeksiApp-BIM-manage-IFC-models.png)
 
-![OpenProject-BIM_structural](OpenProject-BIM_structural.png)
+![ProyeksiApp-BIM_structural](ProyeksiApp-BIM_structural.png)
 
 
 
-### IFC viewer integrated in OpenProject
+### IFC viewer integrated in ProyeksiApp
 
-OpenProject 10.4 supports to open 3D **models** **and** **visualize** **building** **models** directly in your browser. With this new integrated functionality for construction project management you can now easily **share** **multiple IFC** **files** with your team directly in OpenProject - integrated with all OpenProject functionalities for the project management along the entire building project life-cycle, i.e. BCF management, issue tracking, project planning, documentation.
+ProyeksiApp 10.4 supports to open 3D **models** **and** **visualize** **building** **models** directly in your browser. With this new integrated functionality for construction project management you can now easily **share** **multiple IFC** **files** with your team directly in ProyeksiApp - integrated with all ProyeksiApp functionalities for the project management along the entire building project life-cycle, i.e. BCF management, issue tracking, project planning, documentation.
 
-View full 3D objects in OpenProject in IFC format. Select and display the model in total, for objects, classes and storeys for the building.
+View full 3D objects in ProyeksiApp in IFC format. Select and display the model in total, for objects, classes and storeys for the building.
 
-![OpenProject-BIM_IFC-viewer](OpenProject-BIM_IFC-viewer.png)
+![ProyeksiApp-BIM_IFC-viewer](ProyeksiApp-BIM_IFC-viewer.png)
 
-### **Switch between 3D and 2D view** for your building model in OpenProject.
+### **Switch between 3D and 2D view** for your building model in ProyeksiApp.
 
-You can change between a 3D view or 2D view of the building model in OpenProject.
+You can change between a 3D view or 2D view of the building model in ProyeksiApp.
 
-![OpenProject-BIM_2D](OpenProject-BIM_2D.png)
+![ProyeksiApp-BIM_2D](ProyeksiApp-BIM_2D.png)
 
 ### Slice objects to get exact view
 
 You can slice 3D objects in all dimensions to get a view on the exact thing you need.
 
-![OpenProject-BIM_slice-objects](OpenProject-BIM_slice-objects.gif)
+![ProyeksiApp-BIM_slice-objects](ProyeksiApp-BIM_slice-objects.gif)
 
 
 
@@ -109,7 +109,7 @@ You can slice 3D objects in all dimensions to get a view on the exact thing you 
 - Changed: Add button "Log time" on widget "My spent time" \[[#32128](https://community.openproject.com/wp/32128)\]
 - Changed: Make header of spent time widget in Project overview page not-editable \[[#32130](https://community.openproject.com/wp/32130)\]
 - Changed: Sort versions by date on wp list and version list and version autocompleter \[[#32156](https://community.openproject.com/wp/32156)\]
-- Changed: Change OpenProject Dark theme to the same color theme as for BIM \[[#32191](https://community.openproject.com/wp/32191)\]
+- Changed: Change ProyeksiApp Dark theme to the same color theme as for BIM \[[#32191](https://community.openproject.com/wp/32191)\]
 - Changed: Change wording of relation queries \[[#32209](https://community.openproject.com/wp/32209)\]
 - Changed: Allow setting version on bulk copy \[[#32267](https://community.openproject.com/wp/32267)\]
 - Fixed: Calendar does not respect "weeks start on" \[[#31271](https://community.openproject.com/wp/31271)\]
@@ -128,7 +128,7 @@ You can slice 3D objects in all dimensions to get a view on the exact thing you 
 - Fixed: Total Estimate time won't be re-calculated after hierarchy of sub-nodes changed \[[#31925](https://community.openproject.com/wp/31925)\]
 - Fixed: Special characters (e.g. '#' and '&') trip up search autocompleter \[[#31964](https://community.openproject.com/wp/31964)\]
 - Fixed: Migration from 7.4 to 10.3 fails \[[#31997](https://community.openproject.com/wp/31997)\]
-- Fixed: Grey security badge showing "UNKNOWN" status after upgrade to OpenProject 10.3.1 \[[#32023](https://community.openproject.com/wp/32023)\]
+- Fixed: Grey security badge showing "UNKNOWN" status after upgrade to ProyeksiApp 10.3.1 \[[#32023](https://community.openproject.com/wp/32023)\]
 - Fixed: Unable to login (fresh install) \[[#32028](https://community.openproject.com/wp/32028)\]
 - Fixed: Error message is insufficient when IFC file size is too large \[[#32032](https://community.openproject.com/wp/32032)\]
 - Fixed: Wording "Default value" is misleading \[[#32033](https://community.openproject.com/wp/32033)\]
@@ -146,7 +146,7 @@ You can slice 3D objects in all dimensions to get a view on the exact thing you 
 - Fixed: In cost reports in Firefox cancel icons overlap filters \[[#32135](https://community.openproject.com/wp/32135)\]
 - Fixed: Tab "Email notifications" loads for long time and header not shown \[[#32136](https://community.openproject.com/wp/32136)\]
 - Fixed: Tabs in Firefox flicker \[[#32137](https://community.openproject.com/wp/32137)\]
-- Fixed: OpenProject logo in light theme is hard to see \[[#32141](https://community.openproject.com/wp/32141)\]
+- Fixed: ProyeksiApp logo in light theme is hard to see \[[#32141](https://community.openproject.com/wp/32141)\]
 - Fixed: Error 403 when trying to export work package list with descriptions \[[#32142](https://community.openproject.com/wp/32142)\]
 - Fixed: Wrong icon in time entries modal \[[#32143](https://community.openproject.com/wp/32143)\]
 - Fixed: The date field has wrong width in time entries modal \[[#32145](https://community.openproject.com/wp/32145)\]
@@ -187,52 +187,52 @@ You can slice 3D objects in all dimensions to get a view on the exact thing you 
 
 ## Installation and Updates
 
-To use OpenProject 10.4 right away, create an instance on [OpenProject.org.](https://start.openproject.com/)
+To use ProyeksiApp 10.4 right away, create an instance on [ProyeksiApp.org.](https://start.openproject.com/)
 
-Prefer to run OpenProject 10.4 in your own infrastructure?
-Here you can find the [Installation guidelines](../../installation-and-operations) for OpenProject.
+Prefer to run ProyeksiApp 10.4 in your own infrastructure?
+Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
 Want to upgrade from a Community version to try out the light or dark theme? [Get a 14 days free trial token.](https://www.openproject.org/enterprise-edition/)
 
 
 
-## How to try the OpenProject BIM Edition?
+## How to try the ProyeksiApp BIM Edition?
 
-Try out OpenProject BIM 10.4. right away, create a free trial instance for the [OpenProject BIM Edition.](https://start.openproject.com/go/bim)
+Try out ProyeksiApp BIM 10.4. right away, create a free trial instance for the [ProyeksiApp BIM Edition.](https://start.openproject.com/go/bim)
 
  
 
 ## What is on the Roadmap?
 
-We are continuously developing new features for OpenProject. The next release will include improved scheduling in the Gantt chart.
+We are continuously developing new features for ProyeksiApp. The next release will include improved scheduling in the Gantt chart.
 Take a look at the [release timeline](https://community.openproject.com/projects/openproject/work_packages?query_id=918) to see the upcoming features and releases.
 
 For the upcoming BIM specific release we are focusing on more building industry specific features and integrations, i.e.
 
-- Revit integration to OpenProject.
+- Revit integration to ProyeksiApp.
 - Further advanced BCF management.
 
 
 
-## Migrating to OpenProject 10.4
+## Migrating to ProyeksiApp 10.4
 
-Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your OpenProject installation to OpenProject 10.4.
+Follow the [upgrade guide for the packaged installation or Docker installation](../../installation-and-operations/operation/upgrading/) to update your ProyeksiApp installation to ProyeksiApp 10.4.
 
-We update hosted OpenProject environments (Cloud Edition) automatically.
+We update hosted ProyeksiApp environments (Cloud Edition) automatically.
 
 
 
 ## Support
 
-You will find useful information in the OpenProject [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
+You will find useful information in the ProyeksiApp [FAQ]() or you can post your questions in the [Forum](https://community.openproject.org/projects/openproject/boards).
 
 
 
 ## Credits
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject.
+- All the developers, designers, project managers who have contributed to ProyeksiApp.
 - DBI AG for sponsoring the IFC module.
 - Lindsay Kay with the integration of his open source 3D model viewer, [xeokit](https://xeokit.io/).
 - [Georg Dangl](https://blog.dangl.me/categories/BIM) who contributes regarding BCF management.

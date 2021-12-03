@@ -87,7 +87,7 @@ class SCM::CheckoutInstructionsService
   # - :none: Otherwise
   #
   # Note that this information is only applicable when the repository is managed,
-  # because otherwise OpenProject does not control the repository permissions.
+  # because otherwise ProyeksiApp does not control the repository permissions.
   # Use +manages_permissions?+ to check whether this is the case.
   #
   def permission
@@ -105,7 +105,7 @@ class SCM::CheckoutInstructionsService
   # Returns whether the given user may checkout the repository
   #
   # Note that this information is only applicable when the repository is managed,
-  # because otherwise OpenProject does not control the repository permissions.
+  # because otherwise ProyeksiApp does not control the repository permissions.
   # Use +manages_permissions?+ to check whether this is the case.
   def may_checkout?
     %i[readwrite read].include?(permission)
@@ -115,7 +115,7 @@ class SCM::CheckoutInstructionsService
   # Returns whether the given user may commit to the repository
   #
   # Note that this information is only applicable when the repository is managed,
-  # because otherwise OpenProject does not control the repository permissions.
+  # because otherwise ProyeksiApp does not control the repository permissions.
   # Use +manages_permissions?+ to check whether this is the case.
   def may_commit?
     permission == :readwrite

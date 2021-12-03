@@ -2,7 +2,7 @@
 
 module Bim::Bcf::API::V2_1
   module Viewpoints
-    class API < ::API::OpenProjectAPI
+    class API < ::API::ProyeksiAppAPI
       # Avoid oj parsing numbers into BigDecimal
       parser :json, ::API::Utilities::JsonGemParser
 

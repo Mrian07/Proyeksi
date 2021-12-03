@@ -93,7 +93,7 @@ module Grids::Configuration
 
       def from_scope(scope)
         # recognize_routes does not work with engine paths
-        path = [OpenProject::Configuration.rails_relative_url_root,
+        path = [ProyeksiApp::Configuration.rails_relative_url_root,
                 'projects',
                 '([^/]+)',
                 in_project_scope_path,

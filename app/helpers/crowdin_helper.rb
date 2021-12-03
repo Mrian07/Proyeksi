@@ -1,6 +1,6 @@
 module CrowdinHelper
   def crowdin_in_context_translation
-    return unless OpenProject::Configuration.crowdin_in_context_translations?
+    return unless ProyeksiApp::Configuration.crowdin_in_context_translations?
     return unless ::I18n.locale == :lol
 
     # Enable CSP to load the following script by whitelisting for this request.
@@ -22,7 +22,7 @@ module CrowdinHelper
     )
 
     concat(nonced_javascript_tag do
-      "var _jipt = []; _jipt.push(['project', 'openproject']);".html_safe
+      "var _jipt = []; _jipt.push(['project', 'proyeksiapp']);".html_safe
     end)
     concat javascript_include_tag 'https://cdn.crowdin.com/jipt/jipt.js'
   end

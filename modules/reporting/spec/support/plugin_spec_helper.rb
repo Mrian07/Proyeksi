@@ -1,6 +1,6 @@
 
 
-module OpenProject::Reporting
+module ProyeksiApp::Reporting
   module PluginSpecHelper
     def is_member(project, user, permissions = [])
       role = FactoryBot.create(:role, permissions: permissions)

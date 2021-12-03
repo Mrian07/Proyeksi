@@ -1,11 +1,11 @@
-# OpenProject development style guide - frontend
+# ProyeksiApp development style guide - frontend
 
 ## Code format
-OpenProject follows the [AirBnB's style guide](https://github.com/airbnb/javascript) regarding to the code format.  
+ProyeksiApp follows the [AirBnB's style guide](https://github.com/airbnb/javascript) regarding to the code format.  
 
 ## Development patterns
 ### Angularized
-OpenProject follows the [Angular's style guide](https://angular.io/guide/styleguide) patterns. 
+ProyeksiApp follows the [Angular's style guide](https://angular.io/guide/styleguide) patterns. 
 
 ### Declarative
 Declarative Programming is a paradigm where the code describes **what to do** by encapsulating the **how to do it** (implementation details) under abstractions. The ultimate result of declarative programming is the creation of a new Domain Specific Language (DSL).
@@ -39,7 +39,7 @@ const bestProducts = getBestProducts();
 ```
 
 
-An example in OpenProject would be the APIV3Service that encapsulates all the logic to deal with the OpenProject API.
+An example in ProyeksiApp would be the APIV3Service that encapsulates all the logic to deal with the ProyeksiApp API.
 
 
 #### Why

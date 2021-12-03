@@ -4,7 +4,7 @@ class DocumentsMailer < UserMailer
   def document_added(user, document)
     @document = document
 
-    open_project_headers 'Project' => @document.project.identifier,
+    proyeksi_app_headers 'Project' => @document.project.identifier,
                          'Type' => 'Document'
 
     with_locale_for(user) do

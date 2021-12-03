@@ -26,7 +26,7 @@ describe TabsHelper, type: :helper do
         .with([expected_tab])
         .and_return [expected_tab]
 
-      allow(::OpenProject::Ui::ExtensibleTabs)
+      allow(::ProyeksiApp::Ui::ExtensibleTabs)
         .to receive(:enabled_tabs)
         .with(:user)
         .and_return [given_tab]

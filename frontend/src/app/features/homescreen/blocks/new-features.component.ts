@@ -50,7 +50,7 @@ export class HomescreenNewFeaturesBlockComponent {
     readonly i18n:I18nService,
     readonly domSanitizer:DomSanitizer,
   ) {
-    this.isStandardEdition = window.OpenProject.isStandardEdition;
+    this.isStandardEdition = window.ProyeksiApp.isStandardEdition;
   }
 
   public get teaserWebsiteUrl() {

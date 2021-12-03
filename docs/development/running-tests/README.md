@@ -1,14 +1,14 @@
-# Testing OpenProject
+# Testing ProyeksiApp
 
-OpenProject uses automated tests throughout the stack. Tests that are executed in the browser (angular frontend, rspec system tests) require to have Chrome installed.
+ProyeksiApp uses automated tests throughout the stack. Tests that are executed in the browser (angular frontend, rspec system tests) require to have Chrome installed.
 
-You will likely start working with the OpenProject test suite through our continuous testing setup at [Github Actions](https://github.com/opf/openproject/actions). All pull requests and commits to the core repository will be tested by Github Actions.
+You will likely start working with the ProyeksiApp test suite through our continuous testing setup at [Github Actions](https://github.com/opf/openproject/actions). All pull requests and commits to the core repository will be tested by Github Actions.
 
 
 
 # Continuous testing with Github Actions
 
-As part of the [development flow at OpenProject](../../development/#branching-model-and-development-flow), proposed changes to the core application will be made through a GitHub pull request and the entire test suite is automatically evaluated on Github Actions. You will see the results as a status on your pull request. Successful test suite runs are one requirement to see your changes merged.
+As part of the [development flow at ProyeksiApp](../../development/#branching-model-and-development-flow), proposed changes to the core application will be made through a GitHub pull request and the entire test suite is automatically evaluated on Github Actions. You will see the results as a status on your pull request. Successful test suite runs are one requirement to see your changes merged.
 
 A failing status will look like the following on your pull request. You may need to click *Show all checks* to expand all checks to see the details link.
 
@@ -89,7 +89,7 @@ To avoid additional test executions, you can include `[skip ci]` in your commit 
 
 # Running tests locally
 
-As there are multiple ways employed to test OpenProject, you may want to run a specific test or test group.
+As there are multiple ways employed to test ProyeksiApp, you may want to run a specific test or test group.
 
 
 
@@ -359,9 +359,9 @@ Run all unit and system tests in parallel with `RAILS_ENV=test ./bin/rails paral
 
 
 
-## Accessing a local OpenProject instance from a VM
+## Accessing a local ProyeksiApp instance from a VM
 
-If you want to access the development server of OpenProject from a VM, you need to work around the CSP `localhost` restrictions.
+If you want to access the development server of ProyeksiApp from a VM, you need to work around the CSP `localhost` restrictions.
 
 ### Old way, fixed compilation
 
@@ -396,8 +396,8 @@ OPENPROJECT_CLI_PROXY='http://<your local ip>:4200' ./bin/rails s -b 0.0.0.0 -p 
 
 ## Legacy LDAP tests
 
-OpenProject supports using LDAP for user authentications.  To test LDAP
-with OpenProject, load the LDAP export from test/fixtures/ldap/test-ldap.ldif
+ProyeksiApp supports using LDAP for user authentications.  To test LDAP
+with ProyeksiApp, load the LDAP export from test/fixtures/ldap/test-ldap.ldif
 into a testing LDAP server.  Test that the ldap server can be accessed
 at 127.0.0.1 on port 389.
 

@@ -7,7 +7,7 @@ describe 'Authentication Stages', type: :feature do
     @capybara_ignore_elements = Capybara.ignore_hidden_elements
     Capybara.ignore_hidden_elements = true
 
-    OpenProject::Authentication::Stage.register :dummy_step, '/login/stage_test'
+    ProyeksiApp::Authentication::Stage.register :dummy_step, '/login/stage_test'
 
     allow_any_instance_of(AccountController)
       .to receive(:stage_secret)
@@ -16,7 +16,7 @@ describe 'Authentication Stages', type: :feature do
 
   after do
     Capybara.ignore_hidden_elements = @capybara_ignore_elements
-    OpenProject::Authentication::Stage.deregister :dummy_step
+    ProyeksiApp::Authentication::Stage.deregister :dummy_step
   end
 
   let(:user_password) { 'bob' * 4 }
@@ -45,18 +45,18 @@ describe 'Authentication Stages', type: :feature do
 
   context 'with automatic registration', with_settings: { self_registration: "3" } do
     before do
-      OpenProject::Authentication::Stage.register(:activation_step, run_after_activation: true) do
+      ProyeksiApp::Authentication::Stage.register(:activation_step, run_after_activation: true) do
         # while we're at it let's confirm path helpers work here (/login)
         signin_path.sub "login", "activation/stage_test"
       end
 
       # this shouldn't influence the specs as it is active
-      OpenProject::Authentication::Stage.register :inactive, '/foo/bar', active: -> { false }
+      ProyeksiApp::Authentication::Stage.register :inactive, '/foo/bar', active: -> { false }
     end
 
     after do
-      OpenProject::Authentication::Stage.deregister :activation_step
-      OpenProject::Authentication::Stage.deregister :inactive
+      ProyeksiApp::Authentication::Stage.deregister :activation_step
+      ProyeksiApp::Authentication::Stage.deregister :inactive
     end
 
     it 'redirects to authentication stage after automatic registration and before login' do
@@ -67,7 +67,7 @@ describe 'Authentication Stages', type: :feature do
         fill_in "user_login", with: "h.wurst"
         fill_in "user_firstname", with: "Hans"
         fill_in "user_lastname", with: "Wurst"
-        fill_in "user_mail", with: "h.wurst@openproject.com"
+        fill_in "user_mail", with: "h.wurst@proyeksiapp.com"
         fill_in "user_password", with: "hansihansi"
         fill_in "user_password_confirmation", with: "hansihansi"
       end
@@ -95,7 +95,7 @@ describe 'Authentication Stages', type: :feature do
 
       fill_in "first_name", with: "Adam"
       fill_in "last_name", with: "Apfel"
-      fill_in "email", with: "a.apfel@openproject.com"
+      fill_in "email", with: "a.apfel@proyeksiapp.com"
 
       expect { click_on("Sign In") }.to raise_error(ActionController::RoutingError, /\/activation\/stage_test/)
       expect(current_path).to eql "/activation/stage_test"
@@ -202,14 +202,14 @@ describe 'Authentication Stages', type: :feature do
 
   context "with two stages" do
     before do
-      OpenProject::Authentication::Stage.register :two_step do
+      ProyeksiApp::Authentication::Stage.register :two_step do
         # while we're at it let's confirm path helpers work here (/login)
         signin_path.sub "login", "login/stage_test_2"
       end
     end
 
     after do
-      OpenProject::Authentication::Stage.deregister :two_step
+      ProyeksiApp::Authentication::Stage.deregister :two_step
     end
 
     it 'redirects to both registered authentication stages before actual login if succesful' do

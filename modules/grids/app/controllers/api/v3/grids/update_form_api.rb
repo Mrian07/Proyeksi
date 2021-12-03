@@ -3,7 +3,7 @@
 module API
   module V3
     module Grids
-      class UpdateFormAPI < ::API::OpenProjectAPI
+      class UpdateFormAPI < ::API::ProyeksiAppAPI
         resource :form do
           post &::API::V3::Utilities::Endpoints::UpdateForm.new(model: ::Grids::Grid,
                                                                 params_modifier: ->(params) {

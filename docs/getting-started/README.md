@@ -2,23 +2,23 @@
 sidebar_navigation:
   title: Getting started
   priority: 999
-description: OpenProject getting started guide.
+description: ProyeksiApp getting started guide.
 robots: index, follow
 keywords: getting started guide, tutorial
 ---
 
 # Getting started guide
 
-Welcome to the OpenProject **Getting started guide**.
+Welcome to the ProyeksiApp **Getting started guide**.
 
-Here you will learn about the **first steps with OpenProject**. If you need more detailed explanations of all features, please visit the respective section in our [user guide](../user-guide/).
+Here you will learn about the **first steps with ProyeksiApp**. If you need more detailed explanations of all features, please visit the respective section in our [user guide](../user-guide/).
 
 ## Overview
 
 | Topic                                                   | Content                                                      |
 | ------------------------------------------------------- | :----------------------------------------------------------- |
-| [Introduction to OpenProject](openproject-introduction) | Get an introduction about project management with OpenProject. |
-| [Sign in and registration](sign-in-registration)        | Find out how you can register and sign in to OpenProject.    |
+| [Introduction to ProyeksiApp](openproject-introduction) | Get an introduction about project management with ProyeksiApp. |
+| [Sign in and registration](sign-in-registration)        | Find out how you can register and sign in to ProyeksiApp.    |
 | [Create a project](projects)                            | How to create and set up a new project?                      |
 | [Invite team members](invite-members)                   | How to invite new members?                                   |
 | [Work packages](work-packages-introduction)             | Learn how to create and edit work packages.                  |
@@ -29,7 +29,7 @@ Here you will learn about the **first steps with OpenProject**. If you need more
 
 ## 5 steps to get started
 
-Watch a short 3-minute introduction video to get started with OpenProject in 5 easy steps:
+Watch a short 3-minute introduction video to get started with ProyeksiApp in 5 easy steps:
 
 1. Create a project
 2. Add team members
@@ -37,11 +37,11 @@ Watch a short 3-minute introduction video to get started with OpenProject in 5 e
 4. Create a project plan
 5. Filter, group and generate reports
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Getting-started.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Getting-started.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
-## OpenProject product demo video
+## ProyeksiApp product demo video
 
-Watch a **comprehensive OpenProject product introduction** video to learn how to work with OpenProject using traditional and agile project management.
+Watch a **comprehensive ProyeksiApp product introduction** video to learn how to work with ProyeksiApp using traditional and agile project management.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-product-demo-webinar-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-product-demo-webinar-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
 

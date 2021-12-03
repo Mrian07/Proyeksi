@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.1.0
+  title: ProyeksiApp 7.1.0
   sidebar_navigation:
       title: 7.1.0
   release_version: 7.1.0
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 7.1.0
+# ProyeksiApp 7.1.0
 
-OpenProject 7.1.0 improves timeline queries, provides additional
+ProyeksiApp 7.1.0 improves timeline queries, provides additional
 customization options and improves the design. There are also several
 bug fixes included.
 
@@ -85,7 +85,7 @@ bug fixes included.
 ## Deprecations
 
   - The calendar module is now marked deprecated and will be removed as
-    part of OpenProject 8.0.0. An appropriate warning has been added to
+    part of ProyeksiApp 8.0.0. An appropriate warning has been added to
     the module.
 
 Thanks a lot to the community, in particular to Peter F, Jochen Gehlbach

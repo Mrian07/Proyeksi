@@ -6,7 +6,7 @@ require 'api/v3/users/paginated_user_collection_representer'
 module API
   module V3
     module Users
-      class UsersAPI < ::API::OpenProjectAPI
+      class UsersAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         helpers do

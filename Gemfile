@@ -16,7 +16,7 @@ gem 'rdoc', '>= 2.4.2'
 gem 'doorkeeper', '~> 5.5.0'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
-gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
+#gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
 gem 'request_store', '~> 1.5.0'
 
 gem 'warden', '~> 1.2'
@@ -270,7 +270,7 @@ gem 'rack-cors', '~> 1.1.1'
 
 # Required for contracts
 # Not requiring since it needs to be patched before initialization:
-# See lib/open_project/patches/disposable.rb
+# See lib/proyeksi_app/patches/disposable.rb
 gem 'disposable', '~> 0.6.1', require: false
 
 platforms :mri, :mingw, :x64_mingw do
@@ -286,9 +286,7 @@ platforms :mri, :mingw, :x64_mingw do
   gem 'with_advisory_lock', '~> 4.6.0'
 end
 
-gem 'openproject-translations',
-    git: 'https://github.com/opf/openproject-translations.git',
-    branch: 'dev'
+
 
 # Load Gemfile.modules explicitly to allow dependabot to work
 eval_gemfile './Gemfile.modules'

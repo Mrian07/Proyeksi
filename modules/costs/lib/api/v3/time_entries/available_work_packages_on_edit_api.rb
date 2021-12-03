@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class AvailableWorkPackagesOnEditAPI < ::API::OpenProjectAPI
+      class AvailableWorkPackagesOnEditAPI < ::API::ProyeksiAppAPI
         after_validation do
           authorize_any %i[edit_time_entries edit_own_time_entries],
                         projects: @time_entry.project

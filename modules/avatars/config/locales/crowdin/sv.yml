@@ -25,11 +25,11 @@ sv:
       En förhandsvisning av din avatar kommer att visas innan du laddar upp, när du har valt en bild.
     text_change_gravatar_html: 'För att ändra eller lägga till Gravatar för din e-postadress, gå till %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject låter dig ladda upp din egen egen avatar.
+      ProyeksiApp låter dig ladda upp din egen egen avatar.
     text_local_avatar_over_gravatar: |
       Om du anger en, används denna anpassade avatar före gravataren ovan.
     text_your_current_gravatar: |
-      OpenProject använder din gravatar om du registrerade en, eller en standardbild eller ikon om det finns.
+      ProyeksiApp använder din gravatar om du registrerade en, eller en standardbild eller ikon om det finns.
       Den aktuella gravatar är följande:
     settings:
       enable_gravatars: 'Aktivera användargravatarer'

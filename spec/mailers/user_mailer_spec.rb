@@ -76,12 +76,12 @@ describe UserMailer, type: :mailer do
     it_behaves_like 'mail is sent' do
       it 'has the expected subject' do
         expect(deliveries.first.subject)
-          .to eql 'OpenProject Test'
+          .to eql 'ProyeksiApp Test'
       end
 
       it 'includes the url to the instance' do
         expect(deliveries.first.body.encoded)
-          .to match Regexp.new("OpenProject URL: #{Setting.protocol}://#{Setting.host_name}")
+          .to match Regexp.new("ProyeksiApp URL: #{Setting.protocol}://#{Setting.host_name}")
       end
     end
 

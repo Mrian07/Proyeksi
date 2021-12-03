@@ -70,7 +70,7 @@ describe Notifications::CreateFromModelService,
 
   before do
     # make sure no other calls are made due to WP creation/update
-    allow(OpenProject::Notifications).to receive(:send) # ... and do nothing
+    allow(ProyeksiApp::Notifications).to receive(:send) # ... and do nothing
 
     login_as(author)
   end

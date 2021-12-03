@@ -2,7 +2,7 @@ module Overviews
   class Engine < ::Rails::Engine
     engine_name :overviews
 
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     initializer 'overviews.menu' do
       ::Redmine::MenuManager.map(:project_menu) do |menu|
@@ -15,11 +15,11 @@ module Overviews
     end
 
     initializer 'overviews.permissions' do
-      OpenProject::AccessControl.permission(:view_project)
+      ProyeksiApp::AccessControl.permission(:view_project)
         .controller_actions
         .push('overviews/overviews/show')
 
-      OpenProject::AccessControl.map do |ac_map|
+      ProyeksiApp::AccessControl.map do |ac_map|
         ac_map.project_module nil do |map|
           map.permission :manage_overview,
                          'overviews/overviews': ['show'],
@@ -29,10 +29,10 @@ module Overviews
     end
 
     initializer 'overviews.patches' do
-      unless ::OpenProject::TextFormatting::Formats::Markdown::TextileConverter
+      unless ::ProyeksiApp::TextFormatting::Formats::Markdown::TextileConverter
                .included_modules
                .include?(Overviews::Patches::TextileConverterPatch)
-        ::OpenProject::TextFormatting::Formats::Markdown::TextileConverter.include(Overviews::Patches::TextileConverterPatch)
+        ::ProyeksiApp::TextFormatting::Formats::Markdown::TextileConverter.include(Overviews::Patches::TextileConverterPatch)
       end
     end
 

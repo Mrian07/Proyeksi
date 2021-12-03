@@ -38,13 +38,13 @@ describe 'API v3 Render resource', type: :request do
           context 'w/o context' do
             let(:params) do
               'Hello World! This *is* markdown with a ' +
-                '[link](http://community.openproject.org) and ümläutß.'
+                '[link](http://community.proyeksiapp.org) and ümläutß.'
             end
 
             it_behaves_like 'valid response' do
               let(:text) do
                 '<p class="op-uc-p">Hello World! This <em>is</em> markdown with a ' +
-                  '<a href="http://community.openproject.org" rel="noopener noreferrer" class="op-uc-link">link</a> ' +
+                  '<a href="http://community.proyeksiapp.org" rel="noopener noreferrer" class="op-uc-link">link</a> ' +
                   'and ümläutß.</p>'
               end
             end

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 7.4.1
+  title: ProyeksiApp 7.4.1
   sidebar_navigation:
       title: 7.4.1
   release_version: 7.4.1
@@ -7,12 +7,12 @@
 ---
 
 
-# OpenProject 7.4.1
+# ProyeksiApp 7.4.1
 
 ## Bug fixes (2)
 
   - Synchronized LDAP groups were not properly removed when their
-    associated OpenProject group is removed
+    associated ProyeksiApp group is removed
     \[[\#27103](https://community.openproject.com/wp/27103)\]
   - Updates the nokogiri XML parser gem which addresses a
     Denial-of-Service attack (CVE-2017-15412)

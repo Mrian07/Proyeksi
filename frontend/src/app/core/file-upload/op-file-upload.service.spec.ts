@@ -1,16 +1,16 @@
 
 
-import { OpenProjectDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
+import { ProyeksiAppDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { getTestBed, TestBed } from '@angular/core/testing';
 import { HalResourceService } from 'core-app/features/hal/services/hal-resource.service';
 import { States } from 'core-app/core/states/states.service';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
-import { OpenProjectFileUploadService, UploadFile, UploadResult } from './op-file-upload.service';
+import { ProyeksiAppFileUploadService, UploadFile, UploadResult } from './op-file-upload.service';
 
 describe('opFileUpload service', () => {
   let injector:TestBed;
-  let service:OpenProjectFileUploadService;
+  let service:ProyeksiAppFileUploadService;
   let httpMock:HttpTestingController;
 
   beforeEach(() => {
@@ -19,14 +19,14 @@ describe('opFileUpload service', () => {
       providers: [
         { provide: States, useValue: new States() },
         I18nService,
-        OpenProjectFileUploadService,
-        OpenProjectDirectFileUploadService,
+        ProyeksiAppFileUploadService,
+        ProyeksiAppDirectFileUploadService,
         HalResourceService,
       ],
     });
 
     injector = getTestBed();
-    service = injector.get(OpenProjectFileUploadService);
+    service = injector.get(ProyeksiAppFileUploadService);
     httpMock = injector.get(HttpTestingController);
   });
 

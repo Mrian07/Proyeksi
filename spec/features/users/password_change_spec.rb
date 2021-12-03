@@ -32,7 +32,7 @@ describe 'random password generation',
 
       # Remember password for login
       password = nil
-      expect(OpenProject::Passwords::Generator)
+      expect(ProyeksiApp::Passwords::Generator)
         .to receive(:random_password)
         .and_wrap_original { |m, *args| password = m.call(*args) }
 

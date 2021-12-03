@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Repositories settings
   priority: 500
-description: Repositories settings in OpenProject.
+description: Repositories settings in ProyeksiApp.
 robots: index, follow
 keywords: repository settings
 ---
@@ -10,7 +10,7 @@ keywords: repository settings
 
 To adapt repositories settings, go to System settings on the tab **Repositories** you can configure the following options.
 
-1. **Autofetch repository changes**. This option allows to automatically show commits in an OpenProject Repository.
+1. **Autofetch repository changes**. This option allows to automatically show commits in an ProyeksiApp Repository.
 2. **Repository disk size cache**. In order to cache the repository disk size (displayed e.g. in repository page).
 3. **Enable repository management web service**. This option allows communication with SVN- or Git-Clients. If it is deactivated, a repository cannot be created.
 4. **Define an API key**. This API key is created once and used for communication with an SVN or Git client.

@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Subscribe
   priority: 960
-description: Book the OpenProject Cloud Edition.
+description: Book the ProyeksiApp Cloud Edition.
 robots: index, follow
 keywords: Book Cloud Edition
 ---
 # Book the Enterprise cloud edition
 
-After you have tested the OpenProject Enterprise cloud edition and want to continue working with OpenProject, you can subscribe to one of our plans.
+After you have tested the ProyeksiApp Enterprise cloud edition and want to continue working with ProyeksiApp, you can subscribe to one of our plans.
 
 Please refer to our website for the Enterprise cloud edition [pricing](https://www.openproject.org/pricing/).
 
@@ -57,7 +57,7 @@ Here, you can edit the account or billing information if needed.
 
 Subscribe to our regular newsletter in order to keep up to date with latest product developments.
 
-Click the blue **Pay** button and subscribe to the OpenProject Enterprise cloud edition.
+Click the blue **Pay** button and subscribe to the ProyeksiApp Enterprise cloud edition.
 
 A payment receipt will be sent via email.
 
@@ -86,7 +86,7 @@ An invoice will be sent via email to the Billing email address.
 
 ## Frequently asked questions (FAQ)
 
-### Is there an advantage of the annual over the monthly OpenProject plan?
+### Is there an advantage of the annual over the monthly ProyeksiApp plan?
 
 Yes, your subscription gets cheaper the longer the duration you choose. Please check our current pricing [here](https://www.openproject.org/pricing/).
 

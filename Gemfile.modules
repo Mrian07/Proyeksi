@@ -1,5 +1,5 @@
 ##
-# Defines OpenProject (CE) modules and their dependencies
+# Defines ProyeksiApp (CE) modules and their dependencies
 # the dependencies from the gemspec from a git repo are ignored
 # see also https://github.com/bundler/bundler/issues/1041
 gem 'omniauth-saml', '~> 1.10.1'
@@ -17,34 +17,34 @@ gem 'omniauth-openid-connect',
     ref: 'e1173e682a60010c018146443453560a13b01a90'
 
 group :opf_plugins do
-    # included so that engines can reference OpenProject::Version
+    # included so that engines can reference ProyeksiApp::Version
     $:.push File.expand_path("../lib", __FILE__)
 
-  gem 'openproject-auth_plugins',              path: 'modules/auth_plugins'
-  gem 'openproject-auth_saml',                 path: 'modules/auth_saml'
-  gem 'openproject-openid_connect',            path: 'modules/openid_connect'
-  gem 'openproject-documents',                 path: 'modules/documents'
-  gem 'openproject-xls_export',                path: 'modules/xls_export'
+  gem 'proyeksiapp-auth_plugins',              path: 'modules/auth_plugins'
+  gem 'proyeksiapp-auth_saml',                 path: 'modules/auth_saml'
+  gem 'proyeksiapp-openid_connect',            path: 'modules/openid_connect'
+  gem 'proyeksiapp-documents',                 path: 'modules/documents'
+  gem 'proyeksiapp-xls_export',                path: 'modules/xls_export'
   gem 'costs',                                 path: 'modules/costs'
-  gem 'openproject-reporting',                 path: 'modules/reporting'
-  gem 'openproject-meeting',                   path: 'modules/meeting'
-  gem 'openproject-pdf_export',                path: 'modules/pdf_export'
-  gem "openproject-backlogs",                  path: 'modules/backlogs'
-  gem 'openproject-avatars',                   path: 'modules/avatars'
-  gem 'openproject-two_factor_authentication', path: 'modules/two_factor_authentication'
-  gem 'openproject-webhooks',                  path: 'modules/webhooks'
-  gem 'openproject-github_integration',        path: 'modules/github_integration'
-  gem 'openproject-ldap_groups',               path: 'modules/ldap_groups'
-  gem 'openproject-recaptcha',                 path: 'modules/recaptcha'
-  gem 'openproject-job_status',                path: 'modules/job_status'
+  gem 'proyeksiapp-reporting',                 path: 'modules/reporting'
+  gem 'proyeksiapp-meeting',                   path: 'modules/meeting'
+  gem 'proyeksiapp-pdf_export',                path: 'modules/pdf_export'
+  gem "proyeksiapp-backlogs",                  path: 'modules/backlogs'
+  gem 'proyeksiapp-avatars',                   path: 'modules/avatars'
+  gem 'proyeksiapp-two_factor_authentication', path: 'modules/two_factor_authentication'
+  gem 'proyeksiapp-webhooks',                  path: 'modules/webhooks'
+  gem 'proyeksiapp-github_integration',        path: 'modules/github_integration'
+  gem 'proyeksiapp-ldap_groups',               path: 'modules/ldap_groups'
+  gem 'proyeksiapp-recaptcha',                 path: 'modules/recaptcha'
+  gem 'proyeksiapp-job_status',                path: 'modules/job_status'
 
   gem 'grids',                                 path: 'modules/grids'
   gem 'my_page',                               path: 'modules/my_page'
   gem 'dashboards',                            path: 'modules/dashboards'
-  gem 'openproject-boards',                    path: 'modules/boards'
+  gem 'proyeksiapp-boards',                    path: 'modules/boards'
   gem 'overviews',                             path: 'modules/overviews'
   gem 'budgets',                               path: 'modules/budgets'
-  gem 'openproject-team_planner',              path: 'modules/team_planner'
+  gem 'proyeksiapp-team_planner',              path: 'modules/team_planner'
 
-  gem 'openproject-bim',                       path: 'modules/bim'
+  gem 'proyeksiapp-bim',                       path: 'modules/bim'
 end

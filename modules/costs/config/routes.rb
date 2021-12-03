@@ -1,6 +1,6 @@
 
 
-OpenProject::Application.routes.draw do
+ProyeksiApp::Application.routes.draw do
   scope 'projects/:project_id', as: 'projects' do
     resources :cost_entries, controller: 'costlog', only: %i[new create]
 

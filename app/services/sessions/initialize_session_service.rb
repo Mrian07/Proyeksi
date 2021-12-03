@@ -28,7 +28,7 @@ module Sessions
       # We can only drop old sessions if they're stored in the database
       # and enabled by configuration.
       def drop_old_sessions?
-        active_record_sessions? && OpenProject::Configuration.drop_old_sessions_on_login?
+        active_record_sessions? && ProyeksiApp::Configuration.drop_old_sessions_on_login?
       end
     end
   end

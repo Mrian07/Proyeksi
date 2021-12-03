@@ -12,9 +12,9 @@ module API
     parser :json, API::V3::Parser.new
 
     error_representer ::API::V3::Errors::ErrorRepresenter, 'hal+json'
-    authentication_scope OpenProject::Authentication::Scope::API_V3
+    authentication_scope ProyeksiApp::Authentication::Scope::API_V3
 
-    OpenProject::Authentication.handle_failure(scope: API_V3) do |warden, _opts|
+    ProyeksiApp::Authentication.handle_failure(scope: API_V3) do |warden, _opts|
       e = grape_error_for warden.env, self
       error_message = I18n.t('api_v3.errors.code_401_wrong_credentials')
       api_error = ::API::Errors::Unauthenticated.new error_message

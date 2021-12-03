@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.0.4
+  title: ProyeksiApp 4.0.4
   sidebar_navigation:
       title: 4.0.4
   release_version: 4.0.4
@@ -7,16 +7,16 @@
 ---
 
 
-# OpenProject 4.0.4
+# ProyeksiApp 4.0.4
 
-OpenProject 4.0.4 (and 4.0.3) have been released which contain several
+ProyeksiApp 4.0.4 (and 4.0.3) have been released which contain several
 bug fixes.  
-We advise everyone to update their OpenProject installations to
-OpenProject 4.0.4.
+We advise everyone to update their ProyeksiApp installations to
+ProyeksiApp 4.0.4.
 
-## OpenProject 4.0.3
+## ProyeksiApp 4.0.3
 
-OpenProject 4.0.3 fixes several bugs relating to the work package table.
+ProyeksiApp 4.0.3 fixes several bugs relating to the work package table.
 In addition, font errors in Chrome have been addressed.
 
   - Under some circumstances no text was displayed when using Chrome.
@@ -31,7 +31,7 @@ In addition, font errors in Chrome have been addressed.
   - It is now possible to remove grouping options from queries which was
     not possible before
     ([\#17570](https://community.openproject.org/work_packages/17570 "Removing grouping not saved on existing queries (closed)"))
-  - Errors occurring in subfolder installations of OpenProject have been
+  - Errors occurring in subfolder installations of ProyeksiApp have been
     resolved
     ([\#17566](https://community.openproject.org/work_packages/17566 "Parent change via wp-detail view stuck at loading in subfolder installation (closed)"),
     [\#17564](https://community.openproject.org/work_packages/17564 "Export function throws \"object not found\" error when used in subfolder installation (closed)"))
@@ -45,9 +45,9 @@ In addition, there has been a small change to the backlogs plugin:
     when duplicating work packages with children
     ([\#17602](https://community.openproject.org/work_packages/17602 "Rename \"Copy tasks\" to \"Copy work packages\" on copy of work package (with Backlogs enabled) (closed)")).
 
-## OpenProject 4.0.4
+## ProyeksiApp 4.0.4
 
-An additional bug fix has been added with OpenProject 4.0.4:
+An additional bug fix has been added with ProyeksiApp 4.0.4:
 
   - Due to a regression it was not possible to group by attributes which
     are not displayed in the work package list. This has been resolved

@@ -1,6 +1,6 @@
 
 
-module OpenProject
+module ProyeksiApp
   module Acts
     module Watchable
       module Routes

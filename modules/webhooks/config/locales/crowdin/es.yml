@@ -56,4 +56,4 @@ es:
           title: 'Proyectos seleccionados'
         secret:
           description: >
-            Si se establece el valor secreto, OpenProject se usará para firmar la carga del webhook.
+            Si se establece el valor secreto, ProyeksiApp se usará para firmar la carga del webhook.

@@ -50,7 +50,7 @@ module CustomFieldsHelper
     field_name = "#{name}[custom_field_values][#{custom_field.id}]"
     field_id = "#{name}_custom_field_values_#{custom_field.id}"
 
-    field_format = OpenProject::CustomFieldFormat.find_by_name(custom_field.field_format)
+    field_format = ProyeksiApp::CustomFieldFormat.find_by_name(custom_field.field_format)
 
     tag = case field_format.try(:edit_as)
           when 'date'
@@ -123,7 +123,7 @@ module CustomFieldsHelper
   def custom_field_tag_for_bulk_edit(name, custom_field, project = nil)
     field_name = "#{name}[custom_field_values][#{custom_field.id}]"
     field_id = "#{name}_custom_field_values_#{custom_field.id}"
-    field_format = OpenProject::CustomFieldFormat.find_by_name(custom_field.field_format)
+    field_format = ProyeksiApp::CustomFieldFormat.find_by_name(custom_field.field_format)
     case field_format.try(:edit_as)
     when 'date'
       styled_text_field_tag(field_name, '', id: field_id, size: 10, class: '-augmented-datepicker')
@@ -158,7 +158,7 @@ module CustomFieldsHelper
 
   # Return an array of custom field formats which can be used in select_tag
   def custom_field_formats_for_select(custom_field)
-    OpenProject::CustomFieldFormat
+    ProyeksiApp::CustomFieldFormat
       .all_for_field(custom_field)
       .sort_by(&:order)
       .reject { |format| format.label.nil? }
@@ -168,7 +168,7 @@ module CustomFieldsHelper
   end
 
   def label_for_custom_field_format(format_string)
-    format = OpenProject::CustomFieldFormat.find_by_name(format_string)
+    format = ProyeksiApp::CustomFieldFormat.find_by_name(format_string)
 
     if format
       format.label.is_a?(Proc) ? format.label.call : I18n.t(format.label)

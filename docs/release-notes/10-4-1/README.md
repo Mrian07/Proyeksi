@@ -1,21 +1,21 @@
 ---
-title: OpenProject 10.4.1
+title: ProyeksiApp 10.4.1
 sidebar_navigation:
     title: 10.4.1
 release_version: 10.4.1
 release_date: 2020-03-04
 ---
 
-# OpenProject 10.4.1
+# ProyeksiApp 10.4.1
 
-We released [OpenProject 10.4.1](https://community.openproject.com/versions/1417).
+We released [ProyeksiApp 10.4.1](https://community.openproject.com/versions/1417).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->
 
 ### Time entry corruption in 10.4.0 update
 
-The migration scripts that ran as part of the OpenProject 10.4.0 upgrade include an unfortunate bug that leads to some installations suffering data loss. Installations, that had time entry activities enabled/disabled per project, will have all their time entries assigned to a single time entry activity.
+The migration scripts that ran as part of the ProyeksiApp 10.4.0 upgrade include an unfortunate bug that leads to some installations suffering data loss. Installations, that had time entry activities enabled/disabled per project, will have all their time entries assigned to a single time entry activity.
 
 
 

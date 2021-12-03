@@ -4,7 +4,7 @@ module AdditionalUrlHelpers
   module_function
 
   def fixed_home_url
-    home_url(script_name: OpenProject::Configuration.rails_relative_url_root)
+    home_url(script_name: ProyeksiApp::Configuration.rails_relative_url_root)
   end
 
   def add_params_to_uri(uri, args = {})

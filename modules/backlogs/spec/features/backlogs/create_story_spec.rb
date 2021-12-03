@@ -67,7 +67,7 @@ describe 'Backlogs', js: true do
     login_as(user)
 
     allow(Setting)
-      .to receive(:plugin_openproject_backlogs)
+      .to receive(:plugin_proyeksiapp_backlogs)
             .and_return('story_types' => [story_type.id.to_s,
                                           story_type2.id.to_s,
                                           inactive_story_type.id.to_s],

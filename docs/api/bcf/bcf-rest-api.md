@@ -2,16 +2,16 @@
 
 ![](BCFicon128.png)
 
-The following describes the extensions and deviations of the BCF API v2.1 implementation in OpenProject. 
+The following describes the extensions and deviations of the BCF API v2.1 implementation in ProyeksiApp. 
 
 This document should be read as an extension to the [standard specification](https://github.com/buildingSMART/BCF-API/blob/release_2_1/README.md). 
-The user should read the standard specification first, and then take a look at this document to be informed about OpenProject specificities.
+The user should read the standard specification first, and then take a look at this document to be informed about ProyeksiApp specificities.
 
-While the intent of the implementation is to follow the specification, the API builds on the existing OpenProject data
+While the intent of the implementation is to follow the specification, the API builds on the existing ProyeksiApp data
 schema and by that requires to map between the concepts required in the much broader domain of project management and BCF. 
 
 In other parts, the BCF API specification has not been completely implemented. It will be amended where requirements dictate.
-OpenProject offers a second API (v3) which might be able to fill the gaps the BCF API implementation still has.
+ProyeksiApp offers a second API (v3) which might be able to fill the gaps the BCF API implementation still has.
 
 The document follows the structure of the standard specification to ease comparing the two documents.
 
@@ -96,10 +96,10 @@ The following OAuth2 flows are supported:
 * `authorization_code_grant` - [4.1 - Authorization Code Grant](https://tools.ietf.org/html/rfc6749#section-4.1)
 * `client_credentials` - [4.4 - Client Credentials Grant](https://tools.ietf.org/html/rfc6749#section-4.4)
 
-The `clients_credentials` grant explicitly ruled out by the standard specification as not being user specific can be supported by OpenProject as the grant is mapped to a user account
+The `clients_credentials` grant explicitly ruled out by the standard specification as not being user specific can be supported by ProyeksiApp as the grant is mapped to a user account
 when configuring the OAuth access.
 
-Before a client is able to perform the flows, they need to be [configured in OpenProject](https://docs.openproject.org/system-admin-guide/authentication/oauth-applications/). `bcf_v2_1` needs
+Before a client is able to perform the flows, they need to be [configured in ProyeksiApp](https://docs.openproject.org/system-admin-guide/authentication/oauth-applications/). `bcf_v2_1` needs
 to be checked for the scope. That value also needs to be provided for the scope property in OAuth requests.
 
 The OAuth2 flows alternatively proposed by the specification
@@ -170,7 +170,7 @@ _Implemented_
 
 ## 4.2 Topic Services
 
-BCF topics are tightly coupled to work packages in OpenProject. This coupling is denoted in the `reference_links` property
+BCF topics are tightly coupled to work packages in ProyeksiApp. This coupling is denoted in the `reference_links` property
 of a topic which will always have a link to the work package resource in the API v3. e.g.:
 
 ```

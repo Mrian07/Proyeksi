@@ -359,7 +359,7 @@ describe CostQuery, type: :model, reporting_query_helper: true do
         clear_cache
       end
 
-      include OpenProject::Reporting::SpecHelper::CustomFieldFilterHelper
+      include ProyeksiApp::Reporting::SpecHelper::CustomFieldFilterHelper
 
       it "should create classes for custom fields that get added after starting the server" do
         custom_field

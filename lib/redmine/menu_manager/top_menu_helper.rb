@@ -85,7 +85,7 @@ module Redmine::MenuManager::TopMenuHelper
 
   def render_login_partial
     partial =
-      if OpenProject::Configuration.disable_password_login?
+      if ProyeksiApp::Configuration.disable_password_login?
         'account/omniauth_login'
       else
         'account/login'

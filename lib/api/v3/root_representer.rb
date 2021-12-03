@@ -84,7 +84,7 @@ module API
 
       property :core_version,
                exec_context: :decorator,
-               getter: ->(*) { OpenProject::VERSION.to_semver },
+               getter: ->(*) { ProyeksiApp::VERSION.to_semver },
                if: ->(*) { current_user.admin? }
 
       def _type

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.1.0
+  title: ProyeksiApp 4.1.0
   sidebar_navigation:
       title: 4.1.0
   release_version: 4.1.0
@@ -7,7 +7,7 @@
 ---
 
 
-# **OpenProject 4.1.0**
+# **ProyeksiApp 4.1.0**
 
 ## **Updated work package split screen**
 
@@ -29,7 +29,7 @@ implemented to the split screen:
 
 ## **In-place editing on work package split screen**
 
-OpenProject 4.1 enhances the work package split screen by allowing users
+ProyeksiApp 4.1 enhances the work package split screen by allowing users
 to update work packages without leaving the work package list. Via the
 split screen many work package attributes can be edited on the fly, such
 as:
@@ -74,7 +74,7 @@ The underlying CSS-framework is changed to “Foundation”:
 <http://foundation.zurb.com/>. This change ensures an easier
 adaptability in the future and allows a more responsive design. As a
 result, the overall design of the application has been changed
-with OpenProject 4.1.
+with ProyeksiApp 4.1.
 
 
 
@@ -95,7 +95,7 @@ on the work package page.
 
 ## **Substantial number of bug fixes**
 
-A large number of bugs have been fixed with the release of OpenProject
+A large number of bugs have been fixed with the release of ProyeksiApp
 4.1.
 
 

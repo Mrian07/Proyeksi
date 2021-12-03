@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.5
+  title: ProyeksiApp 6.1.5
   sidebar_navigation:
       title: 6.1.5
   release_version: 6.1.5
@@ -7,14 +7,14 @@
 ---
 
 
-# OpenProject 6.1.5
+# ProyeksiApp 6.1.5
 
 This patch release contains several bug fixes. We recommend to update
-your OpenProject installation to this version.
+your ProyeksiApp installation to this version.
 
 ## Features (1)
 
-  - The OpenProject Favicon was updated to a new color
+  - The ProyeksiApp Favicon was updated to a new color
     ([\#24459](https://community.openproject.com/projects/openproject/work_packages/24459/activity)).
 
 ## Bug fixes (11)
@@ -39,7 +39,7 @@ your OpenProject installation to this version.
     ([\#24582](https://community.openproject.com/projects/openproject/work_packages/24582/activity)).
   - Error shown when editing a user and using a reverse proxy server
     ([\#24622](https://community.openproject.com/projects/openproject/work_packages/24622/activity)).
-  - Inactive users were shown on the homescreen of the OpenProject
+  - Inactive users were shown on the homescreen of the ProyeksiApp
     instance
     ([\#24657](https://community.openproject.com/projects/openproject/work_packages/24657/activity)).
   - Links in the breadcrumb were missing

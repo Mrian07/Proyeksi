@@ -109,7 +109,7 @@ describe 'create users', type: :feature, selenium: true do
 
           click_button 'Sign in'
 
-          expect(page).to have_text 'OpenProject'
+          expect(page).to have_text 'ProyeksiApp'
           expect(current_path).to eq '/'
           expect(page).to have_link 'bobfirst boblast'
         end

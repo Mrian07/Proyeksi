@@ -30,27 +30,27 @@ feature 'invite user via email', type: :feature, js: true do
       members_page.visit!
       click_on 'Add member'
 
-      members_page.search_and_select_principal! 'finkelstein@openproject.com',
-                                                'Send invite to finkelstein@openproject.com'
+      members_page.search_and_select_principal! 'finkelstein@proyeksiapp.com',
+                                                'Send invite to finkelstein@proyeksiapp.com'
       members_page.select_role! 'Developer'
-      expect(members_page).to have_selected_new_principal('finkelstein@openproject.com')
+      expect(members_page).to have_selected_new_principal('finkelstein@proyeksiapp.com')
 
       click_on 'Add'
 
-      expect(members_page).to have_added_user('finkelstein @openproject.com')
+      expect(members_page).to have_added_user('finkelstein @proyeksiapp.com')
 
-      expect(members_page).to have_user 'finkelstein @openproject.com'
+      expect(members_page).to have_user 'finkelstein @proyeksiapp.com'
 
       # Should show the invited user on the default filter as well
       members_page.visit!
-      expect(members_page).to have_user 'finkelstein @openproject.com'
+      expect(members_page).to have_user 'finkelstein @proyeksiapp.com'
     end
   end
 
   context 'with a registered user' do
     let!(:user) do
-      FactoryBot.create :user, mail: 'hugo@openproject.com',
-                               login: 'hugo@openproject.com',
+      FactoryBot.create :user, mail: 'hugo@proyeksiapp.com',
+                               login: 'hugo@proyeksiapp.com',
                                firstname: 'Hugo',
                                lastname: 'Hurried'
     end
@@ -59,7 +59,7 @@ feature 'invite user via email', type: :feature, js: true do
       members_page.visit!
       click_on 'Add member'
 
-      members_page.search_and_select_principal! 'hugo@openproject.com',
+      members_page.search_and_select_principal! 'hugo@proyeksiapp.com',
                                                 'Hugo Hurried'
       members_page.select_role! 'Developer'
 
@@ -75,7 +75,7 @@ feature 'invite user via email', type: :feature, js: true do
           members_page.visit!
           click_on 'Add member'
 
-          members_page.search_principal! 'hugo@openproject.com'
+          members_page.search_principal! 'hugo@proyeksiapp.com'
           expect(members_page).to have_no_search_results
         end
       end

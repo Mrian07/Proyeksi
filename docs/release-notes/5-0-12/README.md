@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.12
+  title: ProyeksiApp 5.0.12
   sidebar_navigation:
       title: 5.0.12
   release_version: 5.0.12
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.12
+# ProyeksiApp 5.0.12
 
-OpenProject 5.0.12 contains several bug fixes:
+ProyeksiApp 5.0.12 contains several bug fixes:
 
   - An error message on a work package page was not displayed properly.
     This has been

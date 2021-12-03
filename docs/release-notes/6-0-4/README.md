@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.0.4
+  title: ProyeksiApp 6.0.4
   sidebar_navigation:
       title: 6.0.4
   release_version: 6.0.4
@@ -7,11 +7,11 @@
 ---
 
 
-# OpenProject 6.0.4
+# ProyeksiApp 6.0.4
 
-OpenProject 6.0.4 contains several bug and accessibility fixes.
+ProyeksiApp 6.0.4 contains several bug and accessibility fixes.
 
-**The following bugs have been fixed in OpenProject 6.0.4:**
+**The following bugs have been fixed in ProyeksiApp 6.0.4:**
 
   - The *+ New
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-45">Project</span>*
@@ -59,7 +59,7 @@ For further information on the release, please refer to the [Changelog
 v.6.0.4](https://community.openproject.com/versions/816) or take a look
 at [GitHub](https://github.com/opf/openproject/tree/v6.0.4).
 
-You can try OpenProject for free. For a free 30 day trial create your
-OpenProject instance on [OpenProject.org](https://openproject.org/).
+You can try ProyeksiApp for free. For a free 30 day trial create your
+ProyeksiApp instance on [ProyeksiApp.org](https://openproject.org/).
 
 

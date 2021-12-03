@@ -3,7 +3,7 @@
 module API
   module V3
     module Versions
-      class CreateFormAPI < ::API::OpenProjectAPI
+      class CreateFormAPI < ::API::ProyeksiAppAPI
         resource :form do
           after_validation do
             authorize :manage_versions, global: true

@@ -1,13 +1,13 @@
-require Rails.root.join('config/constants/open_project/inflector')
+require Rails.root.join('config/constants/proyeksi_app/inflector')
 
-OpenProject::Inflector.rule do |_, abspath|
-  if abspath.match?(/open_project\/version(\.rb)?\z/) ||
-     abspath.match?(/lib\/open_project\/\w+\/version(\.rb)?\z/)
+ProyeksiApp::Inflector.rule do |_, abspath|
+  if abspath.match?(/proyeksi_app\/version(\.rb)?\z/) ||
+     abspath.match?(/lib\/proyeksi_app\/\w+\/version(\.rb)?\z/)
     "VERSION"
   end
 end
 
-OpenProject::Inflector.rule do |basename, abspath|
+ProyeksiApp::Inflector.rule do |basename, abspath|
   case basename
   when /\Aapi_(.*)\z/
     'API' + default_inflect($1, abspath)
@@ -18,13 +18,13 @@ OpenProject::Inflector.rule do |basename, abspath|
   end
 end
 
-OpenProject::Inflector.rule do |basename, abspath|
+ProyeksiApp::Inflector.rule do |basename, abspath|
   if basename =~ /\Aar_(.*)\z/
     'AR' + default_inflect($1, abspath)
   end
 end
 
-OpenProject::Inflector.rule do |basename, abspath|
+ProyeksiApp::Inflector.rule do |basename, abspath|
   case basename
   when /\Aoauth_(.*)\z/
     'OAuth' + default_inflect($1, abspath)
@@ -35,7 +35,7 @@ OpenProject::Inflector.rule do |basename, abspath|
   end
 end
 
-OpenProject::Inflector.rule do |basename, abspath|
+ProyeksiApp::Inflector.rule do |basename, abspath|
   if basename =~ /\A(.*)_sso\z/
     default_inflect($1, abspath) + 'SSO'
   end
@@ -43,14 +43,14 @@ end
 
 # Instruct zeitwerk to 'ignore' all the engine gems' lib initialization files.
 # As it is complicated to return all the paths where such an initialization file might exist,
-# we simply return the general OpenProject namespace for such files.
-OpenProject::Inflector.rule do |_basename, abspath|
-  if abspath =~ /\/lib\/openproject-\w+.rb\z/
-    'OpenProject'
+# we simply return the general ProyeksiApp namespace for such files.
+ProyeksiApp::Inflector.rule do |_basename, abspath|
+  if abspath =~ /\/lib\/proyeksiapp-\w+.rb\z/
+    'ProyeksiApp'
   end
 end
 
-OpenProject::Inflector.inflection(
+ProyeksiApp::Inflector.inflection(
   'rss' => 'RSS',
   'sha1' => 'SHA1',
   'sso' => 'SSO',
@@ -65,11 +65,11 @@ OpenProject::Inflector.inflection(
 )
 
 Rails.autoloaders.each do |autoloader|
-  autoloader.inflector = OpenProject::Inflector.new(__FILE__)
+  autoloader.inflector = ProyeksiApp::Inflector.new(__FILE__)
 end
 
 Rails.autoloaders.main.ignore(Rails.root.join('lib/plugins'))
-Rails.autoloaders.main.ignore(Rails.root.join('lib/open_project/patches'))
+Rails.autoloaders.main.ignore(Rails.root.join('lib/proyeksi_app/patches'))
 Rails.autoloaders.main.ignore(Rails.root.join('lib/generators'))
 Rails.autoloaders.main.ignore(Bundler.bundle_path.join('**/*.rb'))
 

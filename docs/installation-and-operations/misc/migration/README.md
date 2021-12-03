@@ -1,8 +1,8 @@
-# Migrating your packaged OpenProject installation to another environment
+# Migrating your packaged ProyeksiApp installation to another environment
 
-**Note:** this guide only applies if you've installed OpenProject using our DEB/RPM packages.
+**Note:** this guide only applies if you've installed ProyeksiApp using our DEB/RPM packages.
 
-Migrating your OpenProject packaged installation to another host or environment is trivial and may be combined with, e.g., minor or major package upgrades due to our migration system.
+Migrating your ProyeksiApp packaged installation to another host or environment is trivial and may be combined with, e.g., minor or major package upgrades due to our migration system.
 
 ## Backing up
 
@@ -17,9 +17,9 @@ This guide should leave you with a set of archives that you should manually move
 
 ## Migration
 
-The following steps outline the migration process to the OpenProject package (possibly, a newer version).
+The following steps outline the migration process to the ProyeksiApp package (possibly, a newer version).
 
-## Stop OpenProject on old server
+## Stop ProyeksiApp on old server
 
 To stop the servers from being accessed on the old installation, stop the service with `service openproject stop` or `systemctl stop openproject` depending on your distribution.
 

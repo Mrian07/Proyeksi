@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: OAuth applications
   priority: 900
-description: OAuth application settings in OpenProject.
+description: OAuth application settings in ProyeksiApp.
 robots: index, follow
 keywords: OAuth application settings
 ---
@@ -44,10 +44,10 @@ The authentication endpoints are at
 
 Request an authorization code. Please adopt the following URL replacing 
 
- * the `example.com` with the root path of your OpenProject instance,
+ * the `example.com` with the root path of your ProyeksiApp instance,
  * `<Client ID>` with your client ID, and
  * `<Redirect URI>` with the redirect URI just as you configured it above.
- * You can leave the `scope` value untouched unless you are running the OpenProject BIM edition and also plan to access to the BCF version 2.1 REST API. Then simply replace `api_v3` with `api_v3%20bcf_v2_1`.
+ * You can leave the `scope` value untouched unless you are running the ProyeksiApp BIM edition and also plan to access to the BCF version 2.1 REST API. Then simply replace `api_v3` with `api_v3%20bcf_v2_1`.
 
 `https://example.com/oauth/authorize?response_type=code&client_id=<Client ID>&redirect_uri=<Redirect URI>&scope=api_v3&prompt=consent`
 
@@ -64,7 +64,7 @@ With the authorization code that you obtained above you can now request an API t
 
 We do this manually in the command line using cURL. Please replace
 
- * the `example.com` with the root path of your OpenProject instance,
+ * the `example.com` with the root path of your ProyeksiApp instance,
  * `<Client ID>` with your client ID
  * `<Authentication code>` with the code you obtained above,
  * and `<Redirect URI>` with the redirect URI just as you configured it above.
@@ -82,14 +82,14 @@ $ curl --request POST \
 
 The response will contain the token that you need when working with the API. Please copy the token.
 
-### Performing a request to the OpenProject API with OAuth token
+### Performing a request to the ProyeksiApp API with OAuth token
 
-With the token that you obtained above you can now make API calls to the OpenProject instance 
+With the token that you obtained above you can now make API calls to the ProyeksiApp instance 
 on behalf of the current user.
 
 For example, the following cURL command fetches all projects from the API V3. Please replace
                                                                   
- * the `example.com` with the root path of your OpenProject instance, and
+ * the `example.com` with the root path of your ProyeksiApp instance, and
  * `<Token>` with the code you obtained above.
 
 `$ curl --request GET 'https://example.com/api/v3/projects' \
@@ -107,8 +107,8 @@ i.e. `https://example.com`)
 
 ## CORS headers
 
-By default, the OpenProject API is _not_ responding with any CORS headers.
-If you want to allow cross-domain AJAX calls against your OpenProject instance, you need to enable CORS headers being returned.
+By default, the ProyeksiApp API is _not_ responding with any CORS headers.
+If you want to allow cross-domain AJAX calls against your ProyeksiApp instance, you need to enable CORS headers being returned.
 
 Please see [our API settings documentation](../../../system-admin-guide/system-settings/api-settings/) on
 how to selectively enable CORS.

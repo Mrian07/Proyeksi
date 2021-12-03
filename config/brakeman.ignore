@@ -113,7 +113,7 @@
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "OpenProject::NestedSet::RebuildPatch::ClassMethods",
+        "class": "ProyeksiApp::NestedSet::RebuildPatch::ClassMethods",
         "method": "rebuild_silently!"
       },
       "user_input": "quoted_parent_column_name",
@@ -244,7 +244,7 @@
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "OpenProject::SCM::Adapters::Subversion",
+        "class": "ProyeksiApp::SCM::Adapters::Subversion",
         "method": "annotate"
       },
       "user_input": "target(path)",
@@ -304,7 +304,7 @@
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "OpenProject::NestedSet::RebuildPatch::ClassMethods",
+        "class": "ProyeksiApp::NestedSet::RebuildPatch::ClassMethods",
         "method": "rebuild_silently!"
       },
       "user_input": "quoted_parent_column_name",
@@ -344,7 +344,7 @@
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "OpenProject::NestedSet::RebuildPatch",
+        "class": "ProyeksiApp::NestedSet::RebuildPatch",
         "method": "s(:self).included"
       },
       "user_input": "quoted_right_column_name",
@@ -404,7 +404,7 @@
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "OpenProject::SCM::Adapters::Subversion",
+        "class": "ProyeksiApp::SCM::Adapters::Subversion",
         "method": "annotate"
       },
       "user_input": "target(path)",

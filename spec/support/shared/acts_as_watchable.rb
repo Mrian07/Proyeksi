@@ -53,7 +53,7 @@ MESSAGE
   end
 
   let(:is_public_permission) do
-    OpenProject::AccessControl.public_permissions.map(&:name).include?(watch_permission)
+    ProyeksiApp::AccessControl.public_permissions.map(&:name).include?(watch_permission)
   end
 
   shared_context 'non member role has the permission to watch' do

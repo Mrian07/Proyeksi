@@ -15,7 +15,7 @@ describe EnterprisesController, type: :controller do
   end
 
   let(:token_object) do
-    OpenProject::Token.new token_attributes
+    ProyeksiApp::Token.new token_attributes
   end
 
   before do
@@ -49,8 +49,8 @@ describe EnterprisesController, type: :controller do
         context 'with version >= 2.0' do
           let(:token_attributes) { super().merge version: "2.0" }
 
-          context 'with correct domain', with_settings: { host_name: 'community.openproject.com' } do
-            let(:token_attributes) { super().merge domain: 'community.openproject.com' }
+          context 'with correct domain', with_settings: { host_name: 'community.proyeksiapp.com' } do
+            let(:token_attributes) { super().merge domain: 'community.proyeksiapp.com' }
 
             it_behaves_like 'it renders the EE overview'
 
@@ -59,13 +59,13 @@ describe EnterprisesController, type: :controller do
             end
           end
 
-          context 'with wrong domain', with_settings: { host_name: 'community.openproject.com' } do
+          context 'with wrong domain', with_settings: { host_name: 'community.proyeksiapp.com' } do
             let(:token_attributes) { super().merge domain: 'localhost' }
 
             it_behaves_like 'it renders the EE overview'
 
             it "shows an invalid domain error" do
-              expect(controller).to set_flash.now[:error].to(/.*localhost.*does not match.*community.openproject.com/)
+              expect(controller).to set_flash.now[:error].to(/.*localhost.*does not match.*community.proyeksiapp.com/)
             end
           end
         end
@@ -73,7 +73,7 @@ describe EnterprisesController, type: :controller do
         context 'with version < 2.0' do
           let(:token_attributes) { super().merge version: "1.0.3" }
 
-          context 'with wrong domain', with_settings: { host_name: 'community.openproject.com' } do
+          context 'with wrong domain', with_settings: { host_name: 'community.proyeksiapp.com' } do
             let(:token_attributes) { super().merge domain: 'localhost' }
 
             it_behaves_like 'it renders the EE overview'

@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Documents
   priority: 770
-description: Upload documents in OpenProject.
+description: Upload documents in ProyeksiApp.
 robots: index, follow
 keywords: documents
 ---
@@ -33,6 +33,6 @@ You can edit or delete documents anytime. To do that, navigate to the Documents 
 
 ## Frequently asked questions (FAQ)
 
-### Is there a size limit for uploading documents to the OpenProject Cloud Edition?
+### Is there a size limit for uploading documents to the ProyeksiApp Cloud Edition?
 
-There is no limit in OpenProject in terms of the number of files that you can upload and work with in OpenProject. There is only a restriction in terms of the maximum file size: A file can have a size up to 256 MB.
+There is no limit in ProyeksiApp in terms of the number of files that you can upload and work with in ProyeksiApp. There is only a restriction in terms of the maximum file size: A file can have a size up to 256 MB.

@@ -10,20 +10,20 @@ module ::TwoFactorAuthentication
     def show
       render template: 'two_factor_authentication/settings',
              locals: {
-               settings: Setting.plugin_openproject_two_factor_authentication,
+               settings: Setting.plugin_proyeksiapp_two_factor_authentication,
                strategy_manager: manager,
                configuration: manager.configuration
              }
     end
 
     def update
-      current_settings = Setting.plugin_openproject_two_factor_authentication
+      current_settings = Setting.plugin_proyeksiapp_two_factor_authentication
       begin
         merge_settings!(current_settings, permitted_params)
         manager.validate_configuration!
         flash[:notice] = I18n.t(:notice_successful_update)
       rescue ArgumentError => e
-        Setting.plugin_openproject_two_factor_authentication = current_settings
+        Setting.plugin_proyeksiapp_two_factor_authentication = current_settings
         flash[:error] = I18n.t('two_factor_authentication.settings.failed_to_save_settings', message: e.message)
         Rails.logger.error "Failed to save 2FA settings: #{e.message}"
       end
@@ -38,7 +38,7 @@ module ::TwoFactorAuthentication
     end
 
     def merge_settings!(current, permitted)
-      Setting.plugin_openproject_two_factor_authentication = current.merge(
+      Setting.plugin_proyeksiapp_two_factor_authentication = current.merge(
         enforced: !!permitted[:enforced],
         allow_remember_for_days: permitted[:allow_remember_for_days]
       )
@@ -55,7 +55,7 @@ module ::TwoFactorAuthentication
     end
 
     def manager
-      ::OpenProject::TwoFactorAuthentication::TokenStrategyManager
+      ::ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager
     end
 
     def default_breadcrumb

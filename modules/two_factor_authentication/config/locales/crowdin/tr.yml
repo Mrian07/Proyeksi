@@ -121,14 +121,14 @@ tr:
         text_cannot_scan: |
           Eğer kodu taratamıyorsanız, devamındaki detayları kullanarak manuel olarak girebilirsiniz:
         description: |
-          Zaman bazlı tek kullanımlık kimlik doğrulayıcı standardını OpenProject ile kullanmak için bir kimlik doğrulayıcı uygulama kaydedin.
+          Zaman bazlı tek kullanımlık kimlik doğrulayıcı standardını ProyeksiApp ile kullanmak için bir kimlik doğrulayıcı uygulama kaydedin.
           Yaygın örnekler Google Authenticator yada Authy'dir.
       sms:
         title: 'Cep telefonunuzu kullanın'
         redacted_identifier: 'Mobil cihaz (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, size %{delivery_channel} ile kimlik doğrulayıcısı kodu gönderdik'
         description: |
-          OpenProject'in tek kullanımlık şifrelerini göndermek için cep telefon numaranızı kaydedin.
+          ProyeksiApp'in tek kullanımlık şifrelerini göndermek için cep telefon numaranızı kaydedin.
     sns:
       delivery_failed: 'SNS gönderimi başarısız:'
     message_bird:

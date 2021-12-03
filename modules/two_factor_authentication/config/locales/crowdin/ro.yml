@@ -123,14 +123,14 @@ ro:
         text_cannot_scan: |
           În cazul în care nu puteți scana codul, puteți să introduceți intrarea manual folosind următoarele detalii:
         description: |
-          Înregistrați un autentificator de aplicații pentru utilizarea cu OpenProject folosind standardul de autentificare cu parolă unică bazată pe timp.
+          Înregistrați un autentificator de aplicații pentru utilizarea cu ProyeksiApp folosind standardul de autentificare cu parolă unică bazată pe timp.
           Exemple comune sunt Google Authenticator sau Authy.
       sms:
         title: 'Utilizați telefonul mobil'
         redacted_identifier: 'Dispozitiv mobil (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, ți-am trimis un cod de autentificare prin %{delivery_channel}'
         description: |
-          Înregistrați-vă numărul de telefon mobil pentru livrarea parolelor unice OpenProject.
+          Înregistrați-vă numărul de telefon mobil pentru livrarea parolelor unice ProyeksiApp.
     sns:
       delivery_failed: 'Livrarea SNS a eșuat:'
     message_bird:

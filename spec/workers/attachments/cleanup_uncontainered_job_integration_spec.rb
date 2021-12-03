@@ -28,7 +28,7 @@ describe Attachments::CleanupUncontaineredJob, type: :job do
   let(:job) { described_class.new }
 
   before do
-    allow(OpenProject::Configuration)
+    allow(ProyeksiApp::Configuration)
       .to receive(:attachments_grace_period)
       .and_return(grace_period)
   end

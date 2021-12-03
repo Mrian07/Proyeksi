@@ -29,7 +29,7 @@ get:
                   workPackages:
                     href: "/api/v3/work_packages"
                 coreVersion: 10.3.0
-                instanceName: My own OpenProject
+                instanceName: My own ProyeksiApp
           schema:
             "$ref": "../components/schemas/root_model.yml"
       description: OK

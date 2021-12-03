@@ -4,7 +4,7 @@ sidebar_navigation:
   priority: 5
 ---
 
-# Process control for your OpenProject installation
+# Process control for your ProyeksiApp installation
 
 
 
@@ -12,7 +12,7 @@ sidebar_navigation:
 
 ## Packaged installation 
 
-#### Restart all the OpenProject processes
+#### Restart all the ProyeksiApp processes
 
 ```bash
 sudo openproject restart
@@ -22,9 +22,9 @@ sudo openproject restart
 
 #### Run commands like rake tasks or rails console
 
-The OpenProject command line tool supports running rake tasks and known scripts. For instance:
+The ProyeksiApp command line tool supports running rake tasks and known scripts. For instance:
 
-Get the current version of OpenProject
+Get the current version of ProyeksiApp
 
 ```bash
 sudo openproject run bundle exec rake version
@@ -46,7 +46,7 @@ sudo openproject run rake db:migrate
 # if using docker-compose: docker-compose run --rm web bundle exec rake db:migrate
 ```
 
-Check the version of Ruby used by OpenProject:
+Check the version of Ruby used by ProyeksiApp:
 
 ```bash
 sudo openproject run ruby -v
@@ -86,7 +86,7 @@ sudo openproject restart web
 
 #### Run commands like rake tasks or rails console
 
-You can spawn an interactive shell in your docker container to run commands in the OpenProject environment.
+You can spawn an interactive shell in your docker container to run commands in the ProyeksiApp environment.
 
 
 
@@ -110,7 +110,7 @@ Run a bash shell in the container
 docker exec -it $CIT bash
 ```
 
-Get the current version of OpenProject
+Get the current version of ProyeksiApp
 
 ```bash
 docker exec -it $CIT bash -c "RAILS_ENV=production rails version"
@@ -134,7 +134,7 @@ docker exec -it $CIT bash -c "RAILS_ENV=production rails console"
 
 #### Spawn a rails console
 
-You can spawn an interactive shell in your docker-compose setup container to run commands in the OpenProject environment.
+You can spawn an interactive shell in your docker-compose setup container to run commands in the ProyeksiApp environment.
 
 
 The following command will spawn a Rails console in the container:

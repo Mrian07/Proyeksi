@@ -5,7 +5,7 @@
 module Accounts::UserLimits
   def enforce_user_limit(
     redirect_to: users_path,
-    hard: OpenProject::Enterprise.fail_fast?,
+    hard: ProyeksiApp::Enterprise.fail_fast?,
     flash_now: false
   )
     if user_limit_reached?
@@ -49,7 +49,7 @@ module Accounts::UserLimits
   end
 
   def send_activation_limit_notification_about(user)
-    OpenProject::Enterprise.send_activation_limit_notification_about user
+    ProyeksiApp::Enterprise.send_activation_limit_notification_about user
   end
 
   def show_user_limit_warning!(flash_now: false)
@@ -65,7 +65,7 @@ module Accounts::UserLimits
   def user_limit_warning
     warning = I18n.t(
       :warning_user_limit_reached,
-      upgrade_url: OpenProject::Enterprise.upgrade_url
+      upgrade_url: ProyeksiApp::Enterprise.upgrade_url
     )
 
     warning.html_safe
@@ -83,17 +83,17 @@ module Accounts::UserLimits
   def imminent_user_limit_warning
     warning = I18n.t(
       :warning_imminent_user_limit,
-      upgrade_url: OpenProject::Enterprise.upgrade_url
+      upgrade_url: ProyeksiApp::Enterprise.upgrade_url
     )
 
     warning.html_safe
   end
 
   def user_limit_reached?
-    OpenProject::Enterprise.user_limit_reached?
+    ProyeksiApp::Enterprise.user_limit_reached?
   end
 
   def imminent_user_limit?
-    OpenProject::Enterprise.imminent_user_limit?
+    ProyeksiApp::Enterprise.imminent_user_limit?
   end
 end

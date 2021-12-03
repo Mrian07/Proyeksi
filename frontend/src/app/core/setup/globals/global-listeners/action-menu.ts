@@ -1,7 +1,7 @@
 
 
 /*
-  The action menu is a menu that usually belongs to an OpenProject entity (like an Issue, WikiPage, Meeting, ..).
+  The action menu is a menu that usually belongs to an ProyeksiApp entity (like an Issue, WikiPage, Meeting, ..).
   Most likely it looks like this:
     <ul class="action_menu_main">
       <li><a>Menu item text</a></li>

@@ -1,14 +1,14 @@
 ---
-title: OpenProject 10.2.1
+title: ProyeksiApp 10.2.1
 sidebar_navigation:
     title: 10.2.1
 release_version: 10.2.1
 release_date: 2019-11-13
 ---
 
-# OpenProject 10.2.1
+# ProyeksiApp 10.2.1
 
-We released [OpenProject 10.2.1](https://community.openproject.com/versions/1404).
+We released [ProyeksiApp 10.2.1](https://community.openproject.com/versions/1404).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 

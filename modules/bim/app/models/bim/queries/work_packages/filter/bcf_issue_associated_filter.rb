@@ -12,8 +12,8 @@ module ::Bim::Queries::WorkPackages::Filter
 
     def allowed_values
       [
-        [I18n.t(:general_text_yes), OpenProject::Database::DB_VALUE_TRUE],
-        [I18n.t(:general_text_no), OpenProject::Database::DB_VALUE_FALSE]
+        [I18n.t(:general_text_yes), ProyeksiApp::Database::DB_VALUE_TRUE],
+        [I18n.t(:general_text_no), ProyeksiApp::Database::DB_VALUE_FALSE]
       ]
     end
 
@@ -40,19 +40,19 @@ module ::Bim::Queries::WorkPackages::Filter
     end
 
     def available?
-      OpenProject::Configuration.bim?
+      ProyeksiApp::Configuration.bim?
     end
 
     private
 
     def associated?
-      (operator == '=' && values.first == OpenProject::Database::DB_VALUE_TRUE) ||
-        (operator == '!' && values.first == OpenProject::Database::DB_VALUE_FALSE)
+      (operator == '=' && values.first == ProyeksiApp::Database::DB_VALUE_TRUE) ||
+        (operator == '!' && values.first == ProyeksiApp::Database::DB_VALUE_FALSE)
     end
 
     def not_associated?
-      (operator == '=' && values.first == OpenProject::Database::DB_VALUE_FALSE) ||
-        (operator == '!' && values.first == OpenProject::Database::DB_VALUE_TRUE)
+      (operator == '=' && values.first == ProyeksiApp::Database::DB_VALUE_FALSE) ||
+        (operator == '!' && values.first == ProyeksiApp::Database::DB_VALUE_TRUE)
     end
   end
 end

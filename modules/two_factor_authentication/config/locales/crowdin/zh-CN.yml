@@ -123,14 +123,14 @@ zh-CN:
         text_cannot_scan: |
           如果您无法扫描二维码，可以使用下列详细信息手动输入条目：
         description: |
-          使用基于时间的一次性密码身份验证标准来注册要与 OpenProject 搭配使用的应用程序身份验证器。
+          使用基于时间的一次性密码身份验证标准来注册要与 ProyeksiApp 搭配使用的应用程序身份验证器。
           常见的示例包括 Google Authenticator 或 Authy。
       sms:
         title: '使用您的手机'
         redacted_identifier: '移动设备 (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}，我们通过 %{delivery_channel} 向您发送了一个身份验证代码'
         description: |
-          注册您的手机号码，以便传送 OpenProject 一次性密码。
+          注册您的手机号码，以便传送 ProyeksiApp 一次性密码。
     sns:
       delivery_failed: 'SNS 传送失败：'
     message_bird:

@@ -2,17 +2,17 @@
 sidebar_navigation:
   title: Custom fields
   priority: 800
-description: Manage custom fields in OpenProject.
+description: Manage custom fields in ProyeksiApp.
 robots: index, follow
 keywords: manage custom fields
 ---
 # Manage custom fields
 
-You can **create additional custom fields for different sections**, e.g. work packages, projects, users or groups in OpenProject.
+You can **create additional custom fields for different sections**, e.g. work packages, projects, users or groups in ProyeksiApp.
 
-Custom fields enable to configure your OpenProject exactly to your needs, i.e. to adapt work package forms to your company specific requirements.
+Custom fields enable to configure your ProyeksiApp exactly to your needs, i.e. to adapt work package forms to your company specific requirements.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Add a new custom field
 

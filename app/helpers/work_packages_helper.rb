@@ -205,7 +205,7 @@ module WorkPackagesHelper
     if work_package.description.blank?
       empty_element_tag
     else
-      ::OpenProject::TextFormatting::Renderer.format_text(
+      ::ProyeksiApp::TextFormatting::Renderer.format_text(
         description_lines.join(''),
         object: work_package,
         attribute: :description,

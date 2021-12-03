@@ -5,7 +5,7 @@ require 'hashie'
 module API
   module V3
     module WorkPackages
-      class WatchersAPI < ::API::OpenProjectAPI
+      class WatchersAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         get '/available_watchers' do

@@ -23,7 +23,7 @@
           <% for new_status in @statuses %>
               <th class="workflow-table--current-status -table-border-top -table-border-bottom">
                 <%= link_to_function(icon_wrapper('icon-context icon-checkmark',"#{t(:label_check_uncheck_all_in_column)}"),
-                                     "OpenProject.helpers.toggleCheckboxesBySelector('table.transitions-#{name} input.new-status-#{new_status.id}')",
+                                     "ProyeksiApp.helpers.toggleCheckboxesBySelector('table.transitions-#{name} input.new-status-#{new_status.id}')",
                                      class: 'no-decoration-on-hover',
                                      title: "#{t(:label_check_uncheck_all_in_column)}",
                                      alt: "#{t(:label_check_uncheck_all_in_column)}") %>
@@ -37,7 +37,7 @@
           <tr class="-table-border-left">
             <td class="workflow-table--current-status -table-border-right">
               <%= link_to_function(icon_wrapper('icon-context icon-checkmark',"#{t(:label_check_uncheck_all_in_row)}"),
-                                   "OpenProject.helpers.toggleCheckboxesBySelector('table.transitions-#{name} input.old-status-#{old_status.id}')",
+                                   "ProyeksiApp.helpers.toggleCheckboxesBySelector('table.transitions-#{name} input.old-status-#{old_status.id}')",
                                    class: 'no-decoration-on-hover',
                                    title: "#{t(:label_check_uncheck_all_in_row)}",
                                    alt: "#{t(:label_check_uncheck_all_in_row)}") %>

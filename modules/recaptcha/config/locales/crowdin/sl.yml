@@ -15,4 +15,4 @@ sl:
       type_v2: 'reCAPTCHA v2'
       type_v3: 'reCAPTCHA v3'
       recaptcha_description_html: >
-        reCAPTCHA je Googlova brezplačna storitev, ki jo je mogoče omogočiti za primerek OpenProject. Če je omogočen, bo ob prijavi prikazan obrazec captcha za vse uporabnike, ki se še niso preverili. <br/> Oglejte si spodnjo povezavo za več podrobnosti o reCAPTCHA in njihovih različicah ter kako ustvariti spletno mesto in skrivne ključe: %{recaptcha_link}
+        reCAPTCHA je Googlova brezplačna storitev, ki jo je mogoče omogočiti za primerek ProyeksiApp. Če je omogočen, bo ob prijavi prikazan obrazec captcha za vse uporabnike, ki se še niso preverili. <br/> Oglejte si spodnjo povezavo za več podrobnosti o reCAPTCHA in njihovih različicah ter kako ustvariti spletno mesto in skrivne ključe: %{recaptcha_link}

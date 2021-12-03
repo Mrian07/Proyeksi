@@ -114,7 +114,7 @@ describe 'API v3 Work package form resource', type: :request, with_mail: false d
           it { expect(subject.body).to have_json_path("_embedded/validationErrors/#{property}") }
 
           describe 'error body' do
-            let(:error_id) { 'urn:openproject-org:api:v3:errors:PropertyConstraintViolation' }
+            let(:error_id) { 'urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation' }
 
             let(:error_body) { parse_json(subject.body)['_embedded']['validationErrors'][property] }
 
@@ -341,7 +341,7 @@ describe 'API v3 Work package form resource', type: :request, with_mail: false d
 
                 context 'status does not exist' do
                   let(:error_id) do
-                    'urn:openproject-org:api:v3:errors:MultipleErrors'.to_json
+                    'urn:proyeksiapp-org:api:v3:errors:MultipleErrors'.to_json
                   end
                   let(:status_link) { api_v3_paths.status -1 }
 

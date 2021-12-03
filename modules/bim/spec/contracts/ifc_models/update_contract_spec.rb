@@ -14,7 +14,7 @@ describe Bim::IfcModels::UpdateContract do
                                uploader: model_user,
                                title: model_title,
                                project: model_project).tap do |model|
-        model.extend(OpenProject::ChangedBySystem)
+        model.extend(ProyeksiApp::ChangedBySystem)
 
         if changed_by_system
           changed_by_system do

@@ -5,7 +5,7 @@ require 'api/v3/attachments/attachment_collection_representer'
 module API
   module V3
     module Attachments
-      class AttachmentsByWorkPackageAPI < ::API::OpenProjectAPI
+      class AttachmentsByWorkPackageAPI < ::API::ProyeksiAppAPI
         resources :attachments do
           helpers API::V3::Attachments::AttachmentsByContainerAPI::Helpers
 

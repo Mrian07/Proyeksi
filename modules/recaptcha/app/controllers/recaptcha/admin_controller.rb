@@ -11,7 +11,7 @@ module ::Recaptcha
     def show; end
 
     def update
-      Setting.plugin_openproject_recaptcha = @settings
+      Setting.plugin_proyeksiapp_recaptcha = @settings
       flash[:notice] = I18n.t(:notice_successful_update)
       redirect_to action: :show
     end

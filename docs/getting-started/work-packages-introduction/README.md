@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Work packages introduction
   priority: 700
-description: Introduction to work packages in OpenProject.
+description: Introduction to work packages in ProyeksiApp.
 robots: index, follow
 keywords: work packages introduction, attributes, values, task
 ---
@@ -15,16 +15,16 @@ For further documentation, please visit our [user guide for work packages](../..
 
 | Topic                                                        | Content                                                   |
 | ------------------------------------------------------------ | --------------------------------------------------------- |
-| [What is a work package?](#what-is-a-work-package)          | Find out what a work package in OpenProject is.           |
+| [What is a work package?](#what-is-a-work-package)          | Find out what a work package in ProyeksiApp is.           |
 | [Create a new work package](#create-a-new-work-package)      | How to create a new work package in a project?           |
 | [Open and edit a work package](#open-and-edit-a-work-package) | How to open and make changes to an existing work package? |
 | [Activity of work packages](#activity-of-work-packages)      | See all changes in a work package.                        |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/OpenProject-Work-Packages.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Work-Packages.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## What is a work package?
 
-A work package in OpenProject can basically be everything you need to keep track off within your projects. It can be e.g. a task, a feature, a bug, a risk, a milestone or a project phase. These different kinds of work packages are called **work package types**.
+A work package in ProyeksiApp can basically be everything you need to keep track off within your projects. It can be e.g. a task, a feature, a bug, a risk, a milestone or a project phase. These different kinds of work packages are called **work package types**.
 
 ## Create a new work package
 

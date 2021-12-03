@@ -1,6 +1,6 @@
 module AccountsHelper
   class Footer
-    include OpenProject::TextFormatting
+    include ProyeksiApp::TextFormatting
 
     attr_reader :source
 
@@ -37,12 +37,12 @@ module AccountsHelper
 
   ##
   # Gets the registration footer in the given language.
-  # If registration footers are defined via the OpenProject configuration
+  # If registration footers are defined via the ProyeksiApp configuration
   # then any footers defined via settings will be ignored.
   #
   # @param lang [String] ISO 639-1 language code (e.g. 'en', 'de')
   def registration_footer_for(lang:)
-    if footer = OpenProject::Configuration.registration_footer.presence
+    if footer = ProyeksiApp::Configuration.registration_footer.presence
       footer[lang.to_s].presence
     else
       Setting.registration_footer[lang.to_s].presence

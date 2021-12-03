@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Task board view
   priority: 850
-description: Taskboard in OpenProject.
+description: Taskboard in ProyeksiApp.
 robots: index, follow
 keywords: taskboard, task board, user story, epic
 ---

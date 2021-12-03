@@ -1,7 +1,7 @@
 
 
 import { Injector, NgModule } from '@angular/core';
-import { OpenProjectPluginContext } from 'core-app/features/plugins/plugin-context';
+import { ProyeksiAppPluginContext } from 'core-app/features/plugins/plugin-context';
 import { multiInput } from 'reactivestates';
 import { PlannedCostsFormAugment } from 'core-app/features/plugins/linked/budgets/augment/planned-costs-form';
 import { CostBudgetSubformAugmentService } from 'core-app/features/plugins/linked/budgets/augment/cost-budget-subform.augment.service';
@@ -9,7 +9,7 @@ import { CostSubformAugmentService } from './augment/cost-subform.augment.servic
 import { BudgetResource } from './hal/resources/budget-resource';
 
 export function initializeCostsPlugin(injector:Injector) {
-  window.OpenProject.getPluginContext().then((pluginContext:OpenProjectPluginContext) => {
+  window.ProyeksiApp.getPluginContext().then((pluginContext:ProyeksiAppPluginContext) => {
     pluginContext.services.editField.extendFieldType('select', ['Budget']);
 
     const displayFieldService = pluginContext.services.displayField;

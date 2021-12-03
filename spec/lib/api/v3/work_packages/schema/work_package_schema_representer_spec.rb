@@ -945,7 +945,7 @@ describe ::API::V3::WorkPackages::Schema::WorkPackageSchemaRepresenter do
       let(:attribute_groups) { [] }
 
       it 'is disabled' do
-        expect(OpenProject::Cache)
+        expect(ProyeksiApp::Cache)
           .not_to receive(:fetch)
 
         representer.to_json
@@ -975,7 +975,7 @@ describe ::API::V3::WorkPackages::Schema::WorkPackageSchemaRepresenter do
       end
 
       it 'is based on the representer\'s cache_key' do
-        expect(OpenProject::Cache)
+        expect(ProyeksiApp::Cache)
           .to receive(:fetch)
           .with(representer.json_cache_key)
           .and_call_original

@@ -148,7 +148,7 @@ describe 'API v3 Work package resource',
 
           it 'has a readonly error' do
             expect(response.body)
-              .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyIsReadOnly'.to_json)
+              .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyIsReadOnly'.to_json)
                     .at_path('errorIdentifier')
           end
         end
@@ -591,7 +591,7 @@ describe 'API v3 Work package resource',
 
           it 'has a readonly error' do
             expect(response.body)
-              .to be_json_eql('urn:openproject-org:api:v3:errors:PropertyIsReadOnly'.to_json)
+              .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:PropertyIsReadOnly'.to_json)
                     .at_path('errorIdentifier')
           end
         end

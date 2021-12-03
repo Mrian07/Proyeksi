@@ -61,7 +61,7 @@ You can change this in your account settings. Please find out more [here](../../
 
 ### Why are changes on parent work packages which are triggered by changes to child work packages not aggregated?
 
-OpenProject aggregates work package activities only if:
+ProyeksiApp aggregates work package activities only if:
 
 - They are within the defined time frame
 
@@ -106,7 +106,7 @@ There are two reasons for this: 1. Potentially, a lot of values are displayed in
 ### I have a parent work package with multiple children. In the work package list I don't see all of the children below the parent. Why? How can I change this?
 
 Please increase the number of displayed work packages per page [in the administration](../../../system-admin-guide/system-settings/general-settings/#general-system-settings). Then the probability of this phenomenon happening is lower. 
-This is a known behavior of OpenProject, but not trivial to solve. There's already a feature request for this [here](https://community.openproject.com/projects/openproject/work_packages/34925/activity).
+This is a known behavior of ProyeksiApp, but not trivial to solve. There's already a feature request for this [here](https://community.openproject.com/projects/openproject/work_packages/34925/activity).
 
 
 
@@ -120,7 +120,7 @@ Please navigate to *Administration ->Work packages ->Types*. The type that is at
 
 ### I added new work package types. Why can i not see them?
 
-Please make sure you [activated](../../projects/project-settings/work-package-types/) them in the project settings first. If you still can't see them (e.g. in the boards module) please upgrade OpenProject to the newest release.
+Please make sure you [activated](../../projects/project-settings/work-package-types/) them in the project settings first. If you still can't see them (e.g. in the boards module) please upgrade ProyeksiApp to the newest release.
 
 ### When I change the work package type of an existing work package, all attributes that are not part of the new work package type will be removed. What will happen to their values? Will the values be displayed again when I switch back to the original type?
 
@@ -135,7 +135,7 @@ Please add the new status to the workflow for all work packages you want to use 
 Yes, this is absolutely possible. To do this, you would first have to [create new statuses](../../../system-admin-guide/manage-work-packages/work-package-status/).
 In the second step you can then [assign them to workflows](../../../system-admin-guide/manage-work-packages/work-package-workflows/).
 
-### We like for each department to have their own custom "status" with different value options in OpenProject. How do we do this?
+### We like for each department to have their own custom "status" with different value options in ProyeksiApp. How do we do this?
 
 The status which can be selected by users (based on the workflow) is always determined based on the work package type and the role of the user. In order to use the same work package type (e.g. task) but display different status for each department, you would need to create a separate role for each department. You can then add the members of a department (ideally using a group) and assign them with the correct role. Please find the guide [here](../../../system-admin-guide/manage-work-packages/work-package-workflows/#edit-workflows).
 To work with different status, first create those status in *Administration ->Work packages ->Status*.

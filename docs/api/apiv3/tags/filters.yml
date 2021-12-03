@@ -1,6 +1,6 @@
 ---
 description: |-
-  Filter objects can be added to a number of endpoints in the OpenProject APIv3. With them, you can create powerful queries to endpoints to return the data that you want.
+  Filter objects can be added to a number of endpoints in the ProyeksiApp APIv3. With them, you can create powerful queries to endpoints to return the data that you want.
 
   They all share the following basic properties:
 

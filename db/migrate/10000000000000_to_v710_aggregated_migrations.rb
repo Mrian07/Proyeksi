@@ -98,7 +98,7 @@ class ToV710AggregatedMigrations < ActiveRecord::Migration[5.1]
   end
 
   def down
-    raise ActiveRecord::IrreversibleMigration, 'Use OpenProject v7.4 for the down migrations'
+    raise ActiveRecord::IrreversibleMigration, 'Use ProyeksiApp v7.4 for the down migrations'
   end
 
   private
@@ -127,7 +127,7 @@ class ToV710AggregatedMigrations < ActiveRecord::Migration[5.1]
   end
 
   def raise_on_incomplete_7_1_migrations
-    raise_on_incomplete_migrations(aggregated_versions_7_1, 'v7.4.0', 'OpenProject')
+    raise_on_incomplete_migrations(aggregated_versions_7_1, 'v7.4.0', 'ProyeksiApp')
   end
 
   def raise_on_incomplete_migrations(aggregated_versions, version_number, app_name)
@@ -143,7 +143,7 @@ class ToV710AggregatedMigrations < ActiveRecord::Migration[5.1]
         It appears you are migrating from an incompatible version of
         #{app_name}. Yourdatabase has only some migrations from #{app_name} <
         #{version_number} Please update your database to the schema of #{app_name}
-        #{version_number} and run the OpenProject migrations again. The following
+        #{version_number} and run the ProyeksiApp migrations again. The following
         migrations are missing: #{missing}
       MESSAGE
     end

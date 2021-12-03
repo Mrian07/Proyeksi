@@ -1,7 +1,7 @@
 class CustomStyle < ApplicationRecord
-  mount_uploader :logo, OpenProject::Configuration.file_uploader
-  mount_uploader :favicon, OpenProject::Configuration.file_uploader
-  mount_uploader :touch_icon, OpenProject::Configuration.file_uploader
+  mount_uploader :logo, ProyeksiApp::Configuration.file_uploader
+  mount_uploader :favicon, ProyeksiApp::Configuration.file_uploader
+  mount_uploader :touch_icon, ProyeksiApp::Configuration.file_uploader
 
   class << self
     def current

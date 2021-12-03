@@ -1,14 +1,14 @@
 ---
 sidebar_navigation:
   title: Translations
-description: Get an overview of how translations are being used in OpenProject, and how they end up in the frontend
+description: Get an overview of how translations are being used in ProyeksiApp, and how they end up in the frontend
 robots: index, follow
 keywords: translations, I18n, localization, locales, languages
 ---
 
 # Development concept: Translations
 
-OpenProject is currently being translated in over 40 languages. We use a cloud translation service called [Crowdin](https://crowdin.com/project/openproject) for allowing the community and professional translators to contribute translations to OpenProject.
+ProyeksiApp is currently being translated in over 40 languages. We use a cloud translation service called [Crowdin](https://crowdin.com/project/openproject) for allowing the community and professional translators to contribute translations to ProyeksiApp.
 
 Not all translations are fully translated, and they will fallback to english strings for the untranslated portions.
 
@@ -18,7 +18,7 @@ Not all translations are fully translated, and they will fallback to english str
 
 ## Key takeaways
 
-*Translations in OpenProject...*
+*Translations in ProyeksiApp...*
 
 - depend on the [I18n yaml-based Rails standard](https://guides.rubyonrails.org/i18n.html) for translation files
 - are split into backend and frontend strings
@@ -27,7 +27,7 @@ Not all translations are fully translated, and they will fallback to english str
 
 ## I18n definitions
 
-The OpenProject localizable strings are stored in the [Rails-standard I18n YAML files](https://guides.rubyonrails.org/i18n.html). The core only manages english source strings in `en.yml` and `js-en.yml` files. The can be found at `config/locales/en.yml` and `config/locales/js-en.yml`, respectively.
+The ProyeksiApp localizable strings are stored in the [Rails-standard I18n YAML files](https://guides.rubyonrails.org/i18n.html). The core only manages english source strings in `en.yml` and `js-en.yml` files. The can be found at `config/locales/en.yml` and `config/locales/js-en.yml`, respectively.
 
 Additionally, modules can define their own translations, such as `modules/budgets/config/locales/en.yml`. 
 

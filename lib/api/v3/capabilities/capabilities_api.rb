@@ -3,7 +3,7 @@
 module API
   module V3
     module Capabilities
-      class CapabilitiesAPI < ::API::OpenProjectAPI
+      class CapabilitiesAPI < ::API::ProyeksiAppAPI
         resources :capabilities do
           get &API::V3::Utilities::Endpoints::SqlIndex
                  .new(model: Capability)

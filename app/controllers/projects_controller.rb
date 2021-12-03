@@ -117,7 +117,7 @@ class ProjectsController < ApplicationController
     @query = ParamsToQueryService.new(Project, current_user).call(params)
 
     # Set default filter on status no filter is provided.
-    @query.where('active', '=', OpenProject::Database::DB_VALUE_TRUE) unless params[:filters]
+    @query.where('active', '=', ProyeksiApp::Database::DB_VALUE_TRUE) unless params[:filters]
 
     # Order lft if no order is provided.
     @query.order(lft: :asc) unless params[:sortBy]

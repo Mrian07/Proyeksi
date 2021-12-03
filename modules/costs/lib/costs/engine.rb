@@ -1,15 +1,15 @@
 
 
-require 'open_project/plugins'
+require 'proyeksi_app/plugins'
 
 module Costs
   class Engine < ::Rails::Engine
     engine_name :costs
 
-    include OpenProject::Plugins::ActsAsOpEngine
+    include ProyeksiApp::Plugins::ActsAsOpEngine
 
     register 'costs',
-             author_url: 'https://www.openproject.org',
+             author_url: 'https://www.proyeksiapp.org',
              bundled: true,
              settings: {
                default: { 'costs_currency' => 'EUR', 'costs_currency_format' => '%n %u' },

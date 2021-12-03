@@ -38,7 +38,7 @@ class SCM::CreateManagedRepositoryService < SCM::BaseRepositoryService
     @rejected = I18n.t('repositories.errors.filesystem_access_failed',
                        message: e.message)
     false
-  rescue OpenProject::SCM::Exceptions::SCMError => e
+  rescue ProyeksiApp::SCM::Exceptions::SCMError => e
     @rejected = e.message
     false
   end

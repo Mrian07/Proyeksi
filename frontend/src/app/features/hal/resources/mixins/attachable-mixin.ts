@@ -6,8 +6,8 @@ import { ToastService } from 'core-app/shared/components/toaster/toast.service';
 import { ConfigurationService } from 'core-app/core/config/configuration.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { APIV3Service } from 'core-app/core/apiv3/api-v3.service';
-import { OpenProjectDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
-import { OpenProjectFileUploadService, UploadFile } from 'core-app/core/file-upload/op-file-upload.service';
+import { ProyeksiAppDirectFileUploadService } from 'core-app/core/file-upload/op-direct-file-upload.service';
+import { ProyeksiAppFileUploadService, UploadFile } from 'core-app/core/file-upload/op-file-upload.service';
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 import { AttachmentCollectionResource } from 'core-app/features/hal/resources/attachment-collection-resource';
 import isNewResource from 'core-app/features/hal/helpers/is-new-resource';
@@ -22,9 +22,9 @@ export function Attachable<TBase extends Constructor<HalResource>>(Base:TBase) {
 
     private halNotification:HalResourceNotificationService;
 
-    private opFileUpload:OpenProjectFileUploadService;
+    private opFileUpload:ProyeksiAppFileUploadService;
 
-    private opDirectFileUpload:OpenProjectDirectFileUploadService;
+    private opDirectFileUpload:ProyeksiAppDirectFileUploadService;
 
     private pathHelper:PathHelperService;
 
@@ -191,10 +191,10 @@ export function Attachable<TBase extends Constructor<HalResource>>(Base:TBase) {
         this.halNotification = this.injector.get(HalResourceNotificationService);
       }
       if (!this.opFileUpload) {
-        this.opFileUpload = this.injector.get(OpenProjectFileUploadService);
+        this.opFileUpload = this.injector.get(ProyeksiAppFileUploadService);
       }
       if (!this.opDirectFileUpload) {
-        this.opDirectFileUpload = this.injector.get(OpenProjectDirectFileUploadService);
+        this.opDirectFileUpload = this.injector.get(ProyeksiAppDirectFileUploadService);
       }
       if (!this.config) {
         this.config = this.injector.get(ConfigurationService);

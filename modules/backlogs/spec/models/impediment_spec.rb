@@ -47,7 +47,7 @@ describe Impediment, type: :model do
 
   before(:each) do
     allow(Setting)
-      .to receive(:plugin_openproject_backlogs)
+      .to receive(:plugin_proyeksiapp_backlogs)
       .and_return({ 'points_burn_direction' => 'down',
                     'wiki_template' => '',
                     'card_spec' => 'Sattleford VM-5040',

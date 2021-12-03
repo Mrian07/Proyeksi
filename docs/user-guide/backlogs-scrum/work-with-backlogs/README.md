@@ -9,7 +9,7 @@ keywords: backlogs, scrum, agile, burndown
 
 # Working with Backlogs
 
-The starting point for effective work in Scrum teams is a well-maintained and prioritized product backlog as well as the creation of sprint backlogs. In OpenProject, you can easily record and specify requirements represented by user stories. Moreover, you can respond to inquiries and sort them by priority for implementation.
+The starting point for effective work in Scrum teams is a well-maintained and prioritized product backlog as well as the creation of sprint backlogs. In ProyeksiApp, you can easily record and specify requirements represented by user stories. Moreover, you can respond to inquiries and sort them by priority for implementation.
 
 Moreover, please note that the backlogs module is not available in the accessibility mode, since it uses drag&drop functionalities which are not accessible. If you use the accessibility mode you can however perform the same actions (like viewing and editing work packages such as user stories and epics) from the work package list view.
 
@@ -104,7 +104,7 @@ Moreover, you can adjust the start and end date of a backlog in the backlogs vie
 
 ## Burndown chart
 
-**Burndown charts** are a helpful tool to visualize a sprint’s progress. With OpenProject, you can generate sprint and task burndown charts automatically. As a precondition, the sprint’s start and end date must be entered in the title and the information on story points is well maintained.
+**Burndown charts** are a helpful tool to visualize a sprint’s progress. With ProyeksiApp, you can generate sprint and task burndown charts automatically. As a precondition, the sprint’s start and end date must be entered in the title and the information on story points is well maintained.
 
 ![User-guide-backlogs-burndown-chart](User-guide-backlogs-burndown-chart.png)
 
@@ -120,19 +120,19 @@ The remaining story points per sprint are displayed in the chart. Optionally, th
 
 ## Print story cards
 
-If you do not want to do without the real project pin board in your project management, OpenProject offers the option to print the user stories and tasks.
+If you do not want to do without the real project pin board in your project management, ProyeksiApp offers the option to print the user stories and tasks.
 
 In order to do so, select the **Export** option from the sprint drop-down menu in the backlogs view.
 
 ![User-guide-print-story-cards](User-guide-print-story-cards.png)
 
-Choose a story card format from the list that will open. The format selection can only be adjusted by a system admin in the *Administration* -> *Backlogs* and applies to all projects in OpenProject.
+Choose a story card format from the list that will open. The format selection can only be adjusted by a system admin in the *Administration* -> *Backlogs* and applies to all projects in ProyeksiApp.
 
 Now, a PDF file is created which displays one or several stories or tasks per page (listing the work packages of the selected sprint), depending on the selected settings.
 
 ## Sprint wiki
 
-OpenProject also allows you to create a wiki page associated with a sprint directly from the backlog. You can document sprint information, e.g. ratios, sprint meetings, retrospective, sprint planning or sprint review meetings.
+ProyeksiApp also allows you to create a wiki page associated with a sprint directly from the backlog. You can document sprint information, e.g. ratios, sprint meetings, retrospective, sprint planning or sprint review meetings.
 
 In order to do so, click on the arrow on the left of the respective Sprint title to open the drop-down menu. A click on **Wiki** will take you to the Wiki editing page.
 

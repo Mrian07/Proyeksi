@@ -12,7 +12,7 @@ class BacklogsSettingsController < ApplicationController
   def show; end
 
   def update
-    Setting["plugin_openproject_backlogs"] = update_settings
+    Setting["plugin_proyeksiapp_backlogs"] = update_settings
     flash[:notice] = I18n.t(:notice_successful_update)
 
     redirect_to action: :show

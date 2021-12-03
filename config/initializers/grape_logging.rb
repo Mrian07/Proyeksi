@@ -1,6 +1,6 @@
-OpenProject::Application.configure do
+ProyeksiApp::Application.configure do
   config.after_initialize do
-    ActiveSupport::Notifications.subscribe('openproject_grape_logger') do |_, _, _, _, payload|
+    ActiveSupport::Notifications.subscribe('proyeksiapp_grape_logger') do |_, _, _, _, payload|
       time = payload[:time]
       attributes = {
         duration: time[:total],
@@ -8,8 +8,8 @@ OpenProject::Application.configure do
         view: time[:view]
       }.merge(payload.except(:time))
 
-      extended = OpenProject::Logging.extend_payload!(attributes, {})
-      Rails.logger.info OpenProject::Logging.formatter.call(extended)
+      extended = ProyeksiApp::Logging.extend_payload!(attributes, {})
+      Rails.logger.info ProyeksiApp::Logging.formatter.call(extended)
     end
   end
 end

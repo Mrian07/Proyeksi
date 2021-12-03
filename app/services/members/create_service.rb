@@ -19,7 +19,7 @@ class Members::CreateService < ::BaseServices::Create
   protected
 
   def send_notification(member)
-    OpenProject::Notifications.send(OpenProject::Events::MEMBER_CREATED,
+    ProyeksiApp::Notifications.send(ProyeksiApp::Events::MEMBER_CREATED,
                                     member: member,
                                     message: params[:notification_message],
                                     send_notifications: params.fetch(:send_notifications, true))

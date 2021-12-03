@@ -5,13 +5,13 @@
 module API
   module Decorators
     class Formattable < Single
-      include OpenProject::TextFormatting
+      include ProyeksiApp::TextFormatting
 
       def initialize(model, plain: false, object: nil)
         @format = if plain
-                    OpenProject::TextFormatting::Formats.plain_format
+                    ProyeksiApp::TextFormatting::Formats.plain_format
                   else
-                    OpenProject::TextFormatting::Formats.rich_format
+                    ProyeksiApp::TextFormatting::Formats.rich_format
                   end
         @object = object
 

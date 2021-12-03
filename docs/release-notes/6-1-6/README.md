@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.6
+  title: ProyeksiApp 6.1.6
   sidebar_navigation:
       title: 6.1.6
   release_version: 6.1.6
@@ -7,7 +7,7 @@
 ---
 
 
-# OpenProject 6.1.6
+# ProyeksiApp 6.1.6
 
 The release contains an important security fix regarding session expiry.
 

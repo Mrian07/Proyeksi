@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.1.1
+  title: ProyeksiApp 4.1.1
   sidebar_navigation:
       title: 4.1.1
   release_version: 4.1.1
@@ -7,14 +7,14 @@
 ---
 
 
-# OpenProject 4.1.1
+# ProyeksiApp 4.1.1
 
-OpenProject 4.1.1 has been released which includes a bug fix for the
+ProyeksiApp 4.1.1 has been released which includes a bug fix for the
 roadmap and a design fix.
 
-Due to a wrong link, an internal error was displayed in OpenProject
+Due to a wrong link, an internal error was displayed in ProyeksiApp
 4.1.0 when trying to edit a version from the roadmap screen. This has
-been fixed with OpenProject 4.1.1
+been fixed with ProyeksiApp 4.1.1
 ([\#20094](https://community.openproject.org/work_packages/20094)).
 
 Additionally, the width for the column selection screen on the work

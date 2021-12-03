@@ -3,7 +3,7 @@
 module API
   module V3
     module Versions
-      class AvailableProjectsAPI < ::API::OpenProjectAPI
+      class AvailableProjectsAPI < ::API::ProyeksiAppAPI
         after_validation do
           authorize :manage_versions, global: true
         end

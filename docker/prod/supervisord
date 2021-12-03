@@ -7,7 +7,7 @@ indent() {
 	sed '/^-----> /! s/^/       /'
 }
 
-echo "-----> Starting the all-in-one OpenProject setup at $BASH_SOURCE..."
+echo "-----> Starting the all-in-one ProyeksiApp setup at $BASH_SOURCE..."
 
 if [ "$PGDATA" == "" ]; then
 	echo "No PGDATA environment variable defined. Aborting." | indent

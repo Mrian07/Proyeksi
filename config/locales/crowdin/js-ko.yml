@@ -21,7 +21,7 @@ ko:
         새 백업은 이전의 것을 덮어쓸 것입니다. 일일 백업 요청 횟수는 제한되어 있습니다.
       last_backup: 최근 백업
       last_backup_from: 최근 백업 일자
-      title: OpenProject 백업
+      title: ProyeksiApp 백업
       options: 옵션
       include_attachments: 첨부파일 포함
       download_backup: 백업 다운로드
@@ -184,7 +184,7 @@ ko:
             label_maximum_users: "최대 활성 사용자"
             label_starts_at: "시작:"
             label_expires_at: "에서 만료됨"
-            receive_newsletter: OpenProject <a target="_blank" href="%{link}">뉴스레터</a>를 받아 보겠습니다.
+            receive_newsletter: ProyeksiApp <a target="_blank" href="%{link}">뉴스레터</a>를 받아 보겠습니다.
             taken_domain: 도메인당 하나의 활성 평가판만 있어야 합니다.
             taken_email: 각 사용자는 하나의 평가판만 생성할 수 있습니다.
           email_not_received: "이메일을 받지 못하셨나요? 오른쪽의 링크로 이메일을 재전송할 수 있습니다. "
@@ -198,7 +198,7 @@ ko:
           status_confirmed: "확인됨"
           status_waiting: "이메일 전송됨 - 인증을 기다리는 중"
           test_ee: "무료로 Enterprise Edition 14일 테스트"
-          quick_overview: "OpenProject Enterprise Edition으로 프로젝트 관리 및 팀 공동 작업에 대한 간략한 개요를 가져올 수 있습니다."
+          quick_overview: "ProyeksiApp Enterprise Edition으로 프로젝트 관리 및 팀 공동 작업에 대한 간략한 개요를 가져올 수 있습니다."
         upsale:
           become_hero: "영웅이 되세요!"
           benefits:
@@ -210,14 +210,14 @@ ko:
             premium_features: "프리미엄 기능"
             premium_features_text: "민첩한 보드, 사용자 지정 테마 및 로고, 그래프, 인텔리전트 워크플로와 사용자 지정 작업, 작업 패키지 첨부 파일 및 다중 선택 사용자 지정 필드에 대한 전체 텍스트 검색."
             professional_support: "전문적 지원"
-            professional_support_text: "비즈니스 크리티컬 환경에서의 OpenProject 실행에 대한 전문 지식을 갖춘 선임 지원 엔지니어가 신뢰할 수 있는 뛰어난 지원을 제공합니다."
+            professional_support_text: "비즈니스 크리티컬 환경에서의 ProyeksiApp 실행에 대한 전문 지식을 갖춘 선임 지원 엔지니어가 신뢰할 수 있는 뛰어난 지원을 제공합니다."
           button_start_trial: "무료 평가판 시작"
           button_book_now: "지금 예약"
           confidence: >
             오픈 소스와 오픈 마인드로, 테스트를 거치고 지원이 제공되는 엔터프라이즈급 프로젝트 관리 소프트웨어에 대한 신뢰를 전해드립니다.
           link_quote: "견적 받기"
           text: >
-            OpenProject Enterprise Edition은 Community Edition 위에서 빌드됩니다. OpenProject로 비즈니스 크리티컬 프로젝트를 관리하는 사용자가 10명이 넘는 조직을 주로 타겟으로 하는 프리미엄 기능과 전문 지원이 제공됩니다.
+            ProyeksiApp Enterprise Edition은 Community Edition 위에서 빌드됩니다. ProyeksiApp로 비즈니스 크리티컬 프로젝트를 관리하는 사용자가 10명이 넘는 조직을 주로 타겟으로 하는 프리미엄 기능과 전문 지원이 제공됩니다.
           unlimited: "무제한"
           you_contribute: "개발자들도 청구서를 지불해야 합니다. Enterprise Edition으로 이 오픈 소스 커뮤니티의 노력에 여러분이 실질적으로 기여할 수 있습니다."
     custom_actions:
@@ -275,7 +275,7 @@ ko:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                이 릴리스에는 다양한 새로운 기능과 개선 사항이 포함되어 있습니다: <br> <ul class="%{list_styling_class}"> <li>알림 센터: 수신하는 메일 수를 줄입니다. 대신 센터 한 곳에서 모든 관련 알림을 찾고 조치를 취할 수 있습니다.</li> <li>이제 업로드된 모든 IFC 파일도 다운로드할 수 있습니다.</li> <li>IFC 업로드 및 처리가 더욱 빨라졌으며 개선된 오류 메시지를 받게 됩니다.</li> <li><a href="https://github.com/opf/openproject-revit-add-in">OpenProject Revit 추가 기능</a>에서 많은 버그가 수정되었습니다.</li> </ul>
+                이 릴리스에는 다양한 새로운 기능과 개선 사항이 포함되어 있습니다: <br> <ul class="%{list_styling_class}"> <li>알림 센터: 수신하는 메일 수를 줄입니다. 대신 센터 한 곳에서 모든 관련 알림을 찾고 조치를 취할 수 있습니다.</li> <li>이제 업로드된 모든 IFC 파일도 다운로드할 수 있습니다.</li> <li>IFC 업로드 및 처리가 더욱 빨라졌으며 개선된 오류 메시지를 받게 됩니다.</li> <li><a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit 추가 기능</a>에서 많은 버그가 수정되었습니다.</li> </ul>
     label_activate: "활성화"
     label_add_column_after: "다음 뒤에 열 추가"
     label_add_column_before: "다음 앞에 열 추가"
@@ -464,7 +464,7 @@ ko:
         next: '다음'
         got_it: '확인'
       steps:
-        help_menu: '도움말(?) 메뉴에서 <b>기타 도움말 리소스</b>가 제공됩니다. 여기에서 사용자 가이드와 유용한 사용 방법 동영상 등을 찾을 수 있습니다. <br> OpenProject로 즐겁게 작업하세요!'
+        help_menu: '도움말(?) 메뉴에서 <b>기타 도움말 리소스</b>가 제공됩니다. 여기에서 사용자 가이드와 유용한 사용 방법 동영상 등을 찾을 수 있습니다. <br> ProyeksiApp로 즐겁게 작업하세요!'
         members: '프로젝트에 참여할 새로운 <b>멤버</b>를 초대하세요.'
         project_selection: '준비된 데모 프로젝트 중 하나를 클릭하세요. 데모 데이터는 현재 영어로만 제공됩니다. <br> 일반 <b>데모 프로젝트</b>는 클래식 프로젝트 관리에 최적이지만, 애자일 프로젝트 관리에는 <b>스크럼 프로젝트</b>가 더 적합합니다.'
         quick_add_button: '헤더 탐색에서 더하기(+) 아이콘을 클릭하여 <b>새 프로젝트를 생성</b>하거나 <b>동료를 초대</b>하세요.'

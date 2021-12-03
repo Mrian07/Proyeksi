@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.1.2
+  title: ProyeksiApp 4.1.2
   sidebar_navigation:
       title: 4.1.2
   release_version: 4.1.2
@@ -7,15 +7,15 @@
 ---
 
 
-# OpenProject 4.1.2
+# ProyeksiApp 4.1.2
 
-OpenProject 4.1.2 has been released. The new release contains
-several bug fixes for the OpenProject core and plugins as well as
+ProyeksiApp 4.1.2 has been released. The new release contains
+several bug fixes for the ProyeksiApp core and plugins as well as
 additional improvements.
 
 We strongly recommend to upgrade to the current version.
 
-**OpenProject core:**
+**ProyeksiApp core:**
 
   - The timezone in the work package view was incorrect. This has been
     fixed
@@ -23,14 +23,14 @@ We strongly recommend to upgrade to the current version.
     Thanks to [Javier
     Martínez](https://community.openproject.org/users/39048) for
     reporting this error.
-  - For subfolder installations of OpenProject, the assignee and
+  - For subfolder installations of ProyeksiApp, the assignee and
     responsible could not be edited. This has been fixed
     ([\#20311](https://community.openproject.org/work_packages/20311)).
   - Due to an error, the quick reference for syntax was displayed when
     editing text fields. This has been resolved with
     [\#20314](https://community.openproject.org/work_packages/20314).
   - An error prevented the deletion of global work package queries. This
-    is working properly again with OpenProject 4.1.2
+    is working properly again with ProyeksiApp 4.1.2
     ([\#20316](https://community.openproject.org/work_packages/20316)).
   - Additional a number of design errors have been fixed
     ([\#20305](https://community.openproject.org/work_packages/20305), [\#20306](https://community.openproject.org/work_packages/20306),
@@ -44,7 +44,7 @@ have been updated
 
 **Backlogs plugin:**
 
-  - The burndown chart is displayed properly again with OpenProject
+  - The burndown chart is displayed properly again with ProyeksiApp
     4.1.1
     ([\#20312](https://community.openproject.org/work_packages/20312)).
 
@@ -56,7 +56,7 @@ have been updated
 
 **Meetings plugin:**
 
-  - In OpenProject 4.1.1 it was not possible to delete meetings. This
+  - In ProyeksiApp 4.1.1 it was not possible to delete meetings. This
     feature has been fixed
     ([\#20149](https://community.openproject.org/work_packages/20149)).
 

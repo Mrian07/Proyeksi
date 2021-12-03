@@ -1,16 +1,16 @@
 ---
-title: OpenProject 10.3.0
+title: ProyeksiApp 10.3.0
 sidebar_navigation:
     title: 10.3.0
 release_version: 10.3.0
 release_date: 2019-12-17
 ---
 
-# OpenProject 10.3.0
+# ProyeksiApp 10.3.0
 
-The new release OpenProject 10.3 adds improved mobile support to OpenProject. Additionally, you can now use custom fields with right-to-left support for languages such as Arabic.
+The new release ProyeksiApp 10.3 adds improved mobile support to ProyeksiApp. Additionally, you can now use custom fields with right-to-left support for languages such as Arabic.
 
-Read below to get a detailed overview of what is new in OpenProject 10.3.
+Read below to get a detailed overview of what is new in ProyeksiApp 10.3.
 
 ## Improved mobile support
 
@@ -55,18 +55,18 @@ You can use those custom fields to properly display text with a right-to-left or
 
 ## Support
 
-You can find useful information in the [OpenProject help section](../../../) or you can post your questions in the [OpenProject Forum](https://community.openproject.org/projects/openproject/boards).
+You can find useful information in the [ProyeksiApp help section](../../../) or you can post your questions in the [ProyeksiApp Forum](https://community.openproject.org/projects/openproject/boards).
 
-### Upgrading your installation to OpenProject 10.3.
+### Upgrading your installation to ProyeksiApp 10.3.
 
-If you’re using the OpenProject Cloud Edition, you will be automatically updated to the latest version of OpenProject 10.1 in the next days. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
+If you’re using the ProyeksiApp Cloud Edition, you will be automatically updated to the latest version of ProyeksiApp 10.1 in the next days. For your local installations, there are some minor changes you need to do in order to perform the upgrade.
 
 [Please visit our upgrade guides for more information](../../installation-and-operations/operation/upgrading/).
 
 ## Credits
 
-Special thanks go to all OpenProject contributors without whom this release would not have been possible:
+Special thanks go to all ProyeksiApp contributors without whom this release would not have been possible:
 
-- All the developers, designers, project managers who have contributed to OpenProject.
+- All the developers, designers, project managers who have contributed to ProyeksiApp.
 - Every dedicated user who has [reported bugs](../../development/report-a-bug/) and supported the community by asking and answering questions in the [forum](https://community.openproject.org/projects/openproject/boards).
 - All the engaged users who provided translations on [CrowdIn](https://crowdin.com/projects/opf).

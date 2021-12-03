@@ -28,8 +28,8 @@ el:
         main-menu-hover-font-color: "Γραμματοσειρά κύριου μενού κατά το πέρασμα του ποντικιού"
         main-menu-border-color: "Περίγραμμα κύριου μενού"
       custom_colors: "Προσαρμοσμένα χρώματα"
-      customize: "Προσαρμόστε την εγκατάσταση του OpenProject με το δικό σας λογότυπο. Σημείωση: Το λογότυπο αυτό θα είναι δημόσια προσβάσιμο."
-      enterprise_notice: "Σαν ένα ειδικό \"Ευχαριστώ!\" για την οικονομική τους συμβολή στην ανάπτυξη του OpenProject, αυτό το μικροσκοπικό χαρακτηριστικό είναι διαθέσιμο μόνο για τους συνδρομητές υποστήριξης Enterprise εκδοχής."
+      customize: "Προσαρμόστε την εγκατάσταση του ProyeksiApp με το δικό σας λογότυπο. Σημείωση: Το λογότυπο αυτό θα είναι δημόσια προσβάσιμο."
+      enterprise_notice: "Σαν ένα ειδικό \"Ευχαριστώ!\" για την οικονομική τους συμβολή στην ανάπτυξη του ProyeksiApp, αυτό το μικροσκοπικό χαρακτηριστικό είναι διαθέσιμο μόνο για τους συνδρομητές υποστήριξης Enterprise εκδοχής."
       manage_colors: "Επεξεργαστείτε τις επιλογές επιλογής χρώματος"
       instructions:
         alternative-color: "Ισχυρός τόνος χρώματος, το οποίο συνήθως χρησιμοποιείται για το πιο σημαντικό κουμπί σε μια οθόνη."
@@ -81,33 +81,33 @@ el:
       name: Αυθαίρετο όνομα της σύνδεσης LDAP
       host: Όνομα εξυπηρετητή LDAP ή διεύθυνση IP
       login_map: Το κλειδί χαρακτηριστικού στο LDAP που χρησιμοποιείται για να αναγνωριστεί η μοναδική σύνδεση χρήστη. Συνήθως, αυτό θα είναι το `uid` ή το `samAccountName`.
-      generic_map: Το κλειδί χαρακτηριστικού στο LDAP είναι χαρτογραφημένο στο χαρακτηριστικό του OpenProject `%{attribute}`
-      admin_map_html: "Προαιρετικό: Το κλειδί χαρακτηριστικού στο LDAP που <strong>αν υπάρχει</strong> επισημαίνει τον χρήστη OpenProject ως διαχειριστή. Αφήστε το κενό αν αμφιβάλλετε."
+      generic_map: Το κλειδί χαρακτηριστικού στο LDAP είναι χαρτογραφημένο στο χαρακτηριστικό του ProyeksiApp `%{attribute}`
+      admin_map_html: "Προαιρετικό: Το κλειδί χαρακτηριστικού στο LDAP που <strong>αν υπάρχει</strong> επισημαίνει τον χρήστη ProyeksiApp ως διαχειριστή. Αφήστε το κενό αν αμφιβάλλετε."
       system_user_dn_html: |
         Εισάγετε το DN του χρήστη που χρησιμοποιείται για πρόσβαση μόνο με δικαιώματα ανάγνωσης.
         <br/>
         Παράδειγμα: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Εισάγετε τον δεσμευτικό κωδικό πρόσβασης του χρήστη συστήματος
       base_dn: |
-        Εισάγετε το Base DN του υποδέντρου στο LDAP που θέλετε το OpenProject να αναζητήσει χρήστες και ομάδες.
-        Το OpenProject θα φιλτράρει τα δοθέντα ονόματα χρηστών μόνο σε αυτό το υποδέντρο.
+        Εισάγετε το Base DN του υποδέντρου στο LDAP που θέλετε το ProyeksiApp να αναζητήσει χρήστες και ομάδες.
+        Το ProyeksiApp θα φιλτράρει τα δοθέντα ονόματα χρηστών μόνο σε αυτό το υποδέντρο.
         Παράδειγμα: ou=users,dc=example,dc=com
       filter_string: |
-        Προσθέστε ένα προαιρετικό φίλτρο RFC4515 για εφαρμογή στα αποτελέσματα που επιστρέφονται για χρήστες που φιλτράρονται στο LDAP. Αυτό μπορεί να χρησιμοποιηθεί για τον περιορισμό του συνόλου των χρηστών που βρίσκονται στο OpenProject για έλεγχο ταυτότητας και συγχρονισμό ομάδας.
+        Προσθέστε ένα προαιρετικό φίλτρο RFC4515 για εφαρμογή στα αποτελέσματα που επιστρέφονται για χρήστες που φιλτράρονται στο LDAP. Αυτό μπορεί να χρησιμοποιηθεί για τον περιορισμό του συνόλου των χρηστών που βρίσκονται στο ProyeksiApp για έλεγχο ταυτότητας και συγχρονισμό ομάδας.
       filter_string_concat: |
-        Το OpenProject θα φιλτράρει πάντα το χαρακτηριστικό σύνδεσης που παρέχεται από τον χρήστη για να αναγνωρίσει την εγγραφή. Εάν παρέχετε ένα φίλτρο εδώ, θα συνδυαστεί με ένα AND. Από προεπιλογή, ένα catch-all (objectClass = *) θα χρησιμοποιηθεί ως φίλτρο.
+        Το ProyeksiApp θα φιλτράρει πάντα το χαρακτηριστικό σύνδεσης που παρέχεται από τον χρήστη για να αναγνωρίσει την εγγραφή. Εάν παρέχετε ένα φίλτρο εδώ, θα συνδυαστεί με ένα AND. Από προεπιλογή, ένα catch-all (objectClass = *) θα χρησιμοποιηθεί ως φίλτρο.
       onthefly_register: |
-        Αν επιλέξετε αυτό το κουτί, το OpenProject θα δημιουργεί αυτόματα καινούργιους χρήστες από τις καταχωρήσεις του LDAP όταν ταυτοποιούνται για πρώτη φορά στο OpenProject.
-        Αφήστε το μη επιλεγμένο για να επιτρέψετε μόνο στους υπάρχοντες λογαριασμούς στο OpenProject να ταυτοποιηθούν μέσω LDAP!
+        Αν επιλέξετε αυτό το κουτί, το ProyeksiApp θα δημιουργεί αυτόματα καινούργιους χρήστες από τις καταχωρήσεις του LDAP όταν ταυτοποιούνται για πρώτη φορά στο ProyeksiApp.
+        Αφήστε το μη επιλεγμένο για να επιτρέψετε μόνο στους υπάρχοντες λογαριασμούς στο ProyeksiApp να ταυτοποιηθούν μέσω LDAP!
     connection_encryption: 'Κρυπτογράφηση σύνδεσης'
     system_account: 'Λογαριασμός συστήματος'
     system_account_legend: |
-      Το OpenProject απαιτεί πρόσβαση ανάγνωσης-μόνο μέσω ενός λογαριασμού συστήματος για να αναζητά χρήστες και ομάδες στο LDAP δέντρο σας.
+      Το ProyeksiApp απαιτεί πρόσβαση ανάγνωσης-μόνο μέσω ενός λογαριασμού συστήματος για να αναζητά χρήστες και ομάδες στο LDAP δέντρο σας.
       Παρακαλούμε προσδιορίστε τα διαπιστευτήρια δέσμευσης για αυτόν τον χρήστη συστήματος στην παρακάτω ενότητα.
     ldap_details: 'Λεπτομέρειες LDAP'
     user_settings: 'Χαρτογράφηση χαρακτηριστικού'
     user_settings_legend: |
-      Τα ακόλουθα πεδία σχετίζονται με το πως οι χρήστες δημιουργούνται στο OpenProject από τις καταχωρήσεις LDAP και ποια χαρακτηριστικά LDAP χρησιμοποιούνται για να ορίσουν τα χαρακτηριστικά ενός χρήστη OpenProject (χαρτογράφηση χαρακτηριστικού).
+      Τα ακόλουθα πεδία σχετίζονται με το πως οι χρήστες δημιουργούνται στο ProyeksiApp από τις καταχωρήσεις LDAP και ποια χαρακτηριστικά LDAP χρησιμοποιούνται για να ορίσουν τα χαρακτηριστικά ενός χρήστη ProyeksiApp (χαρτογράφηση χαρακτηριστικού).
     tls_mode:
       plain: 'κανένα'
       simple_tls: 'απλό_tls'
@@ -518,7 +518,7 @@ el:
         confirmation: "δεν ταιριάζει με %{attribute}."
         could_not_be_copied: "%{dependency} δεν μπόρεσε να αντιγραφεί (πλήρως)."
         does_not_exist: "δεν υπάρχει."
-        error_enterprise_only: "είναι διαθέσιμο μόνο στην Έκδοση για Επιχειρήσεις του OpenProject"
+        error_enterprise_only: "είναι διαθέσιμο μόνο στην Έκδοση για Επιχειρήσεις του ProyeksiApp"
         error_unauthorized: "δεν είναι δυνατή η πρόσβαση."
         error_readonly: "επιχειρήθηκε να εγγραφεί αλλά δεν ήταν εγγράψιμο."
         email: "is not a valid email address."
@@ -865,7 +865,7 @@ el:
       heading_reset: "Επαναφορά token αντιγράφου ασφαλείας"
       heading_create: "Δημιουργία token αντιγράφου ασφαλείας"
       implications: >
-        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this OpenProject installation. This includes the data of all other users.
+        Enabling backups will allow any user with the required permissions and this backup token to download a backup containing all data of this ProyeksiApp installation. This includes the data of all other users.
       info: >
         You will need to generate a backup token to be able to create a backup. Each time you want to request a backup you will have to provide this token. You can delete the backup token to disable backups for this user.
       verification: >
@@ -1185,7 +1185,7 @@ el:
   error_can_not_unarchive_project: "Αυτό το έργο δεν μπορεί να αρχειοθετηθεί: %{errors}"
   error_check_user_and_role: "Παρακαλούμε επιλέξτε ένα χρήστη και ένα ρόλο."
   error_code: "Σφάλμα %{code}"
-  error_cookie_missing: 'Τα cookie του OpenProject λείπουν. Παρακαλούμε σιγουρευτείτε ότι τα cookies είναι ενεργοποιημένα, καθώς αυτή η εφαρμογή δεν θα μπορεί να λειτουργήσει σωστά χωρίς αυτά.'
+  error_cookie_missing: 'Τα cookie του ProyeksiApp λείπουν. Παρακαλούμε σιγουρευτείτε ότι τα cookies είναι ενεργοποιημένα, καθώς αυτή η εφαρμογή δεν θα μπορεί να λειτουργήσει σωστά χωρίς αυτά.'
   error_custom_option_not_found: "Η επιλογή δεν υπάρχει."
   error_enterprise_activation_user_limit: "Ο λογαριασμός σας δεν ήταν δυνατό να ενεργοποιηθεί (επετεύχθη το όριο χρηστών). Παρακαλούμε επικοινωνήστε με τον διαχειριστή σας για να αποκτήσετε πρόσβαση."
   error_enterprise_token_invalid_domain: "Η έκδοση Enterprise δεν είναι ενεργή. Ο τομέας του διακριτικού Enterprise (%{actual}) δεν ταιριάζει με το όνομα κεντρικού υπολογιστή του συστήματος (%{expected})."
@@ -1199,7 +1199,7 @@ el:
   error_work_package_done_ratios_not_updated: "Η αναλογίες ολοκληρωμένων πακέτων εργασίας δεν έχουν ενημερωθεί."
   error_work_package_not_found_in_project: "Το πακέτο εργασίας δεν βρέθηκε ή δεν ανοίκει σε αυτό το έργο"
   error_must_be_project_member: "πρέπει να είναι μέλος έργου"
-  error_migrations_are_pending: "Η εγκατάσταση OpenProject σας έχει μεταφορές βάσης δεδομένων που εκκρεμούν. Πιθανότατα δεν τρέξατε τις μεταφορές κατά τη διάρκεια της προηγούμενης αναβάθμιση. Παρακαλούμε ελέγξτε τον οδηγό αναβάθμισης για να αναβαθμίσετε την εγκατάσταση σας σωστά."
+  error_migrations_are_pending: "Η εγκατάσταση ProyeksiApp σας έχει μεταφορές βάσης δεδομένων που εκκρεμούν. Πιθανότατα δεν τρέξατε τις μεταφορές κατά τη διάρκεια της προηγούμενης αναβάθμιση. Παρακαλούμε ελέγξτε τον οδηγό αναβάθμισης για να αναβαθμίσετε την εγκατάσταση σας σωστά."
   error_migrations_visit_upgrade_guides: "Παρακαλούμε επισκεφθείτε την τεκμηρίωση οδηγού αναβάθμισης"
   error_no_default_work_package_status: "Δεν έχει οριστεί η προεπιλογή κατάστασης πακέτων εργασίας. Παρακαλώ ελέγξτε τις ρυθμίσεις σας (Μεταβείτε στην \"Διαχείριση -> Κατάσταση Πακέτων Εργασίας\")."
   error_no_type_in_project: "Δεν υπάρχει τύπος που σχετίζεται με αυτό το έργο. Παρακαλώ ελέγξτε τις Ρυθμίσεις του Έργου."
@@ -1273,7 +1273,7 @@ el:
       no_visible_projects: "Δεν υπάρχουν ορατά έργα σε αυτό το στιγμιότυπο της εφαρμογής."
       users: "Νεότεροι εγγεγραμμένοι χρήστες αυτού του στιγμιότυπου της εφαρμογής."
     blocks:
-      community: "Κοινότητα OpenProject"
+      community: "Κοινότητα ProyeksiApp"
       upsale:
         title: "Αναβαθμίστε σε Έκδοση για Επιχειρήσεις"
         more_info: "Περισσότερες πληροφορίες"
@@ -1284,7 +1284,7 @@ el:
       faq: "Συχνές Ερωτήσεις"
       glossary: "Γλωσσάριο"
       shortcuts: "Συντομεύσεις"
-      blog: "OpenProject blog"
+      blog: "ProyeksiApp blog"
       forums: "Φόρουμ κοινότητας"
       newsletter: "Ειδοποιήσεις ασφάλεια / Ενημερωτικό δελτίο"
   image_conversion:
@@ -1325,9 +1325,9 @@ el:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1336,7 +1336,7 @@ el:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Νέα'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1649,7 +1649,7 @@ el:
   label_open_menu: "Άνοιγμα μενού"
   label_open_work_packages: "ανοιχτό"
   label_open_work_packages_plural: "ανοιχτό"
-  label_openproject_website: "Ιστοσελίδα OpenProject"
+  label_openproject_website: "Ιστοσελίδα ProyeksiApp"
   label_optional_description: "Περιγραφή"
   label_options: "Επιλογές"
   label_other: "Άλλο"
@@ -1949,17 +1949,17 @@ el:
   mail_body_backup_token_reset_user_info: Your backup token has been reset.
   mail_body_backup_token_info: The previous token is no longer valid.
   mail_body_backup_waiting_period: The new token will be enabled in %{hours} hours.
-  mail_body_backup_token_warning: If this wasn't you, login to OpenProject immediately and reset it again.
+  mail_body_backup_token_warning: If this wasn't you, login to ProyeksiApp immediately and reset it again.
   mail_body_lost_password: "Για να αλλάξετε τον κωδικό πρόσβασης, πατήστε τον ακόλουθο σύνδεσμο:"
-  mail_body_register: "Καλώς ήρθατε στο OpenProject. Παρακαλώ ενεργοποιήστε το λογαριασμό σας κάνοντας κλικ σε αυτόν τον σύνδεσμο:"
+  mail_body_register: "Καλώς ήρθατε στο ProyeksiApp. Παρακαλώ ενεργοποιήστε το λογαριασμό σας κάνοντας κλικ σε αυτόν τον σύνδεσμο:"
   mail_body_register_header_title: "Email πρόσκλησης μέλους του έργου"
   mail_body_register_user: "Αγαπητέ/ή %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Η ομάδα OpenProject σας"
+  mail_body_register_closing: "Η ομάδα ProyeksiApp σας"
   mail_body_register_ending: "Μείνετε συνδεδεμένοι! Με εκτίμηση,"
   mail_body_reminder: "%{count} πακέτο(τα) εργασίας που έχουν ανατεθεί σε εσάς έχουν προθεσμία στις επόμενες %{days} ημέρες:"
   mail_body_group_reminder: "%{count} πακέτα εργασίας που έχουν ανατεθεί στην ομάδα \"%{group}\" έχουν προθεσμία στις επόμενες %{days} ημέρες:"
@@ -1998,13 +1998,13 @@ el:
   mail_user_activation_limit_reached:
     subject: Επετεύχθη το όριο ενεργοποίησης χρηστών
     message: |
-      Ένας νέο χρήστης (%{email}) προσπάθησε να δημιουργήσει λογαριασμό σε ένα περιβάλλον OpenProject που διαχειρίζεστε (%{host}). Ο χρήστης δεν μπόρεσε να ενεργοποιήσει τον λογαριασμό του καθώς το όριο των χρηστών έχει επιτευχθεί.
+      Ένας νέο χρήστης (%{email}) προσπάθησε να δημιουργήσει λογαριασμό σε ένα περιβάλλον ProyeksiApp που διαχειρίζεστε (%{host}). Ο χρήστης δεν μπόρεσε να ενεργοποιήσει τον λογαριασμό του καθώς το όριο των χρηστών έχει επιτευχθεί.
     steps:
       label: "Για να επιτρέψετε στο χρήστη να συνδεθεί μπορείτε είτε να: "
       a: "Αναβαθμίστε το σχέδιο πληρωμής σας ([εδώ](upgrade_url))" #here turned into a link
       b: "Κλειδώστε ή διαγράψτε έναν υπάρχων χρήστη ([εδώ](users_url))" #here turned into a link
   more_actions: "Περισσότερες λειτουργίες"
-  noscript_description: "Πρέπει να ενεργοποιήσετε την JavaScript για να χρησιμοποιήσετε το OpenProject!"
+  noscript_description: "Πρέπει να ενεργοποιήσετε την JavaScript για να χρησιμοποιήσετε το ProyeksiApp!"
   noscript_heading: "Η JavaScript είναι απενεργοποιημένη"
   noscript_learn_more: "Μάθετε περισσότερα"
   notice_accessibility_mode: Η λειτουργία προσβασιμότητας έχει ενεργοποιηθεί για τις [ρυθμίσεις λογαριασμού](url).
@@ -2068,7 +2068,7 @@ el:
   notice_wont_delete_auth_source: Η τρόπος ταυτοποίησης δεν μπορεί να διαγραφεί όσο υπάρχουν ακόμα χρήστες που το χρησιμοποιούν.
   notice_project_cannot_update_custom_fields: "Δεν μπορείτε να ενημερώσετε τα διαθέσιμα προσαρμοσμένα πεδία του έργου. Το έργο δεν είναι έγκυρο: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Αυτή η σελίδα δημιουργήθηκε αυτόματα κατά την διάρκεια της ενημέρωσης του OpenProject. Περιέχει όλα τα συνημμένα που σχετίζονταν προηγουμένως με το %{container_type} "%{container_name}".
+    Αυτή η σελίδα δημιουργήθηκε αυτόματα κατά την διάρκεια της ενημέρωσης του ProyeksiApp. Περιέχει όλα τα συνημμένα που σχετίζονταν προηγουμένως με το %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2091,9 +2091,9 @@ el:
           tb: "TB"
   onboarding:
     heading_getting_started: "Λάβετε μια επισκόπηση"
-    text_getting_started_description: "Λάβετε μια γρήγορη επισκόπηση της διαχείρισης έργων και της ομαδικής συνεργασίας με το OpenProject."
+    text_getting_started_description: "Λάβετε μια γρήγορη επισκόπηση της διαχείρισης έργων και της ομαδικής συνεργασίας με το ProyeksiApp."
     text_show_again: "Μπορείτε να επανεκκινήσετε αυτό το βίντεο από το μενού βοήθειας"
-    welcome: "Καλώς ορίσατε στο OpenProject"
+    welcome: "Καλώς ορίσατε στο ProyeksiApp"
     select_language: "Παρακαλούμε επιλέξτε την γλώσσα σας"
   permission_add_work_package_notes: "Προσθήκη σημειώσεων"
   permission_add_work_packages: "Προσθήκη πακέτων εργασίας"
@@ -2152,7 +2152,7 @@ el:
   permission_select_project_modules: "Επιλογή ενοτήτων έργου"
   permission_manage_types: "Επιλέξτε τύπους"
   permission_view_calendar: "Προβολή ημερολογίου"
-  permission_view_changesets: "Προβολή αποθετηρίου των αναθεωρήσεων στο OpenProject"
+  permission_view_changesets: "Προβολή αποθετηρίου των αναθεωρήσεων στο ProyeksiApp"
   permission_view_commit_author_statistics: "Εμφάνιση στατιστικών συγγραφέων δέσμευσης"
   permission_view_work_package_watchers: "Προβολή λίστας παρατηρητών"
   permission_view_work_packages: "Εμφάνιση πακέτων εργασίας"
@@ -2234,7 +2234,7 @@ el:
     destroy:
       confirmation: "Αν συνεχίσετε, θα διαγραφεί μόνιμα το αποθετήριο που διαχειρίζεστε."
       info: "Η διαγραφή του αποθετηρίου είναι μια μη αναστρέψιμη ενέργεια."
-      info_not_managed: "Σημείωση: Αυτό ΔΕΝ θα διαγράψει τα περιεχόμενα αυτού του αποθετηρίου, καθώς δεν το διαχειρίζεται το OpenProject."
+      info_not_managed: "Σημείωση: Αυτό ΔΕΝ θα διαγράψει τα περιεχόμενα αυτού του αποθετηρίου, καθώς δεν το διαχειρίζεται το ProyeksiApp."
       managed_path_note: "Ο ακόλουθος κατάλογος θα διαγραφεί: %{path}"
       repository_verification: "Εισάγετε το αναγνωριστικό του έργου %{identifier} για να επιβεβαιώσετε τη διαγραφή του αποθετηρίου του."
       subtitle: "Είστε βέβαιοι ότι θέλετε να διαγράψετε το %{repository_type} από το έργο %{project_name};"
@@ -2248,8 +2248,8 @@ el:
       empty_repository: "Το αποθετήριο υπάρχει, αλλά είναι άδειο. Δεν περιέχει αναθεωρήσεις ακόμα."
       exists_on_filesystem: "Ο κατάλογος του αποθετηρίου υπάρχει ήδη στο σύστημα αρχείων."
       filesystem_access_failed: "Υπήρξε σφάλμα κατά την πρόσβαση του αποθετηρίου στο σύστημα αρχείων: %{message}"
-      not_manageable: "Ο προμηθευτής αποθετηρίου δεν είναι δυνατό να διαχειριστεί από το OpenProject."
-      path_permission_failed: "Παρουσιάστηκε σφάλμα κατά την προσπάθεια δημιουργίας του ακόλουθου μονοπατιού: %{path}. Παρακαλούμε σιγουρευτείτε ότι το OpenProject έχει δικαιώματα εγγραφής στον φάκελο."
+      not_manageable: "Ο προμηθευτής αποθετηρίου δεν είναι δυνατό να διαχειριστεί από το ProyeksiApp."
+      path_permission_failed: "Παρουσιάστηκε σφάλμα κατά την προσπάθεια δημιουργίας του ακόλουθου μονοπατιού: %{path}. Παρακαλούμε σιγουρευτείτε ότι το ProyeksiApp έχει δικαιώματα εγγραφής στον φάκελο."
       unauthorized: "Δεν έχει εξουσιοδότηση για πρόσβαση στο αποθετήριο ή τα στοιχεία σύνδεσης δεν είναι έγκυρα."
       unavailable: "Το αποθετήριο δεν είναι διαθέσιμο."
       exception_title: "Δεν είναι δυνατή η πρόσβαση στο αποθετήριο: %{message}"
@@ -2266,9 +2266,9 @@ el:
         path_encoding: "Παράκαμψη του μονοπατιού κωδικοποίησης Git (Προεπιλογή: UTF-8)"
       local_title: "Σύνδεση με υπάρχον τοπικό αποθετήριο Git"
       local_url: "Τοπικό URL"
-      local_introduction: "Αν έχετε ένα υπάρχον τοπικό αποθετήριο Git, μπορείτε να το συνδέσετε με το OpenProject για να αποκτήσετε πρόσβαση σε αυτό μέσα από την εφαρμογή."
-      managed_introduction: "Επιτρέψτε στο OpenProject να δημιουργήσει και να ενσωματώσει ένα τοπικό αποθετήριο Git αυτόματα."
-      managed_title: "Ενσωματωμένο αποθετήριο Git στο OpenProject"
+      local_introduction: "Αν έχετε ένα υπάρχον τοπικό αποθετήριο Git, μπορείτε να το συνδέσετε με το ProyeksiApp για να αποκτήσετε πρόσβαση σε αυτό μέσα από την εφαρμογή."
+      managed_introduction: "Επιτρέψτε στο ProyeksiApp να δημιουργήσει και να ενσωματώσει ένα τοπικό αποθετήριο Git αυτόματα."
+      managed_title: "Ενσωματωμένο αποθετήριο Git στο ProyeksiApp"
       managed_url: "Διαχειριζόμενο URL"
       path: "Μονοπάτι για το αποθετήριο Git"
       path_encoding: "Κωδικοποίηση μονοπατιού"
@@ -2285,19 +2285,19 @@ el:
     scm_types:
       local: "Σύνδεση με υπάρχον τοπικό αποθετήριο"
       existing: "Σύνδεση με υπάρχον αποθετήριο"
-      managed: "Δημιουργία νέου αποθετηρίου στο OpenProject"
+      managed: "Δημιουργία νέου αποθετηρίου στο ProyeksiApp"
     storage:
       not_available: "Η κατανάλωση χώρου από τον δίσκο δεν είναι δυνατή σε αυτό το αποθετήριο."
       update_timeout: "Διατήρηση των τελευταίων πληροφοριών απαιτούμενου χώρου δίσκου για ένα αποθετήριο για Ν λεπτά.\nΚαθώς η μέτρηση του απαιτούμενου χώρου δίσκου για ένα αποθετήριο μπορεί να κοστίζει, αυξήστε αυτή την τιμή για να μειώσετε την επίπτωση στην επίδοση."
     subversion:
       existing_title: "Υπάρχον αποθετήριο Subversion"
-      existing_introduction: "Αν έχετε ένα υπάρχον αποθετήριο Subversion, μπορείτε να το συνδέσετε με το OpenProject για να αποκτήσετε πρόσβαση σε αυτό μέσα από την εφαρμογή."
+      existing_introduction: "Αν έχετε ένα υπάρχον αποθετήριο Subversion, μπορείτε να το συνδέσετε με το ProyeksiApp για να αποκτήσετε πρόσβαση σε αυτό μέσα από την εφαρμογή."
       existing_url: "Υπάρχον URL"
       instructions:
         managed_url: "Αυτό είναι το URL του διαχειριζόμενου (τοπικού) αποθετηρίου Subversion."
         url: "Εισάγετε το URL του αποθετηρίου. Αυτό μπορεί είτε να στοχεύει ένα τοπικό αποθετήριο (που αρχίζει με %{local_proto} ), ή ένα απομακρυσμένο αποθετήριο. Υποστηρίζονται τα παρακάτω URL schemes:"
-      managed_title: "Ενσωματωμένο αποθετήριο Subversion στο OpenProject"
-      managed_introduction: "Επιτρέψτε στο OpenProject να δημιουργήσει και να ενσωματώσει ένα τοπικό αποθετήριο Subversion αυτόματα."
+      managed_title: "Ενσωματωμένο αποθετήριο Subversion στο ProyeksiApp"
+      managed_introduction: "Επιτρέψτε στο ProyeksiApp να δημιουργήσει και να ενσωματώσει ένα τοπικό αποθετήριο Subversion αυτόματα."
       managed_url: "Διαχειριζόμενο URL"
       password: "Κωδικός Αποθετηρίου"
       username: "Όνομα χρήστη αποθετηρίου"
@@ -2314,7 +2314,7 @@ el:
   setting_apiv3_cors_enabled: "Ενεργοποίηση CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) επιτρεπόμενες προελεύσεις"
   setting_apiv3_cors_origins_text_html: >
-    Εάν είναι ενεργοποιημένο το CORS, αυτές είναι οι πηγές που επιτρέπεται να έχουν πρόσβαση στο OpenProject API. <br/> Παρακαλώ ελέγξτε το <a href="%{origin_link}" target="_blank">Τεκμηρίωση στην κεφαλίδα προέλευσης</a> για τον τρόπο καθορισμού των αναμενόμενων τιμών.
+    Εάν είναι ενεργοποιημένο το CORS, αυτές είναι οι πηγές που επιτρέπεται να έχουν πρόσβαση στο ProyeksiApp API. <br/> Παρακαλώ ελέγξτε το <a href="%{origin_link}" target="_blank">Τεκμηρίωση στην κεφαλίδα προέλευσης</a> για τον τρόπο καθορισμού των αναμενόμενων τιμών.
   setting_apiv3_docs: "Τεκμηρίωση"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2474,7 +2474,7 @@ el:
       sentence_connector: "και"
       skip_last_comma: "ψευδές"
   text_accessibility_hint: "Ο τρόπος προσβασιμότητας έχει σχεδιαστεί για χρήστες τυφλούς, με κινητικά προβλήματα ή με κακή όραση. Για τα τελευταία αυτά τα στοιχεία είναι ειδικά επισημασμένα. Σημειώστε ότι η ενότητα Backlogs δεν είναι διαθέσιμη σε αυτή τη λειτουργία."
-  text_access_token_hint: "Τα tokens πρόσβασης σας επιτρέπουν να δώσετε πρόσβαση σε εξωτερικές εφαρμογές σε πόρους μέσα στο OpenProject."
+  text_access_token_hint: "Τα tokens πρόσβασης σας επιτρέπουν να δώσετε πρόσβαση σε εξωτερικές εφαρμογές σε πόρους μέσα στο ProyeksiApp."
   text_analyze: "Περαιτέρω ανάλυση: %{subject}"
   text_are_you_sure: "Είστε σίγουρος/η;"
   text_are_you_sure_with_children: "Διαγραφή πακέτου εργασίας και όλων των πακέτων-παιδιά;"
@@ -2544,7 +2544,7 @@ el:
   text_no_notes: "Δεν υπάρχουν διαθέσιμα σχόλια για αυτό το πακέτο εργασίας."
   text_notice_too_many_values_are_inperformant: "Σημείωση: Η εμφάνιση περισσότερων από 100 αντικειμένων ανά σελίδα μπορεί να αυξήσει τον χρόνο φόρτωσης της σελίδας."
   text_notice_security_badge_displayed_html: >
-    Σημείωση: Εάν ενεργοποιηθεί, θα εμφανιστεί ένα σήμα με την κατάσταση της εγκατάστασής σας στον <a href="%{information_panel_path}">%{information_panel_label}</a> πίνακα διαχείρισης, καθώς και στην αρχική σελίδα. Εμφανίζεται μόνο στους διαχειριστές. <br/> Το σήμα θα ελέγξει την τρέχουσα έκδοση του OpenProject σε σύγκριση με την επίσημη βάση δεδομένων εκδόσεων OpenProject για να σας ειδοποιήσει ενημερώσεις ή γνωστές ευπάθειες. Για περισσότερες πληροφορίες στο τι παρέχει αυτός ο έλεγχος, τι δεδομένα χρειάζονται για να παρέχονται οι διαθέσιμες ενημερώσεις και πως να απενεργοποιήσετε αυτό τον έλεγχο, παρακαλούμε επισκεφθείτε την <a href="%{more_info_url}"> τεκμηρίωση διαμόρφωσης</a>.
+    Σημείωση: Εάν ενεργοποιηθεί, θα εμφανιστεί ένα σήμα με την κατάσταση της εγκατάστασής σας στον <a href="%{information_panel_path}">%{information_panel_label}</a> πίνακα διαχείρισης, καθώς και στην αρχική σελίδα. Εμφανίζεται μόνο στους διαχειριστές. <br/> Το σήμα θα ελέγξει την τρέχουσα έκδοση του ProyeksiApp σε σύγκριση με την επίσημη βάση δεδομένων εκδόσεων ProyeksiApp για να σας ειδοποιήσει ενημερώσεις ή γνωστές ευπάθειες. Για περισσότερες πληροφορίες στο τι παρέχει αυτός ο έλεγχος, τι δεδομένα χρειάζονται για να παρέχονται οι διαθέσιμες ενημερώσεις και πως να απενεργοποιήσετε αυτό τον έλεγχο, παρακαλούμε επισκεφθείτε την <a href="%{more_info_url}"> τεκμηρίωση διαμόρφωσης</a>.
   text_own_membership_delete_confirmation: "Πρόκειται να αφαιρέσετε μερικά ή όλα τα δικαιώματα και ενδέχεται να μην μπορείτε να επεξεργαστείτε πλέον το έργο μετά από αυτό.\nΕίστε βέβαιοι ότι θέλετε να συνεχίσετε;"
   text_plugin_assets_writable: "Εγγράψιμος κατάλογος plugin assets"
   text_powered_by: "Υποστηρίζεται από %{link}"
@@ -2552,7 +2552,7 @@ el:
   text_reassign: "Επανεκχώρηση στο πακέτα εργασίας:"
   text_regexp_info: "π.χ. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Το regex εφαρμόστηκε σε μια λειτουργία πολλαπλών γραμμών. π.χ., ^---\s+'
-  text_repository_usernames_mapping: "Επιλέξτε ή ενημερώστε τον χρήστη OpenProject που αντιστοιχεί σε κάθε όνομα χρήστη στο ιστορικό του αποθετηρίου.\nΧρήστες με το ίδιο όνομα χρήστη στο OpenProject και το αποθετήριο ή email αντιστοιχίζονται αυτόματα."
+  text_repository_usernames_mapping: "Επιλέξτε ή ενημερώστε τον χρήστη ProyeksiApp που αντιστοιχεί σε κάθε όνομα χρήστη στο ιστορικό του αποθετηρίου.\nΧρήστες με το ίδιο όνομα χρήστη στο ProyeksiApp και το αποθετήριο ή email αντιστοιχίζονται αυτόματα."
   text_status_changed_by_changeset: "Εφαρμόστηκε στις αλλαγές %{value}."
   text_table_difference_description: "Σε αυτό τον πίνακα εμφανίζονται τα μοναδικά %{entries}. Μπορείτε να εμφανίσετε τη διαφορά μεταξύ δύο οποιονδήποτε καταχωρήσεων επιλέγοντας πρώτα τα αντίστοιχα checkboxes στον πίνακα. Όταν κάνετε κλικ στο κουμπί κάτω από τον πίνακα θα εμφανιστούν οι διαφορές."
   text_time_logged_by_changeset: "Εφαρμόστηκε στις αλλαγές %{value}."
@@ -2757,7 +2757,7 @@ el:
     activate_and_reset_failed_logins: "Ενεργοποιήστε και επαναφέρετε τις αποτυχημένες συνδέσεις"
     authentication_provider: "Πάροχος ταυτοποίησης"
     authentication_settings_disabled_due_to_external_authentication: >
-      Αυτός ο χρήστης ταυτοποιείται μέσω ενός εξωτερικού παρόχου ταυτοποίησης, οπότε δεν υπάρχει κωδικός στο OpenProject για να αλλαχθεί.
+      Αυτός ο χρήστης ταυτοποιείται μέσω ενός εξωτερικού παρόχου ταυτοποίησης, οπότε δεν υπάρχει κωδικός στο ProyeksiApp για να αλλαχθεί.
     authorization_rejected: "Δεν σας επιτρέπεται η σύνδεση."
     assign_random_password: "Ανάθεση τυχαίου κωδικού πρόσβασης (αποστέλνεται στο χρήστη μέσω email)"
     blocked: "κλειδωμένο προσωρινά"
@@ -2788,7 +2788,7 @@ el:
   warning: Προειδοποίηση
   warning_attachments_not_saved: "%{count} αρχείο(α) δεν μπόρεσαν να αποθηκευτούν."
   warning_imminent_user_limit: >
-    Προσκαλέσατε περισσότερους χρήστες απ'ότι υποστηρίζεται από το τρέχον πλάνο σας. Οι προσκεκλημένοι χρήστες ενδέχεται να μην μπορούν να συμμετάσχουν στο OpenProject περιβάλλον σας. Παρακαλούμε <a href="%{upgrade_url}">αναβαθμίστε το πλάνο σας</a> ή αποκλείστε υπάρχοντες χρήστες για να επιτρέψετε στους προσκεκλημένους και εγγεγραμμένους χρήστες να συμμετάσχουν.
+    Προσκαλέσατε περισσότερους χρήστες απ'ότι υποστηρίζεται από το τρέχον πλάνο σας. Οι προσκεκλημένοι χρήστες ενδέχεται να μην μπορούν να συμμετάσχουν στο ProyeksiApp περιβάλλον σας. Παρακαλούμε <a href="%{upgrade_url}">αναβαθμίστε το πλάνο σας</a> ή αποκλείστε υπάρχοντες χρήστες για να επιτρέψετε στους προσκεκλημένους και εγγεγραμμένους χρήστες να συμμετάσχουν.
   warning_registration_token_expired: |
     Το email ενεργοποίησης έχει λήξει. Σας στείλαμε ένα καινούργιο στο %{email}. Παρακαλούμε πατήστε στον σύνδεσμο μέσα σε αυτό για να ενεργοποιήσετε τον λογαριασμό σας.
   warning_user_limit_reached: >
@@ -2921,21 +2921,21 @@ el:
         confidential: "Ελέγξτε εάν η εφαρμογή θα χρησιμοποιηθεί όταν το μυστικό πελάτη μπορεί να παραμείνει εμπιστευτικό. Οι εγγενείς εφαρμογές για κινητά και οι εφαρμογές μιας σελίδας θεωρούνται μη εμπιστευτικές."
         scopes: "Επιλέξτε τα φυσικά αντικείμενα στα οποία θέλετε να δώσει πρόσβαση η εφαρμογή. Αν δεν επιλεγεί κανένα φυσικό αντικείμενο, θα υποτεθεί api_v3."
         client_credential_user_id: "Προαιρετική ταυτότητα χρήστη για να υποδυθεί όταν οι πελάτες χρησιμοποιούν αυτή την εφαρμογή. Αφήστε κενό για να επιτρέψετε μόνο δημόσια πρόσβαση"
-        register_intro: "Αν αναπτύσσετε μια εφαρμογή πελάτη OAuth API για το OpenProject, μπορείτε να την καταχωρήσετε χρησιμοποιώντας αυτή τη φόρμα για να μπορούν να τη χρησιμοποιήσουν όλοι οι χρήστες."
+        register_intro: "Αν αναπτύσσετε μια εφαρμογή πελάτη OAuth API για το ProyeksiApp, μπορείτε να την καταχωρήσετε χρησιμοποιώντας αυτή τη φόρμα για να μπορούν να τη χρησιμοποιήσουν όλοι οι χρήστες."
         default_scopes: ""
     client_id: "Ταυτότητα Πελάτη"
     client_secret_notice: >
-      Αυτή είναι η μόνη φορά που μπορούμε να τυπώσουμε το μυστικό πελάτη, παρακαλούμε σημειώστε το και κρατήστε το ασφαλές. Θα πρέπει να το χειρίζεστε ως κωδικό πρόσβασης και δεν μπορεί να ανακτηθεί από το OpenProject αργότερα.
+      Αυτή είναι η μόνη φορά που μπορούμε να τυπώσουμε το μυστικό πελάτη, παρακαλούμε σημειώστε το και κρατήστε το ασφαλές. Θα πρέπει να το χειρίζεστε ως κωδικό πρόσβασης και δεν μπορεί να ανακτηθεί από το ProyeksiApp αργότερα.
     authorization_dialog:
       authorize: "Εξουσιοδότηση"
       cancel: "Ακύρωση και απόρριψη εξουσιοδότησης."
       prompt_html: "Εξουσιοδότηση του <strong>%{application_name}</strong> για να χρησιμοποιήσετε τον λογαριασμό σας <em>%{login}</em>;"
       title: "Εξουσιοδότηση %{application_name}"
       wants_to_access_html: >
-        Αυτή η εφαρμογή ζητάει άδεια πρόσβασης στον OpenProject λογαριασμό σας. <br/> <strong>Έχει ζητήσει τις ακόλουθες άδειες:</strong>
+        Αυτή η εφαρμογή ζητάει άδεια πρόσβασης στον ProyeksiApp λογαριασμό σας. <br/> <strong>Έχει ζητήσει τις ακόλουθες άδειες:</strong>
     scopes:
       api_v3: "Πλήρη πρόσβαση API v3"
-      api_v3_text: "Η εφαρμογή θα αποκτήσει πλήρη πρόσβαση ανάγνωσης και εγγραφής στο API v3 του OpenProject για να εκτελέσει ενέργειες εκ μέρους σας."
+      api_v3_text: "Η εφαρμογή θα αποκτήσει πλήρη πρόσβαση ανάγνωσης και εγγραφής στο API v3 του ProyeksiApp για να εκτελέσει ενέργειες εκ μέρους σας."
     grants:
       created_date: "Εγκρίθηκε στις"
       scopes: "Δικαιώματα"
@@ -2951,7 +2951,7 @@ el:
     client_credentials_impersonation_set_to: "Ο χρήστης διαπιστευτηρίων πελάτη ορίστηκε σε"
     client_credentials_impersonation_warning: "Σημείωση: Οι πελάτες που χρησιμοποιούν τη ροή 'διαπιστευτήρια Πελάτη' σε αυτή την εφαρμογή θα έχουν τα δικαιώματα αυτού του χρήστη"
     client_credentials_impersonation_html: >
-      Από προεπιλογή, το OpenProject παρέχει ταυτοποίηση OAuth 2.0 μέσω %{authorization_code_flow_link}. Μπορείτε προαιρετικά να ενεργοποιήσετε %{client_credentials_flow_link}, αλλά πρέπει να ορίσετε ένα χρήστη, εκ μέρους του οποίου θα εκτελεστούν τα αιτήματα.
+      Από προεπιλογή, το ProyeksiApp παρέχει ταυτοποίηση OAuth 2.0 μέσω %{authorization_code_flow_link}. Μπορείτε προαιρετικά να ενεργοποιήσετε %{client_credentials_flow_link}, αλλά πρέπει να ορίσετε ένα χρήστη, εκ μέρους του οποίου θα εκτελεστούν τα αιτήματα.
     authorization_error: "Παρουσιάστηκε ένα σφάλμα εξουσιοδότησης."
     revoke_my_application_confirmation: "Είστε βέβαιοι ότι θέλετε να αφαιρέσετε αυτή την εφαρμογή; Αυτό θα ανακαλέσει %{token_count} που είναι ενεργά για αυτή."
     my_registered_applications: "Καταγεγραμμένες εφαρμογές OAuth"

@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.2.4
+  title: ProyeksiApp 4.2.4
   sidebar_navigation:
       title: 4.2.4
   release_version: 4.2.4
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.2.4
+# ProyeksiApp 4.2.4
 
-OpenProject 4.2.4 contains a bug fix and updated translations.
+ProyeksiApp 4.2.4 contains a bug fix and updated translations.
 
 The following bug has been fixed:
 

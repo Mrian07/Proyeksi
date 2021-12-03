@@ -48,7 +48,7 @@ describe 'API v3 Work package form resource', type: :request do
 
       describe 'error body' do
         let(:error_path) { "_embedded/validationErrors/#{property}" }
-        let(:error_id) { 'urn:openproject-org:api:v3:errors:PropertyConstraintViolation'.to_json }
+        let(:error_id) { 'urn:proyeksiapp-org:api:v3:errors:PropertyConstraintViolation'.to_json }
 
         let(:error_body) do
           parse_json(subject.body)['_embedded']['validationErrors'][property]

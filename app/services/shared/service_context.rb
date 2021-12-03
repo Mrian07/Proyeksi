@@ -17,7 +17,7 @@ module Shared
     def in_mutex_context(model, send_notifications = true, &block)
       result = nil
 
-      OpenProject::Mutex.with_advisory_lock_transaction(model) do
+      ProyeksiApp::Mutex.with_advisory_lock_transaction(model) do
         result = without_context_transaction(send_notifications, &block)
 
         raise ActiveRecord::Rollback if result.failure?

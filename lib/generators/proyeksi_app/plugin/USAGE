@@ -1,0 +1,19 @@
+Description:
+    Creates a new plugin with the given name in the specified directory
+
+Usage:
+    rails generate proyeksi_app:plugin NAME DIRECTORY
+
+Example:
+    rails generate open_project:plugin stuff ~/
+
+    This will create:
+        ~/proyeksiapp-stuff
+        ~/proyeksiapp-stuff/CHANGELOG.md
+        ~/proyeksiapp-stuff/openproject-stuff.gemspec
+        ~/proyeksiapp-stuff/lib
+        ~/proyeksiapp-stuff/lib/openproject-stuff.rb
+        ~/proyeksiapp-stuff/lib/proyeksi_app
+        ~/proyeksiapp-stuff/lib/proyeksi_app/stuff.rb
+        ~/proyeksiapp-stuff/lib/proyeksi_app/stuff
+        ~/proyeksiapp-stuff/lib/proyeksi_app/stuff/engine.rb

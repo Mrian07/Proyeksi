@@ -13,7 +13,7 @@ class UserMailer < ApplicationMailer
     open_project_headers 'Type' => 'Test'
 
     send_mail(user,
-              'OpenProject Test')
+              'ProyeksiApp Test')
   end
 
   def backup_ready(user)
@@ -25,7 +25,7 @@ class UserMailer < ApplicationMailer
     end
   end
 
-  def backup_token_reset(recipient, user:, waiting_period: OpenProject::Configuration.backup_initial_waiting_period)
+  def backup_token_reset(recipient, user:, waiting_period: ProyeksiApp::Configuration.backup_initial_waiting_period)
     @admin_notification = recipient != user # notification for other admins rather than oneself
     @user_login = user.login
     @waiting_period = waiting_period

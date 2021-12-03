@@ -1,14 +1,14 @@
 ---
-title: OpenProject 10.6.2
+title: ProyeksiApp 10.6.2
 sidebar_navigation:
     title: 10.6.2
 release_version: 10.6.2
 release_date: 2020-06-23
 ---
 
-# OpenProject 10.6.2
+# ProyeksiApp 10.6.2
 
-We released [OpenProject 10.6.2](https://community.openproject.com/versions/1440).
+We released [ProyeksiApp 10.6.2](https://community.openproject.com/versions/1440).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->

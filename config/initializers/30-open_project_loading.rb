@@ -2,4 +2,4 @@
 
 
 
-require 'open_project'
+require 'proyeksi_app'

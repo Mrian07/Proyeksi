@@ -1,7 +1,7 @@
 
 
 module Bim::Bcf::API::V2_1
-  class ProjectsAPI < ::API::OpenProjectAPI
+  class ProjectsAPI < ::API::ProyeksiAppAPI
     resources :projects do
       helpers do
         def visible_projects

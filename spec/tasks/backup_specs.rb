@@ -5,7 +5,7 @@ require 'spec_helper'
 describe 'postgresql' do
   let(:database_config) do
     { 'adapter' => 'postgresql',
-      'database' => 'openproject-database',
+      'database' => 'proyeksiapp-database',
       'username' => 'testuser',
       'password' => 'testpassword' }
   end

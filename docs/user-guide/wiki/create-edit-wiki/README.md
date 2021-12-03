@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Create and edit wiki
   priority: 799
-description: Create a new wiki page in OpenProject
+description: Create a new wiki page in ProyeksiApp
 robots: index, follow
 keywords: create wiki
 ---
 
 # Create and edit a wiki page
 
-In OpenProject you can create and edit wiki pages together with your team to document important project information.
+In ProyeksiApp you can create and edit wiki pages together with your team to document important project information.
 
 | Feature                                                      | Documentation for                             |
 | ------------------------------------------------------------ | --------------------------------------------- |

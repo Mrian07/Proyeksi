@@ -5,7 +5,7 @@ describe ::Recaptcha::RequestController, type: :controller do
   before do
     login_as user
     allow(Setting)
-      .to receive(:plugin_openproject_recaptcha)
+      .to receive(:plugin_proyeksiapp_recaptcha)
       .and_return(recaptcha_type: 'v2', website_key: 'A', secret_key: 'B')
 
     session[:authenticated_user_id] = user.id

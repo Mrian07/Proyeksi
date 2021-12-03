@@ -37,7 +37,7 @@ module Groups
           RETURNING member_roles.member_id
         SQL
 
-        ::OpenProject::SqlSanitization
+        ::ProyeksiApp::SqlSanitization
           .sanitize sql_query,
                     member_role_ids: member_role_ids
       else

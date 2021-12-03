@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.8
+  title: ProyeksiApp 5.0.8
   sidebar_navigation:
       title: 5.0.8
   release_version: 5.0.8
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.8
+# ProyeksiApp 5.0.8
 
-OpenProject 5.0.8 contains several bug fixes:
+ProyeksiApp 5.0.8 contains several bug fixes:
 
   - Logging unit costs was not possible in 5.0.7. This has been fixed
     ([\#22331](https://community.openproject.org/work_packages/22331)).

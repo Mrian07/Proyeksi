@@ -24,11 +24,11 @@ fi:
       Lisää oma kuvasi, jonka koko on 128x128 pikseliä. Suuremmat kuvat pienennetään ja leikataan sopiviksi. Kuvan esikatselu näytetään kun olet valinnut kuvatiedoston.
     text_change_gravatar_html: 'Vaihtaaksesi kuva sähköpostiosoitteellesi, siirry %{gravatar_url}.'
     text_your_local_avatar: |
-      Voit lisätä oman kuvasi OpenProjectiin.
+      Voit lisätä oman kuvasi ProyeksiAppiin.
     text_local_avatar_over_gravatar: |
       Lisätty kuva korvaa gravatar -kuvan.
     text_your_current_gravatar: |
-      OpenProject käyttää gravatar -kuvaa jos olet rekisteröinyt sellaisen tai oletuskuvaa tai ikonia mikäli sellainen on olemassa. Nykyinen gravatar -kuva:
+      ProyeksiApp käyttää gravatar -kuvaa jos olet rekisteröinyt sellaisen tai oletuskuvaa tai ikonia mikäli sellainen on olemassa. Nykyinen gravatar -kuva:
     settings:
       enable_gravatars: 'Salli käyttäjien gravatar kuvat'
       gravatar_default: "Oletus Gravatar käyttäjäikoni"

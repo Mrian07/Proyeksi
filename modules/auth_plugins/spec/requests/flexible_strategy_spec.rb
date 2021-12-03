@@ -24,7 +24,7 @@ describe OmniAuth::FlexibleStrategy do
   let(:provider_b) { { name: 'provider_b', identifier: 'b' } }
 
   before do
-    allow(OpenProject::Plugins::AuthPlugin).to receive(:providers_for).with(MockStrategy) {
+    allow(ProyeksiApp::Plugins::AuthPlugin).to receive(:providers_for).with(MockStrategy) {
       [provider_a, provider_b]
     }
   end
@@ -72,7 +72,7 @@ describe OmniAuth::FlexibleStrategy do
     let(:provider_with_mapping) do
       {
         name: 'provider_with_mapping',
-        openproject_attribute_map: Proc.new do |auth|
+        proyeksiapp_attribute_map: Proc.new do |auth|
           { uid: auth[:info][:myUsername], mail: auth[:extra][:raw_info][:myMail] }
         end
       }

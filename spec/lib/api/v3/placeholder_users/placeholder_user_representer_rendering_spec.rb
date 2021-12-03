@@ -154,7 +154,7 @@ describe ::API::V3::PlaceholderUsers::PlaceholderUserRepresenter, 'rendering' do
 
   describe 'caching' do
     it 'is based on the representer\'s cache_key' do
-      expect(OpenProject::Cache)
+      expect(ProyeksiApp::Cache)
         .to receive(:fetch)
               .with(representer.json_cache_key)
               .and_call_original

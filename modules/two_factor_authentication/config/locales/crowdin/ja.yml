@@ -123,14 +123,14 @@ ja:
         text_cannot_scan: |
           コードをスキャンできない場合は、次の詳細を使用して手動で入力することができます:
         description: |
-          OpenProjectで使用する認証プログラムに時間ベースのワンタイムパスワード認証方式を使用して登録します。
+          ProyeksiAppで使用する認証プログラムに時間ベースのワンタイムパスワード認証方式を使用して登録します。
           一般的な例は Google Authenticator または Authy です。
       sms:
         title: 'あなたの携帯電話を使用してください'
         redacted_identifier: 'モバイルデバイス (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}、%{delivery_channel} 経由で認証コードを送信しました。'
         description: |
-          OpenProjectワンタイムパスワードの配信用に携帯電話番号を登録してください。
+          ProyeksiAppワンタイムパスワードの配信用に携帯電話番号を登録してください。
     sns:
       delivery_failed: 'SNSの配信に失敗しました:'
     message_bird:

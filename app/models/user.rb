@@ -176,7 +176,7 @@ class User < Principal
   def self.try_authentication_for_existing_user(user, password, session = nil)
     activate_user! user, session if session
 
-    return nil if !user.active? || OpenProject::Configuration.disable_password_login?
+    return nil if !user.active? || ProyeksiApp::Configuration.disable_password_login?
 
     if user.auth_source
       # user has an external authentication method
@@ -205,7 +205,7 @@ class User < Principal
 
   # Tries to authenticate with available sources and creates user on success
   def self.try_authentication_and_create_user(login, password)
-    return nil if OpenProject::Configuration.disable_password_login?
+    return nil if ProyeksiApp::Configuration.disable_password_login?
 
     attrs = AuthSource.authenticate(login, password)
     try_to_create(attrs) if attrs
@@ -216,8 +216,8 @@ class User < Principal
     new(attrs).tap do |user|
       user.language = Setting.default_language
 
-      if OpenProject::Enterprise.user_limit_reached?
-        OpenProject::Enterprise.send_activation_limit_notification_about(user) if notify
+      if ProyeksiApp::Enterprise.user_limit_reached?
+        ProyeksiApp::Enterprise.send_activation_limit_notification_about(user) if notify
 
         Rails.logger.error("User '#{user.login}' could not be created as user limit exceeded.")
         user.errors.add :base, I18n.t(:error_enterprise_activation_user_limit)
@@ -308,7 +308,7 @@ class User < Principal
   # Does the backend storage allow this user to change their password?
   def change_password_allowed?
     return false if uses_external_authentication? ||
-                    OpenProject::Configuration.disable_password_login?
+                    ProyeksiApp::Configuration.disable_password_login?
     return true if auth_source_id.blank?
 
     auth_source.allow_password_changes?
@@ -327,7 +327,7 @@ class User < Principal
   # are stored unencrypted in mail accounts, so they must only be valid for
   # a short time.
   def random_password!
-    self.password = OpenProject::Passwords::Generator.random_password
+    self.password = ProyeksiApp::Passwords::Generator.random_password
     self.password_confirmation = password
     self.force_password_change = true
     self
@@ -524,7 +524,7 @@ class User < Principal
   def self.execute_as(user, &block)
     previous_user = User.current
     User.current = user
-    OpenProject::LocaleHelper.with_locale_for(user, &block)
+    ProyeksiApp::LocaleHelper.with_locale_for(user, &block)
   ensure
     User.current = previous_user
   end
@@ -597,7 +597,7 @@ class User < Principal
     # self.password is only set when it was changed after the last
     # save. Otherwise, password is nil.
     unless password.nil? or anonymous?
-      password_errors = OpenProject::Passwords::Evaluator.errors_for_password(password)
+      password_errors = ProyeksiApp::Passwords::Evaluator.errors_for_password(password)
       password_errors.each { |error| errors.add(:password, error) }
 
       if former_passwords_include?(password)

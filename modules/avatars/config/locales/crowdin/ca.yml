@@ -25,11 +25,11 @@ ca:
       Una visualització prèvia de l'avatar es mostrarà abans de carregar-la, un cop seleccioneu la imatge.
     text_change_gravatar_html: 'Per a canviar o afegir el Gravatar de la vostra adreça de correu electrònic, accediu a %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject us permet de pujar el vostre avatar personalitzat.
+      ProyeksiApp us permet de pujar el vostre avatar personalitzat.
     text_local_avatar_over_gravatar: |
       Si n'establiu un, aquest avatar personalitzat s'utilitzarà preferentment abans que el gravatar de sobre.
     text_your_current_gravatar: |
-      OpenProject fa servir el vostre gravatar si n'heu registrat un, o una imatge o icona per defecte si n'existeix una.
+      ProyeksiApp fa servir el vostre gravatar si n'heu registrat un, o una imatge o icona per defecte si n'existeix una.
       L'actual gravatar és el següent:
     settings:
       enable_gravatars: 'Activa els Gravatars d''usuari'

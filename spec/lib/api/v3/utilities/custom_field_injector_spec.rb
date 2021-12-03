@@ -16,7 +16,7 @@ describe ::API::V3::Utilities::CustomFieldInjector, clear_cache: true do
 
   describe 'TYPE_MAP' do
     it 'supports all available formats' do
-      OpenProject::CustomFieldFormat.available_formats.each do |format|
+      ProyeksiApp::CustomFieldFormat.available_formats.each do |format|
         expect(described_class::TYPE_MAP[format]).not_to be_nil
       end
     end

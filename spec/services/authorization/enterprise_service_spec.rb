@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Authorization::EnterpriseService do
   let(:token_object) do
-    token = OpenProject::Token.new
+    token = ProyeksiApp::Token.new
     token.subscriber = 'Foobar'
     token.mail = 'foo@example.org'
     token.starts_at = Date.today

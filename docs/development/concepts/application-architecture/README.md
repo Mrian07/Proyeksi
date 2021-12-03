@@ -1,7 +1,7 @@
 ---
 sidebar_navigation:
   title: Application architecture
-description: An introduction of the architecture used at OpenProject and their interplay.
+description: An introduction of the architecture used at ProyeksiApp and their interplay.
 robots: index, follow
 keywords: architecture overview, hybrid application, Ruby on Rails, Angular
 ---
@@ -10,7 +10,7 @@ keywords: architecture overview, hybrid application, Ruby on Rails, Angular
 
 # Application architecture
 
-OpenProject is a hybrid application consisting of a Ruby on Rails monolith with an Angular application serving specific modules of the OpenProject frontend. Strategically, the application is shifting towards a single-page application. However, many of the views are still generated largely by Rails and only extended by Angular components.
+ProyeksiApp is a hybrid application consisting of a Ruby on Rails monolith with an Angular application serving specific modules of the ProyeksiApp frontend. Strategically, the application is shifting towards a single-page application. However, many of the views are still generated largely by Rails and only extended by Angular components.
 
 All requests to the application are still responded by Rails. In some of the responses, only the root Angular component is rendered to bootstrap the Angular frontend. On these pages, [UI-Router for Angular](https://github.com/ui-router/angular) parses the URL to determine what module/frontend route to load and show.
 
@@ -56,7 +56,7 @@ A response that is fully controlled by Rails but extended by some Angular compon
 
 # Evolution of the application
 
-Historically, OpenProject has been forked from [Redmine](https://www.redmine.org/) and modified from a primarily software-development focused flow into a general project management application suite. A Ruby on Rails monolith was used to serve the entire application, frontend and API. Javascript was used to extend some of the functionality with Prototype.js and jQuery on existing, Rails-rendered pages.
+Historically, ProyeksiApp has been forked from [Redmine](https://www.redmine.org/) and modified from a primarily software-development focused flow into a general project management application suite. A Ruby on Rails monolith was used to serve the entire application, frontend and API. Javascript was used to extend some of the functionality with Prototype.js and jQuery on existing, Rails-rendered pages.
 
 The monolith was turned into a hybrid application with semi-separated JavaScript frontend by the [introduction of AngularJS in 2014](https://github.com/opf/openproject/pull/913) for a redesign of the [work package table](../../../user-guide/work-packages/work-package-views/#work-packages-views). The Rails monolith was and is still rendering a large potion of the frontend however. The AngularJS frontend was served from within Rails and not separated. Therefore, the application frontend is not a single-page application yet.
 

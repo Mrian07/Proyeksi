@@ -3,7 +3,7 @@
 module API
   module V3
     module Principals
-      class PrincipalsAPI < ::API::OpenProjectAPI
+      class PrincipalsAPI < ::API::ProyeksiAppAPI
         helpers ::API::Utilities::PageSizeHelper
 
         resource :principals do

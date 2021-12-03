@@ -178,7 +178,7 @@ describe 'BCF 2.1 viewpoints resource', type: :request, content_type: :json, wit
         expect(subject.status).to eq 200
         expect(subject.headers['Content-Type']).to eq 'image/png'
 
-        max_age = OpenProject::Configuration.fog_download_url_expires_in - 10
+        max_age = ProyeksiApp::Configuration.fog_download_url_expires_in - 10
 
         expect(subject.headers["Cache-Control"]).to eq "public, max-age=#{max_age}"
         expect(subject.headers["Expires"]).to be_present

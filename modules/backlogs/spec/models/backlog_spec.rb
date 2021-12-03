@@ -7,7 +7,7 @@ describe Backlog, type: :model do
 
   before(:each) do
     @feature = FactoryBot.create(:type_feature)
-    allow(Setting).to receive(:plugin_openproject_backlogs).and_return({ 'story_types' => [@feature.id.to_s],
+    allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return({ 'story_types' => [@feature.id.to_s],
                                                                          'task_type' => '0' })
     @status = FactoryBot.create(:status)
   end

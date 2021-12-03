@@ -13,7 +13,7 @@ class SCM::CreateLocalRepositoryJob < ApplicationJob
   def self.ensure_not_existing!(repository)
     # Cowardly refusing to override existing local repository
     if File.directory?(repository.root_url)
-      raise OpenProject::SCM::Exceptions::SCMError.new(
+      raise ProyeksiApp::SCM::Exceptions::SCMError.new(
         I18n.t('repositories.errors.exists_on_filesystem')
       )
     end

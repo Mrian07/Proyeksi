@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Calendar
   priority: 840
-description: Create a calendar in OpenProject.
+description: Create a calendar in ProyeksiApp.
 robots: index, follow
 keywords: calendar
 ---
@@ -13,7 +13,7 @@ The calendar shows all of the project's work packages in calendar form.
 
 | Topic                                                        | Content                                               |
 | ------------------------------------------------------------ | ----------------------------------------------------- |
-| [Calendar overview](#calendar-overview)                      | How to use the calendar in OpenProject.               |
+| [Calendar overview](#calendar-overview)                      | How to use the calendar in ProyeksiApp.               |
 | [Filters in calendar](#filters-in-calendar)                  | How to filter in the calendar view.                   |
 | [Zen mode](#zen-mode)                                        | How to work distraction free in a calendar view.      |
 | [Project overarching calendar](#project-overarching-calendar) | How to display more than one project in the calendar. |

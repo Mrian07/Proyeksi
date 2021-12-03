@@ -1,16 +1,16 @@
-# Migrating your OpenProject installation to PostgreSQL 13
+# Migrating your ProyeksiApp installation to PostgreSQL 13
 
-OpenProject version 12+ will default to PostgreSQL 13. If you have an existing OpenProject installation, please follow the guide below to upgrade your PostgreSQL version.
+ProyeksiApp version 12+ will default to PostgreSQL 13. If you have an existing ProyeksiApp installation, please follow the guide below to upgrade your PostgreSQL version.
 
 ## Package-based installation
 
 <div class="alert alert-info" role="alert">
-Please follow this section only if you have installed OpenProject using [this procedure][package-based-installation].
+Please follow this section only if you have installed ProyeksiApp using [this procedure][package-based-installation].
 
 Before attempting the upgrade, please ensure you have performed a backup of your installation by following the [backup guide](../../operation/backing-up/).
 </div>
 
-Please first check whether this guide applies to you at all. Only PostgreSQL installations that were installed by the OpenProject package are applicable to this guide.
+Please first check whether this guide applies to you at all. Only PostgreSQL installations that were installed by the ProyeksiApp package are applicable to this guide.
 
 To do that, please run the following command:
 
@@ -22,7 +22,7 @@ And verify that it outputs: postgres/autoinstall **install**.
 
 If that is not the case, you are likely using a self-provisioned database or a remote database. In this case, please follow the instructions from your provider or use generic PostgreSQL upgrade guides. A guide we can recommend for Debian/Ubuntu based servers is this one: https://gorails.com/guides/upgrading-postgresql-version-on-ubuntu-server Please adapt that guide or the following steps to your distribution.
 
-In the following, we assume that you initially let OpenProject setup your PostgreSQL installation, using a local database. 
+In the following, we assume that you initially let ProyeksiApp setup your PostgreSQL installation, using a local database. 
 1. First, connect to your server and make sure your local version is PostgreSQL v10:
 
 ```bash
@@ -80,7 +80,7 @@ sudo su - postgres -c "sed -i 's|45432|45433|' /etc/postgresql/10/main/conf.d/cu
 sudo su - postgres -c "/usr/lib/postgresql/13/bin/pg_ctl start --wait --pgdata=/var/lib/postgresql/13/main -o '-c config_file=/etc/postgresql/13/main/postgresql.conf'"
 ```
 
-6. Check your OpenProject installation. A version higher than `13` should be displayed for `PostgreSQL version` in the "Administration > Information" section.
+6. Check your ProyeksiApp installation. A version higher than `13` should be displayed for `PostgreSQL version` in the "Administration > Information" section.
 
 7. If everything is fine, you can then remove your older PostgreSQL installation:
 
@@ -99,7 +99,7 @@ sudo zypper remove postgresql-10 # sles
 ## Compose-based docker installation
 
 <div class="alert alert-info" role="alert">
-Please follow this section only if you have installed OpenProject using [this procedure][compose-based-installation].
+Please follow this section only if you have installed ProyeksiApp using [this procedure][compose-based-installation].
 
 Before attempting the upgrade, please ensure you have performed a backup of your installation by following the [backup guide](../../operation/backing-up/).
 </div>
@@ -109,12 +109,12 @@ Before attempting the upgrade, please ensure you have performed a backup of your
 ## All-in-one docker installation
 
 <div class="alert alert-info" role="alert">
-Please follow this section only if you have installed OpenProject using [this procedure][all-in-one-docker-installation].
+Please follow this section only if you have installed ProyeksiApp using [this procedure][all-in-one-docker-installation].
 
 Before attempting the upgrade, please ensure you have performed a backup of your installation by following the [backup guide](../../operation/backing-up/).
 </div>
 
-The newer version of OpenProject includes an utility to automatically perform the upgrade for you. Assuming you followed the standard installation procedure, the folder (within the docker container) containing your PostgreSQL data will be located at `/var/openproject/pgdata`.
+The newer version of ProyeksiApp includes an utility to automatically perform the upgrade for you. Assuming you followed the standard installation procedure, the folder (within the docker container) containing your PostgreSQL data will be located at `/var/openproject/pgdata`.
 
 Then the goal is to take this folder, and apply `pg_upgrade` on it. This will generate an upgraded cluster in another folder. We can finally switch the old postgres folder with the upgraded one and restart the container.
 
@@ -153,7 +153,7 @@ sudo mv /var/lib/openproject/pgdata /var/lib/openproject/pgdata-prev
 sudo mv /var/lib/openproject/pgdata-next /var/lib/openproject/pgdata
 ```
 
-Finally, you can restart OpenProject with the same command that you used before. For instance:
+Finally, you can restart ProyeksiApp with the same command that you used before. For instance:
 
 docker run -d -p 8080:80 --name openproject -e SECRET_KEY_BASE=secret \
   -v /var/lib/openproject/pgdata:/var/openproject/pgdata \
@@ -174,7 +174,7 @@ sudo mv /var/lib/openproject/pgdata /var/lib/openproject/pgdata-next
 sudo mv /var/lib/openproject/pgdata-prev /var/lib/openproject/pgdata
 ```
 
-And then restart OpenProject.
+And then restart ProyeksiApp.
 
 [all-in-one-docker-installation]: ../../installation/docker/#all-in-one-container
 

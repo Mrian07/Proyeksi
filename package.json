@@ -1,5 +1,5 @@
 {
-  "name": "openproject",
+  "name": "proyeksiapp",
   "version": "0.1.0",
   "scripts": {
     "postinstall": "cd frontend && npm install",

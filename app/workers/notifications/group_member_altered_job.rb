@@ -7,7 +7,7 @@ class Notifications::GroupMemberAlteredJob < ApplicationJob
 
   def perform(members_ids, message)
     each_member(members_ids) do |member|
-      OpenProject::Notifications.send(event_type(member),
+      ProyeksiApp::Notifications.send(event_type(member),
                                       member: member,
                                       message: message)
     end
@@ -17,9 +17,9 @@ class Notifications::GroupMemberAlteredJob < ApplicationJob
 
   def event_type(member)
     if matching_timestamps?(member)
-      OpenProject::Events::MEMBER_CREATED
+      ProyeksiApp::Events::MEMBER_CREATED
     else
-      OpenProject::Events::MEMBER_UPDATED
+      ProyeksiApp::Events::MEMBER_UPDATED
     end
   end
 

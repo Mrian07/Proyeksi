@@ -19,7 +19,7 @@
 class Activities::BaseActivityProvider
   include I18n
   include Redmine::I18n
-  include OpenProject::StaticRouting
+  include ProyeksiApp::StaticRouting
 
   class_attribute :activity_provider_options
 
@@ -250,6 +250,6 @@ class Activities::BaseActivityProvider
   end
 
   def url_helpers
-    @url_helpers ||= OpenProject::StaticRouting::StaticUrlHelpers.new
+    @url_helpers ||= ProyeksiApp::StaticRouting::StaticUrlHelpers.new
   end
 end

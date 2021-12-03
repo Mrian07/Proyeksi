@@ -24,11 +24,11 @@ hr:
       Pohranite svoj prilagođeni avatar dimenzija 128 s 128 piksela. Datoteke većih dimenzija bit će smanjene i izrezane. Kad odaberete sliku, pregled Vašeg avatara bit će prikazan prije pohranjivanja.
     text_change_gravatar_html: 'Kako biste promijenili ili dodali Gravatar za Vašu mail adresu, odite na %{gravatar_url}'
     text_your_local_avatar: |
-      OpenProject Vam omogućava pohranjivanje vlastitog prilagođenog avatara.
+      ProyeksiApp Vam omogućava pohranjivanje vlastitog prilagođenog avatara.
     text_local_avatar_over_gravatar: |
       Ako ste ga postavili, ovaj prilagođeni avatar koristi se umjesto gravatara iznad.
     text_your_current_gravatar: |
-      OpenProject koristi ili Vaš gravatar ako ste ga registrirali ili zadanu sliku ili ikonu ako ona postoji.
+      ProyeksiApp koristi ili Vaš gravatar ako ste ga registrirali ili zadanu sliku ili ikonu ako ona postoji.
       Trenutni gravatar izgleda ovako:
     settings:
       enable_gravatars: 'Dozvoli korisničke gravatare'

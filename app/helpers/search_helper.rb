@@ -71,7 +71,7 @@ module SearchHelper
   end
 
   def type_label(t)
-    OpenProject::GlobalSearch.tab_name(t)
+    ProyeksiApp::GlobalSearch.tab_name(t)
   end
 
   def current_scope
@@ -111,7 +111,7 @@ module SearchHelper
   end
 
   def only_if_tsv_supported(event)
-    if EnterpriseToken.allows_to?(:attachment_filters) && OpenProject::Database.allows_tsv? && event.respond_to?(:attachments)
+    if EnterpriseToken.allows_to?(:attachment_filters) && ProyeksiApp::Database.allows_tsv? && event.respond_to?(:attachments)
       yield
     end
   end

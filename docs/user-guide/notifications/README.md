@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Notifications
   priority: 590
-description: In-app notifications in OpenProject
+description: In-app notifications in ProyeksiApp
 robots: index, follow
 keywords: notifications
 ---
@@ -10,11 +10,11 @@ keywords: notifications
 
 This section will introduce in-app notifications and explain how to work with them. 
 
-In-app notifications are a tool to get notified about requests, changes and new assignments in OpenProject. The notifications can work as an alternative to email notification, or be used in parallel. This feature is enabled by default.
+In-app notifications are a tool to get notified about requests, changes and new assignments in ProyeksiApp. The notifications can work as an alternative to email notification, or be used in parallel. This feature is enabled by default.
 
 ## Accessing in-app notifications
 
-Whenever you are getting in-app notification, a red elliptical with the number of notifications is displayed on the bell symbol on the upper right side of the OpenProject screen between the module button and the help button. (Please note, if there are more than 99 notifications, the elliptical will simply be red without a number in it).
+Whenever you are getting in-app notification, a red elliptical with the number of notifications is displayed on the bell symbol on the upper right side of the ProyeksiApp screen between the module button and the help button. (Please note, if there are more than 99 notifications, the elliptical will simply be red without a number in it).
 
 
 
@@ -36,7 +36,7 @@ By clicking on a row in the notification center, you will see the details in the
 
 ![notification-center](notification-center-16366289566021.png)
 
-To make viewing notifications more manageable, OpenProject includes several ways to filter or group notifications.
+To make viewing notifications more manageable, ProyeksiApp includes several ways to filter or group notifications.
 
 You can filter or group the notifications using the two areas in the left menu bar (1 and 2), or bulk edit notifications by selecting options in the top right (3) of the screen:
 

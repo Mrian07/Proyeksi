@@ -4,7 +4,7 @@
 
 module Bim::Bcf::API::V2_1
   class Auth::SingleRepresenter < BaseRepresenter
-    include OpenProject::StaticRouting::UrlHelpers
+    include ProyeksiApp::StaticRouting::UrlHelpers
 
     property :oauth2_auth_url,
              getter: ->(decorator:, **) {

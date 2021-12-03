@@ -2,13 +2,13 @@
 sidebar_navigation:
   title: Two-factor authentication
   priority: 700
-description: configure two-factor authentication for OpenProject.
+description: configure two-factor authentication for ProyeksiApp.
 robots: index, follow
 keywords: two-factor authentication
 ---
 # Two-factor authentication (Premium feature)
 
-To activate and **configure two-factor authentication** for OpenProject, navigate to -> *Administration* -> *Authentication* and choose -> *two-factor authentication*.
+To activate and **configure two-factor authentication** for ProyeksiApp, navigate to -> *Administration* -> *Authentication* and choose -> *two-factor authentication*.
 
 You can configure the following options:
 

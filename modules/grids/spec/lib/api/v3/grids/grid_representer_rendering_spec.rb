@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe ::API::V3::Grids::GridRepresenter, 'rendering' do
-  include OpenProject::StaticRouting::UrlHelpers
+  include ProyeksiApp::StaticRouting::UrlHelpers
   include API::V3::Utilities::PathHelper
 
   let(:grid) do
@@ -49,7 +49,7 @@ describe ::API::V3::Grids::GridRepresenter, 'rendering' do
   let(:attachment_addable) { true }
 
   before do
-    OpenProject::Cache.clear
+    ProyeksiApp::Cache.clear
 
     allow(::Grids::Configuration)
       .to receive(:writable?)

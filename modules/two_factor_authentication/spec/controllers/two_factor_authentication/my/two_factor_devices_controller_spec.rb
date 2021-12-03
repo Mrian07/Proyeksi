@@ -10,11 +10,11 @@ describe ::TwoFactorAuthentication::My::TwoFactorDevicesController, with_2fa_ee:
 
   before do
     allow(User).to receive(:current).and_return(logged_in_user)
-    allow(OpenProject::Configuration).to receive(:[]).and_call_original
-    allow(OpenProject::Configuration)
+    allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
+    allow(ProyeksiApp::Configuration)
       .to receive(:[]).with('2fa')
       .and_return({ active_strategies: active_strategies }.merge(config).with_indifferent_access)
-    allow(OpenProject::TwoFactorAuthentication::TokenStrategyManager)
+    allow(ProyeksiApp::TwoFactorAuthentication::TokenStrategyManager)
       .to receive(:add_default_strategy?)
       .and_return false
   end

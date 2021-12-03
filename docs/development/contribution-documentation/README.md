@@ -2,28 +2,28 @@
 sidebar_navigation:
   title: Contribute to documentation
   priority: 999
-description: Overview of the OpenProject documentation
+description: Overview of the ProyeksiApp documentation
 robots: index, follow
 keywords: contribution, documentation, documentation process
 ---
 
-# Contribute to the OpenProject documentation
+# Contribute to the ProyeksiApp documentation
 
 
 
-## What does the OpenProject documentation entail?
+## What does the ProyeksiApp documentation entail?
 
-The OpenProject documentation makes available user guides, system admin, installation and operation, API as well as development guides and release notes.
+The ProyeksiApp documentation makes available user guides, system admin, installation and operation, API as well as development guides and release notes.
 
-Current and future users of the application find instructions for the set up and configuration of OpenProject in the documentation. Furthermore, it contains use cases and usage instructions for all OpenProject features and the use of OpenProject with other applications.
+Current and future users of the application find instructions for the set up and configuration of ProyeksiApp in the documentation. Furthermore, it contains use cases and usage instructions for all ProyeksiApp features and the use of ProyeksiApp with other applications.
 
 This documentation evolves continuously with new features and improvements to achieve clarity, accuracy, and completeness.
 
  
 
-## Where to find the OpenProject documentation?
+## Where to find the ProyeksiApp documentation?
 
-The documentation for OpenProject is published [here](https://www.openproject.org/docs/). You can also access the documentation from your OpenProject application under user guides and API documentation below the question mark at the top right in the header menu. 
+The documentation for ProyeksiApp is published [here](https://www.openproject.org/docs/). You can also access the documentation from your ProyeksiApp application under user guides and API documentation below the question mark at the top right in the header menu. 
 
 
 
@@ -35,7 +35,7 @@ Being proudly open source, we invite anyone in our community to contribute to ou
 
 ## What can you contribute to the documentation?
 
-Documentation improvements and changes apply to the documentation described in the section above. Documentation changes are **not** changes or additions to the code of the OpenProject application. For contributions to the code, see our [product development guide](../product-development-handbook/#openproject-product-development-handbook). 
+Documentation improvements and changes apply to the documentation described in the section above. Documentation changes are **not** changes or additions to the code of the ProyeksiApp application. For contributions to the code, see our [product development guide](../product-development-handbook/#openproject-product-development-handbook). 
 
 We are looking forward to receiving the following contributions from you:
 
@@ -63,4 +63,4 @@ We are looking forward to receiving the following contributions from you:
 
 
 
-With this guide for contributing to the OpenProject documentation we followed and took inspiration from the [Contribute to GitLab guide](https://about.gitlab.com/community/contribute/). 
+With this guide for contributing to the ProyeksiApp documentation we followed and took inspiration from the [Contribute to GitLab guide](https://about.gitlab.com/community/contribute/). 

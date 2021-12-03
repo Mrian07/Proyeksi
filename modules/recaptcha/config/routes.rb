@@ -1,4 +1,4 @@
-OpenProject::Application::routes.draw do
+ProyeksiApp::Application::routes.draw do
   namespace 'recaptcha' do
     get :settings, to: 'admin#show'
     post :settings, to: 'admin#update'

@@ -1,9 +1,9 @@
 
 
-if OpenProject::Configuration.blacklisted_routes.any?
+if ProyeksiApp::Configuration.blacklisted_routes.any?
   # Block logins from a bad user agent
   Rack::Attack.blocklist('block forbidden routes') do |req|
-    regex = OpenProject::Configuration.blacklisted_routes.map! { |str| Regexp.new(str) }
+    regex = ProyeksiApp::Configuration.blacklisted_routes.map! { |str| Regexp.new(str) }
     regex.any? { |i| i =~ req.path }
   end
 

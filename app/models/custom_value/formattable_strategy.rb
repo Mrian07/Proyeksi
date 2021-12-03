@@ -5,7 +5,7 @@
 class
   CustomValue::FormattableStrategy < CustomValue::FormatStrategy
   def formatted_value
-    OpenProject::TextFormatting::Renderer.format_text value
+    ProyeksiApp::TextFormatting::Renderer.format_text value
   end
 
   def typed_value

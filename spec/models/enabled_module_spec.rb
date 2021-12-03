@@ -97,8 +97,8 @@ describe EnabledModule, type: :model do
 
       before do
         allow(Setting).to receive(:enabled_scm).and_return(['git'])
-        allow(OpenProject::Configuration).to receive(:[]).and_call_original
-        allow(OpenProject::Configuration).to receive(:[]).with('scm').and_return(config)
+        allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
+        allow(ProyeksiApp::Configuration).to receive(:[]).with('scm').and_return(config)
       end
 
       it 'creates a repository of the given vendor' do

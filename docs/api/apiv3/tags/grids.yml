@@ -1,6 +1,6 @@
 ---
 description: |-
-  A grid is a layout for a page or a part of the page of the OpenProject application. It defines the structure (number of rows and number of columns) as well as the contents of the page.
+  A grid is a layout for a page or a part of the page of the ProyeksiApp application. It defines the structure (number of rows and number of columns) as well as the contents of the page.
 
   The contents is defined by `GridWidget`s. While a `GridWidget` is it's own type, it is not a resource in it's own right as it is an intrinsic part of a `Grid`.
 

@@ -176,7 +176,7 @@ RSpec.feature 'Work package navigation', js: true, selenium: true do
     # Click on All open
     find('.op-sidemenu--item-action', text: 'All open').click
 
-    if OpenProject::Configuration.bim?
+    if ProyeksiApp::Configuration.bim?
       wp_display.expect_state 'Cards'
     else
       wp_display.expect_state 'Table'

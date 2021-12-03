@@ -289,7 +289,7 @@ describe WorkPackage, type: :model do
           wp.custom_value_for(custom_field_2.id).value
         end
 
-        it { is_expected.to eql(OpenProject::Database::DB_VALUE_TRUE) }
+        it { is_expected.to eql(ProyeksiApp::Database::DB_VALUE_TRUE) }
       end
     end
 

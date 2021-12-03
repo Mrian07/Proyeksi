@@ -31,7 +31,7 @@ describe 'BCF XML API v1 bcf_xml resource', type: :request do
   before do
     login_as(current_user)
 
-    OpenProject::Cache.clear
+    ProyeksiApp::Cache.clear
   end
 
   describe 'GET /api/bcf_xml_api/v1/projects/<project>/bcf_xml' do
@@ -55,7 +55,7 @@ describe 'BCF XML API v1 bcf_xml resource', type: :request do
 
       it 'responds with correct Content-Disposition' do
         expect(subject.header["Content-Disposition"])
-          .to match(/attachment; filename="OpenProject_Work_packages_\d\d\d\d-\d\d-\d\d.bcf"/)
+          .to match(/attachment; filename="ProyeksiApp_Work_packages_\d\d\d\d-\d\d-\d\d.bcf"/)
       end
 
       it 'responds with a correct .bcf file in the body ' do

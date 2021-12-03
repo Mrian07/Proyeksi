@@ -185,7 +185,7 @@ description: |-
 
   ## Formattable Text
 
-  OpenProject supports text formatting in Markdown. Properties that contain formattable text have a special representation in this API. In this specification their
+  ProyeksiApp supports text formatting in Markdown. Properties that contain formattable text have a special representation in this API. In this specification their
   type is indicated as `Formattable`. Their representation contains the following properties:
 
   | Property | Description                                        | Type   | Example                            | Supported operations |
@@ -246,7 +246,7 @@ description: |-
   ## Digests
 
   Digests (or Hashes) are one way functions that map data of arbitrary size to data of a fixed size.
-  In OpenProject they are for example used to calculate checksums for (attachment) files.
+  In ProyeksiApp they are for example used to calculate checksums for (attachment) files.
   The checksum calculated depends on the hashed data and the algorithm used as hash function.
 
   Therefore all digests are represented in the following form:

@@ -12,7 +12,7 @@
 
 ## 1.0.0.pre3
 
-* Set Gem homepage to openproject.org project
+* Set Gem homepage to proyeksiapp.org project
 * Rename issue to work_package
 
 ## 1.0.0.pre2

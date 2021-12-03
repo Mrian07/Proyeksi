@@ -47,7 +47,7 @@ describe 'Filter by backlog type', js: true do
     work_package_with_story_type
 
     allow(Setting)
-      .to receive(:plugin_openproject_backlogs)
+      .to receive(:plugin_proyeksiapp_backlogs)
       .and_return('story_types' => [story_type.id.to_s],
                   'task_type' => task_type.id.to_s)
 

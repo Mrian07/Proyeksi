@@ -14,7 +14,7 @@ shared_examples 'avatar management' do
 
   before do
     allow(Setting)
-      .to receive(:plugin_openproject_avatars)
+      .to receive(:plugin_proyeksiapp_avatars)
       .and_return(plugin_settings)
   end
 

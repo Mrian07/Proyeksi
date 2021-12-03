@@ -2,9 +2,9 @@
 
 
 
-require 'open_project/access_control'
+require 'proyeksi_app/access_control'
 
-OpenProject::AccessControl.map do |map|
+ProyeksiApp::AccessControl.map do |map|
   map.project_module nil, order: 100 do
     map.permission :add_project,
                    { projects: %i[new] },
@@ -16,7 +16,7 @@ OpenProject::AccessControl.map do |map|
                    { backups: %i[index] },
                    require: :loggedin,
                    global: true,
-                   enabled: -> { OpenProject::Configuration.backup_enabled? }
+                   enabled: -> { ProyeksiApp::Configuration.backup_enabled? }
 
     map.permission :manage_user,
                    {

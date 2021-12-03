@@ -3,7 +3,7 @@ module OAuth
     class RowCell < ::RowCell
       include ::IconsHelper
       include ::OAuthHelper
-      include ::OpenProject::ObjectLinking
+      include ::ProyeksiApp::ObjectLinking
 
       def application
         model

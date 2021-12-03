@@ -28,8 +28,8 @@ sl:
         main-menu-hover-font-color: "Pisava glavnega menija, ko z miško lebdimo nad vsebino"
         main-menu-border-color: "Meja glavnega menija"
       custom_colors: "Barve po meri"
-      customize: "Prilagodite namestitev OpenProject z lastnim logotipom. Opomba: Ta logotip bo javno dostopen."
-      enterprise_notice: "Kot posebna zahvala zaradi njihovega finančnega prispevka za razvoj OpenProject, je ta drobna funkcija na voljo samo naročnikom podpore za Enterprise Edition."
+      customize: "Prilagodite namestitev ProyeksiApp z lastnim logotipom. Opomba: Ta logotip bo javno dostopen."
+      enterprise_notice: "Kot posebna zahvala zaradi njihovega finančnega prispevka za razvoj ProyeksiApp, je ta drobna funkcija na voljo samo naročnikom podpore za Enterprise Edition."
       manage_colors: "Uredi možnosti izbire barve"
       instructions:
         alternative-color: "Močna poudarjena barva, ki se običajno uporablja za najpomembnejši gumb na zaslonu."
@@ -81,36 +81,36 @@ sl:
       name: Samovoljno ime povezave LDAP
       host: Ime gostitelja LDAP ali IP naslov
       login_map: Atributni ključ v LDAP, ki se uporablja za identifikacijo edinstvene uporabniške prijave. Običajno bo to "uid" ali "samImeRačuna".
-      generic_map: Atributni ključ v LDAP, ki je preslikan na OpenProject '%{attribute}' atribut
-      admin_map_html: "Neobvezno: atributski ključ v LDAP-u, ki <strong> če je prisoten </strong>, uporabnika OpenProject označi kot skrbnika. Pustite prazno, ko ste v dvomih."
+      generic_map: Atributni ključ v LDAP, ki je preslikan na ProyeksiApp '%{attribute}' atribut
+      admin_map_html: "Neobvezno: atributski ključ v LDAP-u, ki <strong> če je prisoten </strong>, uporabnika ProyeksiApp označi kot skrbnika. Pustite prazno, ko ste v dvomih."
       system_user_dn_html: |
         Vnesite DN uporabnika sistema, ki se uporablja za dostop samo za branje.
         <br/>
         Primer: uid = openproject, ou = sistem, dc = primer, dc = com
       system_user_password: Vnesite geslo za vezavo uporabnika sistema
       base_dn: |
-        Vnesite Base DN poddrevesa v LDAP, če želite, da vam OpenProject išče uporabnike ter skupine.
-        OpenProject bo filtriral samo za podana uporabniška imena v tem podrevjuju.
+        Vnesite Base DN poddrevesa v LDAP, če želite, da vam ProyeksiApp išče uporabnike ter skupine.
+        ProyeksiApp bo filtriral samo za podana uporabniška imena v tem podrevjuju.
         Primer: ou=users,dc=example,dc=com
       filter_string: |
         Dodajte neobvezni RFC4515 filter, ki se bo uporabil za rezultate, vrnjene za uporabnike, filtrirane v LDAP.
-        S tem lahko omejite nabor uporabnikov, ki jih OpenProject najde za preverjanje pristnosti in skupinsko sinhronizacijo.
+        S tem lahko omejite nabor uporabnikov, ki jih ProyeksiApp najde za preverjanje pristnosti in skupinsko sinhronizacijo.
       filter_string_concat: |
-        OpenProject bo vedno filtriral atribut za prijavo, ki ga je uporabnik določil za identifikacijo zapisa. Če vstavite filter tu,
+        ProyeksiApp bo vedno filtriral atribut za prijavo, ki ga je uporabnik določil za identifikacijo zapisa. Če vstavite filter tu,
         bo združen z AND. Privzeto bo kot element (objectClass = *) uporabljen kot filter.
       onthefly_register: |
-        Če potrdite to polje, bo OpenProject samodejno ustvaril nove uporabnike iz njihovih vnosov LDAP, ko se prvič potrdijo z OpenProject.
-        Pustite to polje brez potrditve, da samo obstoječim računom v programu OpenProject dovolite avtentikacijo preko LDAP.
+        Če potrdite to polje, bo ProyeksiApp samodejno ustvaril nove uporabnike iz njihovih vnosov LDAP, ko se prvič potrdijo z ProyeksiApp.
+        Pustite to polje brez potrditve, da samo obstoječim računom v programu ProyeksiApp dovolite avtentikacijo preko LDAP.
     connection_encryption: 'Šifriranje povezave'
     system_account: 'Sistemski račun'
     system_account_legend: |
-      OpenProject zahteva dostop "samo za branje" prek sistemskega računa za iskanje uporabnikov in skupin v vašem drevesu LDAP.
+      ProyeksiApp zahteva dostop "samo za branje" prek sistemskega računa za iskanje uporabnikov in skupin v vašem drevesu LDAP.
       V naslednjem razdelku navedite povezovalne poverilnice za tega uporabnika sistema.
     ldap_details: 'LDAP nastavitve'
     user_settings: 'Povezovanje lastnosti'
     user_settings_legend: |
-      Naslednja polja so povezana s tem, kako so uporabniki v OpenProject ustvarjeni iz vnosov LDAP in
-      kateri atributi LDAP se uporabljajo za definiranje atributov uporabnika OpenProject (preslikava atributov).
+      Naslednja polja so povezana s tem, kako so uporabniki v ProyeksiApp ustvarjeni iz vnosov LDAP in
+      kateri atributi LDAP se uporabljajo za definiranje atributov uporabnika ProyeksiApp (preslikava atributov).
     tls_mode:
       plain: 'Brez'
       simple_tls: 'simple_tls'
@@ -521,7 +521,7 @@ sl:
         confirmation: "se ne ujema %{attribute}"
         could_not_be_copied: "%{dependency} ni bilo mogoče (v celoti) kopirati."
         does_not_exist: "ne obstaja"
-        error_enterprise_only: "je na voljo samo v OpenProject Enterprise Edition"
+        error_enterprise_only: "je na voljo samo v ProyeksiApp Enterprise Edition"
         error_unauthorized: "morda ni mogoče dostopati."
         error_readonly: "poskušano je bilo napisati, vendar ni mogoče pisati."
         email: "is not a valid email address."
@@ -876,7 +876,7 @@ sl:
       heading_reset: "Ponastavi žeton za varnostno kopiranje"
       heading_create: "Ustvari žeton za varnostno kopiranje"
       implications: >
-        Aktiviranje varnostnih kopij bo kateremu koli uporabniku z zahtevanimi dovoljenji in tem žetonom omogočilo prenos var. kopije, ki vsebuje vse podatke te OpenProject instalacije. To vključuje tudi podatke vseh drugih uporabnikov
+        Aktiviranje varnostnih kopij bo kateremu koli uporabniku z zahtevanimi dovoljenji in tem žetonom omogočilo prenos var. kopije, ki vsebuje vse podatke te ProyeksiApp instalacije. To vključuje tudi podatke vseh drugih uporabnikov
       info: >
         Za kreiranje varnostne kopije morate najprej ustvariti žeton za varnostno kopiranje. Vsakič, ko želite kreirati var. kopijo, morate podati ta žeton. Žeton lahko izbrišete, če želite onemogočiti kreiranje var. kopij za tega uporabnika.
       verification: >
@@ -1220,7 +1220,7 @@ sl:
   error_can_not_unarchive_project: "Tega projekta ni mogoče dearhivirati: %{errors}"
   error_check_user_and_role: "Izberite uporabnika in vlogo."
   error_code: "Napaka %{code}"
-  error_cookie_missing: 'Piškotek OpenProject manjka. Prepričajte se, da so piškotki omogočeni, saj ta aplikacija ne bo pravilno delovala brez.'
+  error_cookie_missing: 'Piškotek ProyeksiApp manjka. Prepričajte se, da so piškotki omogočeni, saj ta aplikacija ne bo pravilno delovala brez.'
   error_custom_option_not_found: "Možnost ne obstaja."
   error_enterprise_activation_user_limit: "Vašega računa ni bilo mogoče aktivirati (dosežena uporabniška omejitev). Če želite dobiti dostop, se obrnite na skrbnika."
   error_enterprise_token_invalid_domain: "Podjetniška verzija ni aktivna. Domena vašega žetona podjetja (%{actual}) se ne ujema z imenom gostitelja sistema (%{expected})."
@@ -1234,7 +1234,7 @@ sl:
   error_work_package_done_ratios_not_updated: "Razmerja opravljenega delovnega/ zahtevka paketa niso posodobljena."
   error_work_package_not_found_in_project: "Delovnega paketa/ zahtevka ni bilo mogoče najti ali ne spada v ta projekt"
   error_must_be_project_member: "mora biti član projekta"
-  error_migrations_are_pending: "Vaša namestitev OpenProject ima čakajoče selitve baze podatkov. Verjetno ste zamudili izvajanje migracij ob zadnji nadgradnji. Preverite vodnik za nadgradnjo, da pravilno nadgradite namestitev."
+  error_migrations_are_pending: "Vaša namestitev ProyeksiApp ima čakajoče selitve baze podatkov. Verjetno ste zamudili izvajanje migracij ob zadnji nadgradnji. Preverite vodnik za nadgradnjo, da pravilno nadgradite namestitev."
   error_migrations_visit_upgrade_guides: "Obiščite našo dokumentacijo z navodili za nadgradnjo"
   error_no_default_work_package_status: "Ni definirano privzetega stanja delovnega paketa/ zahtevka. Preverite konfiguracijo (pojdite na \"Administracija -> Stanje zahtevka/ delovnega paketa\")."
   error_no_type_in_project: "Noben tip ni povezan s tem projektom. Prosimo preverite nastavitve projekta."
@@ -1308,7 +1308,7 @@ sl:
       no_visible_projects: "V tem primeru ni vidnih projektov."
       users: "Najnovejši registrirani uporabniki v tem primeru."
     blocks:
-      community: "Skupnost OpenProject"
+      community: "Skupnost ProyeksiApp"
       upsale:
         title: "Nadgradite v Enterprise Edition"
         more_info: "Več informacij"
@@ -1319,7 +1319,7 @@ sl:
       faq: "FAQ"
       glossary: "Slovar"
       shortcuts: "Bližnjice"
-      blog: "Blog OpenProject"
+      blog: "Blog ProyeksiApp"
       forums: "Forum skupnosti"
       newsletter: "Varnostna opozorila / Glasilo"
   image_conversion:
@@ -1360,9 +1360,9 @@ sl:
         watched: "You are watching %{work_package}"
     update_info_mail:
       body: >
-        We are excited to announce the release of OpenProject 12.0. It's a major release that will hopefully significantly improve the way you use OpenProject.
+        We are excited to announce the release of ProyeksiApp 12.0. It's a major release that will hopefully significantly improve the way you use ProyeksiApp.
 
-        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in OpenProject. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
+        Starting with this release, we are introducing in-app notifications. From now on, you will receive notifications for updates to work packages directly in ProyeksiApp. You can mark these notifications as read, reply to a comment or even directly modify work package attributes without leaving the notification center.
 
         This also means that we will no longer be using emails for notifications. We think the new notification center is a better place to view and act upon these updates. Nevertheless, if you would like continue receiving updates via email, you can choose to receive daily email reminders at particular times of your choosing.
 
@@ -1371,7 +1371,7 @@ sl:
         We hope you find in-app notifications useful and that they makes you even more productive.
 
         Sincerely,
-        The OpenProject team
+        The ProyeksiApp team
       body_header: 'Version 12.0 with Notification Center'
       body_subheader: 'Novice'
       subject: 'Important changes to notifications with the release of 12.0'
@@ -1684,7 +1684,7 @@ sl:
   label_open_menu: "Odpri meni"
   label_open_work_packages: "odpri"
   label_open_work_packages_plural: "odpri"
-  label_openproject_website: "Spletno mesto OpenProject"
+  label_openproject_website: "Spletno mesto ProyeksiApp"
   label_optional_description: "Opis"
   label_options: "Možnosti"
   label_other: "Drugo"
@@ -1986,17 +1986,17 @@ sl:
   mail_body_backup_token_reset_user_info: Vaš žeton je ponastavljen.
   mail_body_backup_token_info: Prejšnji žeton ni več veljaven.
   mail_body_backup_waiting_period: Novi žeton bo omogočen v %{hours} urah.
-  mail_body_backup_token_warning: Če to niste bili vi, se takoj prijavite v OpenProject in ponovno ponastavite.
+  mail_body_backup_token_warning: Če to niste bili vi, se takoj prijavite v ProyeksiApp in ponovno ponastavite.
   mail_body_lost_password: "Za spremembo glesla kliknite na naslednjo povezavo:"
-  mail_body_register: "Dobrodošli v OpenProject. Aktivirajte svoj uporabniški račun s klikom na povezavo:"
+  mail_body_register: "Dobrodošli v ProyeksiApp. Aktivirajte svoj uporabniški račun s klikom na povezavo:"
   mail_body_register_header_title: "E-pošta člana projekta za vabilo"
   mail_body_register_user: "Dragi %{name},"
   mail_body_register_links_html: |
     Please feel free to browse our youtube channel (%{youtube_link}) where we provide a webinar (%{webinar_link})
-    and “Get started” videos (%{get_started_link}) to make your first steps in OpenProject as easy as possible.
+    and “Get started” videos (%{get_started_link}) to make your first steps in ProyeksiApp as easy as possible.
     <br />
     If you have any further questions, consult our documentation (%{documentation_link}) or contact your administrator.
-  mail_body_register_closing: "Tvoja OpenProject ekipa"
+  mail_body_register_closing: "Tvoja ProyeksiApp ekipa"
   mail_body_register_ending: "Ostanite povezani! Lep pozdrav,"
   mail_body_reminder: "%{count} delovni paketi, ki so vam dodeljeni bodo zapadli v naslednjih dneh: %{days}"
   mail_body_group_reminder: "%{count} delovni paketi, ki so dodeljeni skupini \"%{group}\" bodo zapadli v naslednjih %{days} dneh:"
@@ -2035,14 +2035,14 @@ sl:
   mail_user_activation_limit_reached:
     subject: Aktivacijski limit uporabnika je bil dosežen
     message: |
-      Nov uporabnik (%{email}) je poizkušal ustvariti račun v OpenProject okolju katerega nadzorujete vi (%{host}).
+      Nov uporabnik (%{email}) je poizkušal ustvariti račun v ProyeksiApp okolju katerega nadzorujete vi (%{host}).
       Uporabnik ne mora aktivirati računa, saj je bil limit uporabnikov dosežen.
     steps:
       label: "Da uporabniku dovolite, da se prijavi lahko:"
       a: "Nadgradite svoj naročniški plan ([here](upgrade_url))" #here turned into a link
       b: "Zaklenite ali izbrišite obstoječega uporabnika ([here](users_url))" #here turned into a link
   more_actions: "Več funkcij"
-  noscript_description: "Aktivirati morate JavaScript, če želite uporabljati OpenProject!"
+  noscript_description: "Aktivirati morate JavaScript, če želite uporabljati ProyeksiApp!"
   noscript_heading: "JavaScript onemogočen"
   noscript_learn_more: "Več o tem"
   notice_accessibility_mode: Način dostopa lahko omogočite v vašem [account settings](url).
@@ -2106,7 +2106,7 @@ sl:
   notice_wont_delete_auth_source: "\nNačina avtentikacije ni mogoče izbrisati dokler ga še vedno uporabljajo uporabniki."
   notice_project_cannot_update_custom_fields: "Projektnih dostopnih polj po meri ne morete posodobiti. Projekt je neveljaven: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Ta stran je bila avtomatično generirana med posodabljanjem OpenProjecta. Vsebuje vse priponke, ki so bile povezane z %{container_type} "%{container_name}".
+    Ta stran je bila avtomatično generirana med posodabljanjem ProyeksiAppa. Vsebuje vse priponke, ki so bile povezane z %{container_type} "%{container_name}".
   #Default format for numbers
   number:
     format:
@@ -2131,9 +2131,9 @@ sl:
           tb: "TB"
   onboarding:
     heading_getting_started: "Pridobite pregled"
-    text_getting_started_description: "Pridobite hiter pregled nad projektnim managementom ter skupinskim delovanjem z OpenProject"
+    text_getting_started_description: "Pridobite hiter pregled nad projektnim managementom ter skupinskim delovanjem z ProyeksiApp"
     text_show_again: "Ta video lahko ponovno zaženete preko menija za pomoč"
-    welcome: "Dobrodošli v OpenProject"
+    welcome: "Dobrodošli v ProyeksiApp"
     select_language: "Prosimo izberite jezik"
   permission_add_work_package_notes: "Dodaj zapiske"
   permission_add_work_packages: "Dodaj delovne pakete"
@@ -2192,7 +2192,7 @@ sl:
   permission_select_project_modules: "Izberi module projekta"
   permission_manage_types: "Izberi vrste"
   permission_view_calendar: "Poglej koledar"
-  permission_view_changesets: "Oglejte si revizije repozitorija v OpenProject"
+  permission_view_changesets: "Oglejte si revizije repozitorija v ProyeksiApp"
   permission_view_commit_author_statistics: "Oglejte si statistiko avtorjev"
   permission_view_work_package_watchers: "Oglej si listo spremeljevalcev"
   permission_view_work_packages: "Oglejte si delovne pakete"
@@ -2273,7 +2273,7 @@ sl:
     destroy:
       confirmation: "Če nadaljujete bo to permanentno izbrisalo upravljano odlagališče."
       info: "Brisanje odlagališča je nepovraten ukrep."
-      info_not_managed: "Opomba: To NE bo izbrisalo vsebine tega odlagališča, saj ni upravljan iz strani OpenProject."
+      info_not_managed: "Opomba: To NE bo izbrisalo vsebine tega odlagališča, saj ni upravljan iz strani ProyeksiApp."
       managed_path_note: "Sledeči direktorij bo izbrisan: %{path}"
       repository_verification: "Vpišite identifikator projekta %{identifier} ,da preverite izbris njegovega odlagališča."
       subtitle: "Ali res želite izbrisati %{repository_type} projekta %{project_name}?"
@@ -2287,8 +2287,8 @@ sl:
       empty_repository: "Odlagališče obstaja ampak je prazno. Zaenkrat še ne vsebuje revizij."
       exists_on_filesystem: "Direktorij odlagališča že obstaja v sistemu datotek."
       filesystem_access_failed: "Napaka se je pojavila med dostopanjem odlagališča v sistemu datotek: %{message}"
-      not_manageable: "Ta prodajalec odlagališč ne more biti upravljan z OpenProject."
-      path_permission_failed: "Napaka se je pojavila med ustvarjanjem sledeče poti: %{path}. Prosimo preverite, če lahko OpenProject dostopa do te mape."
+      not_manageable: "Ta prodajalec odlagališč ne more biti upravljan z ProyeksiApp."
+      path_permission_failed: "Napaka se je pojavila med ustvarjanjem sledeče poti: %{path}. Prosimo preverite, če lahko ProyeksiApp dostopa do te mape."
       unauthorized: "Niste odobreni ali pa vaše poverilnice niso veljavne za dostop do odlagališča."
       unavailable: "Repozitorij ni na voljo"
       exception_title: "Do skladišča ni mogoče dostopati:% {message}"
@@ -2305,9 +2305,9 @@ sl:
         path_encoding: "Preveri kodiranje Git poti (Privzeto: UTF-8)"
       local_title: "Povežite obstoječe lokalno Git skladišče"
       local_url: "Lokalni URL"
-      local_introduction: "Če imate obstoječe lokalno Git skladišče, ga lahko povežete z OpenProjectom, če želite dostopati do njega znotraj aplikacije."
-      managed_introduction: "Naj OpenProject samodejno ustvari in vključi lokalno Git skladišče avtomatično."
-      managed_title: "Git skladišče, integrirano v OpenProject"
+      local_introduction: "Če imate obstoječe lokalno Git skladišče, ga lahko povežete z ProyeksiAppom, če želite dostopati do njega znotraj aplikacije."
+      managed_introduction: "Naj ProyeksiApp samodejno ustvari in vključi lokalno Git skladišče avtomatično."
+      managed_title: "Git skladišče, integrirano v ProyeksiApp"
       managed_url: "Upravljani URL"
       path: "Pot do skladišča Git"
       path_encoding: "Kodiranje poti"
@@ -2324,19 +2324,19 @@ sl:
     scm_types:
       local: "Povezava obstoječe lokalne shrambe"
       existing: "Povezava obstoječe shrambe"
-      managed: "Ustvari novo shrambo v OpenProject"
+      managed: "Ustvari novo shrambo v ProyeksiApp"
     storage:
       not_available: "Poraba diskovne shrambe za to vrsto shrambo ni na voljo."
       update_timeout: "Zadnje potrebne podatke o diskovnem prostoru shranite za N minut.\nKer je lahko štetje potrebnega diskovnega prostora v skladišču drago, povečajte to vrednost, da zmanjšate njegov učinek na zmogljivost."
     subversion:
       existing_title: "Obstoječe skladišče podrazličice"
-      existing_introduction: "Če imate obstoječe skladišče podrazličic, ga lahko povežete z OpenProjectom, če želite dostopati do njega znotraj aplikacije."
+      existing_introduction: "Če imate obstoječe skladišče podrazličic, ga lahko povežete z ProyeksiAppom, če želite dostopati do njega znotraj aplikacije."
       existing_url: "Obstoječi URL"
       instructions:
         managed_url: "To je URL upravljanega (lokalnega) skladišča podrazličice."
         url: "Vnesite URL skladišča. To lahko cilja na lokalno skladišče (začenja z % {local_proto}) ali na oddaljeno skladišče.\nPodprte so naslednje sheme URL-jev:"
-      managed_title: "Subverzijsko skladišče, integrirano v OpenProject"
-      managed_introduction: "Naj OpenProject samodejno ustvari in vključi lokalno skladišče podrazličice."
+      managed_title: "Subverzijsko skladišče, integrirano v ProyeksiApp"
+      managed_introduction: "Naj ProyeksiApp samodejno ustvari in vključi lokalno skladišče podrazličice."
       managed_url: "Upravljani URL"
       password: "Geslo odlagališča"
       username: "Uporbniški ime odlagališča"
@@ -2353,7 +2353,7 @@ sl:
   setting_apiv3_cors_enabled: "Omogoči CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) dovoljen izvir"
   setting_apiv3_cors_origins_text_html: >
-    To so izviri, ki jim je dovoljeno dostopati do OpenProject API, če je CORS omogočen. <br/> Preverite <a href="%{origin_link}" target="_blank">dokumentacijo o glavi izvira</a> kako navesti pričakovane vrednosti.
+    To so izviri, ki jim je dovoljeno dostopati do ProyeksiApp API, če je CORS omogočen. <br/> Preverite <a href="%{origin_link}" target="_blank">dokumentacijo o glavi izvira</a> kako navesti pričakovane vrednosti.
   setting_apiv3_docs: "Dokumentacija"
   setting_apiv3_docs_enabled: "Enable docs page"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2513,7 +2513,7 @@ sl:
       sentence_connector: "in"
       skip_last_comma: "Napačno"
   text_accessibility_hint: "Način dostopnosti je zasnovan za uporabnike, ki so slepi, gibalno ovirani ali imajo slab vid. Pri slednjih so posebej poudarjeni osredotočeni elementi.  Upoštevajte da Backlogs modul ni na voljo v tem načinu."
-  text_access_token_hint: "Žetoni dostopa vam omogočajo, da zunanjim aplikacijam omogočite dostop do virov v OpenProjectu."
+  text_access_token_hint: "Žetoni dostopa vam omogočajo, da zunanjim aplikacijam omogočite dostop do virov v ProyeksiAppu."
   text_analyze: "Nadaljnja analiza: %{subject}"
   text_are_you_sure: "Ste prepričani?"
   text_are_you_sure_with_children: "Izbrišite delovni paket in vse njegove podrejene delovne pakete?"
@@ -2582,7 +2582,7 @@ sl:
   text_no_notes: "Za ta delovni paket ni komentarjev."
   text_notice_too_many_values_are_inperformant: "Opomba: Prikaz več kot 100 elementov na stran lahko podaljša čas nalaganja strani."
   text_notice_security_badge_displayed_html: >
-    Opomba: če je omogočena, se bo na nadzorni plošči <a href="%{ininform_panel_path}">% {information_panel_label} </a> prikazala značka s statusom namestitve in na domači strani. Prikaže se samo skrbnikom. <br/> Značka bo preverila vašo trenutno različico OpenProject glede na uradno bazo izdaje OpenProject in vas opozorila na morebitne posodobitve ali znane ranljivosti. Če želite več informacij o tem, kaj zagotavlja preverjanje, katere podatke potrebujete za zagotovitev razpoložljivih posodobitev in kako onemogočiti to preverjanje, obiščite <a href="%{more_info_url}"> konfiguracijsko dokumentacijo </a>.
+    Opomba: če je omogočena, se bo na nadzorni plošči <a href="%{ininform_panel_path}">% {information_panel_label} </a> prikazala značka s statusom namestitve in na domači strani. Prikaže se samo skrbnikom. <br/> Značka bo preverila vašo trenutno različico ProyeksiApp glede na uradno bazo izdaje ProyeksiApp in vas opozorila na morebitne posodobitve ali znane ranljivosti. Če želite več informacij o tem, kaj zagotavlja preverjanje, katere podatke potrebujete za zagotovitev razpoložljivih posodobitev in kako onemogočiti to preverjanje, obiščite <a href="%{more_info_url}"> konfiguracijsko dokumentacijo </a>.
   text_own_membership_delete_confirmation: "Odstranili boste nekaj ali vsa dovoljenja in po tem morda ne boste mogli več urejati tega projekta.\nAli ste prepričani, da želite nadaljevati?"
   text_plugin_assets_writable: "Imenik vtičnikov se lahko zapiše"
   text_powered_by: "Poganja% {link}"
@@ -2590,7 +2590,7 @@ sl:
   text_reassign: "Ponovno dodelitev delovnemu paketu:"
   text_regexp_info: "npr. ^[A-Z0-9]+$"
   text_regexp_multiline: 'Označba se uporablja v večvrstičnem načinu. npr. ^ --- \ s +'
-  text_repository_usernames_mapping: "Izberite ali posodobite uporabnika OpenProject, vezanega na vsako uporabniško ime, ki ga najdete v dnevniku repozitorija.\nUporabniki z istim uporabniškim imenom ali e-poštnim imenom skladišča OpenProject se samodejno povežejo."
+  text_repository_usernames_mapping: "Izberite ali posodobite uporabnika ProyeksiApp, vezanega na vsako uporabniško ime, ki ga najdete v dnevniku repozitorija.\nUporabniki z istim uporabniškim imenom ali e-poštnim imenom skladišča ProyeksiApp se samodejno povežejo."
   text_status_changed_by_changeset: "Dodano v zapis sprememb %{value}."
   text_table_difference_description: "V tej tabeli so prikazani posamezni% {entries}. Razliko med dvema vnosoma si lahko ogledate tako, da najprej izberete potrditvena polja v tabeli. Ko kliknete na gumb pod tabelo, so prikazane razlike."
   text_time_logged_by_changeset: "Dodano v zapis sprememb %{value}."
@@ -2797,7 +2797,7 @@ sl:
     activate_and_reset_failed_logins: "Aktivirajte in ponastavite neuspele prijave"
     authentication_provider: "Ponudnik overovitve"
     authentication_settings_disabled_due_to_external_authentication: >
-      Ta uporabnik overja prek zunanjega ponudnika overjanja, tako da v OpenProjectu ni gesla, ki bi ga bilo treba spremeniti.
+      Ta uporabnik overja prek zunanjega ponudnika overjanja, tako da v ProyeksiAppu ni gesla, ki bi ga bilo treba spremeniti.
     authorization_rejected: "Nimate dovoljenja za prijavo."
     assign_random_password: "Dodelite naključno geslo (poslano uporabniku po e-pošti)"
     blocked: "začasno zaklenjeno"
@@ -2830,7 +2830,7 @@ sl:
   warning: Opozorilo
   warning_attachments_not_saved: "%{count} datotek(e) ni bilo mogoče shraniti."
   warning_imminent_user_limit: >
-    Povabili ste več uporabnikov, kot jih podpira vaš trenutni načrt. Povabljeni uporabniki se ne bodo mogli pridružiti vašemu okolju OpenProject. <a href="%{upgrade_url}"> nadgradite svoj načrt </a> ali blokirajte obstoječe uporabnike, če želite povabljenim in registriranim uporabnikom omogočiti pridružitev.
+    Povabili ste več uporabnikov, kot jih podpira vaš trenutni načrt. Povabljeni uporabniki se ne bodo mogli pridružiti vašemu okolju ProyeksiApp. <a href="%{upgrade_url}"> nadgradite svoj načrt </a> ali blokirajte obstoječe uporabnike, če želite povabljenim in registriranim uporabnikom omogočiti pridružitev.
   warning_registration_token_expired: |
     E-poštno sporočilo za aktivacijo je poteklo. Poslali smo vam novo na% {email}.
     Kliknite povezavo v njej, da aktivirate svoj račun.
@@ -2964,11 +2964,11 @@ sl:
         confidential: "Preverite, ali se bo aplikacija uporabljala tam, kjer je lahko tajna stranke zaupna. Domače mobilne aplikacije in aplikacije za eno stran veljajo za nezaupne.\n"
         scopes: "Preverite področja uporabe, do katerih aplikacija lahko odobri dostop. Če obseg ni preverjen, se domneva, da je api_v3.\n"
         client_credential_user_id: "Izbirni ID uporabnika, da se predstavi, ko stranke uporabljajo to aplikacijo. Pustite prazno, če želite omogočiti samo javni dostop\n"
-        register_intro: "Če razvijate odjemalsko aplikacijo API OAuth za OpenProject, jo lahko registrirate s tem obrazcem za vse uporabnike."
+        register_intro: "Če razvijate odjemalsko aplikacijo API OAuth za ProyeksiApp, jo lahko registrirate s tem obrazcem za vse uporabnike."
         default_scopes: ""
     client_id: "ID odjemalca"
     client_secret_notice: >
-      To je edini čas, ko lahko natisnemo skrivnost stranke. Prosimo, zapišite jo in ohranite varno. To bi moralo biti obravnavano kot geslo in ga OpenProject ne more pozneje pridobiti.
+      To je edini čas, ko lahko natisnemo skrivnost stranke. Prosimo, zapišite jo in ohranite varno. To bi moralo biti obravnavano kot geslo in ga ProyeksiApp ne more pozneje pridobiti.
 
     authorization_dialog:
       authorize: "Avtorizacija"
@@ -2977,10 +2977,10 @@ sl:
       title: "Odobrite %{application_name}"
       wants_to_access_html: >
 
-        Ta aplikacija zahteva dostop do vašega računa OpenProject. <br/> <strong> Zahteval je naslednja dovoljenja: </strong>
+        Ta aplikacija zahteva dostop do vašega računa ProyeksiApp. <br/> <strong> Zahteval je naslednja dovoljenja: </strong>
     scopes:
       api_v3: "Polni API v3 dostop"
-      api_v3_text: "Aplikacija bo prejela popoln dostop za branje in pisanje do API-ja OpenProject v3 za izvajanje dejanj v vašem imenu."
+      api_v3_text: "Aplikacija bo prejela popoln dostop za branje in pisanje do API-ja ProyeksiApp v3 za izvajanje dejanj v vašem imenu."
     grants:
       created_date: "Odobreno na"
       scopes: "Dovoljenja"
@@ -2998,7 +2998,7 @@ sl:
     client_credentials_impersonation_set_to: "Uporabnik poverilnic uporabnika nastavljen na"
     client_credentials_impersonation_warning: "Opomba: Odjemalci, ki v tej aplikaciji uporabljajo tok »poverilnice strank«, bodo imeli pravice tega uporabnika"
     client_credentials_impersonation_html: >
-      OpenProject privzeto zagotavlja pooblastilo OAuth 2.0 prek %{authorization_code_flow_link}. Izbirno lahko omogočite %{client_credentials_flow_link}, vendar morate navesti uporabnika, po imenu katerega se bodo izvajale zahteve.
+      ProyeksiApp privzeto zagotavlja pooblastilo OAuth 2.0 prek %{authorization_code_flow_link}. Izbirno lahko omogočite %{client_credentials_flow_link}, vendar morate navesti uporabnika, po imenu katerega se bodo izvajale zahteve.
     authorization_error: "Prišlo je do napake v avtorizaciji."
     revoke_my_application_confirmation: "Ali res želite odstraniti to aplikacijo? To bo preklicalo %{token_count} aktivno."
     my_registered_applications: "Registrirane aplikacije OAuth"

@@ -123,14 +123,14 @@ pt:
         text_cannot_scan: |
           Se você não puder escanear o código, você pode digitar a manualmente usando os seguintes detalhes:
         description: |
-          Registre uma aplicação de autenticação para usar o OpenProject usando o padrão de autenticação de senha de uso único.
+          Registre uma aplicação de autenticação para usar o ProyeksiApp usando o padrão de autenticação de senha de uso único.
           Exemplos cotidianos são o Autenticador do Google ou Authy.
       sms:
         title: 'Use seu celular'
         redacted_identifier: 'Celular (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, nós enviamos a você um código de autenticação através do %{delivery_channel}'
         description: |
-          Registre seu número de celular pra enviar a senha de uso único do OpenProject.
+          Registre seu número de celular pra enviar a senha de uso único do ProyeksiApp.
     sns:
       delivery_failed: 'Falha ao entregar o SNS:'
     message_bird:

@@ -1,8 +1,8 @@
 # Use rack-timeout if we run in clustered mode with at least 2 workers
 # so that workers, should a timeout occur, can be restarted without interruption.
-if OpenProject::Configuration.web_workers >= 2
-  timeout = Integer(ENV['RACK_TIMEOUT_SERVICE_TIMEOUT'].presence || OpenProject::Configuration.web_timeout)
-  wait_timeout = Integer(ENV['RACK_TIMEOUT_WAIT_TIMEOUT'].presence || OpenProject::Configuration.web_wait_timeout)
+if ProyeksiApp::Configuration.web_workers >= 2
+  timeout = Integer(ENV['RACK_TIMEOUT_SERVICE_TIMEOUT'].presence || ProyeksiApp::Configuration.web_timeout)
+  wait_timeout = Integer(ENV['RACK_TIMEOUT_WAIT_TIMEOUT'].presence || ProyeksiApp::Configuration.web_wait_timeout)
 
   Rails.logger.debug { "Enabling Rack::Timeout (service=#{timeout}s wait=#{wait_timeout}s)" }
 
@@ -21,7 +21,7 @@ if OpenProject::Configuration.web_workers >= 2
     details = env[Rack::Timeout::ENV_INFO_KEY]
 
     if details.state == :timed_out && details.wait.present?
-      ::OpenProject.logger.error "Request timed out waiting to be served!"
+      ::ProyeksiApp.logger.error "Request timed out waiting to be served!"
     end
   end
 
@@ -37,7 +37,7 @@ if OpenProject::Configuration.web_workers >= 2
     end
   end
 
-  OpenProjectErrorHelper.prepend SuppressInternalErrorReportOnTimeout
+  ProyeksiAppErrorHelper.prepend SuppressInternalErrorReportOnTimeout
 else
   Rails.logger.debug { "Not enabling Rack::Timeout since we are not running in cluster mode with at least 2 workers" }
 end

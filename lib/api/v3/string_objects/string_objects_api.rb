@@ -5,7 +5,7 @@
 module API
   module V3
     module StringObjects
-      class StringObjectsAPI < ::API::OpenProjectAPI
+      class StringObjectsAPI < ::API::ProyeksiAppAPI
         resources :string_objects do
           params do
             requires :value, type: String

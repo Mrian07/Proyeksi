@@ -16,7 +16,7 @@ describe AvatarHelper, type: :helper, with_settings: { protocol: 'http' } do
 
   before do
     allow(Setting)
-      .to receive(:plugin_openproject_avatars)
+      .to receive(:plugin_proyeksiapp_avatars)
       .and_return(plugin_settings)
 
     allow(user).to receive(:local_avatar_attachment).and_return avatar_stub

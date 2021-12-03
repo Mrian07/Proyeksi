@@ -28,7 +28,7 @@ describe 'Enterprise Edition token domain', type: :feature, js: true do
         end
 
         it 'shows the token info' do
-          expect(body).to have_text 'operations@openproject.com'
+          expect(body).to have_text 'operations@proyeksiapp.com'
         end
       end
     end
@@ -62,7 +62,7 @@ describe 'Enterprise Edition token domain', type: :feature, js: true do
     end
 
     it 'shows the current token info' do
-      expect(body).to have_text 'operations@openproject.com'
+      expect(body).to have_text 'operations@proyeksiapp.com'
     end
 
     describe 'replacing the token' do

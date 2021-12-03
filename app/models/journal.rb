@@ -9,10 +9,10 @@ class Journal < ApplicationRecord
   include ::JournalFormatter
   include ::Acts::Journalized::FormatHooks
 
-  register_journal_formatter :diff, OpenProject::JournalFormatter::Diff
-  register_journal_formatter :attachment, OpenProject::JournalFormatter::Attachment
-  register_journal_formatter :custom_field, OpenProject::JournalFormatter::CustomField
-  register_journal_formatter :schedule_manually, OpenProject::JournalFormatter::ScheduleManually
+  register_journal_formatter :diff, ProyeksiApp::JournalFormatter::Diff
+  register_journal_formatter :attachment, ProyeksiApp::JournalFormatter::Attachment
+  register_journal_formatter :custom_field, ProyeksiApp::JournalFormatter::CustomField
+  register_journal_formatter :schedule_manually, ProyeksiApp::JournalFormatter::ScheduleManually
 
   # Make sure each journaled model instance only has unique version ids
   validates_uniqueness_of :version, scope: %i[journable_id journable_type]

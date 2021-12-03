@@ -31,7 +31,7 @@ Yes, that is in most cases the best solution.
 
 ## How are the Backlogs module, boards and versions related? Can I use boards with versions?
 
-In OpenProject, you can work agilely according to Scrum ([backlogs](../../backlogs-scrum)) or Kanban ([boards](../../agile-boards)). Versions in OpenProject represent a "container" that contains the work packages to be processed.
+In ProyeksiApp, you can work agilely according to Scrum ([backlogs](../../backlogs-scrum)) or Kanban ([boards](../../agile-boards)). Versions in ProyeksiApp represent a "container" that contains the work packages to be processed.
 Versions serve a double function: On the one hand, you can use them to plan your product releases, and on the other hand, you can use them to map the product backlog(s) and sprints required for Scrum.
 As soon as you have created at least one version in a project, the module "[Roadmap](../../roadmap)" is displayed on the left side in your project, which you can use to get an overview of the versions (intended primarily for releases).
 The [Backlogs module](../../backlogs-scrum) uses versions to map the product backlog or sprints. By using the backlog, however, some special rules occur: For example, tasks must be assigned to the same version as the associated (parent) work packages. 

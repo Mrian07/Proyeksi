@@ -12,10 +12,10 @@ describe SecurityBadgeHelper, type: :helper do
     it "generates a URL with the release API path and the details of the installation" do
       uri = URI.parse(helper.security_badge_url)
       query = Rack::Utils.parse_nested_query(uri.query)
-      expect(uri.host).to eq("releases.openproject.com")
+      expect(uri.host).to eq("releases.proyeksiapp.com")
       expect(query.keys).to match_array(["uuid", "type", "version", "db", "lang", "ee"])
       expect(query["uuid"]).to eq("abcd1234")
-      expect(query["version"]).to eq(OpenProject::VERSION.to_semver)
+      expect(query["version"]).to eq(ProyeksiApp::VERSION.to_semver)
       expect(query["type"]).to eq("manual")
       expect(query["ee"]).to eq("false")
     end

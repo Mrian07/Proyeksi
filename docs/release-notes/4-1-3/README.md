@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.1.3
+  title: ProyeksiApp 4.1.3
   sidebar_navigation:
       title: 4.1.3
   release_version: 4.1.3
@@ -7,11 +7,11 @@
 ---
 
 
-# OpenProject 4.1.3
+# ProyeksiApp 4.1.3
 
-OpenProject 4.1.3 contains a [security fix for
+ProyeksiApp 4.1.3 contains a [security fix for
 Ruby-on-Rails](http://weblog.rubyonrails.org/2015/6/16/Rails-3-2-22-4-1-11-and-4-2-2-have-been-released-and-more/)
-which is an important part of the software stack used by OpenProject
+which is an important part of the software stack used by ProyeksiApp
 ([\#20470](https://community.openproject.org/work_packages/20470)).
 
 In addition, a number of bug fixes are included in the new release:

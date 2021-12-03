@@ -3,7 +3,7 @@
 
 
 class Message < ApplicationRecord
-  include OpenProject::Journal::AttachmentHelper
+  include ProyeksiApp::Journal::AttachmentHelper
 
   belongs_to :forum
   has_one :project, through: :forum

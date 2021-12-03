@@ -1,0 +1,16 @@
+# Prevent load-order problems in case openproject-plugins is listed after a plugin in the Gemfile
+# or not at all
+require 'proyeksi_app/plugins'
+
+module ProyeksiApp::<%= plugin_name.camelcase %>
+  class Engine < ::Rails::Engine
+    engine_name :proyeksiapp_<%= plugin_name %>
+
+    include ProyeksiApp::Plugins::ActsAsOpEngine
+
+    register '<%= full_name %>',
+             :author_url => 'https://proyeksiapp.org',
+             :requires_proyeksiapp => '>= 6.0.0'
+
+  end
+end

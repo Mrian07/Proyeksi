@@ -51,7 +51,7 @@ describe ::API::V3::Relations::RelationRepresenter, type: :request do
     let(:user) { FactoryBot.create(:user) }
 
     it 'does not return any work packages' do
-      expect(result["errorIdentifier"]).to eq('urn:openproject-org:api:v3:errors:NotFound')
+      expect(result["errorIdentifier"]).to eq('urn:proyeksiapp-org:api:v3:errors:NotFound')
     end
   end
 

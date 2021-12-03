@@ -9,7 +9,7 @@ require 'relations/update_service'
 module API
   module V3
     module Relations
-      class RelationsAPI < ::API::OpenProjectAPI
+      class RelationsAPI < ::API::ProyeksiAppAPI
         resources :relations do
           get do
             scope = Relation

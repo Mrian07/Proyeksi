@@ -3,7 +3,7 @@
 module API
   module V3
     module WorkPackages
-      class WorkPackagesByProjectAPI < ::API::OpenProjectAPI
+      class WorkPackagesByProjectAPI < ::API::ProyeksiAppAPI
         resources :work_packages do
           helpers ::API::V3::WorkPackages::WorkPackagesSharedHelpers
 

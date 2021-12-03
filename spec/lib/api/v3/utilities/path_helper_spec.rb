@@ -11,10 +11,10 @@ describe ::API::V3::Utilities::PathHelper do
     end
 
     it 'prepends the sub uri if configured' do
-      allow(OpenProject::Configuration).to receive(:rails_relative_url_root)
-        .and_return('/open_project')
+      allow(ProyeksiApp::Configuration).to receive(:rails_relative_url_root)
+        .and_return('/proyeksi_app')
 
-      is_expected.to match("/open_project#{url}")
+      is_expected.to match("/proyeksi_app#{url}")
     end
   end
 

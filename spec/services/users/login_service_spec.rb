@@ -22,7 +22,7 @@ describe ::Users::LoginService, type: :model do
       end
 
       before do
-        allow(::OpenProject::Plugins::AuthPlugin)
+        allow(::ProyeksiApp::Plugins::AuthPlugin)
           .to(receive(:login_provider_for))
           .and_return sso_provider
 

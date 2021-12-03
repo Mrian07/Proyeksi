@@ -28,8 +28,8 @@ lt:
         main-menu-hover-font-color: "Pagrindinio meniu šriftas užvažiavus pele"
         main-menu-border-color: "Pagrindinio meniu kraštinės"
       custom_colors: "Pasirinktinės spalvos"
-      customize: "Suasmeninkite savo OpenProject įdiegtį su savo logotipu. Pastaba: šis logotipas bus matomas viešai."
-      enterprise_notice: "Kaip specialus „AČIŪ!“ už finansinę paramą kuriant OpenProject, ši mažytė funkcija galima naudoti tik „Enterprise Edition“ paramos prenumeratoriams."
+      customize: "Suasmeninkite savo ProyeksiApp įdiegtį su savo logotipu. Pastaba: šis logotipas bus matomas viešai."
+      enterprise_notice: "Kaip specialus „AČIŪ!“ už finansinę paramą kuriant ProyeksiApp, ši mažytė funkcija galima naudoti tik „Enterprise Edition“ paramos prenumeratoriams."
       manage_colors: "Redaguoti spalvos pasirinkimo variantus"
       instructions:
         alternative-color: "Stipri, akį rėžianti spalva, įprastai naudojama svarbiausiam mygtukui ekrane."
@@ -81,34 +81,34 @@ lt:
       name: LDAP prisijungimui suteiktas pavadinimas
       host: LDAP serverio vardas arba IP adresas
       login_map: LDAP atributo, kuris naudojamas vienareikšmiškai nustatyti besijungiantį asmenį, pavadinimas. Dažniausiai tai būna `uid` arba `samAccountName`.
-      generic_map: LDAP atributo pavadinimas, kuris bus susietas su OpenProject atributu `%{attribute}`
-      admin_map_html: "Pasirinktinis: LDAP atributas, kuris <strong>jei bus nustatytas</strong> pažymi, kad naudotojas yra OpenProject administratorius. Jei abejojate, palikite tuščią."
+      generic_map: LDAP atributo pavadinimas, kuris bus susietas su ProyeksiApp atributu `%{attribute}`
+      admin_map_html: "Pasirinktinis: LDAP atributas, kuris <strong>jei bus nustatytas</strong> pažymi, kad naudotojas yra ProyeksiApp administratorius. Jei abejojate, palikite tuščią."
       system_user_dn_html: |
         Įveskite sisteminio naudotojo, naudojamos tik skaitymo teisėmis jugtis prie LDAP, DN.
         <br/>
         Pavyzdžiui: uid=openproject,ou=system,dc=example,dc=com
       system_user_password: Įveskite sisteminio naudotojo, kuris jungsis prie LDAP, slaptažodį
       base_dn: |
-        Įveskite submedžio, kuriame OpenProject ieškos naudotojų ir grupių šaknies DN (Base DN).
-        OpenProject ieškos naudotojų tik šio submedžio ribose.
+        Įveskite submedžio, kuriame ProyeksiApp ieškos naudotojų ir grupių šaknies DN (Base DN).
+        ProyeksiApp ieškos naudotojų tik šio submedžio ribose.
         Pavyzdys: ou=users,dc=example,dc=com
       filter_string: |
         Pridėkite nebūtiną RFC4515 filtrą, kuris bus naudojamas riboti perduodamų iš LDAP naudotojų sąrašą.
-        Jis gali būti naudojamas norint sumažinti aibę naudotojų, kuriuos OpenProject ras ir galės naudoti autentifikavimui ir grupių sinchronizavimui.
+        Jis gali būti naudojamas norint sumažinti aibę naudotojų, kuriuos ProyeksiApp ras ir galės naudoti autentifikavimui ir grupių sinchronizavimui.
       filter_string_concat: |
-        OpenProject įrašų identifikavimui visada naudos login atributą su naudotojo pateiktais duomenimis. Jei jūs čia nurodysite filtrą, jis prie kitų filtrų bus prijungtas naudojant AND. Nenurodžius, bus naudojamas viską apimantis filtras (objectClass=*).
+        ProyeksiApp įrašų identifikavimui visada naudos login atributą su naudotojo pateiktais duomenimis. Jei jūs čia nurodysite filtrą, jis prie kitų filtrų bus prijungtas naudojant AND. Nenurodžius, bus naudojamas viską apimantis filtras (objectClass=*).
       onthefly_register: |
-        Jei pažymėsite šį lauką, OpenProject automatiškai sukurs naujus naudotojus pagal LDAP informaciją, kai tik šie naudotojai pirmą kartą prisijungs prie OpenProject.
+        Jei pažymėsite šį lauką, ProyeksiApp automatiškai sukurs naujus naudotojus pagal LDAP informaciją, kai tik šie naudotojai pirmą kartą prisijungs prie ProyeksiApp.
         Nežymėkite šio lauko, jei norite, kad tik jau sukurti naudotojai galėtų prisijungti pasinaudodami LDAP!
     connection_encryption: 'Jungties šifravimas'
     system_account: 'Sistemos paskyra'
     system_account_legend: |
-      OpenProject reikia tik-skaitymui skirto sisteminio naudotojo kitų naudotojų ir grupių patikrinimui jūsų LDAP medyje.
+      ProyeksiApp reikia tik-skaitymui skirto sisteminio naudotojo kitų naudotojų ir grupių patikrinimui jūsų LDAP medyje.
       Šioje skiltyje prašome pateikti tokio naudotojo prisijungimo duomenis.
     ldap_details: 'LDAP duomenys'
     user_settings: 'Atributų surišimas'
     user_settings_legend: |
-      Žemiau esantys laukai yra naudojami nurodant, kaip OpenProject naudotojai yra kuriami pagal LDAP įrašus ir kokie LDAP atributai yra naudojami nurodant kuriuos OpenProject naudotojo atributus (atributų surišimas).
+      Žemiau esantys laukai yra naudojami nurodant, kaip ProyeksiApp naudotojai yra kuriami pagal LDAP įrašus ir kokie LDAP atributai yra naudojami nurodant kuriuos ProyeksiApp naudotojo atributus (atributų surišimas).
     tls_mode:
       plain: 'joks'
       simple_tls: 'simple_tls'
@@ -521,7 +521,7 @@ lt:
         confirmation: "nesutampa su %{attribute}."
         could_not_be_copied: "%{dependency} negali (pilnai) būti nukopijuota(s)."
         does_not_exist: "neegzistuoja."
-        error_enterprise_only: "yra galimas tik OpenProject Enterprise Edition"
+        error_enterprise_only: "yra galimas tik ProyeksiApp Enterprise Edition"
         error_unauthorized: "negali būti pasiektas."
         error_readonly: "bandytas įrašyti, bet įrašyti nebuvo galima."
         email: "nėra tinkamas el. pašto adresas."
@@ -876,7 +876,7 @@ lt:
       heading_reset: "Atstatyti atsarginės kopijos žetoną"
       heading_create: "Sukurti atsarginės kopijos žetoną"
       implications: >
-        Atsarginių kopijų įgalinimas leis bet kuriam naudotojui su priskirtomis teisėmis ir šiuo atsarginės kopijos žetonu parsisiųsti atsarginę kopiją, turinčią visus šio OpenProject egzemplioriaus duomenis. Juose bus ir visų kitų naudotojų duomenys.
+        Atsarginių kopijų įgalinimas leis bet kuriam naudotojui su priskirtomis teisėmis ir šiuo atsarginės kopijos žetonu parsisiųsti atsarginę kopiją, turinčią visus šio ProyeksiApp egzemplioriaus duomenis. Juose bus ir visų kitų naudotojų duomenys.
       info: >
         Norint sukurti atsarginę kopiją jums reikės sugeneruoti atsarginės kopijos žetoną. Kaskart, kai jūs norėsite sukurti atsarginę kopiją, turėsite pateikti šį žetoną. Jūs galite ištrinti žetoną ir taip atimsite iš naudotojo teisę daryti atsargines kopijas.
       verification: >
@@ -1220,7 +1220,7 @@ lt:
   error_can_not_unarchive_project: "Projekto negalima išarchyvuoti: %{errors}"
   error_check_user_and_role: "Prašome pasirinkti vartotoją ir rolę."
   error_code: "Klaida %{code}"
-  error_cookie_missing: 'OpenProject sausainėlis nerastas. Prašome patikrinti, ar sausainėliai yra įgalinti, nes kitaip aplikacija tinkamai neveiks.'
+  error_cookie_missing: 'ProyeksiApp sausainėlis nerastas. Prašome patikrinti, ar sausainėliai yra įgalinti, nes kitaip aplikacija tinkamai neveiks.'
   error_custom_option_not_found: "Galimybė neegzistuoja."
   error_enterprise_activation_user_limit: "Jūsų paskyra negali būti aktyvuota (pasiektas vartotojų limitas). Prašome kreiptis į savo sistemos administratorių."
   error_enterprise_token_invalid_domain: "Enterprise Edition neaktyvi. Jūsų Enterprise rakto domenas (%{actual}) nesutampa su jūsų sistemos serverio vardu (%{expected})."
@@ -1234,7 +1234,7 @@ lt:
   error_work_package_done_ratios_not_updated: "Darbų paketo atlikimo rodikliai neatnaujinti."
   error_work_package_not_found_in_project: "Darbų paketas nerastas arba nepriklauso šiam projektui"
   error_must_be_project_member: "turi būti projekto narys"
-  error_migrations_are_pending: "Jūsų OpenProject instaliacijai trūksta duomenų bazės migracijos. Greičiausiai atnaujinimo metu buvo nepaleistas migravimas. Atnaujinimo gide aprašyta kaip tinkamai atnaujinti jūsų instaliaciją."
+  error_migrations_are_pending: "Jūsų ProyeksiApp instaliacijai trūksta duomenų bazės migracijos. Greičiausiai atnaujinimo metu buvo nepaleistas migravimas. Atnaujinimo gide aprašyta kaip tinkamai atnaujinti jūsų instaliaciją."
   error_migrations_visit_upgrade_guides: "Prašome perskaityti dokumentaciją atnaujinimo vadove"
   error_no_default_work_package_status: "Numatytoji darbų paketo būsena nenustatyta. Prašome patikrinti nustatymus (Eiti į „Administravimas“->„Darbų paketų būsenos“)."
   error_no_type_in_project: "Joks tipas nepriskirtas šiam projektui. Prašome patikrinti projekto nustatymus."
@@ -1308,7 +1308,7 @@ lt:
       no_visible_projects: "Šiame egzemplioriuje nėra matomų projektų."
       users: "Naujausi registruoti naudotojai."
     blocks:
-      community: "OpenProject community"
+      community: "ProyeksiApp community"
       upsale:
         title: "Pagerinti į „Enterprise Edition“ versiją"
         more_info: "Daugiau informacijos"
@@ -1319,7 +1319,7 @@ lt:
       faq: "D.U.K"
       glossary: "Aiškinamasis terminų žodynas"
       shortcuts: "Nuorodos"
-      blog: "OpenProject blogas"
+      blog: "ProyeksiApp blogas"
       forums: "Bendruomenės forumas"
       newsletter: "Saugos įspėjimai / Naujienos"
   image_conversion:
@@ -1360,9 +1360,9 @@ lt:
         watched: "Jūs stebite %{work_package}"
     update_info_mail:
       body: >
-        Mes džiaugiamės galėdami pranešti apie OpenProject 12.0. Tai didelė laida, kuri tikimės stipriai pagerins tai, kaip jūs naudojate OpenProject.
+        Mes džiaugiamės galėdami pranešti apie ProyeksiApp 12.0. Tai didelė laida, kuri tikimės stipriai pagerins tai, kaip jūs naudojate ProyeksiApp.
 
-        Pradedant šia laida mes pristatome Pranešimų Centrą. Nuo dabar jūs galėsite gauti pranešimus apie darbo paketų atnaujinimus tiesiai OpenProject. Jūs galite pažymėti šiuos pranešimus perskaitytais, atsakyti į komentarą ar tiesiogiai pakeisti darbo paketo atributus, nepalikdami Pranešimų Centro.
+        Pradedant šia laida mes pristatome Pranešimų Centrą. Nuo dabar jūs galėsite gauti pranešimus apie darbo paketų atnaujinimus tiesiai ProyeksiApp. Jūs galite pažymėti šiuos pranešimus perskaitytais, atsakyti į komentarą ar tiesiogiai pakeisti darbo paketo atributus, nepalikdami Pranešimų Centro.
 
         Tai taipogi reiškia, kad jūs daugiau nenaudosite e-pašto pranešimams. Mes galvojame, kad Pranešimų centras yra geresnė vieta peržiūrėti ir imtis veiksmų su atnaujinimais. Kaip bebūtų, jei jūs norėtumėte ir toliau gauti atnaujinimus e-paštu, galite pasirinkti kasdieninius e-pašto priminimus jūsų pasirinktu metu.
 
@@ -1371,7 +1371,7 @@ lt:
         Mes tikimės, kad vidiniai pranešimai jums bus naudingi ir, kad jie dar labiau pagerins jūsų produktyvumą.
 
         Nuoširdžiai,
-        OpenProject komanda
+        ProyeksiApp komanda
       body_header: 'Versija 12.0 su Pranešimų centru'
       body_subheader: 'Naujienos'
       subject: 'Svarbūs pranešimų pakeitimai laidoje 12.0'
@@ -1684,7 +1684,7 @@ lt:
   label_open_menu: "Atidaryti meniu"
   label_open_work_packages: "atidarytas"
   label_open_work_packages_plural: "atidarytas"
-  label_openproject_website: "OpenProject svetainė"
+  label_openproject_website: "ProyeksiApp svetainė"
   label_optional_description: "Aprašymas"
   label_options: "Nustatymai"
   label_other: "Kita"
@@ -1986,17 +1986,17 @@ lt:
   mail_body_backup_token_reset_user_info: Jūsų atsarginės kopijos žetonas buvo atstatytas.
   mail_body_backup_token_info: Ankstesnis žetonas nebegalioja.
   mail_body_backup_waiting_period: Naujas atsarginės kopijos žetonas bus tinkamas po %{hours} valandų.
-  mail_body_backup_token_warning: Jei tai buvote ne jūs, nedelsiant prisijunkite prie OpenProject ir atšaukite jį dar kartą.
+  mail_body_backup_token_warning: Jei tai buvote ne jūs, nedelsiant prisijunkite prie ProyeksiApp ir atšaukite jį dar kartą.
   mail_body_lost_password: "Norėdami pakeisti slaptažodį, spauskite nuorodą:"
-  mail_body_register: "Sveikinimai nuo OpenProject. Prašome aktyvuoti savo paskyrą. Tam paspauskite šią nuorodą:"
+  mail_body_register: "Sveikinimai nuo ProyeksiApp. Prašome aktyvuoti savo paskyrą. Tam paspauskite šią nuorodą:"
   mail_body_register_header_title: "Projekto nario kvietimo el. laiškas"
   mail_body_register_user: "Brangus %{name}, "
   mail_body_register_links_html: |
     Galite panaršyti mūsų youtube kanale (%{youtube_link}), kur mes pateikiame  (%{webinar_link})
-    ir „Pradėkime“ video (%{get_started_link}) tam, kad jūsų pirmieji OpenProject žingsniai būtų kaip įmanoma lengvesni.
+    ir „Pradėkime“ video (%{get_started_link}) tam, kad jūsų pirmieji ProyeksiApp žingsniai būtų kaip įmanoma lengvesni.
     <br />
     Jei turėsite papildomų klausimų, pažiūrėkite mūsų dokumentaciją (%{documentation_link}) arba susisiekite su jūsų administratoriumi.
-  mail_body_register_closing: "Jūsų OpenProject komanda"
+  mail_body_register_closing: "Jūsų ProyeksiApp komanda"
   mail_body_register_ending: "Likite prisijungę! Su geriausiais linkėjimais,"
   mail_body_reminder: "%{count} darbų paketai, kurie yra jums priskirti, baigiasi per artimiausias %{days} dienų (-ą, -as):"
   mail_body_group_reminder: "%{count} darbo paketas(ai), kurie priskirti grupei „%{group}“ turi būti baigti per kitas %{days} dienas:"
@@ -2035,14 +2035,14 @@ lt:
   mail_user_activation_limit_reached:
     subject: Pasiekta vartotojų aktyvinimo riba
     message: |
-      Naujas vartotojas (%{email}) bandė sukurti paskyrą OpenProject aplinkoją, kurią jūs valdote (%{host}).
+      Naujas vartotojas (%{email}) bandė sukurti paskyrą ProyeksiApp aplinkoją, kurią jūs valdote (%{host}).
       Vartotojas negali aktyvuoti savo paskyros, nes sistemoje pasiekta vartotojų riba.
     steps:
       label: "Norėdami leisti vartotojui prisijungti jūs galite: "
       a: "Atnaujinti savo mokėjimo planą ([here](upgrade_url))" #here turned into a link
       b: "Užrakinti arba panaikinti esamo naudotojo paskyrą ([here](users_url))" #here turned into a link
   more_actions: "Daugiau funkcijų"
-  noscript_description: "Jums reikia įjungti JavaScript, kad galėtumėte naudoti OpenProject!"
+  noscript_description: "Jums reikia įjungti JavaScript, kad galėtumėte naudoti ProyeksiApp!"
   noscript_heading: "JavaScript išjungta"
   noscript_learn_more: "Sužinoti daugiau"
   notice_accessibility_mode: Pasiekiamumo režimas gali būti įjungtas Jūsų paskyros nustatymuose [account settings](nuoroda).
@@ -2106,7 +2106,7 @@ lt:
   notice_wont_delete_auth_source: Autentifikacijos būdas negali būti ištrintas ligi tol, kol yra jį naudojančių vartotojų.
   notice_project_cannot_update_custom_fields: "Jūs negalite atnaujinti projekto pasirinktinų laukų. Projektas yra netinkamas: %{errors}"
   notice_attachment_migration_wiki_page: >
-    Šis puslapis buvo sugeneruotas automatiškai, kai buvo naujinama OpenProject. Jame yra visi prisegti failai, kurie buvo susieti su %{container_type} „%{container_name}“.
+    Šis puslapis buvo sugeneruotas automatiškai, kai buvo naujinama ProyeksiApp. Jame yra visi prisegti failai, kurie buvo susieti su %{container_type} „%{container_name}“.
   #Default format for numbers
   number:
     format:
@@ -2131,9 +2131,9 @@ lt:
           tb: "TB"
   onboarding:
     heading_getting_started: "Gauti aprašymą"
-    text_getting_started_description: "Gauti greitą apžvalgą apie projektų valdymą ir komandos bendradarbiavimą naudojant OpenProject."
+    text_getting_started_description: "Gauti greitą apžvalgą apie projektų valdymą ir komandos bendradarbiavimą naudojant ProyeksiApp."
     text_show_again: "Jūs galite paleisti šį video iš naujo iš pagalbos meniu"
-    welcome: "Sveiki atvykę į OpenProject"
+    welcome: "Sveiki atvykę į ProyeksiApp"
     select_language: "Pasirinkite kalbą"
   permission_add_work_package_notes: "Pridėti pastabų"
   permission_add_work_packages: "Pridėti darbų paketų"
@@ -2192,7 +2192,7 @@ lt:
   permission_select_project_modules: "Parinkti projekto modulius"
   permission_manage_types: "Pasirinkti tipus"
   permission_view_calendar: "Peržiūrėti kalendorių"
-  permission_view_changesets: "Rodyti repozitorijos pakeitimus OpenProject"
+  permission_view_changesets: "Rodyti repozitorijos pakeitimus ProyeksiApp"
   permission_view_commit_author_statistics: "Peržiūrėti autorių pakeitimų pateikimo statistiką"
   permission_view_work_package_watchers: "Peržiūrėti stebėtojų sąrašą"
   permission_view_work_packages: "Rodyti darbų paketus"
@@ -2272,7 +2272,7 @@ lt:
     destroy:
       confirmation: "Jei tęsite, visam laikui ištrinsite valdomą repozitoriją."
       info: "Repozitorijos ištrynimas yra negrįžtamas veiksmas."
-      info_not_managed: "Pastaba: tai NEIŠTRINS jokių duomenų repozitorijoje, KURIŲ nevaldo OpenProject sistema."
+      info_not_managed: "Pastaba: tai NEIŠTRINS jokių duomenų repozitorijoje, KURIŲ nevaldo ProyeksiApp sistema."
       managed_path_note: "Ši katalogas bus išvalytas: %{path}"
       repository_verification: "Įveskite projekto identifikatorių %{identifier}, kad patvirtintumėte repozitorijos ištrynimą."
       subtitle: "Ar tikrai norite ištrinti projekto %{project_name} repozitoriją %{repository_type}?"
@@ -2286,8 +2286,8 @@ lt:
       empty_repository: "Repozitorija egzistuoja, bet ji yra tuščia. Joje dar nėra jokių peržiūrų."
       exists_on_filesystem: "Repozitorijos katalogas jau yra sukurtas šioje failų sistemoje."
       filesystem_access_failed: "Įvyko klaida bandant pasiekti repozitoriją failų sistemoje: %{message}"
-      not_manageable: "Repozitorijos paslaugų teikėjas negali būti valdomas OpenProject sistemos."
-      path_permission_failed: "Įvyko klaida bandant sukurti šį kelią: %{path}. Prašome įsitikinti, kad OpenProject turi rašymo teises šiame kataloge."
+      not_manageable: "Repozitorijos paslaugų teikėjas negali būti valdomas ProyeksiApp sistemos."
+      path_permission_failed: "Įvyko klaida bandant sukurti šį kelią: %{path}. Prašome įsitikinti, kad ProyeksiApp turi rašymo teises šiame kataloge."
       unauthorized: "Jūs neturite teisės pasiekti šią repozitoriją arba prisijungimo duomenys yra neteisingi."
       unavailable: "Repozitorija yra nepasiekiama."
       exception_title: "Neina pasiekti repozitorijos: %{message}"
@@ -2304,9 +2304,9 @@ lt:
         path_encoding: "Perrašyti Git kelio koduotę (numatytoji: UTF-8)"
       local_title: "Susieti esamą vietinę Git repozitoriją"
       local_url: "Vietinis URL"
-      local_introduction: "Jei turite jau egzistuojančią vietinę Git repozitoriją, Jūs galite susieti ją su OpenProject, kad galėtumėte repozitoriją pasiekti sistemos viduje."
-      managed_introduction: "Leisti OpenProject automatiškai sukurti ir integruoti vietinę Git repozitoriją."
-      managed_title: "Git repozitorija integruota į OpenProject"
+      local_introduction: "Jei turite jau egzistuojančią vietinę Git repozitoriją, Jūs galite susieti ją su ProyeksiApp, kad galėtumėte repozitoriją pasiekti sistemos viduje."
+      managed_introduction: "Leisti ProyeksiApp automatiškai sukurti ir integruoti vietinę Git repozitoriją."
+      managed_title: "Git repozitorija integruota į ProyeksiApp"
       managed_url: "Valdomas URL"
       path: "Kelias į Git repozitoriją"
       path_encoding: "Kelio koduotė"
@@ -2323,19 +2323,19 @@ lt:
     scm_types:
       local: "Susieti esamą vietinę repozitoriją"
       existing: "Susieti esamą repozitoriją"
-      managed: "Sukurti naują repozitoriją OpenProject"
+      managed: "Sukurti naują repozitoriją ProyeksiApp"
     storage:
       not_available: "Disko vietos naudojimas nėra prieinamas šiai repozitorijai."
       update_timeout: "Laikyti paskiausią reikalingą disko vietos informaciją repozitorijai N minutes (-ių). Kadangi reikalingos vietos repozitorijai skaičiavimas gali būti reiklus resursams, minučių reikšmės didinimas gali stipriai sumažinti sistemos našumą."
     subversion:
       existing_title: "Esama Subversion repozitorija"
-      existing_introduction: "Jei jau turite esamą Subversion repozitoriją, Jūs galite ją susieti su OpenProject, kad galėtumėte informaciją pasiekti iš sistemos vidaus."
+      existing_introduction: "Jei jau turite esamą Subversion repozitoriją, Jūs galite ją susieti su ProyeksiApp, kad galėtumėte informaciją pasiekti iš sistemos vidaus."
       existing_url: "Esamas URL"
       instructions:
         managed_url: "Tai yra URL kelias į valdomą (vietinę) Subversion repozitoriją."
         url: "Įveskite repozitorijos URL kelią. Jis gali rodyti tiek į vietinę (pasidedančią %{local_proto}), tiek į nuotolinę repozitoriją.\nŠios URL kelio schemos yra palaikomos:"
-      managed_title: "Subversion repozitorija integruota į OpenProject"
-      managed_introduction: "Leisti OpenProject automatiškai sukurti ir integruoti vietinę Subversion repozitoriją."
+      managed_title: "Subversion repozitorija integruota į ProyeksiApp"
+      managed_introduction: "Leisti ProyeksiApp automatiškai sukurti ir integruoti vietinę Subversion repozitoriją."
       managed_url: "Valdomas URL"
       password: "Repozitorijos slaptažodis"
       username: "Repozitorijos vartotojo vardas"
@@ -2352,7 +2352,7 @@ lt:
   setting_apiv3_cors_enabled: "Įgalinti CORS"
   setting_apiv3_cors_origins: "API V3 Cross-Origin Resource Sharing (CORS) leidžiami kilmės domenai"
   setting_apiv3_cors_origins_text_html: >
-    Jei CORS yra įgalinta, tai yra kilmės domenai, kuriems leidžiama pasiekti OpenProject API. <br/> Kaip nurodyti reikšmes aprašoma <a href="%{origin_link}" target="_blank">Origin antraštės dokumentacijoje</a>.
+    Jei CORS yra įgalinta, tai yra kilmės domenai, kuriems leidžiama pasiekti ProyeksiApp API. <br/> Kaip nurodyti reikšmes aprašoma <a href="%{origin_link}" target="_blank">Origin antraštės dokumentacijoje</a>.
   setting_apiv3_docs: "Dokumentacija"
   setting_apiv3_docs_enabled: "Įjungti dokumentų puslapį"
   setting_apiv3_docs_enabled_instructions_html: >
@@ -2512,7 +2512,7 @@ lt:
       sentence_connector: "ir"
       skip_last_comma: "netiesa"
   text_accessibility_hint: "Pasiekiamumo režimas yra skirtas vartotojams, kurie turi regėjimo sutrikimų. Tuo tikslu svarbūs elementai būna paryškinami/pabrėžiami. Prašome atkreipti dėmesį, kad Backlogs modulis neprieinamas, kai šis režimas įjungtas."
-  text_access_token_hint: "Prieigos raktai leidžia išorinėms aplikacijoms pasiekti OpenProject resursus."
+  text_access_token_hint: "Prieigos raktai leidžia išorinėms aplikacijoms pasiekti ProyeksiApp resursus."
   text_analyze: "Toliau analizuoti: %{subject}"
   text_are_you_sure: "Ar esate įsitikinę?"
   text_are_you_sure_with_children: "Ištrinti darbų paketą ir visus jo vaikų paketus?"
@@ -2581,7 +2581,7 @@ lt:
   text_no_notes: "Šis darbų paketas neturi komentarų."
   text_notice_too_many_values_are_inperformant: "Pastaba: Rodant daugiau nei 100 įrašų puslapyje gali prailginti puslapio įkėlimo laiką."
   text_notice_security_badge_displayed_html: >
-    Pastaba: įjungus bus rodomas ženkliukas su jūsų diegimo būsena <a href="%{information_panel_path}">%{information_panel_label}</a> administravimo skydelyje. Rodoma tik administratoriams. <br/> Ženkliukas palygins jūsų OpenProject versiją su oficialia OpenProject laidų duomenų baze ir praneš, jei yra atnaujinimų dėl žinomų saugumo problemų. Daugiau informacijos, ką daro šis tikrinimas, kokią reikia pateikti informaciją ir kaip šį tikrinimą išjungti, rasite <a href="%{more_info_url}">konfigūravimo dokumentacijoje</a>.
+    Pastaba: įjungus bus rodomas ženkliukas su jūsų diegimo būsena <a href="%{information_panel_path}">%{information_panel_label}</a> administravimo skydelyje. Rodoma tik administratoriams. <br/> Ženkliukas palygins jūsų ProyeksiApp versiją su oficialia ProyeksiApp laidų duomenų baze ir praneš, jei yra atnaujinimų dėl žinomų saugumo problemų. Daugiau informacijos, ką daro šis tikrinimas, kokią reikia pateikti informaciją ir kaip šį tikrinimą išjungti, rasite <a href="%{more_info_url}">konfigūravimo dokumentacijoje</a>.
   text_own_membership_delete_confirmation: "Jūs ketinate pašalinti keletą ar visus leidimus ir gali būti, kad nebegalėsite redaguoti šio projekto po to.\nAr jūs tikrai norite tęsti?"
   text_plugin_assets_writable: "Į papildinių katalogą galima rašyti"
   text_powered_by: "Parengta pagal %{link}"
@@ -2589,7 +2589,7 @@ lt:
   text_reassign: "Iš naujo priskirti darbų paketui:"
   text_regexp_info: "pvz., ^[A-Z0-9]+$"
   text_regexp_multiline: 'Reguliarioji išraiška yra pritaikoma daug eilučių režime, pvz., ^---\s+'
-  text_repository_usernames_mapping: "Parinkite ar atnaujinkite OpenProject naudotoją, kuris paminėtas repozitorijos žurnale.\nNaudotojai, turintys tą patį OpenProject ir repozitorijos vardą ar el. paštą yra automatiškai surišti."
+  text_repository_usernames_mapping: "Parinkite ar atnaujinkite ProyeksiApp naudotoją, kuris paminėtas repozitorijos žurnale.\nNaudotojai, turintys tą patį ProyeksiApp ir repozitorijos vardą ar el. paštą yra automatiškai surišti."
   text_status_changed_by_changeset: "Atlikta pakeitimų pakete %{value}."
   text_table_difference_description: "Šioje lentelėje pavieniai %{entries} yra rodomi. Jūs galite palyginti skirtumus tarp bet kutių dviejų įrašų pasirinkdami atitinkamus žymėtinus laukelius lentelėje. Vėliau paspaudus ant mygtuko apačioje parodomi skirtumai."
   text_time_logged_by_changeset: "Atlikta pakeitimų pakete %{value}."
@@ -2796,7 +2796,7 @@ lt:
     activate_and_reset_failed_logins: "Aktyvuoti ir iš naujo nustatyti nepavykusius prisijungimus"
     authentication_provider: "Autentifikacijos paslaugos teikėjas"
     authentication_settings_disabled_due_to_external_authentication: >
-      Šis vartotojas naudoja išorinį autentifikacijos paslaugų teikėją, todėl nėra galimo pakeisti slaptažodžio OpenProject aplinkoje.
+      Šis vartotojas naudoja išorinį autentifikacijos paslaugų teikėją, todėl nėra galimo pakeisti slaptažodžio ProyeksiApp aplinkoje.
     authorization_rejected: "Jums neleidžiama prisijungti."
     assign_random_password: "Priskirti atsitiktinį slaptažodį (siunčiamas vartotojui el. paštu)"
     blocked: "laikinai užrakintas"
@@ -2829,7 +2829,7 @@ lt:
   warning: Įspėjimas
   warning_attachments_not_saved: "%{count} failas (-ai, -ų) negali būti išsaugotas (-i)."
   warning_imminent_user_limit: >
-    Jūs pakvietėte daugiau naudotojų, nei palaiko jūsų dabartis planas. Pakviestiems naudotojams gali nepavykti prisijungti prie jūsų OpenProject aplinkos. <a href="%{upgrade_url}">Atnaujinkite savo planą</a> arba blokuokite esamus naudotojus, kad pakviesti ir registruoti vartotojai galėtų prisijungti.
+    Jūs pakvietėte daugiau naudotojų, nei palaiko jūsų dabartis planas. Pakviestiems naudotojams gali nepavykti prisijungti prie jūsų ProyeksiApp aplinkos. <a href="%{upgrade_url}">Atnaujinkite savo planą</a> arba blokuokite esamus naudotojus, kad pakviesti ir registruoti vartotojai galėtų prisijungti.
   warning_registration_token_expired: |
     Aktyvavimo el. laiško galiojimas pasibaigė. Išsiuntėme jums naują %{email}. Paspauskite laiške duotą nuorodą, kad aktyvuotumėte savo paskyrą.
   warning_user_limit_reached: >
@@ -2962,21 +2962,21 @@ lt:
         confidential: "Patikrinkite, ar bus naudojama aplikacija, kurioje kliento paslaptis gali likti konfidenciali. Mobilios aplikacijos ir Vieno puslapio aplikacijos laikomos nekonfidencialiomis."
         scopes: "Pažymėkite programos sritis, kurioms norite suteikti prieigą. Kai jokia sritis nėra pažymėta, api_v3 yra leidžiama."
         client_credential_user_id: "Neprivalomas naudotojo ID, naudojamas kai klientai naudoja šią aplikaciją. Palikite tuščią, jei norite leisti tik viešą prieigą"
-        register_intro: "Jei kuriate OAuth API kliento aplikaciją skirtą OpenProject, jūs galite registruoti ją visiems naudotojams naudojant šią formą."
+        register_intro: "Jei kuriate OAuth API kliento aplikaciją skirtą ProyeksiApp, jūs galite registruoti ją visiems naudotojams naudojant šią formą."
         default_scopes: ""
     client_id: "Kliento ID"
     client_secret_notice: >
-      Tai vienintelis kartas, kai mes galime atspausdinti kliento paslaptį, prašome ją užsirašyti ir laikyti saugiai. Ji turi būti saugoma kaip slaptažodis ir jos vėliau nebebus galima ištraukti iš OpenProject.
+      Tai vienintelis kartas, kai mes galime atspausdinti kliento paslaptį, prašome ją užsirašyti ir laikyti saugiai. Ji turi būti saugoma kaip slaptažodis ir jos vėliau nebebus galima ištraukti iš ProyeksiApp.
     authorization_dialog:
       authorize: "Autorizuoti"
       cancel: "Nutraukti arba neleisti autorizacijos."
       prompt_html: "Autorizuokite <strong>%{application_name}</strong>, kad naudotumėte jūsų paskyrą <em>%{login}</em>?"
       title: "Autorizuoti %{application_name}"
       wants_to_access_html: >
-        Šiai aplikacijai reikia prieigos prie jūsų OpenProject paskyros. <br/> <strong>Ji paprašė tokių teisių:</strong>
+        Šiai aplikacijai reikia prieigos prie jūsų ProyeksiApp paskyros. <br/> <strong>Ji paprašė tokių teisių:</strong>
     scopes:
       api_v3: "Pilna API v3 prieiga"
-      api_v3_text: "Aplikacija gaus pilną skaitymo ir rašymo prieigą prie OpenProject API v3 vykdyti veiksmus jūsų vardu."
+      api_v3_text: "Aplikacija gaus pilną skaitymo ir rašymo prieigą prie ProyeksiApp API v3 vykdyti veiksmus jūsų vardu."
     grants:
       created_date: "Patvirtinimo data"
       scopes: "Leidimai"
@@ -2994,7 +2994,7 @@ lt:
     client_credentials_impersonation_set_to: "Kliento įgaliojimų naudotojas nustatytas į"
     client_credentials_impersonation_warning: "Pastaba: klientai, naudojantys „kliento įgaliojimų“ eigą šioje aplikacijoje turės šio naudotojo teises"
     client_credentials_impersonation_html: >
-      Pagal nutylėjimą OpenProject teikia OAuth 2.0 autorizaciją per %{authorization_code_flow_link}. Pasirinktinai galite įjungti %{client_credentials_flow_link}, bet privalote pateikti naudotoją, kurio vardu bus vykdomos visos užklausos.
+      Pagal nutylėjimą ProyeksiApp teikia OAuth 2.0 autorizaciją per %{authorization_code_flow_link}. Pasirinktinai galite įjungti %{client_credentials_flow_link}, bet privalote pateikti naudotoją, kurio vardu bus vykdomos visos užklausos.
     authorization_error: "Įvyko autorizacijos klaida."
     revoke_my_application_confirmation: "Ar tikrai norite išimti šią aplikaciją? Tai atšauks %{token_count} aktyvių žetonų."
     my_registered_applications: "Registruotos OAuth aplikacijos"

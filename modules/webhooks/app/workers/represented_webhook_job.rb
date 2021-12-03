@@ -4,7 +4,7 @@ require 'rest-client'
 
 
 class RepresentedWebhookJob < WebhookJob
-  include ::OpenProjectErrorHelper
+  include ::ProyeksiAppErrorHelper
 
   attr_reader :resource
 

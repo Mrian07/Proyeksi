@@ -123,14 +123,14 @@ vi:
         text_cannot_scan: |
           If you can't scan the code, you can enter the entry manually using the following details:
         description: |
-          Register an application authenticator for use with OpenProject using the time-based one-time password authentication standard.
+          Register an application authenticator for use with ProyeksiApp using the time-based one-time password authentication standard.
           Common examples are Google Authenticator or Authy.
       sms:
         title: 'Use your mobile phone'
         redacted_identifier: 'Mobile device (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, we sent you an authentication code via %{delivery_channel}'
         description: |
-          Register your mobile phone number for delivery of OpenProject one-time passwords.
+          Register your mobile phone number for delivery of ProyeksiApp one-time passwords.
     sns:
       delivery_failed: 'SNS delivery failed:'
     message_bird:

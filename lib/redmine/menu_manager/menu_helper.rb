@@ -315,7 +315,7 @@ module Redmine::MenuManager::MenuHelper
   end
 
   def visible_node?(menu, node)
-    @hidden_menu_items ||= OpenProject::Configuration.hidden_menu_items
+    @hidden_menu_items ||= ProyeksiApp::Configuration.hidden_menu_items
     if @hidden_menu_items.length.positive?
       hidden_nodes = @hidden_menu_items[menu.to_s] || []
       !hidden_nodes.include? node.name.to_s

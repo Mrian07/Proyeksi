@@ -2,19 +2,19 @@
 sidebar_navigation:
   title: Enterprise Guide
   priority: 960
-description: OpenProject Enterprise guide.
+description: ProyeksiApp Enterprise guide.
 robots: index, follow
 keywords: manage subscription, enterprise edition, cloud edition
 ---
 # Enterprise guide
 
-Welcome to the OpenProject **Enterprise guide**.
+Welcome to the ProyeksiApp **Enterprise guide**.
 
 <div class="alert alert-info" role="alert">
 **Note**: This guide only describes the management and administration of your Enterprise cloud and Enterprise on-premises subscription. 
-The premium feature descriptions are included in the respective parts of the OpenProject [user guide](../user-guide) and [System admin guide](../system-admin-guide).
+The premium feature descriptions are included in the respective parts of the ProyeksiApp [user guide](../user-guide) and [System admin guide](../system-admin-guide).
 </div>
-The OpenProject Enterprise editions (cloud and on-premises) contain all OpenProject Community features plus the additional OpenProject [premium features](https://www.openproject.org/de/enterprise-edition/#premium-features), as well as professional [support](https://www.openproject.org/pricing/#support).
+The ProyeksiApp Enterprise editions (cloud and on-premises) contain all ProyeksiApp Community features plus the additional ProyeksiApp [premium features](https://www.openproject.org/de/enterprise-edition/#premium-features), as well as professional [support](https://www.openproject.org/pricing/#support).
 
 Find a detailed feature comparison [here](https://www.openproject.org/pricing/#features).
 
@@ -24,7 +24,7 @@ Find a detailed feature comparison [here](https://www.openproject.org/pricing/#f
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 | [Create free trial](./enterprise-cloud-guide/create-cloud-trial) | Learn more about how to create a free trial for the Enterprise cloud instance. |
-| [Sign in](./enterprise-cloud-guide/sign-in/)                 | Sign in to your OpenProject Enterprise cloud edition.        |
+| [Sign in](./enterprise-cloud-guide/sign-in/)                 | Sign in to your ProyeksiApp Enterprise cloud edition.        |
 | [Create quote](./enterprise-cloud-guide/create-quote-cloud)  | How to create a quote within your Enterprise cloud instance? |
 | [Invoices and billing history](./enterprise-cloud-guide/invoices-and-billing-history) | How to see your payment history and download invoices?       |
 | [Manage your subscription](./enterprise-cloud-guide/manage-cloud-subscription) | How to change billing address, add or edit credit card details? |

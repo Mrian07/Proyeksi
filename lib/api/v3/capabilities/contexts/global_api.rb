@@ -4,7 +4,7 @@ module API
   module V3
     module Capabilities
       module Contexts
-        class GlobalAPI < ::API::OpenProjectAPI
+        class GlobalAPI < ::API::ProyeksiAppAPI
           resources :global do
             get do
               Contexts::GlobalRepresenter.create(nil,

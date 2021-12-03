@@ -34,7 +34,7 @@ Message-ID: <a50d0209-0256-2b8a-aa09-86459ac2d4a0@example.com>
 Date: Mon, 8 Nov 2021 16:07:39 +0100
 MIME-Version: 1.0
 Subject: Bob Bobbit mentioned you in #399733 - Some subject of the bug
-To:  OpenProject <notifications@openproject.org>
+To:  ProyeksiApp <notifications@openproject.org>
 References: <op.work_package-39733@example.net> <op.journal-99999999@example.net> <af603fe2-9979-43ae-91c5-e6efcd93cf98@mtasv.net>
 From: Jane Doe <j.doe@openproject.org>
 In-Reply-To: <af603fe2-9979-43ae-91c5-e6efcd93cf98@mtasv.net>
@@ -63,7 +63,7 @@ Am 08.11.21 um 15:28 schrieb notifications@openproject.org:
 >
 > prioritized
 >
-> 		#39733 - OpenProject - Mentioned
+> 		#39733 - ProyeksiApp - Mentioned
 >
 >
 >
@@ -284,7 +284,7 @@ t-family:Helvetica;"
                                           <tr>
                                             <td style=3D"width: 96px;
                                               height: 96px;"> <img
-                                                alt=3D"OpenProject
+                                                alt=3D"ProyeksiApp
                                                 Community Logo"
                                                 style=3D"height:
                                                 96px;max-width: 240px;"
@@ -1343,7 +1343,7 @@ t-family:Helvetica;"
                                               <td style=3D"color:
                                                 #878787;" width=3D"100%">=
 
-                                                #39733 - OpenProject -
+                                                #39733 - ProyeksiApp -
                                                 Mentioned </td>
                                               <td>
                                                 <table

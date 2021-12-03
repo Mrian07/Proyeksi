@@ -96,7 +96,7 @@ describe 'API v3 memberships available projects resource', type: :request do
         expect(subject.status).to eq(400)
 
         expect(subject.body)
-          .to be_json_eql('urn:openproject-org:api:v3:errors:InvalidQuery'.to_json)
+          .to be_json_eql('urn:proyeksiapp-org:api:v3:errors:InvalidQuery'.to_json)
           .at_path('errorIdentifier')
       end
     end

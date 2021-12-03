@@ -122,14 +122,14 @@ sl:
         text_cannot_scan: |
           Če ne morete skenirati kode, lahko vnos vnesete ročno z naslednjimi podrobnostmi:
         description: |
-          Registrirajte program za preverjanje pristnosti aplikacij za uporabo s programom OpenProject tako, da uporabite avtentikacijski standard enkratnega gesla, ki temelji na času. 
+          Registrirajte program za preverjanje pristnosti aplikacij za uporabo s programom ProyeksiApp tako, da uporabite avtentikacijski standard enkratnega gesla, ki temelji na času. 
           Pogosti primeri so Google Authenticator ali Authy.
       sms:
         title: 'Uporabite mobilni telefon'
         redacted_identifier: 'Mobilna naprava (%{redacted_number})'
         request_2fa_identifier: '%{redacted_identifier}, poslali smo vam avtentikacijsko kodo na %{delivery_channel}'
         description: |
-          Registrirajte svojo številko mobilnega telefona za dostavo enkratnih gesel OpenProject.
+          Registrirajte svojo številko mobilnega telefona za dostavo enkratnih gesel ProyeksiApp.
     sns:
       delivery_failed: 'Dostava SNS ni uspela:'
     message_bird:

@@ -1,6 +1,6 @@
 
 
-# = OpenProject configuration file
+# = ProyeksiApp configuration file
 #
 # Each environment has it's own configuration options.  If you are only
 # running in production, only the production block needs to be configured.
@@ -8,7 +8,7 @@
 #
 # Note that this file needs to be a valid YAML file.
 #
-# Instead of using a configuration.yml file, you can configure OpenProject via
+# Instead of using a configuration.yml file, you can configure ProyeksiApp via
 # environment variables. See doc/CONFIGURATION.md for more information.
 #
 #
@@ -167,7 +167,7 @@ default:
   # the routes and is used to correctly identify the path to the assets.
   # Defaults to having no prefix.
   # Examples:
-  # For OpenProject to be reachable as
+  # For ProyeksiApp to be reachable as
   # https://example.org/open_project
   # the setting has o be:
   # rails_relative_url_root: "/open_project"
@@ -178,8 +178,8 @@ default:
   rails_force_ssl: false
 
   # Absolute path to the directory where attachments are stored.
-  # The default is the 'files' directory in your OpenProject instance.
-  # Your OpenProject instance needs to have write permission on this
+  # The default is the 'files' directory in your ProyeksiApp instance.
+  # Your ProyeksiApp instance needs to have write permission on this
   # directory.
   # Examples:
   # attachments_storage_path: /var/openproject/files
@@ -198,7 +198,7 @@ default:
   # autologin_cookie_secure:
 
   # Configuration of the session cookie
-  # session_cookie_name: the name of the OpenProject cookie (default: _open_project_session)
+  # session_cookie_name: the name of the ProyeksiApp cookie (default: _open_project_session)
 
   # disable browser cache for security reasons
   # see: https://websecuritytool.codeplex.com/wikipage?title=Checks#http-cache-control-header-no-store
@@ -243,7 +243,7 @@ default:
 
   ##
   # Overriding the text formatting help link
-  # In each WYSIWYG editor, there is a help button that by default shows OpenProject's
+  # In each WYSIWYG editor, there is a help button that by default shows ProyeksiApp's
   # own formatting text help. You can override that to show a custom page.
   # force_formatting_help_link: https://my-custom-domain/my-formatting-help-url
 
@@ -262,10 +262,10 @@ default:
   #   Enable managed repositories for this vendor.
   #   You may either specify a local path on the filesystem or an absolute URL to call when
   #   repositories are to be created or deleted.
-  #   This allows OpenProject to take control over the given path to create and delete repositories
+  #   This allows ProyeksiApp to take control over the given path to create and delete repositories
   #   directly when created in the frontend.
   #
-  #   When entering a URL, OpenProject will POST to this resource when repositories are created
+  #   When entering a URL, ProyeksiApp will POST to this resource when repositories are created
   #   using the following JSON-encoded payload:
   #     - action: The action to perform (create, delete, relocate)
   #     - identifier: The repository identifier name
@@ -284,9 +284,9 @@ default:
   #   The octal file mode to set the repository folder to (defaults to 0700).
   # group:
   #   The group that should own the repository folder.
-  #   Important: The user running OpenProject must be a member of this group in order to have the
+  #   Important: The user running ProyeksiApp must be a member of this group in order to have the
   #   privilege to set the group ownership.
-  #   Note: The owner is always the user that runs OpenProject!
+  #   Note: The owner is always the user that runs ProyeksiApp!
   #
   # disabled_types:
   #   Disable specific repository types for this particular vendor. This allows

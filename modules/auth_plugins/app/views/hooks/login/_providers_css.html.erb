@@ -1,6 +1,6 @@
 
 
-<% OpenProject::Plugins::AuthPlugin.providers.each do |pro| %>
+<% ProyeksiApp::Plugins::AuthPlugin.providers.each do |pro| %>
   <% if pro[:icon] %>
     <style type="text/css">
       #content .login-auth-providers a.auth-provider.auth-provider-<%= pro[:name] %> {

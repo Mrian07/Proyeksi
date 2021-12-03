@@ -33,7 +33,7 @@ module Authentication
     def validate_authorization_callback
       return unless auth_hash&.valid?
 
-      decision = OpenProject::OmniAuth::Authorization.authorized?(auth_hash)
+      decision = ProyeksiApp::OmniAuth::Authorization.authorized?(auth_hash)
       errors.add(:base, decision.message) unless decision.approve?
     end
   end

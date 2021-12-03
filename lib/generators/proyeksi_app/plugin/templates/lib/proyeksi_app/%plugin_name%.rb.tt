@@ -1,0 +1,5 @@
+module ProyeksiApp
+  module <%= plugin_name.camelcase %>
+    require "proyeksi_app/<%= plugin_name %>/engine"
+  end
+end

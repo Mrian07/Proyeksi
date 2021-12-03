@@ -3,7 +3,7 @@
 # need to define all the operators
 require 'cost_query/operator'
 
-module OpenProject::Reporting
+module ProyeksiApp::Reporting
   module QueryHelper
     def minimal_query
       before do
@@ -15,5 +15,5 @@ module OpenProject::Reporting
 end
 
 RSpec.configure do |c|
-  c.extend OpenProject::Reporting::QueryHelper, reporting_query_helper: true
+  c.extend ProyeksiApp::Reporting::QueryHelper, reporting_query_helper: true
 end

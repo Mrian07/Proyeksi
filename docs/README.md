@@ -1,22 +1,22 @@
 ---
 sidebar_navigation:
-  title: OpenProject Documentation
+  title: ProyeksiApp Documentation
   priority: 999
-description: Help and documentation for OpenProject Community Edition, Enterprise on-premises and Enterprise cloud.
+description: Help and documentation for ProyeksiApp Community Edition, Enterprise on-premises and Enterprise cloud.
 robots: index, follow
 keywords: help, documentation
 ---
-# OpenProject Documentation
+# ProyeksiApp Documentation
 
 <div class="alert alert-info" role="alert">
-**Note**: To better read our OpenProject Documentation, please go to [www.openproject.org/docs/](https://www.openproject.org/docs/).
+**Note**: To better read our ProyeksiApp Documentation, please go to [www.openproject.org/docs/](https://www.openproject.org/docs/).
 </div>
 
 ToDo: check all links.
 
 ## Installation
 
-Get started with installing and upgrading OpenProject using [our Installation Guide starting point](https://www.openproject.org/docs/installation-and-operations/).
+Get started with installing and upgrading ProyeksiApp using [our Installation Guide starting point](https://www.openproject.org/docs/installation-and-operations/).
 
 The guides for [manual](./installation-and-operations/installation/manual), [packaged](./installation-and-operations/installation/packaged) and [Docker-based](./installation-and-operations/installation/docker) installations are provided.
 
@@ -29,7 +29,7 @@ The guides for [upgrading](./installation-and-operations/operation/upgrading) ar
 ## Operation
 
 * [Backing up you installation](./installation-and-operations/operation/backing-up)
-* [Alter configuration of OpenProject](./installation-and-operations/configuration)
+* [Alter configuration of ProyeksiApp](./installation-and-operations/configuration)
 * [Manual repository integration for Git and Subversion](./installation-and-operations/configuration/repositories)
 * [Configure incoming mails](./installation-and-operations/configuration/incoming-emails)
 * [Install custom plugins](./installation-and-operations/configuration/plugins)
@@ -37,7 +37,7 @@ The guides for [upgrading](./installation-and-operations/operation/upgrading) ar
 
 ## User Guides
 
-Please see our [User Guide pages](https://www.openproject.org/docs/user-guide/) for detailed documentation on the functionality of OpenProject.
+Please see our [User Guide pages](https://www.openproject.org/docs/user-guide/) for detailed documentation on the functionality of ProyeksiApp.
 
 
 ## Development

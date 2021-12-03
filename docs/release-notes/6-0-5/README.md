@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.0.5
+  title: ProyeksiApp 6.0.5
   sidebar_navigation:
       title: 6.0.5
   release_version: 6.0.5
@@ -7,11 +7,11 @@
 ---
 
 
-# OpenProject 6.0.5
+# ProyeksiApp 6.0.5
 
-OpenProject 6.0.5 contains several bug fixes and improvements.
+ProyeksiApp 6.0.5 contains several bug fixes and improvements.
 
-**The following bugs have been fixed in OpenProject 6.0.5:**
+**The following bugs have been fixed in ProyeksiApp 6.0.5:**
 
   - Work packages
       - Links in the parent column in the work package list were not
@@ -49,7 +49,7 @@ OpenProject 6.0.5 contains several bug fixes and improvements.
         correctly escaped
         ([\#23835](https://community.openproject.com/work_packages/23835/activity)).
   - Users
-      - New users who created a hosted OpenProject instance had wrong
+      - New users who created a hosted ProyeksiApp instance had wrong
         email settings
         ([\#23856](https://community.openproject.com/work_packages/23856/activity)).
   - <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-37">Repository</span>
@@ -101,7 +101,7 @@ For further information on the release, please refer to the [Changelog
 v.6.0.5](https://community.openproject.com/versions/817) or take a look
 at [GitHub](https://github.com/opf/openproject/tree/v6.0.5).
 
-You can try OpenProject for free. For a free 30 day trial create your
-OpenProject instance on [OpenProject.org](https://openproject.org/).
+You can try ProyeksiApp for free. For a free 30 day trial create your
+ProyeksiApp instance on [ProyeksiApp.org](https://openproject.org/).
 
 

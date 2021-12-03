@@ -13,12 +13,12 @@ keywords: kanban faq, boards, agile board, basic board, swimlane
 
 To do this, you can (provided you have set the end dates for the work packages) add the filter "finish date" to the Kanban board and select "In less than 15 days" there. Then you will see the tasks that have a finish date in less than 15 (i.e. 14 days or less).
 
-## How can I activate Boards in OpenProject? 
+## How can I activate Boards in ProyeksiApp? 
 
-The Boards module is a premium feature of OpenProject Enterprise on-premises and OpenProject Enterprise cloud. You can upgrade your Community Edition installation by entering a valid subscription token in the application administration. You can purchase the token on our [website](https://www.openproject.org/enterprise-edition/).
+The Boards module is a premium feature of ProyeksiApp Enterprise on-premises and ProyeksiApp Enterprise cloud. You can upgrade your Community Edition installation by entering a valid subscription token in the application administration. You can purchase the token on our [website](https://www.openproject.org/enterprise-edition/).
 In addition, you need to activate the Boards module in the project settings.
 
-## Is it possible that we can have a board over all OpenProject tasks and users? 
+## Is it possible that we can have a board over all ProyeksiApp tasks and users? 
 
 Yes, to achieve the desired result you can navigate to the main project and on the Kanban view add the filter "subproject" "all". This will display the work packages in the main project and all subprojects. As a precondition, you will need a central parent project within your project hierarchy.
 

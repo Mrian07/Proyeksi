@@ -1,35 +1,35 @@
 ---
 sidebar_navigation:
-  title: Introduction to OpenProject
+  title: Introduction to ProyeksiApp
   priority: 999
-description: Get and introduction to OpenProject.
+description: Get and introduction to ProyeksiApp.
 robots: index, follow
-keywords: OpenProject introduction
+keywords: ProyeksiApp introduction
 ---
-# Introduction to OpenProject
+# Introduction to ProyeksiApp
 
-Welcome to OpenProject! We are glad to have you here. In this section we will cover an introduction to project management with OpenProject as well as general topics regarding OpenProject.
+Welcome to ProyeksiApp! We are glad to have you here. In this section we will cover an introduction to project management with ProyeksiApp as well as general topics regarding ProyeksiApp.
 
 ## Overview
 
 | Popular Topics                                               | Description                                                  |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| [About OpenProject](#about-openproject)                      | What is OpenProject?                                         |
-| [First steps to get started](#first-steps-to-get-started)    | The first steps to get started with OpenProject.             |
-| [The entire Project Management Life-Cycle](#the-entire-project-management-life-cycle) | Find out more how OpenProject supports the different project phases. |
-| [OpenProject products](#openproject-products)                | What is the difference between the Community, Cloud and Enterprise Edition? |
+| [About ProyeksiApp](#about-openproject)                      | What is ProyeksiApp?                                         |
+| [First steps to get started](#first-steps-to-get-started)    | The first steps to get started with ProyeksiApp.             |
+| [The entire Project Management Life-Cycle](#the-entire-project-management-life-cycle) | Find out more how ProyeksiApp supports the different project phases. |
+| [ProyeksiApp products](#openproject-products)                | What is the difference between the Community, Cloud and Enterprise Edition? |
 
-## About OpenProject
+## About ProyeksiApp
 
-OpenProject is free and **open source software** for **classical as well as agile project management** to support your team along [the entire project life-cycle](#the-entire-project-management-life-cycle). OpenProject is available in more than 30 languages.
+ProyeksiApp is free and **open source software** for **classical as well as agile project management** to support your team along [the entire project life-cycle](#the-entire-project-management-life-cycle). ProyeksiApp is available in more than 30 languages.
 
-OpenProject is licensed under **GNU GPL V3**. The source code is freely published on [GitHub](https://github.com/opf/openproject). We understand free as in free speech. We do offer [paid subscriptions](#openproject-products) for our software.
+ProyeksiApp is licensed under **GNU GPL V3**. The source code is freely published on [GitHub](https://github.com/opf/openproject). We understand free as in free speech. We do offer [paid subscriptions](#openproject-products) for our software.
 
-OpenProject exists since 2011 and is a fork of the deprecated ChiliProject which was a fork of Redmine.
+ProyeksiApp exists since 2011 and is a fork of the deprecated ChiliProject which was a fork of Redmine.
 
 ## First steps to get started
 
-To get started with OpenProject, there are a few easy steps to follow:
+To get started with ProyeksiApp, there are a few easy steps to follow:
 
 1. Get an account and sign in
 2. Create a new project
@@ -39,11 +39,11 @@ To get started with OpenProject, there are a few easy steps to follow:
 
 ## The entire Project Management Life-Cycle
 
-OpenProject offers a full feature set to **support project teams along the entire project management process:**
+ProyeksiApp offers a full feature set to **support project teams along the entire project management process:**
 
 ![Project Management Life-Cycle](1565860195298.png)
 
-OpenProject enables project collaboration and communication without system interruption from the initial project idea until project closure and documentation.
+ProyeksiApp enables project collaboration and communication without system interruption from the initial project idea until project closure and documentation.
 
 The following sections provide links to the documentation for each project phase:
 
@@ -57,15 +57,15 @@ The following sections provide links to the documentation for each project phase
 
 ### Project concept and initiation
 
-OpenProject supports the initial set-up and configuration of a project structure.
+ProyeksiApp supports the initial set-up and configuration of a project structure.
 
 | Features                   | Documentation for                                            |
 | -------------------------- | ------------------------------------------------------------ |
-| Create a new project       | Create and set up a new project in OpenProject.              |
-| Set up a project structure | Create a project hierarchy to structure your work in OpenProject. |
+| Create a new project       | Create and set up a new project in ProyeksiApp.              |
+| Set up a project structure | Create a project hierarchy to structure your work in ProyeksiApp. |
 | Document ideas             | Create first ideas, tasks, rough milestones.                 |
 | Project description        | Describe the goal and the way to reach them for your project. |
-| Invite members             | Invite your team to collaborate in OpenProject.              |
+| Invite members             | Invite your team to collaborate in ProyeksiApp.              |
 
 ### Project definition and planning
 
@@ -111,11 +111,11 @@ Document project achievements, lessons learned, best practices and easily summar
 | Wiki            | Document all relevant project information, lessons learned, best practices, results, and more. |
 | Project archive | Archive your project for further reference and documentation. |
 
-## OpenProject products
+## ProyeksiApp products
 
 ###  What is the difference between the Community, Enterprise cloud and Enterprise on-premises edition?
 
-OpenProject can be used in three different editions, either on-premises or as software-as-a-service.
+ProyeksiApp can be used in three different editions, either on-premises or as software-as-a-service.
 
 ![openproject versions](1569586019132.png)
 

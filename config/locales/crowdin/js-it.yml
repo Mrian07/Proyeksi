@@ -21,7 +21,7 @@ it:
         Un nuovo backup sovrascriverà ogni suo precedente. Sono richiedibili solo un numero limitato di backup giornalieri.
       last_backup: Ultimo backup
       last_backup_from: Ultimo backup da
-      title: Backup OpenProject
+      title: Backup ProyeksiApp
       options: Opzioni
       include_attachments: Includi allegati
       download_backup: Scarica backup
@@ -184,7 +184,7 @@ it:
             label_maximum_users: "Numero massimo di utenti attivi"
             label_starts_at: "Comincia alle"
             label_expires_at: "Scade il"
-            receive_newsletter: Voglio ricevere la <a target="_blank" href="%{link}">newsletter</a> di OpenProject.
+            receive_newsletter: Voglio ricevere la <a target="_blank" href="%{link}">newsletter</a> di ProyeksiApp.
             taken_domain: Puoi avere solo una prova attiva per ogni dominio.
             taken_email: Ogni utente può creare solo una prova.
           email_not_received: "Non hai ricevuto l'e-mail? Puoi inviarla di nuovo tramite il link qui a destra."
@@ -198,7 +198,7 @@ it:
           status_confirmed: "confermato"
           status_waiting: "email inviata, in attesa di conferma"
           test_ee: "Prova l'Enterprise Edition per 14 giorni gratuitamente"
-          quick_overview: "Veloce panoramica sulla gestione dei progetti e il lavoro di squadra in OpenProject Enterprise Edition."
+          quick_overview: "Veloce panoramica sulla gestione dei progetti e il lavoro di squadra in ProyeksiApp Enterprise Edition."
         upsale:
           become_hero: "Diventa un eroe!"
           benefits:
@@ -210,14 +210,14 @@ it:
             premium_features: "Funzionalità Premium"
             premium_features_text: "Tabelloni Agile, tema e logo personalizzati, grafici, flussi di lavoro intelligenti con azioni personalizzate, ricerca completa di allegati nelle macro-attività e campi personalizzati a selezione multipla."
             professional_support: "Supporto professionale"
-            professional_support_text: "Ottieni un supporto affidabile e di livello da esperti tecnici con conoscenze dettagliate sulla gestione di OpenProject in ambienti critici per le imprese."
+            professional_support_text: "Ottieni un supporto affidabile e di livello da esperti tecnici con conoscenze dettagliate sulla gestione di ProyeksiApp in ambienti critici per le imprese."
           button_start_trial: "Inizia la prova gratuita"
           button_book_now: "Prenota ora"
           confidence: >
             Forniamo la sicurezza di un software di gestione di progetti di classe aziendale collaudato e supportato, con l'Open Source e una mente aperta.
           link_quote: "Richiedi un preventivo"
           text: >
-            OpenProject Enterprise Edition si basa sull'edizione Community Edition. Include caratteristiche premium e supporto professionale principalmente rivolto alle organizzazioni con più di 10 utenti che gestiscono progetti critici di business con OpenProject.
+            ProyeksiApp Enterprise Edition si basa sull'edizione Community Edition. Include caratteristiche premium e supporto professionale principalmente rivolto alle organizzazioni con più di 10 utenti che gestiscono progetti critici di business con ProyeksiApp.
           unlimited: "Illimitato"
           you_contribute: "Anche gli sviluppatori devono pagare le bollette. Con Enterprise Edition puoi contribuire in modo sostanziale al lavoro di questa comunità Open Source."
     custom_actions:
@@ -276,7 +276,7 @@ it:
             bim:
               learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
               new_features_html: >
-                La nuova versione contiene varie nuove funzionalità e miglioramenti: <br> <ul class="%{list_styling_class}"> <li>Centro notifiche: Riduci il numero di email che ricevi. Piuttosto controlla e agisci su tutte le notifiche importanti in un unico posto.</li> <li>Tutti i file IFC caricati ora possono anche essere scaricati.</li> <li>Il caricamento e l'elaborazione di IFC sono stati resi più veloci e mostrano messaggi di errore migliori.</li> <li>Il <a href="https://github.com/opf/openproject-revit-add-in">componente aggiuntivo OpenProject Revit</a> ha ricevuto molte correzioni di bug.</li > </ul>
+                La nuova versione contiene varie nuove funzionalità e miglioramenti: <br> <ul class="%{list_styling_class}"> <li>Centro notifiche: Riduci il numero di email che ricevi. Piuttosto controlla e agisci su tutte le notifiche importanti in un unico posto.</li> <li>Tutti i file IFC caricati ora possono anche essere scaricati.</li> <li>Il caricamento e l'elaborazione di IFC sono stati resi più veloci e mostrano messaggi di errore migliori.</li> <li>Il <a href="https://github.com/opf/openproject-revit-add-in">componente aggiuntivo ProyeksiApp Revit</a> ha ricevuto molte correzioni di bug.</li > </ul>
     label_activate: "Attiva"
     label_add_column_after: "Aggiungi colonna dopo"
     label_add_column_before: "Aggiungi colonna prima"
@@ -465,7 +465,7 @@ it:
         next: 'Prossimo'
         got_it: 'Capito'
       steps:
-        help_menu: 'Il menu Aiuto (?) fornisce <b>ulteriori risorse di aiuto</b>. Qui puoi trovare una guida utente, video utili e altro ancora. <br> Goditi il tuo lavoro con OpenProject!'
+        help_menu: 'Il menu Aiuto (?) fornisce <b>ulteriori risorse di aiuto</b>. Qui puoi trovare una guida utente, video utili e altro ancora. <br> Goditi il tuo lavoro con ProyeksiApp!'
         members: 'Invita nuovi <b>membri</b> per entrare al tuo progetto.'
         project_selection: 'Clicca su uno dei progetti demo che abbiamo preparato. I dati demo sono attualmente disponibili solo in inglese. <br> Il <b>progetto demo</b> generale si adatta meglio alla gestione dei progetti classica, mentre il <b>progetto Scrum</b> è migliore per la gestione agile dei progetti.'
         quick_add_button: 'Clicca sull''icona più (+) nella navigazione dell''intestazione per <b>creare un nuovo progetto</b> o per <b>invitare colleghi</b>.'

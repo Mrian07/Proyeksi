@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.2.1
+  title: ProyeksiApp 8.2.1
   sidebar_navigation:
       title: 8.2.1
   release_version: 8.2.1
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 8.2.1
+# ProyeksiApp 8.2.1
 
 We released
-[OpenProject 8.2.1](https://community.openproject.com/versions/1352).  
+[ProyeksiApp 8.2.1](https://community.openproject.com/versions/1352).  
 The release contains several bug fixes and we recommend updating to the
 newest version.
 
@@ -25,7 +25,7 @@ newest version.
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-55">Overview
     page</span>
     \[[\#29011](https://community.openproject.com/wp/29011)\]
-  - Fixed: Page not found displays old OpenProject favicon icon
+  - Fixed: Page not found displays old ProyeksiApp favicon icon
     \[[\#29026](https://community.openproject.com/wp/29026)\]
   - Fixed: Incorrect spacings on WP full view (mobile)
     \[[\#29154](https://community.openproject.com/wp/29154)\]

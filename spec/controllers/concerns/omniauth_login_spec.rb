@@ -144,7 +144,7 @@ describe AccountController, type: :controller do
         end
 
         it 'registers user via post' do
-          expect(OpenProject::OmniAuth::Authorization).to receive(:after_login!) do |user, auth_hash|
+          expect(ProyeksiApp::OmniAuth::Authorization).to receive(:after_login!) do |user, auth_hash|
             new_user = User.find_by_login('login@bar.com')
             expect(user).to eq new_user
             expect(auth_hash).to include(omniauth_hash)
@@ -283,12 +283,12 @@ describe AccountController, type: :controller do
           end
 
           before do
-            OpenProject::OmniAuth::Authorization.callbacks.clear
+            ProyeksiApp::OmniAuth::Authorization.callbacks.clear
 
             # Let's set up a couple of authorization callbacks to see if the mechanism
             # works as intended.
 
-            OpenProject::OmniAuth::Authorization.authorize_user provider: :google do |dec, auth|
+            ProyeksiApp::OmniAuth::Authorization.authorize_user provider: :google do |dec, auth|
               if auth.info.name == config.google_name
                 dec.approve
               else
@@ -296,7 +296,7 @@ describe AccountController, type: :controller do
               end
             end
 
-            OpenProject::OmniAuth::Authorization.authorize_user do |dec, auth|
+            ProyeksiApp::OmniAuth::Authorization.authorize_user do |dec, auth|
               if auth.info.email == config.global_email
                 dec.approve
               else
@@ -305,22 +305,22 @@ describe AccountController, type: :controller do
             end
 
             # ineffective callback
-            OpenProject::OmniAuth::Authorization.authorize_user provider: :foobar do |dec, _|
+            ProyeksiApp::OmniAuth::Authorization.authorize_user provider: :foobar do |dec, _|
               dec.reject 'Though shalt not pass!'
             end
 
             # free for all callback
-            OpenProject::OmniAuth::Authorization.authorize_user do |dec, _|
+            ProyeksiApp::OmniAuth::Authorization.authorize_user do |dec, _|
               dec.approve
             end
           end
 
           after do
-            OpenProject::OmniAuth::Authorization.callbacks.clear
+            ProyeksiApp::OmniAuth::Authorization.callbacks.clear
           end
 
           it 'works' do
-            expect(OpenProject::OmniAuth::Authorization).to receive(:after_login!) do |u, auth|
+            expect(ProyeksiApp::OmniAuth::Authorization).to receive(:after_login!) do |u, auth|
               expect(u).to eq user
               expect(auth).to eq omniauth_hash
             end
@@ -336,7 +336,7 @@ describe AccountController, type: :controller do
             end
 
             it 'is rejected against google' do
-              expect(OpenProject::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
+              expect(ProyeksiApp::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
 
               post :omniauth_login, params: { provider: :google }
 
@@ -345,7 +345,7 @@ describe AccountController, type: :controller do
             end
 
             it 'is rejected against any other provider too' do
-              expect(OpenProject::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
+              expect(ProyeksiApp::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
 
               omniauth_hash.provider = 'any other'
               post :omniauth_login, params: { provider: :google }
@@ -363,7 +363,7 @@ describe AccountController, type: :controller do
             end
 
             it 'is rejected against google' do
-              expect(OpenProject::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
+              expect(ProyeksiApp::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
 
               post :omniauth_login, params: { provider: :google }
 
@@ -372,7 +372,7 @@ describe AccountController, type: :controller do
             end
 
             it 'is approved against any other provider' do
-              expect(OpenProject::OmniAuth::Authorization).to receive(:after_login!) do |u|
+              expect(ProyeksiApp::OmniAuth::Authorization).to receive(:after_login!) do |u|
                 new_user = User.find_by identity_url: 'some other:123545'
 
                 expect(u).to eq new_user
@@ -390,7 +390,7 @@ describe AccountController, type: :controller do
 
             # ... and to confirm that, here's what happens when the authorization fails
             it 'is rejected against any other provider with the wrong email' do
-              expect(OpenProject::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
+              expect(ProyeksiApp::OmniAuth::Authorization).not_to receive(:after_login!).with(user)
 
               omniauth_hash.provider = 'yet another'
               config.global_email = 'yarrrr@joro.es'

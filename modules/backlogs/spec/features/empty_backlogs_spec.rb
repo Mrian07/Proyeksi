@@ -16,7 +16,7 @@ describe 'Empty backlogs project',
 
     login_as current_user
     allow(Setting)
-        .to receive(:plugin_openproject_backlogs)
+        .to receive(:plugin_proyeksiapp_backlogs)
                 .and_return('story_types' => [story.id.to_s],
                             'task_type' => task.id.to_s)
 

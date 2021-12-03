@@ -74,12 +74,12 @@ describe Journals::CompletedJob, type: :model do
 
     shared_examples_for 'sends a notification' do |event|
       it 'sends a notification' do
-        allow(OpenProject::Notifications)
+        allow(ProyeksiApp::Notifications)
           .to receive(:send)
 
         subject
 
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .to have_received(:send)
                 .with(event,
                       journal: journal,
@@ -91,21 +91,21 @@ describe Journals::CompletedJob, type: :model do
       let(:journable) { FactoryBot.build_stubbed(:work_package) }
 
       it_behaves_like 'sends a notification',
-                      OpenProject::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY
+                      ProyeksiApp::Events::AGGREGATED_WORK_PACKAGE_JOURNAL_READY
     end
 
     context 'with wiki page content' do
       let(:journable) { FactoryBot.build_stubbed(:wiki_content) }
 
       it_behaves_like 'sends a notification',
-                      OpenProject::Events::AGGREGATED_WIKI_JOURNAL_READY
+                      ProyeksiApp::Events::AGGREGATED_WIKI_JOURNAL_READY
     end
 
     context 'with a news' do
       let(:journable) { FactoryBot.build_stubbed(:news) }
 
       it_behaves_like 'sends a notification',
-                      OpenProject::Events::AGGREGATED_NEWS_JOURNAL_READY
+                      ProyeksiApp::Events::AGGREGATED_NEWS_JOURNAL_READY
     end
 
     context 'with a non non-existant journal' do
@@ -119,12 +119,12 @@ describe Journals::CompletedJob, type: :model do
       end
 
       it 'sends no notification' do
-        allow(OpenProject::Notifications)
+        allow(ProyeksiApp::Notifications)
           .to receive(:send)
 
         subject
 
-        expect(OpenProject::Notifications)
+        expect(ProyeksiApp::Notifications)
           .not_to have_received(:send)
       end
     end

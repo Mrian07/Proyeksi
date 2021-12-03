@@ -2,15 +2,15 @@
 sidebar_navigation:
   title: Activate Enterprise on-premises
   priority: 990
-description: Activate the OpenProject Enterprise on-premises edition.
+description: Activate the ProyeksiApp Enterprise on-premises edition.
 robots: index, follow
 keywords: Activate Enterprise Edition, token, license key
 ---
 # Activate the Enterprise on-premises edition
 
-The OpenProject Enterprise on-premises edition builds on top of the Community edition.
+The ProyeksiApp Enterprise on-premises edition builds on top of the Community edition.
 
-In order to upgrade your OpenProject Community edition to the Enterprise on-premises edition, sign into your OpenProject environment with an administrator account.
+In order to upgrade your ProyeksiApp Community edition to the Enterprise on-premises edition, sign into your ProyeksiApp environment with an administrator account.
 
 **Click on your user avatar in the upper right corner** (1) and select **Administration** from the dropdown menu (2). 
 

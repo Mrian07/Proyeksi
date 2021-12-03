@@ -213,7 +213,7 @@ describe Attachment, type: :model do
         let(:url_options) { { expires_in: 1.year } }
 
         it "uses the allowed max" do
-          expect(query).to include "X-Amz-Expires=#{OpenProject::Configuration.fog_download_url_expires_in}"
+          expect(query).to include "X-Amz-Expires=#{ProyeksiApp::Configuration.fog_download_url_expires_in}"
         end
       end
     end

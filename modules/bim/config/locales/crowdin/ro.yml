@@ -71,7 +71,7 @@ ro:
   oauth:
     scopes:
       bcf_v2_1: "Acces complet la API BCF v2.1"
-      bcf_v2_1_text: "Aplicația va primi acces complet de citire și scriere la OpenProject BCF API v2.1 pentru a efectua acțiuni în numele dumneavoastră."
+      bcf_v2_1_text: "Aplicația va primi acces complet de citire și scriere la ProyeksiApp BCF API v2.1 pentru a efectua acțiuni în numele dumneavoastră."
   activerecord:
     models:
       bim/ifc_models/ifc_model: "Modelul IFC"

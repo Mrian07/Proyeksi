@@ -2,9 +2,9 @@
 
 require File.expand_path('../spec_helper', __dir__)
 
-describe OpenProject::Webhooks::Hook do
+describe ProyeksiApp::Webhooks::Hook do
   describe '#relative_url' do
-    let(:hook) { OpenProject::Webhooks::Hook.new('myhook') }
+    let(:hook) { ProyeksiApp::Webhooks::Hook.new('myhook') }
 
     it "should return the correct URL" do
       expect(hook.relative_url).to eql('webhooks/myhook')
@@ -13,7 +13,7 @@ describe OpenProject::Webhooks::Hook do
 
   describe '#handle' do
     let(:probe) { lambda {} }
-    let(:hook) { OpenProject::Webhooks::Hook.new('myhook', &probe) }
+    let(:hook) { ProyeksiApp::Webhooks::Hook.new('myhook', &probe) }
 
     before do
       expect(probe).to receive(:call).with(hook, 1, 2, 3)

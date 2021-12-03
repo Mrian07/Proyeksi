@@ -37,7 +37,7 @@ module ::Webhooks
         end
 
         def lookup_event_name(name)
-          OpenProject::Webhooks::EventResources.lookup_resource_name(name)
+          ProyeksiApp::Webhooks::EventResources.lookup_resource_name(name)
         end
 
         def selected_projects

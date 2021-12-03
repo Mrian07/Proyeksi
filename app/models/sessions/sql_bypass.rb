@@ -97,7 +97,7 @@ module Sessions
 
     def delete_user_sessions
       uid = user_id
-      return unless uid && OpenProject::Configuration.drop_old_sessions_on_logout?
+      return unless uid && ProyeksiApp::Configuration.drop_old_sessions_on_logout?
 
       ::Sessions::UserSession.for_user(uid).delete_all
     end

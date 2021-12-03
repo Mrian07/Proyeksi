@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 6.1.3
+  title: ProyeksiApp 6.1.3
   sidebar_navigation:
       title: 6.1.3
   release_version: 6.1.3
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 6.1.3
+# ProyeksiApp 6.1.3
 
 This patch release contains an important bug fix. We recommend to update
-your OpenProject installation to this version.
+your ProyeksiApp installation to this version.
 
 ## Bug fixes (1)
 

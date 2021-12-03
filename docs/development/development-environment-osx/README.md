@@ -1,13 +1,13 @@
-# OpenProject development Setup on Mac OS X
+# ProyeksiApp development Setup on Mac OS X
 
-To develop OpenProject a setup similar to that for using OpenProject in production is needed.
+To develop ProyeksiApp a setup similar to that for using ProyeksiApp in production is needed.
 
 This guide assumes that you have a Mac OS X installation with administrative rights.
-OpenProject will be installed with a PostgreSQL database.
+ProyeksiApp will be installed with a PostgreSQL database.
 
 **Please note**: This guide is NOT suitable for a production setup, but only for developing with it!
 
-If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [OpenProject forums](https://community.openproject.org/projects/openproject/boards).
+If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards).
 
 # Prepare your environment
 
@@ -66,7 +66,7 @@ $ brew install postgres
 $ postgres -D /usr/local/var/postgres
 ```
 
-Then, create the OpenProject database user and accompanied database.
+Then, create the ProyeksiApp database user and accompanied database.
 
 ```bash
 $ createuser -d -P openproject
@@ -128,7 +128,7 @@ npm --version
 7.15.1
 ```
 
-# Install OpenProject
+# Install ProyeksiApp
 
 ```bash
 # Download the repository
@@ -136,10 +136,10 @@ git clone https://github.com/opf/openproject.git
 cd openproject
 ```
 
-Note that we have checked out the `dev` branch of the OpenProject repository. Development in OpenProject happens in the `dev` branch (there is no `master` branch).
+Note that we have checked out the `dev` branch of the ProyeksiApp repository. Development in ProyeksiApp happens in the `dev` branch (there is no `master` branch).
 So, if you want to develop a feature, create a feature branch from a current `dev` branch.
 
-## Configure OpenProject
+## Configure ProyeksiApp
 
 Create and configure the database configuration file in `config/database.yml` (relative to the openproject-directory.
 
@@ -167,7 +167,7 @@ test:
   database: openproject_test
 ```
 
-## Finish the Installation of OpenProject
+## Finish the Installation of ProyeksiApp
 
 Install code dependencies, link plugin modules and export translation files.
 - gem dependencies (If you get errors here, you're likely missing a development dependency for your distribution)
@@ -185,9 +185,9 @@ Now, run the following tasks to migrate and seed the dev database, and prepare t
 RAILS_ENV=development bin/rails db:seed
 ```
 1
-## Run OpenProject through foreman
+## Run ProyeksiApp through foreman
 
-You can run all required workers of OpenProject through `foreman`, which combines them in a single tab. This is useful for starting out,
+You can run all required workers of ProyeksiApp through `foreman`, which combines them in a single tab. This is useful for starting out,
 however most developers end up running the tasks in separate shells for better understanding of the log output, since foreman will combine all of them.
 
 ```bash
@@ -209,9 +209,9 @@ You can access the application with the admin-account having the following crede
     Username: admin
     Password: admin
 
-## Run OpenProject manually
+## Run ProyeksiApp manually
 
-To run OpenProject manually, you need to run the rails server and the webpack frontend bundler to:
+To run ProyeksiApp manually, you need to run the rails server and the webpack frontend bundler to:
 
 ### Rails web server
 
@@ -237,19 +237,19 @@ You can then access the application either through `localhost:3000` (Rails serve
 
 ## Start Coding
 
-Please have a look at [our development guidelines](../code-review-guidelines) for tips and guides on how to start coding. We have advice on how to get your changes back into the OpenProject core as smooth as possible.
+Please have a look at [our development guidelines](../code-review-guidelines) for tips and guides on how to start coding. We have advice on how to get your changes back into the ProyeksiApp core as smooth as possible.
 Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/openproject/blob/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
 
 ## Troubleshooting
 
-The OpenProject logfile can be found in `log/development.log`.
+The ProyeksiApp logfile can be found in `log/development.log`.
 
 If an error occurs, it should be logged there (as well as in the output to STDOUT/STDERR of the rails server process).
 
 ## Questions, Comments, and Feedback
 
 If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow OpenProject on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
 
 [foreman-defaults]:http://ddollar.github.io/foreman/#DEFAULT-OPTIONS
 [foreman-env]:http://ddollar.github.io/foreman/#ENVIRONMENT

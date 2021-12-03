@@ -8,7 +8,7 @@ module Activities
     attr_reader :user, :project, :scope
 
     def self.constantized_providers
-      @constantized_providers ||= Hash.new { |h, k| h[k] = OpenProject::Activity.providers[k].map(&:constantize) }
+      @constantized_providers ||= Hash.new { |h, k| h[k] = ProyeksiApp::Activity.providers[k].map(&:constantize) }
     end
 
     def initialize(user, options = {})
@@ -24,7 +24,7 @@ module Activities
     def event_types
       @event_types ||= begin
         if @project
-          OpenProject::Activity.available_event_types.select do |o|
+          ProyeksiApp::Activity.available_event_types.select do |o|
             @project.self_and_descendants.detect do |_p|
               permissions = constantized_providers(o).map do |p|
                 p.activity_provider_options[:permission]
@@ -34,7 +34,7 @@ module Activities
             end
           end
         else
-          OpenProject::Activity.available_event_types
+          ProyeksiApp::Activity.available_event_types
         end
       end
     end
@@ -66,7 +66,7 @@ module Activities
 
     # Resets the scope to the default scope
     def default_scope!
-      @scope = OpenProject::Activity.default_event_types
+      @scope = ProyeksiApp::Activity.default_event_types
     end
 
     def events_from_providers(from, to, limit)

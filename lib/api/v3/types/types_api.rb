@@ -8,7 +8,7 @@ require 'api/v3/types/type_representer'
 module API
   module V3
     module Types
-      class TypesAPI < ::API::OpenProjectAPI
+      class TypesAPI < ::API::ProyeksiAppAPI
         resources :types do
           after_validation do
             authorize_any(%i[view_work_packages manage_types], global: true)

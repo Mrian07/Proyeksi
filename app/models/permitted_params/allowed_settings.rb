@@ -51,12 +51,12 @@ class PermittedParams
 
       add_restriction!(
         keys: password_keys,
-        condition: -> { OpenProject::Configuration.disable_password_login? }
+        condition: -> { ProyeksiApp::Configuration.disable_password_login? }
       )
 
       add_restriction!(
         keys: %w(registration_footer),
-        condition: -> { OpenProject::Configuration.registration_footer.present? }
+        condition: -> { ProyeksiApp::Configuration.registration_footer.present? }
       )
     end
 

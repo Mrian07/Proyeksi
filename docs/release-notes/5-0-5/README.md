@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 5.0.5
+  title: ProyeksiApp 5.0.5
   sidebar_navigation:
       title: 5.0.5
   release_version: 5.0.5
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 5.0.5
+# ProyeksiApp 5.0.5
 
-OpenProject 5.0.5 contains several bug fixes:
+ProyeksiApp 5.0.5 contains several bug fixes:
 
   - An error which prevented a user from adding or removing watchers to
     a work package has been fixed
@@ -27,14 +27,14 @@ OpenProject 5.0.5 contains several bug fixes:
     [\#22200](https://community.openproject.org/work_packages/22200/activity)).
   - The accessibility has been improved in several places.
 
-Additionally, OpenProject 5.0.5 includes a performance improvement for
+Additionally, ProyeksiApp 5.0.5 includes a performance improvement for
 the work package full screen view
 ([\#21750](https://community.openproject.org/work_packages/21750/activity)).
 
-New translations have been added to OpenProject. Thanks to everyone who
-helped to translate and proof read OpenProject\!
+New translations have been added to ProyeksiApp. Thanks to everyone who
+helped to translate and proof read ProyeksiApp\!
 
-To help translate OpenProject, please take a look at the [OpenProject
+To help translate ProyeksiApp, please take a look at the [ProyeksiApp
 CrowdIn projects](https://crowdin.com/projects/opf).
 
 For further information on the release, please refer to the [Changelog

@@ -443,13 +443,13 @@ describe ::API::V3::Projects::ProjectRepresenter, 'rendering' do
 
   describe 'caching' do
     it 'is based on the representer\'s cache_key' do
-      allow(OpenProject::Cache)
+      allow(ProyeksiApp::Cache)
         .to receive(:fetch)
         .and_call_original
 
       representer.to_json
 
-      expect(OpenProject::Cache)
+      expect(ProyeksiApp::Cache)
         .to have_received(:fetch)
               .with(representer.json_cache_key)
     end

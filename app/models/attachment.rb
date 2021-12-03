@@ -35,7 +35,7 @@ class Attachment < ApplicationRecord
                   { controller: '/attachments', action: 'download', id: o.id, filename: o.filename }
                 end)
 
-  mount_uploader :file, OpenProject::Configuration.file_uploader
+  mount_uploader :file, ProyeksiApp::Configuration.file_uploader
 
   after_commit :extract_fulltext, on: :create
 
@@ -107,15 +107,15 @@ class Attachment < ApplicationRecord
 
   # rubocop:disable Naming/PredicateName
   def is_plain_text?
-    OpenProject::MimeType.plain_text?(content_type)
+    ProyeksiApp::MimeType.plain_text?(content_type)
   end
 
   def is_image?
-    OpenProject::MimeType.image?(content_type)
+    ProyeksiApp::MimeType.image?(content_type)
   end
 
   def is_movie?
-    OpenProject::MimeType.movie?(content_type)
+    ProyeksiApp::MimeType.movie?(content_type)
   end
 
   # backwards compatibility for plugins
@@ -192,8 +192,8 @@ class Attachment < ApplicationRecord
     self.digest = Digest::MD5.file(file.path).hexdigest
   end
 
-  def self.content_type_for(file_path, fallback = OpenProject::ContentTypeDetector::SENSIBLE_DEFAULT)
-    content_type = OpenProject::MimeType.narrow_type file_path, OpenProject::ContentTypeDetector.new(file_path).detect
+  def self.content_type_for(file_path, fallback = ProyeksiApp::ContentTypeDetector::SENSIBLE_DEFAULT)
+    content_type = ProyeksiApp::MimeType.narrow_type file_path, ProyeksiApp::ContentTypeDetector.new(file_path).detect
     content_type || fallback
   end
 
@@ -213,7 +213,7 @@ class Attachment < ApplicationRecord
   end
 
   def extract_fulltext
-    return unless OpenProject::Database.allows_tsv? && (!container || container.class.attachment_tsv_extracted?)
+    return unless ProyeksiApp::Database.allows_tsv? && (!container || container.class.attachment_tsv_extracted?)
 
     ExtractFulltextJob.perform_later(id)
   end
@@ -221,7 +221,7 @@ class Attachment < ApplicationRecord
   # Extract the fulltext of any attachments where fulltext is still nil.
   # This runs inline and not in an asynchronous worker.
   def self.extract_fulltext_where_missing(run_now: true)
-    return unless OpenProject::Database.allows_tsv?
+    return unless ProyeksiApp::Database.allows_tsv?
 
     Attachment
       .where(fulltext: nil)
@@ -237,7 +237,7 @@ class Attachment < ApplicationRecord
   end
 
   def self.force_extract_fulltext
-    return unless OpenProject::Database.allows_tsv?
+    return unless ProyeksiApp::Database.allows_tsv?
 
     Attachment.pluck(:id).each do |id|
       ExtractFulltextJob.perform_now(id)

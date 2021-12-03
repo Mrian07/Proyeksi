@@ -2,7 +2,7 @@
 sidebar_navigation:
   title: Time tracking
   priority: 799
-description: Time tracking in OpenProject
+description: Time tracking in ProyeksiApp
 robots: index, follow
 keywords: time tracking, logging time, define rate, labor costs
 ---

@@ -5,7 +5,7 @@ require 'api/v3/repositories/revision_collection_representer'
 module API
   module V3
     module Repositories
-      class RevisionsByWorkPackageAPI < ::API::OpenProjectAPI
+      class RevisionsByWorkPackageAPI < ::API::ProyeksiAppAPI
         resources :revisions do
           after_validation do
             authorize(:view_work_packages, context: work_package.project)

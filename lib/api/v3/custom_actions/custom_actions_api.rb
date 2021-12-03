@@ -3,7 +3,7 @@
 module API
   module V3
     module CustomActions
-      class CustomActionsAPI < ::API::OpenProjectAPI
+      class CustomActionsAPI < ::API::ProyeksiAppAPI
         resources :custom_actions do
           route_param :id, type: Integer, desc: 'Custom action ID' do
             helpers do

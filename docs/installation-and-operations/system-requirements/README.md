@@ -20,7 +20,7 @@ The server hardware requirements should be roughly the same for both the package
 * __Memory:__ 4096 MB
 * __Free disk space:__ 20 GB
 
-This is for a single server running OpenProject for up to 200 total users. Depending on your number of concurrent users,  these requirements might vary drastically.
+This is for a single server running ProyeksiApp for up to 200 total users. Depending on your number of concurrent users,  these requirements might vary drastically.
 
 ### General Requirements
 
@@ -29,7 +29,7 @@ Technically this only really depends on the number of concurrent users. No matte
 Still, the total number of users is a good general indicator of how much resources you will need.
 
 It's not enough to simply have more resources available, however. You will have to make use of them too.
-By default OpenProject has 4 so called web workers and 1 background worker. Web workers are handling the HTTP requests while backend workers are doing offloaded tasks such as sending emails or performing resource-intensive tasks of unknown duration, e.g. copying or deleting resources.
+By default ProyeksiApp has 4 so called web workers and 1 background worker. Web workers are handling the HTTP requests while backend workers are doing offloaded tasks such as sending emails or performing resource-intensive tasks of unknown duration, e.g. copying or deleting resources.
 If there are more users you will need more web workers and eventually also more background workers.
 
 The database will need resources as well, and this, too, will increase with the number of users.
@@ -57,7 +57,7 @@ See [here](/installation-and-operations/operation/control/#scaling-the-number-of
 
 At some point simply increasing the resources of one single server may not be enough anymore.
 
-In the _packaged installation_ you can have multiple servers running OpenProject. They will need to share an external database, memcached and file storage (e.g. via NFS), however.
+In the _packaged installation_ you can have multiple servers running ProyeksiApp. They will need to share an external database, memcached and file storage (e.g. via NFS), however.
 
 One way to scale the _docker_ installation is to use [docker Swarm](/installation-and-operations/installation/docker/#docker-swarm).
 
@@ -81,7 +81,7 @@ The [docker-based installation](../installation/docker) requires a system with D
 
 ### Overview of dependencies
 
-Both the package and docker based installations will install and setup the following dependencies that are required by OpenProject to run:
+Both the package and docker based installations will install and setup the following dependencies that are required by ProyeksiApp to run:
 
 * __Runtime:__ [Ruby](https://www.ruby-lang.org/en/) Version = 2.7.x
 * __Webserver:__ [Apache](http://httpd.apache.org/)
@@ -89,12 +89,12 @@ Both the package and docker based installations will install and setup the follo
 * __Application server:__ [Puma](https://puma.io/)
 * __Database__: [PostgreSQL](http://www.postgresql.org/) Version >= 13
 
-Starting in OpenProject 12.0, PostgreSQL 13.0 will be a minimum requirement.
+Starting in ProyeksiApp 12.0, PostgreSQL 13.0 will be a minimum requirement.
 PostgreSQL versions 9.6. and up will continue to work, but may result in incompatibilities and degraded performance in the future. We have a [migration guide on how to upgrade to PostgreSQL 13](https://www.openproject.org/docs/installation-and-operations/misc/migration-to-postgresql13/).
 
 ## Client
 
-OpenProject supports the latest versions of the major browsers. 
+ProyeksiApp supports the latest versions of the major browsers. 
 
 * [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/products/) (at least ESR version 78.3.1)
 * [Microsoft Edge](https://www.microsoft.com/de-de/windows/microsoft-edge) (only MS Edge version based on Chromium is supported)
@@ -103,6 +103,6 @@ OpenProject supports the latest versions of the major browsers.
 
 ## Frequently asked questions (FAQ)
 
-### Can I run OpenProject on Windows?
+### Can I run ProyeksiApp on Windows?
 
 At the moment this is not officially supported, although the docker image might work. Check above regarding the system requirements.

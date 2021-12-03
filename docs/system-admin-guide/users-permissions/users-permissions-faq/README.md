@@ -11,21 +11,21 @@ keywords: manage users FAQ, permissions, groups, roles, user settings
 
 ## I want to delete a user but it fails.
 
-If you are using the Enterprise cloud and the user you are trying to delete is the user that initially set up OpenProject, you will need to contact us to delete this user. For other users please make sure the box "User accounts deletable by admins" in *Administration -> Users & Permissions -> Settings* is checked.
+If you are using the Enterprise cloud and the user you are trying to delete is the user that initially set up ProyeksiApp, you will need to contact us to delete this user. For other users please make sure the box "User accounts deletable by admins" in *Administration -> Users & Permissions -> Settings* is checked.
 
 ## We use LDAP. How do we release a license should someone leave our team and no longer need access?
 
 There are two possibilities:
 
 - You can block the user in the user list under "Administration". The LDAP sync does not change the status and the user does not count into the active users anymore.
-- The user can be released through an attribute in the LDAP or through an OpenProject LDAP group. Then the permission for this user can be removed in the LDAP and the user cannot use the LDAP authentication for OpenProject anymore. In this case the user still needs to be blocked or deleted in OpenProject.
+- The user can be released through an attribute in the LDAP or through an ProyeksiApp LDAP group. Then the permission for this user can be removed in the LDAP and the user cannot use the LDAP authentication for ProyeksiApp anymore. In this case the user still needs to be blocked or deleted in ProyeksiApp.
 
 ## How can I assign the global role "project creator" to any newly created user (in LDAP) automatically?
 
 There is no built in way to do that.
 
 The best way of achieving the result is via the API v3 by [fetching users](../../../api/endpoints/users/#list-users) based on their creation date and for every newly created user, [assign the roles](../../../api/endpoints/memberships/#create-membership) that a new user should have. 
-Starting with OpenProject 11.2 this is also possible for global roles.
+Starting with ProyeksiApp 11.2 this is also possible for global roles.
 
 ## What happens to a user's contributions (e.g. work packages) if I delete their account?
 

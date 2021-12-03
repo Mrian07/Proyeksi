@@ -130,7 +130,7 @@ module DemoData
     end
 
     def set_backlogs_attributes!(wp_attr, attributes)
-      if defined? OpenProject::Backlogs
+      if defined? ProyeksiApp::Backlogs
         wp_attr[:position] = attributes[:position].to_i if attributes[:position].present?
         wp_attr[:story_points] = attributes[:story_points].to_i if attributes[:story_points].present?
       end

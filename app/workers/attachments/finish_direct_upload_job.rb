@@ -30,14 +30,14 @@ class Attachments::FinishDirectUploadJob < ApplicationJob
     journalize_container(attachment)
     attachment_created_event(attachment)
   rescue StandardError => e
-    ::OpenProject.logger.error e
+    ::ProyeksiApp.logger.error e
     attachment.destroy
   ensure
     File.unlink(local_file.path) if File.exist?(local_file.path)
   end
 
   def set_attributes_from_file(attachment, local_file)
-    attachment.extend(OpenProject::ChangedBySystem)
+    attachment.extend(ProyeksiApp::ChangedBySystem)
     attachment.change_by_system do
       attachment.downloads = 0
       attachment.set_file_size local_file
@@ -106,8 +106,8 @@ class Attachments::FinishDirectUploadJob < ApplicationJob
   end
 
   def attachment_created_event(attachment)
-    OpenProject::Notifications.send(
-      OpenProject::Events::ATTACHMENT_CREATED,
+    ProyeksiApp::Notifications.send(
+      ProyeksiApp::Events::ATTACHMENT_CREATED,
       attachment: attachment
     )
   end

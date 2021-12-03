@@ -17,7 +17,7 @@ module API
         def to_json(*args)
           return super if no_caching?
 
-          cached_json_rep = OpenProject::Cache.fetch(json_cache_key) do
+          cached_json_rep = ProyeksiApp::Cache.fetch(json_cache_key) do
             with_caching_state :cacheable do
               super
             end
@@ -166,7 +166,7 @@ module API
           cacheable << json_key_parts_of_represented
           cacheable << json_key_dependencies
 
-          OpenProject::Cache::CacheKey.expand(cacheable.flatten.compact)
+          ProyeksiApp::Cache::CacheKey.expand(cacheable.flatten.compact)
         end
 
         def json_key_part_represented

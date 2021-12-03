@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { HalResourceService } from 'core-app/features/hal/services/hal-resource.service';
 
 @Injectable({ providedIn: 'root' })
-export class OpenProjectBackupService {
+export class ProyeksiAppBackupService {
   constructor(protected http:HttpClient,
     protected halResource:HalResourceService) {
   }

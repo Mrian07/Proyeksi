@@ -2,14 +2,14 @@
 sidebar_navigation:
   title: Create quote
   priority: 990
-description: Request a quote within your OpenProject Enterprise cloud
+description: Request a quote within your ProyeksiApp Enterprise cloud
 robots: index, follow
 keywords: quote, request, offer, tender, bid
 ---
 
-# Creating a quote in the OpenProject Enterprise cloud
+# Creating a quote in the ProyeksiApp Enterprise cloud
 
-If you would like to request a quote for OpenProject Enterprise cloud you can do so in your trial instance. Alternatively, you can refer to our website for the Enterprise cloud edition [pricing](https://www.openproject.org/pricing/).
+If you would like to request a quote for ProyeksiApp Enterprise cloud you can do so in your trial instance. Alternatively, you can refer to our website for the Enterprise cloud edition [pricing](https://www.openproject.org/pricing/).
 
 To create a quote please, **click on the BUY NOW teaser**, e.g. in the application header or or in the project menu.
 

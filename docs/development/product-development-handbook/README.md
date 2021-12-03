@@ -2,18 +2,18 @@
 sidebar_navigation:
   title: Product development
   priority: 999
-description: Learn about OpenProject's product development process and the RICE score
+description: Learn about ProyeksiApp's product development process and the RICE score
 robots: index, follow
 keywords: product development, requirement process, RICE score
 ---
 
-# OpenProject product development handbook
+# ProyeksiApp product development handbook
 
 
 
 ## 1. Overview & objectives
 
-OpenProject aims to connect distributed teams and organizations and make project management intuitive and fun. The open source software supports classical project management and team collaboration as well as agile project management methodologies. OpenProject is continuously developed and maintained by an active international community to provide a powerful feature set and yet intuitive user interface. The overall purpose is to create customer benefit. To achieve this, OpenProject follows a requirements and product development process that empathizes identifying and building the functionality which most aligns with OpenProject’s product vision and delivers customer value.
+ProyeksiApp aims to connect distributed teams and organizations and make project management intuitive and fun. The open source software supports classical project management and team collaboration as well as agile project management methodologies. ProyeksiApp is continuously developed and maintained by an active international community to provide a powerful feature set and yet intuitive user interface. The overall purpose is to create customer benefit. To achieve this, ProyeksiApp follows a requirements and product development process that empathizes identifying and building the functionality which most aligns with ProyeksiApp’s product vision and delivers customer value.
 
 This guide is an evolving description of the steps taken from collecting requirements all the way to implementation and release. The goal is to provide a single source of truth and provide a guideline for team members, community contributors and interested customers. As such this document will continuously be updated.
 
@@ -44,7 +44,7 @@ The specification phase may not be necessary for bug fixes, minor design changes
 | - Community |                                      |                              |
 | - Other stakeholders |                                      |                              |
 
-The [OpenProject Wish List](https://community.openproject.com/projects/openproject/work_packages?query_id=180) is used to collect a backlog of potential validation opportunities. Requirements may come from customers, internal usage, support messages, community forums or through other communication channels.
+The [ProyeksiApp Wish List](https://community.openproject.com/projects/openproject/work_packages?query_id=180) is used to collect a backlog of potential validation opportunities. Requirements may come from customers, internal usage, support messages, community forums or through other communication channels.
 
 Requirements should be captured as a **Feature** or **Epic** (for larger features which we can be broken down into smaller features) and focus on describing the customer’s problem rather than jumping ahead to a solution.
 For a guideline on how to report feature requests, refer to the [Feature request guideline](../../development/submit-feature-idea/). Technical maintenance issues and refactorings can be tracked as **Code Maintenance**.
@@ -132,7 +132,7 @@ The RICE scoring model aims to objectively evaluate requirements (new products, 
 **Reach**
 
 The first factor when determining the RICE score is the number of users reached by the feature.
-For OpenProject, Reach refers to the number of users and customers who will benefit from a new requirement in the first quarter after its launch.
+For ProyeksiApp, Reach refers to the number of users and customers who will benefit from a new requirement in the first quarter after its launch.
 
 The reach ranges from 0.5 for minimal reach (less than 5% of users) to 10.0 for requirements that impact the vast majority of users (80% or more).
 
@@ -293,13 +293,13 @@ Building phase 1 (Development) and phase 2 (Quality Assurance) run partly in par
 
 
 
-When all features, bugs have been tested successfully, regression testing was performed successfully and no critical errors are reported on community.openproject.com OpenProject environment, new product version is prepared for release.
+When all features, bugs have been tested successfully, regression testing was performed successfully and no critical errors are reported on community.openproject.com ProyeksiApp environment, new product version is prepared for release.
 
 
 
 ## 5. Release phase
 
-During the release phase, the new OpenProject version is rolled out, release notes are published and lessons learned are documented.
+During the release phase, the new ProyeksiApp version is rolled out, release notes are published and lessons learned are documented.
 
 
 
@@ -311,13 +311,13 @@ During the release phase, the new OpenProject version is rolled out, release not
 | - Marketing       | 2. Release for Cloud / on-premise customers |                               |
 | - Product Manager |                                             |                               |
 
-Once tested and stabilized, a new OpenProject version is rolled out in stages:
+Once tested and stabilized, a new ProyeksiApp version is rolled out in stages:
 
 1. DevOps creates release branch for new version.
 2. Marketing / PM creates news and release notes.
 3. DevOps deploys new release on Cloud Edition trials.
 4. DevOps deploys new release on Cloud Edition production.
-5. DevOps releases new OpenProject version for on-premise installations (Packager, Docker, notify UCS).
+5. DevOps releases new ProyeksiApp version for on-premise installations (Packager, Docker, notify UCS).
 6. DevOps / Marketing update documentation for new release (technical, marketing information).
 
 

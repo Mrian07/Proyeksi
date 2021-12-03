@@ -28,7 +28,7 @@ export class PersistentToggleComponent implements OnInit {
     this.$targetNotification = this.getTargetNotification();
 
     this.identifier = this.$element.data('identifier');
-    this.isHidden = window.OpenProject.guardedLocalStorage(this.identifier) === 'true';
+    this.isHidden = window.ProyeksiApp.guardedLocalStorage(this.identifier) === 'true';
 
     // Set initial state
     this.$targetNotification.prop('hidden', !!this.isHidden);
@@ -53,7 +53,7 @@ export class PersistentToggleComponent implements OnInit {
 
   private toggle(isNowHidden:boolean) {
     this.isHidden = isNowHidden;
-    window.OpenProject.guardedLocalStorage(this.identifier, (!!isNowHidden).toString());
+    window.ProyeksiApp.guardedLocalStorage(this.identifier, (!!isNowHidden).toString());
 
     if (isNowHidden) {
       this.$targetNotification.slideUp(400, () => {

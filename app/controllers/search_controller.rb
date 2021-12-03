@@ -161,7 +161,7 @@ class SearchController < ApplicationController
       available_search_types: available_search_types.map do |search_type|
         {
           id: search_type,
-          name: OpenProject::GlobalSearch.tab_name(search_type)
+          name: ProyeksiApp::GlobalSearch.tab_name(search_type)
         }
       end,
       current_tab: available_search_types.detect { |search_type| search_params[search_type] } || 'all'

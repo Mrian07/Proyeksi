@@ -26,8 +26,8 @@ class Queries::WorkPackages::Filter::MilestoneFilter < Queries::WorkPackages::Fi
   end
 
   def positive?
-    (operator == '=' && values == [OpenProject::Database::DB_VALUE_TRUE]) ||
-      (operator == '!' && values == [OpenProject::Database::DB_VALUE_FALSE])
+    (operator == '=' && values == [ProyeksiApp::Database::DB_VALUE_TRUE]) ||
+      (operator == '!' && values == [ProyeksiApp::Database::DB_VALUE_FALSE])
   end
 
   def human_name

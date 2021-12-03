@@ -70,7 +70,7 @@ class Sprint < Version
     page = project.wiki.find_page(wiki_page_title)
     return false if !page
 
-    template = project.wiki.find_page(Setting.plugin_openproject_backlogs['wiki_template'])
+    template = project.wiki.find_page(Setting.plugin_proyeksiapp_backlogs['wiki_template'])
     return false if template && page.text == template.text
 
     true
@@ -133,7 +133,7 @@ class Sprint < Version
   private
 
   def create_wiki_page(page_title)
-    template = project.wiki.find_page(Setting.plugin_openproject_backlogs['wiki_template'])
+    template = project.wiki.find_page(Setting.plugin_proyeksiapp_backlogs['wiki_template'])
     page_text = if template
                   "h1. #{name}\n\n#{template.text}"
                 else

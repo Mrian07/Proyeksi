@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class TimeEntriesActivityAPI < ::API::OpenProjectAPI
+      class TimeEntriesActivityAPI < ::API::ProyeksiAppAPI
         resources :activities do
           route_param :id, type: Integer, desc: 'Time entry activity ID' do
             after_validation do

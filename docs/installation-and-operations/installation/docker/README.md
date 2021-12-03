@@ -4,7 +4,7 @@ sidebar_navigation:
   priority: 300
 ---
 
-# Install OpenProject with Docker
+# Install ProyeksiApp with Docker
 
 [Docker](https://www.docker.com/) is a way to distribute self-contained applications easily. We
 provide a Docker image for the Community Edition that you can very easily
@@ -14,7 +14,7 @@ installed first, which usually requires a recent operating system. Please see
 the [Docker Engine installation page](https://docs.docker.com/install) if you don't have Docker
 installed.
 
-OpenProject with Docker can be launched in two ways:
+ProyeksiApp with Docker can be launched in two ways:
 
 1. Multiple containers (recommended), each with a single process inside, using a Compose file. Allows to easily choose which services you want to run, and simplifies scaling and monitoring aspects.
 
@@ -48,7 +48,7 @@ Launch the containers:
 docker-compose up -d
 ```
 
-After a while, OpenProject should be up and running on <http://localhost:8080>. The default username and password is login: `admin`, and password: `admin`.
+After a while, ProyeksiApp should be up and running on <http://localhost:8080>. The default username and password is login: `admin`, and password: `admin`.
 
 Note that the `docker-compose.yml` file present in the repository can be adjusted to your convenience. For instance you could mount specific configuration files, override environment variables, or switch off services you don't need. Please refer to the official [Docker Compose documentation](https://docs.docker.com/compose/extends/) for more details.
 
@@ -62,7 +62,7 @@ docker-compose down
 
 ### Quick Start
 
-The fastest way to get an OpenProject instance up and running is to run the
+The fastest way to get an ProyeksiApp instance up and running is to run the
 following command:
 
 ```bash
@@ -73,7 +73,7 @@ This will take a bit of time the first time you launch it, but after a few
 minutes you should see a success message indicating the default administration
 password (login: `admin`, password: `admin`).
 
-You can then launch a browser and access your new OpenProject installation at
+You can then launch a browser and access your new ProyeksiApp installation at
 <http://localhost:8080>. Easy!
 
 To stop the container, simply hit CTRL-C.
@@ -87,7 +87,7 @@ achieved with the `-d` flag:
 docker run -d -p 8080:80 -e SECRET_KEY_BASE=secret openproject/community:12
 ```
 
-**Note**: We've had reports of people being unable to start OpenProject this way
+**Note**: We've had reports of people being unable to start ProyeksiApp this way
 because of an [issue regarding pseudo-TTY allocations](https://github.com/moby/moby/issues/31243#issuecomment-406825071)
 and permissions to write to `/dev/stdout`. If you run into this, a workaround
 seems to be to add `-t` to your run command, even if you run in detached mode.
@@ -97,7 +97,7 @@ seems to be to add `-t` to your run command, even if you run in detached mode.
 The one-liner above is great to get started quickly, but we strongly advise against
 using this setup for production purposes.
 
-Also, if you want to run OpenProject in production you need to ensure that your data is not
+Also, if you want to run ProyeksiApp in production you need to ensure that your data is not
 lost if you restart the container.
 
 To achieve this, we recommend that you create a directory on your host system
@@ -147,7 +147,7 @@ docker rm openproject
 
 ### Initial configuration
 
-OpenProject is usually configured through a YAML file, but with the Docker
+ProyeksiApp is usually configured through a YAML file, but with the Docker
 image you need to pass all configuration through environment variables. You can
 overwrite any of the values usually found in the standard YAML file by using
 [environment variables](../../configuration/environment).
@@ -165,9 +165,9 @@ For more advanced configuration, please have a look at the [Advanced configurati
 
 ### Apache Reverse Proxy Setup
 
-The containers above are not meant as public facing endpoints. Always use an existing proxying web server or load balancer to provide access to OpenProject
+The containers above are not meant as public facing endpoints. Always use an existing proxying web server or load balancer to provide access to ProyeksiApp
 
-There are two ways to run OpenProject. We'll cover each configuration in a separate of the following sections.
+There are two ways to run ProyeksiApp. We'll cover each configuration in a separate of the following sections.
 
 For both configurations the following Apache mods are required:
 
@@ -183,14 +183,14 @@ Both configuration examples are based on the following assumptions:
 
 * the site is accessed via https
 * certificate and key are located under `/etc/ssl/crt/server.{crt, key}`
-* the OpenProject docker container's port 80 is mapped to the docker host's port 8080
+* the ProyeksiApp docker container's port 80 is mapped to the docker host's port 8080
 
-*Important:* Once OpenProject is running make sure to also set the host name and protocol
+*Important:* Once ProyeksiApp is running make sure to also set the host name and protocol
 accordingly under Administration -> System Settings.
 
 #### 1) Virtual host root
 
-The default scenario is to have OpenProject serve the whole virtual host.
+The default scenario is to have ProyeksiApp serve the whole virtual host.
 This requires no further configuration for the docker container beyond what is
 described above.
 
@@ -230,11 +230,11 @@ will look like this:
 
 #### 2) Location (subdirectory)
 
-Let's assume you want OpenProject to run on your host with the *server name* `example.com`
+Let's assume you want ProyeksiApp to run on your host with the *server name* `example.com`
 under the *subdirectory* `/openproject`.
 
-If you want to run OpenProject in a subdirectory on your server, first you will
-need to configure OpenProject accordingly by adding the following options to the `docker run` call:
+If you want to run ProyeksiApp in a subdirectory on your server, first you will
+need to configure ProyeksiApp accordingly by adding the following options to the `docker run` call:
 
 ```
 -e OPENPROJECT_RAILS__RELATIVE__URL__ROOT=/openproject \
@@ -276,7 +276,7 @@ The apache configuration for this configuration then looks like this:
 </VirtualHost>
 ```
 
-### OpenProject plugins
+### ProyeksiApp plugins
 
 The docker image itself does not support plugins. But you can create your own docker image to include plugins.
 
@@ -310,7 +310,7 @@ RUN bundle config unset deployment && bundle install && bundle config set deploy
 RUN ./docker/prod/setup/postinstall.sh
 ```
 
-The file is based on the normal OpenProject docker image.
+The file is based on the normal ProyeksiApp docker image.
 All the Dockerfile does is copy your custom plugins gemfile into the image, install the gems and precompile any new assets.
 
 **4. Build the image**
@@ -325,7 +325,7 @@ The `-t` option is the tag for your image. You can choose what ever you want.
 
 **5. Run the image**
 
-You can run the image just like the normal OpenProject image (as shown earlier).
+You can run the image just like the normal ProyeksiApp image (as shown earlier).
 You just have to use your chosen tag instead of `openproject/community:12`.
 To just give it a quick try you can run this:
 
@@ -333,7 +333,7 @@ To just give it a quick try you can run this:
 docker run -p 8080:80 --rm -it openproject-with-slack
 ```
 
-After which you can access OpenProject under http://localhost:8080.
+After which you can access ProyeksiApp under http://localhost:8080.
 
 ## Offline/air-gapped installation
 
@@ -348,7 +348,7 @@ On a system that has access to the internet run the following.
 docker pull openproject/community:12 && docker save openproject/community:12 | gzip > openproject-12.tar.gz
 ```
 
-This creates a compressed archive containing the latest OpenProject docker image.
+This creates a compressed archive containing the latest ProyeksiApp docker image.
 The file will have a size of around 700mb.
 
 **2) Transfer the file onto the system**
@@ -411,7 +411,7 @@ Where `10.0.2.77` is your swarm manager's (advertise) IP address.
 
 **Note:** This is only relevant if you have more than 1 node in your swarm.
 
-If your containers run distributed on multiple nodes you will need a shared network storage to store OpenProject's attachments.
+If your containers run distributed on multiple nodes you will need a shared network storage to store ProyeksiApp's attachments.
 The easiest way for this would be to setup an NFS drive that is shared among all nodes and mounted to the same path on each of them.
 Say `/mnt/openproject/`.
 
@@ -420,7 +420,7 @@ We will show both possibilities later in the configuration.
 
 ### 3) Create stack
 
-To create a stack you need a stack file. The easiest way is to just copy OpenProject's [docker-compose.yml](https://github.com/opf/openproject/blob/release/11.0/docker-compose.yml). Just download it and save it as, say, `openproject-stack.yml`.
+To create a stack you need a stack file. The easiest way is to just copy ProyeksiApp's [docker-compose.yml](https://github.com/opf/openproject/blob/release/11.0/docker-compose.yml). Just download it and save it as, say, `openproject-stack.yml`.
 
 #### Configuring storage
 
@@ -514,10 +514,10 @@ x-op-app: &app
 
 **Disclaimer**: This may not be the best possible solution, but it is the most straight-forward one.
 
-#### OpenProject Configuration
+#### ProyeksiApp Configuration
 
-Any additional configuration of OpenProject happens in the environment section (like for S3 above) of the app inside of the `openproject-stack.yml`.
-For instance should you want to disable an OpenProject module globally, you would add the following:
+Any additional configuration of ProyeksiApp happens in the environment section (like for S3 above) of the app inside of the `openproject-stack.yml`.
+For instance should you want to disable an ProyeksiApp module globally, you would add the following:
 
 ```
 x-op-app: &app
@@ -554,7 +554,7 @@ canb3m7ilkjn        openproject_web      replicated          1/1                
 7ovn0sbu8a7w        openproject_worker   replicated          1/1                 openproject/community:12
 ```
 
-You can now access OpenProject under [http://0.0.0.0:8080](http://0.0.0.0:8080).
+You can now access ProyeksiApp under [http://0.0.0.0:8080](http://0.0.0.0:8080).
 This endpoint then can be used in a apache reverse proxy setup as shown further up, for instance.
 
 Don't worry about one of the services (openproject_seeder) having 0/1 replicas.
@@ -572,7 +572,7 @@ Scaling the database horizontally adds another level of complexity which we won'
 
 What we can scale is both the proxy, and most importantly the web service.
 For a couple of thousand users we may want to use 6 web service (`openproject_web`) replicas.
-The proxy processes (`openproject_proxy`) in front of the actual OpenProject process does not need as many replicas.
+The proxy processes (`openproject_proxy`) in front of the actual ProyeksiApp process does not need as many replicas.
 2 are fine here.
 
 Also at least 2 worker (`openproject_worker`) replicas make sense to handle the increased number of background tasks.

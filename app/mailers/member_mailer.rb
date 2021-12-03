@@ -14,8 +14,8 @@
 # need to be mailed to individually.
 
 class MemberMailer < ApplicationMailer
-  include OpenProject::StaticRouting::UrlHelpers
-  include OpenProject::TextFormatting
+  include ProyeksiApp::StaticRouting::UrlHelpers
+  include ProyeksiApp::TextFormatting
 
   def added_project(current_user, member, message)
     alter_project(current_user,

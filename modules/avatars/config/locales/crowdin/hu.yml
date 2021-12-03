@@ -24,11 +24,11 @@ hu:
       Töltsön fel saját, 128x128 képpont méretű profilképet. A nagyobb fájlok átméretezésre és levágásra kerülnek, hogy illeszkedjenek a méretkorláthoz. Feltöltés előtt megjelenik a profilképének előnézete, miután kiválasztott egy képet.
     text_change_gravatar_html: 'Menjen a %{gravatar_url} oldalra az e-mail címéhez történő Gravatar megváltoztatásához vagy hozzáadásához.'
     text_your_local_avatar: |
-      Az OpenProject lehetővé teszi a saját profilképének feltöltését.
+      Az ProyeksiApp lehetővé teszi a saját profilképének feltöltését.
     text_local_avatar_over_gravatar: |
       Ha beállít egyet, akkor az egyéni profilkép elsőbbséget élvez a fenti Gravatar profilképpel szemben.
     text_your_current_gravatar: |
-      Az OpenProject a gravatar profilképét használja, ha regisztrált egyet, vagy egy alapértelmezett képet vagy ikont, ha létezik valamelyik.
+      Az ProyeksiApp a gravatar profilképét használja, ha regisztrált egyet, vagy egy alapértelmezett képet vagy ikont, ha létezik valamelyik.
       A jelenlegi gravatar a következő:
     settings:
       enable_gravatars: 'Felhasználói gravatar profilképek engedélyezése'

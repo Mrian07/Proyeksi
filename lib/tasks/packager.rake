@@ -34,7 +34,7 @@ namespace :packager do
     end
 
     # Clear any caches
-    OpenProject::Cache.clear
+    ProyeksiApp::Cache.clear
 
     # Persist configuration
     Setting.sys_api_enabled = 1

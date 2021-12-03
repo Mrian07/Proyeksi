@@ -12,7 +12,7 @@ class Services::RemoveWatcher
     if watcher.present?
       @work_package.watcher_users.delete(@user)
       success.call
-      OpenProject::Notifications.send(OpenProject::Events::WATCHER_REMOVED,
+      ProyeksiApp::Notifications.send(ProyeksiApp::Events::WATCHER_REMOVED,
                                       watcher: watcher,
                                       watcher_remover: User.current)
     else

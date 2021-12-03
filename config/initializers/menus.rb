@@ -30,11 +30,11 @@ Redmine::MenuManager.map :top_menu do |menu|
                 User.current.allowed_to?(:view_news, nil, global: true)
             }
   menu.push :help,
-            OpenProject::Static::Links.help_link,
+            ProyeksiApp::Static::Links.help_link,
             last: true,
             caption: '',
             icon: 'icon-help op-app-help--icon',
-            html: { accesskey: OpenProject::AccessKeys.key_for(:help),
+            html: { accesskey: ProyeksiApp::AccessKeys.key_for(:help),
                     title: I18n.t('label_help'),
                     target: '_blank' }
 end
@@ -187,7 +187,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
             parent: :users_and_permissions
 
   menu.push :user_avatars,
-            { controller: '/admin/settings', action: 'show_plugin', id: :openproject_avatars },
+            { controller: '/admin/settings', action: 'show_plugin', id: :proyeksiapp_avatars },
             if: Proc.new { User.current.admin? },
             caption: :label_avatar_plural,
             parent: :users_and_permissions
@@ -305,7 +305,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
             parent: :authentication,
             html: { class: 'server_authentication' },
             last: true,
-            if: proc { !OpenProject::Configuration.disable_password_login? }
+            if: proc { !ProyeksiApp::Configuration.disable_password_login? }
 
   menu.push :oauth_applications,
             { controller: '/oauth/applications', action: 'index' },
@@ -328,7 +328,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
 
   menu.push :backups,
             { controller: '/admin/backups', action: 'show' },
-            if: Proc.new { OpenProject::Configuration.backup_enabled? && User.current.admin? },
+            if: Proc.new { ProyeksiApp::Configuration.backup_enabled? && User.current.admin? },
             caption: :label_backup,
             last: true,
             icon: 'icon2 icon-save'
@@ -356,7 +356,7 @@ Redmine::MenuManager.map :admin_menu do |menu|
             { controller: '/enterprises', action: :show },
             caption: :label_enterprise_edition,
             icon: 'icon2 icon-headset',
-            if: proc { User.current.admin? && OpenProject::Configuration.ee_manager_visible? }
+            if: proc { User.current.admin? && ProyeksiApp::Configuration.ee_manager_visible? }
 
   menu.push :admin_costs,
             { controller: '/admin/settings', action: 'show_plugin', id: :costs },

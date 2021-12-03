@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 4.1.4
+  title: ProyeksiApp 4.1.4
   sidebar_navigation:
       title: 4.1.4
   release_version: 4.1.4
@@ -7,9 +7,9 @@
 ---
 
 
-# OpenProject 4.1.4
+# ProyeksiApp 4.1.4
 
-OpenProject 4.1.4 contains a bug fix and a security fix.
+ProyeksiApp 4.1.4 contains a bug fix and a security fix.
 
 The following bugs have been fixed:
 

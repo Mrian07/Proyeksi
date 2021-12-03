@@ -2,7 +2,7 @@
 
 module Bim::Bcf::API::V2_1
   module Comments
-    class API < ::API::OpenProjectAPI
+    class API < ::API::ProyeksiAppAPI
       resources :comments do
         helpers do
           def all_comments

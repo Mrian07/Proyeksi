@@ -15,7 +15,7 @@ describe WikiPages::CreateContract do
                    parent: page_parent).tap do |page|
         page.build_content text: page_text,
                            author: page_author
-        page.content.extend(OpenProject::ChangedBySystem)
+        page.content.extend(ProyeksiApp::ChangedBySystem)
         page.content.changed_by_system(changed_by_system)
 
         allow(page)

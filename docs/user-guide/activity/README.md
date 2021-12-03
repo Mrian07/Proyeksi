@@ -9,7 +9,7 @@ keywords: activity
 
 # Activity
 
-In OpenProject you can display the activities in a project to gain a quick overview about the current status and changes. The activity page lists the newest developments in your project.
+In ProyeksiApp you can display the activities in a project to gain a quick overview about the current status and changes. The activity page lists the newest developments in your project.
 
 <div class="glossary">
 **Activity** is defined as a module that displays the actions performed in a project over a certain period of time.

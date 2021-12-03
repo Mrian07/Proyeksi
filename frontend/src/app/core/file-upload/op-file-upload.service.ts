@@ -34,7 +34,7 @@ export interface MappedUploadResult {
 }
 
 @Injectable()
-export class OpenProjectFileUploadService {
+export class ProyeksiAppFileUploadService {
   constructor(protected http:HttpClient,
     protected halResource:HalResourceService) {
   }

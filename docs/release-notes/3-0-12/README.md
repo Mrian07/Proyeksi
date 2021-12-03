@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 3.0.12
+  title: ProyeksiApp 3.0.12
   sidebar_navigation:
       title: 3.0.12
   release_version: 3.0.12
@@ -7,13 +7,13 @@
 ---
 
 
-# OpenProject 3.0.12
+# ProyeksiApp 3.0.12
 
 With the release of version 3.0.12 several security threats in
-OpenProject are fixed.  
+ProyeksiApp are fixed.  
 These concern user permissions and the visibility of administration
 settings for logged out users. We advise everybody to update their
-OpenProject installation.
+ProyeksiApp installation.
 
 In addition, an error concerning the API v2 has been solved
 ([\#6688](https://community.openproject.org/work_packages/6688 "APIv2: ids-parameter ignored for planning_elements.json (closed)"))
@@ -35,7 +35,7 @@ included in 3.0.12:
     Blissing](https://github.com/bjornblissing) who reported and fixed
     this error.
 
-For a complete list of changes, pleas refer to the [OpenProject 3.0.12
+For a complete list of changes, pleas refer to the [ProyeksiApp 3.0.12
 query](https://community.openproject.org/versions/450).
 
 

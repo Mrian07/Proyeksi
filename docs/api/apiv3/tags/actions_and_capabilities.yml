@@ -1,6 +1,6 @@
 ---
 description: |-
-  An action is a change one can trigger within the OpenProject instance.
+  An action is a change one can trigger within the ProyeksiApp instance.
   This could be creating a work package, exporting work packages or updating a user.
   An action can also be something where the user is able to be involved so where the user is in the passive role
   e.g. when being assigned a work package.
@@ -52,7 +52,7 @@ description: |-
   Whenever a principal is assigned an action within a context, the principal has additional capabilities.
 
   Exactly which actions can be gained by having a role assigned depends on the configuration of that role.
-  The configuration is adaptable by admins within the administration of the OpenProject instance.
+  The configuration is adaptable by admins within the administration of the ProyeksiApp instance.
 
   ### Linked Properties
 

@@ -4,7 +4,7 @@ module API
   module V3
     module Projects
       module Copy
-        class CreateFormAPI < ::API::OpenProjectAPI
+        class CreateFormAPI < ::API::ProyeksiAppAPI
           resource :form do
             post &::API::V3::Utilities::Endpoints::CreateForm
               .new(

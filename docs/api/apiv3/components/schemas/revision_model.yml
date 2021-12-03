@@ -10,7 +10,7 @@ required:
 properties:
   id:
     type: integer
-    description: Revision's id, assigned by OpenProject
+    description: Revision's id, assigned by ProyeksiApp
     readOnly: true
     minimum: 0
     exclusiveMinimum: true
@@ -26,7 +26,7 @@ properties:
   authorName:
     type: string
     description: The name of the author that committed this revision. Note that this
-      name is retrieved from the repository and does not identify a user in OpenProject.
+      name is retrieved from the repository and does not identify a user in ProyeksiApp.
     readOnly: true
   message:
     allOf:
@@ -64,7 +64,7 @@ properties:
         allOf:
         - "$ref": "./link.yml"
         - description: |-
-            The user that added this revision, if the authorName was mapped to a user in OpenProject
+            The user that added this revision, if the authorName was mapped to a user in ProyeksiApp
 
             **Resource**: User
           readOnly: true

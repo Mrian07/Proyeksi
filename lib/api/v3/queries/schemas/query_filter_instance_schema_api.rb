@@ -4,7 +4,7 @@ module API
   module V3
     module Queries
       module Schemas
-        class QueryFilterInstanceSchemaAPI < ::API::OpenProjectAPI
+        class QueryFilterInstanceSchemaAPI < ::API::ProyeksiAppAPI
           resource :filter_instance_schemas do
             helpers do
               def collection_representer

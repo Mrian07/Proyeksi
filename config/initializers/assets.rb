@@ -1,4 +1,4 @@
-OpenProject::Application.configure do
+ProyeksiApp::Application.configure do
   config.assets.precompile += %w(
     favicon.ico
     locales/*.js

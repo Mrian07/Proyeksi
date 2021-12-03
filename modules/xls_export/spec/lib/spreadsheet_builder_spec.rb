@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "SpreadsheetBuilder" do
   before(:each) do
-    @spreadsheet = OpenProject::XlsExport::SpreadsheetBuilder.new
+    @spreadsheet = ProyeksiApp::XlsExport::SpreadsheetBuilder.new
     @sheet = @spreadsheet.send(:raw_sheet)
   end
 

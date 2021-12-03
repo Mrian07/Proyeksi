@@ -19,8 +19,8 @@ describe 'Repository Settings', type: :feature, js: true do
     allow(User).to receive(:current).and_return current_user
     allow(Setting).to receive(:enabled_scm).and_return(enabled_scms)
 
-    allow(OpenProject::Configuration).to receive(:[]).and_call_original
-    allow(OpenProject::Configuration).to receive(:[]).with('scm').and_return(config)
+    allow(ProyeksiApp::Configuration).to receive(:[]).and_call_original
+    allow(ProyeksiApp::Configuration).to receive(:[]).with('scm').and_return(config)
 
     allow(project).to receive(:repository).and_return(repository)
     settings_page.visit_repository_settings

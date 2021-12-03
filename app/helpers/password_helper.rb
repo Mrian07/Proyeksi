@@ -41,7 +41,7 @@ module PasswordHelper
   def render_password_complexity_hint
     rules = password_rules_description
 
-    s = OpenProject::Passwords::Evaluator.min_length_description
+    s = ProyeksiApp::Passwords::Evaluator.min_length_description
     s += "<br> #{rules}" if rules.present?
 
     s.html_safe
@@ -51,7 +51,7 @@ module PasswordHelper
 
   # Return a HTML list with active password complexity rules
   def password_active_rules
-    rules = OpenProject::Passwords::Evaluator.active_rules_list
+    rules = ProyeksiApp::Passwords::Evaluator.active_rules_list
     content_tag :ul do
       rules.map { |item| concat(content_tag(:li, item)) }
     end
@@ -60,8 +60,8 @@ module PasswordHelper
   # Returns a text describing the active password complexity rules,
   # the minimum number of rules to adhere to and the total number of rules.
   def password_rules_description
-    return '' if OpenProject::Passwords::Evaluator.min_adhered_rules == 0
+    return '' if ProyeksiApp::Passwords::Evaluator.min_adhered_rules == 0
 
-    OpenProject::Passwords::Evaluator.rules_description_locale(password_active_rules)
+    ProyeksiApp::Passwords::Evaluator.rules_description_locale(password_active_rules)
   end
 end

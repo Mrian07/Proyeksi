@@ -1,5 +1,5 @@
 ---
-  title: OpenProject 8.3.1
+  title: ProyeksiApp 8.3.1
   sidebar_navigation:
       title: 8.3.1
   release_version: 8.3.1
@@ -7,10 +7,10 @@
 ---
 
 
-# OpenProject 8.3.1
+# ProyeksiApp 8.3.1
 
 We released
-[OpenProject 8.3.1](https://community.openproject.com/versions/1355).  
+[ProyeksiApp 8.3.1](https://community.openproject.com/versions/1355).  
 The release contains several bug and security related fixes and we urge
 updating to the newest version.
 

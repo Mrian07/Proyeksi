@@ -21,7 +21,7 @@ class Comment < ApplicationRecord
   private
 
   def send_news_comment_added_mail
-    OpenProject::Notifications.send(OpenProject::Events::NEWS_COMMENT_CREATED,
+    ProyeksiApp::Notifications.send(ProyeksiApp::Events::NEWS_COMMENT_CREATED,
                                     comment: self,
                                     send_notification: true)
   end

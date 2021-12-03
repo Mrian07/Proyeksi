@@ -6,7 +6,7 @@ describe AuthSourcesController, type: :controller do
   let(:current_user) { FactoryBot.create(:admin) }
 
   before do
-    allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(false)
+    allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(false)
 
     allow(User).to receive(:current).and_return current_user
   end
@@ -99,7 +99,7 @@ describe AuthSourcesController, type: :controller do
 
   context 'with password login disabled' do
     before do
-      allow(OpenProject::Configuration).to receive(:disable_password_login?).and_return(true)
+      allow(ProyeksiApp::Configuration).to receive(:disable_password_login?).and_return(true)
     end
 
     it 'cannot find index' do

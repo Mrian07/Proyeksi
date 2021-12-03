@@ -3,7 +3,7 @@
 module API
   module V3
     module Projects
-      class ProjectsAPI < ::API::OpenProjectAPI
+      class ProjectsAPI < ::API::ProyeksiAppAPI
         helpers do
           def visible_project_scope
             if current_user.admin?

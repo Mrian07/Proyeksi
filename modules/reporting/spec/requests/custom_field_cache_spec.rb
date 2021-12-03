@@ -5,8 +5,8 @@ require File.join(File.dirname(__FILE__), '..', 'support', 'custom_field_filter'
 require File.join(File.dirname(__FILE__), '..', 'support', 'configuration_helper')
 
 describe 'Custom field filter and group by caching', type: :request do
-  include OpenProject::Reporting::SpecHelper::CustomFieldFilterHelper
-  include OpenProject::Reporting::SpecHelper::ConfigurationHelper
+  include ProyeksiApp::Reporting::SpecHelper::CustomFieldFilterHelper
+  include ProyeksiApp::Reporting::SpecHelper::ConfigurationHelper
 
   let(:project) { FactoryBot.create(:valid_project) }
   let(:user) { FactoryBot.create(:admin) }

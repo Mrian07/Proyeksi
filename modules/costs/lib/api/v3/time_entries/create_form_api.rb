@@ -3,7 +3,7 @@
 module API
   module V3
     module TimeEntries
-      class CreateFormAPI < ::API::OpenProjectAPI
+      class CreateFormAPI < ::API::ProyeksiAppAPI
         resource :form do
           after_validation do
             authorize :log_time, global: true

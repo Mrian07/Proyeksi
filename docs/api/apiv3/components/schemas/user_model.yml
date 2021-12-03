@@ -147,7 +147,7 @@ properties:
       show:
         allOf:
         - "$ref": "./link.yml"
-        - description: Link to the OpenProject user page (HTML)
+        - description: Link to the ProyeksiApp user page (HTML)
           readOnly: true
       unlock:
         allOf:

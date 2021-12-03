@@ -25,11 +25,11 @@ de:
       Eine Vorschau Ihres Profilbild wird angezeigt, sobald Sie ein Bild ausgewählt haben.
     text_change_gravatar_html: 'Um das Gravatar für Ihre E-Mail-Adresse zu ändern oder eines hinzuzufügen, gehen Sie zu %{gravatar_url}.'
     text_your_local_avatar: |
-      OpenProject ermöglicht es Ihnen, Ihr eigenes Profilbild hochzuladen.
+      ProyeksiApp ermöglicht es Ihnen, Ihr eigenes Profilbild hochzuladen.
     text_local_avatar_over_gravatar: |
       Wenn Sie ein eigenes Profilbild verwenden, wird es vorrangig vor dem für Ihre E-Mail-Adresse hinterlegten Gravatar verwendet.
     text_your_current_gravatar: |
-      OpenProject verwendet, sofern verfügbar, Ihr Gravatar oder ein Standardbild. Das aktuelle Gravatar sieht wie folgt aus:
+      ProyeksiApp verwendet, sofern verfügbar, Ihr Gravatar oder ein Standardbild. Das aktuelle Gravatar sieht wie folgt aus:
     settings:
       enable_gravatars: 'Aktiviere Gravatare'
       gravatar_default: "Standard-Gravatar-Bild"

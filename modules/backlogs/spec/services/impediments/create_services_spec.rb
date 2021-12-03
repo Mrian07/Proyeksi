@@ -33,7 +33,7 @@ describe Impediments::CreateService do
   let(:status1) { FactoryBot.create(:status, name: 'status 1', is_default: true) }
 
   before(:each) do
-    allow(Setting).to receive(:plugin_openproject_backlogs).and_return('points_burn_direction' => 'down',
+    allow(Setting).to receive(:plugin_proyeksiapp_backlogs).and_return('points_burn_direction' => 'down',
                                                                        'wiki_template' => '',
                                                                        'card_spec' => 'Sattleford VM-5040',
                                                                        'story_types' => [type_feature.id.to_s],

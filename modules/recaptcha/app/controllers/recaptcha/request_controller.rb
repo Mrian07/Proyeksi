@@ -47,11 +47,11 @@ module ::Recaptcha
 
     def recaptcha_version
       case recaptcha_settings[:recaptcha_type]
-      when ::OpenProject::Recaptcha::TYPE_DISABLED
+      when ::ProyeksiApp::Recaptcha::TYPE_DISABLED
         0
-      when ::OpenProject::Recaptcha::TYPE_V2
+      when ::ProyeksiApp::Recaptcha::TYPE_V2
         2
-      when ::OpenProject::Recaptcha::TYPE_V3
+      when ::ProyeksiApp::Recaptcha::TYPE_V3
         3
       end
     end
@@ -84,11 +84,11 @@ module ::Recaptcha
     end
 
     def recaptcha_settings
-      Setting.plugin_openproject_recaptcha
+      Setting.plugin_proyeksiapp_recaptcha
     end
 
     def skip_if_disabled
-      if recaptcha_settings[:recaptcha_type] == ::OpenProject::Recaptcha::TYPE_DISABLED
+      if recaptcha_settings[:recaptcha_type] == ::ProyeksiApp::Recaptcha::TYPE_DISABLED
         complete_stage_redirect
       end
     end

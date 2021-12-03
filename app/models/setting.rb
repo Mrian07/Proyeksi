@@ -261,7 +261,7 @@ class Setting < ApplicationRecord
   def self.cache_key
     most_recent_settings_change = (settings_updated_at || Time.now.utc).to_i
 
-    "/openproject/settings/all/#{most_recent_settings_change}"
+    "/proyeksiapp/settings/all/#{most_recent_settings_change}"
   end
 
   def self.settings_updated_at
