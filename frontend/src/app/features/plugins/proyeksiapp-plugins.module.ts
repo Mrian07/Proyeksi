@@ -10,7 +10,7 @@ import { debugLog } from 'core-app/shared/helpers/debug_output';
 })
 export class ProyeksiappPluginsModule {
   constructor(injector:Injector) {
-    debugLog('Registering OpenProject plugin context');
+    debugLog('Registering AppProyeksi plugin context');
     const pluginContext = new ProyeksiAppPluginContext(injector);
     window.ProyeksiApp.pluginContext.putValue(pluginContext);
   }

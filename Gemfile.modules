@@ -47,4 +47,5 @@ group :opf_plugins do
   gem 'proyeksiapp-team_planner',              path: 'modules/team_planner'
 
   gem 'proyeksiapp-bim',                       path: 'modules/bim'
+  gem 'proyeksiapp-translations',              path: 'modules/proyeksiapp-translations'
 end

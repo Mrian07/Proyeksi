@@ -1,8 +1,6 @@
-
-
 source 'https://rubygems.org'
 
-ruby '~> 2.7.4'
+ruby '~> 2.7.5'
 
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
@@ -16,7 +14,7 @@ gem 'rdoc', '>= 2.4.2'
 gem 'doorkeeper', '~> 5.5.0'
 # Maintain our own omniauth due to relative URL root issues
 # see upstream PR: https://github.com/omniauth/omniauth/pull/903
-#gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
+gem 'omniauth', git: 'https://github.com/opf/omniauth', ref: 'fe862f986b2e846e291784d2caa3d90a658c67f0'
 gem 'request_store', '~> 1.5.0'
 
 gem 'warden', '~> 1.2'
@@ -150,7 +148,6 @@ gem 'aws-sdk-core', '~> 3.107'
 # File upload via fog + screenshots on travis
 gem 'aws-sdk-s3', '~> 1.91'
 
-gem 'openproject-token', '~> 2.2.0'
 
 gem 'plaintext', '~> 0.3.2'
 
@@ -237,7 +234,7 @@ group :development do
 end
 
 group :development, :test do
-  # Require factory_bot for usage with openproject plugins testing
+
   gem 'factory_bot', '~> 6.2.0'
   # require factory_bot_rails for convenience in core development
   gem 'factory_bot_rails', '~> 6.2.0'
@@ -269,9 +266,7 @@ gem 'roar', '~> 1.1.0'
 gem 'rack-cors', '~> 1.1.1'
 
 # Required for contracts
-# Not requiring since it needs to be patched before initialization:
-# See lib/proyeksi_app/patches/disposable.rb
-gem 'disposable', '~> 0.6.1', require: false
+gem 'disposable', '~> 0.6.2'
 
 platforms :mri, :mingw, :x64_mingw do
   group :postgres do
@@ -285,8 +280,6 @@ platforms :mri, :mingw, :x64_mingw do
   # We e.g. employ this to safeguard the creation of journals.
   gem 'with_advisory_lock', '~> 4.6.0'
 end
-
-
 
 # Load Gemfile.modules explicitly to allow dependabot to work
 eval_gemfile './Gemfile.modules'

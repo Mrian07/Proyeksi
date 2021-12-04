@@ -1,3 +1,4 @@
+import { ConfigurationService } from 'core-app/core/config/configuration.service';
 import { DatePicker } from 'core-app/shared/components/op-date-picker/datepicker';
 
 /**
@@ -13,7 +14,7 @@ export function augmentedDatePicker(evt:JQuery.TriggeredEvent, target:JQuery) {
       .attr('autocomplete', 'off'); // Disable autocomplete for those fields
 
     window.ProyeksiApp.getPluginContext()
-      .then((context) => {
+      .then((context: { services: { configurationService: ConfigurationService; }; }) => {
         const datePicker = new DatePicker(
           '.-augmented-datepicker',
           target.val() as string,
