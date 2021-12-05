@@ -76,7 +76,7 @@ zh-CN:
     technical_warning_html: |
       此 LDAP 表单需要您具备 LDAP / Active Directory 设置的技术知识。
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">请访问我们的文档了解详细说明</a>。
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">请访问我们的文档了解详细说明</a>。
     attribute_texts:
       name: LDAP 连接的任意名称
       host: LDAP 主机名或 IP 地址
@@ -86,7 +86,7 @@ zh-CN:
       system_user_dn_html: |
         输入系统用户用于只读访问的 DN。
         <br/>
-        示例：uid=openproject,ou=system,dc=example,dc=com
+        示例：uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: 输入系统用户的绑定密码
       base_dn: |
         输入 LDAP 中您希望 ProyeksiApp 查找用户和组的子树的基本 DN。
@@ -1632,7 +1632,7 @@ zh-CN:
   label_open_menu: "打开菜单"
   label_open_work_packages: "打开"
   label_open_work_packages_plural: "打开"
-  label_openproject_website: "ProyeksiApp 网站"
+  label_proyeksiapp_website: "ProyeksiApp 网站"
   label_optional_description: "描述"
   label_options: "选项"
   label_other: "其他"
@@ -2769,7 +2769,7 @@ zh-CN:
   warning_user_limit_reached: >
     达到用户限制。 您无法再激活任何用户。 请<a href="%{upgrade_url}">升级您的计划</a>或阻止会员以允许其他用户。
   warning_user_limit_reached_instructions: >
-    您达到了用户限制（%{current}/%{max}活跃用户）。 请联系sales@openproject.com以升级您的Enterprise Edition计划并添加其他用户。
+    您达到了用户限制（%{current}/%{max}活跃用户）。 请联系sales@proyeksiapp.com以升级您的Enterprise Edition计划并添加其他用户。
   warning_protocol_mismatch_html: >
 
   warning_bar:

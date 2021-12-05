@@ -12,7 +12,7 @@ if [[ -z "$1" ]] || [[ -z "$2" ]]; then
   echo
   echo "  usage: bash migrate-from-pre-8.sh <docker host IP> <MySQL dump> [dump format = sql|custom (default)]"
   echo
-  echo "  example: bash migrate-from-pre-8.sh 192.168.1.42 /var/db/openproject/backups/dump.sql"
+  echo "  example: bash migrate-from-pre-8.sh 192.168.1.42 /var/db/proyeksiapp/backups/dump.sql"
   echo
   exit 1
 fi
@@ -37,7 +37,7 @@ POSTGRES_PORT=5439
 MYSQL_PORT=3305 # has to be free on localhost
 MYSQL_USER=root
 MYSQL_PWD=root
-DATABASE=openproject
+DATABASE=proyeksiapp
 
 SKIP_STEP_1=false
 MIGRATION_TIMEOUT_S=600 # wait at most 10 minutes for the migration from 8 to 10 to finish
@@ -61,7 +61,7 @@ if [[ ! "$SKIP_STEP_1" = "true" ]]; then
   echo
   echo "1.2) Starting ProyeksiApp 7"
   if [[ ! `docker ps | grep $OP7_CONTAINER` ]]; then
-    docker run -d --name $OP7_CONTAINER openproject/community:7 # can use `run -it` directly because the image doesn't support it yet in version 8
+    docker run -d --name $OP7_CONTAINER proyeksiapp/community:7 # can use `run -it` directly because the image doesn't support it yet in version 8
     if [[ $? -gt 0 ]]; then exit 1; fi
     echo "  ProyeksiApp started"
   else
@@ -71,7 +71,7 @@ if [[ ! "$SKIP_STEP_1" = "true" ]]; then
   echo
   echo "1.3) Starting ProyeksiApp 8"
   if [[ ! `docker ps | grep $OP8_CONTAINER` ]]; then
-    docker run -d --name $OP8_CONTAINER openproject/community:8-mysql # can use `run -it` directly because the image doesn't support it yet in version 8
+    docker run -d --name $OP8_CONTAINER proyeksiapp/community:8-mysql # can use `run -it` directly because the image doesn't support it yet in version 8
     if [[ $? -gt 0 ]]; then exit 1; fi
     echo "  ProyeksiApp started"
   else
@@ -184,7 +184,7 @@ docker run \
   -e MYSQL_DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PWD@$DOCKER_HOST_IP:$MYSQL_PORT/$DATABASE" \
   -e DATABASE_URL="postgresql://postgres:postgres@$DOCKER_HOST_IP:$POSTGRES_PORT/$DATABASE" \
   -e FORCE_YES=true \
-  -t openproject/community:b007c71494a76924396ad0b168ba733471e3e326 \
+  -t proyeksiapp/community:b007c71494a76924396ad0b168ba733471e3e326 \
   > migration.log &
 
 # wait for migration to finish...
@@ -247,14 +247,14 @@ docker stop migrate8to10 > /dev/null # don't need this anymore
 echo
 echo "2.5) Migrating from 10 to current ($CURRENT_OP_MAJOR_VERSION)"
 
-docker pull openproject/community:$CURRENT_OP_MAJOR_VERSION
+docker pull proyeksiapp/community:$CURRENT_OP_MAJOR_VERSION
 
 docker run \
   --rm \
   -v $PWD:/data \
   --name migrate10tocurrent \
   -e DATABASE_URL="postgresql://postgres:postgres@$DOCKER_HOST_IP:$POSTGRES_PORT/$DATABASE" \
-  -it openproject/community:$CURRENT_OP_MAJOR_VERSION \
+  -it proyeksiapp/community:$CURRENT_OP_MAJOR_VERSION \
   bundle exec rake db:migrate > migration.log
 
 MIGRATION_STATUS=$?
@@ -289,7 +289,7 @@ docker run \
   --rm \
   -e PGPASSWORD=postgres \
   -v $PWD:/data \
-  -it openproject/community:11 pg_dump \
+  -it proyeksiapp/community:11 pg_dump \
     -h $DOCKER_HOST_IP \
     -p $POSTGRES_PORT \
     -U postgres \

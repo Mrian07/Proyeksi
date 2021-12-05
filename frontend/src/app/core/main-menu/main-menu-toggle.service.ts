@@ -43,9 +43,9 @@ export class MainMenuToggleService {
 
   private readonly defaultWidth:number = 230;
 
-  private readonly localStorageKey:string = 'proyeksiapp-mainMenuWidth';
+  private readonly localStorageKey:string = 'proyeksiApp-mainMenuWidth';
 
-  private readonly localStorageStateKey:string = 'proyeksiapp-mainMenuCollapsed';
+  private readonly localStorageStateKey:string = 'proyeksiApp-mainMenuCollapsed';
 
   @InjectField() currentProject:CurrentProjectService;
 

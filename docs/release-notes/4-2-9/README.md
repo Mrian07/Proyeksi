@@ -17,6 +17,6 @@ To help translate ProyeksiApp, please take a look at the [ProyeksiApp
 CrowdIn projects](https://crowdin.com/projects/opf).
 
 For further information on the release, please take a look at
-[GitHub](https://github.com/opf/openproject/tree/v4.2.9).
+[GitHub](https://github.com/opf/proyeksiapp/tree/v4.2.9).
 
 

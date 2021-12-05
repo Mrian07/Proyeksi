@@ -2113,7 +2113,7 @@
     };
     version = "1.1.8";
   };
-  openproject-auth_plugins = {
+  proyeksiapp-auth_plugins = {
     dependencies = ["omniauth"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2123,7 +2123,7 @@
     };
     version = "1.0.0";
   };
-  openproject-auth_saml = {
+  proyeksiapp-auth_saml = {
     dependencies = ["omniauth-saml"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2133,7 +2133,7 @@
     };
     version = "1.0.0";
   };
-  openproject-avatars = {
+  proyeksiapp-avatars = {
     dependencies = ["fastimage" "gravatar_image_tag"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2143,8 +2143,8 @@
     };
     version = "1.0.0";
   };
-  openproject-backlogs = {
-    dependencies = ["acts_as_list" "openproject-pdf_export"];
+  proyeksiapp-backlogs = {
+    dependencies = ["acts_as_list" "proyeksiapp-pdf_export"];
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2153,7 +2153,7 @@
     };
     version = "1.0.0";
   };
-  openproject-bim = {
+  proyeksiapp-bim = {
     dependencies = ["activerecord-import" "rubyzip"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2163,7 +2163,7 @@
     };
     version = "1.0.0";
   };
-  openproject-boards = {
+  proyeksiapp-boards = {
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2172,7 +2172,7 @@
     };
     version = "1.0.0";
   };
-  openproject-documents = {
+  proyeksiapp-documents = {
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2181,8 +2181,8 @@
     };
     version = "1.0.0";
   };
-  openproject-github_integration = {
-    dependencies = ["openproject-webhooks"];
+  proyeksiapp-github_integration = {
+    dependencies = ["proyeksiapp-webhooks"];
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2191,7 +2191,7 @@
     };
     version = "1.0.0";
   };
-  openproject-job_status = {
+  proyeksiapp-job_status = {
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2200,7 +2200,7 @@
     };
     version = "1.0.0";
   };
-  openproject-ldap_groups = {
+  proyeksiapp-ldap_groups = {
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2209,7 +2209,7 @@
     };
     version = "1.0.0";
   };
-  openproject-meeting = {
+  proyeksiapp-meeting = {
     dependencies = ["icalendar"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2219,8 +2219,8 @@
     };
     version = "1.0.0";
   };
-  openproject-openid_connect = {
-    dependencies = ["lobby_boy" "omniauth-openid_connect-providers" "openproject-auth_plugins"];
+  proyeksiapp-openid_connect = {
+    dependencies = ["lobby_boy" "omniauth-openid_connect-providers" "proyeksiapp-auth_plugins"];
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2229,7 +2229,7 @@
     };
     version = "1.0.0";
   };
-  openproject-pdf_export = {
+  proyeksiapp-pdf_export = {
     dependencies = ["pdf-inspector" "prawn"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2239,7 +2239,7 @@
     };
     version = "1.0.0";
   };
-  openproject-recaptcha = {
+  proyeksiapp-recaptcha = {
     dependencies = ["recaptcha"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2249,7 +2249,7 @@
     };
     version = "1.0.0";
   };
-  openproject-reporting = {
+  proyeksiapp-reporting = {
     dependencies = ["costs"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2259,7 +2259,7 @@
     };
     version = "1.0.0";
   };
-  openproject-token = {
+  proyeksiapp-token = {
     dependencies = ["activemodel"];
     groups = ["default"];
     platforms = [];
@@ -2270,7 +2270,7 @@
     };
     version = "2.1.3";
   };
-  openproject-translations = {
+  proyeksiapp-translations = {
     dependencies = ["crowdin-api" "mixlib-shellout" "rubyzip"];
     groups = ["default"];
     platforms = [];
@@ -2279,11 +2279,11 @@
       rev = "ec6fbe6ef86f82e65f37adb17f37aa5addc17ac4";
       sha256 = "10mqmrnyai77g490qia8p2vdzi0sbdj4b9k0fbkzjhf35mrlvb8s";
       type = "git";
-      url = "https://github.com/opf/openproject-translations.git";
+      url = "https://github.com/opf/proyeksiapp-translations.git";
     };
     version = "7.4.0";
   };
-  openproject-two_factor_authentication = {
+  proyeksiapp-two_factor_authentication = {
     dependencies = ["aws-sdk-sns" "messagebird-rest" "rotp"];
     groups = ["opf_plugins"];
     platforms = [];
@@ -2293,7 +2293,7 @@
     };
     version = "1.0.0";
   };
-  openproject-webhooks = {
+  proyeksiapp-webhooks = {
     groups = ["opf_plugins"];
     platforms = [];
     source = {
@@ -2302,7 +2302,7 @@
     };
     version = "1.0.0";
   };
-  openproject-xls_export = {
+  proyeksiapp-xls_export = {
     dependencies = ["spreadsheet"];
     groups = ["opf_plugins"];
     platforms = [];

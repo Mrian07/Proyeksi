@@ -15,13 +15,13 @@ The following bugs have been fixed:
 
   - In projects with a lot of members and/or custom fields creating a
     work package could lead to an internal error (500)
-    ([\#21067](https://community.openproject.org/work_packages/21067)).
+    ([\#21067](https://community.proyeksi.id/work_packages/21067)).
   - In addition, a security bug has been fixed which potentially enabled
     XSS attacks.
 
 For further information on the release, please refer to the [Changelog
-v.4.1.4](https://community.openproject.org/versions/755) or take a look
-at [GitHub](https://github.com/opf/openproject/tree/v4.1.4).
+v.4.1.4](https://community.proyeksi.id/versions/755) or take a look
+at [GitHub](https://github.com/opf/proyeksiapp/tree/v4.1.4).
 
  
 

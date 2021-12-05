@@ -20,7 +20,7 @@ You can find the release notes for major stable releases [here](../../release-no
 ### Stable release
 
 * The ProyeksiApp Foundation releases four Stable Releases per year.
-* The Release plan is tracked via the [ProyeksiApp community](https://community.openproject.com/projects/openproject/).
+* The Release plan is tracked via the [ProyeksiApp community](https://community.proyeksiapp.com/projects/proyeksiapp/).
 
 ### Hotfix release
 
@@ -31,8 +31,8 @@ You can find the release notes for major stable releases [here](../../release-no
 
 ### General considerations
 
-* See the [Roadmap](https://community.openproject.com/projects/openproject/roadmap) for the overview of the current stable release version and  upcoming stable releases
-* Releases are defined by a version (number) which exists as tags on predefined development trees (see the branches on [github](https://github.com/opf/openproject/releases)).
+* See the [Roadmap](https://community.proyeksiapp.com/projects/proyeksiapp/roadmap) for the overview of the current stable release version and  upcoming stable releases
+* Releases are defined by a version (number) which exists as tags on predefined development trees (see the branches on [github](https://github.com/opf/proyeksiapp/releases)).
 * All plugins maintained by the ProyeksiApp Foundation have the same release cycle and the same version as the ProyeksiApp software itself (typically called ProyeksiApp core or just core).
 * The version of plugins indicate the compatibility with the core.
 * The ProyeksiApp Foundation will ensure this via continuous integration testing.
@@ -62,10 +62,10 @@ Since the Stable Release 3.0.8 this idea only applies by considering the Proyeks
 
 ## Change history
 
-* All changes made to the ProyeksiApp software are documented via work packages. The [Roadmap view](https://community.openproject.com/projects/openproject/roadmap) gives a corresponding overview.
+* All changes made to the ProyeksiApp software are documented via work packages. The [Roadmap view](https://community.proyeksiapp.com/projects/proyeksiapp/roadmap) gives a corresponding overview.
 * To prevent inconsistencies and avoid redundant work there is there is no additional change log in the source code.
 
 ## Support of releases
 
-* For the community edition only the current stable releases are maintained. The [Enterprise Edition](https://www.openproject.org/enterprise-edition) provides extended maintenance.
+* For the community edition only the current stable releases are maintained. The [Enterprise Edition](https://www.proyeksi.id/enterprise-edition) provides extended maintenance.
 * We recommended to update to a new stable release as soon as possible to have a supported version installed.

@@ -18,7 +18,7 @@ Meetings in ProyeksiApp allow you to manage and document your project meetings a
 
 | Topic                                                        | Content                                     |
 | ------------------------------------------------------------ | ------------------------------------------- |
-| [Meetings in ProyeksiApp](#meetings-in-openproject)          | How to open meetings in ProyeksiApp?        |
+| [Meetings in ProyeksiApp](#meetings-in-proyeksiapp)          | How to open meetings in ProyeksiApp?        |
 | [Create a new meeting](#create-a-new-meeting)                | How to create a new meeting in ProyeksiApp? |
 | [Edit a meeting](#edit-a-meeting)                            | How to edit an existing meeting?            |
 | [Add meeting participants](#add-meeting-participants)        | How to invite people to a meeting?          |

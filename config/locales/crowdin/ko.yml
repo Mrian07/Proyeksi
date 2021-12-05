@@ -76,7 +76,7 @@ ko:
     technical_warning_html: |
       이 LDAP 양식을 사용하려면 LDAP / Active Directory 설정에 대한 기술 지식이 필요합니다.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">자세한 지침은 설명서를 참조하세요</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">자세한 지침은 설명서를 참조하세요</a>.
     attribute_texts:
       name: LDAP 연결의 임의 이름
       host: LDAP 호스트 이름 또는 IP 주소
@@ -86,7 +86,7 @@ ko:
       system_user_dn_html: |
         읽기 전용 액세스에 사용되는 시스템 사용자의 DN을 입력하세요.
         <br/>
-        예: uid=openproject,ou=system,dc=example,dc=com
+        예: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: 시스템 사용자의 바인딩 암호 입력
       base_dn: |
         ProyeksiApp가 사용자 및 그룹을 검색할 LDAP 하위 트리의 기본 DN을 입력하세요.
@@ -1635,7 +1635,7 @@ ko:
   label_open_menu: "메뉴 열기"
   label_open_work_packages: "열기"
   label_open_work_packages_plural: "열기"
-  label_openproject_website: "ProyeksiApp 웹사이트"
+  label_proyeksiapp_website: "ProyeksiApp 웹사이트"
   label_optional_description: "설명"
   label_options: "옵션"
   label_other: "기타"
@@ -2775,7 +2775,7 @@ ko:
   warning_user_limit_reached: >
     사용자 제한에 도달했습니다. 더 이상 사용자를 활성화할 수 없습니다. <a href="%{upgrade_url}">플랜을 업그레이드</a>하거나 멤버를 차단하여 추가 사용자를 허용하세요.
   warning_user_limit_reached_instructions: >
-    사용자 제한(활성 사용자 %{current}/%{max}명)에 도달했습니다. sales@openproject.com으로 연락하여 Enterprise Edition 플랜을 업그레이드하고 사용자를 더 추가하세요.
+    사용자 제한(활성 사용자 %{current}/%{max}명)에 도달했습니다. sales@proyeksiapp.com으로 연락하여 Enterprise Edition 플랜을 업그레이드하고 사용자를 더 추가하세요.
   warning_protocol_mismatch_html: >
 
   warning_bar:

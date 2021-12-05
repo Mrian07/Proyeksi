@@ -10,7 +10,7 @@ release_date: 2021-07-29
 
 Release date: 2021-07-29
 
-We released [ProyeksiApp 11.3.4](https://community.openproject.com/versions/1488).
+We released [ProyeksiApp 11.3.4](https://community.proyeksiapp.com/versions/1488).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->

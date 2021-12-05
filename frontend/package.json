@@ -1,6 +1,5 @@
 {
-  "name": "proyeskiapp-frontend",
-  "repository": "https://github.com/opf/openproject",
+  "name": "proyeksi-frontend",
   "license": "GPLv3",
   "version": "0.1.0",
   "private": true,

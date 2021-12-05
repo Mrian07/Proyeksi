@@ -10,8 +10,8 @@ if [ -f "/var/lib/postgresql/9.6/main/PG_VERSION" ]; then
 	echo "ERROR: You are using a legacy volume path for your postgres data. You should mount your postgres volumes at $PGDATA instead of /var/lib/postgresql/9.6/main"
 	exit 2
 fi
-if [ -d "/var/db/openproject" ]; then
-	echo "ERROR: You are using a legacy volume path for your openproject data. You should mount your openproject volume at $APP_DATA_PATH instead of /var/db/openproject"
+if [ -d "/var/db/proyeksiapp" ]; then
+	echo "ERROR: You are using a legacy volume path for your proyeksiapp data. You should mount your proyeksiapp volume at $APP_DATA_PATH instead of /var/db/proyeksiapp"
 	exit 2
 fi
 

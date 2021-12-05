@@ -14,7 +14,7 @@ import { AvatarUploadFormComponent } from './avatar-upload-form/avatar-upload-fo
 export class PluginModule {
   constructor(injector:Injector) {
     const hookService = injector.get(HookService);
-    hookService.register('proyeksiApptAngularBootstrap', () => [
+    hookService.register('proyeksiAppAngularBootstrap', () => [
       { selector: 'avatar-upload-form', cls: AvatarUploadFormComponent },
     ]);
   }

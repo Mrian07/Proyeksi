@@ -51,8 +51,8 @@ To do this, you can sign into your ProyeksiApp environment and select the "Buy n
 
 ### When does my ProyeksiApp contract end?
 
-The user may terminate the contract at any time, which will apply by the end of the subscription period (including last day). In case of credit card payment the subscription period is one month or one year; in case of payment via invoice the subscription period is one year. The [agreed subscription period](https://www.openproject.org/legal/terms-of-service/) will be extended automatically if the contract was not terminated on time. 
+The user may terminate the contract at any time, which will apply by the end of the subscription period (including last day). In case of credit card payment the subscription period is one month or one year; in case of payment via invoice the subscription period is one year. The [agreed subscription period](https://www.proyeksi.id/legal/terms-of-service/) will be extended automatically if the contract was not terminated on time. 
 
 ### What shall I do when I run into payment issues with ProyeksiApp?
 
-In case you use the bank transfer payment method please indicate the invoice number. You can find this information in the corresponding invoice (OP…). Otherwise the automatic banking system is not able to detect your payment. Please do not hesitate to contact accounting@openproject.com if you have any further questions. 
+In case you use the bank transfer payment method please indicate the invoice number. You can find this information in the corresponding invoice (OP…). Otherwise the automatic banking system is not able to detect your payment. Please do not hesitate to contact accounting@proyeksiapp.com if you have any further questions. 

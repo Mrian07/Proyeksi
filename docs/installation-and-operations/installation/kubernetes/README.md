@@ -7,7 +7,7 @@ sidebar_navigation: false
 Kubernetes is a container orchestration tool. As such it can use the
 ProyeksiApp docker container in the same manner as shown in the [docker section](../docker/#one-container-per-process-recommended).
 
-You can translate ProyeksiApp's [`docker-compose.yml`](https://github.com/opf/openproject/blob/stable/12/docker-compose.yml)
+You can translate ProyeksiApp's [`docker-compose.yml`](https://github.com/opf/proyeksiapp/blob/stable/12/docker-compose.yml)
 for use in Kubernetes using [Kompose](https://github.com/kubernetes/kompose)
 as described in the Kubernetes [documentation](https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/).
 

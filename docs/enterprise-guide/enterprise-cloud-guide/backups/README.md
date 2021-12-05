@@ -28,6 +28,6 @@ The system generates the token which you then fill in where requested in the fie
 
 After having **requested the backup**, you will receive an email notification with a link to download your backup. For this, you will need additional authentication (username and password as well as 2-Factor-Authentication if activated) to download the backup files.
 
-In case you have trouble creating your backup, please [get in touch](mailto:support@openproject.com) with us. We can then provide a current or past backup (database + attachments) to you.
+In case you have trouble creating your backup, please [get in touch](mailto:support@proyeksiapp.com) with us. We can then provide a current or past backup (database + attachments) to you.
 
 This way you can also get your data if you decide to stop using the Enterprise cloud edition.

@@ -43,8 +43,8 @@ must_rebuild=$(${CLI} config:get RECOMPILE_ANGULAR_ASSETS || echo "")
 if [ -n "$must_rebuild" ]; then
         echo "RECOMPILE_ANGULAR_ASSETS was set. Installing node dependencies..."
         # Skip printing audit for installation
-        openproject run npm set audit false
-        openproject run npm install --silent
+        proyeksiapp run npm set audit false
+        proyeksiapp run npm install --silent
 fi
 
 # Set execjs to node since that's installed
@@ -82,9 +82,9 @@ ${CLI} config:set SECRET_KEY_BASE="$secret_token"
 ${CLI} config:set SECRET_TOKEN="$secret_token"
 
 # set installation type
-installation_type="$(${CLI} config:get OPENPROJECT_INSTALLATION__TYPE || echo "")"
+installation_type="$(${CLI} config:get PROYEKSIAPP_INSTALLATION__TYPE || echo "")"
 if [ -z "$installation_type" ]; then
-  ${CLI} config:set OPENPROJECT_INSTALLATION__TYPE=packager
+  ${CLI} config:set PROYEKSIAPP_INSTALLATION__TYPE=packager
 fi
 
 # Allow other tasks to run before the environment is loaded

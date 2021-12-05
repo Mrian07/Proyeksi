@@ -76,7 +76,7 @@ ro:
     technical_warning_html: |
       Acest formular LDAP necesită cunoștințe tehnice privind configurația LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Vă rugăm să vizitați documentația noastră pentru instrucțiuni detaliate</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Vă rugăm să vizitați documentația noastră pentru instrucțiuni detaliate</a>.
     attribute_texts:
       name: Numele arbitrar al conexiunii LDAP
       host: Numele gazdei LDAP sau adresa IP
@@ -86,7 +86,7 @@ ro:
       system_user_dn_html: |
         Introduceți DN-ul utilizatorului de sistem utilizat pentru accesul numai pentru citire.
         <br/>
-        Exemplu: uid=openproject,ou=system,dc=example,dc=com
+        Exemplu: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Introduceți parola de legătură a utilizatorului de sistem
       base_dn: |
         Introduceți DN-ul de bază al subarborelui din LDAP în care doriți ca ProyeksiApp să caute utilizatori și grupuri.
@@ -1670,7 +1670,7 @@ ro:
   label_open_menu: "Deschidere meniu"
   label_open_work_packages: "deschise"
   label_open_work_packages_plural: "deschise"
-  label_openproject_website: "Site-ul ProyeksiApp"
+  label_proyeksiapp_website: "Site-ul ProyeksiApp"
   label_optional_description: "Descriere"
   label_options: "Opțiuni"
   label_other: "Altele"
@@ -2819,7 +2819,7 @@ ro:
   warning_user_limit_reached: >
     A fost atinsă limita de utilizatori. Nu mai puteți activa alți utilizatori. Vă rugăm să <a href="%{upgrade_url}">vă actualizați planul</a> sau să blocați membrii pentru a permite accesul la utilizatori suplimentari.
   warning_user_limit_reached_instructions: >
-    Ați atins limita de utilizatori (%{current}/%{max} utilizatori activi). Vă rugăm să contactați sales@openproject.com pentru a vă actualiza planul Enterprise Edition și a adăuga utilizatori suplimentari.
+    Ați atins limita de utilizatori (%{current}/%{max} utilizatori activi). Vă rugăm să contactați sales@proyeksiapp.com pentru a vă actualiza planul Enterprise Edition și a adăuga utilizatori suplimentari.
   warning_protocol_mismatch_html: >
 
   warning_bar:

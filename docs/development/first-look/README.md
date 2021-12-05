@@ -12,7 +12,7 @@ keywords: first look, beta testing
 
 Your feedback is what makes our product stand out. We are happy if you feel like helping to optimize ProyeksiApp. 
 
-![ProyeksiApp first look beta testing](openproject-first-look-beta-testing.jpg)
+![ProyeksiApp first look beta testing](proyeksiapp-first-look-beta-testing.jpg)
 
 We invite you to give product feedback, join usability tests, user interviews, surveys, access to and more.
 
@@ -25,6 +25,6 @@ We always appreciate early feedback from the Community:
 
 No matter if you have been using ProyeksiApp for years or just logged in this week, we want to hear from you. Everyone can contribute.
 
-Please get in touch via: community@openproject.org and let us know how you would like to contribute.
+Please get in touch via: community@proyeksi.id and let us know how you would like to contribute.
 
 Thank you.

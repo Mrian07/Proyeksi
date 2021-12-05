@@ -15,12 +15,12 @@ sidebar_navigation:
 | [Package-based installation](#package-based-installation-debrpm) | How to upgrade a package-based installation of ProyeksiApp. |
 | [Docker-based installation](#compose-based-installation)      | How to upgrade a Docker-based installation of ProyeksiApp.  |
 | [Upgrade notes for 8.x to 9.x](#upgrade-notes-for-8x-to-9x)  | How to upgrade from ProyeksiApp 8.x to ProyeksiApp 9.x.     |
-| [Upgrade notes for 7.x to 8.x](#upgrade-notes-for-openproject-7x-to-8x) | How to upgrade from ProyeksiApp 7.x to ProyeksiApp 8.x.     |
+| [Upgrade notes for 7.x to 8.x](#upgrade-notes-for-proyeksiapp-7x-to-8x) | How to upgrade from ProyeksiApp 7.x to ProyeksiApp 8.x.     |
 
 ## Package-based installation (DEB/RPM)
 
 Upgrading ProyeksiApp is as easy as installing a newer ProyeksiApp package and
-running the `openproject configure` command.
+running the `proyeksiapp configure` command.
 
 <div class="alert alert-info" role="alert">
 
@@ -32,30 +32,30 @@ Please note that the package-based installation uses different release channels 
 
 ```bash
 sudo apt-get update
-sudo apt-get install --only-upgrade openproject
-sudo openproject configure
+sudo apt-get install --only-upgrade proyeksiapp
+sudo proyeksiapp configure
 ```
 
 ### CentOS / RHEL
 
 ```bash
 sudo yum update
-sudo yum install openproject
-sudo openproject configure
+sudo yum install proyeksiapp
+sudo proyeksiapp configure
 ```
 
 ### SuSE
 
 ```bash
-sudo zypper update openproject
-sudo openproject configure
+sudo zypper update proyeksiapp
+sudo proyeksiapp configure
 ```
 
 
 <div class="alert alert-info" role="alert">
-Using `openproject configure`, the wizard will display new steps that weren't available yet or had not been configured in previous installations.
+Using `proyeksiapp configure`, the wizard will display new steps that weren't available yet or had not been configured in previous installations.
 
-If you want to perform changes to your configuration or are unsure what steps are available, you can safely run `openproject reconfigure` to walk through the entire configuration process again.
+If you want to perform changes to your configuration or are unsure what steps are available, you can safely run `proyeksiapp reconfigure` to walk through the entire configuration process again.
 
 Note that this still takes previous values into consideration. Values that should not change from your previous configurations can be skipped by pressing `<Return>`. This also applies for steps with passwords, which are shown as empty even though they may have a value. Skipping those steps equals to re-use the existing value.
 </div>
@@ -70,7 +70,7 @@ docker-compose pull
 docker-compose up -d
 ```
 
-Please note that you can override the `TAG` that is used to pull the ProyeksiApp image from the [Docker Hub](https://hub.docker.com/r/openproject/community).
+Please note that you can override the `TAG` that is used to pull the ProyeksiApp image from the [Docker Hub](https://hub.docker.com/r/proyeksiapp/community).
 
 ### All-in-one container
 
@@ -79,22 +79,22 @@ When using the all-in-one docker container, you need to perform the following st
 1. First, pull the latest version of the image:
 
 ```bash
-docker pull openproject/community:VERSION
-# e.g. docker pull openproject/community:10
+docker pull proyeksiapp/community:VERSION
+# e.g. docker pull proyeksiapp/community:10
 ```
 
 Then stop and remove your existing container (we assume that you are running with the recommended production setup here):
 
 ```bash
-docker stop openproject
-docker rm openproject
+docker stop proyeksiapp
+docker rm proyeksiapp
 ```
 
 Finally, re-launch the container in the same way you launched it previously.
 This time, it will use the new image:
 
 ```
-docker run -d ... openproject/community:VERSION
+docker run -d ... proyeksiapp/community:VERSION
 ```
 
 #### I have already started ProyeksiApp without mounted volumes. How do I save my data during an update?
@@ -102,23 +102,23 @@ docker run -d ... openproject/community:VERSION
 You can extract your data from the existing container and mount it in a new one with the correct configuration.
 
 1. Stop the container to avoid changes to the data. Stopping the container does not delete any data as long as you don't remove the container.
-2. Copy the data to a new directory on the host, e.g. `/var/lib/openproject`, or a mounted network drive, say `/volume1`.
+2. Copy the data to a new directory on the host, e.g. `/var/lib/proyeksiapp`, or a mounted network drive, say `/volume1`.
 3. Launch the new container mounting the folders in that directory as described above.
 4. Delete the old container once you confirmed the new one is working correctly.
 
 You can copy the data from the container using `docker cp` like this:
 
 ```
-# Find out the container name with `docker ps`, we use `openproject-community1` here.
+# Find out the container name with `docker ps`, we use `proyeksiapp-community1` here.
 # The target folder should be what ever persistent volume you have on the system, e.g. `/volume1`.
-docker cp openproject-community1:/var/openproject/assets /volume1/openproject/assets
-docker cp openproject-community1:/var/openproject/pgdata /volume1/openproject/pgdata
+docker cp proyeksiapp-community1:/var/proyeksiapp/assets /volume1/proyeksiapp/assets
+docker cp proyeksiapp-community1:/var/proyeksiapp/pgdata /volume1/proyeksiapp/pgdata
 ```
 
 Make sure the folders have the correct owner so the new container can read and write them.
 
 ```
-sudo chown -R 102 /volume1/openproject/*
+sudo chown -R 102 /volume1/proyeksiapp/*
 ```
 
 After that it's simply a matter of launching the new container mounted with the copied `pgdata` and `assets` folders
@@ -132,35 +132,35 @@ These following points are some known issues regarding the update to 9.0.
 
 ProyeksiApp 9.0. is deprecating MySQL support. You can expect full MySQL support for the course of 9.0 releases, but we are likely going to be dropping MySQL completely in one of the following releases.
 
-For more information regarding motivation behind this and migration steps, please see [this blog post](https://www.openproject.org/blog/deprecating-mysql-support/). In the post, you will find documentation for a mostly-automated migration script to PostgreSQL to help you get up and running with PostgreSQL.
+For more information regarding motivation behind this and migration steps, please see [this blog post](https://www.proyeksi.id/blog/deprecating-mysql-support/). In the post, you will find documentation for a mostly-automated migration script to PostgreSQL to help you get up and running with PostgreSQL.
 
-### Package repository moved into opf/openproject
+### Package repository moved into opf/proyeksiapp
 
 The ProyeksiApp community installation is now using the same repository as the ProyeksiApp development core.
 
 Please update your package source according to our [installation section](../../installation/packaged).
 
-You will need to replace `opf/openproject-ce` with `opf/openproject` together with a change from `stable/8` to `stable/9` in order to perform the update.
+You will need to replace `opf/proyeksiapp-ce` with `opf/proyeksiapp` together with a change from `stable/8` to `stable/9` in order to perform the update.
 
 If you have currently installed the stable 8.x release of ProyeksiApp by using the `stable/8` package source,
 you will need to adjust that package source.
 
 #### APT-based systems (Debian, Ubuntu)
 
- - Update the reference to `opf/openproject-ce` in `/etc/apt/sources.list.d/openproject.list` to `opf/openproject`.
- - Update the reference to `stable/8` in `/etc/apt/sources.list.d/openproject.list` to `stable/9`.
+ - Update the reference to `opf/proyeksiapp-ce` in `/etc/apt/sources.list.d/proyeksiapp.list` to `opf/proyeksiapp`.
+ - Update the reference to `stable/8` in `/etc/apt/sources.list.d/proyeksiapp.list` to `stable/9`.
  - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
 #### YUM-based systems (CentOS, RHEL)
 
- - Update the reference to `opf/openproject-ce` in `/etc/yum.repos.d/openproject.repo` to `opf/openproject`.
- - Update the reference to `stable/8` in `/etc/yum.repos.d/openproject.repo` to `stable/9`.
+ - Update the reference to `opf/proyeksiapp-ce` in `/etc/yum.repos.d/proyeksiapp.repo` to `opf/proyeksiapp`.
+ - Update the reference to `stable/8` in `/etc/yum.repos.d/proyeksiapp.repo` to `stable/9`.
  - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
 #### SUSE Linux Enterprise Server 12
 
- - Update the reference to `opf/openproject-ce` in `/etc/zypp/repos.d/openproject.repo` to `opf/openproject`.
- - Update the reference to `stable/8` in `/etc/zypp/repos.d/openproject.repo` to `stable/9`.
+ - Update the reference to `opf/proyeksiapp-ce` in `/etc/zypp/repos.d/proyeksiapp.repo` to `opf/proyeksiapp`.
+ - Update the reference to `stable/8` in `/etc/zypp/repos.d/proyeksiapp.repo` to `stable/9`.
  - Perform the Upgrade steps as mentioned above in *Upgrading your ProyeksiApp installation*
 
 ## Upgrade notes for ProyeksiApp 7.x to 8.x
@@ -169,12 +169,12 @@ These following points are some known issues around the update to 8.0. It does n
 
 ### Upgrades in NPM may result in package inconsistencies
 
-As has been reported from the community, [there appear to be issues with NPM leftover packages](https://community.openproject.com/projects/openproject/work_packages/28571) upgrading to ProyeksiApp 8.0.0. This is due to the packages applying a delta between your installed version and the to-be-installed 8.0. package. In some cases such as SLES12 and Centos 7, the `frontend/node_modules` folder is not fully correctly replaced. This appears to hint at an issue with yum, the package manager behind both.
+As has been reported from the community, [there appear to be issues with NPM leftover packages](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/28571) upgrading to ProyeksiApp 8.0.0. This is due to the packages applying a delta between your installed version and the to-be-installed 8.0. package. In some cases such as SLES12 and Centos 7, the `frontend/node_modules` folder is not fully correctly replaced. This appears to hint at an issue with yum, the package manager behind both.
 
-To ensure the package's node_modules folder matches your local version, we recommend you simply remove `/opt/openproject/frontend/node_modules` entirely **before** installing the package
+To ensure the package's node_modules folder matches your local version, we recommend you simply remove `/opt/proyeksiapp/frontend/node_modules` entirely **before** installing the package
 
 ```
-rm -rf /opt/openproject/frontend/node_modules
+rm -rf /opt/proyeksiapp/frontend/node_modules
 # Continue with the installation steps described below
 ```
 

@@ -14,16 +14,16 @@ Welcome to ProyeksiApp! We are glad to have you here. In this section we will co
 
 | Popular Topics                                               | Description                                                  |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
-| [About ProyeksiApp](#about-openproject)                      | What is ProyeksiApp?                                         |
+| [About ProyeksiApp](#about-proyeksiapp)                      | What is ProyeksiApp?                                         |
 | [First steps to get started](#first-steps-to-get-started)    | The first steps to get started with ProyeksiApp.             |
 | [The entire Project Management Life-Cycle](#the-entire-project-management-life-cycle) | Find out more how ProyeksiApp supports the different project phases. |
-| [ProyeksiApp products](#openproject-products)                | What is the difference between the Community, Cloud and Enterprise Edition? |
+| [ProyeksiApp products](#proyeksiapp-products)                | What is the difference between the Community, Cloud and Enterprise Edition? |
 
 ## About ProyeksiApp
 
 ProyeksiApp is free and **open source software** for **classical as well as agile project management** to support your team along [the entire project life-cycle](#the-entire-project-management-life-cycle). ProyeksiApp is available in more than 30 languages.
 
-ProyeksiApp is licensed under **GNU GPL V3**. The source code is freely published on [GitHub](https://github.com/opf/openproject). We understand free as in free speech. We do offer [paid subscriptions](#openproject-products) for our software.
+ProyeksiApp is licensed under **GNU GPL V3**. The source code is freely published on [GitHub](https://github.com/opf/proyeksiapp). We understand free as in free speech. We do offer [paid subscriptions](#proyeksiapp-products) for our software.
 
 ProyeksiApp exists since 2011 and is a fork of the deprecated ChiliProject which was a fork of Redmine.
 
@@ -117,10 +117,10 @@ Document project achievements, lessons learned, best practices and easily summar
 
 ProyeksiApp can be used in three different editions, either on-premises or as software-as-a-service.
 
-![openproject versions](1569586019132.png)
+![proyeksiapp versions](1569586019132.png)
 
-* [Community edition](https://www.openproject.org/download-and-installation/): self-installed on-premise.
-* [Enterprise cloud edition](https://www.openproject.org/hosting/): we host it, incl. premium features and support.
-* [Enterprise on-premises edition](https://www.openproject.org/enterprise-edition/): self-hosted version, incl. premium features and support.
+* [Community edition](https://www.proyeksi.id/download-and-installation/): self-installed on-premise.
+* [Enterprise cloud edition](https://www.proyeksi.id/hosting/): we host it, incl. premium features and support.
+* [Enterprise on-premises edition](https://www.proyeksi.id/enterprise-edition/): self-hosted version, incl. premium features and support.
 
-To compare the features side by side, please visit our [Feature Comparison](https://www.openproject.org/pricing/#features) page.
+To compare the features side by side, please visit our [Feature Comparison](https://www.proyeksi.id/pricing/#features) page.

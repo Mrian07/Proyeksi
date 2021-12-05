@@ -23,7 +23,7 @@ This guide will also apply for Docker-based installation, if you have an outer p
 
 ## Step 1: Creating Kerberos service and keytab for ProyeksiApp
 
-Assuming you have Kerberos set up with a realm, you need to create a Kerberos service Principal for the ProyeksiApp HTTP service. In the course of this guide, we're going to assume your realm is `EXAMPLE.COM` and your ProyeksiApp installation is running at `openproject.example.com`.
+Assuming you have Kerberos set up with a realm, you need to create a Kerberos service Principal for the ProyeksiApp HTTP service. In the course of this guide, we're going to assume your realm is `EXAMPLE.COM` and your ProyeksiApp installation is running at `proyeksiapp.example.com`.
 
 
 
@@ -34,19 +34,19 @@ Create the service principal (e.g. using `kadmin`) and a keytab for ProyeksiApp 
 ```bash
 # Assuming you're in the `kadmin.local` interactive command
 
-addprinc -randkey HTTP/openproject.example.com
-ktadd -k /etc/openproject/openproject.keytab HTTP/openproject.example.com
+addprinc -randkey HTTP/proyeksiapp.example.com
+ktadd -k /etc/proyeksiapp/proyeksiapp.keytab HTTP/proyeksiapp.example.com
 ```
 
 
 
-This will output a keytab file for the realm selected by `kadmin` (in the above example, this would create all users from the default_realm) to `/etc/openproject/openproject.keytab`
+This will output a keytab file for the realm selected by `kadmin` (in the above example, this would create all users from the default_realm) to `/etc/proyeksiapp/proyeksiapp.keytab`
 
 You still need to make this file readable for Apache. For Debian/Ubuntu based systems, the Apache user and group is `www-data`. This will vary depending on your installation
 
 ```bash
-sudo chown www-data:www-data /etc/openproject/openproject.keytab
-sudo chmod 400 /etc/openproject/openproject.keytab
+sudo chown www-data:www-data /etc/proyeksiapp/proyeksiapp.keytab
+sudo chmod 400 /etc/proyeksiapp/proyeksiapp.keytab
 ```
 
 
@@ -61,7 +61,7 @@ sudo apt-get install libapache2-mod-auth-kerb
 
 You will then need to add the generated keytab to be used for the ProyeksiApp installation. ProyeksiApp allows you to specify additional directives for your installation VirtualHost.
 
-We are going to create a new file `/etc/openproject/addons/apache2/includes/vhost/kerberos.conf` with the following contents:
+We are going to create a new file `/etc/proyeksiapp/addons/apache2/includes/vhost/kerberos.conf` with the following contents:
 
 ```
   <Location />
@@ -75,7 +75,7 @@ We are going to create a new file `/etc/openproject/addons/apache2/includes/vhos
     KrbAuthRealm EXAMPLE.COM
 
     # Path to the Keytab generated in the previous step
-    Krb5Keytab /etc/openproject/openproject.keytab
+    Krb5Keytab /etc/proyeksiapp/proyeksiapp.keytab
 
     # After authentication, Apache will set a header
     # "X-Authenticated-User" to the logged in username
@@ -99,7 +99,7 @@ You can do that in two ways:
 
 #### Configure using the configuration.yml
 
-In your ProyeksiApp packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contain the complete ProyeksiApp configuration and can be extended  to include a section for the header checking.
+In your ProyeksiApp packaged installation, you can modify the `/opt/proyeksiapp/config/configuration.yml` file. This will contain the complete ProyeksiApp configuration and can be extended  to include a section for the header checking.
 
 
 
@@ -143,14 +143,14 @@ The three options are mutually exclusive. I.e. if settings are already provided 
 As with all the rest of the ProyeksiApp configuration settings, the Kerberos header configuration can be provided via environment variables. For example:
 
 ```bash
-openproject config:set OPENPROJECT_AUTH__SOURCE__SSO_HEADER="X-Authenticated-User"
-openproject config:set OPENPROJECT_AUTH__SOURCE__SSO_SECRET="MyPassword"
+proyeksiapp config:set PROYEKSIAPP_AUTH__SOURCE__SSO_HEADER="X-Authenticated-User"
+proyeksiapp config:set PROYEKSIAPP_AUTH__SOURCE__SSO_SECRET="MyPassword"
 ```
 
   In case you want to make the header optional, i.e. the header may or may not be present for a subset of users going through Apache, you can set the following value:
 
   ```bash
-  openproject config:set OPENPROJECT_AUTH__SOURCE__SSO_OPTIONAL=true
+  proyeksiapp config:set PROYEKSIAPP_AUTH__SOURCE__SSO_OPTIONAL=true
   ```
 
 Please note that every underscore (`_`) in the original configuration key has to be replaced by a duplicate underscore
@@ -160,7 +160,7 @@ Please note that every underscore (`_`) in the original configuration key has to
 
 ## Step 4: Restarting the server
 
-Once the configuration is completed, restart your ProyeksiApp and Apache2 server with `service openproject restart` and  `service apache2 restart` . Again these commands might differ depending on your Linux distribution.
+Once the configuration is completed, restart your ProyeksiApp and Apache2 server with `service proyeksiapp restart` and  `service apache2 restart` . Again these commands might differ depending on your Linux distribution.
 
 
 

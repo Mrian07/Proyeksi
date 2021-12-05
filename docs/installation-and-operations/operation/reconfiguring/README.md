@@ -11,18 +11,18 @@ sidebar_navigation:
 For packaged installations, you can restart the configuration process by issuing the following command on the server where ProyeksiApp runs:
 
 ```bash
-sudo openproject reconfigure
+sudo proyeksiapp reconfigure
 ```
 
 This will restart the installation wizard, and allow you to modify any of the choices that you previously selected. If a configuration option doesn't need to be modified, just hit `ENTER` to proceed to the next screen.
 
-The wizard configuration is stored in `/etc/openproject/installer.dat`.
+The wizard configuration is stored in `/etc/proyeksiapp/installer.dat`.
 
 The wizard will automatically set environment variables to be used by ProyeksiApp. Those variables can be manipulated with the CLI tool that ships with ProyeksiApp:
 
-* `sudo openproject config` will display the list of environment variables set.
-* `sudo openproject config:get KEY` allows you to get the value of single environment variable.
-* `sudo openproject config:set KEY VALUE` allows you to set a new value for a single environment variable.
+* `sudo proyeksiapp config` will display the list of environment variables set.
+* `sudo proyeksiapp config:get KEY` allows you to get the value of single environment variable.
+* `sudo proyeksiapp config:set KEY VALUE` allows you to set a new value for a single environment variable.
 
 ## Docker installation
 
@@ -35,5 +35,5 @@ docker-compose up -d
 For all-in-one docker installations, you should update the environment file given to the `--env-file` docker option, and issue the following command:
 
 ```bash
-docker restart openproject
+docker restart proyeksiapp
 ```

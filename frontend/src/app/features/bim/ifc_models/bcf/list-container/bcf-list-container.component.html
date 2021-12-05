@@ -6,7 +6,7 @@
      [ngClass]="{ '_with-resizer': showResizerInCardView() }"
      *ngIf="tableInformationLoaded && showTableView">
 <wp-resizer elementClass="work-packages-partitioned-page--content-right"
-          localStorageKey="proyeksiapp-splitViewFlexBasis">
+          localStorageKey="proyeksiApp-splitViewFlexBasis">
 </wp-resizer>
 
 <wp-table [projectIdentifier]="CurrentProject.identifier"
@@ -26,7 +26,7 @@
           (itemClicked)="handleWorkPackageCardClicked($event)"
           (stateLinkClicked)="openStateLink($event)"
           resizerClass="work-packages-partitioned-page--content-right"
-          resizerStorageKey="proyeksiapp-splitViewFlexBasis">
+          resizerStorageKey="proyeksiApp-splitViewFlexBasis">
 </wp-grid>
 </div>
 

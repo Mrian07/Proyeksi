@@ -10,13 +10,13 @@
 # ProyeksiApp 3.0.8
 
 The [3.0.8 bugfix release of
-ProyeksiApp](https://github.com/opf/openproject/tree/v3.0.8) addresses a
+ProyeksiApp](https://github.com/opf/proyeksiapp/tree/v3.0.8) addresses a
 variety of bugs from filtering
-([\#7169](https://community.openproject.org/work_packages/7169 "Filtering for assignee's role returns wrong results (closed)"))
+([\#7169](https://community.proyeksi.id/work_packages/7169 "Filtering for assignee's role returns wrong results (closed)"))
 to accessibility
-([\#10834](https://community.openproject.org/work_packages/10834 "Some links are readout before the header (closed)"))
+([\#10834](https://community.proyeksi.id/work_packages/10834 "Some links are readout before the header (closed)"))
 and performance limitations when copying projects
-([\#12299](https://community.openproject.org/work_packages/12299 "App server blocked when copying large project (closed)")).
+([\#12299](https://community.proyeksi.id/work_packages/12299 "App server blocked when copying large project (closed)")).
 For the later, delayed job is employed to ensure that the app server
 will still answer while large projects are copied. Please bear in mind
 that for this to happen you need to have [delayed job
@@ -24,13 +24,13 @@ running](https://github.com/collectiveidea/delayed_job).
 
 For a complete list of changes to ProyeksiApp, please refer to the
 [version’s
-packages](https://community.openproject.com/projects/openproject/roadmap).
+packages](https://community.proyeksiapp.com/projects/proyeksiapp/roadmap).
 
 However, this is only half of the truth. With the ProyeksiApp 3.0.8
 release we chose to alter our release process. While the changes for the
 release process of ProyeksiApp itself are minor, you will notice that
 the [plugins listed on
-ProyeksiApp.org](https://community.openproject.org/projects/plugins/) now all have
+ProyeksiApp.org](https://community.proyeksi.id/projects/plugins/) now all have
 3.0.8 as their most recent version. This was done with the intend of
 easing deployment. Subsequent releases will follow this schema as well.
 It is our commitment to ensure that plugins with a specific release
@@ -42,7 +42,7 @@ ProyeksiApp.
 
 We are aware that this change in versioning has some weird side effects.
 The most noticeable is the [costs
-plugin](https://github.com/finnlabs/openproject-costs) falling back from
+plugin](https://github.com/finnlabs/proyeksiapp-costs) falling back from
 version 5.0.4 to 3.0.8. While this might be confusing, we are convinced
 that keeping versions in lockstep will convey the intended compatibility
 much better than every other mechanism.

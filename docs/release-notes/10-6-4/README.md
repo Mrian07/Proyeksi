@@ -8,7 +8,7 @@ release_date: 2020-06-30
 
 # ProyeksiApp 10.6.4
 
-We released [ProyeksiApp 10.6.4](https://community.openproject.com/versions/1443).
+We released [ProyeksiApp 10.6.4](https://community.proyeksiapp.com/versions/1443).
 The release contains several bug fixes and we recommend updating to the newest version.
 
 <!--more-->

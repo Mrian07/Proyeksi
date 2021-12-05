@@ -105,7 +105,7 @@ Spawn an interactive console in ProyeksiApp. The following example shows the com
 See [our process control guide](../../../installation-and-operations/operation/control/) for information on other installation types.
 
 ```
-sudo openproject run console
+sudo proyeksiapp run console
 # or if using docker:
 # docker-compose run --rm web bundle exec rails console
 ```

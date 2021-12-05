@@ -23,7 +23,7 @@ This documentation evolves continuously with new features and improvements to ac
 
 ## Where to find the ProyeksiApp documentation?
 
-The documentation for ProyeksiApp is published [here](https://www.openproject.org/docs/). You can also access the documentation from your ProyeksiApp application under user guides and API documentation below the question mark at the top right in the header menu. 
+The documentation for ProyeksiApp is published [here](https://www.proyeksi.id/docs/). You can also access the documentation from your ProyeksiApp application under user guides and API documentation below the question mark at the top right in the header menu. 
 
 
 
@@ -35,7 +35,7 @@ Being proudly open source, we invite anyone in our community to contribute to ou
 
 ## What can you contribute to the documentation?
 
-Documentation improvements and changes apply to the documentation described in the section above. Documentation changes are **not** changes or additions to the code of the ProyeksiApp application. For contributions to the code, see our [product development guide](../product-development-handbook/#openproject-product-development-handbook). 
+Documentation improvements and changes apply to the documentation described in the section above. Documentation changes are **not** changes or additions to the code of the ProyeksiApp application. For contributions to the code, see our [product development guide](../product-development-handbook/#proyeksiapp-product-development-handbook). 
 
 We are looking forward to receiving the following contributions from you:
 

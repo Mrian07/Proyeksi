@@ -269,13 +269,13 @@ pl:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
                 Wersja zawiera różne nowe funkcje i ulepszenia: <br> <ul class="%{list_styling_class}"> <li>Dzięki nowym <b>powiadomieniom w aplikacji</b> otrzymujesz wszystkie ważne aktualizacje bezpośrednio w aplikacji i nie przychodzi do ciebie ogromna ilość wiadomości e-mail.</li> <li>Nowe <b>Centrum powiadomień</b> pokazuje wszystkie zmiany, w tym intuicyjne opcje filtrowania np. wg przyczyny powiadomienia lub projektów. Umożliwia ono nawet edycję bezpośrednio w widoku podzielonym.</li> <li>Poprawione <b>ustawienia powiadomień</b> pozwalają na dostosowanie dla jakich czynności i w których projektach chcesz otrzymywać powiadomienia.</li> <li><b>Przypomnienia e-mail</b> można skonfigurować tak, aby otrzymywać ważne aktualizacje za pomocą dziennego podsumowania w wiadomości e-mail.</li> <li>Auto uzupełnianie pakietu roboczego dla relacji wyświetla teraz również dodatkowe informacje (nazwa projektu, status, itp.), aby łatwo zidentyfikować odpowiedni pakiet roboczy.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
-                Wersja zawiera różne nowe funkcje i ulepszenia: <br> <ul class="%{list_styling_class}"> <li>Centrum powiadomień: Zmniejsz liczbę otrzymywanych wiadomości. Zamiast tego wszystkie istotne powiadomienia znajdziesz w jednym centralnym miejscu.</li> <li>Możesz również pobierać wszystkie przesłane pliki IFC.</li> <li>Przesyłanie i przetwarzanie IFC stało się szybsze i otrzymało lepsze komunikaty o błędach.</li> <li>Natomiast w<a href="https://github.com/opf/openproject-revit-add-in">Dodatku ProyeksiApp Revit</a> poprawiliśmy wiele usterek.</li> </ul>
+                Wersja zawiera różne nowe funkcje i ulepszenia: <br> <ul class="%{list_styling_class}"> <li>Centrum powiadomień: Zmniejsz liczbę otrzymywanych wiadomości. Zamiast tego wszystkie istotne powiadomienia znajdziesz w jednym centralnym miejscu.</li> <li>Możesz również pobierać wszystkie przesłane pliki IFC.</li> <li>Przesyłanie i przetwarzanie IFC stało się szybsze i otrzymało lepsze komunikaty o błędach.</li> <li>Natomiast w<a href="https://github.com/opf/proyeksiapp-revit-add-in">Dodatku ProyeksiApp Revit</a> poprawiliśmy wiele usterek.</li> </ul>
     label_activate: "Aktywuj"
     label_add_column_after: "Dodaj kolumnę po"
     label_add_column_before: "Dodaj kolumnę przed"
@@ -1129,7 +1129,7 @@ pl:
       role:
         label: 'Rola w %{project}'
         no_roles_found: 'Nie znaleziono żadnych ról'
-        description: 'To jest rola, którą %{principal} otrzyma po dołączeniu do projektu. Rola określa działania, które można podjąć i widoczne informacje. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Dowiedz się więcej o rolach i uprawnieniach. </a>'
+        description: 'To jest rola, którą %{principal} otrzyma po dołączeniu do projektu. Rola określa działania, które można podjąć i widoczne informacje. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Dowiedz się więcej o rolach i uprawnieniach. </a>'
         required: 'Wybierz rolę'
         next_button: 'Następny'
       message:

@@ -7,7 +7,7 @@ ProyeksiApp will be installed with a PostgreSQL database.
 
 **Please note**: This guide is NOT suitable for a production setup, but only for developing with it!
 
-If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards).
+If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.proyeksi.id/projects/proyeksiapp/boards).
 
 # Prepare your environment
 
@@ -15,7 +15,7 @@ We'll use [homebrew](https://brew.sh/) to install most of our requirements. Plea
 
 ## Install Ruby
 
-Use [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build#readme) to install Ruby. We always require the latest ruby versions, and you can check which version is required by [checking the Gemfile](https://github.com/opf/openproject/blob/dev/Gemfile#L31) for the `ruby "~> X.Y"` statement. At the time of writing, this version is "2.6"
+Use [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build#readme) to install Ruby. We always require the latest ruby versions, and you can check which version is required by [checking the Gemfile](https://github.com/opf/proyeksiapp/blob/dev/Gemfile#L31) for the `ruby "~> X.Y"` statement. At the time of writing, this version is "2.6"
 
 ### Install rbenv and ruby-build
 
@@ -34,7 +34,7 @@ $ rbenv init
 With both installed, we can now install the actual ruby version 2.7. You can check available ruby versions with `rbenv install --list`.
 At the time of this writing, the latest stable version is `2.7.5`, which we also require.
 
-We suggest you install the version we require in the [Gemfile](https://github.com/opf/openproject/blob/dev/Gemfile). Search for the `ruby '~> X.Y.Z'` line
+We suggest you install the version we require in the [Gemfile](https://github.com/opf/proyeksiapp/blob/dev/Gemfile). Search for the `ruby '~> X.Y.Z'` line
 and install that version.
 
 ```bash
@@ -69,15 +69,15 @@ $ postgres -D /usr/local/var/postgres
 Then, create the ProyeksiApp database user and accompanied database.
 
 ```bash
-$ createuser -d -P openproject
+$ createuser -d -P proyeksiapp
 ```
-You will be prompted for a password, for the remainder of these instructions, we assume its `openproject-dev-password`.
+You will be prompted for a password, for the remainder of these instructions, we assume its `proyeksiapp-dev-password`.
 
-Now, create the database `openproject_dev` and `openproject_test` owned by the previously created user.
+Now, create the database `proyeksiapp_dev` and `proyeksiapp_test` owned by the previously created user.
 
 ```bash
-$ createdb -O openproject openproject_dev
-$ createdb -O openproject openproject_test
+$ createdb -O proyeksiapp proyeksiapp_dev
+$ createdb -O proyeksiapp proyeksiapp_test
 ```
 
 ## Install Node.js
@@ -132,8 +132,8 @@ npm --version
 
 ```bash
 # Download the repository
-git clone https://github.com/opf/openproject.git
-cd openproject
+git clone https://github.com/opf/proyeksiapp.git
+cd proyeksiapp
 ```
 
 Note that we have checked out the `dev` branch of the ProyeksiApp repository. Development in ProyeksiApp happens in the `dev` branch (there is no `master` branch).
@@ -141,7 +141,7 @@ So, if you want to develop a feature, create a feature branch from a current `de
 
 ## Configure ProyeksiApp
 
-Create and configure the database configuration file in `config/database.yml` (relative to the openproject-directory.
+Create and configure the database configuration file in `config/database.yml` (relative to the proyeksiapp-directory.
 
 ```bash
 vim config/database.yml
@@ -155,16 +155,16 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: openproject
-  password: openproject-dev-password
+  username: proyeksiapp
+  password: proyeksiapp-dev-password
 
 development:
   <<: *default
-  database: openproject_dev
+  database: proyeksiapp_dev
 
 test:
   <<: *default
-  database: openproject_test
+  database: proyeksiapp_test
 ```
 
 ## Finish the Installation of ProyeksiApp
@@ -238,7 +238,7 @@ You can then access the application either through `localhost:3000` (Rails serve
 ## Start Coding
 
 Please have a look at [our development guidelines](../code-review-guidelines) for tips and guides on how to start coding. We have advice on how to get your changes back into the ProyeksiApp core as smooth as possible.
-Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/openproject/blob/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
+Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/proyeksiapp/blob/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
 
 ## Troubleshooting
 
@@ -248,8 +248,8 @@ If an error occurs, it should be logged there (as well as in the output to STDOU
 
 ## Questions, Comments, and Feedback
 
-If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.proyeksi.id [forum](https://community.proyeksi.id/projects/proyeksiapp/boards/9).
+[Follow ProyeksiApp on twitter](https://twitter.com/proyeksiapp), and follow [the news](https://www.proyeksi.id/blog) to stay up to date.
 
 [foreman-defaults]:http://ddollar.github.io/foreman/#DEFAULT-OPTIONS
 [foreman-env]:http://ddollar.github.io/foreman/#ENVIRONMENT

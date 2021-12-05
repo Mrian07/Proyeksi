@@ -16,19 +16,19 @@ The following bugs have been fixed in the core:
 
   - When sorting by a version in the work package list, the result was
     not shown but an unclear error message displayed
-    ([\#17928](https://community.openproject.org/work_packages/17928 "Sorting by version leads to 500 in experimental API (\"Unable to retrieve query from URL\") (closed)")).
+    ([\#17928](https://community.proyeksi.id/work_packages/17928 "Sorting by version leads to 500 in experimental API (\"Unable to retrieve query from URL\") (closed)")).
   - Clicking on the project name in a timeline let to “Page not found”
-    ([\#17819](https://community.openproject.org/work_packages/17819 "[Regression] Page not found when clicking on project link in timeline (NaN in link) (closed)")).
+    ([\#17819](https://community.proyeksi.id/work_packages/17819 "[Regression] Page not found when clicking on project link in timeline (NaN in link) (closed)")).
   - The “Close” icon of modals was cut off
-    ([\#17818](https://community.openproject.org/work_packages/17818 "[Regression] Close icon of modals is cut off (closed)")).
+    ([\#17818](https://community.proyeksi.id/work_packages/17818 "[Regression] Close icon of modals is cut off (closed)")).
   - Dates in the work package list were sometimes not displayed properly
-    ([\#17043](https://community.openproject.org/work_packages/17043 "Single bad translation on work package table. (closed)")).
+    ([\#17043](https://community.proyeksi.id/work_packages/17043 "Single bad translation on work package table. (closed)")).
     Thanks a lot to [Mike
-    Lewis](https://community.openproject.org/users/35400) for reporting
+    Lewis](https://community.proyeksi.id/users/35400) for reporting
     this error\!
 
 Additionally, the work package export via CSV is working properly again
-([\#16813](https://community.openproject.org/work_packages/16813 "CSV Export is fixed (closed)")).
+([\#16813](https://community.proyeksi.id/work_packages/16813 "CSV Export is fixed (closed)")).
 Before, only the default columns were displayed in the exported file.  
 A big thanks goes to [Thomas Tribolet](https://github.com/TribesTom) for
 fixing this bug\!
@@ -40,9 +40,9 @@ repository):
 
 In the Translations plugin an error was fixed which caused translations
 in the work package list not to be displayed properly
-([\#17944](https://community.openproject.org/work_packages/17944 "Missing js files added (closed)")).  
+([\#17944](https://community.proyeksi.id/work_packages/17944 "Missing js files added (closed)")).  
 For a complete list of changes, please refer to the [Changelog
-v4.0.5](https://community.openproject.org/versions/566) or take a look
-at [GitHub](https://github.com/opf/openproject/tree/v4.0.5).
+v4.0.5](https://community.proyeksi.id/versions/566) or take a look
+at [GitHub](https://github.com/opf/proyeksiapp/tree/v4.0.5).
 
 

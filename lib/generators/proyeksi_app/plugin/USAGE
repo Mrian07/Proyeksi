@@ -10,9 +10,9 @@ Example:
     This will create:
         ~/proyeksiapp-stuff
         ~/proyeksiapp-stuff/CHANGELOG.md
-        ~/proyeksiapp-stuff/openproject-stuff.gemspec
+        ~/proyeksiapp-stuff/proyeksiapp-stuff.gemspec
         ~/proyeksiapp-stuff/lib
-        ~/proyeksiapp-stuff/lib/openproject-stuff.rb
+        ~/proyeksiapp-stuff/lib/proyeksiapp-stuff.rb
         ~/proyeksiapp-stuff/lib/proyeksi_app
         ~/proyeksiapp-stuff/lib/proyeksi_app/stuff.rb
         ~/proyeksiapp-stuff/lib/proyeksi_app/stuff

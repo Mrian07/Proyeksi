@@ -9,7 +9,7 @@ keywords: placeholder user, example, wildcard, place holder
 
 # Placeholder users (Premium feature)
 
-In [ProyeksiApp Enterprise on-premises](https://www.openproject.org/enterprise-edition/) and [ProyeksiApp Enterprise cloud](https://www.openproject.org/hosting/) you can add placeholder users to your instance. They can be created without an email address and do not need license seats.
+In [ProyeksiApp Enterprise on-premises](https://www.proyeksi.id/enterprise-edition/) and [ProyeksiApp Enterprise cloud](https://www.proyeksi.id/hosting/) you can add placeholder users to your instance. They can be created without an email address and do not need license seats.
 
 Placeholder users can be used to plan a project with or for users who haven't been added to that project yet. This way you can set up projects before staffing them.
 Another use case would be to include customers, vendors or partners in your planning without them knowing it.

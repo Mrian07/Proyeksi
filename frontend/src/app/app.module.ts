@@ -232,7 +232,7 @@ export class ProyeksiAppModule {
     // We can't use ngDoBootstrap in nested modules since they are not called.
     const hookService = (appRef as any)._injector.get(HookService);
     hookService
-      .call('proyeksiApptAngularBootstrap')
+      .call('proyeksiAppAngularBootstrap')
       .forEach((results:{ selector:string, cls:any }[]) => {
         DynamicBootstrapper.bootstrapOptionalDocument(appRef, document, results);
       });

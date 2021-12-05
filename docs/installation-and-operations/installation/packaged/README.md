@@ -57,47 +57,47 @@ x86_64
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/20.04.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/ubuntu/20.04.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/openproject-installation-ubuntu.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/proyeksiapp-installation-ubuntu.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Ubuntu 18.04
 
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/18.04.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/ubuntu/18.04.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -107,21 +107,21 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/ubuntu/16.04.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/ubuntu/16.04.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -133,21 +133,21 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/11.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/debian/11.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -157,21 +157,21 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/10.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/debian/10.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -181,21 +181,21 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Import the PGP key used to sign our packages:
 
 ```bash
-wget -qO- https://dl.packager.io/srv/opf/openproject/key | sudo apt-key add -
+wget -qO- https://dl.packager.io/srv/opf/proyeksiapp/key | sudo apt-key add -
 ```
 
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/apt/sources.list.d/openproject.list \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/debian/9.repo
+sudo wget -O /etc/apt/sources.list.d/proyeksiapp.list \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/debian/9.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
 sudo apt-get update
-sudo apt-get install openproject
+sudo apt-get install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -207,8 +207,8 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/yum.repos.d/openproject.repo \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/el/8.repo
+sudo wget -O /etc/yum.repos.d/proyeksiapp.repo \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/el/8.repo
 ```
 
 If it is not already enabled, make sure to enable [Extra Packages for Enterprise Linux](https://fedoraproject.org/wiki/EPEL) (EPEL).
@@ -220,7 +220,7 @@ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noa
 Download the ProyeksiApp package:
 
 ```bash
-sudo yum install openproject
+sudo yum install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -232,14 +232,14 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Add the ProyeksiApp package source:
 
 ```bash
-sudo wget -O /etc/yum.repos.d/openproject.repo \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/el/7.repo
+sudo wget -O /etc/yum.repos.d/proyeksiapp.repo \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/el/7.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
-sudo yum install openproject
+sudo yum install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -253,14 +253,14 @@ Then finish the installation by reading the [*Initial configuration*][initial-co
 Add the ProyeksiApp package source:
 
 ```bash
-wget -O /etc/zypp/repos.d/openproject.repo \
-  https://dl.packager.io/srv/opf/openproject/stable/12/installer/sles/12.repo
+wget -O /etc/zypp/repos.d/proyeksiapp.repo \
+  https://dl.packager.io/srv/opf/proyeksiapp/stable/12/installer/sles/12.repo
 ```
 
 Download the ProyeksiApp package:
 
 ```bash
-sudo zypper install openproject
+sudo zypper install proyeksiapp
 ```
 
 Then finish the installation by reading the [*Initial configuration*][initial-config] section.
@@ -288,16 +288,16 @@ After you have successfully installed the ProyeksiApp package, you can now perfo
 To start the configuration wizard, please run the following command  with `sudo`, or as root:
 
 ```bash
-sudo openproject configure
+sudo proyeksiapp configure
 ```
 
 **Notes:**
 
-* In case you mistype or need to correct a configuration option, you can always safely cancel the configuration wizard by pressing `CTRL+C` and restart it by running `sudo openproject reconfigure`.
+* In case you mistype or need to correct a configuration option, you can always safely cancel the configuration wizard by pressing `CTRL+C` and restart it by running `sudo proyeksiapp reconfigure`.
 
-* Every time you will run the ProyeksiApp wizard, your choices will be persisted in a configuration file at `/etc/openproject/installer.dat` and subsequent executions of `sudo openproject configure` will re-use these values, only showing you the wizard steps for options you have not yet been asked for.
+* Every time you will run the ProyeksiApp wizard, your choices will be persisted in a configuration file at `/etc/proyeksiapp/installer.dat` and subsequent executions of `sudo proyeksiapp configure` will re-use these values, only showing you the wizard steps for options you have not yet been asked for.
 
-* In case you want to run through all the wizard options again, you can do so by executing `sudo openproject reconfigure`. This will show all wizard steps, but again keep values you entered before showing in the input fields. You can skip dialogs you do not want to change simply by confirming them with `ENTER`.
+* In case you want to run through all the wizard options again, you can do so by executing `sudo proyeksiapp reconfigure`. This will show all wizard steps, but again keep values you entered before showing in the input fields. You can skip dialogs you do not want to change simply by confirming them with `ENTER`.
 
 ## Step 1: Select your ProyeksiApp Edition
 
@@ -309,7 +309,7 @@ ProyeksiApp comes in two editions:
 
 ![select-edition](select-edition.png)
 
-You can find more about the BIM edition on [this page](https://www.openproject.org/bim-project-management/).
+You can find more about the BIM edition on [this page](https://www.proyeksi.id/bim-project-management/).
 
 <div class="alert alert-info" role="alert">
 This wizard step is only available on the following distributions:
@@ -348,7 +348,7 @@ The wizard will not try to connect to any database. You will have to specify a d
 You can set this `DATABASE_URL` parameter yourself to a PostgreSQL database URL.
 
 ```bash
-sudo openproject config:set DATABASE_URL="postgresql://[user[:password]@][host][:port][/dbname][?param1=value1&...]
+sudo proyeksiapp config:set DATABASE_URL="postgresql://[user[:password]@][host][:port][/dbname][?param1=value1&...]
 ```
 
 ## Step 3: Apache2 web server
@@ -375,7 +375,7 @@ Enter the fully qualified domain where your ProyeksiApp installation will be rea
 
 **Server path prefix**
 
-If you wish to install ProyeksiApp under a server path prefix, such as `yourdomain.example.com/openproject`, please specify that prefix here with a leading slash. For example: `/openproject`. If ProyeksiApp should respond to `http(s)://yourdomain.example.com` as specified in the previous dialog, simply leave this dialog empty and confirm by pressing `ENTER`.
+If you wish to install ProyeksiApp under a server path prefix, such as `yourdomain.example.com/proyeksiapp`, please specify that prefix here with a leading slash. For example: `/proyeksiapp`. If ProyeksiApp should respond to `http(s)://yourdomain.example.com` as specified in the previous dialog, simply leave this dialog empty and confirm by pressing `ENTER`.
 
 ![02c-prefix](02c-prefix.png)
 
@@ -403,14 +403,14 @@ If you terminate SSL externally before the request hits the ProyeksiApp server, 
 
 If you have a separate server that is terminating SSL and only forwarding/proxying to the ProyeksiApp server, you must select "No" in this dialog. However, there are some parameters you need to put into your outer configuration.
 
-- If you're proxying to the openproject server, you need to forward the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that ProyeksiApp is running on.
+- If you're proxying to the proyeksiapp server, you need to forward the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that ProyeksiApp is running on.
   - In Apache2, set the `ProxyPreserveHost On`directive 
   - In NginX, use the following value: `proxy_set_header X-Forwarded-Host $host:$server_port;`
 - If you're terminating SSL on the outer server, you need to set the `X-Forwarded-Proto https`header to let ProyeksiApp know that the request is HTTPS, even though its been terminated earlier in the request on the outer server.
   - In Apache2, use `RequestHeader set "X-Forwarded-Proto" https`
   - In Nginx, use `proxy_set_header X-Forwarded-Proto https;`
 
-- Finally, to let ProyeksiApp know that it should create links with 'https' when no request is available (for example, when sending emails), you need to set the following setting: `openproject config:set SERVER_PROTOCOL_FORCE_HTTPS="true"` followed by an `openproject configure`. This ensures that ProyeksiApp responds correctly with secure cookies even though it was not configured for https in the server configuration.
+- Finally, to let ProyeksiApp know that it should create links with 'https' when no request is available (for example, when sending emails), you need to set the following setting: `proyeksiapp config:set SERVER_PROTOCOL_FORCE_HTTPS="true"` followed by an `proyeksiapp configure`. This ensures that ProyeksiApp responds correctly with secure cookies even though it was not configured for https in the server configuration.
 
 
 
@@ -422,11 +422,11 @@ Only choose this option if you have a local Apache2 installed that the ProyeksiA
 
 When installing with an existing Apache2, you can take a look at the source of our [installation  templates](https://github.com/pkgr/addon-apache2/tree/master/conf) for guidance on how to set up the integration. 
 
-[Here's an exemplary configuration](./openproject-apache-example.conf) that might work for you.
+[Here's an exemplary configuration](./proyeksiapp-apache-example.conf) that might work for you.
 
 [For a minimal nginx config, please see this gist](https://gist.github.com/seLain/375d16ccd4542e3727e97a7478187d3a) as as starting point.
 
-**Please note:** If you reconfigure the ProyeksiApp application and switch to `skip`, you might run into errors with the Apache configuration file, as that will not be automatically remove. Please double-check you removed references to the `openproject.conf` if you do reconfigure.
+**Please note:** If you reconfigure the ProyeksiApp application and switch to `skip`, you might run into errors with the Apache configuration file, as that will not be automatically remove. Please double-check you removed references to the `proyeksiapp.conf` if you do reconfigure.
 
 ## Step 4: SVN/Git integration server
 
@@ -456,7 +456,7 @@ Allows you to connect to a SMTP host through authentication types `NONE`,  `PLAI
 
 ### **Skip** (not recommended)
 
-Does not set up mail configuration. You can configure the mail setup in ProyeksiApp by visiting `openproject.example.com/settings?tab=notifications` in your installation. For more information, [visit our help page on this topic](../../../system-admin-guide/system-settings/).
+Does not set up mail configuration. You can configure the mail setup in ProyeksiApp by visiting `proyeksiapp.example.com/settings?tab=notifications` in your installation. For more information, [visit our help page on this topic](../../../system-admin-guide/system-settings/).
 
 ## Step 6: Administrator email
 
@@ -474,11 +474,11 @@ ProyeksiApp heavily relies on caching, which is why the wizard suggests you to i
 
 With this last step confirmed, the ProyeksiApp wizard will complete, and apply all the configuration options that you have just selected. This might take a few minutes depending on your machine and internet connection, as ProyeksiApp might need to install additional packages (such as the web server, database) depending on your selections.
 
-In case this process crashes or exits with an obvious error, please keep the output and send your configuration from`/etc/openproject/installer.dat` (removing any passwords from it) to us at support@openproject.com , or [reach out to the community forums](https://community.openproject.com/projects/openproject/forums). 
+In case this process crashes or exits with an obvious error, please keep the output and send your configuration from`/etc/proyeksiapp/installer.dat` (removing any passwords from it) to us at support@proyeksiapp.com , or [reach out to the community forums](https://community.proyeksiapp.com/projects/proyeksiapp/forums). 
 
 When this process completes, it will have started the internal application and web servers, the background jobs to process work-intensive jobs, and set up the connection to the database.
 
-You should be able to reach the ProyeksiApp instance by visiting your installation at `http://<openproject.example.com>/<server prefix>`.
+You should be able to reach the ProyeksiApp instance by visiting your installation at `http://<proyeksiapp.example.com>/<server prefix>`.
 
 You can then log in using the default user/password combination:
 

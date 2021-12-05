@@ -29,8 +29,8 @@
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 import { HttpErrorResponse } from '@angular/common/http';
 
-export const v3ErrorIdentifierQueryInvalid = 'urn:proyeksi-app:api:v3:errors:InvalidQuery';
-export const v3ErrorIdentifierMultipleErrors = 'urn:proyeksi-app:api:v3:errors:MultipleErrors';
+export const v3ErrorIdentifierQueryInvalid = 'urn:proyeksiapp-org:api:v3:errors:InvalidQuery';
+export const v3ErrorIdentifierMultipleErrors = 'urn:proyeksiapp-org:api:v3:errors:MultipleErrors';
 
 export interface IHalErrorBase {
   _type:string;

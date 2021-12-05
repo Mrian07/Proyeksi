@@ -24,7 +24,7 @@ In the work package split screen view (details view) you may have to use the thr
 | [Basic formatting](#basic-formatting)                        | Basic formatting elements in the WYSIWYG editor          |
 | [Image handling](#image-handling)                            | How to add images in the WYSIWYG editor?                 |
 | [Macros](#macros)                                            | Available macros in the WYSIWYG editor                   |
-| [Links to ProyeksiApp resources](#links-to-openproject-resources) | How to link to resources like wikis, projects, meetings? |
+| [Links to ProyeksiApp resources](#links-to-proyeksiapp-resources) | How to link to resources like wikis, projects, meetings? |
 | [Embedding of work package attributes and project attributes](#embedding-of-work-package-attributes-and-project-attributes) | How to embed attributes and attribute help texts?        |
 
 ## Basic formatting

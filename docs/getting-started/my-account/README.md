@@ -75,7 +75,7 @@ ProyeksiApp is translated to more than 30 languages, like German, Chinese, Frenc
 
 Pressing the blue **Save** button will save your changes.
 
-If you want to help us to add further languages or to add the translations in your language, you can contribute to the CrowdIn translations project [here](https://crowdin.com/project/openproject).
+If you want to help us to add further languages or to add the translations in your language, you can contribute to the CrowdIn translations project [here](https://crowdin.com/project/proyeksiapp).
 
 ### Change your time zone
 

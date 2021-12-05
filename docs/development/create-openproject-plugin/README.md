@@ -4,19 +4,19 @@ ProyeksiApp plugins are special ruby gems. You may include them in your `Gemfile
 
 ## Generate the plugin
 
-You can generate a new plugin directly from ProyeksiApp. Think of a good name and a place (in your filesystem) where the plugin should go. In this example, we have a `plugins` directory right next to the `openproject` directory. Then do
+You can generate a new plugin directly from ProyeksiApp. Think of a good name and a place (in your filesystem) where the plugin should go. In this example, we have a `plugins` directory right next to the `proyeksiapp` directory. Then do
 
 ```bash
 bundle exec rails generate proyeksi_app:plugin my_plugin ../plugins/
 ```
 
-This generates the plugins `openproject-my_plugin` into the directory `../plugins/openproject-my_plugin`. The new plugin is a rails engine, which can be published as a gem.
+This generates the plugins `proyeksiapp-my_plugin` into the directory `../plugins/proyeksiapp-my_plugin`. The new plugin is a rails engine, which can be published as a gem.
 
-You may want to update the generated plugin's gemspec (`openproject-my_plugin.gemspec`).
+You may want to update the generated plugin's gemspec (`proyeksiapp-my_plugin.gemspec`).
 
 **Example Plugin**
 
-There is an [example plugin](https://github.com/opf/openproject-proto_plugin) which does some of the basic things (adding menu items, hooking into views, defining a project menu, etc.) and provides further info in its README.
+There is an [example plugin](https://github.com/opf/proyeksiapp-proto_plugin) which does some of the basic things (adding menu items, hooking into views, defining a project menu, etc.) and provides further info in its README.
 
 Instead of generating a new plugin you can also just clone the example plugin and adapt it.
 
@@ -26,7 +26,7 @@ To include the new plugin into ProyeksiApp, we have to add it into `Gemfile.plug
 
 ```
 group :opf_plugins do
-  gem "openproject-my_plugin", :path => '../plugins/openproject-my_plugin'
+  gem "proyeksiapp-my_plugin", :path => '../plugins/proyeksiapp-my_plugin'
 end
 ```
 
@@ -40,13 +40,13 @@ bundle install
 
 ### Production
 
-To use your plugin in production you have to add it to your [docker](../../installation-and-operations/installation/docker/#openproject-plugins) container or install it in the [packaged installation](../../installation-and-operations/configuration/plugins/#adding-plugins-debrpm-packages).
+To use your plugin in production you have to add it to your [docker](../../installation-and-operations/installation/docker/#proyeksiapp-plugins) container or install it in the [packaged installation](../../installation-and-operations/configuration/plugins/#adding-plugins-debrpm-packages).
 
 ## Start coding
 
 You may have a look at some existing ProyeksiApp plugins to get inspiration. It is possible to add new routes, views, models, … and/or overwrite existing ones.
 
-Feel free to ask for help in our [Development Forum](https://www.proyeksi.id/projects/openproject/forums/7).
+Feel free to ask for help in our [Development Forum](https://www.proyeksi.id/projects/proyeksiapp/forums/7).
 
 ## Steps to release a plugin
 
@@ -70,7 +70,7 @@ rake copyright:authors:show['../Path/to/repository/']
 
 2. Add a copyright notice to all the source files
 
- There is a rake task in the core to perform this job. Use `rake copyright:update['path_to_plugin']` (e.g. `rake copyright:update['../plugins/openproject-global_roles']`) to add the copyright header in `COPYRIGHT_short` to all relevant plugin files.
+ There is a rake task in the core to perform this job. Use `rake copyright:update['path_to_plugin']` (e.g. `rake copyright:update['../plugins/proyeksiapp-global_roles']`) to add the copyright header in `COPYRIGHT_short` to all relevant plugin files.
  If no such file exists, `COPYRIGHT_short` from the core is used.
 
 3. Check for existence of `doc/COPYRIGHT.md` and `doc/GPL.txt` if referenced by the copyright notice.

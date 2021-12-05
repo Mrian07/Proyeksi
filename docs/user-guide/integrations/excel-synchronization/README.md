@@ -14,19 +14,19 @@ keywords: Excel
 
 See how to set up the synchronization between ProyeksiApp work packages and MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-1.-download-and-upload.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-1.-download-and-upload.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize custom queries (views)
 
 See how to synchronize custom work package queries from ProyeksiApp in MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Synchronization-2.-custom-queries.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Synchronization-2.-custom-queries.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize hierarchies
 
 See how to synchronize work package hierarchies in ProyeksiApp with MS Excel.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-3.-hierarchies.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-synchronization-3.-hierarchies.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Synchronize relations
 
@@ -49,7 +49,7 @@ Unfortunately, there is no way to create relation with translated terms via API 
 
 ![allowd-values](image-20211014153150017.png)
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Relations.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Excel-Relations.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 
 ## Step-by-step guide

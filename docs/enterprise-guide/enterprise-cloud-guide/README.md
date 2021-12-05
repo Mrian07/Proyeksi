@@ -36,4 +36,4 @@ The ProyeksiApp Enterprise cloud edition contains all ProyeksiApp Community feat
 
 For the Enterprise cloud edition the ProyeksiApp experts will take care of the installation as well as maintenance of your ProyeksiApp installation, so you will be able to concentrate on your core business. We will perform regular backups of your Enterprise cloud edition. You will have the latest ProyeksiApp release installed. Hence, you do not have to take care of updates or installation of security patches yourself.
 
-Please find a detailed feature comparison [here](https://www.openproject.org/pricing/#features).
+Please find a detailed feature comparison [here](https://www.proyeksi.id/pricing/#features).

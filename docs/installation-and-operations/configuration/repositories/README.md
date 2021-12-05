@@ -176,7 +176,7 @@ On that page, enable  *"Enable repository management web service"* and generate 
 forget to save the settings). We need that API key later in our Apache configuration.
 
 You also need a distinct filesystem path for Subversion and Git repositories.
-In this guide, we assume that you put your svn repositories in /srv/openproject/svn and your git repositories in /srv/openproject/git .
+In this guide, we assume that you put your svn repositories in /srv/proyeksiapp/svn and your git repositories in /srv/proyeksiapp/git .
 
 ## Subversion Integration
 
@@ -218,7 +218,7 @@ Assuming the following situation:
 
 * Apache run user / group: `www-data`
 
-* ProyeksiApp run user: `openproject`
+* ProyeksiApp run user: `proyeksiapp`
 
 * Repository path for SCM vendor X: `/srv/repositories/X`
 
@@ -233,7 +233,7 @@ Assuming the following situation:
   	# group:www-data:rwx
   	# mask::rwx
   	
-  	setfacl -R -m u:www-data:rwx -m u: openproject:rwx -m d:m:rwx /srv/repositories/X
+  	setfacl -R -m u:www-data:rwx -m u: proyeksiapp:rwx -m d:m:rwx /srv/repositories/X
   	
   	# Promote to default ACL
   	# Results in
@@ -245,7 +245,7 @@ Assuming the following situation:
   	# default:mask::rwx
   	# default:other::---
   	
-  	setfacl -dR -m u:www-data:rwx -m u:openproject:rwx -m m:rwx /srv/repositories/X
+  	setfacl -dR -m u:www-data:rwx -m u:proyeksiapp:rwx -m m:rwx /srv/repositories/X
 
 
   ​	
@@ -310,11 +310,11 @@ We provide an example apache configuration. Some details are explained inline as
       # This fixes COPY for webdav over https
       RequestHeader edit Destination ^https: http: early
     
-      # Serves svn repositories locates in /srv/openproject/svn via WebDAV
+      # Serves svn repositories locates in /srv/proyeksiapp/svn via WebDAV
       # It is secure with basic auth against the ProyeksiApp user database.
       <Location /svn>
         DAV svn
-        SVNParentPath "/srv/openproject/svn"
+        SVNParentPath "/srv/proyeksiapp/svn"
         DirectorySlash Off
     
         AuthType Basic
@@ -334,7 +334,7 @@ We provide an example apache configuration. Some details are explained inline as
     
       # see https://www.kernel.org/pub/software/scm/git/docs/git-http-backend.html for details
       # needs mod_cgi to work -> a2enmod cgi
-      SetEnv GIT_PROJECT_ROOT /srv/openproject/git
+      SetEnv GIT_PROJECT_ROOT /srv/proyeksiapp/git
       SetEnv GIT_HTTP_EXPORT_ALL
       ScriptAlias /git/ /usr/lib/git-core/git-http-backend/
       <Location /git>

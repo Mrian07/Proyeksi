@@ -15,15 +15,15 @@ roadmap and a design fix.
 Due to a wrong link, an internal error was displayed in ProyeksiApp
 4.1.0 when trying to edit a version from the roadmap screen. This has
 been fixed with ProyeksiApp 4.1.1
-([\#20094](https://community.openproject.org/work_packages/20094)).
+([\#20094](https://community.proyeksi.id/work_packages/20094)).
 
 Additionally, the width for the column selection screen on the work
 package page has been increased
-([\#20095](https://community.openproject.org/work_packages/20095)).
+([\#20095](https://community.proyeksi.id/work_packages/20095)).
 
 For further information on the release, please refer to the [Changelog
-v.4.1.1](https://community.openproject.org/versions/714 "Changelog v.4.0.10") or
+v.4.1.1](https://community.proyeksi.id/versions/714 "Changelog v.4.0.10") or
 take a look at
-[GitHub](https://github.com/opf/openproject/tree/v4.1.1 "GitHub").
+[GitHub](https://github.com/opf/proyeksiapp/tree/v4.1.1 "GitHub").
 
 

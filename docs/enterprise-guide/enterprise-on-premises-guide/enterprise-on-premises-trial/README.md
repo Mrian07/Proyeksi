@@ -10,7 +10,7 @@ keywords: Enterprise Edition trial, EOP
 
 You can **test the ProyeksiApp Enterprise on-premises edition 14 days for free**. It will extend your current Community edition with the premium features so you can thoroughly test those premium functionalities.
 
-Please go to [our website](https://www.openproject.org/enterprise-edition/) and press the green **Get free trial license** button.
+Please go to [our website](https://www.proyeksi.id/enterprise-edition/) and press the green **Get free trial license** button.
 
 ![create-enterprise-edition-trial](1567610649991.png)
 

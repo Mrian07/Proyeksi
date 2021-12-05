@@ -16,7 +16,7 @@ In addition, new translations have been added. Thanks to everyone who
 helped to translate and proof read ProyeksiApp\!
 
 For further information on the release, please refer to the [Changelog
-v.4.2.8](https://community.openproject.org/versions/773) or take a look
-at [GitHub](https://github.com/opf/openproject/tree/v4.2.8).
+v.4.2.8](https://community.proyeksi.id/versions/773) or take a look
+at [GitHub](https://github.com/opf/proyeksiapp/tree/v4.2.8).
 
 

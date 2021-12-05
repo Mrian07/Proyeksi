@@ -4,7 +4,7 @@ We encourage developers from the community to develop client libraries for the P
 
 While we cannot endorse or vet the libraries listed below we encourage their creation and acknowledge the value they add to ProyeksiApp.
 
-If you need help developing a client library you can [contact us](mailto:support@openproject.com). If you want to have a client library listed in the list below you can again [contact us](mailto:support@openproject.com) or simply issue a PR with [changes to the source file](https://github.com/opf/openproject/blob/dev/docs/api/apiv3/client-libraries/README.md).
+If you need help developing a client library you can [contact us](mailto:support@proyeksiapp.com). If you want to have a client library listed in the list below you can again [contact us](mailto:support@proyeksiapp.com) or simply issue a PR with [changes to the source file](https://github.com/opf/proyeksiapp/blob/dev/docs/api/apiv3/client-libraries/README.md).
 
 
 ## JavaScript / TypeScript
@@ -17,4 +17,4 @@ If you need help developing a client library you can [contact us](mailto:support
 
 ## Go
 
-* [Go-ProyeksiApp](https://github.com/manuelbcd/go-openproject): ProyeksiApp client library written in Go. Community, issues and PRs are more than welcome.
+* [Go-ProyeksiApp](https://github.com/manuelbcd/go-proyeksiapp): ProyeksiApp client library written in Go. Community, issues and PRs are more than welcome.

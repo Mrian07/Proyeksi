@@ -4,7 +4,7 @@ services:
     image: postgres:10
     environment:
       - POSTGRES_PASSWORD=p4ssw0rd
-      - POSTGRES_DB=openproject
+      - POSTGRES_DB=proyeksiapp
   nginx:
     image: nginx
     volumes:
@@ -12,11 +12,11 @@ services:
     ports:
       - "8080:80"
 
-  web: &openproject
+  web: &proyeksiapp
     environment:
-      - DATABASE_URL=postgres://postgres:p4ssw0rd@database/openproject
-    image: openproject/community:10
+      - DATABASE_URL=postgres://postgres:p4ssw0rd@database/proyeksiapp
+    image: proyeksiapp/community:10
     command: ./docker/web
   worker:
-    <<: *openproject
+    <<: *proyeksiapp
     command: ./docker/worker

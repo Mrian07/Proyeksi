@@ -50,7 +50,7 @@ export class CKEditorSetupService {
     const contentLanguage = context.options && context.options.rtl ? 'ar' : 'en';
 
     const config = {
-      openProject: this.createConfig(context),
+      ProyeksiApp: this.createConfig(context),
       initialData,
       language: {
         content: contentLanguage,

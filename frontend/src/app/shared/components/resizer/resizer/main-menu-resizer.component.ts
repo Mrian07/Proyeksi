@@ -89,7 +89,7 @@ export class MainMenuResizerComponent extends UntilDestroyedMixin implements OnI
       });
 
     this.resizeEvent = 'main-menu-resize';
-    this.localStorageKey = 'proyeksiapp-mainMenuWidth';
+    this.localStorageKey = 'proyeksiApp-mainMenuWidth';
   }
 
   public resizeStart() {

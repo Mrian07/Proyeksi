@@ -10,9 +10,9 @@ keywords: enterprise edition, enterprise on-premises, self-hosted version, serve
 
 Welcome to the ProyeksiApp **Enterprise on-premises edition guide**.
 
-Here you find support for the [ProyeksiApp Enterprise on-premises edition](https://www.openproject.org/enterprise-edition/). The Enterprise on-premises edition extends the Community edition and provides **premium features**, additional **security feature**s as well as **professional support**.
+Here you find support for the [ProyeksiApp Enterprise on-premises edition](https://www.proyeksi.id/enterprise-edition/). The Enterprise on-premises edition extends the Community edition and provides **premium features**, additional **security feature**s as well as **professional support**.
 
-The Enterprise on-premises edition builds on top of the free Community edition. An upgrade is possible at any time. Please have a look at the detailed [feature comparison](https://www.openproject.org/pricing/#features) between the different versions of ProyeksiApp.
+The Enterprise on-premises edition builds on top of the free Community edition. An upgrade is possible at any time. Please have a look at the detailed [feature comparison](https://www.proyeksi.id/pricing/#features) between the different versions of ProyeksiApp.
 
 <div class="alert alert-info" role="alert">
 **Note**: This guide only describes the administration part of the ProyeksiApp Enterprise on-premises edition. The feature descriptions for the premium features are included in the respective parts of the ProyeksiApp [user guide](../../user-guide/).

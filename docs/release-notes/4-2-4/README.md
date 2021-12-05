@@ -15,14 +15,14 @@ The following bug has been fixed:
 
   - An English string in the project dependencies was wrong and has been
     fixed
-    ([\#20910](https://community.openproject.org/work_packages/20910)).
+    ([\#20910](https://community.proyeksi.id/work_packages/20910)).
 
 Additionally, new translations have been included (including complete
 translations for Portuguese, Brazilian).
 
 For further information on the release, please refer to the [Changelog
-v.4.2.4](https://community.openproject.org/versions/752) or take a look
-at [GitHub](https://github.com/opf/openproject/tree/v4.2.4).
+v.4.2.4](https://community.proyeksi.id/versions/752) or take a look
+at [GitHub](https://github.com/opf/proyeksiapp/tree/v4.2.4).
 
  
 

@@ -4,7 +4,7 @@ set -e
 . ${INSTALLER_DIR}/wizard
 
 CLI="${APP_NAME}"
-edition="$(wiz_get "openproject/edition")"
+edition="$(wiz_get "proyeksiapp/edition")"
 
 tmpdir="$(mktemp -d)"
 cleanup() {
@@ -14,7 +14,7 @@ cleanup() {
 trap cleanup INT TERM EXIT
 
 if [ "$edition" = "bim" ]; then
-	${CLI} config:set OPENPROJECT_EDITION="$edition"
+	${CLI} config:set PROYEKSIAPP_EDITION="$edition"
 
         case "$(wiz_fact "osfamily")" in
                 "debian")
@@ -80,5 +80,5 @@ if [ "$edition" = "bim" ]; then
 
 	rm -rf "$tmpdir"
 else
-	${CLI} config:unset OPENPROJECT_EDITION
+	${CLI} config:unset PROYEKSIAPP_EDITION
 fi

@@ -10,7 +10,7 @@ on:
 jobs:
   publish:
     # restrict this job to base repo for now
-    if: github.repository == 'opf/openproject'
+    if: github.repository == 'opf/proyeksiapp'
     runs-on: ubuntu-latest
     env:
       INPUT_BUILDOPTIONS: --pull
@@ -23,14 +23,14 @@ jobs:
         id: build_and_push
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: openproject/community
+          name: proyeksiapp/community
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_semver: true
           cache: ${{ github.event_name != 'schedule' }}
       - name: Test
         run: |
-          docker run --name openproject -d -p 8080:80 -e SUPERVISORD_LOG_LEVEL=debug -e SECRET_KEY_BASE=secret ${{ steps.build_and_push.outputs.digest }}
+          docker run --name proyeksiapp -d -p 8080:80 -e SUPERVISORD_LOG_LEVEL=debug -e SECRET_KEY_BASE=secret ${{ steps.build_and_push.outputs.digest }}
           sleep 30
-          docker logs openproject --tail 100
+          docker logs proyeksiapp --tail 100
           wget -O- --retry-on-http-error=503,502 --retry-connrefused http://localhost:8080/api/v3

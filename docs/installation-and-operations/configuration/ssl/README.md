@@ -11,7 +11,7 @@ sidebar_navigation:
 SSL configuration can be applied on the first installation, or at any time by reconfiguring the application with:
 
 ```bash
-sudo openproject reconfigure
+sudo proyeksiapp reconfigure
 ```
 
 You will be prompted with the same dialogs than on the [initial configuration](../../installation/packaged/#step-3-apache2-web-server) guide. This assumes that you select the **install** option when the **server/autoinstall** dialog appears, and that you have certificate and key files available on your server at a path you know.
@@ -32,7 +32,7 @@ we're using.
 
 You can get an SSL certificate for free via Let's Encrypt.
 
-This requires your ProyeksiApp server to be reachable using a domain name (e.g. openproject.mydomain.com), with port 443 or 80 open. If you don't have anything running on port 80 or 443, we recommend that you first configure ProyeksiApp without SSL support, and only then execute the steps outlined below.
+This requires your ProyeksiApp server to be reachable using a domain name (e.g. proyeksiapp.mydomain.com), with port 443 or 80 open. If you don't have anything running on port 80 or 443, we recommend that you first configure ProyeksiApp without SSL support, and only then execute the steps outlined below.
 
 1. Go to [certbot.eff.org](https://certbot.eff.org), and select "Apache" and your Linux distribution (e.g. Ubuntu 20.04) to get access to the installation instructions for your specific OS.
 2. Follow the installation instructions to get the `certbot` CLI installed.
@@ -42,15 +42,15 @@ This requires your ProyeksiApp server to be reachable using a domain name (e.g. 
 
   The CLI will ask for a few details and to agree to the Let's Encrypt terms of usage. Then it will perform the Let's Encrypt challenge and finally issue a certificate file and a private key file if the challenge succeeded.
 
-  At the end, it will store the certificate (`fullchain.pem`) and private key (`privkey.pem`) under `/etc/letsencrypt/live/openproject.mydomain.com/`.
+  At the end, it will store the certificate (`fullchain.pem`) and private key (`privkey.pem`) under `/etc/letsencrypt/live/proyeksiapp.mydomain.com/`.
 
-  You can now configure ProyeksiApp to use them by running `openproject reconfigure`: hit ENTER until you get to the SSL wizard, and select "Yes" when the wizard asks for SSL support:
+  You can now configure ProyeksiApp to use them by running `proyeksiapp reconfigure`: hit ENTER until you get to the SSL wizard, and select "Yes" when the wizard asks for SSL support:
 
-  * Enter the `/etc/letsencrypt/live/openproject.mydomain.com/fullchain.pem` path when asked for the `server/ssl_cert` detail.
-  * Enter the `/etc/letsencrypt/live/openproject.mydomain.com/privkey.pem` path when asked for the `server/ssl_key` detail.
-  * Enter the `/etc/letsencrypt/live/openproject.mydomain.com/fullchain.pem` path (same as `server/ssl_cert`) when asked for the `server/ssl_ca` detail.
+  * Enter the `/etc/letsencrypt/live/proyeksiapp.mydomain.com/fullchain.pem` path when asked for the `server/ssl_cert` detail.
+  * Enter the `/etc/letsencrypt/live/proyeksiapp.mydomain.com/privkey.pem` path when asked for the `server/ssl_key` detail.
+  * Enter the `/etc/letsencrypt/live/proyeksiapp.mydomain.com/fullchain.pem` path (same as `server/ssl_cert`) when asked for the `server/ssl_ca` detail.
 
-  Hit ENTER, and after the wizard is finished your ProyeksiApp installation should be accessible using `https://openproject.mydomain.com`.
+  Hit ENTER, and after the wizard is finished your ProyeksiApp installation should be accessible using `https://proyeksiapp.mydomain.com`.
 
 4. Let's Encrypt certificates are only valid for 90 days. An entry in your OS crontab should have automatically been added when `certbot` was installed. You can optionally confirm that the renewal will work by issuing the following command in dry-run mode:
 
@@ -62,7 +62,7 @@ This requires your ProyeksiApp server to be reachable using a domain name (e.g. 
 
 If you terminate SSL externally<sup>1</sup> before the request hits the ProyeksiApp server, you need to let the ProyeksiApp server know that the request being handled is https, even though SSL was terminated before.   This is the most common source in problems in ProyeksiApp when using an external server that terminates SSL.
 
-Please ensure that if you're proxying to the openproject server, you set the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that ProyeksiApp is running on.
+Please ensure that if you're proxying to the proyeksiapp server, you set the HOST header to the internal server. This ensures that the host name of the outer request gets forwarded to the internal server. Otherwise you might see redirects in your browser to the internal host that ProyeksiApp is running on.
 
 On your outer proxying server, set these commands:
 

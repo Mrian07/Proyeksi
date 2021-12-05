@@ -10,7 +10,7 @@
 # ProyeksiApp 8.0.2
 
 We released
-[ProyeksiApp 8.0.2](https://community.openproject.com/versions/1154).
+[ProyeksiApp 8.0.2](https://community.proyeksiapp.com/versions/1154).
 The release contains several bug fixes and we recommend updating to the
 newest version.
 
@@ -18,22 +18,22 @@ newest version.
 
   - Fixed: Relations cannot be added when ProyeksiApp is running on
     relative URL root
-    \[[\#28639](https://community.openproject.com/wp/28639)\]
+    \[[\#28639](https://community.proyeksiapp.com/wp/28639)\]
   - Fixed: Cannot select values for custom field filter
-    \[[\#28739](https://community.openproject.com/wp/28739)\]
+    \[[\#28739](https://community.proyeksiapp.com/wp/28739)\]
   - Fixed: Renaming custom field does not invalidate cache
-    \[[\#28738](https://community.openproject.com/wp/28738)\]
+    \[[\#28738](https://community.proyeksiapp.com/wp/28738)\]
   - Fixed: Top menu entries are misaligned in mobile views
-    \[[\#28678](https://community.openproject.com/wp/28678)\]
+    \[[\#28678](https://community.proyeksiapp.com/wp/28678)\]
   - Fixed: Unable to save
     Sub-<span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-45">Project</span>
     with Custom Field of
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-10">Version</span>
     using parent
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-10">Version</span>
-    \[[\#28421](https://community.openproject.com/wp/28421)\]
+    \[[\#28421](https://community.proyeksiapp.com/wp/28421)\]
   - Fixed: Toolbar container styling corrected
-    \[[\#28645](https://community.openproject.com/wp/28645)\]
+    \[[\#28645](https://community.proyeksiapp.com/wp/28645)\]
   - Fixed: Content-Disposition was not set for AWS hosted attachments
     for non-inlineable images. This resulted in SVGs being displayed
     inline, which opens an SVG XSS attack vector on the AWS domain (NOT
@@ -47,7 +47,7 @@ newest version.
 
 Thanks to Github users @storm2513 and @akasparas for providing bugfixes
 as pull requests [on our GitHub
-project](https://github.com/opf/openproject).  A big thanks to community
+project](https://github.com/opf/proyeksiapp).  A big thanks to community
 members for reporting bugs and helping us identifying and providing
 fixes.
 

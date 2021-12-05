@@ -16,12 +16,6 @@ class EnterprisesController < ApplicationController
   def show
     @current_token = EnterpriseToken.current
     @token = @current_token || EnterpriseToken.new
-
-    write_augur_to_gon
-
-    if !@current_token.present?
-      write_trial_key_to_gon
-    end
   end
 
   def create
@@ -71,20 +65,9 @@ class EnterprisesController < ApplicationController
 
   private
 
-  def write_trial_key_to_gon
-    @trial_key = Token::EnterpriseTrialKey.find_by(user_id: User.system.id)
-    if @trial_key
-      gon.ee_trial_key = {
-        value: @trial_key.value,
-        created: @trial_key.created_at
-      }
-    end
-  end
 
-  def write_augur_to_gon
-    gon.augur_url = ProyeksiApp::Configuration.enterprise_trial_creation_host
-    gon.token_version = ProyeksiApp::Token::VERSION
-  end
+
+
 
   def default_breadcrumb
     t(:label_enterprise_edition)

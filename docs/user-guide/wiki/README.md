@@ -18,7 +18,7 @@ In a project wiki you can collaboratively create and document information with y
 | [General wiki information](#general-wiki-information)        | How to format a wiki page.                                   |
 | [Image handling](#image-handling)                            | How in insert images in the wiki.                            |
 | [Macros](#macros)                                            | How to add more information to a wiki page, e.g. work package create button or work package list. |
-| [Links to ProyeksiApp resources](#links-to-openproject-resources) | How to link to ProyeksiApp resources, e.g. work packages, members or projects. |
+| [Links to ProyeksiApp resources](#links-to-proyeksiapp-resources) | How to link to ProyeksiApp resources, e.g. work packages, members or projects. |
 
 ## General wiki information
 

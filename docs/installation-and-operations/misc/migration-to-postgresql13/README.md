@@ -15,7 +15,7 @@ Please first check whether this guide applies to you at all. Only PostgreSQL ins
 To do that, please run the following command:
 
 ```bash
-sudo cat /etc/openproject/installer.dat | grep postgres/autoinstall
+sudo cat /etc/proyeksiapp/installer.dat | grep postgres/autoinstall
 ```
 
 And verify that it outputs: postgres/autoinstall **install**.
@@ -114,23 +114,23 @@ Please follow this section only if you have installed ProyeksiApp using [this pr
 Before attempting the upgrade, please ensure you have performed a backup of your installation by following the [backup guide](../../operation/backing-up/).
 </div>
 
-The newer version of ProyeksiApp includes an utility to automatically perform the upgrade for you. Assuming you followed the standard installation procedure, the folder (within the docker container) containing your PostgreSQL data will be located at `/var/openproject/pgdata`.
+The newer version of ProyeksiApp includes an utility to automatically perform the upgrade for you. Assuming you followed the standard installation procedure, the folder (within the docker container) containing your PostgreSQL data will be located at `/var/proyeksiapp/pgdata`.
 
 Then the goal is to take this folder, and apply `pg_upgrade` on it. This will generate an upgraded cluster in another folder. We can finally switch the old postgres folder with the upgraded one and restart the container.
 
 First, ensure that you have stopped your container:
 
 ```bash
-docker stop openproject
+docker stop proyeksiapp
 ```
 
-Once the docker has stopped, you are ready to run the upgrade command. In this case, we assume that your existing PostgreSQL data is stored on the host at `/var/lib/openproject/pgdata`. We will also map a local folder named `/var/lib/openproject/pgdata-next` to a special volume in the container, named `/var/openproject/pgdata-next`. This volume will contain the upgraded cluster:
+Once the docker has stopped, you are ready to run the upgrade command. In this case, we assume that your existing PostgreSQL data is stored on the host at `/var/lib/proyeksiapp/pgdata`. We will also map a local folder named `/var/lib/proyeksiapp/pgdata-next` to a special volume in the container, named `/var/proyeksiapp/pgdata-next`. This volume will contain the upgraded cluster:
 
 ```bash
 docker run --rm -it \
-  -v /var/lib/openproject/pgdata:/var/openproject/pgdata \
-  -v /var/lib/openproject/pgdata-next:/var/openproject/pgdata-next \
-  openproject/community:12 root ./docker/prod/postgres-db-upgrade
+  -v /var/lib/proyeksiapp/pgdata:/var/proyeksiapp/pgdata \
+  -v /var/lib/proyeksiapp/pgdata-next:/var/proyeksiapp/pgdata-next \
+  proyeksiapp/community:12 root ./docker/prod/postgres-db-upgrade
 ```
 
 If everything goes well, the process should end with a message as follows:
@@ -149,29 +149,29 @@ Running this script will delete the old cluster's data files:
 You can then perform the following operation to switch the upgraded PostgreSQL with the older version:
 
 ```bash
-sudo mv /var/lib/openproject/pgdata /var/lib/openproject/pgdata-prev
-sudo mv /var/lib/openproject/pgdata-next /var/lib/openproject/pgdata
+sudo mv /var/lib/proyeksiapp/pgdata /var/lib/proyeksiapp/pgdata-prev
+sudo mv /var/lib/proyeksiapp/pgdata-next /var/lib/proyeksiapp/pgdata
 ```
 
 Finally, you can restart ProyeksiApp with the same command that you used before. For instance:
 
-docker run -d -p 8080:80 --name openproject -e SECRET_KEY_BASE=secret \
-  -v /var/lib/openproject/pgdata:/var/openproject/pgdata \
-  -v /var/lib/openproject/assets:/var/openproject/assets \
+docker run -d -p 8080:80 --name proyeksiapp -e SECRET_KEY_BASE=secret \
+  -v /var/lib/proyeksiapp/pgdata:/var/proyeksiapp/pgdata \
+  -v /var/lib/proyeksiapp/assets:/var/proyeksiapp/assets \
   [...]
-  openproject/community:12
+  proyeksiapp/community:12
 
-If your new installation looks fine, you can then choose to remove `/var/lib/openproject/pgdata-prev`:
+If your new installation looks fine, you can then choose to remove `/var/lib/proyeksiapp/pgdata-prev`:
 
 ```bash
-sudo rm -rf /var/lib/openproject/pgdata-prev
+sudo rm -rf /var/lib/proyeksiapp/pgdata-prev
 ```
 
 If you encounter an issue, you can switch back to the previous PostgreSQL folder by reverting the folder switch:
 
 ```bash
-sudo mv /var/lib/openproject/pgdata /var/lib/openproject/pgdata-next
-sudo mv /var/lib/openproject/pgdata-prev /var/lib/openproject/pgdata
+sudo mv /var/lib/proyeksiapp/pgdata /var/lib/proyeksiapp/pgdata-next
+sudo mv /var/lib/proyeksiapp/pgdata-prev /var/lib/proyeksiapp/pgdata
 ```
 
 And then restart ProyeksiApp.

@@ -12,7 +12,7 @@ As an ProyeksiApp Enterprise cloud edition customer, you will have professional 
 
 ## How to receive support
 
-Please write us an email to support@openproject.com to get help with your ProyeksiApp Enterprise cloud edition. Include a detailed description as well as screen-shots, where necessary.
+Please write us an email to support@proyeksiapp.com to get help with your ProyeksiApp Enterprise cloud edition. Include a detailed description as well as screen-shots, where necessary.
 
 ## Support ticket (only for Premier Support and Corporate Support)
 
@@ -20,7 +20,7 @@ You can create a support ticket on our community platform. Please contact us for
 
 ## Contact us
 
-If you have more questions, please [contact us](https://www.openproject.org/contact-us/).
+If you have more questions, please [contact us](https://www.proyeksi.id/contact-us/).
 
 
 

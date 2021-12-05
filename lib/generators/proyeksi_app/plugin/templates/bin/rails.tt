@@ -12,7 +12,7 @@ require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 ##
 # This is not ideal but better than nothing.
 if ENV['PROYEKSIAPP_ROOT']
-  # /Users/mkahl/dev/openproject/release/lib
+  # /Users/mkahl/dev/proyeksiapp/release/lib
   path = Pathname(ENV["PROYEKSIAPP_ROOT"]).join("lib")
   $LOAD_PATH.unshift(path.to_s)
 else

@@ -154,7 +154,7 @@ export class WorkPackageCreateComponent extends UntilDestroyedMixin implements O
         }
       })
       .catch((error:unknown) => {
-        if (error instanceof HalError && error.errorIdentifier === 'urn:proyeksi-app:api:v3:errors:MissingPermission') {
+        if (error instanceof HalError && error.errorIdentifier === 'urn:proyeksiapp-org:api:v3:errors:MissingPermission') {
           this.apiV3Service.root.get().subscribe((root:RootResource) => {
             if (!root.user) {
               // Not logged in

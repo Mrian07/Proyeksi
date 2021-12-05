@@ -9,7 +9,7 @@ ProyeksiApp will be installed with a PostgreSQL database.
 
 **Please note**: This guide is NOT suitable for a production setup, but only for developing with it!
 
-If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards).
+If you find any bugs or you have any recommendations for improving this tutorial, please, feel free to send a pull request or comment in the [ProyeksiApp forums](https://community.proyeksi.id/projects/proyeksiapp/boards).
 
 # Prepare your environment
 
@@ -22,7 +22,7 @@ sudo apt-get install git curl build-essential zlib1g-dev libyaml-dev libssl-dev 
 
 ## Install Ruby
 
-Use [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build#readme) to install Ruby. We always require the latest ruby versions, and you can check which version is required by [checking the Gemfile](https://github.com/opf/openproject/blob/dev/Gemfile#L31) for the `ruby "~> X.Y"` statement. At the time of writing, this version is "2.7"
+Use [rbenv](https://github.com/rbenv/rbenv) and [ruby-build](https://github.com/rbenv/ruby-build#readme) to install Ruby. We always require the latest ruby versions, and you can check which version is required by [checking the Gemfile](https://github.com/opf/proyeksiapp/blob/dev/Gemfile#L31) for the `ruby "~> X.Y"` statement. At the time of writing, this version is "2.7"
 
 ### Install rbenv and ruby-build
 
@@ -56,7 +56,7 @@ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 With both installed, we can now install the actual ruby version 2.7. You can check available ruby versions with `rbenv install --list`.
 At the time of this writing, the latest stable version is `2.7.5`, which we also require.
 
-We suggest you install the version we require in the [Gemfile](https://github.com/opf/openproject/blob/dev/Gemfile). Search for the `ruby '~> X.Y.Z'` line
+We suggest you install the version we require in the [Gemfile](https://github.com/opf/proyeksiapp/blob/dev/Gemfile). Search for the `ruby '~> X.Y.Z'` line
 and install that version.
 
 ```bash
@@ -91,15 +91,15 @@ Create the ProyeksiApp database user and accompanied database.
 
 ```bash
 sudo su postgres
-[postgres@ubuntu]# createuser -d -P openproject
+[postgres@ubuntu]# createuser -d -P proyeksiapp
 ```
-You will be prompted for a password, for the remainder of these instructions, we assume its `openproject-dev-password`.
+You will be prompted for a password, for the remainder of these instructions, we assume its `proyeksiapp-dev-password`.
 
-Now, create the database `openproject_dev` and `openproject_test` owned by the previously created user.
+Now, create the database `proyeksiapp_dev` and `proyeksiapp_test` owned by the previously created user.
 
 ```bash
-[postgres@ubuntu]# createdb -O openproject openproject_dev
-[postgres@ubuntu]# createdb -O openproject openproject_test
+[postgres@ubuntu]# createdb -O proyeksiapp proyeksiapp_dev
+[postgres@ubuntu]# createdb -O proyeksiapp proyeksiapp_test
 
 # Exit the shell as postgres
 [postgres@ubuntu]# exit
@@ -172,13 +172,13 @@ npm --version
 In order to create a pull request to the core ProyeksiApp repository, you will want to fork it to your own GitHub account.
 This allows you to create branches and push changes and finally opening a pull request for us to review.
 
-To do that, go to https://github.com/opf/openproject and press "Fork" on the upper right corner.
+To do that, go to https://github.com/opf/proyeksiapp and press "Fork" on the upper right corner.
 
 ```bash
 # Download the repository
 # If you want to create a pull request, replace the URL with your own fork as described above
-git clone https://github.com/opf/openproject.git
-cd openproject
+git clone https://github.com/opf/proyeksiapp.git
+cd proyeksiapp
 ```
 
 Note that we have checked out the `dev` branch of the ProyeksiApp repository. Development in ProyeksiApp happens in the `dev` branch (there is no `master` branch).
@@ -186,7 +186,7 @@ So, if you want to develop a feature, create a feature branch from a current `de
 
 ## Configure ProyeksiApp
 
-Create and configure the database configuration file in `config/database.yml` (relative to the openproject-directory.
+Create and configure the database configuration file in `config/database.yml` (relative to the proyeksiapp-directory.
 
 ```bash
 [dev@debian]# vim config/database.yml
@@ -200,16 +200,16 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: openproject
-  password: openproject-dev-password
+  username: proyeksiapp
+  password: proyeksiapp-dev-password
 
 development:
   <<: *default
-  database: openproject_dev
+  database: proyeksiapp_dev
 
 test:
   <<: *default
-  database: openproject_test
+  database: proyeksiapp_test
 ```
 
 ## Finish the Installation of ProyeksiApp
@@ -282,7 +282,7 @@ You can then access the application either through `localhost:3000` (Rails serve
 ## Start Coding
 
 Please have a look at [our development guidelines](../code-review-guidelines/) for tips and guides on how to start coding. We have advice on how to get your changes back into the ProyeksiApp core as smooth as possible.
-Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/openproject/tree/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
+Also, take a look at the `doc` directory in our sources, especially the [how to run tests](https://github.com/opf/proyeksiapp/tree/dev/docs/development/running-tests) documentation (we like to have automated tests for every new developed feature).
 
 ## Troubleshooting
 
@@ -292,8 +292,8 @@ If an error occurs, it should be logged there (as well as in the output to STDOU
 
 ## Questions, Comments, and Feedback
 
-If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.proyeksi.id [forum](https://community.proyeksi.id/projects/proyeksiapp/boards/9).
+[Follow ProyeksiApp on twitter](https://twitter.com/proyeksiapp), and follow [the news](https://www.proyeksi.id/blog) to stay up to date.
 
 [foreman-defaults]:http://ddollar.github.io/foreman/#DEFAULT-OPTIONS
 [foreman-env]:http://ddollar.github.io/foreman/#ENVIRONMENT

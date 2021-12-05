@@ -12,7 +12,7 @@ You can **create additional custom fields for different sections**, e.g. work pa
 
 Custom fields enable to configure your ProyeksiApp exactly to your needs, i.e. to adapt work package forms to your company specific requirements.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Forms-and-Custom-Fields-1.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Add a new custom field
 
@@ -69,7 +69,7 @@ With these additional settings, you have absolute freedom which custom fields ar
 ## Create a multi-select custom field (Premium feature)
 
 For work package custom fields of type **List** and **User** you may also select **multi-select custom fields** to select more than one value at once.
-Please note that this feature is only available in the [Enterprise Edition](https://www.openproject.org/enterprise-edition/) and [Cloud Edition](https://www.openproject.org/hosting/).
+Please note that this feature is only available in the [Enterprise Edition](https://www.proyeksi.id/enterprise-edition/) and [Cloud Edition](https://www.proyeksi.id/hosting/).
 
 To create a multi-select custom field follow the same steps as you would when [creating a standard custom field](#add-a-new-custom-field). Select format *List* or format *User* and check the option *Allow multi-select*.
 

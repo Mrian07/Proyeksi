@@ -76,7 +76,7 @@ hu:
     technical_warning_html: |
       Ehhez az LDAP űrlaphoz az Ön LDAP / Acitive Directory beállításainak ismerete szükséges.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Részletes útmutatásért kérjük olvassa el a dokumentációt</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Részletes útmutatásért kérjük olvassa el a dokumentációt</a>.
     attribute_texts:
       name: Az LDAP kapcsolat tetszőleges neve
       host: LDAP Kiszolgáló neve vagy IP címe
@@ -86,7 +86,7 @@ hu:
       system_user_dn_html: |
         Írja be az írásvédett hozzáféréshez használt rendszerfelhasználó DN-jét.
         <br/>
-        Példa: uid = openproject, ou = rendszer, dc = példa, dc = com
+        Példa: uid = proyeksiapp, ou = rendszer, dc = példa, dc = com
       system_user_password: Adja meg a rendszergazda bind jelszavát
       base_dn: |
         Írja be annak az alrésznek az alap DN-jét az LDAP-ban, amelyben az ProyeksiApp felhasználókat és csoportokat szeretne keresni.
@@ -1208,7 +1208,7 @@ hu:
   error_work_package_done_ratios_not_updated: "A feladatcsoport a megtett arányokat nem frissítette."
   error_work_package_not_found_in_project: "A feladatcsoport nem található, vagy nem tartozik ehhez a projekthez"
   error_must_be_project_member: "projekt tagnak kell lennie"
-  error_migrations_are_pending: "Az Openproject adatbázisainak költöztetése függőben van. Valószínűleg elmulasztotta lefuttatni az átvitelt a legutóbbi frissítéskor. Kérjük, a megfelelő frissítéshez kövesse a frissítési útmutatót."
+  error_migrations_are_pending: "Az Proyeksiapp adatbázisainak költöztetése függőben van. Valószínűleg elmulasztotta lefuttatni az átvitelt a legutóbbi frissítéskor. Kérjük, a megfelelő frissítéshez kövesse a frissítési útmutatót."
   error_migrations_visit_upgrade_guides: "Kérjük, látogassa meg frissítési útmutatónkat"
   error_no_default_work_package_status: "Nincs alapértelmezett feladatcsoport állapot meghatározva. Kérjük, ellenőrizze a konfigurációt (\"Adminisztráció - feladatcsoport állapotok\")."
   error_no_type_in_project: "Nincs típus hozzárendelve ehhez a projekthez. Kérjük, ellenőrizze a projekt beállításait."
@@ -1658,7 +1658,7 @@ hu:
   label_open_menu: "Menü megnyitása"
   label_open_work_packages: "nyitott"
   label_open_work_packages_plural: "nyitott"
-  label_openproject_website: "ProyeksiApp honlap"
+  label_proyeksiapp_website: "ProyeksiApp honlap"
   label_optional_description: "Leírás"
   label_options: "Beállítások"
   label_other: "Egyéb"
@@ -2809,7 +2809,7 @@ hu:
   warning_user_limit_reached: >
     Elérte a felhasználói korlátot. Nem aktiválhat további felhasználókat. Kérjük, <a href="%{upgrade_url}"> frissítse a licencét </a>, vagy blokkolja a további tagokat a felhasználók engedélyezéséhez.
   warning_user_limit_reached_instructions: >
-    Elérte a felhasználói limitet (%{current}/%{max} aktív felhasználók). Kérjük, forduljon a sales@openproject.com címhez az Enterprise Edition licenc frissítésért és további felhasználók hozzáadásához.
+    Elérte a felhasználói limitet (%{current}/%{max} aktív felhasználók). Kérjük, forduljon a sales@proyeksiapp.com címhez az Enterprise Edition licenc frissítésért és további felhasználók hozzáadásához.
   warning_protocol_mismatch_html: >
 
   warning_bar:

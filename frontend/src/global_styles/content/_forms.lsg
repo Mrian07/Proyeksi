@@ -63,7 +63,7 @@
 <form class="form danger-zone">
   <section class="form--section">
     <h3 class="form--section-title">
-      Delete account <em>foo.bar@openproject.org</em>
+      Delete account <em>foo.bar@proyeksiapp.org</em>
     </h3>
     <p>
       Your account will be deleted from the system. Therefore, you will no longer be able to log in with your current credentials. If you choose to become a user of this application again, you can do so by using the means this application grants.
@@ -76,7 +76,7 @@
       <span>Deleting your account is an irreversible action.</span>
     </p>
     <p>
-      Enter your login <em class="danger-zone--expected-value">foo.bar@openproject.org</em> to verify the deletion.
+      Enter your login <em class="danger-zone--expected-value">foo.bar@proyeksiapp.org</em> to verify the deletion.
     </p>
     <div class="danger-zone--verification">
       <input type="text"></input>

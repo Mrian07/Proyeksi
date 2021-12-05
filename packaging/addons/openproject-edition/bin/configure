@@ -38,23 +38,23 @@ existing_installation() {
 }
 
 never_answered_before() {
-	[ "$(wiz_get "openproject/edition")" == "" ];
+	[ "$(wiz_get "proyeksiapp/edition")" == "" ];
 }
 
 input_start() {
 	# on first run of the wizard, set default edition if existing ProyeksiApp installation
 	if never_answered_before && existing_installation ; then
-		wiz_set "openproject/edition" "default"
+		wiz_set "proyeksiapp/edition" "default"
 		STATE="done"
 	elif supported_distribution ; then
-		wiz_put "openproject/edition"
+		wiz_put "proyeksiapp/edition"
 		if wiz_ask ; then
 			STATE="done"
 		else
 			STATE="cancel"
 		fi
 	else
-		wiz_set "openproject/edition" "default"
+		wiz_set "proyeksiapp/edition" "default"
 		STATE="done"
 	fi
 }

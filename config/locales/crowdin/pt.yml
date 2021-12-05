@@ -76,7 +76,7 @@ pt:
     technical_warning_html: |
       Este formulário LDAP requer conhecimento técnico da sua configuração LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Por favor, visite nossa documentação para instruções detalhadas</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Por favor, visite nossa documentação para instruções detalhadas</a>.
     attribute_texts:
       name: Nome arbitrário da conexão LDAP
       host: Nome ou endereço IP do host LDAP
@@ -86,7 +86,7 @@ pt:
       system_user_dn_html: |
         Digite o DN do usuário do sistema usado para acesso somente leitura.
         <br/>
-        Exemplo: uid=openproject,ou=system,dc=example,dc=com
+        Exemplo: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Digite a senha de vinculação do usuário do sistema
       base_dn: |
         Digite a Base DN da subárvore no LDAP que você quer que o ProyeksiApp procure por usuários e grupos.
@@ -1652,7 +1652,7 @@ pt:
   label_open_menu: "Abrir menu"
   label_open_work_packages: "aberto"
   label_open_work_packages_plural: "aberto"
-  label_openproject_website: "Site do ProyeksiApp"
+  label_proyeksiapp_website: "Site do ProyeksiApp"
   label_optional_description: "Descrição"
   label_options: "Opções"
   label_other: "Outro"
@@ -2796,7 +2796,7 @@ pt:
   warning_user_limit_reached: >
     Atingido o limite de usuários. Você não pode ativar mais nenhum usuário. <a href="%{upgrade_url}">Atualize seus plano</a> ou bloqueie a adição de novos usuários.
   warning_user_limit_reached_instructions: >
-    Você atingiu seu limite de usuários (%{current}/%{max} usuários ativos). Entre em contato com sales@openproject.com para atualizar seu plano Enterprise Edition e adicionar novos usuários.
+    Você atingiu seu limite de usuários (%{current}/%{max} usuários ativos). Entre em contato com sales@proyeksiapp.com para atualizar seu plano Enterprise Edition e adicionar novos usuários.
   warning_protocol_mismatch_html: >
 
   warning_bar:

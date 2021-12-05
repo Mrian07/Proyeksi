@@ -11,7 +11,7 @@
 
 The release of ProyeksiApp 3.0.2 was postponed due to a critical
 security issue, which was fixed in Ruby on Rails. So we skipped 3.0.2
-and bring you [3.0.3](https://github.com/opf/openproject/tree/v3.0.3)
+and bring you [3.0.3](https://github.com/opf/proyeksiapp/tree/v3.0.3)
 with this issue resolved.
 
 If you want to know more about the vulnerability check out Rafael
@@ -25,8 +25,8 @@ attachments.
 
 In conclusion it is strongly recommended to upgrade your 3.0 based
 deployments to version 3.0.3 as soon as possible. The [ProyeksiApp 3.0.3
-tag](https://github.com/opf/openproject/tree/v3.0.3) and
-the [`dev`](https://github.com/opf/openproject/tree/dev) branches both
+tag](https://github.com/opf/proyeksiapp/tree/v3.0.3) and
+the [`dev`](https://github.com/opf/proyeksiapp/tree/dev) branches both
 include the security fixes.
 
  
@@ -51,10 +51,10 @@ session data. Even though the feature has always been inside Rails’
 source code it was difficult to configure it in ProyeksiApp. You can now
 use your `configuration.yml` as well as the respective environment
 variable to configure the session store. See
-[`config/configuration.yml.example`](https://github.com/opf/openproject/blob/dev/config/configuration.yml.example#L149)
+[`config/configuration.yml.example`](https://github.com/opf/proyeksiapp/blob/dev/config/configuration.yml.example#L149)
 if you want to know how to do that exactly.
 
 And here is the full changelog
-[3.0.3](https://community.openproject.com/versions/313)
+[3.0.3](https://community.proyeksiapp.com/versions/313)
 
 

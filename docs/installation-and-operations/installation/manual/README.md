@@ -26,7 +26,7 @@ Note: We have highlighted commands to execute like this
 ```
 
 The `user` is the operating system user the command is executed with.
-In our case it will be `root` for most of the time or `openproject`.
+In our case it will be `root` for most of the time or `proyeksiapp`.
 
 If you find any bugs or you have any recommendations for improving this
 tutorial, please, feel free to create a pull request against this guide.
@@ -34,9 +34,9 @@ tutorial, please, feel free to create a pull request against this guide.
 ## Create a dedicated ProyeksiApp user
 
 ```bash
-sudo groupadd openproject
-sudo useradd --create-home --gid openproject openproject
-sudo passwd openproject #(enter desired password)
+sudo groupadd proyeksiapp
+sudo useradd --create-home --gid proyeksiapp proyeksiapp
+sudo passwd proyeksiapp #(enter desired password)
 ```
 
 ## Install the required system dependencies
@@ -73,16 +73,16 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the database user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that this password is 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the database user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that this password is 'proyeksiapp'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
-[postgres@host] createuser -W openproject
+[postgres@host] createuser -W proyeksiapp
 ```
 
 Next, create the database owned by the new user
 
 ```bash
-[postgres@host] createdb -O openproject openproject
+[postgres@host] createdb -O proyeksiapp proyeksiapp
 ```
 
 Lastly, revert to the previous system user:
@@ -99,16 +99,16 @@ use [rbenv](http://rbenv.org/). Please be aware that the actual installation of 
 time to finish.
 
 ```bash
-[root@host] su openproject --login
-[openproject@host] git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-[openproject@host] echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
-[openproject@host] echo 'eval "$(rbenv init -)"' >> ~/.profile
-[openproject@host] source ~/.profile
-[openproject@host] git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+[root@host] su proyeksiapp --login
+[proyeksiapp@host] git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+[proyeksiapp@host] echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
+[proyeksiapp@host] echo 'eval "$(rbenv init -)"' >> ~/.profile
+[proyeksiapp@host] source ~/.profile
+[proyeksiapp@host] git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-[openproject@host] rbenv install 2.7.5
-[openproject@host] rbenv rehash
-[openproject@host] rbenv global 2.7.5
+[proyeksiapp@host] rbenv install 2.7.5
+[proyeksiapp@host] rbenv rehash
+[proyeksiapp@host] rbenv global 2.7.5
 ```
 
 To check our Ruby installation we run `ruby --version`. It should output
@@ -122,21 +122,21 @@ ruby 2.7.5p203 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
 
 The are several possibilities to install Node on your machine. We will
 use [nodenv](https://github.com/OiNutter/nodenv#installation). Please
-run `su openproject --login` if you are the `root` user. If you are
-already the `openproject` user you can skip this command. Please be
+run `su proyeksiapp --login` if you are the `root` user. If you are
+already the `proyeksiapp` user you can skip this command. Please be
 aware that the actual installation of a specific node version takes some
 time to finish.
 
 ```bash
-[openproject@host] git clone https://github.com/OiNutter/nodenv.git ~/.nodenv
-[openproject@host] echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.profile
-[openproject@host] echo 'eval "$(nodenv init -)"' >> ~/.profile
-[openproject@host] source ~/.profile
-[openproject@host] git clone git://github.com/OiNutter/node-build.git ~/.nodenv/plugins/node-build
+[proyeksiapp@host] git clone https://github.com/OiNutter/nodenv.git ~/.nodenv
+[proyeksiapp@host] echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.profile
+[proyeksiapp@host] echo 'eval "$(nodenv init -)"' >> ~/.profile
+[proyeksiapp@host] source ~/.profile
+[proyeksiapp@host] git clone git://github.com/OiNutter/node-build.git ~/.nodenv/plugins/node-build
 
-[openproject@host] nodenv install 14.16.0
-[openproject@host] nodenv rehash
-[openproject@host] nodenv global 14.16.0
+[proyeksiapp@host] nodenv install 14.16.0
+[proyeksiapp@host] nodenv rehash
+[proyeksiapp@host] nodenv global 14.16.0
 ```
 
 To check our Node installation we run `node --version`. It should output something very similar to:
@@ -148,28 +148,28 @@ v14.16.0
 ## Installation of ProyeksiApp
 
 We will install the ProyeksiApp Community Edition. It contains the recommended set of plugins for use
-with ProyeksiApp. For more information, see https://github.com/opf/openproject.
+with ProyeksiApp. For more information, see https://github.com/opf/proyeksiapp.
 
 
 ```bash
-[openproject@host] cd ~
-[openproject@host] git clone https://github.com/opf/openproject.git --branch stable/9 --depth 1
-[openproject@host] cd openproject
+[proyeksiapp@host] cd ~
+[proyeksiapp@host] git clone https://github.com/opf/proyeksiapp.git --branch stable/9 --depth 1
+[proyeksiapp@host] cd proyeksiapp
 # Ensure rubygems is up-to-date for bundler 2
-[openproject@host] gem update --system
-[openproject@host] gem install bundler
+[proyeksiapp@host] gem update --system
+[proyeksiapp@host] gem install bundler
 # Replace mysql with postgresql if you had to install MySQL
-[openproject@host] bundle install --deployment --without mysql2 sqlite development test therubyracer docker
-[openproject@host] npm install
+[proyeksiapp@host] bundle install --deployment --without mysql2 sqlite development test therubyracer docker
+[proyeksiapp@host] npm install
 ```
 
 ## Configure ProyeksiApp
 
 Create and configure the database configuration file in config/database.yml
-(relative to the openproject directory).
+(relative to the proyeksiapp directory).
 
 ```bash
-[openproject@host] cp config/database.yml.example config/database.yml
+[proyeksiapp@host] cp config/database.yml.example config/database.yml
 ```
 
 Now we edit the `config/database.yml` file and insert our database credentials for PostgreSQL.
@@ -180,16 +180,16 @@ you used above: user, database and password):
 production:
   adapter: postgresql
   encoding: unicode
-  database: openproject
+  database: proyeksiapp
   pool: 5
-  username: openproject
-  password: openproject
+  username: proyeksiapp
+  password: proyeksiapp
 ```
 
 Next we configure email notifications (this example uses a gmail account) by creating the `configuration.yml` in config directory.
 
 ```bash
-[openproject@host] cp config/configuration.yml.example config/configuration.yml
+[proyeksiapp@host] cp config/configuration.yml.example config/configuration.yml
 ```
 
 Now we edit the `configuration.yml` file to suit our needs.
@@ -223,16 +223,16 @@ prevents you from such errors.
 ## Finish the installation of ProyeksiApp
 
 ```bash
-[openproject@host] cd ~/openproject
-[openproject@host] RAILS_ENV="production" ./bin/rake db:create
-[openproject@host] RAILS_ENV="production" ./bin/rake db:migrate
-[openproject@host] RAILS_ENV="production" ./bin/rake db:seed
-[openproject@host] RAILS_ENV="production" ./bin/rake assets:precompile
+[proyeksiapp@host] cd ~/proyeksiapp
+[proyeksiapp@host] RAILS_ENV="production" ./bin/rake db:create
+[proyeksiapp@host] RAILS_ENV="production" ./bin/rake db:migrate
+[proyeksiapp@host] RAILS_ENV="production" ./bin/rake db:seed
+[proyeksiapp@host] RAILS_ENV="production" ./bin/rake assets:precompile
 ```
 
 **NOTE:** When not specified differently, the default data loaded via db:seed will have an english localization. You can choose to seed in a different language by specifying the language via the `LOCALE` environment variable on the call to `db:seed`. E.g.
 ```bash
-[openproject@all] RAILS_ENV="production" LOCALE=fr ./bin/rake db:seed
+[proyeksiapp@all] RAILS_ENV="production" LOCALE=fr ./bin/rake db:seed
 ```
 will seed the database in the french language.
 
@@ -242,17 +242,17 @@ You need to generate a secret key base for the production environment with `./bi
 In this installation guide, we will use the local `.profile` of the ProyeksiApp user. You may alternatively set the environment variable in `/etc/environment` or pass it to the server upon start manually in `/etc/apache2/envvars`.
 
 ```bash
-[openproject@host] echo "export SECRET_KEY_BASE=$(./bin/rake secret)" >> ~/.profile
-[openproject@host] source ~/.profile
+[proyeksiapp@host] echo "export SECRET_KEY_BASE=$(./bin/rake secret)" >> ~/.profile
+[proyeksiapp@host] source ~/.profile
 ```
 
 ## Serve ProyeksiApp with Apache and Passenger
 
-First, we exit the current bash session with the openproject user,
+First, we exit the current bash session with the proyeksiapp user,
 so that we are again in a root shell.
 
 ```bash
-[openproject@ubuntu] exit
+[proyeksiapp@ubuntu] exit
 ```
 
 Then, we prepare apache and passenger:
@@ -261,16 +261,16 @@ Then, we prepare apache and passenger:
 [root@host] apt-get install -y apache2 libcurl4-gnutls-dev      \
                                apache2-dev libapr1-dev \
                                libaprutil1-dev
-[root@ubuntu] chmod o+x "/home/openproject"
+[root@ubuntu] chmod o+x "/home/proyeksiapp"
 ```
 
 Now, the Passenger gem is installed and integrated into apache.
 
 ```bash
-[root@ubuntu] su openproject --login
-[openproject@ubuntu] cd ~/openproject
-[openproject@ubuntu] gem install passenger
-[openproject@ubuntu] passenger-install-apache2-module
+[root@ubuntu] su proyeksiapp --login
+[proyeksiapp@ubuntu] cd ~/proyeksiapp
+[proyeksiapp@ubuntu] gem install passenger
+[proyeksiapp@ubuntu] passenger-install-apache2-module
 ```
 
 If you are running on a Virtual Private Server, you need to make sure you have at least 1024mb of RAM before running the `passenger-install-apache2-module`.
@@ -283,7 +283,7 @@ The passenger installer tells us to edit the apache config files.
 To do this, continue as the root user:
 
 ```bash
-[openproject@host] exit
+[proyeksiapp@host] exit
 ```
 
 As told by the installer, create the file /etc/apache2/mods-available/passenger.load and add the following line.
@@ -291,25 +291,25 @@ But before copy&pasting the following lines, check if the content (especially th
 
 
 ```apache
-LoadModule passenger_module /home/openproject/.rbenv/versions/2.1.6/lib/ruby/gems/2.1.0/gems/passenger-5.0.14/buildout/apache2/mod_passenger.so
+LoadModule passenger_module /home/proyeksiapp/.rbenv/versions/2.1.6/lib/ruby/gems/2.1.0/gems/passenger-5.0.14/buildout/apache2/mod_passenger.so
 ```
 
 Then create the file /etc/apache2/mods-available/passenger.conf with the following contents (again, take care of the version numbers!):
 
 ```apache
    <IfModule mod_passenger.c>
-     PassengerRoot /home/openproject/.rbenv/versions/2.1.6/lib/ruby/gems/2.1.0/gems/passenger-5.0.14
-     PassengerDefaultRuby /home/openproject/.rbenv/versions/2.1.6/bin/ruby
+     PassengerRoot /home/proyeksiapp/.rbenv/versions/2.1.6/lib/ruby/gems/2.1.0/gems/passenger-5.0.14
+     PassengerDefaultRuby /home/proyeksiapp/.rbenv/versions/2.1.6/bin/ruby
    </IfModule>
 ```
 
 Then run:
 
 ```bash
-[root@openproject] a2enmod passenger
+[root@proyeksiapp] a2enmod passenger
 ```
 
-As the root user, create the file /etc/apache2/sites-available/openproject.conf with the following contents:
+As the root user, create the file /etc/apache2/sites-available/proyeksiapp.conf with the following contents:
 
 ```apache
 SetEnv EXECJS_RUNTIME Disabled
@@ -317,8 +317,8 @@ SetEnv EXECJS_RUNTIME Disabled
 <VirtualHost *:80>
    ServerName yourdomain.com
    # !!! Be sure to point DocumentRoot to 'public'!
-   DocumentRoot /home/openproject/openproject/public
-   <Directory /home/openproject/openproject/public>
+   DocumentRoot /home/proyeksiapp/proyeksiapp/public
+   <Directory /home/proyeksiapp/proyeksiapp/public>
       # This relaxes Apache security settings.
       AllowOverride all
       # MultiViews must be turned off.
@@ -335,11 +335,11 @@ SetEnv EXECJS_RUNTIME Disabled
 </VirtualHost>
 ```
 
-Let's enable our new openproject site (and disable the default site, if necessary)
+Let's enable our new proyeksiapp site (and disable the default site, if necessary)
 
 ```bash
 [root@host] a2dissite 000-default
-[root@host] a2ensite openproject
+[root@host] a2ensite proyeksiapp
 ```
 
 Now, we (re-)start Apache:
@@ -360,14 +360,14 @@ Please, change the password on the first login. Also, we highly recommend to con
 ProyeksiApp sends (some) mails asynchronously by using background jobs. All such jobs are collected in a queue, so that a separate process can work on them. This means that we have to start the background worker. To automate this, we put the background worker into a cronjob.
 
 ```bash
-[root@all] su - openproject -c "bash -l"
-[openproject@all] crontab -e
+[root@all] su - proyeksiapp -c "bash -l"
+[proyeksiapp@all] crontab -e
 ```
 
 Now, the crontab file opens in the standard editor. Add the following entry to the file:
 
 ```cron
-*/1 * * * * cd /home/openproject/openproject; /home/openproject/.rvm/gems/ruby-2.1.5/wrappers/rake jobs:workoff
+*/1 * * * * cd /home/proyeksiapp/proyeksiapp; /home/proyeksiapp/.rvm/gems/ruby-2.1.5/wrappers/rake jobs:workoff
 ```
 
 This will start the worker job every minute.
@@ -381,35 +381,35 @@ Your ProyeksiApp installation is ready to run. Please refer to the [Operation gu
 This step is optional.
 
 ProyeksiApp can be extended by various plug-ins, which extend ProyeksiApp's capabilities.
-For general information and a list of all plug-ins known to us, refer to to the [plug-in page](https://community.openproject.org/projects/openproject/wiki/ProyeksiApp_Plug-Ins).
+For general information and a list of all plug-ins known to us, refer to to the [plug-in page](https://community.proyeksi.id/projects/proyeksiapp/wiki/ProyeksiApp_Plug-Ins).
 
 ProyeksiApp plug-ins are separated in ruby gems. You can install them by listing them in a file called `Gemfile.plugins`. An example `Gemfile.plugins` file looks like this:
 
 ```ruby
 # Required by backlogs
-gem "openproject-meeting", git: "https://github.com/finnlabs/openproject-meeting.git", :tag => "v4.2.2"
+gem "proyeksiapp-meeting", git: "https://github.com/finnlabs/proyeksiapp-meeting.git", :tag => "v4.2.2"
 ```
 
 If you have modified the `Gemfile.plugin` file, always repeat the following steps of the ProyeksiApp installation:
 
 ```bash
-[openproject@all] cd ~/openproject
-[openproject@all] bundle install
-[openproject@all] npm install
-[openproject@all] RAILS_ENV="production" ./bin/rake db:migrate
-[openproject@all] RAILS_ENV="production" ./bin/rake db:seed
-[openproject@all] RAILS_ENV="production" ./bin/rake assets:precompile
+[proyeksiapp@all] cd ~/proyeksiapp
+[proyeksiapp@all] bundle install
+[proyeksiapp@all] npm install
+[proyeksiapp@all] RAILS_ENV="production" ./bin/rake db:migrate
+[proyeksiapp@all] RAILS_ENV="production" ./bin/rake db:seed
+[proyeksiapp@all] RAILS_ENV="production" ./bin/rake assets:precompile
 ```
 
 Restart the ProyeksiApp server afterwards:
 
 ```bash
-[openproject@all] touch ~/openproject/tmp/restart.txt
+[proyeksiapp@all] touch ~/proyeksiapp/tmp/restart.txt
 ```
 
 The next web-request to the server will take longer (as the application is restarted). All subsequent request should be as fast as always.
 
-We encourage you to extend ProyeksiApp yourself by writing a plug-in. Please, read the [plugin-contributions](https://community.openproject.org/projects/openproject/wiki/Developing_Plugins) guide for more information.
+We encourage you to extend ProyeksiApp yourself by writing a plug-in. Please, read the [plugin-contributions](https://community.proyeksi.id/projects/proyeksiapp/wiki/Developing_Plugins) guide for more information.
 
 ## Troubleshooting
 
@@ -417,14 +417,14 @@ You can find the error logs for apache here:
 <pre>/var/log/apache2/error.log</pre>
 
 The ProyeksiApp logfile can be found here:
-<pre>/home/openproject/openproject/log/production.log</pre>
+<pre>/home/proyeksiapp/proyeksiapp/log/production.log</pre>
 
 If an error occurs, it should be logged there.
 
 If you need to restart the server (for example after a configuration change), do
 
 ```bash
-[openproject@all] touch ~/openproject/tmp/restart.txt
+[proyeksiapp@all] touch ~/proyeksiapp/tmp/restart.txt
 ```
 
 ## Frequently asked questions (FAQ)
@@ -435,7 +435,7 @@ If you need to restart the server (for example after a configuration change), do
   If you cannot login as the admin user, make sure that you have executed the `db:seed` command.
 
   ```bash
-  [openproject@all] RAILS_ENV="production" ./bin/rake db:seed
+  [proyeksiapp@all] RAILS_ENV="production" ./bin/rake db:seed
   ```
 
 * **When accessing ProyeksiApp, I get an error page. How do I find out what went wrong?**
@@ -443,11 +443,11 @@ If you need to restart the server (for example after a configuration change), do
   Things can go wrong on different levels. You can find the apache error logs here:
   <pre>/var/log/apache2/error.log</pre>
   The ProyeksiApp log can be found here:
-  <pre>/home/openproject/openproject/log/production.log</pre>
+  <pre>/home/proyeksiapp/proyeksiapp/log/production.log</pre>
 
 * **I cannot solve an error, not even with the log files. How do I get help?**
 
-  You can find help in [the ProyeksiApp forums](https://community.openproject.org/projects/openproject/boards). Please tell us, if possible, what you have done (e.g. which guide you have used to install ProyeksiApp), how to reproduce the error, and provide the appropriate error logs.
+  You can find help in [the ProyeksiApp forums](https://community.proyeksi.id/projects/proyeksiapp/boards). Please tell us, if possible, what you have done (e.g. which guide you have used to install ProyeksiApp), how to reproduce the error, and provide the appropriate error logs.
   It often helps to have a look at the already answered questions, or to search the Internet for the error. Most likely someone else has already solved the same problem.
 
 * **I get errors, since I have installed an ProyeksiApp plug-in**
@@ -457,5 +457,5 @@ If you need to restart the server (for example after a configuration change), do
 
 ## Questions, comments, and feedback
 
-If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow the news on [openproject.org](http://openproject.org) to stay up to date.
+If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community [forum](https://community.proyeksi.id/projects/proyeksiapp/boards/9).
+[Follow ProyeksiApp on twitter](https://twitter.com/proyeksiapp), and follow the news on [proyeksi.id](http://proyeksi.id) to stay up to date.

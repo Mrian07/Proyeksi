@@ -76,7 +76,7 @@ vi:
     technical_warning_html: |
       Biểu mẫu LDAP này yêu cầu kiến thức kỹ thuật về thiết lập LDAP / Active Directory của bạn.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Vui lòng truy cập tài liệu của chúng tôi để được hướng dẫn chi tiết</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Vui lòng truy cập tài liệu của chúng tôi để được hướng dẫn chi tiết</a>.
     attribute_texts:
       name: Tên tùy ý của kết nối LDAP
       host: Tên máy chủ LDAP hoặc địa chỉ IP
@@ -88,7 +88,7 @@ vi:
         58/5000
         Nhập DN của người dùng hệ thống được sử dụng để truy cập chỉ đọc.
         <br/>
-        Example: uid=openproject,ou=system,dc=example,dc=com
+        Example: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Nhập mật khẩu liên kết của người dùng hệ thống
       base_dn: |
         Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
@@ -1638,7 +1638,7 @@ vi:
   label_open_menu: "Mở trình đơn"
   label_open_work_packages: "mở"
   label_open_work_packages_plural: "mở"
-  label_openproject_website: "Trang web ProyeksiApp"
+  label_proyeksiapp_website: "Trang web ProyeksiApp"
   label_optional_description: "Mô tả"
   label_options: "Tuỳ chọn"
   label_other: "Khác"
@@ -2779,7 +2779,7 @@ vi:
   warning_user_limit_reached: >
     User limit reached. You cannot activate any more users. Please <a href="%{upgrade_url}">upgrade your plan</a> or block members to allow for additional users.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise Edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@proyeksiapp.com to upgrade your Enterprise Edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:

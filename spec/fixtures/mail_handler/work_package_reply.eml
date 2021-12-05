@@ -1,8 +1,8 @@
 Date: Tue, 16 Mar 2021 15:17:04 +0100
-To: notifications@openproject.com
+To: notifications@proyeksiapp.com
 From: user@example.org
-Message-ID: <openproject.work_package-70917-34540.20210302144105@openproject.com>
-References: <openproject.work_package-70917-34540.20210215121742@openproject.com>
+Message-ID: <proyeksiapp.work_package-70917-34540.20210302144105@proyeksiapp.com>
+References: <proyeksiapp.work_package-70917-34540.20210215121742@proyeksiapp.com>
 Subject: test - new Task #34540: asdf
 Mime-Version: 1.0
 Content-Type: multipart/alternative;
@@ -56,7 +56,7 @@ Prio board:
 
 --
 You have received this notification because you have either subscribed to it, or are involved in it.
-To change your notification preferences, please click here: https://community.openproject.org/my/mail_notifications
+To change your notification preferences, please click here: https://community.proyeksi.id/my/mail_notifications
 
 ----==_mimepart_6050bdd0cb97_2257939a8755e5
 Content-Type: text/html;
@@ -101,7 +101,7 @@ Content-Transfer-Encoding: 7bit
 
       <hr />
       <span class="footer"><p class="op-uc-p">You have received this notification because you have either subscribed to it, or are involved in it.<br>
-To change your notification preferences, please click here: <a href="https://community.openproject.org/my/mail_notifications" class="op-uc-link">https://community.openproject.org/my/mail_notifications</a></p></span>
+To change your notification preferences, please click here: <a href="https://community.proyeksi.id/my/mail_notifications" class="op-uc-link">https://community.proyeksi.id/my/mail_notifications</a></p></span>
   </body>
 </html>
 

@@ -2,10 +2,10 @@
 
 require 'open3'
 
-namespace :openproject do
+namespace :proyeksiapp do
   namespace :dependencies do
     desc 'Updates everything that is updatable automatically especially dependencies'
-    task update: %w[openproject:dependencies:update:gems]
+    task update: %w[proyeksiapp:dependencies:update:gems]
 
     namespace :update do
       def parse_capture(capture, &block)

@@ -43,8 +43,8 @@ For more information, see [TESTING](./TESTING.md).
 ## Plugins
 
 Proyeksiapp Community Edition has some plugins that contain a frontend,
-e.g., [Costs](https://github.com/finnlabs/openproject-costs/)
-or [My Project Page](https://github.com/finnlabs/openproject-my_project_page/).
+e.g., [Costs](https://github.com/finnlabs/proyeksiapp-costs/)
+or [My Project Page](https://github.com/finnlabs/proyeksiapp-my_project_page/).
 
 For developing these plugins, they need to be linked so either the Legacy or Angular frontend can see and process them.
 For more information on that part, see [PLUGINS](./PLUGINS.md)

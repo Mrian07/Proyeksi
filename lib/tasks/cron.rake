@@ -1,4 +1,4 @@
-namespace 'openproject:cron' do
+namespace 'proyeksiapp:cron' do
   desc 'An hourly cron job hook for plugin functionality'
   task :hourly do
     # Does nothing by default

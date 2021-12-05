@@ -730,7 +730,7 @@ spec/lib/open_project/configuration/helpers_spec.rb:0.007700559999989309
 spec/models/queries/work_packages/filter/responsible_filter_spec.rb:3.6432047290001037
 spec/lib/api/v3/configuration/configuration_representer_spec.rb:0.13869037900008152
 spec/lib/api/v3/utilities/path_helper_spec.rb:0.4993569580000212
-spec/models/work_package/openproject_notifications_spec.rb:0.49846804100002373
+spec/models/work_package/proyeksiapp_notifications_spec.rb:0.49846804100002373
 spec/models/queries/work_packages/filter/comment_filter_spec.rb:0.04547269600004711
 spec/models/custom_actions/actions/start_date_spec.rb:0.040470013000003746
 spec/requests/api/v3/user/create_user_resource_spec.rb:1.5454473559999542

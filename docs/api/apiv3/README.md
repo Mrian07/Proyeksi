@@ -10,5 +10,5 @@ Additionally, there is a rake task that outputs the specification as a whole as 
 on the given output file name:
 
 ```
-bundle exec rake api:save_spec ./openproject-oas.yml
+bundle exec rake api:save_spec ./proyeksiapp-oas.yml
 ```

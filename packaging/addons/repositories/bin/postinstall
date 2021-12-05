@@ -188,9 +188,9 @@ setup_git_configuration() {
 }
 
 ##
-# Let openproject be a member of the apache group
+# Let proyeksiapp be a member of the apache group
 # for easier group-based sharing of repository directories
-add_openproject_to_apache_group() {
+add_proyeksiapp_to_apache_group() {
 	if usermod --help 2>&1 | grep -- "-A group" &>/dev/null ; then
 		# sles11
 		usermod -A "${SERVER_GROUP}" "${APP_USER}"
@@ -278,7 +278,7 @@ install_apache_configuration() {
 
 	if vendor_selected "svn" || vendor_selected "git"; then
 		configure_apache2_server
-		add_openproject_to_apache_group
+		add_proyeksiapp_to_apache_group
 	else
 		echo "No repositories have been configured. Skipping configuration."
 	fi

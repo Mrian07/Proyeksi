@@ -12,10 +12,10 @@ Welcome to the central overview of frequently asked questions for ProyeksiApp.
 
 | Topic                                                        | Content                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Learn more about ProyeksiApp](#learn-more-about-openproject) | General questions about ProyeksiApp, security, setup and much more |
-| [How to ... in ProyeksiApp?](#how-to--in-openproject)        | Questions about how to achieve certain outcomes in ProyeksiApp that do not fit elsewhere |
+| [Learn more about ProyeksiApp](#learn-more-about-proyeksiapp) | General questions about ProyeksiApp, security, setup and much more |
+| [How to ... in ProyeksiApp?](#how-to--in-proyeksiapp)        | Questions about how to achieve certain outcomes in ProyeksiApp that do not fit elsewhere |
 | [FAQ regarding features](#faq-regarding-features)            | Information about frequent feature requests                  |
-| [FAQ regarding ProyeksiApp BIM edition](#faq-regarding-openproject-bim-edition) | Questions concerning the additional BCF module for ProyeksiApp and the BIM edition |
+| [FAQ regarding ProyeksiApp BIM edition](#faq-regarding-proyeksiapp-bim-edition) | Questions concerning the additional BCF module for ProyeksiApp and the BIM edition |
 | [Migration](#migration)                                      | Questions regarding migrating to ProyeksiApp from e.g. Bitnami or from other ProyeksiApp versions |
 | [Other](#other)                                              | Additional questions, e.g. about contribution, training, support |
 | [Topic-specific FAQ](#topic-specific-faq)                    | Links to other FAQ sections                                  |
@@ -31,7 +31,7 @@ Data protection and security are one of the main motivations for the development
 For users who do not want to run ProyeksiApp themselves, we offer a hosting product. Here we use subcontractors who are not based in the EU, too. We achieve compliance with the GDPR by using standard protection clauses (Art. 46 (2) (c) and (d) GDPR). 
 A list of the subcontractors currently used in the Cloud Edition can be found here: https://www.proyeksi.id/legal/data-processing-agreement/sub-processors/
 For our cloud product, we aim to completely eliminate subcontractors outside of the EU by the end of 2021. We have made a start by replacing Google Analytics with Matomo since 2020. 
-You can also send us encrypted emails to privacy@openproject.com. You can find the corresponding GPG key here: https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D475339588 
+You can also send us encrypted emails to privacy@proyeksiapp.com. You can find the corresponding GPG key here: https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D475339588 
 
 #### Is ProyeksiApp Enterprise cloud GDPR compliant? 
 
@@ -63,10 +63,10 @@ Apart from using ProyeksiApp in the cloud (ProyeksiApp Enterprise cloud) Proyeks
 Here are resources to get to know ProyeksiApp: 
 
 - The [overview of our features](https://www.proyeksi.id/collaboration-software-features) 
-- Our [English demo video](https://www.youtube.com/watch?v=un6zCm8_FT4) or [German demo video](https://www.youtube.com/watch?v=doVtVArSSvk) to get an overview of Openproject. There are additional videos explaining certain features to be found on our [YouTube channel](https://www.youtube.com/c/ProyeksiAppCommunity/videos), too.
+- Our [English demo video](https://www.youtube.com/watch?v=un6zCm8_FT4) or [German demo video](https://www.youtube.com/watch?v=doVtVArSSvk) to get an overview of Proyeksiapp. There are additional videos explaining certain features to be found on our [YouTube channel](https://www.youtube.com/c/ProyeksiAppCommunity/videos), too.
 - The [Getting started guide](../getting-started) and the [User guide](../user-guide)
-- Our free trial: Click the green button [here](https://www.proyeksi.id/enterprise-edition) for Enterprise on-premises or go to [start.openproject.com](https://start.openproject.com) for the Enterprise cloud.
-- Our [development roadmap](https://www.proyeksi.id/projects/openproject/work_packages?query_id=1993) (to get to know future features)
+- Our free trial: Click the green button [here](https://www.proyeksi.id/enterprise-edition) for Enterprise on-premises or go to [start.proyeksiapp.com](https://start.proyeksiapp.com) for the Enterprise cloud.
+- Our [development roadmap](https://www.proyeksi.id/projects/proyeksiapp/work_packages?query_id=1993) (to get to know future features)
 - Our [training and consulting offers](https://www.proyeksi.id/training-and-consulting) 
 
 ### Can I run ProyeksiApp as a single user?
@@ -75,9 +75,9 @@ Our minimum plan for the Enterprise cloud edition and Enterprise on-premises edi
 
 ### ProyeksiApp is Open Source. Which kind of license does it come with? What am I allowed to do? What can I change?
 
-ProyeksiApp comes with the GNU General Public License v3 (GPLv3). You can find out more about the copyright [here](https://github.com/opf/openproject/blob/dev/COPYRIGHT).
+ProyeksiApp comes with the GNU General Public License v3 (GPLv3). You can find out more about the copyright [here](https://github.com/opf/proyeksiapp/blob/dev/COPYRIGHT).
 In accordance with the terms set by the GPLv3 license, users can make modifications, create copies and redistribute the work. 
-Terms and conditions regarding GPLv3 are available at http://www.gnu.org/licenses/gpl-3.0.en.html or in [our repository](https://github.com/opf/openproject/blob/dev/LICENSE).
+Terms and conditions regarding GPLv3 are available at http://www.gnu.org/licenses/gpl-3.0.en.html or in [our repository](https://github.com/opf/proyeksiapp/blob/dev/LICENSE).
 
 ### Is ProyeksiApp free of charge?
 
@@ -101,7 +101,7 @@ However, if you're still using an old ProyeksiApp subscription there may be limi
 
 ### What is the difference between Enterprise on-premises and Community Edition regarding LDAP?
 
-In the Community Edition and in the Enterprise on-premises edition you can use the standard LDAP authentication. However, the Enterprise on-premises edition also includes LDAP group synchronization. This allows you to synchronize group members from LDAP with groups in ProyeksiApp. The respective documentation can be found [here](../system-admin-guide/authentication/ldap-authentication/ldap-group-synchronization/#synchronize-ldap-and-openproject-groups-premium-feature).
+In the Community Edition and in the Enterprise on-premises edition you can use the standard LDAP authentication. However, the Enterprise on-premises edition also includes LDAP group synchronization. This allows you to synchronize group members from LDAP with groups in ProyeksiApp. The respective documentation can be found [here](../system-admin-guide/authentication/ldap-authentication/ldap-group-synchronization/#synchronize-ldap-and-proyeksiapp-groups-premium-feature).
 
 ## How to ... in ProyeksiApp?
 
@@ -134,7 +134,7 @@ Please use these resources to find out about the latest changes and re-do them m
 You can invite new users in the system administration as long as you have enough licenses.
 
 For the Community Edition you can have as many users as you need for free. 
-If you are using Enterprise on-premises, please write an email to sales @ openproject.com.
+If you are using Enterprise on-premises, please write an email to sales @ proyeksiapp.com.
 
 If you are using the Enterprise cloud, you can easily upgrade or downgrade the number of users by navigating to *Administration -> Billing -> Manage subscription* and choosing the new amount of users which you need in your system. Find out more [here](../enterprise-guide/enterprise-cloud-guide/manage-cloud-subscription).
 
@@ -203,7 +203,7 @@ Not at the moment. This is a well-known feature requirement and we are currently
 ### Does ProyeksiApp offer resource management?
 
 You can [set up budgets](../user-guide/budgets), [set an Estimated time](../user-guide/work-packages/edit-work-package/) for a work package and use the [Assignee board](../user-guide/agile-boards/#choose-between-board-types) to find out how many work packages are assigned to a person, yet. 
-Additional resource management features will be added within the next years. You can find the road-map for future releases [here](https://www.proyeksi.id/projects/openproject/work_packages?query_id=1993).
+Additional resource management features will be added within the next years. You can find the road-map for future releases [here](https://www.proyeksi.id/projects/proyeksiapp/work_packages?query_id=1993).
 
 ### Is there an organizational chart in ProyeksiApp?
 
@@ -264,9 +264,9 @@ To migrate from Bitnami **to Enterprise cloud** please provide these:
 - data as database dump (.sql file)
 - attachment folder
 
-You can use the first two steps of [this instruction](../installation-and-operations/installation-faq/#how-can-i-migrate-from-bitnami-to-the-official-openproject-installation-packages). Please contact us to discuss your migration.
+You can use the first two steps of [this instruction](../installation-and-operations/installation-faq/#how-can-i-migrate-from-bitnami-to-the-official-proyeksiapp-installation-packages). Please contact us to discuss your migration.
 
-To migrate from Bitnami **to Enterprise on premises** please use [this instruction](../installation-and-operations/installation-faq/#how-can-i-migrate-from-bitnami-to-the-official-openproject-installation-packages). We offer (paid) installation support to help you migrate to ProyeksiApp (for the Enterprise on-premises edition). Please contact us to request it.
+To migrate from Bitnami **to Enterprise on premises** please use [this instruction](../installation-and-operations/installation-faq/#how-can-i-migrate-from-bitnami-to-the-official-proyeksiapp-installation-packages). We offer (paid) installation support to help you migrate to ProyeksiApp (for the Enterprise on-premises edition). Please contact us to request it.
 
 ### How can I migrate from Jira/Confluence to ProyeksiApp?
 
@@ -302,19 +302,19 @@ Please have a look at [this section](../installation-and-operations/misc).
 
 ### How can I contribute to ProyeksiApp?
 
-We welcome everybody willing to help make ProyeksiApp better. There are a lot of possibilities for helping, be it [improving the translations](../development/translate-openproject) via crowdin, answering questions in the [forums](https://community.openproject.org/projects/openproject/forums) or by fixing bugs and implementing features.
+We welcome everybody willing to help make ProyeksiApp better. There are a lot of possibilities for helping, be it [improving the translations](../development/translate-proyeksiapp) via crowdin, answering questions in the [forums](https://community.proyeksi.id/projects/proyeksiapp/forums) or by fixing bugs and implementing features.
 
-If you want to code, a good starting point would be to make yourself familiar with the [basic approaches for developing](../development/) in ProyeksiApp and opening a pull request on GitHub referencing an existing bug report or feature request. Find our GitHub page [here](https://github.com/opf/openproject).
+If you want to code, a good starting point would be to make yourself familiar with the [basic approaches for developing](../development/) in ProyeksiApp and opening a pull request on GitHub referencing an existing bug report or feature request. Find our GitHub page [here](https://github.com/opf/proyeksiapp).
 
 If in doubt on how you should start, you can also just [contact us](https://www.proyeksi.id/contact-us/).
 
 ### How can I receive support?
 
-We offer our Professional Support for Enterprise on-premises users and Enterprise cloud users. Please write an email to support@openproject.com. 
+We offer our Professional Support for Enterprise on-premises users and Enterprise cloud users. Please write an email to support@proyeksiapp.com. 
 
-If you use the Community Edition please feel free to use our [forums](https://community.openproject.org/projects/openproject/forums) for exchange with other users.
+If you use the Community Edition please feel free to use our [forums](https://community.proyeksi.id/projects/proyeksiapp/forums) for exchange with other users.
 
-To learn more about ProyeksiApp and how its features work please have a look at [this FAQ](#how-can-i-learn-more-about-openproject-and-how-to-use-it).
+To learn more about ProyeksiApp and how its features work please have a look at [this FAQ](#how-can-i-learn-more-about-proyeksiapp-and-how-to-use-it).
 
 ### Do you support Univention users?
 

@@ -12,7 +12,7 @@ ProyeksiApp can be configured either via the `config/configuration.yml` file, [e
 While the latter is probably a bad idea, the environment variable option is often helpful for automatically deploying production systems.
 Using the configuration file is probably the simplest way of configuration.
 
-You can find a list of options below and an example file in [config/configuration.yml.example](https://github.com/opf/openproject/blob/dev/config/configuration.yml.example) 
+You can find a list of options below and an example file in [config/configuration.yml.example](https://github.com/opf/proyeksiapp/blob/dev/config/configuration.yml.example) 
 
 
 
@@ -122,9 +122,9 @@ For supported values, please see https://en.gravatar.com/site/implement/images/
 
 ### Attachments storage
 
-You can modify the folder that attachments are stored locally. Use the `attachments_storage_path` configuration variable for that. But ensure that you move the existing paths. To find out the current path on a packaged installation, use `openproject config:get ATTACHMENTS_STORAGE_PATH`.
+You can modify the folder that attachments are stored locally. Use the `attachments_storage_path` configuration variable for that. But ensure that you move the existing paths. To find out the current path on a packaged installation, use `proyeksiapp config:get ATTACHMENTS_STORAGE_PATH`.
 
-To update the path, use `openproject config:set ATTACHMENTS_STORAGE_PATH="/path/to/new/folder"`. Ensure that this is writable by the `openproject` user.
+To update the path, use `proyeksiapp config:set ATTACHMENTS_STORAGE_PATH="/path/to/new/folder"`. Ensure that this is writable by the `proyeksiapp` user.
 
 ### attachment storage type
 
@@ -147,12 +147,12 @@ In order to set these values through ENV variables, use:
 
 ```
 <pre>
-OPENPROJECT_ATTACHMENTS__STORAGE=fog
-OPENPROJECT_FOG_CREDENTIALS_AWS__ACCESS__KEY__ID="AKIAJ23HC4KNPWHPG3UA"
-OPENPROJECT_FOG_CREDENTIALS_AWS__SECRET__ACCESS__KEY="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"
-OPENPROJECT_FOG_CREDENTIALS_PROVIDER=AWS
-OPENPROJECT_FOG_CREDENTIALS_REGION="eu-west-1"
-OPENPROJECT_FOG_DIRECTORY=uploads
+PROYEKSIAPP_ATTACHMENTS__STORAGE=fog
+PROYEKSIAPP_FOG_CREDENTIALS_AWS__ACCESS__KEY__ID="AKIAJ23HC4KNPWHPG3UA"
+PROYEKSIAPP_FOG_CREDENTIALS_AWS__SECRET__ACCESS__KEY="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"
+PROYEKSIAPP_FOG_CREDENTIALS_PROVIDER=AWS
+PROYEKSIAPP_FOG_CREDENTIALS_REGION="eu-west-1"
+PROYEKSIAPP_FOG_DIRECTORY=uploads
 </pre>
 
 ```
@@ -246,7 +246,7 @@ You have to define one variable for each menu.
 For instance 'Roles' and 'Types' under 'Administration' can be disabled by defining the following variable:
 
 ```
-OPENPROJECT_HIDDEN__MENU__ITEMS_ADMIN__MENU='roles types'
+PROYEKSIAPP_HIDDEN__MENU__ITEMS_ADMIN__MENU='roles types'
 ```
 
 ### blacklisted routes
@@ -274,7 +274,7 @@ blacklisted_routes:
 The configuration can be overridden through environment variables.
 
 ```
-OPENPROJECT_BLACKLISTED__ROUTES='admin/info admin/plugins'
+PROYEKSIAPP_BLACKLISTED__ROUTES='admin/info admin/plugins'
 ```
 
 ### disabled modules
@@ -301,7 +301,7 @@ disabled_modules: backlogs meetings
 The option to use a string is mostly relevant for when you want to override the disabled modules via ENV variables:
 
 ```
-OPENPROJECT_DISABLED__MODULES='backlogs meetings'
+PROYEKSIAPP_DISABLED__MODULES='backlogs meetings'
 ```
 
 ## local checkout path
@@ -388,7 +388,7 @@ enterprise:
 Or through the environment like this:
 
 ```
-OPENPROJECT_ENTERPRISE_FAIL__FAST=true
+PROYEKSIAPP_ENTERPRISE_FAIL__FAST=true
 ```
 
 ### Backup enabled
@@ -414,9 +414,9 @@ in the backup. If they are larger only the database dump will be included.
 As usual this can be override via the environment, for example like this:
 
 ```
-OPENPROJECT_BACKUP__ENABLED=true
-OPENPROJECT_BACKUP__INCLUDE__ATTACHMENTS=true
-OPENPROJECT_BACKUP__ATTACHMENT__SIZE__MAX__SUM__MB=1024
+PROYEKSIAPP_BACKUP__ENABLED=true
+PROYEKSIAPP_BACKUP__INCLUDE__ATTACHMENTS=true
+PROYEKSIAPP_BACKUP__ATTACHMENT__SIZE__MAX__SUM__MB=1024
 ```
 
 ### Show community links
@@ -424,7 +424,7 @@ OPENPROJECT_BACKUP__ATTACHMENT__SIZE__MAX__SUM__MB=1024
 If you would like to hide the homescreen links to the ProyeksiApp community, you can do this with the following configuration:
 
 ```
-OPENPROJECT_SHOW__COMMUNITY__LINKS=false
+PROYEKSIAPP_SHOW__COMMUNITY__LINKS=false
 ```
 
 ### Web
@@ -445,11 +445,11 @@ web:
 As usual these values can be overriden via the environment.
 
 ```
-OPENPROJECT_WEB_WORKERs=2
-OPENPROJECT_WEB_TIMEOUT=60 # overriden by: RACK_TIMEOUT_SERVICE_TIMEOUT
-OPENPROJECT_WEB_WAIT__TIMEOUT=10 # overriden by: RACK_TIMEOUT_WAIT_TIMEOUT
-OPENPROJECT_WEB_MIN__THREADS=4 # overriden by: RAILS_MIN_THREADS
-OPENPROJECT_WEB_MAX__THREADS=16 # overriden by: RAILS_MAX_THREADS
+PROYEKSIAPP_WEB_WORKERs=2
+PROYEKSIAPP_WEB_TIMEOUT=60 # overriden by: RACK_TIMEOUT_SERVICE_TIMEOUT
+PROYEKSIAPP_WEB_WAIT__TIMEOUT=10 # overriden by: RACK_TIMEOUT_WAIT_TIMEOUT
+PROYEKSIAPP_WEB_MIN__THREADS=4 # overriden by: RAILS_MIN_THREADS
+PROYEKSIAPP_WEB_MAX__THREADS=16 # overriden by: RAILS_MAX_THREADS
 ```
 
 ### statsd
@@ -471,7 +471,7 @@ statsd:
 Or via the environment:
 
 ```
-OPENPROJECT_STATSD_HOST=127.0.0.1 # overriden by: STATSD_HOST
+PROYEKSIAPP_STATSD_HOST=127.0.0.1 # overriden by: STATSD_HOST
 OPENPRJOECT_STATSD_PORT=8125 # overriden by: STATSD_PORT
 ```
 

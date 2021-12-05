@@ -2,7 +2,7 @@
 Randomized with seed 33808
 
 1st Try error in ./modules/dashboards/spec/features/work_package_table_spec.rb:96:
-expected to find css ".subject" within #<Capybara::Node::Element tag="div" path="/HTML/BODY[1]/DIV[1]/DIV[2]/MAIN[1]/DIV[2]/OPENPROJECT-BASE[1]/DIV[1]/UI-VIEW[1]/OPENPROJECT-BASE[1]/DIV[1]/UI-VIEW[1]/DASHBOARD[1]/GRID[1]/DIV[1]/DIV[2]"> but there were no matches
+expected to find css ".subject" within #<Capybara::Node::Element tag="div" path="/HTML/BODY[1]/DIV[1]/DIV[2]/MAIN[1]/DIV[2]/PROYEKSIAPP-BASE[1]/DIV[1]/UI-VIEW[1]/PROYEKSIAPP-BASE[1]/DIV[1]/UI-VIEW[1]/DASHBOARD[1]/GRID[1]/DIV[1]/DIV[2]"> but there were no matches
 
 RSpec::Retry: 2nd try ./modules/dashboards/spec/features/work_package_table_spec.rb:96
 

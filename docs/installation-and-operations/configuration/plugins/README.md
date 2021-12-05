@@ -24,26 +24,26 @@ If you have a plugin you wish to add to your packaged ProyeksiApp installation, 
 
 ```
 group :opf_plugins do
-  gem 'openproject-emoji', git: 'https://github.com/tessi/openproject-emoji.git', :branch => 'op-5-stable'
+  gem 'proyeksiapp-emoji', git: 'https://github.com/tessi/proyeksiapp-emoji.git', :branch => 'op-5-stable'
 end
 ```
 
 The group `:opf_plugins` is generally recommended, but only required for plugins with custom frontend code that is picked up by webpack and output into their respective bundles.
 
-We suggest to store the Gemfile under `/etc/openproject/Gemfile.custom`, but the choice is up to you, just make sure the openproject user is able to read it.
+We suggest to store the Gemfile under `/etc/proyeksiapp/Gemfile.custom`, but the choice is up to you, just make sure the proyeksiapp user is able to read it.
 
 ## Propagate the Gemfile to the package
 
 You have to tell your installation to use the custom gemfile via a config setting:
 
 ```
-openproject config:set CUSTOM_PLUGIN_GEMFILE=/etc/openproject/Gemfile.custom
+proyeksiapp config:set CUSTOM_PLUGIN_GEMFILE=/etc/proyeksiapp/Gemfile.custom
 ```
 
 If your plugin links into the Angular frontend, you will need to set the following environment variable to ensure it gets recompiled. Please note that NPM dependencies will be installed during the installation, and the angular CLI compilation will take place which will delay the configuration process by a few minutes.
 
 ```
-openproject config:set RECOMPILE_ANGULAR_ASSETS="true"
+proyeksiapp config:set RECOMPILE_ANGULAR_ASSETS="true"
 ```
 
 ## Re-run the installer
@@ -51,7 +51,7 @@ openproject config:set RECOMPILE_ANGULAR_ASSETS="true"
 To re-bundle the application including the new plugins, as well as running migrations and precompiling their assets, simply re-run the installer while using the same configuration as before.
 
 ```
-openproject configure
+proyeksiapp configure
 ```
 
 Using configure will take your previous decisions in the installer and simply re-apply them, which is an idempotent operation. It will detect the Gemfile config option being set and re-bundle the application with the additional plugins.

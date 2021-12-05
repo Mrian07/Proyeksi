@@ -18,7 +18,7 @@ def get_http(path, json: true)
     if path.start_with?('http')
       path
     else
-      "https://api.github.com/repos/opf/openproject/#{path}"
+      "https://api.github.com/repos/opf/proyeksiapp/#{path}"
     end
 
   response = RestClient::Request.new(

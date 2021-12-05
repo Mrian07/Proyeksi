@@ -86,7 +86,7 @@ namespace :backup do
     end
 
     def default_db_filename
-      filename = "openproject-#{Rails.env}-db-#{date_string}.backup"
+      filename = "proyeksiapp-#{Rails.env}-db-#{date_string}.backup"
       Rails.root.join('backup', sanitize_filename(filename))
     end
 

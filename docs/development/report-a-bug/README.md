@@ -10,9 +10,9 @@ keywords: bug report, bug, error, not working
 
 If you find a bug please create a bug report.
 
-1. Login to or register at the [ProyeksiApp community platform](https://community.openproject.org/login). It's fast and free.
+1. Login to or register at the [ProyeksiApp community platform](https://community.proyeksi.id/login). It's fast and free.
 2. Look for an existing bug report using the search bar in the header navigation on top. If there's one, please leave a comment or add additional information. Otherwise:
-3. Open the [bug form](https://community.openproject.org/projects/openproject/work_packages/new?type=1).
+3. Open the [bug form](https://community.proyeksi.id/projects/proyeksiapp/work_packages/new?type=1).
 4. Add a precise subject.
 5. Add a detailed description using the template.
 6. Attach a screen-shot or log-file file (optional).
@@ -27,7 +27,7 @@ Prior to detailing which steps to take to reproduce the error, the necessary pre
 * Which browser did you use when you experienced the error?
 * Do you receive any error messages in the browser console when the error occurs? Please include the error message if applicable.
 * Please also include the contents of the browser's developer tool's network tab where applicable.
-* If you are self-hosting please include logs from `sudo openproject logs` gathered while you are reproducing the error.
+* If you are self-hosting please include logs from `sudo proyeksiapp logs` gathered while you are reproducing the error.
 
 Example:
 

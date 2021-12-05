@@ -1,5 +1,3 @@
-
-
 module Redmine::MenuManager::TopMenu::ProjectsMenu
   def render_projects_top_menu_node
     return '' if User.current.anonymous? and Setting.login_required?

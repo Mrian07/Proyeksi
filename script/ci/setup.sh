@@ -5,7 +5,7 @@ set -e
 # script/ci/setup.sh
 
 # $1 = TEST_SUITE
-# $2 = OPENPROJECT_EDITION
+# $2 = PROYEKSIAPP_EDITION
 
 run() {
   echo $1;

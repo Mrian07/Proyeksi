@@ -12,7 +12,7 @@ Unless disabled via the [configuration](/installation-and-operations/configurati
 users can make backups of the ProyeksiApp installation from within the administration area.
 They either need to be an administrator or have the global permission to do so.
 
-![System-admin-guide-backup-11.3](openproject-backup.png)
+![System-admin-guide-backup-11.3](proyeksiapp-backup.png)
 
 ## Backup token
 
@@ -38,7 +38,7 @@ a logged-in user's desktop.
 As a system administrator you can skip this period by running the following rake task on the server's terminal:
 
 ```
-sudo openproject run rake backup:allow_now
+sudo proyeksiapp run rake backup:allow_now
 ```
 
 __In a docker setup you can open a terminal on any of the web or worker processes and run the rake task there.__

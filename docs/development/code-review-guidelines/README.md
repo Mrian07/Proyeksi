@@ -40,13 +40,13 @@ Every developer and reviewer should read the Rails Security Guide.
 
 ## Changelog
 
-- All changes made to the ProyeksiApp software are managed and documented via work packages in the [ProyeksiApp project](https://community.openproject.org/projects/openproject/).
-- The [Roadmap view](https://www.proyeksi.id/projects/openproject/roadmap) gives a corresponding overview.
+- All changes made to the ProyeksiApp software are managed and documented via work packages in the [ProyeksiApp project](https://community.proyeksi.id/projects/proyeksiapp/).
+- The [Roadmap view](https://www.proyeksi.id/projects/proyeksiapp/roadmap) gives a corresponding overview.
 - To prevent inconsistencies and avoid redundant work there is no additional change log in the source code.
 
 ## Other
 
-- For external contributions: Check whether the author has signed a [Contributor License Agreement](../#openproject-contributor-license-agreement-cla) and kindly ask for it if not.
+- For external contributions: Check whether the author has signed a [Contributor License Agreement](../#proyeksiapp-contributor-license-agreement-cla) and kindly ask for it if not.
 - Copyright notice: When new files are added, make sure they contain the ProyeksiApp copyright notice (copy from any file in ProyeksiApp).
 - Adding Gems: When adding gems, make sure not only the Gemfile is updated, but also the Gemfile.lock.
 - No trailing whitespace.

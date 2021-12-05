@@ -50,7 +50,7 @@ The selected relation status will be automatically displayed in the work package
 
 ## Display relations in work package list (Premium feature)
 
-As a user of [Enterprise on-premises](https://www.openproject.org/enterprise-edition/) or [Enterprise cloud](https://www.openproject.org/hosting/) you can display relations as columns in the work package list.
+As a user of [Enterprise on-premises](https://www.proyeksi.id/enterprise-edition/) or [Enterprise cloud](https://www.proyeksi.id/hosting/) you can display relations as columns in the work package list.
 
 This is useful if you want to get an overview of certain types of relationships between work packages. You can for example see which work packages are blocking other work packages.
 

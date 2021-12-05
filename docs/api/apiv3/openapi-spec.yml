@@ -3,7 +3,7 @@ openapi: 3.0.0
 info:
   description: |-
     You're looking at the current **stable** documentation of the ProyeksiApp APIv3. If you're interested in the current
-    development version, please go to [github.com/opf](https://github.com/opf/openproject/tree/dev/docs/api/apiv3).
+    development version, please go to [github.com/opf](https://github.com/opf/proyeksiapp/tree/dev/docs/api/apiv3).
 
     ## Introduction
 
@@ -14,7 +14,7 @@ info:
     authenticated user can take are being rendered. This can be used to dynamically identify actions that the user might take for any
     given response.
 
-    As an example, if you fetch a work package through the [Work Package endpoint](https://www.openproject.org/docs/api/endpoints/work-packages/), the `update` link will only
+    As an example, if you fetch a work package through the [Work Package endpoint](https://www.proyeksi.id/docs/api/endpoints/work-packages/), the `update` link will only
     be present when the user you authenticated has been granted a permission to update the work package in the assigned project.
 
     ## HAL+JSON
@@ -36,7 +36,7 @@ info:
 
     All API responses contain a single HAL+JSON object, even collections of objects are technically represented by
     a single HAL+JSON object that itself contains its members. More details on collections can be found
-    in the [Collections Section](https://www.openproject.org/docs/api/group-objects/).
+    in the [Collections Section](https://www.proyeksi.id/docs/api/group-objects/).
 
     ## Authentication
 
@@ -64,7 +64,7 @@ info:
 
     ```bash
     API_KEY=2519132cdf62dcf5a66fd96394672079f9e9cad1
-    curl -u apikey:$API_KEY https://community.openproject.com/api/v3/users/42
+    curl -u apikey:$API_KEY https://community.proyeksiapp.com/api/v3/users/42
     ```
 
     ### OAuth2.0 authentication
@@ -107,7 +107,7 @@ info:
     By default, the ProyeksiApp API is _not_ responding with any CORS headers.
     If you want to allow cross-domain AJAX calls against your ProyeksiApp instance, you need to enable CORS headers being returned.
 
-    Please see [our API settings documentation](https://www.openproject.org/docs/system-admin-guide/system-settings/api-settings/) on
+    Please see [our API settings documentation](https://www.proyeksi.id/docs/system-admin-guide/system-settings/api-settings/) on
     how to selectively enable CORS.
 
     ## Allowed HTTP methods

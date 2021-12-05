@@ -1,31 +1,3 @@
-// -- copyright
-// ProyeksiApp is an open source project management software.
-// Copyright (C) 2012-2021 the ProyeksiApp GmbH
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License version 3.
-//
-// ProyeksiApp is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
-// Copyright (C) 2006-2013 Jean-Philippe Lang
-// Copyright (C) 2010-2013 the ChiliProject Team
-//
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; either version 2
-// of the License, or (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-//
-// See COPYRIGHT and LICENSE files for more details.
-//++
-
 import { Component, ElementRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { I18nService } from 'core-app/core/i18n/i18n.service';
@@ -33,7 +5,7 @@ import { EnterpriseTrialData, EnterpriseTrialService } from 'core-app/features/e
 import { CurrentUserService } from 'core-app/core/current-user/current-user.service';
 import { localizeLink } from 'core-app/shared/helpers/i18n/localized-link';
 
-const newsletterURL = 'https://www.openproject.com/newsletter/';
+const newsletterURL = 'https://www.proyeksiapp.com/newsletter/';
 
 @Component({
   selector: 'enterprise-trial-form',
@@ -58,12 +30,12 @@ export class EETrialFormComponent {
   public text = {
     general_consent: this.I18n.t('js.admin.enterprise.trial.form.general_consent', {
       link_terms: localizeLink({
-        en: 'https://www.openproject.com/terms-of-service/',
-        de: 'https://www.openproject.org/de/nutzungsbedingungen/',
+        en: 'https://www.proyeksiapp.com/terms-of-service/',
+        de: 'https://www.proyeksiapp.org/de/nutzungsbedingungen/',
       }),
       link_privacy: localizeLink({
-        en: 'https://www.openproject.org/data-privacy-and-security/',
-        de: 'https://www.openproject.org/de/datenschutz/',
+        en: 'https://www.proyeksiapp.org/data-privacy-and-security/',
+        de: 'https://www.proyeksiapp.org/de/datenschutz/',
       }),
     }),
     label_test_ee: this.I18n.t('js.admin.enterprise.trial.form.test_ee'),

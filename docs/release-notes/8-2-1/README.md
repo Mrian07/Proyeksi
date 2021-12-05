@@ -10,7 +10,7 @@
 # ProyeksiApp 8.2.1
 
 We released
-[ProyeksiApp 8.2.1](https://community.openproject.com/versions/1352).  
+[ProyeksiApp 8.2.1](https://community.proyeksiapp.com/versions/1352).  
 The release contains several bug fixes and we recommend updating to the
 newest version.
 
@@ -19,43 +19,43 @@ newest version.
  
 
   - Fixed: Long heading in forum overlaps buttons
-    \[[\#28839](https://community.openproject.com/wp/28839)\]
+    \[[\#28839](https://community.proyeksiapp.com/wp/28839)\]
   - Fixed: Wrong error message when updating teaser element on
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-45">Project</span>
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-55">Overview
     page</span>
-    \[[\#29011](https://community.openproject.com/wp/29011)\]
+    \[[\#29011](https://community.proyeksiapp.com/wp/29011)\]
   - Fixed: Page not found displays old ProyeksiApp favicon icon
-    \[[\#29026](https://community.openproject.com/wp/29026)\]
+    \[[\#29026](https://community.proyeksiapp.com/wp/29026)\]
   - Fixed: Incorrect spacings on WP full view (mobile)
-    \[[\#29154](https://community.openproject.com/wp/29154)\]
+    \[[\#29154](https://community.proyeksiapp.com/wp/29154)\]
   - Fixed: Mobile notifications hidden by topbar
-    \[[\#29171](https://community.openproject.com/wp/29171)\]
+    \[[\#29171](https://community.proyeksiapp.com/wp/29171)\]
   - Fixed: Missing colors for status selector and type indicator in
     Chrome pdf export
-    \[[\#29175](https://community.openproject.com/wp/29175)\]
+    \[[\#29175](https://community.proyeksiapp.com/wp/29175)\]
   - Fixed: Unnecessary truncation on work package page (split screen)
-    \[[\#29191](https://community.openproject.com/wp/29191)\]
+    \[[\#29191](https://community.proyeksiapp.com/wp/29191)\]
   - Fixed: Cost reports: broken scrolling behaviour
-    \[[\#29204](https://community.openproject.com/wp/29204)\]
+    \[[\#29204](https://community.proyeksiapp.com/wp/29204)\]
   - Fixed: Title of default views changes after visiting a work package
-    full view \[[\#29211](https://community.openproject.com/wp/29211)\]
+    full view \[[\#29211](https://community.proyeksiapp.com/wp/29211)\]
   - Fixed: Two column layout not applied on page reload
-    \[[\#29238](https://community.openproject.com/wp/29238)\]
+    \[[\#29238](https://community.proyeksiapp.com/wp/29238)\]
   - Fixed:
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-7">Work
     package</span> table header not sticky on MS Edge, Opera, Safari
-    \[[\#29239](https://community.openproject.com/wp/29239)\]
+    \[[\#29239](https://community.proyeksiapp.com/wp/29239)\]
   - Fixed:
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-7">Work
     package</span> table hierarchy arrows incorrectly indented on MS
-    Edge \[[\#29242](https://community.openproject.com/wp/29242)\]
+    Edge \[[\#29242](https://community.proyeksiapp.com/wp/29242)\]
   - Changed: When creating version on
     “<span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-92">Backlogs</span>”
     page redirect to
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-92">Backlogs</span>
     page (not project settings)
-    \[[\#29182](https://community.openproject.com/wp/29182)\]
+    \[[\#29182](https://community.proyeksiapp.com/wp/29182)\]
   - Changed: A security / update warning notification is shown by
     default for administrators on specific pages. [Please see the
     configuration

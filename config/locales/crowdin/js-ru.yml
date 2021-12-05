@@ -268,13 +268,13 @@ ru:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
                 Релиз содержит различные новые функции и улучшения: <br> <ul class="%{list_styling_class}"> <li>С новыми <b>уведомлениями в приложении</b> вы получаете все важные обновления непосредственно в приложении и больше не получать письма от спама.</li> <li>Новый <b>центр уведомлений</b> показывает все изменения, включая интуитивные настройки фильтра. по причинам для уведомлений или проектов. Это даже позволяет редактировать непосредственно в виде раздельного просмотра.</li> <li>Улучшено <b>настройка уведомлений</b> позволяет тонкости, для каких действий и в каких проектах вы хотите получать уведомления.</li> <li><b>напоминания электронной почты</b> могут быть настроены на получение важных обновлений ежедневно по электронной почте.</li> <li>Пакет работ автоматически дополняет отношения теперь также показывает дополнительную информацию (название проекта, статус, . ), чтобы легко определить соответствующий пакет работ.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
-                Релиз содержит различные новые функции и улучшения: <br> <ul class="%{list_styling_class}"> <li>Центр уведомлений: Уменьшите количество получаемых писем. Вместо этого найдите и задействуйте все соответствующие уведомления в одном центральном месте.</li> <li>Все загруженные IFC файлы теперь также могут быть загружены.</li> <li>Загрузка и обработка IFC ускорились и получили улучшенные сообщения об ошибках.</li> <li>На <a href="https://github.com/opf/openproject-revit-add-in">в дополнении</a> ProyeksiApp Revit Add-in for </a> было много исправлений.</li> </ul>
+                Релиз содержит различные новые функции и улучшения: <br> <ul class="%{list_styling_class}"> <li>Центр уведомлений: Уменьшите количество получаемых писем. Вместо этого найдите и задействуйте все соответствующие уведомления в одном центральном месте.</li> <li>Все загруженные IFC файлы теперь также могут быть загружены.</li> <li>Загрузка и обработка IFC ускорились и получили улучшенные сообщения об ошибках.</li> <li>На <a href="https://github.com/opf/proyeksiapp-revit-add-in">в дополнении</a> ProyeksiApp Revit Add-in for </a> было много исправлений.</li> </ul>
     label_activate: "Активировать"
     label_add_column_after: "Добавить столбец после"
     label_add_column_before: "Добавить столбец перед"
@@ -1128,7 +1128,7 @@ ru:
       role:
         label: 'Роль в %{project}'
         no_roles_found: 'Роли не найдены'
-        description: 'Эту роль %{principal} получит после присоединения к вашему проекту. Роль определяет, разрешаемые действия и доступ к просмотру информации участника проекта. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Узнайте больше о ролях и разрешениях. </a>'
+        description: 'Эту роль %{principal} получит после присоединения к вашему проекту. Роль определяет, разрешаемые действия и доступ к просмотру информации участника проекта. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Узнайте больше о ролях и разрешениях. </a>'
         required: 'Пожалуйста, выберите роль'
         next_button: 'Следующие'
       message:

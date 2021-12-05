@@ -18,9 +18,9 @@ In order to translate ProyeksiApp, we use [CrowdIn](https://crowdin.com/projects
 We highly appreciate the help of anyone who wants to translate ProyeksiApp to additional languages.
 In order to provide translations not only for the ProyeksiApp core but also for the plugins, we created several translation projects on CrowdIn:
 
-* <a href="https://crowdin.com/project/openproject" target="_blank">Translate ProyeksiApp</a>
+* <a href="https://crowdin.com/project/proyeksiapp" target="_blank">Translate ProyeksiApp</a>
 
-To help us translate ProyeksiApp, please follow the links above and follow the instructions below (see [“How to translate ProyeksiApp via CrowdIn”](https://github.com/opf/openproject/new/release/6.1/doc/development#how-to-translate-openproject-via-crowdin)).
+To help us translate ProyeksiApp, please follow the links above and follow the instructions below (see [“How to translate ProyeksiApp via CrowdIn”](https://github.com/opf/proyeksiapp/new/release/6.1/doc/development#how-to-translate-proyeksiapp-via-crowdin)).
 You can find this project list on https://crowdin.com/projects/opf.
 
 ## How the translation process works
@@ -51,7 +51,7 @@ As soon as a translation has been provided by another user (green square next to
 ![Translate strings via CrowdIn](CrowdIn3.png "Translate strings via CrowdIn")
 Once a translation has been provided, a proof reader can approve the translation and mark it for use in ProyeksiApp.
 
-If you are interested in becoming a proof reader, please contact one of the project managers in the Openproject CrowdIn project or send us an email at support@openproject.org.
+If you are interested in becoming a proof reader, please contact one of the project managers in the Proyeksiapp CrowdIn project or send us an email at support@proyeksi.id.
 
 If your language is not listed in the list of CrowdIn languages, please contact our project managers or send us an email so we can add your language.
 

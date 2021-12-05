@@ -192,7 +192,7 @@ get:
       headers: {}
   tags:
   - Queries
-  description: Same as [viewing an existing, persisted Query](https://www.openproject.org/docs/api/endpoints/queries/#list-queries)
+  description: Same as [viewing an existing, persisted Query](https://www.proyeksi.id/docs/api/endpoints/queries/#list-queries)
     in its response, this resource returns an unpersisted query and by that allows
     to get the default query configuration. The client may also provide additional
     parameters which will modify the default query.

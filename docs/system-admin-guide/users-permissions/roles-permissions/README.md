@@ -79,7 +79,7 @@ To remove an existing role click on the delete icon next to a role in the list (
 
 To create a global role tick the box "Global Role" when [creating a new role](#create-a-new-role). 
 
-![global-roles-in-openproject](image-20210308171607279.png)
+![global-roles-in-proyeksiapp](image-20210308171607279.png)
 
 You can choose between these global permissions:
 

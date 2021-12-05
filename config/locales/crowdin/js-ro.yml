@@ -268,13 +268,13 @@ ro:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/openproject-11-0-release
+              learn_about_link: https://www.proyeksi.id/proyeksiapp-11-0-release
               new_features_html: >
                 Versiunea conține diverse caracteristici noi și îmbunătățiri: <br> <ul class="%{list_styling_class}"> <li>Cu noile <b>notificări din aplicație</b> primiți toate actualizările importante direct în aplicație și nu mai primiți un flux de e-mailuri.</li> <li>Noul centru de notificare <b></b> prezintă toate schimbările, inclusiv opțiunile intuitive de filtrare, e. . din motive de notificare sau proiecte. Aceasta permite chiar editarea directă într-o vedere divizată.</li> <li>Setări de notificare îmbunătățite <b></b> permit ajustarea pentru ce acțiuni și în ce proiecte doriți să primiți o notificare.</li> <li><b>Memento-uri de e-mail</b> poate fi configurat pentru a primi actualizări importante prin intermediul unui sumar zilnic de e-mail.</li> <li>Completatorul automat pentru relații afișează acum și informații suplimentare (numele proiectului, statusul, . .) pentru a identifica cu ușurință pachetul de lucru respectiv.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/openproject-11-0-release
+              learn_about_link: https://www.proyeksi.id/proyeksiapp-11-0-release
               new_features_html: >
-                Versiunea conţine diverse caracteristici noi şi îmbunătăţiri: <br> <ul class="%{list_styling_class}"> <li>Centrul de notificare: Reduceţi numărul de e-mailuri pe care le primiţi. Găsește și acționează pe toate notificările relevante într-un singur loc central.</li> <li>Toate fișierele IFC încărcate acum pot fi descărcate.</li> <li>Încărcarea și procesarea IFC a obținut mai repede și a primit mesaje de eroare mai bune.</li> <li>Add-in <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit</a> a primit mai multe remedieri ale erorilor.</li> </ul>
+                Versiunea conţine diverse caracteristici noi şi îmbunătăţiri: <br> <ul class="%{list_styling_class}"> <li>Centrul de notificare: Reduceţi numărul de e-mailuri pe care le primiţi. Găsește și acționează pe toate notificările relevante într-un singur loc central.</li> <li>Toate fișierele IFC încărcate acum pot fi descărcate.</li> <li>Încărcarea și procesarea IFC a obținut mai repede și a primit mesaje de eroare mai bune.</li> <li>Add-in <a href="https://github.com/opf/proyeksiapp-revit-add-in">ProyeksiApp Revit</a> a primit mai multe remedieri ale erorilor.</li> </ul>
     label_activate: "Activare"
     label_add_column_after: "Adauga o coloana dupa"
     label_add_column_before: "Adauga o coloana inainte"
@@ -1125,7 +1125,7 @@ ro:
       role:
         label: 'Rolul în %{project}'
         no_roles_found: 'No roles were found'
-        description: 'This is the role that %{principal} will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Learn more about roles and permissions. </a>'
+        description: 'This is the role that %{principal} will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Learn more about roles and permissions. </a>'
         required: 'Vă rugăm să selectați un rol'
         next_button: 'Înainte'
       message:

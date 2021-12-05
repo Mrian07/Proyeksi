@@ -269,13 +269,13 @@ uk:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
                 The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>With the new <b>in-app notifications</b> you receive all important updates directly in the application and don't get a flood of emails anymore.</li> <li>The new <b>notification center</b> shows all the changes, including intuitive filter options, e.g. by reason for notification or projects. It even allows editing directly in a split view.</li> <li>Improved <b>notification settings</b> allow to fine-tune for which actions and in which projects you want to receive a notification.</li> <li><b>Email reminders</b> can be configured to receive important updates via a daily email summary.</li> <li>The work package auto-completer for relations now also shows additional information (project name, status, ...) to easily identify the respective work package.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
-                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
+                The release contains various new features and improvements: <br> <ul class="%{list_styling_class}"> <li>Notification center: Reduce the number of mails you receive. Instead find and act upon all relevant notifications in one central place.</li> <li>All uploaded IFC files can now also be downloaded.</li> <li>The uploading and processing of IFC got faster and received better error messages.</li> <li>The <a href="https://github.com/opf/proyeksiapp-revit-add-in">ProyeksiApp Revit Add-in</a> received many bug fixes.</li> </ul>
     label_activate: "Активувати"
     label_add_column_after: "Додати стовпець після"
     label_add_column_before: "Додати стовпець перед"
@@ -1129,7 +1129,7 @@ uk:
       role:
         label: 'Role in %{project}'
         no_roles_found: 'No roles were found'
-        description: 'This is the role that %{principal} will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Learn more about roles and permissions. </a>'
+        description: 'This is the role that %{principal} will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Learn more about roles and permissions. </a>'
         required: 'Please select a role'
         next_button: 'Далі'
       message:

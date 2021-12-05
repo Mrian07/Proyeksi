@@ -74,7 +74,7 @@ id:
       cancelled_due_to: "Job was cancelled due to error: %{message}"
   ldap_auth_sources:
     technical_warning_html: |
-      Formulir LDAP ini membutuhkan pengetahuan teknis LDAP anda / pengaturan Direktori Aktif. <br/><a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Silahkan kungjungi dokumentasi untuk instruksi lebih jelas</a>.
+      Formulir LDAP ini membutuhkan pengetahuan teknis LDAP anda / pengaturan Direktori Aktif. <br/><a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Silahkan kungjungi dokumentasi untuk instruksi lebih jelas</a>.
     attribute_texts:
       name: Nama arbitary koneksi LDAP
       host: Nama host LDAP atau alamat IP
@@ -84,7 +84,7 @@ id:
       system_user_dn_html: |
         Masukan DN pengguna sistem hanya digunakan untuk akses membaca.
         <br/>
-        contoh: uid=openproject,ou=system,dc=example,dc=com
+        contoh: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Masukan password yang terikat dengan pengguna sistem
       base_dn: |
         Masukan Base DN dari subtree LDAP yang anda inginkan agar ProyeksiApp dapat melihat pengguna dan grup.
@@ -1633,7 +1633,7 @@ id:
   label_open_menu: "Buka menu"
   label_open_work_packages: "buka"
   label_open_work_packages_plural: "buka"
-  label_openproject_website: "ProyeksiApp website"
+  label_proyeksiapp_website: "ProyeksiApp website"
   label_optional_description: "Deskripsi"
   label_options: "Opsi"
   label_other: "Lainnya"
@@ -2773,7 +2773,7 @@ id:
   warning_user_limit_reached: >
     User limit reached. You cannot activate any more users. Please <a href="%{upgrade_url}">upgrade your plan</a> or block members to allow for additional users.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise Edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@proyeksiapp.com to upgrade your Enterprise Edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:

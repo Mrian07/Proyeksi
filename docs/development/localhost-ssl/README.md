@@ -11,19 +11,19 @@ This guide will instruct you how to install and configure an Apache2 proxy/rever
 You will need a certificate to terminate SSL requests at Apache. For development purposes only, create a self-signed certificate as follows:
 
 ```bash
-sudo mkdir -p /etc/ssl/openproject-dev/
-sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/openproject-dev/privkey.key -out /etc/ssl/openproject-dev/cert.crt
+sudo mkdir -p /etc/ssl/proyeksiapp-dev/
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/proyeksiapp-dev/privkey.key -out /etc/ssl/proyeksiapp-dev/cert.crt
 ```
 
 
 
-This will output a private key and certificate to `/etc/ssl/openproject-dev` for use with Apache2.
+This will output a private key and certificate to `/etc/ssl/proyeksiapp-dev` for use with Apache2.
 
 
 
 ## Step 2: Set up a custom host
 
-You may want to have a full host name available for development. Let's assume this is `openproject.example.com`. You can forward this hostname to your local machine by editing `/etc/hosts` and adding `openproject.example.com 127.0.0.1` to it.
+You may want to have a full host name available for development. Let's assume this is `proyeksiapp.example.com`. You can forward this hostname to your local machine by editing `/etc/hosts` and adding `proyeksiapp.example.com 127.0.0.1` to it.
 
 
 
@@ -40,7 +40,7 @@ Next, ensure that `mod_ssl`, `mod_proxy` and `mod_proxy_http` are installed and 
 You will then add a configuration for ProyeksiApp under:
 
 ```bash
-nano /etc/apache2/sites-available/openproject-dev-ssl.conf
+nano /etc/apache2/sites-available/proyeksiapp-dev-ssl.conf
 ```
 
 The path might differ. For RHEL/Fedora systems, the configuration directory resides at `/etc/apache2/conf.d/`.
@@ -49,8 +49,8 @@ The following contains an exemplary configuration:
 
 ```
 <VirtualHost *:80>
-    ServerName openproject.example.com
-    redirect permanent / https://openproject.example.com/
+    ServerName proyeksiapp.example.com
+    redirect permanent / https://proyeksiapp.example.com/
 </VirtualHost>
 
 <VirtualHost *:443>
@@ -59,11 +59,11 @@ The following contains an exemplary configuration:
     #
 
     SSLEngine On
-    SSLCertificateFile /etc/ssl/openproject-dev/cert.crt
-    SSLCertificateKeyFile /etc/ssl/openproject-dev/privkey.key
+    SSLCertificateFile /etc/ssl/proyeksiapp-dev/cert.crt
+    SSLCertificateKeyFile /etc/ssl/proyeksiapp-dev/privkey.key
     
     # If you have a chain file (not self-signed certificate), uncomment this
-    # SSLCertificateChainFile /etc/ssl/openproject-dev/chain.pem
+    # SSLCertificateChainFile /etc/ssl/proyeksiapp-dev/chain.pem
 
     # Set Forwarded protocol header to proxy
     # otherwise ProyeksiApp doesn't know we're terminating SSL here.
@@ -73,7 +73,7 @@ The following contains an exemplary configuration:
     # SSL End
     #
 
-    ServerName      openproject.example.com
+    ServerName      proyeksiapp.example.com
     ServerAdmin     admin@example.com
 
     # Proxy requests to development localhost:3000 / puma worker
@@ -97,7 +97,7 @@ In case you're in an environment with SELinux enabled, you will also need to all
 We assume you have already configured your ProyeksiApp local development environment as [described in this guide](../development-environment-ubuntu). You will need to add your custom host name to `config/environments/development.rb`:
 
 ```ruby
-Rails.application.config.hosts << 'openproject.example.com'
+Rails.application.config.hosts << 'proyeksiapp.example.com'
 ```
 
 
@@ -108,16 +108,16 @@ Update the settings for host name and protocol:
 
 ```ruby
 Setting.protocol = 'https'
-Setting.host_name = 'openproject.example.com'
+Setting.host_name = 'proyeksiapp.example.com'
 ```
 
 
 
-Finally, start your ProyeksiApp development server and Frontend server and access `https://openproject.example.com` in your browser.
+Finally, start your ProyeksiApp development server and Frontend server and access `https://proyeksiapp.example.com` in your browser.
 
 
 
 ## Questions, Comments, and Feedback
 
-If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.openproject.org [forum](https://community.openproject.org/projects/openproject/boards/9).
-[Follow ProyeksiApp on twitter](https://twitter.com/openproject), and follow [the news](https://www.openproject.org/blog) to stay up to date.
+If you have any further questions, comments, feedback, or an idea to enhance this guide, please tell us at the appropriate community.proyeksi.id [forum](https://community.proyeksi.id/projects/proyeksiapp/boards/9).
+[Follow ProyeksiApp on twitter](https://twitter.com/proyeksiapp), and follow [the news](https://www.proyeksi.id/blog) to stay up to date.

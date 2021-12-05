@@ -15,11 +15,11 @@ if [ $(id -u) -eq 0 ]; then
 	fi
 
 	mkdir -p /usr/local/bundle
-	mkdir -p /home/$USER/openproject/frontend/node_modules
-	mkdir -p /home/$USER/openproject/tmp
+	mkdir -p /home/$USER/proyeksiapp/frontend/node_modules
+	mkdir -p /home/$USER/proyeksiapp/tmp
 	chown $USER:$USER /usr/local/bundle
-	chown $USER:$USER /home/$USER/openproject/frontend/node_modules
-	chown $USER:$USER /home/$USER/openproject/tmp
+	chown $USER:$USER /home/$USER/proyeksiapp/frontend/node_modules
+	chown $USER:$USER /home/$USER/proyeksiapp/tmp
 fi
 
 

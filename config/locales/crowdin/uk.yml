@@ -76,7 +76,7 @@ uk:
     technical_warning_html: |
       This LDAP form requires technical knowledge of your LDAP / Active Directory setup.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Please visit our documentation for detailed instructions</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Please visit our documentation for detailed instructions</a>.
     attribute_texts:
       name: Arbitrary name of the LDAP connection
       host: LDAP host name or IP address
@@ -86,7 +86,7 @@ uk:
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br/>
-        Example: uid=openproject,ou=system,dc=example,dc=com
+        Example: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Enter the bind password of the system user
       base_dn: |
         Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
@@ -1322,7 +1322,7 @@ uk:
       faq: "ЧаПи"
       glossary: "Глосарій"
       shortcuts: "Ярлики"
-      blog: "Openproject блог"
+      blog: "Proyeksiapp блог"
       forums: "Форум спільноти"
       newsletter: "Сигнали безпеки / Інформаційний бюлетень"
   image_conversion:
@@ -1687,7 +1687,7 @@ uk:
   label_open_menu: "Відкрити меню"
   label_open_work_packages: "відкрити"
   label_open_work_packages_plural: "відкрити"
-  label_openproject_website: "Веб-сайт ProyeksiApp"
+  label_proyeksiapp_website: "Веб-сайт ProyeksiApp"
   label_optional_description: "Опис"
   label_options: "Опції"
   label_other: "Інше"
@@ -2840,7 +2840,7 @@ uk:
   warning_user_limit_reached: >
     Досягнуто обмеження користувача. Не можна активувати більше користувачів. Будь ласка <a href="%{upgrade_url}"> оновіть свій план </a> або заблокувати учасників для додаткових користувачів.
   warning_user_limit_reached_instructions: >
-    Ви досягли обмеження користувача (%{current}/%{max} активних користувачів). Зверніться до sales@openproject.com, щоб оновити план Enterprise Edition і додати додаткових користувачів.
+    Ви досягли обмеження користувача (%{current}/%{max} активних користувачів). Зверніться до sales@proyeksiapp.com, щоб оновити план Enterprise Edition і додати додаткових користувачів.
   warning_protocol_mismatch_html: >
 
   warning_bar:

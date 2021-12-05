@@ -393,12 +393,12 @@ Release date: 2019-07-23
 
 Release date: 2019-06-13
 
-- Fixed: Wiki TOC doesn’t render headings properly [[#30245](https://community.openproject.com/wp/30245)]
-- Fixed: Cannot create new boards in installations with relative_url_root set [[#30370](https://community.openproject.com/wp/30370)]
-- Fixed: Sass compilation fails on packaged installations with relative_url_root set [[#30372](https://community.openproject.com/wp/30372)]
-- Fixed: Chrome is logged out when accessing pages with images on S3 storage [[#28652](https://community.openproject.com/wp/28652)]
-- Fixed: ProyeksiApp logo on My page does not redirect to landing page [[#30376](https://community.openproject.com/wp/30376)]
-- Fixed: The PDF export is cut off after the first page [[#29929](https://community.openproject.com/wp/29929)]
+- Fixed: Wiki TOC doesn’t render headings properly [[#30245](https://community.proyeksiapp.com/wp/30245)]
+- Fixed: Cannot create new boards in installations with relative_url_root set [[#30370](https://community.proyeksiapp.com/wp/30370)]
+- Fixed: Sass compilation fails on packaged installations with relative_url_root set [[#30372](https://community.proyeksiapp.com/wp/30372)]
+- Fixed: Chrome is logged out when accessing pages with images on S3 storage [[#28652](https://community.proyeksiapp.com/wp/28652)]
+- Fixed: ProyeksiApp logo on My page does not redirect to landing page [[#30376](https://community.proyeksiapp.com/wp/30376)]
+- Fixed: The PDF export is cut off after the first page [[#29929](https://community.proyeksiapp.com/wp/29929)]
 
 [Release Notes](9-0-2/)
 
@@ -408,16 +408,16 @@ Release date: 2019-06-13
 
 Release date: 2019-06-07
 
-- Fixed: Wiki TOC doesn’t render headings properly [[#30245](https://community.openproject.com/wp/30245)]
-- Fixed: Doubled files section in meeting agenda [[#30291](https://community.openproject.com/wp/30291)]
-- Fixed: Row highlighted by ‘Type’ makes table text unreadable [[#30298](https://community.openproject.com/wp/30298)]
-- Fixed: Cannot copy projects & wrong error message [[#30309](https://community.openproject.com/wp/30309)]
-- Fixed: Dark background for getting started tour does not cover entire page [[#30314](https://community.openproject.com/wp/30314)]
-- Fixed: JavaScript error when clicking on a link in My Page [[#30343](https://community.openproject.com/wp/30343)]
-- Fixed: Highlighting for add relation in Gantt chart not applied properly [[#30354](https://community.openproject.com/wp/30354)]
-- Changed: Styled scrollbars in WP views [[#30304](https://community.openproject.com/wp/30304)]
-- Changed: Improve print view of cost report via CSS [[#30305](https://community.openproject.com/wp/30305)]
-- Changed: Ensure PostgreSQL migration is finished before attachments are re-inserted [[#30352](https://community.openproject.com/wp/30352)]
+- Fixed: Wiki TOC doesn’t render headings properly [[#30245](https://community.proyeksiapp.com/wp/30245)]
+- Fixed: Doubled files section in meeting agenda [[#30291](https://community.proyeksiapp.com/wp/30291)]
+- Fixed: Row highlighted by ‘Type’ makes table text unreadable [[#30298](https://community.proyeksiapp.com/wp/30298)]
+- Fixed: Cannot copy projects & wrong error message [[#30309](https://community.proyeksiapp.com/wp/30309)]
+- Fixed: Dark background for getting started tour does not cover entire page [[#30314](https://community.proyeksiapp.com/wp/30314)]
+- Fixed: JavaScript error when clicking on a link in My Page [[#30343](https://community.proyeksiapp.com/wp/30343)]
+- Fixed: Highlighting for add relation in Gantt chart not applied properly [[#30354](https://community.proyeksiapp.com/wp/30354)]
+- Changed: Styled scrollbars in WP views [[#30304](https://community.proyeksiapp.com/wp/30304)]
+- Changed: Improve print view of cost report via CSS [[#30305](https://community.proyeksiapp.com/wp/30305)]
+- Changed: Ensure PostgreSQL migration is finished before attachments are re-inserted [[#30352](https://community.proyeksiapp.com/wp/30352)]
 
 [Read more](9-0-1/)
 

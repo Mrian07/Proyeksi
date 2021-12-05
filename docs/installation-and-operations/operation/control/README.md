@@ -15,7 +15,7 @@ sidebar_navigation:
 #### Restart all the ProyeksiApp processes
 
 ```bash
-sudo openproject restart
+sudo proyeksiapp restart
 ```
 
 
@@ -27,30 +27,30 @@ The ProyeksiApp command line tool supports running rake tasks and known scripts.
 Get the current version of ProyeksiApp
 
 ```bash
-sudo openproject run bundle exec rake version
+sudo proyeksiapp run bundle exec rake version
 ```
 
 Launch an interactive console to directly interact with the underlying Ruby on Rails application:
 
 ```bash
-sudo openproject run console
-# if user the docker all-in-one container: docker exec -it openproject bundle exec rails console
+sudo proyeksiapp run console
+# if user the docker all-in-one container: docker exec -it proyeksiapp bundle exec rails console
 # if using docker-compose: docker-compose run --rm web bundle exec rails console
 ```
 
 Manually launch the database migrations:
 
 ```bash
-sudo openproject run rake db:migrate
-# if user the docker all-in-one container: docker exec -it openproject bundle exec rake db:migrate
+sudo proyeksiapp run rake db:migrate
+# if user the docker all-in-one container: docker exec -it proyeksiapp bundle exec rake db:migrate
 # if using docker-compose: docker-compose run --rm web bundle exec rake db:migrate
 ```
 
 Check the version of Ruby used by ProyeksiApp:
 
 ```bash
-sudo openproject run ruby -v
-# if user the docker all-in-one container: docker exec -it openproject ruby -v
+sudo proyeksiapp run ruby -v
+# if user the docker all-in-one container: docker exec -it proyeksiapp ruby -v
 # if using docker-compose: docker-compose run --rm web ruby -v
 ```
 
@@ -63,13 +63,13 @@ Note: Depending on your free RAM on your system, we recommend you raise the defa
 We recommend at least 4 web processes. Please check your current web processes count with:
 
 ```bash
-sudo openproject config:get OPENPROJECT_WEB_WORKERS
+sudo proyeksiapp config:get PROYEKSIAPP_WEB_WORKERS
 ```
 
 If it returns nothing, the default process count of `4` applies. To increase or decrease the process count, call
 
 ```bash
-sudo openproject config:set OPENPROJECT_WEB_WORKERS=number
+sudo proyeksiapp config:set PROYEKSIAPP_WEB_WORKERS=number
 ```
 
 Where `number` is a positive number between 1 and `round(AVAILABLE_RAM * 1.5)`.
@@ -77,7 +77,7 @@ Where `number` is a positive number between 1 and `round(AVAILABLE_RAM * 1.5)`.
 After changing these values, simply restart the web process:
 
 ```bash
-sudo openproject restart web
+sudo proyeksiapp restart web
 ```
 
 

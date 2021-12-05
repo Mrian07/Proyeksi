@@ -9,19 +9,19 @@ task :release, [:version] do |_task, args|
   version = args[:version]
   abort 'Missing version in the form of 1.0.0' unless version.present?
 
-  dir = Pathname.new(ENV['HOME']) + 'dev' + 'openproject' + 'packages'
+  dir = Pathname.new(ENV['HOME']) + 'dev' + 'proyeksiapp' + 'packages'
   FileUtils.mkdir_p dir
 
   commands = [
     "cd #{dir}",
-    "git clone git://github.com/opf/openproject.git openproject-#{version}",
-    "cd openproject-#{version}/",
+    "git clone git://github.com/opf/proyeksiapp.git proyeksiapp-#{version}",
+    "cd proyeksiapp-#{version}/",
     "git checkout v#{version}",
-    "rm -vRf #{dir}/openproject-#{version}/.git",
+    "rm -vRf #{dir}/proyeksiapp-#{version}/.git",
     "cd #{dir}",
-    "tar -zcvf openproject-#{version}.tar.gz openproject-#{version}",
-    "zip -r -9 openproject-#{version}.zip openproject-#{version}",
-    "md5sum openproject-#{version}.tar.gz openproject-#{version}.zip > openproject-#{version}.md5sum",
+    "tar -zcvf proyeksiapp-#{version}.tar.gz proyeksiapp-#{version}",
+    "zip -r -9 proyeksiapp-#{version}.zip proyeksiapp-#{version}",
+    "md5sum proyeksiapp-#{version}.tar.gz proyeksiapp-#{version}.zip > proyeksiapp-#{version}.md5sum",
     "echo 'Release ready'"
   ].join(' && ')
   system(commands)

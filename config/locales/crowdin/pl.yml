@@ -76,7 +76,7 @@ pl:
     technical_warning_html: |
       Ten formularz LDAP wymaga wiedzy technicznej na temat konfiguracji usługi LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Szczegółowe instrukcje można znaleźć w naszej dokumentacji</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Szczegółowe instrukcje można znaleźć w naszej dokumentacji</a>.
     attribute_texts:
       name: Dowolna nazwa połączenia LDAP
       host: Nazwa hosta LDAP lub adres IP
@@ -86,7 +86,7 @@ pl:
       system_user_dn_html: |
         Wprowadzić nazwę wyróżniającą użytkownika systemu służącą do dostępu w trybie tylko do odczytu.
         <br/>
-        Przykład: uid=openproject,ou=system,dc=example,dc=com
+        Przykład: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Wprowadź powiązane hasło użytkownika systemu
       base_dn: |
         Wprowadź bazową nazwę wyróżniającą poddrzewa w LDAP, w którym ProyeksiApp ma szukać użytkowników i grup.
@@ -1684,7 +1684,7 @@ pl:
   label_open_menu: "Otwórz menu"
   label_open_work_packages: "Otwarte"
   label_open_work_packages_plural: "Otwarte"
-  label_openproject_website: "Witryna internetowa ProyeksiApp"
+  label_proyeksiapp_website: "Witryna internetowa ProyeksiApp"
   label_optional_description: "Opis"
   label_options: "Opcje"
   label_other: "Inne"
@@ -2835,7 +2835,7 @@ pl:
   warning_user_limit_reached: >
     Osiągnięto limit użytkowników. Nie możesz aktywować kolejnych użytkowników. <a href="%{upgrade_url}"> uaktualnij swój plan </a> lub zablokuj członków, aby umożliwić korzystanie z dodatkowych użytkowników.
   warning_user_limit_reached_instructions: >
-    Osiągnięto limit użytkownika (%{current}/%{max} aktywnych użytkowników). Skontaktuj się z sales@openproject.com do uaktualnienia planu Enterprise Edition i dodać więcej kont użytkowników.
+    Osiągnięto limit użytkownika (%{current}/%{max} aktywnych użytkowników). Skontaktuj się z sales@proyeksiapp.com do uaktualnienia planu Enterprise Edition i dodać więcej kont użytkowników.
   warning_protocol_mismatch_html: >
 
   warning_bar:

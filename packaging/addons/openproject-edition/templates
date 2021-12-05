@@ -1,4 +1,4 @@
-Template: openproject/edition
+Template: proyeksiapp/edition
 Type: select
 Choices: default, bim
 Translations: ProyeksiApp, ProyeksiApp BIM

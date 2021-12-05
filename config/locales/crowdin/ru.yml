@@ -76,7 +76,7 @@ ru:
     technical_warning_html: |
       Эта LDAP форма требует технических знаний по LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Пожалуйста, ознакомьтесь с документацией для подробных инструкций</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Пожалуйста, ознакомьтесь с документацией для подробных инструкций</a>.
     attribute_texts:
       name: Произвольное имя подключения LDAP
       host: Имя хоста или IP-адрес LDAP
@@ -86,7 +86,7 @@ ru:
       system_user_dn_html: |
         Введите DN пользователя системы, используемого для доступа только для чтения.
         <br/>
-        Пример: uid=openproject,ou=system,dc=example,dc=com
+        Пример: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Введите привязочный пароль системного пользователя
       base_dn: |
         Введите базовый DN поддерева в LDAP, в котором бы ProyeksiApp искал пользователей и групп.
@@ -1321,7 +1321,7 @@ ru:
       faq: "ЧаВо"
       glossary: "Глоссарий"
       shortcuts: "Ярлыки"
-      blog: "Openproject блог"
+      blog: "Proyeksiapp блог"
       forums: "Форум сообщества"
       newsletter: "Оповещения системы безопасности / Новости"
   image_conversion:
@@ -1686,7 +1686,7 @@ ru:
   label_open_menu: "Открыть меню"
   label_open_work_packages: "открыто"
   label_open_work_packages_plural: "открыто"
-  label_openproject_website: "ProyeksiApp веб-сайт"
+  label_proyeksiapp_website: "ProyeksiApp веб-сайт"
   label_optional_description: "Описание"
   label_options: "Параметры"
   label_other: "Другие"
@@ -2836,7 +2836,7 @@ ru:
   warning_user_limit_reached: >
     Достигнут предел пользователя. Вы более не можете активировать пользователей. <a href="%{upgrade_url}">, обновите ваш план</a> или блок участников для дополнительных пользователей.
   warning_user_limit_reached_instructions: >
-    Вы достигли вашего пользовательского предела (%{current}/%{max} активных пользователей). Пожалуйста, свяжитесь с sales@openproject.com для обновления своего плана до Корпоративной версии и добавьте дополнительных пользователей.
+    Вы достигли вашего пользовательского предела (%{current}/%{max} активных пользователей). Пожалуйста, свяжитесь с sales@proyeksiapp.com для обновления своего плана до Корпоративной версии и добавьте дополнительных пользователей.
   warning_protocol_mismatch_html: >
 
   warning_bar:

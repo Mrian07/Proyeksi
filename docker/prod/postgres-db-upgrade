@@ -13,7 +13,7 @@ fi
 export PGBINOLD="/usr/lib/postgresql/$CURRENT_PGVERSION/bin"
 export PGBINNEW="/usr/lib/postgresql/$NEW_PGVERSION/bin"
 export PGDATAOLD="$PGDATA"
-if [ "$OPENPROJECT_INSTALLATION__TYPE" == "docker" ]; then
+if [ "$PROYEKSIAPP_INSTALLATION__TYPE" == "docker" ]; then
 	export PGDATANEW="$PGDATA-next"
 else
 	export PGDATANEW="/var/lib/postgresql/$NEW_PGVERSION/main"

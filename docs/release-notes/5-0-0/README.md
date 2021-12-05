@@ -14,7 +14,7 @@
 ProyeksiApp 5.0 extends the work package split screen functionality and
 allows users to create work packages from the work package list via the
 work package split screen
-([\#17549](https://community.openproject.com/work_packages/17549/activity)).
+([\#17549](https://community.proyeksiapp.com/work_packages/17549/activity)).
 
 Attachments can now be more easily added by using the drag and drop area
 on the work package split screen.
@@ -26,7 +26,7 @@ on the work package split screen.
 The existing work package screen has been replaced by a new responsive
 work package screen, making it possible to quickly switch from the work
 package page to the full screen view
-([\#16364](https://community.openproject.com/work_packages/16364/activity)).
+([\#16364](https://community.proyeksiapp.com/work_packages/16364/activity)).
 
 Similar to the work package split screen, the work package full screen
 contains information which can be accessed via different tabs while
@@ -42,12 +42,12 @@ package.
 
   - It is possible to edit and comment in one step in the work package
     split screen
-    ([\#20208](https://community.openproject.com/work_packages/20208/activity)).
+    ([\#20208](https://community.proyeksiapp.com/work_packages/20208/activity)).
   - Watcher behavior changed: User receive an email notification when
     they have been added as watchers.
   - Repository revisions are shown in the activity tab on the work
     package split screen
-    ([\#15422](https://community.openproject.com/work_packages/15422/activity)).
+    ([\#15422](https://community.proyeksiapp.com/work_packages/15422/activity)).
 
 
 
@@ -71,8 +71,8 @@ within a short time period are aggregated.
 Work package updates by the same user within this time period are shown
 as one activity entry. Email notifications are sent based on these
 aggregated
-activities ([\#20694](https://community.openproject.com/work_packages/20694/activity),
-[\#21035](https://community.openproject.com/work_packages/21035/activity)).
+activities ([\#20694](https://community.proyeksiapp.com/work_packages/20694/activity),
+[\#21035](https://community.proyeksiapp.com/work_packages/21035/activity)).
 
 
 
@@ -85,7 +85,7 @@ the “ProyeksiApp 5.0 upgrade guide”.
 
 With ProyeksiApp 5.0 the repository functionality has been significantly
 improved
-([\#20218](https://community.openproject.com/work_packages/20218/activity)):
+([\#20218](https://community.proyeksiapp.com/work_packages/20218/activity)):
 When deleting a project, the associated repository is deleted
 automatically as well.
 
@@ -131,7 +131,7 @@ are a lot of projects.
 
 The My Account page has been restructured and the settings are spread
 out across different sections
-([\#19753](https://community.openproject.com/work_packages/19753/activity)).
+([\#19753](https://community.proyeksiapp.com/work_packages/19753/activity)).
 
 Profile images can be set in my account section (local avatar plugin).
 
@@ -141,7 +141,7 @@ Profile images can be set in my account section (local avatar plugin).
 
 The project and user creation has been simplified and only shows the
 most important information
-([\#20884](https://community.openproject.com/work_packages/20884/activity)).
+([\#20884](https://community.proyeksiapp.com/work_packages/20884/activity)).
 
 The create project screen only shows the project name and required
 custom fields.
@@ -159,17 +159,17 @@ have been deprecated and removed with ProyeksiApp 5.0:
   - The field “Homepage” in the project settings has been removed to
     reduce complexity. Instead a custom field or the project description
     can be used to contain the homepage information
-    ([\#1928](https://community.openproject.com/work_packages/1928/activity)).
+    ([\#1928](https://community.proyeksiapp.com/work_packages/1928/activity)).
   - The field “Summary” in the project settings has been removed to
     reduce complexity. Instead of the summary the first row of the
     project description is shown on the project list.
   - Project dependencies have been removed from ProyeksiApp since they
     didn’t serve  a significant purpose. Additionally, the “second
     grouping criterion” has been removed from the timelines filters
-    ([\#21509](https://community.openproject.com/work_packages/21509/activity)).
+    ([\#21509](https://community.proyeksiapp.com/work_packages/21509/activity)).
   - The column “Set current rate” has been removed from the project
     member table
-    ([\#21501](https://community.openproject.com/work_packages/21501/activity)).
+    ([\#21501](https://community.proyeksiapp.com/work_packages/21501/activity)).
     A user’s hourly rate can be set in the user administration.
 
 The **copy** and **duplicate** functionality on the work package
@@ -183,20 +183,20 @@ included in ProyeksiApp 5.0:
 
   - The custom fields have been moved to a separate tab in the project
     settings
-    ([\#20841](https://community.openproject.com/work_packages/20841/activity)).
+    ([\#20841](https://community.proyeksiapp.com/work_packages/20841/activity)).
   - Status reports are no longer a separate menu entry in the side menu
     but they have been moved to the timeline
-    toolbar ([\#21822](https://community.openproject.com/work_packages/21822/activity)).
+    toolbar ([\#21822](https://community.proyeksiapp.com/work_packages/21822/activity)).
 
 ## **Improved design**
 
 ProyeksiApp 5.0 includes several design improvements. For example, the
 button styling has been improved
-([\#19675](https://community.openproject.com/work_packages/19675/activity)).
+([\#19675](https://community.proyeksiapp.com/work_packages/19675/activity)).
 
 The notification and alert messages for work packages have been
 re-styled
-([\#18623](https://community.openproject.com/work_packages/18623/activity))
+([\#18623](https://community.proyeksiapp.com/work_packages/18623/activity))
 and the layout has been improved in many other places as well.
 
 ## **Additional functionalities for API v3**
@@ -212,7 +212,7 @@ Please note that the API v3 is still a draft.
 
 Rails – the main framework used for ProyeksiApp – has been updated to
 Rails 4.2
-([\#20045](https://community.openproject.com/work_packages/20045/activity)).
+([\#20045](https://community.proyeksiapp.com/work_packages/20045/activity)).
 
 This ensures the technical reliability and allows future improvements.
 
@@ -222,15 +222,15 @@ Several new plugins have been published. They are included in the
 ProyeksiApp Packager edition.
 
   - ProyeksiApp – Local Avatars ([Read more on
-    GitHub](https://www.github.com/finnlabs/openproject-local_avatars))
+    GitHub](https://www.github.com/finnlabs/proyeksiapp-local_avatars))
   - ProyeksiApp – Announcements ([Read more on
-    GitHub](https://www.github.com/finnlabs/openproject-announcements))
+    GitHub](https://www.github.com/finnlabs/proyeksiapp-announcements))
   - ProyeksiApp – XLS-Export ([Read more on
-    GitHub](https://www.github.com/finnlabs/openproject-xls_export))
+    GitHub](https://www.github.com/finnlabs/proyeksiapp-xls_export))
   - ProyeksiApp – Dark-Theme ([Read more on
-    GitHub](https://www.github.com/finnlabs/openproject-themes-dark))
+    GitHub](https://www.github.com/finnlabs/proyeksiapp-themes-dark))
   - ProyeksiApp – OpenID-Connect ([Read more on
-    GitHub](https://www.github.com/finnlabs/openproject-openid_connect))
+    GitHub](https://www.github.com/finnlabs/proyeksiapp-openid_connect))
   - ProyeksiApp – OmniAuth OpenID-Connect-Providers ([Read more on
     GitHub](https://www.github.com/finnlabs/omniauth-openid-connect))
 

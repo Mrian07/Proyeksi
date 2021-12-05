@@ -180,7 +180,7 @@ export class HalResourceNotificationService {
   }
 
   protected showCustomError(errorResource:any, resource:HalResource) {
-    if (errorResource.errorIdentifier === 'urn:proyeksi-app:api:v3:errors:PropertyFormatError') {
+    if (errorResource.errorIdentifier === 'urn:proyeksiapp-org:api:v3:errors:PropertyFormatError') {
       const schema = this.schemaCache.of(resource).ofProperty(errorResource.details.attribute);
       const attributeName = schema.name;
       const attributeType = schema.type.toLowerCase();

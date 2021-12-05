@@ -11,7 +11,7 @@ We are pleased that you are thinking about contributing to ProyeksiApp! This gui
 
 ## Get in touch
 
-Please get in touch with us using our [development forum](https://community.openproject.com/projects/openproject/forums/7) or send us an email to info@openproject.org.
+Please get in touch with us using our [development forum](https://community.proyeksiapp.com/projects/proyeksiapp/forums/7) or send us an email to info@proyeksi.id.
 
 
 
@@ -19,11 +19,11 @@ Please get in touch with us using our [development forum](https://community.open
 
 We eat our own ice cream so we use ProyeksiApp for roadmap planning and team collaboration. Please have a look at the following pages:
 
-- [Development roadmap](https://community.openproject.com/projects/openproject/work_packages?query_id=1993)
+- [Development roadmap](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=1993)
 
-- [Wish list](https://community.openproject.com/versions/26)
+- [Wish list](https://community.proyeksiapp.com/versions/26)
 
-- [Bug backlog](https://community.openproject.com/projects/openproject/work_packages?query_id=491)
+- [Bug backlog](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=491)
 
 - [Reporting a bug](report-a-bug)
 
@@ -51,9 +51,9 @@ We prepared a set of documentation concepts for an introduction into various bac
 
 ## Translations
 
-If you want to contribute to the localization of ProyeksiApp and its plugins you can do so on the [Crowdin ProyeksiApp page](https://crowdin.com/project/openproject). Once a day we fetch those locales and automatically them to GitHub. Contributing there will ensure your language will be up to date for the next release!
+If you want to contribute to the localization of ProyeksiApp and its plugins you can do so on the [Crowdin ProyeksiApp page](https://crowdin.com/project/proyeksiapp). Once a day we fetch those locales and automatically them to GitHub. Contributing there will ensure your language will be up to date for the next release!
 
-More on this topic can be found in our [blog post](https://www.openproject.org/blog/help-translate-openproject-into-your-language/).
+More on this topic can be found in our [blog post](https://www.proyeksi.id/blog/help-translate-proyeksiapp-into-your-language/).
 
 ## Testing
 
@@ -71,7 +71,7 @@ We want to keep the Pull request list as cleaned up as possible - we will aim cl
 
 ## Security
 
-If you notice a security issue in ProyeksiApp, please send us a GPG encrypted email to security@openproject.com and describe the issue you found. Download our public GPG key BDCF E01E DE84 EA19 9AE1 72CE 7D66 9C6D 4753 3958 [here](https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D47533958).
+If you notice a security issue in ProyeksiApp, please send us a GPG encrypted email to security@proyeksiapp.com and describe the issue you found. Download our public GPG key BDCF E01E DE84 EA19 9AE1 72CE 7D66 9C6D 4753 3958 [here](https://keys.openpgp.org/vks/v1/by-fingerprint/BDCFE01EDE84EA199AE172CE7D669C6D47533958).
 
 Please include a description on how to reproduce the issue if possible. Our security team will get your email and will attempt to reproduce and fix the issue as soon as possible.
 
@@ -95,7 +95,7 @@ This code of conduct is adapted from the [Contributor Covenant](https://www.cont
 
 If you want to contribute to ProyeksiApp, please make sure to accept our Contributor License Agreement first. The contributor license agreement documents the rights granted by contributors to ProyeksiApp.
 
-[Read and accept the Contributor License Agreement here.](https://www.openproject.org/contributor-license-agreement/)
+[Read and accept the Contributor License Agreement here.](https://www.proyeksi.id/contributor-license-agreement/)
 
 # Additional resources
 
@@ -104,7 +104,7 @@ If you want to contribute to ProyeksiApp, please make sure to accept our Contrib
 * [Development environment for Mac OS X](development-environment-osx)
 * [Development environment using docker](development-environment-docker)
 
-* [Developing Plugins](create-openproject-plugin)
+* [Developing Plugins](create-proyeksiapp-plugin)
 * [Running Tests](running-tests)
 * [API Documentation](../api)
 * [Report a Bug](report-a-bug)

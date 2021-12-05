@@ -268,13 +268,13 @@ pt:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
                 A versão contém vários recursos e melhorias novos: <br> <ul class="%{list_styling_class}"> <li>Com as novas <b>notificações no aplicativo</b> você recebe todas as atualizações importantes diretamente do aplicativo, sem uma enxurrada de e-mail.</li> <li>O novo <b>centro de notificações</b> mostra todas as alterações, incluindo as opções de filtro, por ex., por motivo de notificação ou projetos. Ela até mesmo permite a edição direta em uma vista dividida.</li> <li>Configurações de Notificações <b>melhoradas</b> permitem que você ajuste de forma minuciosa para que ações e que projetos você deseja receber uma notificação.</li> <li><b>Lembretes por e-mail</b> podem ser configurados para que você receba atualizações importantes através de um e-mail com um resumo diário</li> <li>O auto-completador do pacote de trabalho para relações agora também mostra informações adicionais (nome do projeto, situação, ...) para uma fácil identificação do respectivo pacote de trabalho.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
-                A versão contém vários recursos importantes: <br> <ul class="%{list_styling_class}"> <li>Centro de notificações: Reduz o número de e-mails que você recebe. Ao invés disso você encontra e toma as ações necessárias sobre todas as notificações importantes em um único local central.</li> <li>Todos os arquivos IFC enviados agora também podem ser baixados.</li> <li>O envio e processamento de IFC ficou mais rápido e recebeu melhores mensagens de erro.</li> <li>O <a href="https://github.com/opf/openproject-revit-add-in">Complemento Revit do ProyeksiApp</a> passou por várias correções de erros.</li> </ul>
+                A versão contém vários recursos importantes: <br> <ul class="%{list_styling_class}"> <li>Centro de notificações: Reduz o número de e-mails que você recebe. Ao invés disso você encontra e toma as ações necessárias sobre todas as notificações importantes em um único local central.</li> <li>Todos os arquivos IFC enviados agora também podem ser baixados.</li> <li>O envio e processamento de IFC ficou mais rápido e recebeu melhores mensagens de erro.</li> <li>O <a href="https://github.com/opf/proyeksiapp-revit-add-in">Complemento Revit do ProyeksiApp</a> passou por várias correções de erros.</li> </ul>
     label_activate: "Ativar"
     label_add_column_after: "Adicionar coluna depois"
     label_add_column_before: "Adicionar coluna antes"
@@ -1122,7 +1122,7 @@ pt:
       role:
         label: 'Função em %{project}'
         no_roles_found: 'Nenhuma função encontrada'
-        description: 'Esta é uma função que %{principal} receberá quando se juntar ao projeto. A função define que ações  que ela pode realizar e que informações pode visualizar. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Aprenda mais sobre funções e permissões. </a>'
+        description: 'Esta é uma função que %{principal} receberá quando se juntar ao projeto. A função define que ações  que ela pode realizar e que informações pode visualizar. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Aprenda mais sobre funções e permissões. </a>'
         required: 'Selecione uma função'
         next_button: 'Próxima'
       message:

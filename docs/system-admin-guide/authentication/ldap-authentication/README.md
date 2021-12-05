@@ -55,7 +55,7 @@ If you use `start_tls` , certificate details and host names will be verified on 
 You can do this by using the [advanced configuration](../../../installation-and-operations/configuration/) function of ProyeksiApp. You can define the CA path by setting the following ENV variable:
 
 ```bash
-OPENPROJECT_LDAP__TLS__OPTIONS_CA__FILE="/path/to/the/root-ca.crt"
+PROYEKSIAPP_LDAP__TLS__OPTIONS_CA__FILE="/path/to/the/root-ca.crt"
 ```
 
 or by extending your production configuration of `config/configuration.yml` with the following segment:
@@ -129,7 +129,7 @@ Lastly, click on *Create* to save the LDAP authentication  mode. You will be red
 
 
 
-With the [ProyeksiApp Enterprise Edition](https://www.openproject.org/enterprise-edition/) it is possible to [synchronize LDAP and ProyeksiApp groups](./ldap-group-synchronization).
+With the [ProyeksiApp Enterprise Edition](https://www.proyeksi.id/enterprise-edition/) it is possible to [synchronize LDAP and ProyeksiApp groups](./ldap-group-synchronization).
 
 
 ## Multiple LDAP connections

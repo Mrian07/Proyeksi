@@ -160,8 +160,8 @@ default:
   smtp_port: 25
   smtp_domain: example.net
   smtp_authentication: :login
-  smtp_user_name: "openproject@example.net"
-  smtp_password: "my_openproject_password"
+  smtp_user_name: "proyeksiapp@example.net"
+  smtp_password: "my_proyeksiapp_password"
 
   # Prefix to the url-path. This path is then prepended to all
   # the routes and is used to correctly identify the path to the assets.
@@ -182,7 +182,7 @@ default:
   # Your ProyeksiApp instance needs to have write permission on this
   # directory.
   # Examples:
-  # attachments_storage_path: /var/openproject/files
+  # attachments_storage_path: /var/proyeksiapp/files
   # attachments_storage_path:
 
   # Grace period until uploaded but unassigned (i.e. to a container like work packages,

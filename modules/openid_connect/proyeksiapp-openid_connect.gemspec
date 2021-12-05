@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.authors     = 'ProyeksiApp GmbH'
   s.email       = 'info@proyeksiapp.com'
   s.summary     = 'ProyeksiApp OpenID Connect'
-  s.description = 'Adds OmniAuth OpenID Connect strategy providers to Openproject.'
+  s.description = 'Adds OmniAuth OpenID Connect strategy providers to ProyeksiApp.'
   s.license     = 'GPLv3'
 
   s.files = Dir['{app,config,db,lib}/**/*'] + %w(CHANGELOG.md README.md)

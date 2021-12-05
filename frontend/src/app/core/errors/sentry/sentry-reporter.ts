@@ -75,7 +75,7 @@ export class SentryReporter implements ErrorReporter {
   private client:Hub;
 
   constructor() {
-    const sentryElement = document.querySelector('meta[name=openproject_sentry]') as HTMLElement;
+    const sentryElement = document.querySelector('meta[name=proyeksiapp_sentry]') as HTMLElement;
     if (sentryElement !== null) {
       this.loadSentry(sentryElement);
     } else {

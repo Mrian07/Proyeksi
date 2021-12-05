@@ -12,7 +12,7 @@ namespace 'db:sessions' do
   end
 end
 
-namespace 'openproject' do
+namespace 'proyeksiapp' do
   namespace 'db' do
     desc 'Ensure database version compatibility'
     task check_connection: %w[environment db:load_config] do
@@ -30,7 +30,7 @@ namespace 'openproject' do
     end
 
     desc 'Ensure database version compatibility'
-    task ensure_database_compatibility: %w[openproject:db:check_connection] do
+    task ensure_database_compatibility: %w[proyeksiapp:db:check_connection] do
       ##
       # Ensure database server version is compatible
       ProyeksiApp::Database::check!
@@ -43,7 +43,7 @@ namespace 'openproject' do
         #{e.message}
 
         For more information, see the system requirements.
-        https://www.openproject.org/system-requirements/
+        https://www.proyeksi.id/system-requirements/
         ---------------------------------------------------
       MESSAGE
       Kernel.exit(1)
@@ -56,7 +56,7 @@ namespace 'openproject' do
         #{e.message}
 
         For more information, visit our upgrading documentation:
-        https://www.openproject.org/operations/upgrading/
+        https://www.proyeksi.id/operations/upgrading/
         ---------------------------------------------------
       MESSAGE
       Kernel.exit(1)
@@ -76,4 +76,4 @@ namespace 'openproject' do
   end
 end
 
-Rake::Task["db:migrate"].enhance ["openproject:db:ensure_database_compatibility"]
+Rake::Task["db:migrate"].enhance ["proyeksiapp:db:ensure_database_compatibility"]

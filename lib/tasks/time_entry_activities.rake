@@ -2,7 +2,7 @@
 
 require 'pg'
 
-namespace 'openproject' do
+namespace 'proyeksiapp' do
   desc 'Fixes an error in the migration to 10.4 by fetching data from a backup.'
   task :reassign_time_entry_activities do
     unless ENV['BACKUP_DATABASE_URL']

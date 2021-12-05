@@ -25,7 +25,7 @@ A project in ProyeksiApp can be understood as a project as defined above. Also, 
 | [View all projects](#view-all-projects)                 | Get an overview about all your projects.                     |
 | [Advanced project settings](#advanced-project-settings) | Configure further advanced settings for your project.        |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Open an existing project
 

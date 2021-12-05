@@ -51,7 +51,7 @@ It's best to monitor your server and its resource usage. You can always allocate
 
 See [here](/installation-and-operations/operation/control/#scaling-the-number-of-web-workers) how to scale those up in a packaged installation. If you are using docker-compose you can [scale](https://docs.docker.com/compose/reference/scale/) the web and worker services too.
 
-> <sup>1</sup> When using [docker-compose](https://github.com/opf/openproject-deploy/tree/stable/12/compose) (with `USE_PUMA=true`) you can use fewer web workers which may use a bit more RAM, however. For instance for 200 users a single web worker would be enough.
+> <sup>1</sup> When using [docker-compose](https://github.com/opf/proyeksiapp-deploy/tree/stable/12/compose) (with `USE_PUMA=true`) you can use fewer web workers which may use a bit more RAM, however. For instance for 200 users a single web worker would be enough.
 
 **Scaling horizontally**
 
@@ -90,7 +90,7 @@ Both the package and docker based installations will install and setup the follo
 * __Database__: [PostgreSQL](http://www.postgresql.org/) Version >= 13
 
 Starting in ProyeksiApp 12.0, PostgreSQL 13.0 will be a minimum requirement.
-PostgreSQL versions 9.6. and up will continue to work, but may result in incompatibilities and degraded performance in the future. We have a [migration guide on how to upgrade to PostgreSQL 13](https://www.openproject.org/docs/installation-and-operations/misc/migration-to-postgresql13/).
+PostgreSQL versions 9.6. and up will continue to work, but may result in incompatibilities and degraded performance in the future. We have a [migration guide on how to upgrade to PostgreSQL 13](https://www.proyeksi.id/docs/installation-and-operations/misc/migration-to-postgresql13/).
 
 ## Client
 

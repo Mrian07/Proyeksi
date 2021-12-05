@@ -26,6 +26,11 @@ GIT
       omniauth-openid-connect (>= 0.2.1)
 
 PATH
+  remote: modules/armor_proyeksi
+  specs:
+    proyeksiapp-armor (1.0.0)
+
+PATH
   remote: modules/auth_plugins
   specs:
     proyeksiapp-auth_plugins (1.0.0)
@@ -1050,6 +1055,7 @@ DEPENDENCIES
   posix-spawn (~> 0.3.13)
   prawn (~> 2.2)
   prawn-markup (~> 0.3.0)
+  proyeksiapp-armor!
   proyeksiapp-auth_plugins!
   proyeksiapp-auth_saml!
   proyeksiapp-avatars!

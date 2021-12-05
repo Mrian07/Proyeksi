@@ -21,30 +21,30 @@ The following steps outline the migration process to the ProyeksiApp package (po
 
 ## Stop ProyeksiApp on old server
 
-To stop the servers from being accessed on the old installation, stop the service with `service openproject stop` or `systemctl stop openproject` depending on your distribution.
+To stop the servers from being accessed on the old installation, stop the service with `service proyeksiapp stop` or `systemctl stop proyeksiapp` depending on your distribution.
 
 ## Install new package
 
-Follow the first step (**Installation**) of our packaged installation guides at https://www.openproject.org/download-and-installation/.
+Follow the first step (**Installation**) of our packaged installation guides at https://www.proyeksi.id/download-and-installation/.
 
-After this step, you should have an installed version of `openproject`.
+After this step, you should have an installed version of `proyeksiapp`.
 
 ### Moving Configuration
 
-On your old host, the configuration of the package resides in `/etc/openproject`.
+On your old host, the configuration of the package resides in `/etc/proyeksiapp`.
 
 This folder is split into two relevant files:
 
 **The installer.dat file**
-The `/etc/openproject/installer.dat` is the result of your input in the installation wizard (`openproject configure`). It contains all configuration options that the wizard generates, such as database URL, storage paths, hostname et cetera.
+The `/etc/proyeksiapp/installer.dat` is the result of your input in the installation wizard (`proyeksiapp configure`). It contains all configuration options that the wizard generates, such as database URL, storage paths, hostname et cetera.
 
-If most of your environment is the same (e..g, new server under the same domain), you will want to copy the entire configuration folder `/etc/openproject`. This will cause `openproject configure` to take all values from your previous installation.
+If most of your environment is the same (e..g, new server under the same domain), you will want to copy the entire configuration folder `/etc/proyeksiapp`. This will cause `proyeksiapp configure` to take all values from your previous installation.
 
 You can simply look through the installer.dat and change those values you need.
 
 **The conf.d folder**
 
-Additional environment, either generated from the wizard or entered by you through `openproject config:set` is written to  `/etc/openproject/conf.d/{server,database,other}`. Also look through those and check which contain relevant values for your new installation. 
+Additional environment, either generated from the wizard or entered by you through `proyeksiapp config:set` is written to  `/etc/proyeksiapp/conf.d/{server,database,other}`. Also look through those and check which contain relevant values for your new installation. 
 
 ### PostgreSQL database
 
@@ -54,7 +54,7 @@ In the following, the values `<dbuser>`, `<dbhost>` and `<dbname>` variables hav
 To read the values from the old installation, you can execute the following command:
 
 ```bash
-openproject config:get DATABASE_URL
+proyeksiapp config:get DATABASE_URL
 #=> e.g.: postgres://dbusername:dbpassword@dbhost:dbport/dbname
 ```
 
@@ -71,8 +71,8 @@ pg_restore -h <dbhost> -u <dbuser> -W <dbname> --clean postgresql-dump-201804080
 Your storage path can be shown on the old installation can be shown using the following command:
 
 ```
-openproject config:get ATTACHMENTS_STORAGE_PATH
-#=> e.g., /var/db/openproject/files
+proyeksiapp config:get ATTACHMENTS_STORAGE_PATH
+#=> e.g., /var/db/proyeksiapp/files
 ```
 
 Simply extract your attachments dump into that folder with `tar -vxfz <dump>.tar.gz`, creating it beforehand if needed.
@@ -87,24 +87,24 @@ Your SVN and Git storage paths can be shown on the old installation can be shown
 
 ```
 # Subversion
-openproject config:get SVN_REPOSITORIES
-#=> e.g., /var/db/openproject/svn
+proyeksiapp config:get SVN_REPOSITORIES
+#=> e.g., /var/db/proyeksiapp/svn
 
 # Git
-openproject config:get GIT_REPOSITORIES
-#=> e.g., /var/db/openproject/git
+proyeksiapp config:get GIT_REPOSITORIES
+#=> e.g., /var/db/proyeksiapp/git
 ```
 
 Simply extract your respective repository dumps into ech folder, creating it beforehand if needed. The dumps will only be created if you use that feature in your old installation.
 
 
 
-## Running openproject configure
+## Running proyeksiapp configure
 
 After you restored all data and updated your installer.dat, all you need to do is run through the configuration process of the packaged installation:
 
 ```bash
-openproject configure
+proyeksiapp configure
 ```
 
 It will take all values from your previous installation. *It may ask you additional wizard questions*  for new features that did not exist on the old installations, or the ones you removed/left empty in the `installer.dat` file.

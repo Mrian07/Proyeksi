@@ -15,7 +15,7 @@ keywords: Enterprise on-premises FAQ, enterprise edition, self-hosted
 
 The Enterprise on-premises edition is an upgrade of the self-hosted Community Edition. When you are already using the Community Edition, you can purchase an Enterprise on-premises edition license to upgrade to the Enterprise on-premises edition. To do this, follow these steps:
 
-1. Navigate to https://www.openproject.org/enterprise-edition/.
+1. Navigate to https://www.proyeksi.id/enterprise-edition/.
 2. Click on the "Book now" button.
 3. Follow the steps to purchase the Enterprise on-premises edition license. You will then receive an Enterprise on-premises edition license key by email which you can use to upgrade your Community Edition to the Enterprise on-premises edition. 
 
@@ -23,11 +23,11 @@ If you prefer to test the Enterprise on-premises edition before purchasing, you 
 
 You will keep your data during the whole process.
 
-Find more information [here](https://www.openproject.org/blog/enterprise-edition-upgrade-test-free/).
+Find more information [here](https://www.proyeksi.id/blog/enterprise-edition-upgrade-test-free/).
 
 ## How can I book additional users?
 
-Please use the link "Manage subscription" in the email you received confirming your subscription or contact sales@openproject.com. 
+Please use the link "Manage subscription" in the email you received confirming your subscription or contact sales@proyeksiapp.com. 
 
 ## Is it possible to only upgrade *some* users to the Enterprise Edition?
 
@@ -54,8 +54,8 @@ You don't have to do anything. Just don't renew your subscription. As soon as yo
 Until this issue is fixed you can set the token manually via the console. Copy the new token and then do the following.
 
 ```
-sudo openproject run console
-# if user the docker all-in-one container: docker exec -it openproject bundle exec rails console
+sudo proyeksiapp run console
+# if user the docker all-in-one container: docker exec -it proyeksiapp bundle exec rails console
 # if using docker-compose: docker-compose run --rm web bundle exec rails console
 ```
 Once in the console update the token like this:
@@ -66,5 +66,5 @@ After that you can quit the console by entering `exit`.
 
 ## Do you have a reseller program for ProyeksiApp?
 
-We provide a [reseller program](https://www.openproject.org/reseller-program/) exclusively for ProyeksiApp Enterprise on-premises (currently not for the Enterprise cloud) and offer a 25% discount on the regular prices as a part of this. Once you purchased the first Enterprise on-premises license for a client, you receive an Enterprise on-premises license for 25 users free of charge for your internal use. Please refer to the link above for more information and the conditions regarding this offer.
-Please [let us know](mailto:sales@openproject.com) if you have a particular customer request that we can send you a quote for.
+We provide a [reseller program](https://www.proyeksi.id/reseller-program/) exclusively for ProyeksiApp Enterprise on-premises (currently not for the Enterprise cloud) and offer a 25% discount on the regular prices as a part of this. Once you purchased the first Enterprise on-premises license for a client, you receive an Enterprise on-premises license for 25 users free of charge for your internal use. Please refer to the link above for more information and the conditions regarding this offer.
+Please [let us know](mailto:sales@proyeksiapp.com) if you have a particular customer request that we can send you a quote for.

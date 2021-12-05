@@ -20,16 +20,16 @@ Here you will get an overview how to sign in and register to an existing Proyeks
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Sign in with an existing account](#sign-in-with-an-existing-account) | Sign in with an existing account to an ProyeksiApp installation. |
 | [Sign in with Google](#sign-in-with-a-google-account)                  | Find out how to sign in with a Google account.               |
-| [Sign in from the ProyeksiApp website](#sign-in-from-the-openproject-website) | Sign in to an existing ProyeksiApp Cloud Edition from the website. |
+| [Sign in from the ProyeksiApp website](#sign-in-from-the-proyeksiapp-website) | Sign in to an existing ProyeksiApp Cloud Edition from the website. |
 | [Create a new account](#create-a-new-account)                | Create a new account for ProyeksiApp.                        |
 | [Choose your language](#choose-your-language)                | How to select your language in ProyeksiApp?                  |
 | [Reset your password](#reset-your-password)                  | If you forgot your password find out how to reset it.        |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Sign in with an existing account
 
-To sign in to an ProyeksiApp installation with an existing account, please enter the URL of your ProyeksiApp in a modern browser, e.g. documentation.openproject.com.
+To sign in to an ProyeksiApp installation with an existing account, please enter the URL of your ProyeksiApp in a modern browser, e.g. documentation.proyeksiapp.com.
 
 Type in your user name and password in the respective fields and click the blue Sign in button. You will then be signed in to your ProyeksiApp environment.
 

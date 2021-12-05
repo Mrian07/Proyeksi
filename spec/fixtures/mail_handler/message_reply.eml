@@ -1,15 +1,15 @@
 Date: Tue, 16 Mar 2021 16:24:54 +0100
-To: notifications@openproject.com
-From: j.doe@openproject.org
+To: notifications@proyeksiapp.com
+From: j.doe@proyeksi.id
 Message-ID: <af603fe2-8888-43ae-91c5-e6efcd93cf98@mtasv.net>
-References: <op.message-70917@openproject.com>
+References: <op.message-70917@proyeksiapp.com>
 Subject: [ProyeksiApp - General discussion - msg70917] Response to the original message
 Mime-Version: 1.0
 Content-Type: multipart/alternative;
  boundary="--==_mimepart_6050cdc2e4db_2257939a87567a";
  charset=UTF-8
 Content-Transfer-Encoding: 7bit
-X-ProyeksiApp-Project: openproject
+X-ProyeksiApp-Project: proyeksiapp
 X-ProyeksiApp-Wiki-Page-Id: 12559
 X-ProyeksiApp-Type: Forum
 
@@ -31,7 +31,7 @@ Test message
 
 --
 You have received this notification because you have either subscribed to it, or are involved in it.
-To change your notification preferences, please click here: https://community.openproject.org/my/mail_notifications
+To change your notification preferences, please click here: https://community.proyeksi.id/my/mail_notifications
 
 ----==_mimepart_6050cdc2e4db_2257939a87567a
 Content-Type: text/html;
@@ -53,7 +53,7 @@ Content-Transfer-Encoding: 7bit
 
       <hr />
       <span class="footer"><p class="op-uc-p">You have received this notification because you have either subscribed to it, or are involved in it.<br>
-To change your notification preferences, please click here: <a href="https://community.openproject.org/my/mail_notifications" class="op-uc-link">https://community.openproject.org/my/mail_notifications</a></p></span>
+To change your notification preferences, please click here: <a href="https://community.proyeksi.id/my/mail_notifications" class="op-uc-link">https://community.proyeksi.id/my/mail_notifications</a></p></span>
   </body>
 </html>
 

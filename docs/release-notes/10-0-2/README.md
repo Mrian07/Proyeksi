@@ -8,7 +8,7 @@ release_date: 2019-10-02
 
 # ProyeksiApp 10.0.2
 
-We released [ProyeksiApp 10.0.2](https://community.openproject.com/versions/1395).
+We released [ProyeksiApp 10.0.2](https://community.proyeksiapp.com/versions/1395).
 The release contains a security related fix and we urge updating to the newest version.
 
 
@@ -33,16 +33,16 @@ The environment variable *WEB_CONCURRENCY* has been used by ProyeksiApp for some
 
 In the upgrade to ProyeksiApp 10, a buildpack from Heroku was updated to control the packaging of the frontend and its assets (our Angular frontend), which appears to be using the same variable for setting internal workers that are unrelated to our setup. This has resulted in the *WEB_CONCURRENCY* value to be set to a number that would exhaust many servers being set up for ProyeksiApp and in turn resulting in bad performance of ProyeksiApp and any other service.
 
-This has been fixed in this release. We now use the environment variable *OPENPROJECT_WEB_WORKERS* to control the same setting. If you previously set *WEB_CONCURRENCY* in your application to a lower or higher number, please also set the *OPENPROJECT_WEB_WORKERS* variable to the same value.
+This has been fixed in this release. We now use the environment variable *PROYEKSIAPP_WEB_WORKERS* to control the same setting. If you previously set *WEB_CONCURRENCY* in your application to a lower or higher number, please also set the *PROYEKSIAPP_WEB_WORKERS* variable to the same value.
 
 ####  
 
 #### OtherBug fixes and changes
 
-- Fixed: Inconsistent row heights when resizing widgets [[#31048](https://community.openproject.com/wp/31048)]
-- Fixed: In Budgets projected unit costs and labor cost is not shown [[#31247](https://community.openproject.com/wp/31247)]
-- Fixed: Restart puma workers to cope with potential memory leaks [[#31262](https://community.openproject.com/wp/31262)]
-- Fixed: "Enterprise Edition" blue bar would be nicer horizontally [[#31265](https://community.openproject.com/wp/31265)]
+- Fixed: Inconsistent row heights when resizing widgets [[#31048](https://community.proyeksiapp.com/wp/31048)]
+- Fixed: In Budgets projected unit costs and labor cost is not shown [[#31247](https://community.proyeksiapp.com/wp/31247)]
+- Fixed: Restart puma workers to cope with potential memory leaks [[#31262](https://community.proyeksiapp.com/wp/31262)]
+- Fixed: "Enterprise Edition" blue bar would be nicer horizontally [[#31265](https://community.proyeksiapp.com/wp/31265)]
 
 ####  
 

@@ -29,20 +29,20 @@ As a result of this step, a second database, not the database ProyeksiApp is cur
 First, connect to the ProyeksiApp server and get the necessary details about your current database:
 
 ```bash
-$ openproject config:get DATABASE_URL
+$ proyeksiapp config:get DATABASE_URL
 #=> e.g.: postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<dbname>
 ```
 
 Example:
 
 ```bash
-$ openproject config:get DATABASE_URL
-postgres://openproject:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/openproject
+$ proyeksiapp config:get DATABASE_URL
+postgres://proyeksiapp:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/proyeksiapp
 ```
 
 ### 1.2 Create auxiliary database
 
-Using this connection string, the following command will create the database the backup will be restored to (named `openproject_backup` in this example):
+Using this connection string, the following command will create the database the backup will be restored to (named `proyeksiapp_backup` in this example):
 
 ```bash
 $ psql "postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<dbname>" -c 'CREATE DATABASE <new_dbname>'
@@ -52,50 +52,50 @@ CREATE DATABASE
 Example:
 
 ```bash
-$ psql "postgres://openproject:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/openproject" -c 'CREATE DATABASE openproject_backup'
+$ psql "postgres://proyeksiapp:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/proyeksiapp" -c 'CREATE DATABASE proyeksiapp_backup'
 CREATE DATABASE
 ```
 
 The command above might not work for some installations. In that case the following is a viable alternative:
 
 ```bash
-$ su postgres -c createdb -O <dbusernamer> openproject_backup
+$ su postgres -c createdb -O <dbusernamer> proyeksiapp_backup
 ```
 
 Example:
 
 ```bash
-$ su postgres -c createdb -O openproject openproject_backup
+$ su postgres -c createdb -O proyeksiapp proyeksiapp_backup
 ```
 
 ### 1.3 Restore backup to auxiliary database
 
-Next, that newly created database will receive the data from a backup file which typically can be found in `/var/db/openproject/backup`
+Next, that newly created database will receive the data from a backup file which typically can be found in `/var/db/proyeksiapp/backup`
 
 ```bash
-$ ls -al /var/db/openproject/backup/
+$ ls -al /var/db/proyeksiapp/backup/
 total 1680
-drwxr-xr-x 2 openproject openproject    4096 Nov 19 21:00 .
-drwxr-xr-x 6 openproject openproject    4096 Nov 19 21:00 ..
--rw-r----- 1 openproject openproject 1361994 Nov 19 21:00 attachments-20191119210038.tar.gz
--rw-r----- 1 openproject openproject    1060 Nov 19 21:00 conf-20191119210038.tar.gz
--rw-r----- 1 openproject openproject     126 Nov 19 21:00 git-repositories-20191119210038.tar.gz
--rw-r----- 1 openproject openproject  332170 Nov 19 21:00 postgresql-dump-20191119210038.pgdump
--rw-r----- 1 openproject openproject     112 Nov 19 21:00 svn-repositories-20191119210038.tar.gz
+drwxr-xr-x 2 proyeksiapp proyeksiapp    4096 Nov 19 21:00 .
+drwxr-xr-x 6 proyeksiapp proyeksiapp    4096 Nov 19 21:00 ..
+-rw-r----- 1 proyeksiapp proyeksiapp 1361994 Nov 19 21:00 attachments-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp    1060 Nov 19 21:00 conf-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp     126 Nov 19 21:00 git-repositories-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp  332170 Nov 19 21:00 postgresql-dump-20191119210038.pgdump
+-rw-r----- 1 proyeksiapp proyeksiapp     112 Nov 19 21:00 svn-repositories-20191119210038.tar.gz
 ```
 
 We will need the most recently created (but created before the migration to 10.4) file following the schema `postgresql-dump-<TIMESTAMP>.pgdump`.
 
-Using that file we can then restore the database to the newly created database (called `openproject_backup` in our example). **In the following steps, ensure that you do not restore to the currently running database**. 
+Using that file we can then restore the database to the newly created database (called `proyeksiapp_backup` in our example). **In the following steps, ensure that you do not restore to the currently running database**. 
 
 ```bash
-$ pg_restore -d "postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<new_dbname>" /var/db/openproject/backup/postgresql-dump-<TIMESTAMP>.pgdump` 
+$ pg_restore -d "postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<new_dbname>" /var/db/proyeksiapp/backup/postgresql-dump-<TIMESTAMP>.pgdump` 
 ```
 
 Example:
 
 ```bash
-$ pg_restore -d "postgres://openproject:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/openproject_backup" /var/db/openproject/backup/postgresql-dump-20191119210038.pgdump` 
+$ pg_restore -d "postgres://proyeksiapp:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/proyeksiapp_backup" /var/db/proyeksiapp/backup/postgresql-dump-20191119210038.pgdump` 
 ```
 
 That command will restore the contents of the backup file into the auxiliary database.
@@ -105,13 +105,13 @@ That command will restore the contents of the backup file into the auxiliary dat
 The script that fixes the time entries can then be called:
 
 ```bash
-$ BACKUP_DATABASE_URL="postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<new_dbname>" sudo openproject run bundle exec rails openproject:reassign_time_entry_activities
+$ BACKUP_DATABASE_URL="postgres://<dbusername>:<dbpassword>@<dbhost>:<dbport>/<new_dbname>" sudo proyeksiapp run bundle exec rails proyeksiapp:reassign_time_entry_activities
 ```
 
 Example
 
 ```bash
-$ BACKUP_DATABASE_URL="postgres://openproject:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/openproject_backup" sudo openproject run bundle exec rails openproject:reassign_time_entry_activities
+$ BACKUP_DATABASE_URL="postgres://proyeksiapp:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/proyeksiapp_backup" sudo proyeksiapp run bundle exec rails proyeksiapp:reassign_time_entry_activities
 ```
 
 The script will then print out the number of time entries it has fixed.
@@ -135,6 +135,6 @@ DROP DATABASE
 Example:
 
 ```bash
-$ psql "postgres://openproject:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/openproject" -c 'DROP DATABASE openproject_backup'
+$ psql "postgres://proyeksiapp:L0BuQvlagjmxdOl6785kqwsKnfCEx1dv@127.0.0.1:45432/proyeksiapp" -c 'DROP DATABASE proyeksiapp_backup'
 DROP DATABASE
 ```

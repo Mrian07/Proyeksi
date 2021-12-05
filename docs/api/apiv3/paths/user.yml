@@ -204,7 +204,7 @@ patch:
         schema:
           example:
             admin: true
-            email: h.wurst@openproject.com
+            email: h.wurst@proyeksiapp.com
             firstName: Hans
             language: en
             lastName: Wurst

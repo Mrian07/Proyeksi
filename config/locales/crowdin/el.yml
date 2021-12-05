@@ -76,7 +76,7 @@ el:
     technical_warning_html: |
       Αυτή η φόρμα LDAP απαιτεί τεχνικές γνώσεις για την LDAP / Active Directory εγκατάσταση σας.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/"> Παρακαλούμε επισκεφθείτε την τεκμηρίωση μας για λεπτομερείς οδηγίες</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/"> Παρακαλούμε επισκεφθείτε την τεκμηρίωση μας για λεπτομερείς οδηγίες</a>.
     attribute_texts:
       name: Αυθαίρετο όνομα της σύνδεσης LDAP
       host: Όνομα εξυπηρετητή LDAP ή διεύθυνση IP
@@ -86,7 +86,7 @@ el:
       system_user_dn_html: |
         Εισάγετε το DN του χρήστη που χρησιμοποιείται για πρόσβαση μόνο με δικαιώματα ανάγνωσης.
         <br/>
-        Παράδειγμα: uid=openproject,ou=system,dc=example,dc=com
+        Παράδειγμα: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Εισάγετε τον δεσμευτικό κωδικό πρόσβασης του χρήστη συστήματος
       base_dn: |
         Εισάγετε το Base DN του υποδέντρου στο LDAP που θέλετε το ProyeksiApp να αναζητήσει χρήστες και ομάδες.
@@ -1649,7 +1649,7 @@ el:
   label_open_menu: "Άνοιγμα μενού"
   label_open_work_packages: "ανοιχτό"
   label_open_work_packages_plural: "ανοιχτό"
-  label_openproject_website: "Ιστοσελίδα ProyeksiApp"
+  label_proyeksiapp_website: "Ιστοσελίδα ProyeksiApp"
   label_optional_description: "Περιγραφή"
   label_options: "Επιλογές"
   label_other: "Άλλο"
@@ -2794,7 +2794,7 @@ el:
   warning_user_limit_reached: >
     Επετεύχθη το όριο χρηστών. Δεν μπορείτε να ενεργοποιήσετε άλλους χρήστες. Παρακαλούμε <a href="%{upgrade_url}">αναβαθμίστε το πλάνο σας</a> ή αποκλείστε μέλη για να επιτρέψετε περισσότερους χρήστες.
   warning_user_limit_reached_instructions: >
-    Έχετε φτάσει το όριο χρηστών (%{current}/%{max} ενεργοί χρήστες). Παρακαλούμε επικοινωνήστε με το sales@openproject.com για να αναβαθμίσετε σε Έκδοση για Επιχειρήσεις και να προσθέσετε επιπλέον χρήστες.
+    Έχετε φτάσει το όριο χρηστών (%{current}/%{max} ενεργοί χρήστες). Παρακαλούμε επικοινωνήστε με το sales@proyeksiapp.com για να αναβαθμίσετε σε Έκδοση για Επιχειρήσεις και να προσθέσετε επιπλέον χρήστες.
   warning_protocol_mismatch_html: >
 
   warning_bar:

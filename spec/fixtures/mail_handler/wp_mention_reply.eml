@@ -1,42 +1,42 @@
-Return-Path: <j.doe@openproject.org>
-Delivered-To: j.doe@openproject.org
+Return-Path: <j.doe@proyeksi.id>
+Delivered-To: j.doe@proyeksi.id
 Received: from director-06.heinlein-hosting.de ([80.241.60.215])
 	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
 	by dobby34b.heinlein-hosting.de with LMTPS
 	id IICSCVE9iWE5eAEAlVRbNA
-	(envelope-from <j.doe@openproject.org>)
-	for <j.doe@openproject.org>; Mon, 08 Nov 2021 16:08:01 +0100
+	(envelope-from <j.doe@proyeksi.id>)
+	for <j.doe@proyeksi.id>; Mon, 08 Nov 2021 16:08:01 +0100
 Received: from mx2.mailbox.org ([80.241.60.215])
 	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
 	by director-06.heinlein-hosting.de with LMTPS
 	id SGvRB1E9iWEWWAEADc0bRg
-	(envelope-from <j.doe@openproject.org>)
-	for <j.doe@openproject.org>; Mon, 08 Nov 2021 16:08:01 +0100
+	(envelope-from <j.doe@proyeksi.id>)
+	for <j.doe@proyeksi.id>; Mon, 08 Nov 2021 16:08:01 +0100
 X-Virus-Scanned: amavisd-new at heinlein-support.de
 Authentication-Results: spamfilter02.heinlein-hosting.de (amavisd-new);
 	dkim=pass (2048-bit key) header.d=example.com
-X-policyd-weight:  NOT_IN_SBL_XBL_SPAMHAUS=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .openproject. - helo: .mout-b-110.mailbox. - helo-domain: .mailbox.)  FROM/MX_MATCHES_HELO(DOMAIN)=-2; rate: -5.5
+X-policyd-weight:  NOT_IN_SBL_XBL_SPAMHAUS=-1.5 CL_IP_EQ_HELO_IP=-2 (check from: .proyeksiapp. - helo: .mout-b-110.mailbox. - helo-domain: .mailbox.)  FROM/MX_MATCHES_HELO(DOMAIN)=-2; rate: -5.5
 Received: from mout-b-110.mailbox.org (mout-b-110.mailbox.org [IPv6:2001:67c:2050:101:465::110])
 	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
 	 key-exchange ECDHE (P-384) server-signature RSA-PSS (4096 bits) server-digest SHA256)
 	(No client certificate requested)
 	by mx2.mailbox.org (Postfix) with ESMTPS id 1BD41A101D
-	for <j.doe@openproject.org>; Mon,  8 Nov 2021 16:07:48 +0100 (CET)
+	for <j.doe@proyeksi.id>; Mon,  8 Nov 2021 16:07:48 +0100 (CET)
 Received: from smtp202.mailbox.org (smtp202.mailbox.org [80.241.60.245])
 	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
 	 key-exchange ECDHE (P-384) server-signature RSA-PSS (4096 bits) server-digest SHA256)
 	(No client certificate requested)
 	by mout-b-110.mailbox.org (Postfix) with ESMTPS id 4HnvcM55hTzQjhq
-	for <j.doe@openproject.org>; Mon,  8 Nov 2021 16:07:47 +0100 (CET)
+	for <j.doe@proyeksi.id>; Mon,  8 Nov 2021 16:07:47 +0100 (CET)
 Content-Type: multipart/alternative;
  boundary="------------Oam4uVyurTHSwkdjLNRM4Y6W"
 Message-ID: <a50d0209-0256-2b8a-aa09-86459ac2d4a0@example.com>
 Date: Mon, 8 Nov 2021 16:07:39 +0100
 MIME-Version: 1.0
 Subject: Bob Bobbit mentioned you in #399733 - Some subject of the bug
-To:  ProyeksiApp <notifications@openproject.org>
+To:  ProyeksiApp <notifications@proyeksi.id>
 References: <op.work_package-39733@example.net> <op.journal-99999999@example.net> <af603fe2-9979-43ae-91c5-e6efcd93cf98@mtasv.net>
-From: Jane Doe <j.doe@openproject.org>
+From: Jane Doe <j.doe@proyeksi.id>
 In-Reply-To: <af603fe2-9979-43ae-91c5-e6efcd93cf98@mtasv.net>
 X-Rspamd-Queue-Id: 1BD41A101D
 X-Rspamd-Score: -5.45 / 15.00 / 15.00
@@ -49,7 +49,7 @@ Content-Transfer-Encoding: 8bit
 
 The text of the reply.
 
-Am 08.11.21 um 15:28 schrieb notifications@openproject.org:
+Am 08.11.21 um 15:28 schrieb notifications@proyeksi.id:
 >
 >
 > Hey Jane!
@@ -105,7 +105,7 @@ Content-Transfer-Encoding: quoted-printable
     </p>
     <div class=3D"moz-cite-prefix">Am 08.11.21 um 15:28 schrieb
       <a class=3D"moz-txt-link-abbreviated" href=3D"mailto:notifications@=
-openproject.org">notifications@openproject.org</a>:<br>
+proyeksi.id">notifications@proyeksi.id</a>:<br>
     </div>
     <blockquote type=3D"cite"
       cite=3D"mid:af603fe2-9979-43ae-91c5-e6efcd93cf98@mtasv.net">

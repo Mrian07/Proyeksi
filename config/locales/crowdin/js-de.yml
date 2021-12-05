@@ -268,13 +268,13 @@ de:
           #Otherwise, e.g. chinese might still have the translations for 10.0 in the 12.0 release.
           '12_0':
             standard:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
                 Das Release besteht aus folgenden Features und Verbesserungen: <br> <ul class="%{list_styling_class}"> <li>Mit den neuen<b>In-App-Benachrichtigungen</b> erhalten Sie wichtige Updates direkt in der Anwendung und werden nicht mit zahlreichen E-Mails überfordert.</li> <li>Die neue <b>Benachrichtigungszentrale</b> zeigt alle Aktivitäten mit intuitiven Filtermöglichkeiten wie z. B. Benachrichtungsgrund oder Projekte. Eine Split-View erlaubt das leichte Bearbeiten aus der Zentrale.</li> <li>Verbesserte <b>Einstellungen für Benachrichtigungen</b> erlaubt das genaue Einstellen für einzelne Projekte und Aktionen, die zu Benachrichtigungen führen sollen.</li> <li><b>E-Mail-Erinnerungen</b> erlauben eine regelmäßige Zusammenfassung ausstehender Benachrichtungen</li> <li>Die Autovervollständigung von Arbeitspaketen enthält zusätzliche Informationen (Projektname, Status, ...) für einfachere Identifizierung.</li> </ul>
             bim:
-              learn_about_link: https://www.openproject.org/blog/openproject-12-0-release
+              learn_about_link: https://www.proyeksi.id/blog/proyeksiapp-12-0-release
               new_features_html: >
-                Das Release besteht aus folgenden Features und Verbesserungen: <br> <ul class="%{list_styling_class}"> <li>Benachrichtigungszentrale: Reduziert die Anzahl an E-Mails, die Sie erhalten. Erhalten und verarbeiten Sie Benachrichtigungen an einer Stelle.</li> <li>Alle hochgeladenen IFC-Dateien können jetzt komfortabel heruntergeladen werden.</li> <li>Das Hochladen und Verarbeiten von IFC-Dateien sowie dessen Fehlerbehandlung wurde verbessert.</li> <li>Das <a href="https://github.com/opf/openproject-revit-add-in">ProyeksiApp Revit Add-in</a> wurde verbessert.</li> </ul>
+                Das Release besteht aus folgenden Features und Verbesserungen: <br> <ul class="%{list_styling_class}"> <li>Benachrichtigungszentrale: Reduziert die Anzahl an E-Mails, die Sie erhalten. Erhalten und verarbeiten Sie Benachrichtigungen an einer Stelle.</li> <li>Alle hochgeladenen IFC-Dateien können jetzt komfortabel heruntergeladen werden.</li> <li>Das Hochladen und Verarbeiten von IFC-Dateien sowie dessen Fehlerbehandlung wurde verbessert.</li> <li>Das <a href="https://github.com/opf/proyeksiapp-revit-add-in">ProyeksiApp Revit Add-in</a> wurde verbessert.</li> </ul>
     label_activate: "Aktiviere"
     label_add_column_after: "Spalte danach hinzufügen"
     label_add_column_before: "Spalte davor hinzufügen"
@@ -1122,7 +1122,7 @@ de:
       role:
         label: 'Rolle in %{project}'
         no_roles_found: 'Keine Rollen gefunden'
-        description: 'Dies ist die Rolle, die %{principal} erhalten wird, wenn sie Ihrem Projekt beitreten. Die Rolle legt fest, welche Maßnahmen sie ergreifen dürfen und welche Informationen ihnen erlaubt sind. <a href="https://docs.openproject.org/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Erfahren Sie mehr über Rollen und Berechtigungen. </a>'
+        description: 'Dies ist die Rolle, die %{principal} erhalten wird, wenn sie Ihrem Projekt beitreten. Die Rolle legt fest, welche Maßnahmen sie ergreifen dürfen und welche Informationen ihnen erlaubt sind. <a href="https://docs.proyeksi.id/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions" target="_blank"> Erfahren Sie mehr über Rollen und Berechtigungen. </a>'
         required: 'Bitte eine Rolle auswählen'
         next_button: 'Weiter'
       message:

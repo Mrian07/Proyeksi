@@ -30,7 +30,7 @@ Your projects can be available publicly or internally. ProyeksiApp does not limi
 | [Export project list](#export-projects)                      | You can export the project list to XLS or CSV.               |
 | [Project overarching reports](#project-overarching-reports)  | How to create project overarching reports across multiple projects? |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Projects-Introduction.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Select a project
 
@@ -153,7 +153,7 @@ Navigate to the [project settings](project-settings) and click **Set as template
 You can create a new project by using an existing template. This causes the properties of the project template to be copied to the new project. Find out in our Getting started guide how to [create a new project](../../getting-started/projects/#create-a-new-project) in ProyeksiApp. 
 Another way for using a template project would be to [copy it](#copy-a-project).
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Templates.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Templates.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ### Copy a project
 

@@ -23,10 +23,10 @@ Create budgets, log time and costs on specific work packages and create time and
 
 Watch this short video to get a first overview about time and cost reporting in ProyeksiApp.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Track-Time-and-Costs.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Track-Time-and-Costs.mp4" type="video/mp4" controls="" style="width:100%"></video>
 ## Frequently asked questions (FAQ)
 
 ### Does ProyeksiApp provide resource management?
 
-Please note that ProyeksiApp currently does not yet support resource management. However, this is scheduled as one of our main topics. You can check out our roadmap [here](https://community.openproject.com/projects/openproject/work_packages?query_id=1993).
+Please note that ProyeksiApp currently does not yet support resource management. However, this is scheduled as one of our main topics. You can check out our roadmap [here](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=1993).
 

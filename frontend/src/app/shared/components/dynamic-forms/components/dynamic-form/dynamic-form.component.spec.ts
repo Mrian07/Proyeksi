@@ -267,7 +267,7 @@ describe('DynamicFormComponent', () => {
       return 'test translation';
     },
   };
-  const apiV3Base = 'http://www.openproject.com/api/v3/';
+  const apiV3Base = 'http://www.proyeksiapp.com/api/v3/';
   const IPathHelperServiceStub = { api: { v3: { apiV3Base } } };
   let toastService:jasmine.SpyObj<ToastService>;
   let dynamicFormService:jasmine.SpyObj<DynamicFormService>;

@@ -19,11 +19,11 @@ We advise anyone to update their ProyeksiApp installation.
 
 Packager support for easier installation has been extended to also
 include RHEL, CentOS and Ubuntu
-([\#17165](https://community.openproject.org/work_packages/17165 "Packaged based installer for RHEL, CentOS and Ubuntu (closed)")).  
+([\#17165](https://community.proyeksi.id/work_packages/17165 "Packaged based installer for RHEL, CentOS and Ubuntu (closed)")).  
 Find the current packager version of ProyeksiApp here: [ProyeksiApp
-Packager installation](https://packager.io/gh/opf/openproject).
+Packager installation](https://packager.io/gh/opf/proyeksiapp).
 
 For a complete list of changes, please refer to the [ProyeksiApp 4.0.1
-query](https://community.openproject.org/versions/530).
+query](https://community.proyeksi.id/versions/530).
 
 

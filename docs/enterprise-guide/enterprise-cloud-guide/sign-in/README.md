@@ -15,11 +15,11 @@ If you do not have an ProyeksiApp Enterprise cloud edition, you can [set up your
 
 ## Sign in via the ProyeksiApp website
 
-In order to sign in to your ProyeksiApp Enterprise cloud edition via our website, navigate to [www.openproject.org](https://www.openproject.org/) and click the **Sign in button** at the top of the page.
+In order to sign in to your ProyeksiApp Enterprise cloud edition via our website, navigate to [www.proyeksi.id](https://www.proyeksi.id/) and click the **Sign in button** at the top of the page.
 
 ![Sign-in-website](Sign-in-website.png)
 
-You are asked to enter your ProyeksiApp organization name. This is the name that appears in the first part of the URL, e.g. my-organization.openproject.com.
+You are asked to enter your ProyeksiApp organization name. This is the name that appears in the first part of the URL, e.g. my-organization.proyeksiapp.com.
 
 Click the green **Sign in button** and you will be logged into your ProyeksiApp installation.
 
@@ -49,4 +49,4 @@ Click the link in the email to get directed to your installation. If you are mem
 
 Watch this video about sign in and registration:
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Sign-in-and-Registration-2.mp4" type="video/mp4" controls="" style="width:100%"></video>

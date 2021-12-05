@@ -14,7 +14,7 @@ Intelligent workflows with custom actions support you to easily update several w
 
 You can use custom actions to standardize your workflows, avoid errors and reduce manual work for updates.
 
-The intelligent workflows with custom actions are a premium feature and only available for [Enterprise Edition](https://www.openproject.org/enterprise-edition/) and [Cloud Edition](https://www.openproject.org/hosting/) customers.
+The intelligent workflows with custom actions are a premium feature and only available for [Enterprise Edition](https://www.proyeksi.id/enterprise-edition/) and [Cloud Edition](https://www.proyeksi.id/hosting/) customers.
 
 ## Create custom actions
 

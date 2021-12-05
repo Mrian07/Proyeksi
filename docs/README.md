@@ -9,20 +9,20 @@ keywords: help, documentation
 # ProyeksiApp Documentation
 
 <div class="alert alert-info" role="alert">
-**Note**: To better read our ProyeksiApp Documentation, please go to [www.openproject.org/docs/](https://www.openproject.org/docs/).
+**Note**: To better read our ProyeksiApp Documentation, please go to [www.proyeksi.id/docs/](https://www.proyeksi.id/docs/).
 </div>
 
 ToDo: check all links.
 
 ## Installation
 
-Get started with installing and upgrading ProyeksiApp using [our Installation Guide starting point](https://www.openproject.org/docs/installation-and-operations/).
+Get started with installing and upgrading ProyeksiApp using [our Installation Guide starting point](https://www.proyeksi.id/docs/installation-and-operations/).
 
 The guides for [manual](./installation-and-operations/installation/manual), [packaged](./installation-and-operations/installation/packaged) and [Docker-based](./installation-and-operations/installation/docker) installations are provided.
 
 ## Upgrading
 
-The detailed upgrade instructions for our packaged installer are located on the [official website](https://www.openproject.org/download/upgrade-guides/).
+The detailed upgrade instructions for our packaged installer are located on the [official website](https://www.proyeksi.id/download/upgrade-guides/).
 
 The guides for [upgrading](./installation-and-operations/operation/upgrading) are provided.
 
@@ -37,13 +37,13 @@ The guides for [upgrading](./installation-and-operations/operation/upgrading) ar
 
 ## User Guides
 
-Please see our [User Guide pages](https://www.openproject.org/docs/user-guide/) for detailed documentation on the functionality of ProyeksiApp.
+Please see our [User Guide pages](https://www.proyeksi.id/docs/user-guide/) for detailed documentation on the functionality of ProyeksiApp.
 
 
 ## Development
 
 * [Full development environment for developers on Ubuntu](./development/development-environment-ubuntu) and [Mac OS X](./development/development-environment-osx)
-* [Developing plugins](./development/create-openproject-plugin)
+* [Developing plugins](./development/create-proyeksiapp-plugin)
 * [Developing OmniAuth Plugins](./development/create-omniauth-plugin)
 * [Running tests](./development/running-tests)
 * [Code review guidelines](./development/code-review-guidelines)

@@ -76,7 +76,7 @@ sl:
     technical_warning_html: |
       Ta obrazec LDAP zahteva tehnično znanje o vaši namestitvi LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Za podrobna navodila obiščite našo dokumentacijo</a>
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Za podrobna navodila obiščite našo dokumentacijo</a>
     attribute_texts:
       name: Samovoljno ime povezave LDAP
       host: Ime gostitelja LDAP ali IP naslov
@@ -86,7 +86,7 @@ sl:
       system_user_dn_html: |
         Vnesite DN uporabnika sistema, ki se uporablja za dostop samo za branje.
         <br/>
-        Primer: uid = openproject, ou = sistem, dc = primer, dc = com
+        Primer: uid = proyeksiapp, ou = sistem, dc = primer, dc = com
       system_user_password: Vnesite geslo za vezavo uporabnika sistema
       base_dn: |
         Vnesite Base DN poddrevesa v LDAP, če želite, da vam ProyeksiApp išče uporabnike ter skupine.
@@ -1684,7 +1684,7 @@ sl:
   label_open_menu: "Odpri meni"
   label_open_work_packages: "odpri"
   label_open_work_packages_plural: "odpri"
-  label_openproject_website: "Spletno mesto ProyeksiApp"
+  label_proyeksiapp_website: "Spletno mesto ProyeksiApp"
   label_optional_description: "Opis"
   label_options: "Možnosti"
   label_other: "Drugo"
@@ -2837,7 +2837,7 @@ sl:
   warning_user_limit_reached: >
     Dosežena omejitev uporabnika. Ne morete več aktivirati uporabnikov. <a href="%{upgrade_url}"> nadgradite svoj načrt </a> ali blokirajte člane, da omogočite dodatne uporabnike.
   warning_user_limit_reached_instructions: >
-    Dosegli ste uporabniško omejitev (%{current} /%{max} aktivni uporabniki).Prosimo kontaktirajte sales@openproject.com  če želite nadgraditi načrt za Enterprise Edition in dodati dodatne uporabnike.
+    Dosegli ste uporabniško omejitev (%{current} /%{max} aktivni uporabniki).Prosimo kontaktirajte sales@proyeksiapp.com  če želite nadgraditi načrt za Enterprise Edition in dodati dodatne uporabnike.
   warning_protocol_mismatch_html: >
 
   warning_bar:

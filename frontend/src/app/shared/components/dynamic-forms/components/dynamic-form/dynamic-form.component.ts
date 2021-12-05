@@ -81,7 +81,7 @@ import { DynamicFormService } from '../../services/dynamic-form/dynamic-form.ser
 *
 * - initialPayload @Input:
 *   Allows to provide and initial payload to the form settings request. Checkout
-*   the [forms documentation](https://docs.openproject.org/api/forms/).
+*   the [forms documentation](https://docs.proyeksiapp.org/api/forms/).
 *
 * - model @Input:
 *   Allows to change model of the form.
@@ -125,7 +125,7 @@ import { DynamicFormService } from '../../services/dynamic-form/dynamic-form.ser
   ],
 })
 export class DynamicFormComponent extends UntilDestroyedMixin implements OnChanges {
-  /** Backend form URL (e.g. https://community.openproject.org/api/v3/projects/dev-large/form) */
+  /** Backend form URL (e.g. https://community.proyeksiapp.org/api/v3/projects/dev-large/form) */
   @Input() formUrl?:string;
 
   /** When using the formUrl @Input(), set the http method to use if it is not 'POST' */

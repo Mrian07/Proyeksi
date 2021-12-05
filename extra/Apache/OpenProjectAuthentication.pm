@@ -26,7 +26,7 @@ my @directives = (
     name => 'ProyeksiAppUrl',
     req_override => OR_AUTHCFG,
     args_how => TAKE1,
-    errmsg => 'URL of your (local) ProyeksiApp. (e.g. http://localhost/ or http://www.example.com/openproject/)',
+    errmsg => 'URL of your (local) ProyeksiApp. (e.g. http://localhost/ or http://www.example.com/proyeksiapp/)',
   },
   {
     name => 'ProyeksiAppApiKey',
@@ -97,9 +97,9 @@ sub authen_handler {
   }
 }
 
-# we send a request to the openproject sys api
+# we send a request to the proyeksiapp sys api
 # and use the user's given login and password for basic auth
-# for accessing the openproject sys api an api key is needed
+# for accessing the proyeksiapp sys api an api key is needed
 sub is_access_allowed {
   my $login = shift;
   my $password = shift;
@@ -115,28 +115,28 @@ sub is_access_allowed {
   my $url_base = $cfg->{ProyeksiAppUrl};
   $url_base =~ s|/$||;
 
-  my $openproject_url = "$url_base/sys/repo_auth";
-  my $openproject_unparsed_uri = $r->unparsed_uri;
-  my $openproject_location = $r->location;
-  my $openproject_git_smart_http = 0;
+  my $proyeksiapp_url = "$url_base/sys/repo_auth";
+  my $proyeksiapp_unparsed_uri = $r->unparsed_uri;
+  my $proyeksiapp_location = $r->location;
+  my $proyeksiapp_git_smart_http = 0;
   if (defined $cfg->{ProyeksiAppGitSmartHttp} and $cfg->{ProyeksiAppGitSmartHttp}) {
-    $openproject_git_smart_http = 1;
+    $proyeksiapp_git_smart_http = 1;
   }
 
-  my $openproject_req = POST $openproject_url , [
+  my $proyeksiapp_req = POST $proyeksiapp_url , [
       repository => $identifier,
       key => $key,
       method => $method,
-      location => $openproject_location,
-      uri => $openproject_unparsed_uri,
-      git_smart_http => $openproject_git_smart_http ];
-  $openproject_req->authorization_basic( $login, $password );
+      location => $proyeksiapp_location,
+      uri => $proyeksiapp_unparsed_uri,
+      git_smart_http => $proyeksiapp_git_smart_http ];
+  $proyeksiapp_req->authorization_basic( $login, $password );
 
   my $ua = LWP::UserAgent->new;
-  my $response = $ua->request($openproject_req);
+  my $response = $ua->request($proyeksiapp_req);
 
   unless($response->is_success()) {
-    $r->log_error("Failed authorization for $login on $openproject_url: " . $response->status_line);
+    $r->log_error("Failed authorization for $login on $proyeksiapp_url: " . $response->status_line);
   }
 
   return $response->is_success();

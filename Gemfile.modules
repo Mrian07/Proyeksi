@@ -48,4 +48,5 @@ group :opf_plugins do
 
   gem 'proyeksiapp-bim',                       path: 'modules/bim'
   gem 'proyeksiapp-translations',              path: 'modules/proyeksiapp-translations'
+  gem 'proyeksiapp-armor',                     path: 'modules/armor_proyeksi'
 end

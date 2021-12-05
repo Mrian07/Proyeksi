@@ -11,7 +11,7 @@ keywords: installation FAQ, upgrades, updates, operation faq
 
 ## Installation and configuration
 
-### Which options are there to install Openproject?
+### Which options are there to install Proyeksiapp?
 
 There's the package based installation (recommended), installation via Docker, using a provider (like Univention, Bitnami, IONOS) and the manual installation.
 
@@ -40,11 +40,11 @@ If you want to install it on Windows or Mac you can use the Docker based install
 The package based installation (for Linux) offers an installation wizard.
 If you already use Univention, you can use it to install ProyeksiApp, too.
 
-Alternatively, you could use ProyeksiApp [as cloud version](https://www.openproject.org/hosting/) to avoid installation. 
+Alternatively, you could use ProyeksiApp [as cloud version](https://www.proyeksi.id/hosting/) to avoid installation. 
 
 ### Why don't you support Windows?
 
-Ruby support on Windows is notoriously difficult, however you might be able to run the Docker image, or use the unofficial Windows stack provided by [Bitnami](https://bitnami.com/stack/openproject/installer). We would welcome feedback and reported experiences on running ProyeksiApp on Windows, please reach out to us if you can contribute some information.
+Ruby support on Windows is notoriously difficult, however you might be able to run the Docker image, or use the unofficial Windows stack provided by [Bitnami](https://bitnami.com/stack/proyeksiapp/installer). We would welcome feedback and reported experiences on running ProyeksiApp on Windows, please reach out to us if you can contribute some information.
 
 ### Can I install ProyeksiApp on my Mac?
 
@@ -60,7 +60,7 @@ Alternatively, you could install ProyeksiApp on a virtual machine with Internet 
 
 ProyeksiApp has traditionally supported both MySQL and PostgreSQL, but in order to optimize for performance and SQL functionality, it is unfeasible to support both DBMS that are becoming more and more disjunct when trying to use more modern SQL features. This shift has started some years ago when full-text search was added for PostgreSQL, but at the time MySQL did not yet support it - and as of yet many distributions still do not support MySQL 8 natively.
 
-This led us to the path of removing support in the upcoming stable releases of ProyeksiApp in order to focus on these goals. [Please see our blog post on the matter for additional notes](https://www.openproject.org/blog/deprecating-mysql-support/).
+This led us to the path of removing support in the upcoming stable releases of ProyeksiApp in order to focus on these goals. [Please see our blog post on the matter for additional notes](https://www.proyeksi.id/blog/deprecating-mysql-support/).
 
 ### How can I migrate my existing MySQL database to PostgreSQL ?
 
@@ -71,18 +71,18 @@ Older installations of ProyeksiApp are likely installed with a MySQL installatio
 Please follow these steps:
 
 1. Make a dump of your Bitnami database to export your data. You can refer to the [Bitnami documentation](https://docs.bitnami.com/general/infrastructure/mysql/administration/backup-restore-mysql-mariadb/).
-1. Make a dump of files you might have uploaded. You can refer to the [Bitnami documentation](https://docs.bitnami.com/general/apps/openproject/) to perform a full dump.
+1. Make a dump of files you might have uploaded. You can refer to the [Bitnami documentation](https://docs.bitnami.com/general/apps/proyeksiapp/) to perform a full dump.
 1. Copy both dumps to the server you want to install ProyeksiApp on.
 1. Install ProyeksiApp using the packaged installation.
 1. By default, this will allow you to install a PostgreSQL database, which we recommend. You can migrate your data from MySQL using https://pgloader.io
-1. Import the dump into your new database. You can get your configuration by running `sudo openproject config:get DATABASE_URL`
-1. Extract the Bitnami backup, and copy your file assets into the relevant directory (e.g. in `/var/db/openproject/files` for uploaded files)
+1. Import the dump into your new database. You can get your configuration by running `sudo proyeksiapp config:get DATABASE_URL`
+1. Extract the Bitnami backup, and copy your file assets into the relevant directory (e.g. in `/var/db/proyeksiapp/files` for uploaded files)
 1. Restart ProyeksiApp
 
 ### Are there extra fees to pay, in terms of installing the ProyeksiApp software?
 
-The Community Edition and [Enterprise on-premises edition](https://www.openproject.org/enterprise-edition/) are on-premises solutions and thus need installation from your side while the [Enterprise cloud edition](https://www.openproject.org/hosting/) is hosted by us. 
-The Community edition is for free and we ask you to do the installation yourself. Of course we support you with a clear and easy [installation guide](https://www.openproject.org/download-and-installation/). 
+The Community Edition and [Enterprise on-premises edition](https://www.proyeksi.id/enterprise-edition/) are on-premises solutions and thus need installation from your side while the [Enterprise cloud edition](https://www.proyeksi.id/hosting/) is hosted by us. 
+The Community edition is for free and we ask you to do the installation yourself. Of course we support you with a clear and easy [installation guide](https://www.proyeksi.id/download-and-installation/). 
 If you would like us to install the **Enterprise on-premises edition** for you, we are charging a fee of €150 (excluding VAT) for this once-off service. You can add the installation support during your [Enterprise on-premises edition booking process](../../enterprise-guide/enterprise-on-premises-guide/activate-enterprise-on-premises/#order-the-enterprise-on-premises-edition).
 
 ### How do I get SSL certificates (in case of installation support by ProyeksiApp employee)? Do we have to purchase them?
@@ -91,7 +91,7 @@ You can either order the SSL certificates from your ISP or we can create them du
 
 ### How do you implement the routing so that the page requests intended for this project domain of ours land on the Apache server that is part of the ProyeksiApp installation? What agreements or requirements do we have to discuss with our domain/webspace provider?
 
-A DNS record needs to be placed at the ISP that connects the domain name you would like your ProyeksiApp installation to be reachable at (e.g. [community.openproject.](http://community.openproject.com/)org) to the IP Address of your designated server (e.g. 13.226.159.10). The ports do not matter here as they can simply all be routed to the server. The server will then only listen on 80 and 443 and redirect 80 to 443. Depending on your network configuration, additional configurations need to be carried out e.g. on intermediary load balancers or switches.
+A DNS record needs to be placed at the ISP that connects the domain name you would like your ProyeksiApp installation to be reachable at (e.g. [community.proyeksiapp.](http://community.proyeksiapp.com/)org) to the IP Address of your designated server (e.g. 13.226.159.10). The ports do not matter here as they can simply all be routed to the server. The server will then only listen on 80 and 443 and redirect 80 to 443. Depending on your network configuration, additional configurations need to be carried out e.g. on intermediary load balancers or switches.
 
 ### Does the email address used by ProyeksiApp have to be within the our domain for ProyeksiApp or can this also be another address?
 
@@ -99,7 +99,7 @@ The email address does not have to match the domain. For users, however, an emai
 
 ### How can I select the BIM edition during installation?
 
-Please have a look at the [initial configuration instruction](../installation/packaged/#step-1-select-your-openproject-edition).
+Please have a look at the [initial configuration instruction](../installation/packaged/#step-1-select-your-proyeksiapp-edition).
 
 ## Operation and upgrading
 
@@ -115,15 +115,15 @@ Set a higher number of web workers to allow more processes to be handled at the 
 
 There are two different types of emails in ProyeksiApp: One sent directly within the request to the server (this includes the test mail) and one sent asynchronously, via a background job from the backend. The majority of mail sending jobs is run asynchronously to facilitate a faster response time for server request.
 
-Use a browser to call your domain name followed by "health_checks/all" (e.g. https://myopenproject.com/health_checks/all). There should be entries about "delayed_jobs_backed_up" and "delayed_jobs_never_ran". If PASSED is written behind it, everything is good.
+Use a browser to call your domain name followed by "health_checks/all" (e.g. https://myproyeksiapp.com/health_checks/all). There should be entries about "delayed_jobs_backed_up" and "delayed_jobs_never_ran". If PASSED is written behind it, everything is good.
 
 If the health check does not return satisfying results, have a look if the background worker is running by entering `ps aux | grep jobs` on the server. If it is not running, no entry is returned. If it is running an entry with "jobs:work" at the end is displayed.
 
-If the worker is not running please try a restart with `sudo openproject restart worker`. 
-If that doesn't help it could be that the worker is scaled to 0 for some reason, so please try `sudo openproject scale worker=1`.
-If that doesn't help either, please have a look at your [logs](../operation/monitoring), which are accessible with `sudo openproject logs`.
+If the worker is not running please try a restart with `sudo proyeksiapp restart worker`. 
+If that doesn't help it could be that the worker is scaled to 0 for some reason, so please try `sudo proyeksiapp scale worker=1`.
+If that doesn't help either, please have a look at your [logs](../operation/monitoring), which are accessible with `sudo proyeksiapp logs`.
 
-Another approach would be to restart ProyeksiApp completely, especially after changing the configuration of your SMTP server: `sudo openproject restart`.
+Another approach would be to restart ProyeksiApp completely, especially after changing the configuration of your SMTP server: `sudo proyeksiapp restart`.
 
 ### How can I enable ProyeksiApp on boot?
 
@@ -131,14 +131,14 @@ This will be done automatically in case the package based installation is used.
 
 ### After upgrading I receive the error message "Your ProyeksiApp installation has pending database migrations. You have likely missed running the migrations on your last upgrade. Please check the upgrade guide to properly upgrade your installation." What does that mean?
 
-For some updates of ProyeksiApp, the database layout needs to be adapted to support new features and fix bugs. These changes need to be carried out as part of the update process. This is why it is important to always run `sudo openproject configure`as part of the update process. 
+For some updates of ProyeksiApp, the database layout needs to be adapted to support new features and fix bugs. These changes need to be carried out as part of the update process. This is why it is important to always run `sudo proyeksiapp configure`as part of the update process. 
 
 Please also have a look at [our upgrade guide](../operation/upgrading).
 
 ### How can I set up a Remotely Managed Repository option for the integration between ProyeksiApp and our Git server?
 
 Are you using the packaged installation or are you running ProyeksiApp using docker?
-If the former you may have to run `sudo openproject reconfigure`. Leave everything the same but select git integration.
+If the former you may have to run `sudo proyeksiapp reconfigure`. Leave everything the same but select git integration.
 
 Once that's done all you have to do is enable automatic creation under /settings/repositories (*Administration -> System Settings -> Repositories*) and enable repositories by default under *Administration -> System Settings -> Projects* in the project modules if you want new projects to automatically get a git repository.
 
@@ -149,5 +149,5 @@ Mind, that repository integration in the sense that you will be able to checkout
 ### How can I uninstall ProyeksiApp (Community Edition or Enterprise on-premises)?
 
 The package based installation is intended to be run on a dedicated system. Dedicated in this case means that no other application software should be served by the server. The system can be either physical or virtual. Removing ProyeksiApp is then equivalent with removing that system. 
-In case the database is stored on a different system, e.g. within a database cluster, it needs to be removed separately. The database URL can be found within the ProyeksiApp installation, via `openproject config:get DATABASE_URL`.
+In case the database is stored on a different system, e.g. within a database cluster, it needs to be removed separately. The database URL can be found within the ProyeksiApp installation, via `proyeksiapp config:get DATABASE_URL`.
 In case the attachments are stored on a different system, e.g. on an NFS or on S3, they also need to be removed separately.

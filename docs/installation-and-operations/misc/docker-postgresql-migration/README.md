@@ -14,7 +14,7 @@ The Dockerfile comes with a built-in PostgreSQL migration script that will auto-
 
 Depending on your usage, you may want to set up an external PostgreSQL database to provide the container with connection details just like you did for MySQL.
 
-In any case, you may also use the internally configured PostgreSQL instance of the docker container by using the DATABASE_URL ` postgres://openproject:openproject@127.0.0.1/openproject`
+In any case, you may also use the internally configured PostgreSQL instance of the docker container by using the DATABASE_URL ` postgres://proyeksiapp:proyeksiapp@127.0.0.1/proyeksiapp`
 
 **Installing a PostgreSQL database outside docker**
 
@@ -32,16 +32,16 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'proyeksiapp'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
-[postgres@host] createuser -W openproject
+[postgres@host] createuser -W proyeksiapp
 ```
 
 Next, create the database owned by the new user
 
 ```bash
-[postgres@host] createdb -O openproject openproject
+[postgres@host] createdb -O proyeksiapp proyeksiapp
 ```
 
 Lastly, exit the system user
@@ -78,7 +78,7 @@ MYSQL_DATABASE_URL="mysql://user:password@localhost:3306/dbname"
 
 ### The PostgreSQL DATABASE_URL
 
-Pass in `DATABASE_URL` pointing to your new PostgreSQL database. This is either the default `postgres://openproject:openproject@127.0.0.1/openproject` or if you set up a PostgreSQL installation above, use credentials for your installation you set up above.
+Pass in `DATABASE_URL` pointing to your new PostgreSQL database. This is either the default `postgres://proyeksiapp:proyeksiapp@127.0.0.1/proyeksiapp` or if you set up a PostgreSQL installation above, use credentials for your installation you set up above.
 
 ```bash
 POSTGRES_DATABASE_URL="postgresql://<USER>:<PASSWORD>@<HOST>/<Database name>"
@@ -99,8 +99,8 @@ To run the migration script within the container, now simply run the following c
 ```bash
 docker run -it \
   -e MYSQL_DATABASE_URL="mysql://user:password@localhost:3306/dbname" \
-  -e DATABASE_URL="postgresql://openproject:<PASSWORD>@localhost:5432/openproject" \
-  openproject/community:latest
+  -e DATABASE_URL="postgresql://proyeksiapp:<PASSWORD>@localhost:5432/proyeksiapp" \
+  proyeksiapp/community:latest
 ```
 
 

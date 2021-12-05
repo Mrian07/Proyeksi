@@ -25,27 +25,27 @@ all parts mentioned above. The backup tool is invoked by executing the following
 command:
 
 ```bash
-sudo openproject run backup
+sudo proyeksiapp run backup
 ```
 
 The command will create backup files in the following location on your system:
 
 ```bash
-/var/db/openproject/backup
+/var/db/proyeksiapp/backup
 ```
 
 The content of that directory should look very similar to the following.
 
 ```bash
-root@ip-10-0-0-228:/home/admin# ls -al /var/db/openproject/backup/
+root@ip-10-0-0-228:/home/admin# ls -al /var/db/proyeksiapp/backup/
 total 1680
-drwxr-xr-x 2 openproject openproject    4096 Nov 19 21:00 .
-drwxr-xr-x 6 openproject openproject    4096 Nov 19 21:00 ..
--rw-r----- 1 openproject openproject 1361994 Nov 19 21:00 attachments-20191119210038.tar.gz
--rw-r----- 1 openproject openproject    1060 Nov 19 21:00 conf-20191119210038.tar.gz
--rw-r----- 1 openproject openproject     126 Nov 19 21:00 git-repositories-20191119210038.tar.gz
--rw-r----- 1 openproject openproject  332170 Nov 19 21:00 postgresql-dump-20191119210038.pgdump
--rw-r----- 1 openproject openproject     112 Nov 19 21:00 svn-repositories-20191119210038.tar.gz
+drwxr-xr-x 2 proyeksiapp proyeksiapp    4096 Nov 19 21:00 .
+drwxr-xr-x 6 proyeksiapp proyeksiapp    4096 Nov 19 21:00 ..
+-rw-r----- 1 proyeksiapp proyeksiapp 1361994 Nov 19 21:00 attachments-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp    1060 Nov 19 21:00 conf-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp     126 Nov 19 21:00 git-repositories-20191119210038.tar.gz
+-rw-r----- 1 proyeksiapp proyeksiapp  332170 Nov 19 21:00 postgresql-dump-20191119210038.pgdump
+-rw-r----- 1 proyeksiapp proyeksiapp     112 Nov 19 21:00 svn-repositories-20191119210038.tar.gz
 ```
 
 You should then copy those dump files to a secure location, for instance an S3 bucket or some sort of backup server.
@@ -57,22 +57,22 @@ If you are using docker-compose, then the data volumes are managed by Docker and
 If you are using the all-in-one container, then you can simply backup any local volumes that you chose to bind-mount with the `-v` option when launching the container. For instance if you launched the container with:
 
 ```bash
-sudo mkdir -p /var/lib/openproject/{pgdata,assets}
+sudo mkdir -p /var/lib/proyeksiapp/{pgdata,assets}
 
-docker run -d -p 8080:80 --name openproject -e SECRET_KEY_BASE=secret \
-  -v /var/lib/openproject/pgdata:/var/openproject/pgdata \
-  -v /var/lib/openproject/assets:/var/openproject/assets \
-  openproject/community:10
+docker run -d -p 8080:80 --name proyeksiapp -e SECRET_KEY_BASE=secret \
+  -v /var/lib/proyeksiapp/pgdata:/var/proyeksiapp/pgdata \
+  -v /var/lib/proyeksiapp/assets:/var/proyeksiapp/assets \
+  proyeksiapp/community:10
 ```
 
-Then you would need to backup the `/var/lib/openproject` folder (for instance to S3 or FTP server).
+Then you would need to backup the `/var/lib/proyeksiapp` folder (for instance to S3 or FTP server).
 
 ### Dumping the database
 
 When using docker-compose you can simply dump the database from the database container.
 
 ```
-docker exec -it db_1 pg_dump -U postgres -d openproject -x -O > openproject.sql
+docker exec -it db_1 pg_dump -U postgres -d proyeksiapp -x -O > proyeksiapp.sql
 ```
 
 This assumes that the database container is called `db_1`. Find out the actual name on your host using `docker ps | postgres`.
@@ -82,10 +82,10 @@ This assumes that the database container is called `db_1`. Find out the actual n
 If you need a regular dump of the database you can get one using `pg_dump` like this:
 
 ```
-docker exec -e PGPASSWORD=openproject -it $OP_CONTAINER_NAME pg_dump -U openproject -h localhost -d openproject -x -O > openproject.sql
+docker exec -e PGPASSWORD=proyeksiapp -it $OP_CONTAINER_NAME pg_dump -U proyeksiapp -h localhost -d proyeksiapp -x -O > proyeksiapp.sql
 ```
 
-Where `$OP_CONTAINER_NAME` is the name of your ProyeksiApp container. If you don't know it you can find it using `docker ps | grep openproject`.
+Where `$OP_CONTAINER_NAME` is the name of your ProyeksiApp container. If you don't know it you can find it using `docker ps | grep proyeksiapp`.
 
 ### Importing the dump into a new container
 

@@ -24,8 +24,6 @@ export const PROJECTS_ROUTES:Ng2StateDeclaration[] = [
 ];
 
 export function uiRouterProjectsConfiguration(uiRouter:UIRouter) {
-  // Ensure projects/ are being redirected correctly
-  // cf., https://community.openproject.com/wp/29754
   uiRouter.urlService.rules
     .when(
       new RegExp('^/projects/(.*)/settings/general$'),

@@ -11,7 +11,7 @@ release_date: 2020-12-17
 
 Release date: 2020-12-17
 
-We released [ProyeksiApp 11.1.0](https://community.openproject.com/versions/1424).
+We released [ProyeksiApp 11.1.0](https://community.proyeksiapp.com/versions/1424).
 This new release will bring many new features and bug fixes that will improve classical as well as agile project management. 
 
 ## Improved styling of the WYSIWYG text editor
@@ -58,41 +58,41 @@ There are a lot more things we packed into 11.1 to tell you about.
 
 ### Bug fixes and changes in 11.1
 
-- Changed: @ mention should show user name in the editor \[[#32645](https://community.openproject.com/wp/32645)\]
-- Changed: Update CK Editor 5 to version 23.0.0 \[[#34595](https://community.openproject.com/wp/34595)\]
-- Changed: Display project's milestones in Gantt chart aggregated in single row \[[#34943](https://community.openproject.com/wp/34943)\]
-- Changed: Add custom classes to the CKEditor elements \[[#35104](https://community.openproject.com/wp/35104)\]
-- Changed: Change icon and text in menu item in project list \[[#35436](https://community.openproject.com/wp/35436)\]
-- Fixed: Wrong default settings for Gantt chart button in project list \[[#34312](https://community.openproject.com/wp/34312)\]
-- Fixed: Locked work packages do not copy on project copy \[[#34496](https://community.openproject.com/wp/34496)\]
-- Fixed: Boards view doesn't keep the list order (order of the columns) \[[#35004](https://community.openproject.com/wp/35004)\]
-- Fixed: caption is copied into the description and multiplied \[[#35123](https://community.openproject.com/wp/35123)\]
-- Fixed: Copy budget: Manually set cost are set back to cost deduced from number of units \[[#35484](https://community.openproject.com/wp/35484)\]
-- Fixed: "Translation missing" shown in administration > groups \[[#35578](https://community.openproject.com/wp/35578)\]
-- Fixed: In WYSIWYG editor preview formatting not correctly applied \[[#35593](https://community.openproject.com/wp/35593)\]
-- Fixed: Internal error in project when adding "." in title of wiki page \[[#35594](https://community.openproject.com/wp/35594)\]
-- Fixed: Missing lines under headings in WYSIWYG editor \[[#35603](https://community.openproject.com/wp/35603)\]
-- Fixed: WYSIWYG table: Tiny column when adding to the left of header column / formatting header not applied in edit \[[#35610](https://community.openproject.com/wp/35610)\]
-- Fixed: Links in table of content not functional when macro in same row as toc \[[#35611](https://community.openproject.com/wp/35611)\]
-- Fixed: 500er server error when opening query \[[#35620](https://community.openproject.com/wp/35620)\]
-- Fixed: 500 on accessing user specific activity page \[[#35621](https://community.openproject.com/wp/35621)\]
-- Fixed: "no end date" instead of "no finish date" in work package form \[[#35624](https://community.openproject.com/wp/35624)\]
-- Fixed: Code-Snippets are shown nested within each other after update to 11.1 \[[#35628](https://community.openproject.com/wp/35628)\]
-- Fixed: Images are left-aligned after update to ProyeksiApp 11.1 \[[#35629](https://community.openproject.com/wp/35629)\]
-- Fixed: Internal error when selecting user link on qa-edge \[[#35640](https://community.openproject.com/wp/35640)\]
-- Fixed: Line breaks within words in table cells \[[#35644](https://community.openproject.com/wp/35644)\]
-- Fixed: Typo in DPA email \[[#35653](https://community.openproject.com/wp/35653)\]
-- Fixed: Typo in DPA text in ProyeksiApp \[[#35654](https://community.openproject.com/wp/35654)\]
-- Fixed: Cannot set nummerated headings without duplicating nummeration in table of contents \[[#35656](https://community.openproject.com/wp/35656)\]
+- Changed: @ mention should show user name in the editor \[[#32645](https://community.proyeksiapp.com/wp/32645)\]
+- Changed: Update CK Editor 5 to version 23.0.0 \[[#34595](https://community.proyeksiapp.com/wp/34595)\]
+- Changed: Display project's milestones in Gantt chart aggregated in single row \[[#34943](https://community.proyeksiapp.com/wp/34943)\]
+- Changed: Add custom classes to the CKEditor elements \[[#35104](https://community.proyeksiapp.com/wp/35104)\]
+- Changed: Change icon and text in menu item in project list \[[#35436](https://community.proyeksiapp.com/wp/35436)\]
+- Fixed: Wrong default settings for Gantt chart button in project list \[[#34312](https://community.proyeksiapp.com/wp/34312)\]
+- Fixed: Locked work packages do not copy on project copy \[[#34496](https://community.proyeksiapp.com/wp/34496)\]
+- Fixed: Boards view doesn't keep the list order (order of the columns) \[[#35004](https://community.proyeksiapp.com/wp/35004)\]
+- Fixed: caption is copied into the description and multiplied \[[#35123](https://community.proyeksiapp.com/wp/35123)\]
+- Fixed: Copy budget: Manually set cost are set back to cost deduced from number of units \[[#35484](https://community.proyeksiapp.com/wp/35484)\]
+- Fixed: "Translation missing" shown in administration > groups \[[#35578](https://community.proyeksiapp.com/wp/35578)\]
+- Fixed: In WYSIWYG editor preview formatting not correctly applied \[[#35593](https://community.proyeksiapp.com/wp/35593)\]
+- Fixed: Internal error in project when adding "." in title of wiki page \[[#35594](https://community.proyeksiapp.com/wp/35594)\]
+- Fixed: Missing lines under headings in WYSIWYG editor \[[#35603](https://community.proyeksiapp.com/wp/35603)\]
+- Fixed: WYSIWYG table: Tiny column when adding to the left of header column / formatting header not applied in edit \[[#35610](https://community.proyeksiapp.com/wp/35610)\]
+- Fixed: Links in table of content not functional when macro in same row as toc \[[#35611](https://community.proyeksiapp.com/wp/35611)\]
+- Fixed: 500er server error when opening query \[[#35620](https://community.proyeksiapp.com/wp/35620)\]
+- Fixed: 500 on accessing user specific activity page \[[#35621](https://community.proyeksiapp.com/wp/35621)\]
+- Fixed: "no end date" instead of "no finish date" in work package form \[[#35624](https://community.proyeksiapp.com/wp/35624)\]
+- Fixed: Code-Snippets are shown nested within each other after update to 11.1 \[[#35628](https://community.proyeksiapp.com/wp/35628)\]
+- Fixed: Images are left-aligned after update to ProyeksiApp 11.1 \[[#35629](https://community.proyeksiapp.com/wp/35629)\]
+- Fixed: Internal error when selecting user link on qa-edge \[[#35640](https://community.proyeksiapp.com/wp/35640)\]
+- Fixed: Line breaks within words in table cells \[[#35644](https://community.proyeksiapp.com/wp/35644)\]
+- Fixed: Typo in DPA email \[[#35653](https://community.proyeksiapp.com/wp/35653)\]
+- Fixed: Typo in DPA text in ProyeksiApp \[[#35654](https://community.proyeksiapp.com/wp/35654)\]
+- Fixed: Cannot set nummerated headings without duplicating nummeration in table of contents \[[#35656](https://community.proyeksiapp.com/wp/35656)\]
 
 ## Installation and Updates
 
-To use ProyeksiApp 11.1 right away, create an instance and [test 14 days for free in the Cloud](https://start.openproject.com/).
+To use ProyeksiApp 11.1 right away, create an instance and [test 14 days for free in the Cloud](https://start.proyeksiapp.com/).
 
 Prefer to run ProyeksiApp 11.1 in your own infrastructure?
 Here you can find the [Installation guidelines](../../installation-and-operations) for ProyeksiApp.
 
-Want to upgrade from your self-managed Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.openproject.org/blog/enterprise-edition-upgrade-test-free/)
+Want to upgrade from your self-managed Community version to try out the Enterprise premium features? [Get a 14 days free trial token directly out of your current Community installation.](https://www.proyeksi.id/blog/enterprise-edition-upgrade-test-free/)
 
 Navigate to the -> *Administration*-> *Enterprise Edition* and request your trial token.
 
@@ -110,7 +110,7 @@ Special thanks go to all ProyeksiApp contributors without whom this release woul
 
 - The City of Cologne for sponsoring some of the open source features and thus contributing them to the Community.
 
-- Every dedicated user who has created feature request, [reported bugs](../../development/report-a-bug/) for 11.1 and also supported the community by asking and answering questions in the [forum](https://community.openproject.org/projects/openproject/boards).
+- Every dedicated user who has created feature request, [reported bugs](../../development/report-a-bug/) for 11.1 and also supported the community by asking and answering questions in the [forum](https://community.proyeksi.id/projects/proyeksiapp/boards).
 
 - All the engaged users who provided translations on [CrowdIn](https://crowdin.com/projects/opf).
 
@@ -120,4 +120,4 @@ Special thanks go to all ProyeksiApp contributors without whom this release woul
 
 ## What’s next?
 
-We are continuously developing new features and improvements for  ProyeksiApp. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.openproject.com/projects/openproject/work_packages?query_id=918).
+We are continuously developing new features and improvements for  ProyeksiApp. If you’d like to preview what’s coming in the next release, be sure to check out our [development roadmap](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=918).

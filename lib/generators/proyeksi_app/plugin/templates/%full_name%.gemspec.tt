@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.name        = "<%= full_name %>"
 
   s.authors     = "ProyeksiApp GmbH"
-  s.email       = "info@openproject.org"
-  s.homepage    = "https://community.openproject.org/projects/<%= plugin_name.gsub('_','-') %>"  # TODO check this URL
+  s.email       = "info@proyeksi.id"
+  s.homepage    = "https://community.proyeksi.id/projects/<%= plugin_name.gsub('_','-') %>"  # TODO check this URL
   s.summary     = 'ProyeksiApp <%= plugin_name.gsub('_', ' ').titleize %>'
   s.description = "FIXME"
   s.license     = "FIXME" # e.g. "MIT" or "GPLv3"

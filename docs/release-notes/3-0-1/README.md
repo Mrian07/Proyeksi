@@ -15,5 +15,5 @@ release](/release-notes/3-0-0/).
 Specifically the error in adding a work package process was fixed, as
 well as the duplication of file content display.
 
-[Read more](https://community.openproject.org/versions/296)
+[Read more](https://community.proyeksi.id/versions/296)
 

@@ -4,7 +4,7 @@ If you need to migrate from any older version of ProyeksiApp, upgrading multiple
 
 If you also need to migrate from MySQL to PostgreSQL during that process, the steps will become more involved.
 
-To make this easier there is a script which automates database migration and conversion in one simple step. The only dependency is [a docker installation](https://www.docker.com/get-started). It's included in the docker image itself but you will want to run it directly on the docker host. To do that you can either copy it onto your system from `/app/script/migration/migrate-from-pre-8.sh` or simply download it [here](https://github.com/opf/openproject/tree/dev/script/migration/migrate-from-pre-8.sh).
+To make this easier there is a script which automates database migration and conversion in one simple step. The only dependency is [a docker installation](https://www.docker.com/get-started). It's included in the docker image itself but you will want to run it directly on the docker host. To do that you can either copy it onto your system from `/app/script/migration/migrate-from-pre-8.sh` or simply download it [here](https://github.com/opf/proyeksiapp/tree/dev/script/migration/migrate-from-pre-8.sh).
 
 All the script needs is docker to be installed. It will start containers as required for the migration and clean them up afterwards. The result of the migration will be a SQL dump of ProyeksiApp in the current stable version. This can then be used with a fresh packaged installation, or an upgraded package. See [how to restore a backup](/installation-and-operations/operation/restoring/).
 
@@ -14,20 +14,20 @@ All the script needs is docker to be installed. It will start containers as requ
 
 ### Create a backup
 
-First, you will need to create a backup to get the MySQL database dump. Please see our separate guide on [Backing up](../../operation/backing-up/). In a packaged installation, the following command will output a full backup to `/var/db/openproject/backup`:
+First, you will need to create a backup to get the MySQL database dump. Please see our separate guide on [Backing up](../../operation/backing-up/). In a packaged installation, the following command will output a full backup to `/var/db/proyeksiapp/backup`:
 
 ```bash
-openproject run backup
+proyeksiapp run backup
 ```
 
 
 
-This will output a MySQL dump at `/var/db/openproject/backup/mysql-dump-<timestamp>.sql.gz`. You will need to gunzip this:
+This will output a MySQL dump at `/var/db/proyeksiapp/backup/mysql-dump-<timestamp>.sql.gz`. You will need to gunzip this:
 
 
 ```
-cp /var/db/openproject/backup/mysql-dump-<timestamp>.sql.gz /tmp/openproject-mysql.dump.gz
-gunzip /tmp/openproject/openproject-mysql.dump.gz
+cp /var/db/proyeksiapp/backup/mysql-dump-<timestamp>.sql.gz /tmp/proyeksiapp-mysql.dump.gz
+gunzip /tmp/proyeksiapp/proyeksiapp-mysql.dump.gz
 ```
 
 
@@ -57,15 +57,15 @@ To upgrade ProyeksiApp and use this dump, you have two options:
 
 You can simply upgrade your package first and then switch to a PostgreSQL database. You will basically have to follow our [Upgrading guide](../../operation/upgrading/).
 
-1. Upgrade the package according to the upgrade guide. Switch to the current stable package repository, and let your package manager upgrade the openproject package
+1. Upgrade the package according to the upgrade guide. Switch to the current stable package repository, and let your package manager upgrade the proyeksiapp package
 
-2. Run `openproject reconfigure` to choose to auto install a PostgreSQL database in the first step of the wizard.
+2. Run `proyeksiapp reconfigure` to choose to auto install a PostgreSQL database in the first step of the wizard.
 
 3. After this is completed, stop the servers to restore the database separately
 
-   `service openproject stop`
+   `service proyeksiapp stop`
 
-   `pg_restore --dbname $(openproject config:get DATABASE_URL) /path/to/migrated/postgresql.dump`  
+   `pg_restore --dbname $(proyeksiapp config:get DATABASE_URL) /path/to/migrated/postgresql.dump`  
 
 4. Execute configure script to ensure the migrations are complete and to restart the server
 
@@ -79,36 +79,36 @@ Remove your ProyeksiApp installation, follow our ["Migrate to a different enviro
 
 The steps for this option is as follows:
 
-1. Remove ProyeksiApp with your package manager, e.g., `sudo apt remove openproject` on Debian/Ubuntu systems.
+1. Remove ProyeksiApp with your package manager, e.g., `sudo apt remove proyeksiapp` on Debian/Ubuntu systems.
 
 2. Use our [packaged installation guide](../../installation/packaged/) for your distribution to install the newest version
 
 3. From your backup, restore the configuration and attachment files ([See our restoring guide](../../operation/restoring/) for more information):
 
-   ​	`tar xzf conf-<timestamp>.tar.gz -C /etc/openproject/conf.d/`
+   ​	`tar xzf conf-<timestamp>.tar.gz -C /etc/proyeksiapp/conf.d/`
 
-   ​	`tar xzf attachments-<timestamp>.tar.gz -C /var/db/openproject/files`
+   ​	`tar xzf attachments-<timestamp>.tar.gz -C /var/db/proyeksiapp/files`
 
-4. Run `openproject reconfigure` and select to install a PostgreSQL database
+4. Run `proyeksiapp reconfigure` and select to install a PostgreSQL database
 
 5. This will install and migrate a new PostgreSQL database
 
 6. After this is completed, stop the servers to restore the database separately
 
-   `service openproject stop`
+   `service proyeksiapp stop`
 
-   `pg_restore --dbname $(openproject config:get DATABASE_URL) /path/to/migrated/postgresql.dump`  
+   `pg_restore --dbname $(proyeksiapp config:get DATABASE_URL) /path/to/migrated/postgresql.dump`  
 
 7. Execute configure script to ensure the migrations are complete and to restart the server
 
-   `openproject configure`
+   `proyeksiapp configure`
 
 
 
 ## Problems with the migration?
 
 
-Please let us know if you have any questions regarding this upgrade path. Reach out to us [through our contact data or form on our website](https://www.openproject.org/contact-us/) with feedback and issues you experienced.
+Please let us know if you have any questions regarding this upgrade path. Reach out to us [through our contact data or form on our website](https://www.proyeksi.id/contact-us/) with feedback and issues you experienced.
 
 We're very interested in providing a smooth upgrade at all times, and would like to document issues you experience during the upgrade.
 

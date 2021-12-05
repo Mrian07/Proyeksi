@@ -15,20 +15,20 @@ recommend to update your ProyeksiApp installation to this version.
 ## Features (5)
 
   - Added missing auth fields to user
-    endpoint [24503](https://community.openproject.com/projects/openproject/work_packages/24503/activity).
+    endpoint [24503](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/24503/activity).
   - Allow users to be uniquely identified by
-    login [24504](https://community.openproject.com/projects/openproject/work_packages/24504/activity).
+    login [24504](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/24504/activity).
   - Configuration option to hide login field during signup (email
-    only) [24505](https://community.openproject.com/projects/openproject/work_packages/24505/relations).
+    only) [24505](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/24505/relations).
   - Configuration option for registration footer
-    [24404](https://community.openproject.com/projects/openproject/work_packages/24404/activity).
+    [24404](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/24404/activity).
   - Remove length constraints of category
-    name [24446](https://community.openproject.com/projects/openproject/work_packages/24446/activity).
+    name [24446](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/24446/activity).
 
 ## Bug fixes (16)
 
 You can find a detailed list of the bug
-fixes [here.](https://community.openproject.com/versions/822)
+fixes [here.](https://community.proyeksiapp.com/versions/822)
 
 ## Credits
 

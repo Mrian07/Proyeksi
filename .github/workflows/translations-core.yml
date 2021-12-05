@@ -44,11 +44,11 @@ jobs:
       - name: run
         env:
           DATABASE_URL: 'nulldb://nohost'
-          OPENPROJECT_CROWDIN_PROJECT: ${{ secrets.OPENPROJECT_CROWDIN_PROJECT }}
-          OPENPROJECT_CROWDIN_API_KEY: ${{ secrets.OPENPROJECT_CROWDIN_API_KEY }}
+          PROYEKSIAPP_CROWDIN_PROJECT: ${{ secrets.PROYEKSIAPP_CROWDIN_PROJECT }}
+          PROYEKSIAPP_CROWDIN_API_KEY: ${{ secrets.PROYEKSIAPP_CROWDIN_API_KEY }}
         run: |
           git config user.name "ProyeksiApp Actions CI"
-          git config user.email "operations+ci@openproject.com"
+          git config user.email "operations+ci@proyeksiapp.com"
           bundle exec rake db:create
           echo "Updating combined translations"
           bundle exec rake translations:update

@@ -17,7 +17,7 @@
 import { ErrorReporter } from 'core-app/core/errors/sentry/sentry-reporter';
 import { Injector } from '@angular/core';
 
-import { ProyeksiApp } from 'core-app/core/setup/globals/proyeksiapp';
+import { Proyeksiapp } from 'core-app/core/setup/globals/proyeksiapp';
 import * as TLodash from 'lodash';
 import * as TMoment from 'moment';
 import { GlobalI18n } from 'core-app/core/i18n/i18n.service';

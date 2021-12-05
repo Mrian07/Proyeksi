@@ -22,20 +22,20 @@ Additionally, several errors on the work package list have been fixed:
 
   - Deleted work package queries which have been added to the side menu
     are now properly removed when the query is deleted
-    ([\#18591](https://community.openproject.org/work_packages/18591 "#18591")).
+    ([\#18591](https://community.proyeksi.id/work_packages/18591 "#18591")).
   - The “Save” button in the query list is now only displayed when
     changes have been made
-    ([\#18592](https://community.openproject.org/work_packages/18592 "#18592")).
+    ([\#18592](https://community.proyeksi.id/work_packages/18592 "#18592")).
 
 Furthermore, a bug has been fixed which caused an internal error when
 creating a new reporting
-([\#18593](https://community.openproject.org/work_packages/18593 "#18593"))
+([\#18593](https://community.proyeksi.id/work_packages/18593 "#18593"))
 and an error related to the grouping of timelines has been addressed
-([\#18690](https://community.openproject.org/work_packages/18690 "#18690")).
+([\#18690](https://community.proyeksi.id/work_packages/18690 "#18690")).
 
 To get an overview of the new version, please refer to the [Changelog
-v.4.0.7](https://community.openproject.org/versions/602 "Changelog v.4.0.7") or
+v.4.0.7](https://community.proyeksi.id/versions/602 "Changelog v.4.0.7") or
 take a look at
-[GitHub](https://github.com/opf/openproject/tree/v4.0.7 "GitHub").
+[GitHub](https://github.com/opf/proyeksiapp/tree/v4.0.7 "GitHub").
 
 

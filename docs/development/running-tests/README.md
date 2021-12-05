@@ -2,7 +2,7 @@
 
 ProyeksiApp uses automated tests throughout the stack. Tests that are executed in the browser (angular frontend, rspec system tests) require to have Chrome installed.
 
-You will likely start working with the ProyeksiApp test suite through our continuous testing setup at [Github Actions](https://github.com/opf/openproject/actions). All pull requests and commits to the core repository will be tested by Github Actions.
+You will likely start working with the ProyeksiApp test suite through our continuous testing setup at [Github Actions](https://github.com/opf/proyeksiapp/actions). All pull requests and commits to the core repository will be tested by Github Actions.
 
 
 
@@ -20,13 +20,13 @@ Here you'll see that the *Github Actions* check has reported an error, which lik
 
 If you expand the view  by clicking on details, you will see the individual *jobs* that Github executes. The test suite is run in parallel to save time.  The overall run time of the test suite is around *15 minutes* on Github. Due to parallel test runs and beefier custom worker machines, the run time is significantly lower than on our previous test CI.
 
-[Here's a link to an exemplary failed test run on GitHub](https://github.com/opf/openproject/pull/9355/checks?check_run_id=2730782867). In this case, one of the feature jobs has reported an error.
+[Here's a link to an exemplary failed test run on GitHub](https://github.com/opf/proyeksiapp/pull/9355/checks?check_run_id=2730782867). In this case, one of the feature jobs has reported an error.
 
 ![Exemplary failed status details](github-broken-tests-pr-details1.png)
 
 
 
-You can click on each job and each step to show the [log output for this job](https://github.com/opf/openproject/pull/9355/checks?check_run_id=2730782867). It will contain more information about how many tests failed and will also temporarily provide a screenshot of the browser during the occurrence of the test failure (only if a browser was involved in testing).
+You can click on each job and each step to show the [log output for this job](https://github.com/opf/proyeksiapp/pull/9355/checks?check_run_id=2730782867). It will contain more information about how many tests failed and will also temporarily provide a screenshot of the browser during the occurrence of the test failure (only if a browser was involved in testing).
 
 In our example, multiple tests are reported as failing:
 ```
@@ -114,21 +114,21 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  username: openproject
-  password: openproject-dev-password
+  username: proyeksiapp
+  password: proyeksiapp-dev-password
 
 development:
   <<: *default
-  database: openproject_dev
+  database: proyeksiapp_dev
 
 test:
   <<: *default
-  database: openproject_test
+  database: proyeksiapp_test
 ```
 
 
 
-The configuration above determines that a database called `openproject_test` is used for the backend unit and system tests. The entire contents of this database is being removed during every test suite run.
+The configuration above determines that a database called `proyeksiapp_test` is used for the backend unit and system tests. The entire contents of this database is being removed during every test suite run.
 
 
 
@@ -272,7 +272,7 @@ There is no need to prefix this with the `RAILS_ENV` here since we've exported i
 
 ### Headless testing
 
-Firefox tests through Selenium are run with Chrome as `--headless` by default. This means that you do not see the browser that is being tested. Sometimes you will want to see what the test is doing to debug. To override this behavior and watch the Chrome or Firefox instance set the ENV variable `OPENPROJECT_TESTING_NO_HEADLESS=1`.
+Firefox tests through Selenium are run with Chrome as `--headless` by default. This means that you do not see the browser that is being tested. Sometimes you will want to see what the test is doing to debug. To override this behavior and watch the Chrome or Firefox instance set the ENV variable `PROYEKSIAPP_TESTING_NO_HEADLESS=1`.
 
 
 
@@ -332,7 +332,7 @@ Adjust `database.yml` to use different databases:
 
 ```yml
 test: &test
-  database: openproject_test<%= ENV['TEST_ENV_NUMBER'] %>
+  database: proyeksiapp_test<%= ENV['TEST_ENV_NUMBER'] %>
   # ...
 ```
 
@@ -373,7 +373,7 @@ One way is to disable the Angular CLI that serves some of the assets when develo
 ./bin/rails assets:precompile
 
 # Start the application server while disabling the CLI asset host 
-OPENPROJECT_CLI_PROXY='' ./bin/rails s -b 0.0.0.0 -p 3000
+PROYEKSIAPP_CLI_PROXY='' ./bin/rails s -b 0.0.0.0 -p 3000
 ```
 
 Now assuming networking is set up in your VM, you can access your app server on `<your local ip>:3000` from it.
@@ -381,15 +381,15 @@ Now assuming networking is set up in your VM, you can access your app server on 
 ### New way, with ng serve
 
 **The better way** when you want to develop against Edge is to set up your server to allow the CSP to the remote host.
-Assuming your openproject is served at `<your local ip>:3000` and your ng serve middleware is running at `<your local ip>:4200`,
+Assuming your proyeksiapp is served at `<your local ip>:3000` and your ng serve middleware is running at `<your local ip>:4200`,
 you can access both from inside a VM with nat/bridged networking as follows:
 
 ```bash
 # Start ng serve middleware binding to all interfaces
 npm run serve-public
 
-# Start your openproject server with the CLI proxy configuration set
-OPENPROJECT_CLI_PROXY='http://<your local ip>:4200' ./bin/rails s -b 0.0.0.0 -p 3000
+# Start your proyeksiapp server with the CLI proxy configuration set
+PROYEKSIAPP_CLI_PROXY='http://<your local ip>:4200' ./bin/rails s -b 0.0.0.0 -p 3000
 
 # Now access your server from http://<your local ip>:3000 with code reloading
 ```

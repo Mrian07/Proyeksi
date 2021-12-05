@@ -34,7 +34,7 @@ The three options are mutually exclusive. I.e. if settings are already provided 
 
 #### 1.1 configuration.yml file
 
-In your ProyeksiApp packaged installation, you can modify the `/opt/openproject/config/configuration.yml` file. This will contains the complete ProyeksiApp configuration and can be extended to also contain metadata settings and connection details for your SSO identity provider.
+In your ProyeksiApp packaged installation, you can modify the `/opt/proyeksiapp/config/configuration.yml` file. This will contains the complete ProyeksiApp configuration and can be extended to also contain metadata settings and connection details for your SSO identity provider.
 
 Everything belonging to the `saml` key will be made available to the plugin. The first key below `saml` can be freely chosen (`my_saml` in the example).
 
@@ -50,8 +50,8 @@ production:
       icon: "auth_provider-saml.png"
 
       # omniauth-saml config
-      assertion_consumer_service_url: "https:/<YOUR OPENPROJECT HOSTNAME>/auth/saml/callback"
-      issuer: "https://<YOUR OPENPROJECT HOSTNAME>"
+      assertion_consumer_service_url: "https:/<YOUR PROYEKSIAPP HOSTNAME>/auth/saml/callback"
+      issuer: "https://<YOUR PROYEKSIAPP HOSTNAME>"
 
       # IF your SSL certificate on your SSO is not trusted on this machine, you need to add it here
       #idp_cert: "-----BEGIN CERTIFICATE-----\n ..... SSL CERTIFICATE HERE ...-----END CERTIFICATE-----\n"
@@ -90,10 +90,10 @@ As with [all the rest of the ProyeksiApp configuration settings](../../../instal
 E.g.
 
 ```bash
-OPENPROJECT_SAML_MY__SAML_NAME="your-provider-name"
-OPENPROJECT_SAML_MY__SAML_DISPLAY__NAME="My SAML provider"
+PROYEKSIAPP_SAML_MY__SAML_NAME="your-provider-name"
+PROYEKSIAPP_SAML_MY__SAML_DISPLAY__NAME="My SAML provider"
 ...
-OPENPROJECT_SAML_MY__SAML_ATTRIBUTE__STATEMENTS_ADMIN="['openproject-isadmin']"
+PROYEKSIAPP_SAML_MY__SAML_ATTRIBUTE__STATEMENTS_ADMIN="['proyeksiapp-isadmin']"
 ```
 
 Please note that every underscore (`_`) in the original configuration key has to be replaced by a duplicate underscore
@@ -107,10 +107,10 @@ That means it's best to set them using the console.
 
 ```
 # package based installation:
-> sudo openproject run console
+> sudo proyeksiapp run console
 
 # docker-based installation:
-> docker exec -it openproject bundle exec rails console
+> docker exec -it proyeksiapp bundle exec rails console
 
 # docker-compose-based installation:
 > docker-compose run --rm web bundle exec rails console
@@ -120,12 +120,12 @@ Once on the console you can set the same values as named in the `configuration.y
 For example:
 
 ```ruby
-Setting.plugin_openproject_auth_saml = Hash(Setting.plugin_openproject_auth_saml).deep_merge({
+Setting.plugin_proyeksiapp_auth_saml = Hash(Setting.plugin_proyeksiapp_auth_saml).deep_merge({
   "providers" => {
     "my_saml" => {
       "name" => "saml",
       "display_name" => "My SSO",
-      "assertion_consumer_service_url" => "https:/<YOUR OPENPROJECT HOSTNAME>/auth/saml/callback"
+      "assertion_consumer_service_url" => "https:/<YOUR PROYEKSIAPP HOSTNAME>/auth/saml/callback"
       # etc.
     }
   }
@@ -229,11 +229,11 @@ With request signing enabled, the certificate will be added to the identity prov
 
 ### 3: Restarting the server
 
-Once the configuration is completed, restart your ProyeksiApp server with `service openproject restart`. 
+Once the configuration is completed, restart your ProyeksiApp server with `service proyeksiapp restart`. 
 
 #### XML Metadata exchange
 
-The configuration will enable the SAML XML metadata endpoint at `https://<your openproject host>/auth/saml/metadata`
+The configuration will enable the SAML XML metadata endpoint at `https://<your proyeksiapp host>/auth/saml/metadata`
 for service discovery use with your identity provider.
 
 ### 4: Logging in
@@ -254,7 +254,7 @@ Spawn an interactive console in ProyeksiApp. The following example shows the com
 See [our process control guide](../../../installation-and-operations/operation/control/) for information on other installation types.
 
 ```
-sudo openproject run console
+sudo proyeksiapp run console
 > Setting.oauth_allow_remapping_of_existing_users = true
 > exit
 ```

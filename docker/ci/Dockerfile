@@ -1,8 +1,8 @@
 FROM ruby:2.7.5-buster
-MAINTAINER operations@openproject.com
+MAINTAINER operations@proyeksiapp.com
 
 ENV NODE_VERSION="14.17.0"
-ENV CHROME_SOURCE_URL="https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb https://openproject-public.s3.eu-central-1.amazonaws.com/binaries/google-chrome-stable_current_amd64.deb"
+ENV CHROME_SOURCE_URL="https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb https://proyeksiapp-public.s3.eu-central-1.amazonaws.com/binaries/google-chrome-stable_current_amd64.deb"
 ENV USER=dev
 
 RUN useradd -d /home/$USER -m $USER -s /bin/bash
@@ -29,7 +29,7 @@ ENV CI=true
 ENV RAILS_ENV=test
 ENV BUNDLER_VERSION="2.1.4"
 ENV BUNDLE_WITHOUT="development:production:docker"
-ENV OPENPROJECT_DISABLE_DEV_ASSET_PROXY=1
+ENV PROYEKSIAPP_DISABLE_DEV_ASSET_PROXY=1
 ENV CAPYBARA_DYNAMIC_BIND_IP=1
 ENV CAPYBARA_DOWNLOADED_FILE_DIR=/tmp
 # disable deprecations and other warnings in output
@@ -41,9 +41,9 @@ RUN gem install bundler --version "$BUNDLER_VERSION" --no-document
 
 COPY ./entrypoint.sh /usr/sbin/entrypoint.sh
 
-VOLUME [ "/usr/local/bundle", "/home/$USER/openproject", "/home/$USER/openproject/tmp" ]
+VOLUME [ "/usr/local/bundle", "/home/$USER/proyeksiapp", "/home/$USER/proyeksiapp/tmp" ]
 
-WORKDIR /home/$USER/openproject
+WORKDIR /home/$USER/proyeksiapp
 
 ENTRYPOINT [ "/usr/sbin/entrypoint.sh" ]
 CMD ["setup-tests", "bash"]

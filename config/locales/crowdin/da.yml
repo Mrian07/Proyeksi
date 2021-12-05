@@ -76,7 +76,7 @@ da:
     technical_warning_html: |
       Denne LDAP-formular kræver teknisk viden om din LDAP/Active Directory opsætning.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Besøg venligst vores dokumentation for detaljerede instruktioner</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Besøg venligst vores dokumentation for detaljerede instruktioner</a>.
     attribute_texts:
       name: Vilkårlig navn på LDAP- forbindelsen
       host: LDAP værtsnavn eller IP-adresse
@@ -86,7 +86,7 @@ da:
       system_user_dn_html: |
         Angiv DN for systembrugeren som bruges til skrivebeskyttet adgang.
         <br/>
-        Eksempel: uid=openproject,ou=system,dc=example,dc=com
+        Eksempel: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Indtast bind kodeordet for systembrugeren
       base_dn: |
         Indtast Base DN for undertræet i LDAP, du vil have ProyeksiApp til at søge efter brugere og grupper.
@@ -1651,7 +1651,7 @@ da:
   label_open_menu: "Åbn menuen"
   label_open_work_packages: "åbn"
   label_open_work_packages_plural: "åbn"
-  label_openproject_website: "ProyeksiApp website"
+  label_proyeksiapp_website: "ProyeksiApp website"
   label_optional_description: "Beskrivelse"
   label_options: "Muligheder"
   label_other: "Andet"
@@ -2795,7 +2795,7 @@ da:
   warning_user_limit_reached: >
     User limit reached. You cannot activate any more users. Please <a href="%{upgrade_url}">upgrade your plan</a> or block members to allow for additional users.
   warning_user_limit_reached_instructions: >
-    You reached your user limit (%{current}/%{max} active users). Please contact sales@openproject.com to upgrade your Enterprise Edition plan and add additional users.
+    You reached your user limit (%{current}/%{max} active users). Please contact sales@proyeksiapp.com to upgrade your Enterprise Edition plan and add additional users.
   warning_protocol_mismatch_html: >
 
   warning_bar:

@@ -13,7 +13,7 @@ ProyeksiApp 5.0.13 resolves an installation issue for the packaged
 installation.
 
 For further information, please take a look at
-[GitHub](https://github.com/opf/openproject/tree/v5.0.12).
+[GitHub](https://github.com/opf/proyeksiapp/tree/v5.0.12).
 
  
 

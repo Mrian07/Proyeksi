@@ -1,5 +1,3 @@
-#-- encoding: UTF-8
-
 module AngularHelper
   ##
   # Create a component element tag with the given attributes
@@ -12,7 +10,9 @@ module AngularHelper
                .transform_values(&:to_json)
 
     options[:data] = options.fetch(:data, {}).merge(inputs)
-    options[:class] ||= "#{options.fetch(:class, '')} op-angular-component"
+    options[:class] ||= [options[:class], 'op-angular-component']
+                          .compact
+                          .join(' ')
 
     content_tag(component, '', options)
   end

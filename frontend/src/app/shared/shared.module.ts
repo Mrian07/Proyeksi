@@ -100,7 +100,7 @@ export function bootstrapModule(injector:Injector) {
   });
 
   const hookService = injector.get(HookService);
-  hookService.register('proyeksiApptAngularBootstrap', () => [
+  hookService.register('proyeksiAppAngularBootstrap', () => [
     {
       selector: highlightColSelector,
       cls: OpHighlightColDirective,

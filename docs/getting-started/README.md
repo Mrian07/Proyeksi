@@ -17,7 +17,7 @@ Here you will learn about the **first steps with ProyeksiApp**. If you need more
 
 | Topic                                                   | Content                                                      |
 | ------------------------------------------------------- | :----------------------------------------------------------- |
-| [Introduction to ProyeksiApp](openproject-introduction) | Get an introduction about project management with ProyeksiApp. |
+| [Introduction to ProyeksiApp](proyeksiapp-introduction) | Get an introduction about project management with ProyeksiApp. |
 | [Sign in and registration](sign-in-registration)        | Find out how you can register and sign in to ProyeksiApp.    |
 | [Create a project](projects)                            | How to create and set up a new project?                      |
 | [Invite team members](invite-members)                   | How to invite new members?                                   |
@@ -37,11 +37,11 @@ Watch a short 3-minute introduction video to get started with ProyeksiApp in 5 e
 4. Create a project plan
 5. Filter, group and generate reports
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Getting-started.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Getting-started.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## ProyeksiApp product demo video
 
 Watch a **comprehensive ProyeksiApp product introduction** video to learn how to work with ProyeksiApp using traditional and agile project management.
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-product-demo-webinar-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-product-demo-webinar-2.mp4" type="video/mp4" controls="" style="width:100%"></video>
 

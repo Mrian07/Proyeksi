@@ -1,7 +1,7 @@
 # Security Policy
 
 
-At its core, ProyeksiApp is an open-source software that is [developed and published on GitHub](https://github.com/opf/openproject). Every change to the ProyeksiApp code base ends up in an open repository accessible to everyone. This results in a transparent software where every commit can be traced back to the contributor.
+At its core, ProyeksiApp is an open-source software that is [developed and published on GitHub](https://github.com/opf/proyeksiapp). Every change to the ProyeksiApp code base ends up in an open repository accessible to everyone. This results in a transparent software where every commit can be traced back to the contributor.
 
 Automated tests and manual code reviews ensure that these contributions are safe for the entire community of ProyeksiApp. These tests encompass the correctness of security and access control features. We have ongoing collaborations with security professionals from to test the ProyeksiApp code base for security exploits.
 
@@ -9,20 +9,20 @@ Automated tests and manual code reviews ensure that these contributions are safe
 
 ### Security announcements mailing list
 
-We provide a mailing list for security advisories on ProyeksiApp at <https://groups.google.com/forum/#!forum/openproject-security>. Please register there to get immediate notifications as we publish them.
+We provide a mailing list for security advisories on ProyeksiApp at <https://groups.google.com/forum/#!forum/proyeksiapp-security>. Please register there to get immediate notifications as we publish them.
 
-Any security related information will also be published on our blog and website at https://www.openproject.com
+Any security related information will also be published on our blog and website at https://www.proyeksiapp.com
 
 
 
 ### Reporting a vulnerability
 
-We take all facets of security seriously at ProyeksiApp. If you want to report a security concerns, have remarks, or contributions regarding security at ProyeksiApp, please reach out to us at [security@openproject.com](mailto:security@openproject.com).
+We take all facets of security seriously at ProyeksiApp. If you want to report a security concerns, have remarks, or contributions regarding security at ProyeksiApp, please reach out to us at [security@proyeksiapp.com](mailto:security@proyeksiapp.com).
 
 If you can, please send us a PGP-encrypted email using the following key:
 
 - Key ID: [0x7D669C6D47533958](https://pgp.mit.edu/pks/lookup?op=get&search=0x7D669C6D47533958) , 
 - Fingerprint BDCF E01E DE84 EA19 9AE1 72CE 7D66 9C6D 4753 3958
-- You may also find the key [attached in our ProyeksiApp repository.](https://github.com/opf/openproject/blob/dev/docs/development/security/security-at-openproject.com.asc)
+- You may also find the key [attached in our ProyeksiApp repository.](https://github.com/opf/proyeksiapp/blob/dev/docs/development/security/security-at-proyeksiapp.com.asc)
 
 Please include a description on how to reproduce the issue if possible. Our security team will get your email and will attempt to reproduce and fix the issue as soon as possible.

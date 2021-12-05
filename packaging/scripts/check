@@ -11,7 +11,7 @@ log_ko() {
 }
 
 # try to get a setting to make sure database connection works
-if rake openproject:db:check_connection 2>/dev/null; then
+if rake proyeksiapp:db:check_connection 2>/dev/null; then
   log_ok "PostgreSQL configuration is working"
 else
   log_ko "PostgreSQL connection is NOT working"
@@ -24,15 +24,15 @@ else
 fi
 
 if ps -u "$APP_USER" -f | grep -qP "puma: cluster worker \d" ; then
-  log_ok "openproject server is running"
+  log_ok "proyeksiapp server is running"
 else
-  log_ko "openproject server is NOT running"
+  log_ko "proyeksiapp server is NOT running"
 fi
 
 if ps -u "$APP_USER" -f | grep -q "rake jobs:work" ; then
-  log_ok "openproject background job worker is running"
+  log_ok "proyeksiapp background job worker is running"
 else
-  log_ko "openproject background job worker is NOT running"
+  log_ko "proyeksiapp background job worker is NOT running"
 fi
 
 if [ -z "$ADMIN_EMAIL" ]; then

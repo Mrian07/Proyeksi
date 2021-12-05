@@ -121,7 +121,7 @@ Note that the tabindex has to be set manually on the `<span>` and not the contai
 </span>
 <div class="advanced-tooltip-content" id="advanced-tooltip-sample">
   <p>The content of an HTML tooltip.</p>
-  <img src="http://openproject.sourceforge.net/images/openproject-logo.png" alt="Proyeksiapp">
+  <img src="http://proyeksiapp.sourceforge.net/images/proyeksiapp-logo.png" alt="Proyeksiapp">
 </div>
 ```
 

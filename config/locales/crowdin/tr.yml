@@ -76,7 +76,7 @@ tr:
     technical_warning_html: |
       Bu LDAP formu, LDAP / Active Directory kurulumunuz hakkında teknik bilgi gerektirir.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/"> Lütfen ayrıntılı talimatlar için belgelerimizi ziyaret edin </a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/"> Lütfen ayrıntılı talimatlar için belgelerimizi ziyaret edin </a>.
     attribute_texts:
       name: LDAP bağlantısının keyfi adı
       host: LDAP ana bilgisayar adı veya IP adresi
@@ -86,7 +86,7 @@ tr:
       system_user_dn_html: |
         Salt okunur erişim için kullanılan sistem kullanıcısının DN'sini girin.
         <br/>
-        Örnek: uid = openproject, ou = sistem, dc = örnek, dc = com
+        Örnek: uid = proyeksiapp, ou = sistem, dc = örnek, dc = com
       system_user_password: Sistem kullanıcısının cilt şifresini girin
       base_dn: |
         LDAP'da, ProyeksiApp'in kullanıcıları ve grupları aramasını istediğiniz alt ağacın Temel DN'sini girin.
@@ -1653,7 +1653,7 @@ tr:
   label_open_menu: "Menüyü Aç"
   label_open_work_packages: "açık"
   label_open_work_packages_plural: "açık"
-  label_openproject_website: "ProyeksiApp web sitesi"
+  label_proyeksiapp_website: "ProyeksiApp web sitesi"
   label_optional_description: "Açıklama"
   label_options: "Ayarlar"
   label_other: "Diğer"
@@ -2798,7 +2798,7 @@ tr:
   warning_user_limit_reached: >
     Kullanıcı limitine ulaşıldı. Daha fazla kullanıcıyı etkinleştiremezsiniz. Lütfen <a href="%{upgrade_url}"> planınızı yükseltin </a> veya ek kullanıcılara izin vermek için üyeleri engelleyin.
   warning_user_limit_reached_instructions: >
-    Kullanıcı sınırınıza ulaştınız (%{current}/%{max} aktif kullanıcılar). Enterprise Edition planınızı yükseltmek ve ek kullanıcılar eklemek için lütfen sales@openproject.com adresine başvurun.
+    Kullanıcı sınırınıza ulaştınız (%{current}/%{max} aktif kullanıcılar). Enterprise Edition planınızı yükseltmek ve ek kullanıcılar eklemek için lütfen sales@proyeksiapp.com adresine başvurun.
   warning_protocol_mismatch_html: >
 
   warning_bar:

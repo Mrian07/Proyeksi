@@ -38,8 +38,6 @@ export const DASHBOARDS_ROUTES:Ng2StateDeclaration[] = [
   {
     name: 'dashboards',
     parent: 'optional_project',
-    // The trailing slash is important
-    // cf., https://community.openproject.com/wp/29754
     url: '/dashboards/',
     data: {
       bodyClasses: ['router--dashboards-view-base', 'widget-grid-layout'],
@@ -50,8 +48,6 @@ export const DASHBOARDS_ROUTES:Ng2StateDeclaration[] = [
 ];
 
 export function uiRouterDashboardsConfiguration(uiRouter:UIRouter) {
-  // Ensure boards/ are being redirected correctly
-  // cf., https://community.openproject.com/wp/29754
   uiRouter.urlService.rules
     .when(
       new RegExp('^/projects/(.*)/dashboards$'),

@@ -140,10 +140,5 @@ export const WORK_PACKAGES_ROUTES:Ng2StateDeclaration[] = [
     menuItemClass,
     WorkPackageSplitViewComponent,
   ),
-  // Avoid lazy-loading the routes for now
-  // {
-  //   name: 'work-packages.calendar.**',
-  //   url: '/calendar',
-  //   loadChildren: '../calendar/openproject-calendar.module#OpenprojectCalendarModule'
-  // },
+  
 ];

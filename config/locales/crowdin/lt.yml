@@ -76,7 +76,7 @@ lt:
     technical_warning_html: |
       Ši LDAP forma reikalauja jūsų LDAP / Active Directory tvarkos žinojimo.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Detalios instrukcijos pateiktos dokumentacijoje</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Detalios instrukcijos pateiktos dokumentacijoje</a>.
     attribute_texts:
       name: LDAP prisijungimui suteiktas pavadinimas
       host: LDAP serverio vardas arba IP adresas
@@ -86,7 +86,7 @@ lt:
       system_user_dn_html: |
         Įveskite sisteminio naudotojo, naudojamos tik skaitymo teisėmis jugtis prie LDAP, DN.
         <br/>
-        Pavyzdžiui: uid=openproject,ou=system,dc=example,dc=com
+        Pavyzdžiui: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Įveskite sisteminio naudotojo, kuris jungsis prie LDAP, slaptažodį
       base_dn: |
         Įveskite submedžio, kuriame ProyeksiApp ieškos naudotojų ir grupių šaknies DN (Base DN).
@@ -1684,7 +1684,7 @@ lt:
   label_open_menu: "Atidaryti meniu"
   label_open_work_packages: "atidarytas"
   label_open_work_packages_plural: "atidarytas"
-  label_openproject_website: "ProyeksiApp svetainė"
+  label_proyeksiapp_website: "ProyeksiApp svetainė"
   label_optional_description: "Aprašymas"
   label_options: "Nustatymai"
   label_other: "Kita"
@@ -2835,7 +2835,7 @@ lt:
   warning_user_limit_reached: >
     Pasiektas vartotojų limitas. Jūs negalite aktyvuoti daugiau vartotojų. Prašome <a href="%{upgrade_url}">atnaujinti planą</a> arba blokuokite esamus vartotojus norėdami aktyvuoti naujus vartotojus.
   warning_user_limit_reached_instructions: >
-    Jūs pasiekėte naudotojų ribą (%{current}/%{max} aktyvūs naudotojai). Susisiekite su sales@openproject.com norėdami atnaujinti savo Enterprise Edition planą arba pridėti papildomų naudotojų.
+    Jūs pasiekėte naudotojų ribą (%{current}/%{max} aktyvūs naudotojai). Susisiekite su sales@proyeksiapp.com norėdami atnaujinti savo Enterprise Edition planą arba pridėti papildomų naudotojų.
   warning_protocol_mismatch_html: >
 
   warning_bar:

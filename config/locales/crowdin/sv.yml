@@ -76,7 +76,7 @@ sv:
     technical_warning_html: |
       Detta LDAP-formulär kräver teknisk kunskap om din LDAP / Active Directory-inställning.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Besök vår dokumentation för detaljerade instruktioner</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Besök vår dokumentation för detaljerade instruktioner</a>.
     attribute_texts:
       name: Ett godtyckligt namn på LDAP-anslutningen
       host: LDAP-värdnamn eller IP-adress
@@ -86,7 +86,7 @@ sv:
       system_user_dn_html: |
         Ange DN för systemanvändaren som används för skrivskyddad åtkomst.
         <br/>
-        Exempel: uid=openproject,ou=system,dc=exempel,dc=com
+        Exempel: uid=proyeksiapp,ou=system,dc=exempel,dc=com
       system_user_password: Ange bindlösenord för systemanvändaren
       base_dn: |
         Ange bas-DN för underträdet i LDAP som du vill att ProyeksiApp ska leta efter användare och grupper.
@@ -1652,7 +1652,7 @@ sv:
   label_open_menu: "Öppna meny"
   label_open_work_packages: "öppna"
   label_open_work_packages_plural: "öppna"
-  label_openproject_website: "ProyeksiApp hemsida"
+  label_proyeksiapp_website: "ProyeksiApp hemsida"
   label_optional_description: "Beskrivning"
   label_options: "Alternativ"
   label_other: "Andra"
@@ -2795,7 +2795,7 @@ sv:
   warning_user_limit_reached: >
     Användargränsen har uppnåtts. Du kan inte aktivera fler användare. Vänligen <a href="%{upgrade_url}">uppgradera din plan</a> eller blockera medlemmar för att tillåta ytterligare användare.
   warning_user_limit_reached_instructions: >
-    Du har nått din användargräns (%{current}/%{max} aktiva användare). Kontakta sales@openproject.com för att uppgradera din Enterprise Edition-plan och lägga till ytterligare användare.
+    Du har nått din användargräns (%{current}/%{max} aktiva användare). Kontakta sales@proyeksiapp.com för att uppgradera din Enterprise Edition-plan och lägga till ytterligare användare.
   warning_protocol_mismatch_html: >
 
   warning_bar:

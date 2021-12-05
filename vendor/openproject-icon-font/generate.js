@@ -7,16 +7,16 @@ const glob = require("glob")
 
 webfontsGenerator({
   files: glob.sync("src/*.svg"),
-  "fontName": "openproject-icon-font",
-  "cssFontsUrl": "../../frontend/src/assets/fonts/openproject_icon/",
-  "dest": path.resolve(__dirname, '..', '..', 'frontend', 'src', 'assets', 'fonts', 'openproject_icon'),
-  "cssDest": path.join(path.resolve(__dirname, '..', '..', 'frontend', 'src', 'global_styles', 'fonts'), '_openproject_icon_definitions.scss'),
-  "cssTemplate": "openproject-icon-font.template.scss",
+  "fontName": "proyeksiapp-icon-font",
+  "cssFontsUrl": "../../frontend/src/assets/fonts/proyeksiapp_icon/",
+  "dest": path.resolve(__dirname, '..', '..', 'frontend', 'src', 'assets', 'fonts', 'proyeksiapp_icon'),
+  "cssDest": path.join(path.resolve(__dirname, '..', '..', 'frontend', 'src', 'global_styles', 'fonts'), '_proyeksiapp_icon_definitions.scss'),
+  "cssTemplate": "proyeksiapp-icon-font.template.scss",
   "classPrefix": "icon-",
   "baseSelector": ".icon",
   "html": true,
-  "htmlDest": path.join(path.resolve(__dirname, '..', '..', 'frontend', 'src', 'global_styles', 'fonts'), '_openproject_icon_font.lsg'),
-  "htmlTemplate": "openproject-icon-font.template.lsg",
+  "htmlDest": path.join(path.resolve(__dirname, '..', '..', 'frontend', 'src', 'global_styles', 'fonts'), '_proyeksiapp_icon_font.lsg'),
+  "htmlTemplate": "proyeksiapp-icon-font.template.lsg",
   "types": ['woff2', 'woff'],
   "fixedWidth": true,
   "descent": 100

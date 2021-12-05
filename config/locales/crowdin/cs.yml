@@ -76,7 +76,7 @@ cs:
     technical_warning_html: |
       Tento LDAP formulář vyžaduje technické znalosti nastavení LDAP / Active Directory.
       <br/>
-      <a href="https://www.openproject.org/help/administration/manage-ldap-authentication/">Prosím navštivte naši dokumentaci pro podrobné pokyny</a>.
+      <a href="https://www.proyeksi.id/help/administration/manage-ldap-authentication/">Prosím navštivte naši dokumentaci pro podrobné pokyny</a>.
     attribute_texts:
       name: Arbitrary name of the LDAP connection
       host: LDAP název hostitele nebo IP adresa
@@ -86,7 +86,7 @@ cs:
       system_user_dn_html: |
         Enter the DN of the system user used for read-only access.
         <br/>
-        Example: uid=openproject,ou=system,dc=example,dc=com
+        Example: uid=proyeksiapp,ou=system,dc=example,dc=com
       system_user_password: Enter the bind password of the system user
       base_dn: |
         Enter the Base DN of the subtree in LDAP you want ProyeksiApp to look for users and groups.
@@ -1687,7 +1687,7 @@ cs:
   label_open_menu: "Otevřít nabídku"
   label_open_work_packages: "otevřít"
   label_open_work_packages_plural: "otevřít"
-  label_openproject_website: "Webové stránky ProyeksiApp"
+  label_proyeksiapp_website: "Webové stránky ProyeksiApp"
   label_optional_description: "Popis"
   label_options: "Možnosti"
   label_other: "Ostatní"
@@ -2839,7 +2839,7 @@ cs:
   warning_user_limit_reached: >
     Váš limit počtu uživatelů byl dosažen. Nelze aktivovat více uživatelů. Prosím <a href="%{upgrade_url}">upgradujte váš cenový plán</a> nebo zablokujte některé stávající členy pro přidání dalších uživatelů.
   warning_user_limit_reached_instructions: >
-    Limit počtu uživatelů (%{current}/%{max} aktivních uživatelů) dosažen. Prosím kontaktujte sales@openproject.com a upgradujte vaši Enterprise Edition a přidejte další uživatele.
+    Limit počtu uživatelů (%{current}/%{max} aktivních uživatelů) dosažen. Prosím kontaktujte sales@proyeksiapp.com a upgradujte vaši Enterprise Edition a přidejte další uživatele.
   warning_protocol_mismatch_html: >
 
   warning_bar:

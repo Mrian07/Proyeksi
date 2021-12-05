@@ -12,7 +12,7 @@ keywords: development workflow, gitflow, git flow
 
 This guide will introduce you to how we at ProyeksiApp develop ProyeksiApp with Git, and how to contribute code. For other ways on how to contribute to ProyeksiApp, [please see the contribution guide](../#contributor-code-of-conduct).
 
-The ProyeksiApp core is developed fully at our GitHub repository at https://github.com/opf/openproject. In the course of this guide, we assume that you are familiar with Git. If you need a refresher on certain topics, we recommend the [free Pro Git online book](https://git-scm.com/book/en/v2) as a resource for all topics on Git.
+The ProyeksiApp core is developed fully at our GitHub repository at https://github.com/opf/proyeksiapp. In the course of this guide, we assume that you are familiar with Git. If you need a refresher on certain topics, we recommend the [free Pro Git online book](https://git-scm.com/book/en/v2) as a resource for all topics on Git.
 
 
 
@@ -38,7 +38,7 @@ The following is an overview of the processes that happen during the release of 
 
 The basic overview of how to contribute code to ProyeksiApp is as follows.
 
-1. [Fork the ProyeksiApp repository](#fork-openproject) and create a local development branch
+1. [Fork the ProyeksiApp repository](#fork-proyeksiapp) and create a local development branch
 2. Develop your change. Please see the sections on [development concepts](../concepts/) for further information on development topics.
 3. [Create a pull request](#create-a-pull-request) on our repository.  Please see and review [code style and review](../code-review-guidelines) for guidelines on how to submit a pull request and requirements for getting your changes merged.
 4. We will evaluate your pull review and changes.
@@ -49,11 +49,11 @@ The basic overview of how to contribute code to ProyeksiApp is as follows.
 
 For contributing source code, please follow the git workflow below:
 
-- Use GitHub UI to fork the [ProyeksiApp repository](https://github.com/opf/openproject) https://github.com/opf/openproject.
+- Use GitHub UI to fork the [ProyeksiApp repository](https://github.com/opf/proyeksiapp) https://github.com/opf/proyeksiapp.
 - Clone your fork to your development machine:
 
 ```
-git clone git@github.com/<username>/openproject
+git clone git@github.com/<username>/proyeksiapp
 ```
 
 Make sure you're on the right branch. The main development branch is `dev`:
@@ -65,7 +65,7 @@ git checkout dev
 Add the original ProyeksiApp repository as a remote, so you can fetch changes:
 
 ```
-git remote add upstream git@github.com:opf/openproject
+git remote add upstream git@github.com:opf/proyeksiapp
 ```
 
 Update your local git branch to the core branch
@@ -90,9 +90,9 @@ git push origin <your feature branch>
 
 ## Create a Pull Request
 
-Create a pull request against a branch of of the <opf/openproject> repository, containing a **clear description** of what the pull request attempts to change and/or fix.
+Create a pull request against a branch of of the <opf/proyeksiapp> repository, containing a **clear description** of what the pull request attempts to change and/or fix.
 
-If your pull request **does not contain a description** for what it does and what it's intentions are, we will reject it. If you are working on a specific work package from the [list](https://community.openproject.com/projects/openproject/work_packages), please include a link to that work package in the description, so we can track your work.
+If your pull request **does not contain a description** for what it does and what it's intentions are, we will reject it. If you are working on a specific work package from the [list](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages), please include a link to that work package in the description, so we can track your work.
 
 The core contributor team will then review your pull request according to our [code review guideline](../code-review-guidelines/). Please note that you can add commits after the pull request has been created by pushing to the branch in your fork.
 

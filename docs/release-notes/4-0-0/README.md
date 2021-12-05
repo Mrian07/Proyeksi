@@ -13,7 +13,7 @@
 
 It is possible to extend ProyeksiApp by using Omni-Auth providers. Users
 can for example use the [ProyeksiApp Auth
-plugin](https://community.openproject.org/projects/auth-plugins) for an
+plugin](https://community.proyeksi.id/projects/auth-plugins) for an
 easy integration with OmniAuth strategy providers such as Google.
 
   - Authentication in ProyeksiApp via OmniAuth provider
@@ -105,13 +105,13 @@ page.
 ## New plugins released
 
   - ProyeksiApp Auth plugin
-    ([News](https://community.openproject.org/news/66-plugin-providing-an-api-for-authentication-plugins-released),
-    [GitHub](https://github.com/opf/openproject-auth_plugins),
-    [Project](https://community.openproject.org/projects/auth-plugins))
+    ([News](https://community.proyeksi.id/news/66-plugin-providing-an-api-for-authentication-plugins-released),
+    [GitHub](https://github.com/opf/proyeksiapp-auth_plugins),
+    [Project](https://community.proyeksi.id/projects/auth-plugins))
   - ProyeksiApp GitHub integration plugin
-    ([News](https://community.openproject.org/news/57-openproject-github-integration-plugin-released),
-    [GitHub](https://github.com/finnlabs/openproject-github_integration),
-    [Project](https://community.openproject.org/projects/github-integration?jump=news))
+    ([News](https://community.proyeksi.id/news/57-proyeksiapp-github-integration-plugin-released),
+    [GitHub](https://github.com/finnlabs/proyeksiapp-github_integration),
+    [Project](https://community.proyeksi.id/projects/github-integration?jump=news))
 
 ## Substantial Number of Bug Fixes
 

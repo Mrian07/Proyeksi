@@ -12,7 +12,7 @@ keywords: Agile Boards
 This document provides an initial introduction to the boards in ProyeksiApp, i.e. how to use a Kanban board to manage your tasks in an agile way.
 
 <div class="alert alert-info" role="alert">
-**Note**: The agile board is a premium feature and only available for [ProyeksiApp Cloud Edition](https://www.openproject.org/hosting/) and [Enterprise Edition](https://www.openproject.org/enterprise-edition/) customers.
+**Note**: The agile board is a premium feature and only available for [ProyeksiApp Cloud Edition](https://www.proyeksi.id/hosting/) and [Enterprise Edition](https://www.proyeksi.id/enterprise-edition/) customers.
 </div>
 
 
@@ -22,7 +22,7 @@ This document provides an initial introduction to the boards in ProyeksiApp, i.e
 
 To find out more about the detailed functionalities of Boards, please visit our [user guide for boards](../../user-guide/agile-boards).
 
-Agile boards is only one of ProyeksiApp's features. Find a comprehensive comparison between ProyeksiApp and Trello [here](https://www.openproject.org/alternatives/best-trello-alternative/).
+Agile boards is only one of ProyeksiApp's features. Find a comprehensive comparison between ProyeksiApp and Trello [here](https://www.proyeksi.id/alternatives/best-trello-alternative/).
 
 
 | Topic                                                       | Content                                    |
@@ -30,7 +30,7 @@ Agile boards is only one of ProyeksiApp's features. Find a comprehensive compari
 | [What is a Board?](#what-is-a-board)                       | Find out what a Board in ProyeksiApp is.   |
 | [Manage your work in a Board](#manage-your-work-in-a-board) | How to manage your work in an agile Board? |
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Agile-Boards.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Agile-Boards.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## What is a Board?
 

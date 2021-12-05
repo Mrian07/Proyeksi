@@ -82,16 +82,16 @@ Once installed, switch to the PostgreSQL system user.
 [root@host] su - postgres
 ```
 
-Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'openproject'. Of course, please choose a strong password and replace the values in the following guide with it!
+Then, as the PostgreSQL user, create the system user for ProyeksiApp. This will prompt you for a password. We are going to assume in the following guide that password were 'proyeksiapp'. Of course, please choose a strong password and replace the values in the following guide with it!
 
 ```bash
-[postgres@host] createuser -P -d openproject
+[postgres@host] createuser -P -d proyeksiapp
 ```
 
 Next, create the database owned by the new user
 
 ```bash
-[postgres@host] createdb -O openproject openproject
+[postgres@host] createdb -O proyeksiapp proyeksiapp
 ```
 
 Lastly, exit the system user
@@ -106,8 +106,8 @@ Lastly, exit the system user
 The following command saves the current MySQL `DATABASE_URL` as `MYSQL_DATABASE_URL` in the ProyeksiApp configuration:
 
 ```bash
-openproject config:set MYSQL_DATABASE_URL="$(openproject config:get DATABASE_URL)"
-openproject config:get MYSQL_DATABASE_URL
+proyeksiapp config:set MYSQL_DATABASE_URL="$(proyeksiapp config:get DATABASE_URL)"
+proyeksiapp config:get MYSQL_DATABASE_URL
 
 # Will output something of the kind
 # mysql2://user:password@localhost:3306/dbname
@@ -117,10 +117,10 @@ This will be used later by the migration script.
 
 ## Configuring ProyeksiApp to use the PostgreSQL database
 
-Form the `DATABASE_URL` string to match your selected password and add it to the openproject configuration:
+Form the `DATABASE_URL` string to match your selected password and add it to the proyeksiapp configuration:
 
 ```bash
-openproject config:set DATABASE_URL="postgresql://openproject:<PASSWORD>@localhost/openproject"
+proyeksiapp config:set DATABASE_URL="postgresql://proyeksiapp:<PASSWORD>@localhost/proyeksiapp"
 ```
 
 
@@ -129,7 +129,7 @@ openproject config:set DATABASE_URL="postgresql://openproject:<PASSWORD>@localho
 You can use this command to escape any characters in the password:
 
 ```bash
-openproject run ruby -r cgi -e "puts CGI.escape('your-password-here');"
+proyeksiapp run ruby -r cgi -e "puts CGI.escape('your-password-here');"
 ```
 
 
@@ -138,7 +138,7 @@ openproject run ruby -r cgi -e "puts CGI.escape('your-password-here');"
 You are now ready to migrate from MySQL to PostgreSQL. The ProyeksiApp packages embed a migration script that can be launched as follows:
 
 ```
-sudo openproject run ./docker/mysql-to-postgres/bin/migrate-mysql-to-postgres
+sudo proyeksiapp run ./docker/mysql-to-postgres/bin/migrate-mysql-to-postgres
 ```
 
 This might take a while depending on current installation size.
@@ -153,18 +153,18 @@ The following is an exemplary removal of an installed version MySQL 5.7.
 
 ```
 [root@host] apt-get remove mysql-server
-[root@host] openproject config:unset MYSQL_DATABASE_URL
+[root@host] proyeksiapp config:unset MYSQL_DATABASE_URL
 ```
 
-**Note:** ProyeksiApp still depends on `mysql-common` and other dev libraries of MySQL to build the `mysql2` gem for talking to MySQL databases. Depending on what packages you try to uninstall, `openproject` will be listed as a dependent package to be uninstalled if trying to uninstall `mysql-common`. Be careful here with the confirmation of removal, because it might just remove openproject itself due to the apt dependency management.
+**Note:** ProyeksiApp still depends on `mysql-common` and other dev libraries of MySQL to build the `mysql2` gem for talking to MySQL databases. Depending on what packages you try to uninstall, `proyeksiapp` will be listed as a dependent package to be uninstalled if trying to uninstall `mysql-common`. Be careful here with the confirmation of removal, because it might just remove proyeksiapp itself due to the apt dependency management.
 
 
-## Running openproject reconfigure
+## Running proyeksiapp reconfigure
 
 After you migrated your data, all you need to do is run through the configuration process of the packaged installation to remove the MySQL configuration
 
 ```bash
-openproject reconfigure
+proyeksiapp reconfigure
 ```
 
 

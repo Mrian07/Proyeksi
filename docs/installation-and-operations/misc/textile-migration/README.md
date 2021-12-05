@@ -22,7 +22,7 @@ We depend on `pandoc` (http://pandoc.org/) for the conversion of all formattable
 
 If you do not have an executable pandoc version of at least version 2.0 in your path, ProyeksiApp will try download an AMD64 static linked binary for pandoc (Currently, this would be version 2.3.2). This version will be made available to ProyeksiApp through `<ProyeksiApp root>/vendor/pandoc` and is only used during that one-time migration step.
 
-If you want to force a specific version within your path, set the environment variable OPENPROJECT_PANDOC_PATH, e.g., `OPENPROJECT_PANDOC_PATH=/opt/my/pandoc/bin/pandoc`.
+If you want to force a specific version within your path, set the environment variable PROYEKSIAPP_PANDOC_PATH, e.g., `PROYEKSIAPP_PANDOC_PATH=/opt/my/pandoc/bin/pandoc`.
 
 
 
@@ -34,7 +34,7 @@ Our Markdown parsers and formatters operate on the [CommonMark Markdown standard
 
 ## Skipping the migration
 
-If you want to skip the migration during the upgrade of 8.0. (e.g., because you want it to run asynchronously), please set the environment variable `OPENPROJECT_SKIP_TEXTILE_MIGRATION="true"` .
+If you want to skip the migration during the upgrade of 8.0. (e.g., because you want it to run asynchronously), please set the environment variable `PROYEKSIAPP_SKIP_TEXTILE_MIGRATION="true"` .
 
 This will print a warning and then continue with the migration. You can manually force the migration with the following command. **Warning:** Be careful not to execute this once you have already migrated to Markdown because the converter does not distinguish between input formats and simply iterates over all values.
 
@@ -45,7 +45,7 @@ This will print a warning and then continue with the migration. You can manually
 or in a packaged installation:
 
 ```
-    $> openproject run bundle exec rails runner "ProyeksiApp::TextFormatting::Formats::Markdown::TextileConverter.new.run!"
+    $> proyeksiapp run bundle exec rails runner "ProyeksiApp::TextFormatting::Formats::Markdown::TextileConverter.new.run!"
 ```
 
 

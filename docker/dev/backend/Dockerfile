@@ -1,5 +1,5 @@
 FROM ruby:2.7.5-buster as develop
-MAINTAINER operations@openproject.com
+MAINTAINER operations@proyeksiapp.com
 
 ARG DEV_UID=1000
 ARG DEV_GID=1001
@@ -29,16 +29,16 @@ COPY ./docker/dev/backend/scripts/setup /usr/sbin/setup
 COPY ./docker/dev/backend/scripts/run-app /usr/sbin/run-app
 
 # The following lines are needed to make sure the file permissions are setup correctly after the volumes are mounted
-RUN mkdir -p /home/$USER/openproject/tmp
+RUN mkdir -p /home/$USER/proyeksiapp/tmp
 RUN mkdir -p /usr/local/bundle
 RUN chown $USER:$USER /usr/local/bundle
-RUN chown $USER:$USER /home/$USER/openproject/tmp
+RUN chown $USER:$USER /home/$USER/proyeksiapp/tmp
 
 EXPOSE 3000
 
-VOLUME [ "/usr/local/bundle", "/home/$USER/openproject", "/home/$USER/openproject/tmp" ]
+VOLUME [ "/usr/local/bundle", "/home/$USER/proyeksiapp", "/home/$USER/proyeksiapp/tmp" ]
 
-WORKDIR /home/$USER/openproject
+WORKDIR /home/$USER/proyeksiapp
 
 USER $USER
 

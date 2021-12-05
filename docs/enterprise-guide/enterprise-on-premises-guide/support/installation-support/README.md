@@ -12,10 +12,10 @@ keywords: installation support
 
 If you want to work with ProyeksiApp Enterprise on-premises but do not have a Community Edition running, you can order **installation support** during the [booking process of your Enterprise on-premises edition](../../activate-enterprise-on-premises).
 
-The cost for the installation support of a Community version is 150 € (excluding VAT). In the price there is no migration included. If you need migration support, please [contact us](mailto:info@openproject.com) for a detailed quotation.
+The cost for the installation support of a Community version is 150 € (excluding VAT). In the price there is no migration included. If you need migration support, please [contact us](mailto:info@proyeksiapp.com) for a detailed quotation.
 
 
 
 ## Installation checklist
 
-Please have a look at our [installation checklist](https://www.openproject.org/assets/pdf/ProyeksiApp_Installation_Checklist_v1.8.pdf) and send us the completed document prior to the on-premise installation.
+Please have a look at our [installation checklist](https://www.proyeksi.id/assets/pdf/ProyeksiApp_Installation_Checklist_v1.8.pdf) and send us the completed document prior to the on-premise installation.

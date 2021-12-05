@@ -5,7 +5,7 @@
 # $1 = TEST_SUITE
 # $2 = GROUP_SIZE
 # $3 = GROUP
-# $4 = OPENPROJECT_EDITION
+# $4 = PROYEKSIAPP_EDITION
 
 #!/bin/sh
 
@@ -15,7 +15,7 @@ set -e
 export CI_SEED=$(git rev-parse HEAD | tr -d 'a-z' | cut -b 1-5 | tr -d '0')
 # Do not assume to have the angular cli running to serve assets. They are provided
 # by rails assets:precompile
-export OPENPROJECT_CLI_PROXY=''
+export PROYEKSIAPP_CLI_PROXY=''
 
 case "$1" in
         npm)

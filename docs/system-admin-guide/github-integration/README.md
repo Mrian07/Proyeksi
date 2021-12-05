@@ -130,7 +130,7 @@ The **Payload URL** must point to your ProyeksiApp server's GitHub webhook endpo
 Now you need the API key you copied earlier. Append it to the *Payload URL* as a simple GET parameter named `key`. In the end the URL should look something like this:
 
 ```
-https://myopenproject.com/webhooks/github?key=42
+https://myproyeksiapp.com/webhooks/github?key=42
 ```
 _Earlier version may have used the `api_key` parameter. In ProyeksiApp 10.4, it is `key`._
 

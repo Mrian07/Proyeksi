@@ -14,4 +14,4 @@
 #   ...
 #
 # Setup Memcache
-# config.cache_store = :dalli_store, '127.0.0.1:11211', {:namespace => 'openproject'}
+# config.cache_store = :dalli_store, '127.0.0.1:11211', {:namespace => 'proyeksiapp'}

@@ -25,7 +25,7 @@ or belonging group</span>* is now added that returns:
   - **when filtering for a group**: Work packages assigned to this
     group, and any users within
 
-Bug reference: [\#26207](https://community.openproject.com/wp/26207)
+Bug reference: [\#26207](https://community.proyeksiapp.com/wp/26207)
 
  
 

@@ -10,14 +10,14 @@ An existing ProyeksiApp on-premises (self hosted) installation can easily be swi
 
 Switching to the BIM Edition will not affect your existing data. Your team will be able to continue working just as before. By switching to the BIM edition additional features will become available  when you activate the "BCF" module in the [project's settings](../../user-guide/projects/project-settings/modules).
 
-To choose the BIM edition during installation use [this instruction](../installation/packaged/#step-1-select-your-openproject-edition).
+To choose the BIM edition during installation use [this instruction](../installation/packaged/#step-1-select-your-proyeksiapp-edition).
 
 ## Instructions
 
 ### Backup and upgrade
 
 First, backup your data and update your installation to the latest ProyeksiApp version as described in [Upgrading](../operation/upgrading).
-Make sure that you not only install the new package but also run `sudo openproject configure` as described before proceeding.
+Make sure that you not only install the new package but also run `sudo proyeksiapp configure` as described before proceeding.
 
 ### Switching to BIM Edition
 
@@ -31,7 +31,7 @@ Your current settings will be preselected for you. You can simply click "next" i
 until the end of the wizard. Finally, this will also
 trigger the installation of the necessary libraries and tools for 3D model conversion.
 
-`sudo openproject reconfigure`
+`sudo proyeksiapp reconfigure`
 
 Congratulations, you've successfully switched to the BIM Edition. However, for the best
 experience you might consider also the next configuration.

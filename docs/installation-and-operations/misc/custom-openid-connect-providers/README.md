@@ -15,12 +15,12 @@ That means you will have to do it directly using the console on the server.
 First start the console.
 
 ```
-sudo openproject run console
-# if user the docker all-in-one container: docker exec -it openproject bundle exec rails console
+sudo proyeksiapp run console
+# if user the docker all-in-one container: docker exec -it proyeksiapp bundle exec rails console
 # if using docker-compose: docker-compose run --rm web bundle exec rails console
 ```
 
-Once in the console you can change the `plugin_openproject_openid_connect` setting
+Once in the console you can change the `plugin_proyeksiapp_openid_connect` setting
 directly to configure arbitrary providers.
 
 Next define the settings for your custom provider. In this example we are configuring Okta:
@@ -66,7 +66,7 @@ You can copy that into the console to get the URL you need.
 Finally you can the write the actual setting like this:
 
 ```ruby
-Setting.plugin_openproject_openid_connect = Hash(Setting.plugin_openproject_openid_connect || {}).deep_merge({
+Setting.plugin_proyeksiapp_openid_connect = Hash(Setting.plugin_proyeksiapp_openid_connect || {}).deep_merge({
   "providers" => {
     "okta" => options
   }

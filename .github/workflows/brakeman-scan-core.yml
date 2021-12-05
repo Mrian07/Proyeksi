@@ -12,7 +12,7 @@ on:
 
 jobs:
   brakeman-scan:
-    if: github.repository == 'opf/openproject'
+    if: github.repository == 'opf/proyeksiapp'
     name: Brakeman Scan
     runs-on: ubuntu-latest
     steps:

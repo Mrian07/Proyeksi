@@ -60,4 +60,4 @@ Please see our system admin guide [how to configure repositories in ProyeksiApp]
 
 ## Repository integration
 
-See our Installation and operations guide how to [integrate repositories in Openproject](../../installation-and-operations/configuration/repositories/#repository-integration-in-openproject).
+See our Installation and operations guide how to [integrate repositories in Proyeksiapp](../../installation-and-operations/configuration/repositories/#repository-integration-in-proyeksiapp).

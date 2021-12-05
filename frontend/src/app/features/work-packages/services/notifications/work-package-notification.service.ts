@@ -50,7 +50,7 @@ export class WorkPackageNotificationService extends HalResourceNotificationServi
   }
 
   protected showCustomError(errorResource:any, resource:WorkPackageResource):boolean {
-    if (errorResource.errorIdentifier === 'urn:proyeksi-app:api:v3:errors:UpdateConflict') {
+    if (errorResource.errorIdentifier === 'urn:proyeksiapp-org:api:v3:errors:UpdateConflict') {
       this.ToastService.addError({
         message: errorResource.message,
         type: 'error',

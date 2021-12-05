@@ -15,7 +15,7 @@ It is not possible to prevent time logging on phases or restrict it to certain w
 
 ## Can I log time for another user than myself?
 
-Currently, that's not possible. However, there's already a [feature request](https://community.openproject.com/projects/openproject/work_packages/21754/activity) on our wish list.
+Currently, that's not possible. However, there's already a [feature request](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/21754/activity) on our wish list.
 
 Possible workarounds: 
 
@@ -32,7 +32,7 @@ Click on the **+** next to the project filter, select all projects or the ones t
 
 ## Can I show the columns I chose in the Time and costs module in the Excel export?
 
-Unfortunately this is not possible at the moment. There's already a feature request for this on our wish list [here](https://community.openproject.org/work_packages/35042).
+Unfortunately this is not possible at the moment. There's already a feature request for this on our wish list [here](https://community.proyeksi.id/work_packages/35042).
 
 ## Is there an overview over how much time I logged in one week?
 

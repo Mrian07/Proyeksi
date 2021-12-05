@@ -22,15 +22,15 @@ export modal.
 
   - Fixed: \[2FA\] Device ID not transmitted when resending with
     different channel
-    \[[\#28033](https://community.openproject.com/wp/28033)\]
+    \[[\#28033](https://community.proyeksiapp.com/wp/28033)\]
   - Fixed: \[2FA\] MessageBird: Originator may not be longer than 11
-    characters \[[\#28034](https://community.openproject.com/wp/28034)\]
+    characters \[[\#28034](https://community.proyeksiapp.com/wp/28034)\]
   - Fixed: \[2FA\] MessageBird:
     <span class="explanatory-dictionary-highlight" data-definition="explanatory-dictionary-definition-12">User</span>
     language may be
-    empty \[[\#28035](https://community.openproject.com/wp/28035)\]
+    empty \[[\#28035](https://community.proyeksiapp.com/wp/28035)\]
   - Fixed: \[Styling\] Prevent scrolling body when reaching bottom of
     project autocompleter
-    \[[\#28039](https://community.openproject.com/wp/28039)\]
+    \[[\#28039](https://community.proyeksiapp.com/wp/28039)\]
 
 

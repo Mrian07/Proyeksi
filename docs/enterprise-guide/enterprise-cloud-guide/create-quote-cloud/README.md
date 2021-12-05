@@ -9,7 +9,7 @@ keywords: quote, request, offer, tender, bid
 
 # Creating a quote in the ProyeksiApp Enterprise cloud
 
-If you would like to request a quote for ProyeksiApp Enterprise cloud you can do so in your trial instance. Alternatively, you can refer to our website for the Enterprise cloud edition [pricing](https://www.openproject.org/pricing/).
+If you would like to request a quote for ProyeksiApp Enterprise cloud you can do so in your trial instance. Alternatively, you can refer to our website for the Enterprise cloud edition [pricing](https://www.proyeksi.id/pricing/).
 
 To create a quote please, **click on the BUY NOW teaser**, e.g. in the application header or or in the project menu.
 

@@ -44,7 +44,7 @@ The specification phase may not be necessary for bug fixes, minor design changes
 | - Community |                                      |                              |
 | - Other stakeholders |                                      |                              |
 
-The [ProyeksiApp Wish List](https://community.openproject.com/projects/openproject/work_packages?query_id=180) is used to collect a backlog of potential validation opportunities. Requirements may come from customers, internal usage, support messages, community forums or through other communication channels.
+The [ProyeksiApp Wish List](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=180) is used to collect a backlog of potential validation opportunities. Requirements may come from customers, internal usage, support messages, community forums or through other communication channels.
 
 Requirements should be captured as a **Feature** or **Epic** (for larger features which we can be broken down into smaller features) and focus on describing the customer’s problem rather than jumping ahead to a solution.
 For a guideline on how to report feature requests, refer to the [Feature request guideline](../../development/submit-feature-idea/). Technical maintenance issues and refactorings can be tracked as **Code Maintenance**.
@@ -68,7 +68,7 @@ In regular intervals (e.g. once a week), PMs screen the requirements added to th
 2. PM rejects duplicated feature requests with a reference to the original feature requests.
 3. PM sets RICE values and a RICE score for feature requests.
 4. PM creates an Opportunity Canvas for requirements with a moderate to high level of uncertainty (> 80%) or for large requirements (effort > 1 week).
-5. PM assigns features to the product backlog (only features with RICE values are allowed in the [product backlog](https://community.openproject.com/projects/openproject/work_packages?query_id=2261)).
+5. PM assigns features to the product backlog (only features with RICE values are allowed in the [product backlog](https://community.proyeksiapp.com/projects/proyeksiapp/work_packages?query_id=2261)).
 6. For requirements which require an Opportunity Canvas: PM and UX Researcher meet to discuss appropriate research methodology to collect user feedback.
    1. PM and UX Researcher schedule interviews with relevant users.
    2. PM and UX Researcher document interview results in opportunity canvas.
@@ -136,7 +136,7 @@ For ProyeksiApp, Reach refers to the number of users and customers who will bene
 
 The reach ranges from 0.5 for minimal reach (less than 5% of users) to 10.0 for requirements that impact the vast majority of users (80% or more).
 
-Data sources to estimate this may include queries and user data of an associated feature (e.g. number of users using the “Work packages” module on community.openproject.com to determine the value for a new work package requirement), qualitative customer interviews, customer requests, comments on work packages, surveys, etc..
+Data sources to estimate this may include queries and user data of an associated feature (e.g. number of users using the “Work packages” module on community.proyeksiapp.com to determine the value for a new work package requirement), qualitative customer interviews, customer requests, comments on work packages, surveys, etc..
 
 
 
@@ -277,7 +277,7 @@ Only in rare exceptions and under consultation of developers can additional feat
 | ----------------- | -------------------------------------- | :---------------------------- |
 | - Tester          | 1. Test features                       | Tested stable product version |
 | - Product Manager | 2. Report bugs                         |                               |
-| - Developer       | 3. Deploy on community.openproject.com |                               |
+| - Developer       | 3. Deploy on community.proyeksiapp.com |                               |
 | - DevOps          |                                        |                               |
 
 Building phase 1 (Development) and phase 2 (Quality Assurance) run partly in parallel / may loop since tested features may need to be adjusted.
@@ -293,7 +293,7 @@ Building phase 1 (Development) and phase 2 (Quality Assurance) run partly in par
 
 
 
-When all features, bugs have been tested successfully, regression testing was performed successfully and no critical errors are reported on community.openproject.com ProyeksiApp environment, new product version is prepared for release.
+When all features, bugs have been tested successfully, regression testing was performed successfully and no critical errors are reported on community.proyeksiapp.com ProyeksiApp environment, new product version is prepared for release.
 
 
 

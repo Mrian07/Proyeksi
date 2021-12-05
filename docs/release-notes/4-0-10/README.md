@@ -16,11 +16,11 @@ Due to an error, it was not possible to filter for categories in the
 work package list.
 
 This error has been fixed with ProyeksiApp 4.0.10
-([\#19809](https://community.openproject.org/work_packages/19809 "#19809")).
+([\#19809](https://community.proyeksi.id/work_packages/19809 "#19809")).
 
 For further information on the release, please refer to the [Changelog
-v.4.0.10](https://community.openproject.org/versions/704 "Changelog v.4.0.10") or
+v.4.0.10](https://community.proyeksi.id/versions/704 "Changelog v.4.0.10") or
 take a look at
-[GitHub](https://github.com/opf/openproject/tree/v4.0.10 "GitHub").
+[GitHub](https://github.com/opf/proyeksiapp/tree/v4.0.10 "GitHub").
 
 

@@ -13,8 +13,8 @@ And nothing else!
 To get right into it and just start the application you can just do the following:
 
 ```
-git clone https://github.com/opf/openproject.git
-cd openproject
+git clone https://github.com/opf/proyeksiapp.git
+cd proyeksiapp
 bin/compose setup
 bin/compose start
 ```
@@ -48,10 +48,10 @@ Signs of lacking memory include an "Exit status 137" in the frontend container.
 First you will need to checkout the code as usual.
 
 ```
-git clone https://github.com/opf/openproject.git
+git clone https://github.com/opf/proyeksiapp.git
 ```
 
-This will checkout the dev branch in `openproject`. **Change into that directory.**
+This will checkout the dev branch in `proyeksiapp`. **Change into that directory.**
 
 If you have ProyeksiApp checked out already make sure that you do not have a `config/database.yml`
 as that will interfere with the database connection inside of the docker containers.

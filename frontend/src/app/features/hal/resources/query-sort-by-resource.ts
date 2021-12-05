@@ -29,8 +29,8 @@
 import { QueryColumn } from 'core-app/features/work-packages/components/wp-query/query-column';
 import { HalResource } from 'core-app/features/hal/resources/hal-resource';
 
-export const QUERY_SORT_BY_ASC = 'urn:proyeksi-app:api:v3:queries:directions:asc';
-export const QUERY_SORT_BY_DESC = 'urn:proyeksi-app:api:v3:queries:directions:desc';
+export const QUERY_SORT_BY_ASC = 'urn:proyeksiapp-org:api:v3:queries:directions:asc';
+export const QUERY_SORT_BY_DESC = 'urn:proyeksiapp-org:api:v3:queries:directions:desc';
 
 export interface QuerySortByResourceEmbedded {
   column:QueryColumn;

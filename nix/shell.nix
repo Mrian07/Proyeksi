@@ -6,7 +6,7 @@ let
   '';
 
   gems = bundlerEnv {
-    name = "openproject-dev";
+    name = "proyeksiapp-dev";
     inherit ruby;
     gemdir = ./.;
   };
@@ -28,7 +28,7 @@ in
     ];
 
     CHROME_BINARY = "${google-chrome}/bin/google-chrome";
-    OPENPROJECT_TESTING_NO_HEADLESS = "1";
-    OPENPROJECT_TESTING_AUTO_DEVTOOLS = "1";
+    PROYEKSIAPP_TESTING_NO_HEADLESS = "1";
+    PROYEKSIAPP_TESTING_AUTO_DEVTOOLS = "1";
 }
 

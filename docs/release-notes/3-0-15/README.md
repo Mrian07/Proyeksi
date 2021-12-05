@@ -17,9 +17,9 @@ In addition to updating the rails version to 3.2.20, security fixes
 regarding sprockets are introduced with 3.0.15.  
 Furthermore, a bug which prevented the timelines macro from working
 properly has been fixed
-([\#17010](https://community.openproject.org/work_packages/17010 "Timeline controls separate from rest of timeline when timeline embedded in wiki page (closed)")).
+([\#17010](https://community.proyeksi.id/work_packages/17010 "Timeline controls separate from rest of timeline when timeline embedded in wiki page (closed)")).
 
 For a complete list of changes, please refer to the [ProyeksiApp 3.0.15
-query](https://community.openproject.org/versions/503).
+query](https://community.proyeksi.id/versions/503).
 
 

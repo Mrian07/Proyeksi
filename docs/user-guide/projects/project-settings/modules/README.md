@@ -14,4 +14,4 @@ Setting a check mark next to a project module will activate the module in the pr
 
 ![select-modules-ProyeksiApp](image-20201005151029444.png)
 
-Visit our [user guide](../../../#overview-of-modules-in-openproject) overview to get an explanation of the different modules in ProyeksiApp.
+Visit our [user guide](../../../#overview-of-modules-in-proyeksiapp) overview to get an explanation of the different modules in ProyeksiApp.

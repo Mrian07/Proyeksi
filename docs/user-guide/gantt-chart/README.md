@@ -25,7 +25,7 @@ The **Gantt chart** in ProyeksiApp displays the work packages in a timeline. You
 | [Aggregation by project](#aggregation-by-project)            | How to display an aggregated view of all milestones of multiple projects? |
 
 
-<video src="https://openproject-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Plan-and-Timelines-Gantt-charts.mp4" type="video/mp4" controls="" style="width:100%"></video>
+<video src="https://proyeksiapp-docs.s3.eu-central-1.amazonaws.com/videos/ProyeksiApp-Project-Plan-and-Timelines-Gantt-charts.mp4" type="video/mp4" controls="" style="width:100%"></video>
 
 ## Activate the Gantt chart
 
@@ -65,7 +65,7 @@ Select the item to which you want to create a dependency. The precede and follow
 
 ![dependencies-gantt-chart](dependencies-gantt-chart-1566556144225.gif)
 
-*ProyeksiApp does not yet include a baseline feature to compare scheduled versions. However, we are aware of the need for it and documented it. Please check here https://community.openproject.com/projects/openproject/work_packages/26448/activity for an update.*
+*ProyeksiApp does not yet include a baseline feature to compare scheduled versions. However, we are aware of the need for it and documented it. Please check here https://community.proyeksiapp.com/projects/proyeksiapp/work_packages/26448/activity for an update.*
 
 To find out about **how work packages behave**, when you move their predecessor or follower or change the date of a child work package please read our guide for the [Automatic and manual scheduling mode](scheduling).
 

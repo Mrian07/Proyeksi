@@ -10,7 +10,7 @@ keywords: Book Cloud Edition
 
 After you have tested the ProyeksiApp Enterprise cloud edition and want to continue working with ProyeksiApp, you can subscribe to one of our plans.
 
-Please refer to our website for the Enterprise cloud edition [pricing](https://www.openproject.org/pricing/).
+Please refer to our website for the Enterprise cloud edition [pricing](https://www.proyeksi.id/pricing/).
 
 You can subscribe to a monthly or yearly plan. The subscription can be **paid via Credit Card or Bank transfer** (only for yearly subscriptions for customers in the EU, Switzerland and the United States).
 
@@ -32,7 +32,7 @@ You will be directed to -> *Administration* -> *Billing*.
 
 (5) Click the **Subscribe** button.
 
-![Book-openproject-cloud](Book-openproject-cloud.png)
+![Book-proyeksiapp-cloud](Book-proyeksiapp-cloud.png)
 
 Next, click the **Proceed to Checkout button**.
 
@@ -88,8 +88,8 @@ An invoice will be sent via email to the Billing email address.
 
 ### Is there an advantage of the annual over the monthly ProyeksiApp plan?
 
-Yes, your subscription gets cheaper the longer the duration you choose. Please check our current pricing [here](https://www.openproject.org/pricing/).
+Yes, your subscription gets cheaper the longer the duration you choose. Please check our current pricing [here](https://www.proyeksi.id/pricing/).
 
 ### Additional questions
 
-You can find additional questions and answers regarding pricing and booking at the bottom of our [pricing website](https://www.openproject.org/pricing/#faq).
+You can find additional questions and answers regarding pricing and booking at the bottom of our [pricing website](https://www.proyeksi.id/pricing/#faq).
